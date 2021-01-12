@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software image on Harlan A Nelson </title>
+    <link>/tags/software-image/</link>
+    <description>Recent content in software image on Harlan A Nelson </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/software-image/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software Proposed for an Image</title>
+      <link>/2020/12/29/software-proposed-for-an-image/</link>
+      <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/12/29/software-proposed-for-an-image/</guid>
+      <description>This is a list of the software I use every day but is not currently included in my Windows virtual machine image. Note that the VM I log into is Windows.
+My goal is to create a docker image with these in it.
+ Docker Install the image with all my linux programs.  In the case where Docker is not used, here are the windows progams:
+ R: Windows RStudio Download Azure Data Studio  </description>
+    </item>
+    
+  </channel>
+</rss>

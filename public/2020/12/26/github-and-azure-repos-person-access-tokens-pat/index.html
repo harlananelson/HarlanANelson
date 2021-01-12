@@ -6,8 +6,8 @@
 <meta name="generator" content="Hugo 0.79.1" />
 
 
-<title>About - Harlan A Nelson </title>
-<meta property="og:title" content="About - Harlan A Nelson ">
+<title>Git hub and Azure Repository: Person Access Tokens (PAT) - Harlan A Nelson </title>
+<meta property="og:title" content="Git hub and Azure Repository: Person Access Tokens (PAT) - Harlan A Nelson ">
 
 
   <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -57,13 +57,36 @@
 
   <article class="article">
     
+    <span class="article-duration">1 min read</span>
+    
 
-    <h1 class="article-title">About</h1>
+    <h1 class="article-title">Git hub and Azure Repository: Person Access Tokens (PAT)</h1>
 
+    
+    <span class="article-date">2020-12-26</span>
     
 
     <div class="article-content">
-      <p>This is a &ldquo;hello world&rdquo; example website for the <a href="https://github.com/rstudio/blogdown"><strong>blogdown</strong></a> package. The theme was forked from <a href="https://github.com/jrutheiser/hugo-lithium-theme">@jrutheiser/hugo-lithium-theme</a> and modified by <a href="https://github.com/yihui/hugo-lithium">Yihui Xie</a>.</p>
+      
+
+
+<p><em>Git Hub</em> and <em>Azure Ropository</em> are moving away from passwords to other means of authentication. There are a few ways to authenticate:</p>
+<ul>
+<li>Personal Access Tokens (PAT) embedded in your app.<br />
+</li>
+<li>Token keys used by SSH.</li>
+<li>Two step identification.</li>
+<li>Use of PATs as passwords entered when authentication is needed.</li>
+</ul>
+<p>The PATs are used in applications that access accounts such as your repositories. The PAT is stored securely in the app and then used for authentication.
+If you are using the command line, then token keys or two step identification might be better. The PATs can be entered at the time authentication is needed, but
+you have to know the PAT, that does not seem like their intended use.</p>
+<p>There are a couple help pages to learn about <em>Personal Access Tokens</em></p>
+<p>Github recommends using <a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/set-up-credential-managers?view=azure-devops"><em>Git Credential Manager Core</em></a></p>
+<ul>
+<li><a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token">github: Creating Personal Access Tokens</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&amp;tabs=preview-page">Azure Devops: Use Personal Access Tokens</a></li>
+</ul>
 
     </div>
   </article>

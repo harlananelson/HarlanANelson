@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>authentication on Harlan A Nelson </title>
+    <link>/tags/authentication/</link>
+    <description>Recent content in authentication on Harlan A Nelson </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/authentication/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git hub and Azure Repository: Person Access Tokens (PAT)</title>
+      <link>/2020/12/26/github-and-azure-repos-person-access-tokens-pat/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/12/26/github-and-azure-repos-person-access-tokens-pat/</guid>
+      <description>Git Hub and Azure Ropository are moving away from passwords to other means of authentication. There are a few ways to authenticate:
+ Personal Access Tokens (PAT) embedded in your app.
+ Token keys used by SSH. Two step identification. Use of PATs as passwords entered when authentication is needed.  The PATs are used in applications that access accounts such as your repositories. The PAT is stored securely in the app and then used for authentication.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,5 +1,5 @@
 ---
-title: Wyzant: Harlan N.
+title: "Wyzant: Harlan N."
 author: ~
 date: '2021-01-11'
 slug: wyzant
