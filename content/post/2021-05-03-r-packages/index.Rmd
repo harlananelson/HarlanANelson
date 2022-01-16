@@ -6,6 +6,17 @@ slug: r-packages
 categories: []
 tags: []
 ---
+## R Books
+
+[Big Book of R](https://www.bigbookofr.com/index.html)
+
+## Production/Development
+
+[ruler](https://cran.r-project.org/web/packages/ruler/ruler.pdf)
+
+## Base R
+
+[New features in R 4.1.0](https://www.jumpingrivers.com/blog/new-features-r410-pipe-anonymous-functions/)
 
 ## Statistical Modeling
 
@@ -15,12 +26,19 @@ tags: []
 
 [Reduction of Complexity of Linear Mixed Models with Double-Bar Syntax](https://rpubs.com/Reinhold/22193)
 
+### Bayesian
+
+[bayesmodels](https://github.com/AlbertoAlmuinha/bayesmodels)
+
 ## Statistical Model Evaluation
 
 ### [performance](https://github.com/easystats/performance)
 
 Provide utilities for computing indices of model quality and goodness of fit.
 
+### TMLE 
+
+[An Illustrated Guide to TMLE](https://www.khstats.com/blog/tmle/tutorial/)
 ## Geo
 
 ### [How to Export Maps](https://riatelab.github.io/mapsf/articles/web_only/how_to_export_maps.html)
@@ -69,6 +87,10 @@ Make R stats easy!
 https://personalpages.manchester.ac.uk/staff/david.selby/rthritis/2021-05-07-shiny/
 
 [RShiny Competition](https://blog.rstudio.com/2021/03/11/time-to-shiny/)
+
+### API
+
+[Deploying a CARET Machine Learning model as an API with Plumber](https://www.r-bloggers.com/2021/04/deploying-a-caret-machine-learning-model-as-an-api-with-plumber/)
 
 ## Julia
 
