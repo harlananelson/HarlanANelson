@@ -1,0 +1,25 @@
+project:
+  type: website
+  render:
+    - index.qmd
+    - about.qmd
+    - fix-errors.qmd
+
+website:
+  title: "Harlan A Nelson"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - href: fix-errors.qmd
+        text: Fix Errors
+
+format:
+  html:
+    theme: Sandstone 
+    css: styles.css
+    toc: true
+    
+editor: visual
+

@@ -1,0 +1,119 @@
+---
+title: "Applied Statistics"
+execute: 
+  echo: false
+format:  
+  html:  
+    fig-width: 8
+    fig-height: 6
+---
+
+## Chapter 10
+
+purpose
+: Factor analysis attempts to summarize and synthesize the relationships between 
+  the variables contained in the analysis.
+: Starts with the Correlation Matrix, Pearson correlations between pairs of variables
+: Determine which variables are more intimately related to each other than to other variables
+
+**Two Types of Analysis**
+- Principle Component Analysis
+- Exploratory factor analysis
+
+**Names for Factors**
+-   Themes
+-   dimensions
+-   components
+-   factors
+
+**Examples of Factors**
+-   encouragement
+-   availability
+
+factors
+: sets of variable that have more in common with each other than with the other variables.
+
+exploratory
+:  Not testing an hypothesis about a population value.
+:  Not distinguishing between dependent and independent variables.
+:  describe the relationship between variables.
+
+Example of Hypothesis Testing
+- Ho: A promoting voice does not stimulates creativity.
+- H1: A promoting voice does not stimulates creativity.
+
+confirmatory
+:  How well does the data fit a specified structure?  
+
+**Structure**
+- How items in an instrument can be organized by factors.
+
+**Inventory**
+:  A statistics test of factor structure
+
+**Goals**
+:  replicable: Someone else using your instrument with get a comparable reliability.
+:  generalizeable from data to the population
+:  represent a construct
+: factor analysis attempts to summarize and sysnthesis the relationshop between 
+  variable in the analysis
+  
+latent variable
+:  variate
+:  weighted linear composite
+
+Structure Coefficient
+:  correlation between a variable and its variate (latent variable)
+
+factor Matrix
+:  Table of weights of variables as well as structure coefficients.
+
+Types of indicators
+:  strong indicator (Structure Coefficient >.7)
+:  weak indicator (Structure Coefficient around .3)
+
+Purpose of Rotation
+:  Align the factor so the variables are as close as possible to only one factor
+
+Types of Rotation
+: orthogonal (factors are not correlated)
+: oblique (factors are correlated)
+
+Good structure
+:  variables strongly  related to their own factor 
+:  weakly related to other factors
+
+Difference in variance explained by 
+- Principle Components: Uses all the variance eplained
+- Exploratory Factor Analysis: Uses common variance explained
+
+Recommended rotation method
+:  varimax: redistributes variance across each factor.
+
+reliability
+:  Proportion of true score variance to observed score variance.
+
+Crombach Coefficient Alpha
+:  internal consistency
+:  Correlation between pairs of items
+
+commonality
+:   h^2
+
+Table
+687
+
+scree
+689
+
+Magnitude of variable weights
+691
+
+Number of factors
+697
+
+amount of variance explained
+698
+
+Cronback's Alpha. reliability coefficient
+701

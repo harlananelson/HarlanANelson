@@ -1,0 +1,109 @@
+---
+title: "Confirmatory Factor Analysis"
+author: "Harlan A Nelson"
+---
+
+## Latent Variables
+
+Characteristics
+
+:   Not Directly Measured
+
+:   Computed from the measured variables
+
+:   
+
+contrasted to:
+
+:   manifest variables
+
+:   observed variables
+
+instrument
+
+:   inventory
+
+scale score
+
+Used in:
+
+-   Predictions in Multiple Regression
+
+-   Canonical Correlation Analysis
+
+-   Factors in Factor Analysis
+
+Model
+
+:   delineates ties of a latent variable with a set of measured variables and other latent variables
+
+:   Mathematical expression of a theoretical construct
+
+:   describe the fit of a model to data. Test proposed structure
+
+Confirmatory factor analysis
+
+:   Test a hypothesized correlation structure
+
+:   Test a hypothesised relation between factors and measured variables.
+
+:   Start with an hypothesized factor structure, calculate the fit.
+
+:   Associate each variable (item) with only one factor
+
+:   Different causal framework
+
+:   requires specialized software (Amos)
+
+:   assess the association of a set of variable with a single factor
+
+:   assess the structure of multiple factors simultaneously in a model
+
+:   structural equation model SEM.
+
+:   Measurement Model
+
+**Parts of the confirmatory factor analysis model**
+
+-   Measured variables Rectangles. (observed variables, indicator variables)
+-   Latent factors: rounde d
+-   Error terms: unique variables, residuals, disturbances.
+    -   associated with predicted variables
+    -   endogenous variables
+    -   The part of the indicators variance that is not shared with the factor.\
+    -   latent
+-   Paths
+    -   one directional: causality
+    -   two direction: correlation
+    -   estimated by a path coefficient
+    -   pattern coeffiient from factor to indicator, beta weights
+-   Parameter estimates
+
+**Types of objects**
+
+```{r}
+dat <- read.csv("https://stats.idre.ucla.edu/wp-content/uploads/2021/02/worland5.csv")
+```
+
+```{r}
+install.packages('pacman')
+pacman::p_load(lavaan, tidyverse)
+```
+
+```{r}
+dat
+```
+
+```{r}
+cov(dat)
+```
+
+```{r}
+#simple regression using lm()
+m1a <- lm(read ~ motiv, data=dat)
+(fit1a <-summary(m1a))
+```
+
+-   square: measured variabls
+-   round: latent variables
+-   error variable: also a latent variable

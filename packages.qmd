@@ -1,0 +1,25 @@
+---
+title: "Pakages"
+---
+
+## updates
+
+https://github.com/Anaconda-Platform/nb_conda_kernels#nb_conda_kernels
+
+https://jupytext.readthedocs.io/en/latest/
+
+https://stackoverflow.com/questions/69481608/cannot-set-up-a-conda-environment-with-python-3-10
+
+https://blog.r-hub.io/2022/09/12/r-dependency/
+
+https://cran.r-project.org/web/packages/checkpoint/index.html
+
+```{r}
+library(dplyr)
+```
+
+```{r}
+tibble(x = 1:4) |> 
+  mutate(y = x*2,
+         z = x*3,)
+```

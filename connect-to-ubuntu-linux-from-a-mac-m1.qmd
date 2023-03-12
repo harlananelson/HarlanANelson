@@ -1,0 +1,327 @@
+---
+title: "Connect to Linux Ubuntu From a Mac M1"
+author: "Harlan A Nelson"
+---
+
+This document summarizes how I connected to my linux computer running Ubuntu from my Mac M1 computer.
+
+A lot of trouble shooting was conducted using [chatGPT](chat.openai.com) form openai.
+
+## Information You can Skip
+
+- Things that I know you, such as finding out your machine's IP address will not be covered, let's get to the answer as fast as possible.
+- I am using both computers plugged into the same router box, so IP addresses will start with 192
+- My user name for this example is `harlan` and that will be used throughout. 
+- The IP is 192.168.1.77
+- The Linux computer name is: harlan-b550-aorus-pro-ac
+
+## Only a Command Line Terminal
+
+The most basic, with not graphical user interface is `ssh`
+
+```
+ssh harlan@192.168.1.77
+```
+
+But because the IP address might change from time to time,
+using the machine name is better
+
+```
+ssh harlan@harlan-b550-aorus-pro-ac
+```
+
+If you want, you can specify the key exchange algorithms.
+
+To list supported algorithms, 
+
+```
+ssh -Q kex
+```
+
+```
+ssh -oKexAlgorithms=diffie-hellman-group-exchange-sha256 harlan@192.168.1.76
+```
+
+```
+ssh -oKexAlgorithms=diffie-hellman-group-exchange-sha256 harlan@harlan-b550-aorus-pro-ac
+```
+
+If you want to specify a port, use
+
+```
+ssh -oKexAlgorithms=diffie-hellman-group-exchange-sha256 -p 2222 harlan@harlan-b550-aorus-pro-ac
+```
+
+The result is 
+
+```
+(base) harlananelson@Harlans-Mini-2 ~ % ssh harlan@harlan-b550-aorus-pro-ac
+The authenticity of host 'harlan-b550-aorus-pro-ac (2600:1700:71d0:fbe0::7c0)' can't be established.
+ED25519 key fingerprint is SHA256:L+aSsKbDswSuzjKMBiMY2INj/jcuXPxQSxsE.
+This host key is known by the following other names/addresses:
+    ~/.ssh/known_hosts:4: 192.168.1.76
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'harlan-b550-aorus-pro-ac' (ED25519) to the list of known hosts.
+harlan@harlan-b550-aorus-pro-ac's password: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-32-generic x86_64)
+```
+
+
+### Trouble Shooting
+
+The configuration file on the mac for this operation is 
+`~/.ssh/config`
+
+An example of some of the lines in this file:
+
+```
+ForwardX11 yes
+ForwardX11Trusted no
+ServerAliveInterval 60
+ForwardX11Timeout 596h
+```
+
+On the linux side, there needs to be an ssh server,  check this will
+
+```
+sudo systemctl status ssh
+```
+
+If there is no server package on the linux computer, it can be installed with
+
+```
+sudo apt-get update
+sudo apt-get install openssh-server
+```
+
+If the server is not running, it can be started with
+```
+sudo systemctl start ssh
+```
+
+The configuration file on linux is
+
+`~/.ssh/confi`
+
+The linux logs can be checked with
+
+```
+sudo tail -f /var/log/auth.log
+```
+
+
+## A Grapical User Interface Using X11 Forwarding
+
+X11 Forwarding must be enabled on the Linux server.
+This is indicated in the file `/etc/ssh/sshd_config`
+
+The line 
+
+```
+X11Forwarding yes
+```
+must be uncommented
+
+After you save the file, restart the server
+
+```
+sudo systemctl restart ssh
+```
+
+To start ssh with X11 forwarding, use the `-X` option
+
+```
+ssh -X harlan@harlan-b550-aorus-pro-ac
+```
+
+```
+ssh -X harlan@192.168.1.76
+```
+
+The in the resulting shell, you can start your program
+
+```
+rstudio
+```
+
+This will start rstudio using a graphical user interface.
+In my case both my mac and linux machine are plugged into the same router, 
+so the connection is fast.  Over wi-fi, the response will not be as fastt.
+
+The X11 server I am using is `xQuartz`
+
+## VNC 
+
+There is a build in VNC server on the Mac.  It is also called 
+`Screen Sharing`.  Other VNC servers are `xrdp` and `NoMachine`.
+
+1.  Open the System Preferences on the Linux machine and make sure 
+"Screen Sharing" is on.  
+2. You will need the Linux IP address
+3. Open the `Screen Sharing` application on the mac
+
+On ubuntu, the Remote Desktop is enabled,   "Enable Legacy VNC Protocol" is checked, Remote control is enabled,   The device name is harlan-B550-AORUS-PRO-AC, the remote desktop address is ms-rd://harlan-b550-aorus-pro-ac.local,  the VNC address is vnc://harlan-b550-aorus-pro-ac.local
+
+### Trouble Shooting
+
+1. Make sure the VNC server is on on the linux machine
+
+2. Install the VNC server
+
+```
+sudo apt-get install tightvncserver
+```
+
+You can start the VNC server with
+
+```
+vncserver :1
+```
+
+Stop server, delete lock file, restart server
+Note that your linux computer might freeze when you run `killall`
+```
+sudo killall Xvnc
+sudo rm /tmp/.X1-lock
+vncserver
+```
+
+Another fatal way to stop the server
+
+```
+sudo service gdm3 stop
+```
+
+A better way
+
+```
+sudo systemctl stop gdm3.service
+```
+
+Results from a command I ran
+ ```
+ harlan@harlan-b550-aorus-pro-ac:~$ vncserver :2 -geometry 1600x900
+
+New 'X' desktop is harlan-b550-aorus-pro-ac:2
+
+Creating default startup script /home/harlan/.vnc/xstartup
+Starting applications specified in /home/harlan/.vnc/xstartup
+Log file is /home/harlan/.vnc/harlan-b550-aorus-pro-ac:2.log
+```
+
+Confirm the server is up an running
+
+```
+netstat -tln | grep 590
+```
+
+Kill the server
+```
+sudo vncserver -kill :2
+```
+
+Start the VNC server
+
+```
+vncserver :2 -geometry 1600x900
+```
+
+Find the process of Xtightvnc
+
+```
+ps aux | grep Xtightvnc
+```
+kill it
+
+```
+udo kill <PID>
+```
+
+View the logs 
+
+```
+/home/harlan/.vnc/harlan-b550-aorus-pro-ac:2.log
+```
+
+Install xfonts-base
+
+```
+sudo apt-get install xfonts-base
+```
+
+Create empty .Xresources
+
+```
+touch ~/.Xresources
+```
+
+Run .Xresources
+
+```
+
+
+
+
+
+
+
+
+An address to try
+```
+vnc://192.168.1.76:5902
+```
+
+### Use RDP
+
+Install
+
+```
+sudo apt-get install xrdp
+```
+
+Update `xstartup`
+
+```
+#!/bin/sh
+
+xrdb $HOME/.Xresources
+xsetroot -solid grey
+x-terminal-emulator -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &
+x-window-manager &
+xfontsdir=/usr/share/fonts/X11/75dpi,/usr/share/fonts/X11/100dpi
+xset +fp $xfontsdir
+xset fp rehash
+```
+
+
+Simple Command Line SSH
+
+    Open the Terminal application on your local machine.
+    Enter ssh username@remotehost in the Terminal window, where username is your username on the remote machine and remotehost is the IP address or domain name of the remote machine.
+    Enter your password when prompted.
+    You are now connected to the remote machine via SSH.
+
+X11 Forwarding over SSH
+
+    Enable X11 forwarding on your local machine by adding the line ForwardX11 yes to the /etc/ssh/ssh_config file.
+    Open the Terminal application on your local machine.
+    Enter ssh -X username@remotehost in the Terminal window, where username is your username on the remote machine and remotehost is the IP address or domain name of the remote machine.
+    Enter your password when prompted.
+    You are now connected to the remote machine via SSH with X11 forwarding enabled.
+
+VNC Server Setup
+
+    Install a VNC server on the remote machine (e.g., tightvncserver).
+    Configure the VNC server by creating a vncserver.service file in the /etc/systemd/system directory.
+    Start the VNC server using the command systemctl start vncserver.service.
+    Connect to the VNC server using a VNC viewer application on your local machine (e.g., RealVNC Viewer), using the IP address and port of the remote machine (e.g., 192.168.1.100:5901).
+
+
+
+
+
+
+
+
+
+

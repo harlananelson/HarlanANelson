@@ -1,0 +1,50 @@
+---
+title: "HAINS"
+format: html
+editor: visual
+---
+
+https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/P_AUX.XPT
+
+```{r setup}
+pacman::p_load(tidyverse, nhanesA)
+#haven::read_xpt("https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/P_AUX.XPT")
+```
+
+```{r}
+nhanesSearch('Pandemic')
+```
+
+```{r}
+nhanesSearch('body')
+```
+
+```{r}
+dd1 <- nhanesSearch('breast') 
+dd1 |> 
+  filter(Begin.Year == 2017)
+```
+
+```{r}
+d <- nhanes(nh_table = 'DR1TOT_I')
+```
+
+```{r}
+d |> head()
+```
+
+```{r}
+d |> 
+  ggplot(aes(x=DRABF)) +
+  scale_y_log10() +
+  geom_bar()
+```
+
+```{r}
+d <- nhanes(nh_table = 'P_RHQ')
+d |> skimr::skim()
+```
+
+```{r}
+d |> head()
+```
