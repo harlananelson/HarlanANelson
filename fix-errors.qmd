@@ -3,5 +3,7 @@ title: "Fix Errors"
 author: "Harlan A Nelson"
 ---
 
-    remotes::install_cran("lifecycle", force = TRUE)
-    remotes::install_cran("lifecycle", force = TRUE)
+```         
+remotes::install_cran("lifecycle", force = TRUE)
+remotes::install_cran("lifecycle", force = TRUE)
+```
