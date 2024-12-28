@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "Harlan A Nelson"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: experience.qmd
+        text: Experience
+      - href: publications.qmd
+        text: Publications
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/harlananelson/
+      - icon: github
+        href: https://github.com/harlananelson
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

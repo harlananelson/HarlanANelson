@@ -1,0 +1,38 @@
+# R-related files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Python-related files
+__pycache__/
+*.py[cod]
+*.so
+
+# MacOS-related files
+.DS_Store
+
+# Quarto & intermediate build files
+_site/
+_quarto/
+*.html
+*.qmd.cache/
+
+# General backup files
+*~
+*.bak
+
+# Dependency directories for tools like Node.js
+node_modules/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Files involving dependencies or environment configs
+.Renviron
+.env
+
+# VS Code workspace settings
+.vscode/
