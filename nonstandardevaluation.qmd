@@ -1,0 +1,209 @@
+---
+title: "R tidyr Non-Standard Evaluation"
+---
+
+## Overview of Non-Standard Evaluation in tidyr
+
+Nonstandard evaluation in R allows you to control how and where expressions or variables are evaluated.  
+Where refers to the scope of evaluation, for example this could be in the global environment or in a data table where the columns names can be used as variables.  This system is most useful in functions.
+
+## Related to Base R `substitute`
+
+A conversation with Claude 3.5 Sonnet
+
+substitute() is a base R function that captures an expression without evaluating it. It's part of R's metaprogramming facilities. Here's a breakdown:
+
+```
+# These examples show what substitute() returns
+x <- "foo"
+substitute(x)      # Returns: x (the symbol/name)
+substitute(x + 1)  # Returns: x + 1 (the expression)
+
+# In our function context:
+get_and_pivot_features <- function(source_data, ads, feature_list, id_field, value_field, prefix = '') {
+  # substitute(value_field) captures the actual expression passed to value_field
+  # toString() converts that expression to a string
+  expr_as_string <- toString(substitute(value_field))
+  
+  # So if called with:
+  # get_and_pivot_features(..., value_field = average_value)
+  # expr_as_string would be "average_value"
+}
+```
+
+Compared to the rlang approach:
+
+```
+# rlang approach breaks down into:
+rlang::ensym(value_field)    # Captures the expression safely (similar to substitute)
+rlang::as_name()             # Converts the expression to a string name
+
+# These do roughly the same thing:
+toString(substitute(value_field))  # Base R approach
+rlang::as_name(rlang::ensym(value_field))  # rlang approach
+```
+
+The rlang version is generally preferred in tidyverse code because:
+
+1. It handles edge cases better
+1. It's designed specifically for working with tidyverse functions
+1. It provides clearer error messages
+
+But substitute() shows us what's actually happening under the hood - we're capturing the expression of the variable name before it's evaluated, then converting it to a string.
+
+What is the explaination of ensym?
+
+rlang::ensym() is a tidyverse function designed for safely capturing a single symbol (variable name). Here's how it works:
+
+```
+#' Example function to demonstrate ensym
+demonstrate_ensym <- function(some_column) {
+  # ensym captures a single name/symbol
+  sym <- rlang::ensym(some_column)
+  
+  # Different ways some_column might be passed:
+  print(glue::glue("Type of sym: {typeof(sym)}"))
+  print(glue::glue("As string: {rlang::as_name(sym)}"))
+  
+  return(sym)
+}
+
+# Different ways to call it:
+demonstrate_ensym(average_value)    # Bare name: converts to symbol
+demonstrate_ensym("average_value")  # String: converts to symbol
+# demonstrate_ensym(a + b)         # Error: ensym() expects a symbol or string
+
+```
+
+Key points about ensym():
+
+It's designed to capture a single variable name (symbol)
+It accepts either a bare name or string input
+It enforces that you're only passing one name
+It fails clearly if you try to pass an expression (like a + b)
+Compared to base R's substitute():
+
+```
+# Base R substitute() is more permissive
+base_example <- function(x) {
+  substitute(x)
+}
+
+base_example(average_value)  # Works: returns symbol
+base_example("average_value")  # Works: returns string
+base_example(a + b)  # Works: returns expression
+```
+
+ensym() is part of tidyverse's "tidy evaluation" system, which provides safer and more predictable behavior when working with variable names in functions, especially within dplyr, ggplot2, and other tidyverse packages.
+
+`rlang::ensym()` is a tidyverse function designed for safely capturing a single symbol (variable name). Here's how it works:
+
+```R
+#' Example function to demonstrate ensym
+demonstrate_ensym <- function(some_column) {
+  # ensym captures a single name/symbol
+  sym <- rlang::ensym(some_column)
+  
+  # Different ways some_column might be passed:
+  print(glue::glue("Type of sym: {typeof(sym)}"))
+  print(glue::glue("As string: {rlang::as_name(sym)}"))
+  
+  return(sym)
+}
+
+# Different ways to call it:
+demonstrate_ensym(average_value)    # Bare name: converts to symbol
+demonstrate_ensym("average_value")  # String: converts to symbol
+# demonstrate_ensym(a + b)         # Error: ensym() expects a symbol or string
+```
+
+Key points about `ensym()`:
+1. It's designed to capture a single variable name (symbol)
+2. It accepts either a bare name or string input
+3. It enforces that you're only passing one name
+4. It fails clearly if you try to pass an expression (like `a + b`)
+
+Compared to base R's `substitute()`:
+```R
+# Base R substitute() is more permissive
+base_example <- function(x) {
+  substitute(x)
+}
+
+base_example(average_value)  # Works: returns symbol
+base_example("average_value")  # Works: returns string
+base_example(a + b)  # Works: returns expression
+```
+
+This is why in our `get_and_pivot_features` function:
+```R
+get_and_pivot_features <- function(source_data, ads, feature_list, id_field, value_field, prefix = '') {
+  # This ensures we get a clean symbol representing the column name
+  field_name <- rlang::as_name(rlang::ensym(value_field))
+  
+  # Now we can safely use it in glue
+  names_prefix = glue::glue("{prefix}{field_name}_")
+  
+  # ... rest of function
+}
+```
+
+`ensym()` is part of tidyverse's "tidy evaluation" system, which provides safer and more predictable behavior when working with variable names in functions, especially within dplyr, ggplot2, and other tidyverse packages.
+
+Yes, exactly! This is one of the convenient features of ensym(). Here's a demonstration:
+
+```
+#' Get pivoted features allowing both bare names and strings for field specifications
+#' 
+get_and_pivot_features <- function(source_data, ads, feature_list, id_field, value_field, prefix = '') {
+  # These work the same whether id_field and value_field are bare names or strings
+  features <- data %>% 
+    select(personid, tenant, {{id_field}}, {{value_field}}) %>% 
+    distinct() %>% 
+    pivot_wider(
+      names_from = {{id_field}}, 
+      values_from = {{value_field}}, 
+      values_fill = NA,
+      names_prefix = glue::glue("{prefix}{rlang::as_name(rlang::ensym(value_field))}_")
+    )
+}
+
+# Both of these calls work the same way:
+get_and_pivot_features(..., id_field = labcode_standard_id, value_field = average_value)
+get_and_pivot_features(..., id_field = "labcode_standard_id", value_field = "average_value")
+```
+
+This flexibility is particularly useful when:
+
+- Writing interactive code (where bare names are more convenient)
+- Writing programmatic code (where strings are often easier to work with)
+- Creating wrapper functions that might receive either form
+
+
+## Key Concepts
+
+- Column names can be used directly in tidyr functions
+- No need to use quotation marks or `$` notation
+- Variables are evaluated in the context of the data frame
+i
+
+es, exactly! {{anchor_col}} is equivalent to !!rlang::sym(anchor_col) in most cases. The {{}} (curly-curly) operator is tidyverse's shorthand for this common pattern. It's sometimes called the "embrace" operator.
+
+```{r}
+library(tidyr)
+library(dplyr)
+
+# Example data
+df <- data.frame(
+  id = 1:3,
+  val_a = c(1, 2, 3),
+  val_b = c(4, 5, 6)
+)
+
+# Using NSE
+df %>%
+  pivot_longer(
+    cols = starts_with("val"),
+    names_to = "variable",
+    values_to = "value"
+  )
