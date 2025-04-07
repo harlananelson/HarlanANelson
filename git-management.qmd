@@ -1,0 +1,271 @@
+---
+author: "o3-mini-high"
+date: "2025-02-03"
+format:
+  html:
+    code-fold: true
+    code-tools: true
+---
+How do I prevent accidently working on stale git branches
+
+I understand the challenge you're facing when working across multiple computers or sites. It's easy to forget to switch branches, leading you to inadvertently continue working on a development branch that should have been closed after merging into `main`.
+
+To prevent this issue, here are several strategies you can implement:
+
+---
+
+## **1. Delete Merged Branches After Merging**
+
+After you've merged a development branch into `main`, delete the branch both on the remote repository and locally. This reduces the chance of accidentally continuing work on a stale branch on another machine.
+
+### **Delete the Remote Branch**
+
+```bash commands.sh
+# Replace 'development_branch' with your branch name
+git push origin --delete development_branch
+```
+
+### **Delete the Local Branch**
+
+```bash commands.sh
+git branch -d development_branch
+```
+
+- Use `-d` to delete a branch that has been merged.
+- Use `-D` (uppercase) to force delete a branch that hasn't been merged (use with caution).
+
+---
+
+## **2. Configure Git to Prune Remote-Tracking Branches**
+
+Enable Git to automatically prune deleted remote branches when fetching. This keeps your local repository clean and up to date.
+
+### **Set Global Configuration**
+
+```bash commands.sh
+git config --global fetch.prune true
+```
+
+This command updates your global Git configuration to automatically prune remote-tracking branches that no longer exist on the remote server every time you fetch.
+
+---
+
+## **3. Regularly Fetch and Prune Remotes**
+
+Make it a habit to fetch and prune remote branches when you start working on a different machine.
+
+```bash commands.sh
+git fetch --prune
+```
+
+This command updates all remote-tracking branches and removes those that have been deleted on the remote.
+
+---
+
+## **4. Use and Enforce Branch Naming Conventions**
+
+Adopt a consistent branch naming strategy to easily identify active and inactive branches.
+
+- **Active Branches**: Use prefixes like `feature/`, `bugfix/`, or `hotfix/`.
+- **Merged Branches**: Once merged, delete or archive them as per your workflow.
+
+**Example**:
+
+- Active development branch: `feature/login-page`
+- After merging, delete `feature/login-page`.
+
+---
+
+## **5. Set Up Git Hooks to Warn on Stale Branches**
+
+Implement a Git hook that warns you if you're working on a branch that has been merged or deleted on the remote.
+
+### **Create a Pre-Checkout Hook**
+
+1. **Create the Hook File**
+
+   ```bash .git/hooks/pre-checkout
+   #!/bin/sh
+
+   # Get the name of the branch being checked out
+   BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+
+   # Check if the branch exists on the remote
+   if ! git show-ref --quiet --verify "refs/remotes/origin/$BRANCH"; then
+     echo "Warning: The branch '$BRANCH' does not exist on the remote. It may have been merged or deleted."
+   fi
+   ```
+
+2. **Make the Hook Executable**
+
+   ```bash commands.sh
+   chmod +x .git/hooks/pre-checkout
+   ```
+
+This hook will display a warning if you try to switch to a branch that doesn't exist on the remote, indicating it may have been merged or deleted.
+
+---
+
+## **6. Enhance Your Shell Prompt**
+
+Modify your shell prompt to display the current Git branch, so you're always aware of which branch you're on.
+
+### **For Bash Users**
+
+Add the following code to your `~/.bashrc` or `~/.bash_profile` file:
+
+```bash .bashrc
+# Function to get the current Git branch
+parse_git_branch() {
+  git branch 2>/dev/null | grep '^*' | colrm 1 2
+}
+
+# Customize the PS1 variable to include the Git branch
+export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+```
+
+### **For Zsh Users**
+
+Add this to your `~/.zshrc` file:
+
+```bash .zshrc
+autoload -Uz vcs_info
+precmd() { vcs_info }
+setopt prompt_subst
+PROMPT='%n@%m %~ %F{yellow}${vcs_info_msg_0_}%f $ '
+zstyle ':vcs_info:git:*' formats '(%b)'
+```
+
+Reload your shell configuration:
+
+```bash commands.sh
+source ~/.bashrc
+# or for Zsh
+source ~/.zshrc
+```
+
+---
+
+## **7. Use Visual Indicators in Your IDE or Text Editor**
+
+Most modern IDEs and text editors can display the current Git branch prominently.
+
+- **Visual Studio Code**: Displays the branch name in the status bar.
+- **JetBrains IDEs**: Show the branch in the bottom-right corner.
+- **Sublime Text**: With plugins like GitGutter, you can see branch information.
+
+---
+
+## **8. Incorporate Git Workflows**
+
+Adopt a Git workflow that supports better branch management, such as GitFlow or GitHub Flow.
+
+### **GitFlow Workflow**
+
+- **Main Branches**:
+  - `main`: Production-ready state.
+  - `develop`: Integration branch for features.
+- **Supporting Branches**:
+  - `feature/*`: New features to be merged into `develop`.
+  - `release/*`: Prepare for new production release.
+  - `hotfix/*`: Critical fixes for `main`.
+
+By strictly following a workflow, you reduce the risk of working on outdated branches.
+
+---
+
+## **9. Automate with Git Aliases**
+
+Create Git aliases to streamline branch management tasks.
+
+### **Add Aliases to Git Configuration**
+
+```bash commands.sh
+git config --global alias.cleanup-branches '!git fetch -p && git branch -vv | grep ": gone]" | awk '"'"'{print $1}'"'"' | xargs git branch -d'
+```
+
+- **Usage**:
+
+  ```bash commands.sh
+  git cleanup-branches
+  ```
+
+This command fetches and prunes remote branches, then deletes any local branches that have been deleted on the remote.
+
+---
+
+## **10. Set Up Notifications for Branch Deletion**
+
+Utilize Git hosting services' features to notify team members when branches are deleted.
+
+- **GitHub**: Watch the repository to receive notifications.
+- **GitLab**: Use push rules or repository settings to manage branch deletion policies.
+
+---
+
+## **11. Regularly Review and Clean Up Local Branches**
+
+Schedule periodic reviews of your local branches.
+
+```bash commands.sh
+# List branches merged into main
+git branch --merged main
+
+# Delete a branch (ensure it's merged and no longer needed)
+git branch -d old_branch
+```
+
+---
+
+## **12. Educate and Establish Team Practices**
+
+If you're working in a team:
+
+- **Communicate** about branch deletions and integrations.
+- **Document Procedures**: Create guidelines for branch management.
+- **Use Pull Requests**: Encourage code reviews and formal merging processes.
+
+---
+
+## **Action Steps**
+
+1. **Delete Merged Branches**: After merging, delete the development branch both remotely and locally.
+2. **Enable Auto-Pruning**: Set `fetch.prune` to `true` in your Git config.
+3. **Update Repositories Regularly**: Get into the habit of running `git fetch --prune` when you start working on a different machine.
+4. **Modify Your Shell Prompt**: Display the current branch in your terminal to stay aware.
+5. **Use Git Hooks**: Implement hooks to warn you when working on stale branches.
+6. **Adopt a Git Workflow**: Use a structured workflow like GitFlow for branch management.
+7. **Leverage IDE Features**: Use your development tools' capabilities to keep track of branches.
+8. **Regular Clean-Up**: Periodically review and remove unused local branches.
+
+---
+
+## **Example Workflow**
+
+Here's how you can integrate these strategies:
+
+```bash commands.sh
+# 1. After merging your development branch into main
+git checkout main
+git merge development_branch
+
+# 2. Delete the remote and local branch
+git push origin --delete development_branch
+git branch -d development_branch
+
+# 3. On another machine, prune remote branches and update main
+git fetch --prune
+git checkout main
+git pull origin main
+
+# 4. Start new work from main
+git checkout -b new_feature_branch
+```
+
+---
+
+By incorporating these practices into your workflow, you can significantly reduce the risk of working on stale development branches and maintain a more organized and efficient development process.
+
+---
+
+**Feel free to let me know if you need further clarification or assistance with implementing any of these strategies!**
