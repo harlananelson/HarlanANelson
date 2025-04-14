@@ -1,3 +1,19 @@
+---
+title: "Non-Standard Evaluation in R with rlang"
+author: "Your Name"
+date: "2023-11-14"
+format:
+ html:
+    code-fold: show
+    code-tools: true
+    code-overflow: wrap
+    code-block-bg: "#f1f3f5"
+    code-block-border-left: "#31BAE9"
+    highlight-style: github
+execute:
+  eval: false
+---
+
 # Non-Standard Evaluation in R with `rlang`
 
 ## Introduction
@@ -5,11 +21,9 @@
 Non-standard evaluation (NSE) is a powerful feature in R that allows you to manipulate code expressions instead of just their evaluated values. This is particularly useful when writing functions that interact with variable names or expressions, such as data manipulation functions in the tidyverse. The `rlang` package provides modern tools for NSE, commonly referred to as **tidy evaluation**, which make writing such functions safer and more intuitive.
 
 This document explains non-standard evaluation in R, focusing on the `rlang` package and its applications within the tidyverse ecosystem.
-
 ---
 
 ## Table of Contents
-
 1. [Understanding Non-Standard Evaluation](#understanding-non-standard-evaluation)
 2. [Limitations of Base R NSE Functions](#limitations-of-base-r-nse-functions)
 3. [Tidy Evaluation with `rlang`](#tidy-evaluation-with-rlang)
@@ -28,7 +42,7 @@ This document explains non-standard evaluation in R, focusing on the `rlang` pac
 
 In **standard evaluation**, function arguments are evaluated in the environment where the function is called before being passed to the function.
 
-```r
+```{r}
 x <- 10
 standard_eval_example <- function(arg) {
   print(arg)
@@ -37,204 +51,17 @@ standard_eval_example <- function(arg) {
 standard_eval_example(x)
 # Output: 10
 ```
-
-In **non-standard evaluation (NSE)**, a function can capture the expression provided as an argument without immediately evaluating it. This allows manipulation of the expression itself.
-
-```r
-nse_example <- function(arg) {
-  print(substitute(arg))
-}
-
-nse_example(x)
-# Output: x
-```
-
-This capability enables more dynamic and flexible functions, especially when programming with data.
-
----
-
-## Limitations of Base R NSE Functions
-
-Base R provides functions like `substitute()`, `quote()`, and `eval()` for NSE. While powerful, they have limitations:
-
-- **Complex Syntax**: Can be unintuitive and verbose.
-- **Limited Safety**: May not handle edge cases gracefully.
-- **Less Compatibility**: Not designed with the tidyverse in mind.
-
-**Example with `substitute()`:**
-
-```r
-base_nse_function <- function(column) {
-  col_expr <- substitute(column)
-  print(col_expr)
-}
-
-base_nse_function(my_column)
-# Output: my_column
-
-base_nse_function(a + b)
-# Output: a + b
-```
-
----
-
-## Tidy Evaluation with `rlang`
-
-The `rlang` package introduces a more robust system for NSE called **tidy evaluation**. It offers tools to capture and manipulate expressions safely and effectively.
-
-### Capturing Symbols and Expressions
-
-- **`ensym()`**: Captures a function argument as a symbol (variable name).
-- **`enexpr()`**: Captures a function argument as an expression.
-- **`enquo()`**: Captures an expression along with its environment.
-
-**Examples:**
-
-```r
-library(rlang)
-
-my_function <- function(arg) {
-  sym <- ensym(arg)
-  expr <- enexpr(arg)
-  quo <- enquo(arg)
-  
-  list(sym = sym, expr = expr, quo = quo)
-}
-
-result <- my_function(column_name)
-print(result$sym)   # Output: symbol 'column_name'
-print(result$expr)  # Output: symbol 'column_name'
-print(result$quo)   # Output: <quosure> ~column_name
-```
-
-### Unquoting and Injecting Expressions
-
-- **`!!` Operator**: Unquotes a captured expression or symbol for evaluation.
-- **`!!!` Operator**: Splices a list of expressions into a function call.
-
-**Example:**
-
-```r
-dynamic_filter <- function(data, column) {
-  col_sym <- ensym(column)
-  data %>%
-    filter(!!col_sym > 0)
-}
-
-# Using the function
-dynamic_filter(mtcars, mpg)
-```
-
-### The Curly-Curly `{{ }}` Operator
-
-The `{{ }}` operator, also known as the **embrace operator**, is a syntactic shortcut for unquoting and embraces tidy evaluation.
-
-**Example:**
-
-```r
-dynamic_filter <- function(data, column) {
-  data %>%
-    filter({{ column }} > 0)
-}
-
-dynamic_filter(mtcars, mpg)
-```
-
-The `{{ }}` operator simplifies the function by eliminating the need to manually capture and unquote the argument.
-
----
-
-## Practical Examples
-
-### Writing Functions with Tidy Evaluation
-
-**Example: Summarizing Data by a Given Column**
-
-```{r}
-library(dplyr)
-first_function = function(data,group_col){
-  group_col_quo = enquo(group_col)
-  summarize_by(data, {{ group_col }})
-}
-summarize_by <- function(data, group_col) {
-  data %>%
-    group_by({{ group_col }}) %>%
-    summarize(count = n())
-}
-# Using the function
-first_function(mtcars, cyl)
-```
-
-### Handling Strings and Symbols Flexibly
-
-**Example: Allowing Both Strings and Bare Names**
-
-```r
-flexible_select <- function(data, column) {
-  col_sym <- rlang::ensym(column)
-  data %>%
-    select(!!col_sym)
-}
-
-# Using the function with bare names and strings
-flexible_select(mtcars, mpg)
-flexible_select(mtcars, "mpg")
-```
-
-**Explanation:**
-
-- `ensym()` converts a bare name or string into a symbol.
-- `!!` unquotes the symbol for evaluation within `select()`.
-
----
-
-## Key Takeaways
-
-- **Non-Standard Evaluation (NSE)** allows functions to manipulate code expressions directly.
-- **`rlang` Package** provides tools (`ensym()`, `enexpr()`, `enquo()`) for capturing expressions and symbols safely.
-- **Unquoting Operators** (`!!`, `!!!`) are used to inject captured expressions back into code for evaluation.
-- **Curly-Curly `{{ }}` Operator** simplifies tidy evaluation in functions.
-- **Flexibility**: `rlang` functions handle both bare names and strings, making your functions more robust.
-
----
-
-## Conclusion
-
-Understanding non-standard evaluation and the tools provided by `rlang` is essential for advanced R programming, especially within the tidyverse. By leveraging tidy evaluation, you can write more flexible, intuitive, and safer functions that enhance the user experience and make your code more maintainable.
-
----
-
-**References:**
-
-- [rlang Package Documentation](https://rlang.r-lib.org/)
-- [Tidy Evaluation Programming Guide](https://tidyeval.tidyverse.org/)
-- [Programming with dplyr](https://dplyr.tidyverse.org/articles/programming.html)
-
-
-## Calling Functions that Use NSE from Within Other Functions
-
-When writing functions that use non-standard evaluation (NSE), such as those utilizing the `{{ }}` operator, you may encounter challenges when calling them from within other functions. This is because NSE relies on capturing expressions from the caller's environment, and when wrapping such functions inside another function, you need to ensure that the NSE arguments are properly passed through.
-
-**Example Scenario:**
-
-Suppose you have a function `summarize_by()` that uses NSE to group and summarize data:
-
-```r
-library(dplyr)
-
-summarize_by <- function(data, group_col) {
-  data %>%
-    group_by({{ group_col }}) %>%
     summarize(count = n())
 }
 
 # Using the function directly works as expected
+```{r}
 summarize_by(mtcars, cyl)
 ```
 
 **Now, you want to call `summarize_by()` from within another function:**
 
-```r
+```{r}
 first_function <- function(data, group_col) {
   summarize_by(data, group_col)
 }
@@ -253,7 +80,7 @@ To correctly pass NSE arguments through multiple function calls, you need to exp
 
 **Corrected Code:**
 
-```r
+```{r}
 library(dplyr)
 
 # The original function using NSE
@@ -291,7 +118,7 @@ If you want to pass multiple NSE arguments or make your functions more flexible,
 
 **Example:**
 
-```r
+```{r}
 summarize_by <- function(data, ...) {
   data %>%
     group_by(...) %>%
@@ -320,7 +147,7 @@ first_function(mtcars, cyl, gear)
    - Use `enquo()` for a single argument.
    - Use `enquos()` for multiple arguments.
 
-   ```r
+   ```{r}
    first_function <- function(data, group_col) {
      group_col_quo <- enquo(group_col)
      # ...
@@ -332,7 +159,7 @@ first_function(mtcars, cyl, gear)
    - Use `!!` to unquote a single quosure.
    - Use `!!!` to splice a list of quosures.
 
-   ```r
+   ```{r}
    summarize_by(data, !!group_col_quo)
    ```
 
@@ -351,7 +178,7 @@ first_function(mtcars, cyl, gear)
 
 **Complete Example in the Document:**
 
-```r
+```{r}
 library(dplyr)
 
 # Inner function using NSE with {{ }}
@@ -376,7 +203,7 @@ print(result)
 
 **Output:**
 
-```
+```{r}
 # A tibble: 3 × 2
     cyl count
   <dbl> <int>
@@ -397,7 +224,7 @@ When you have functions that use tidy evaluation and you want to call them from 
 
    Use `enquo()` in the outer function to capture the NSE argument as a quosure.
 
-   ```r
+   ```{r}
    first_function <- function(data, group_col) {
      group_col_quo <- enquo(group_col)
      # ...
@@ -408,7 +235,7 @@ When you have functions that use tidy evaluation and you want to call them from 
 
    When calling the inner function, unquote the quosure using `!!` so that the inner function receives the correct expression.
 
-   ```r
+   ```{r}
    summarize_by(data, !!group_col_quo)
    ```
 
@@ -416,7 +243,7 @@ When you have functions that use tidy evaluation and you want to call them from 
 
    The inner function can use `{{ }}` to simplify the NSE handling.
 
-   ```r
+   ```{r}
    summarize_by <- function(data, group_col) {
      data %>%
        group_by({{ group_col }}) %>%
@@ -438,7 +265,7 @@ If your inner function accepts multiple NSE arguments, you can use `enquos()` an
 
 **Example:**
 
-```r
+```{r}
 library(dplyr)
 
 # Inner function that groups by multiple columns
@@ -461,7 +288,7 @@ print(result)
 
 **Output:**
 
-```
+```{r}
 # A tibble: 6 × 3
     cyl  gear count
   <dbl> <dbl> <int>
@@ -523,7 +350,7 @@ The `tar_read()` function from the `targets` package is designed to read a targe
 
 **Examples of `tar_read()` Usage:**
 
-```r
+```{r}
 library(targets)
 
 # Assuming you have a target named 'my_data' in your pipeline
@@ -546,7 +373,7 @@ To create functions that can accept either a target name (to be read with `tar_r
 
 **Example Function Handling Both Cases:**
 
-```r
+```{r}
 library(targets)
 library(dplyr)
 
@@ -597,7 +424,7 @@ Alternatively, you can use the `rlang` package to handle NSE more robustly.
 
 **Using `rlang` to Manage NSE:**
 
-```r
+```{r}
 library(targets)
 library(dplyr)
 library(rlang)
@@ -664,7 +491,7 @@ output <- process_data(test_data)
 
 **Suppose you have the following target pipeline in `_targets.R`:**
 
-```r
+```{r}
 library(targets)
 
 tar_option_set(packages = c("dplyr"))
@@ -686,7 +513,7 @@ list(
 
 **In your `functions.R` file:**
 
-```r
+```{r}
 process_data <- function(data) {
   # Function as defined earlier
   # ...
@@ -695,7 +522,7 @@ process_data <- function(data) {
 
 **Testing the Function Directly:**
 
-```r
+```{r}
 # Load the functions
 source("functions.R")
 
@@ -734,7 +561,7 @@ If managing NSE becomes too complex, consider separating the functionality:
 
 - **Function for Data Frames:**
 
-  ```r
+  ```{r}
   process_data_df <- function(data) {
     data %>%
       summarize(count = n())
@@ -743,7 +570,7 @@ If managing NSE becomes too complex, consider separating the functionality:
 
 - **Function for Target Names:**
 
-  ```r
+  ```{r}
   process_data_target <- function(target_name) {
     data <- tar_read(target_name)
     process_data_df(data)
@@ -752,7 +579,7 @@ If managing NSE becomes too complex, consider separating the functionality:
 
 - **Usage:**
 
-  ```r
+  ```{r}
   # For data frames
   result <- process_data_df(test_data)
 
@@ -775,6 +602,15 @@ Key points:
 - **Provide clear documentation and error handling** to guide users in providing the correct inputs.
 - **Consider separating functionality** if the NSE handling becomes too complex.
 
+By applying these strategies, you can build robust data processing functions that integrate smoothly with the `targets` package and provide flexibility for both pipeline execution and testing.
+
+---
+
+**References:**
+
+- [targets Package Documentation](https://books.ropensci.org/targets/)
+- [Non-Standard Evaluation in R](https://adv-r.hadley.nz/evaluation.html)
+- [rlang Package Documentation](https://rlang.r-lib.org/)
 By applying these strategies, you can build robust data processing functions that integrate smoothly with the `targets` package and provide flexibility for both pipeline execution and testing.
 
 ---

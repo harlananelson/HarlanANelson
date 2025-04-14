@@ -1,4 +1,5 @@
 ---
+title: "Python Decorators and R Equivalents"
 author: "Grok 2"
 date: "2025-02-03"
 format:
@@ -7,11 +8,10 @@ format:
     code-tools: true
 ---
 
-1. Introduction
-Decorators in Python are a powerful design pattern that allows you to wrap another function to extend its behavior without explicitly modifying it. In R, while there isn't a direct equivalent to decorators, similar functionality can be achieved through function closures or method chains.
-
-2. Python Decorators
-Basic Example of a Decorator
+# Python Decorators and R Equivalents
+## Introduction
+## Python Decorators
+### Basic Example of a Decorator
 
 ```{python}
 def my_decorator(func):
@@ -27,46 +27,13 @@ def say_hello():
 
 say_hello()
 ```
+While Python decorators provide a clean and elegant way to modify function behavior, R offers different but equally potent methods through closures and OOP features like method chaining. Both approaches allow developers to extend function capabilities dynamically, enhancing code readability and maintainability.
 
-Explanation: 
-my_decorator is a function that takes another function (func) as an argument.
-Inside my_decorator, we define wrapper which calls func but adds behavior before and after func is executed.
-The @my_decorator syntax is syntactic sugar for say_hello = my_decorator(say_hello).
-
-Using Decorators with Arguments
-
-```{python}
-def do_twice(func):
-    def wrapper_do_twice(*args, **kwargs):
-        func(*args, **kwargs)
-        func(*args, **kwargs)
-    return wrapper_do_twice
-
-@do_twice
-def greet(name):
-    print(f"Hello, {name}")
-
-greet("Alice")
-
-```
-
-Explanation: 
-Here, do_twice doubles the execution of the decorated function.
 
 3. R Equivalents
 R doesn't have decorators in the Python sense, but you can achieve similar results with:
 
-Function Closures
 ```{r}
-decorate_with_log <- function(func) {
-  function(...) {
-    cat("Calling function\n")
-    result <- func(...)
-    cat("Function call completed\n")
-    result
-  }
-}
-
 say_hello <- function() {
   cat("Hello!\n")
 }
@@ -112,5 +79,3 @@ Here, greet() and twice() are method calls that can be chained to mimic decorato
 
 4. Conclusion
 While Python decorators provide a clean and elegant way to modify function behavior, R offers different but equally potent methods through closures and OOP features like method chaining. Both approaches allow developers to extend function capabilities dynamically, enhancing code readability and maintainability.
-
-This Quarto document would produce an HTML file with formatted code blocks, which can be further enhanced with Quarto's interactive features like code folding and execution if needed. Remember, this document outlines concepts; actual implementation might require adjustments based on specific use cases or environments.
