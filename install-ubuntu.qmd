@@ -1,5 +1,18 @@
-Certainly! Here’s a guide to writing a Quarto document for your web page that covers installing Ubuntu, setting up a GPU, and configuring a data science Docker container with R, Python, Julia, Spark, Polars, Tidyverse, and Tidymodels.
-
+---
+title: "Install Ubuntu"
+author: "Your Name"
+date: today
+format:
+  html:
+    toc: true
+    code-fold: true
+    theme: cosmo
+    css: custom.css
+bibliography: references.bib
+csl: apa.csl
+execute:
+  echo: false
+  warning: false
 ---
 
 ## 1. Set Up Your Quarto Project
