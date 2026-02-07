@@ -1,0 +1,78 @@
+---
+title: "How This Site Works"
+node-type: meta
+---
+
+# How This Site Works
+
+This website is organized using a lightweight ontology -- a system of typed pages and explicit relationships between them. Every page declares what *kind* of content it is, and metadata fields encode how pages relate to each other.
+
+This is the same approach I use in my [clinical research work](../projects/scd-mortality.qmd), where typed knowledge graphs organize reasoning about patients, treatments, evidence, and assumptions. Here, the same principle organizes a professional life.
+
+## The Node Types
+
+Each page on this site has a `node-type` field in its front matter:
+
+| Node Type | What It Represents | Example |
+|-----------|-------------------|---------|
+| **person** | The site owner | [Home](../index.qmd), [About](../about.qmd) |
+| **project** | A body of work | [SCD Mortality](../projects/scd-mortality.qmd), [TxtArchive](../projects/txtarchive.qmd) |
+| **role** | A professional position | [IU Health](../experience/iuhealth.qmd), [Lucid](../experience/lucid.qmd) |
+| **publication** | A peer-reviewed paper | Listed on [Publications](../publications.qmd) |
+| **skill** | A tool or domain | Cataloged on [Skills](../skills.qmd) |
+| **writing** | An essay or teaching piece | [Learning to Change](../writings/learning-to-change.qmd) |
+| **meta** | This page -- self-describing | You're reading it |
+
+## The Edges (Relationships)
+
+Relationships between pages are encoded as YAML metadata, not as a database:
+
+| Relationship | How It's Encoded | What It Means |
+|-------------|-----------------|---------------|
+| **uses-skill** | `skills: [r, tidymodels]` in a project | This project uses these tools |
+| **produced-during** | `role: iuhealth` in a project | This project was done during this role |
+| **demonstrates** | `skills: [statistics]` in a publication | This paper demonstrates this expertise |
+| **categorized-as** | `categories: [healthcare-ai]` | Standard Quarto cross-reference |
+
+## An Example
+
+Here's the front matter for the SCD Mortality project page:
+
+```yaml
+---
+title: "SCD Mortality Prediction"
+node-type: project
+status: active
+role: iuhealth
+skills: [r, tidymodels, ranger, shap, survival-analysis]
+categories: [healthcare-ai, sickle-cell-disease]
+---
+```
+
+This single block of metadata tells you:
+
+- **What it is:** a project (not a role, not a publication)
+- **Its status:** active (not complete or archived)
+- **Where it happened:** during the IU Health role
+- **What tools it uses:** R, tidymodels, ranger, SHAP, survival analysis
+- **How to find it:** under healthcare-ai and sickle-cell-disease categories
+
+## Why Bother?
+
+Three reasons:
+
+1. **Consistency.** Every project page has the same structure. Every role page has the same fields. This makes the site easier to maintain and extend.
+
+2. **Discoverability.** When Quarto builds the site, listings auto-generate from page metadata. Add a new project page with the right front matter and it appears in the projects listing automatically.
+
+3. **The idea itself is interesting.** In my clinical research, I've been building ontology schemas to organize reasoning about sickle cell disease -- defining what counts as evidence, what counts as a constraint, how assumptions connect to claims. Applying the same principle to a personal website demonstrates that typed knowledge isn't just an academic exercise. It's a general-purpose way to organize information.
+
+## What This Is Not
+
+This is not a graph database. There's no JavaScript visualization, no SPARQL endpoint, no runtime query engine. The "graph" exists in the relationships encoded in YAML front matter. Quarto reads these fields and generates the site. The structure is a convention, enforced by consistency rather than software.
+
+This is the same approach as Phase 1 of the SCDCernerProject architecture -- convention-based ontology that improves reasoning without requiring infrastructure.
+
+## The Schema
+
+The full schema is defined in [`_ontology-schema.yml`](../_ontology-schema.yml) at the project root. It specifies which fields are required and optional for each node type, and documents the edge types and their encoding conventions.

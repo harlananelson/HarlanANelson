@@ -1,0 +1,34 @@
+---
+title: "Personal Website Ontology"
+description: "Applying typed knowledge graphs to organize a personal website -- the system behind this site."
+node-type: project
+status: active
+skills: [knowledge-systems, quarto]
+categories: [knowledge-systems, meta]
+date: 2026-02-01
+---
+
+# Personal Website Ontology
+
+## Summary
+
+This project applies concepts from knowledge graph architecture to organize a personal website. Each page on this site has a typed front matter (`node-type: project`, `node-type: role`, etc.) that defines what kind of content it represents. Relationships between pages are encoded as YAML metadata -- a project `uses-skill`, a project was `produced-during` a role, a publication `demonstrates` a skill.
+
+The result is a website that is both human-readable and machine-parseable, where the structure itself documents the relationships between work, skills, and experience.
+
+## Origin
+
+This approach grew out of work on the [SCDCernerProject](scd-mortality.qmd), where we built an ontology schema to organize clinical research reasoning -- defining node types (Claims, Evidence, Constraints, Assumptions), edge types (supports, refutes, requires), and validation gates. The insight was that the same principle of typed, connected knowledge applies to organizing *any* body of work, not just clinical research.
+
+## How It Works
+
+1. Every content page declares a `node-type` in its YAML front matter
+2. Relationships are encoded as metadata fields (`skills:`, `role:`, `categories:`)
+3. Quarto listings auto-generate index pages per type
+4. The schema is documented in `_ontology-schema.yml` (machine-readable)
+
+See [How This Site Works](../ontology/index.qmd) for the full explanation.
+
+## What This Is Not
+
+This is not a graph database or a JavaScript application. It's a convention-based system -- the same approach used in Phase 1 of the SCDCernerProject architecture. The "graph" exists in the relationships encoded in front matter, not in a runtime query engine. The value is in making structure explicit and consistent.

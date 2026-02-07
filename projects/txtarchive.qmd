@@ -1,0 +1,45 @@
+---
+title: "TxtArchive"
+description: "Python tool for creating text-based archives of codebases, designed for LLM analysis and code transfer."
+node-type: project
+status: active
+skills: [python, cli-tools]
+categories: [developer-tools, ai-tooling]
+date: 2025-01-01
+github: "https://github.com/harlananelson/txtarchive"
+---
+
+# TxtArchive
+
+## Summary
+
+A Python command-line tool that creates text-based archives of codebases. It supports two formats: a standard format for exact file reconstruction, and an LLM-friendly format optimized for AI analysis. Jupyter notebooks are flattened into readable cell-by-cell representations.
+
+## Features
+
+- **Standard format:** Preserves exact file structure for reconstruction
+- **LLM-friendly format:** Table of contents, clear file separators, stripped outputs -- optimized for context windows
+- **Jupyter support:** Notebooks rendered as markdown cells + code cells, outputs optionally stripped
+- **Selective archiving:** Filter by file type or specify explicit file lists
+- **Round-trip capable:** Archives can be unpacked back to working files
+
+## Usage
+
+```bash
+# Create LLM-friendly archive
+python -m txtarchive archive myproject/ output.txt \
+    --file_types .py .ipynb .qmd .R \
+    --llm-friendly --extract-code-only
+
+# Unpack archive
+python -m txtarchive unpack archive.txt output_dir/
+
+# Extract notebooks from archive
+python -m txtarchive extract-notebooks archive.txt output_dir/
+```
+
+## Why This Exists
+
+Working with AI coding assistants often requires sharing entire project contexts. Copy-pasting files is tedious and error-prone. TxtArchive creates a single, self-contained text file that an LLM can ingest as context -- with a table of contents and clear file boundaries.
+
+[GitHub Repository](https://github.com/harlananelson/txtarchive)

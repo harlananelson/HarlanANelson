@@ -1,0 +1,12 @@
+---
+title: "Experience"
+listing:
+  contents: "*.qmd"
+  type: default
+  sort: "start-date desc"
+  fields: [title, description]
+  filter-ui: false
+  sort-ui: false
+---
+
+Professional roles in healthcare analytics, data science, and education.

@@ -1,0 +1,87 @@
+---
+title: "Skills"
+node-type: skill-index
+---
+
+# Skills
+
+An inventory of tools, languages, and domains I work with. Proficiency levels reflect depth of regular use, not a self-assessment exam.
+
+---
+
+## Programming Languages
+
+::: {.skill-category}
+::: {.skill-list}
+- [R]{.expert} -- primary language, 15+ years
+- [SQL]{.advanced} -- Azure Data Warehouse, T-SQL, complex cohort queries
+- [Python]{.working} -- data engineering, tooling (txtarchive)
+- [SAS]{.working} -- legacy healthcare analytics
+:::
+:::
+
+## R Ecosystem
+
+::: {.skill-category}
+::: {.skill-list}
+- [tidyverse]{.expert}
+- [tidymodels]{.expert}
+- [ranger]{.advanced}
+- [targets]{.advanced}
+- [Quarto]{.advanced}
+- [shiny]{.working}
+- [gt / gtsummary]{.advanced}
+- [survival / survminer]{.advanced}
+- [kernelshap / shapviz]{.advanced}
+- [pROC / yardstick]{.advanced}
+:::
+:::
+
+## Machine Learning & Statistics
+
+::: {.skill-category}
+::: {.skill-list}
+- [Random Forests]{.expert}
+- [Logistic Regression]{.advanced}
+- [Survival Analysis]{.advanced}
+- [SHAP Interpretation]{.advanced}
+- [Cross-Validation]{.advanced}
+- [Calibration & Thresholding]{.advanced}
+- [Clustering / Peer Groups]{.advanced}
+- [Causal Inference (emerging)]{.working}
+:::
+:::
+
+## Healthcare & Clinical Data
+
+::: {.skill-category}
+::: {.skill-list}
+- [EHR / Claims Data]{.expert}
+- [Cohort Development]{.expert}
+- [Sickle Cell Disease]{.advanced}
+- [LOINC / ICD Coding]{.advanced}
+- [Clinical Trial Design]{.working}
+- [Real-World Evidence]{.advanced}
+- [Risk Stratification]{.advanced}
+:::
+:::
+
+## Infrastructure & Tools
+
+::: {.skill-category}
+::: {.skill-list}
+- [Azure Data Warehouse]{.advanced}
+- [Git / GitHub]{.advanced}
+- [Linux / Ubuntu]{.advanced}
+- [Docker]{.working}
+- [Netlify]{.working}
+- [Claude Code / AI-assisted development]{.advanced}
+:::
+:::
+
+---
+
+*Proficiency levels:*
+[expert]{.expert} = daily use, deep knowledge |
+[advanced]{.advanced} = regular use, strong proficiency |
+[working]{.working} = functional, growing

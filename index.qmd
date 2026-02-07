@@ -1,19 +1,51 @@
 ---
-title: "Welcome to Harlan A Nelson's Website"
+title: "Harlan A Nelson"
+node-type: person
+toc: false
 ---
 
-# Welcome to My Website
+::: {.hero-section}
 
-Hello! I'm thrilled to have you here. This space is dedicated to showcasing my journey, ideas, and professional experiences as a data scientist and educator. Dive in to explore my projects, insights, and more.
+# Harlan A Nelson
 
-## Explore More
+::: {.lead}
+Senior Data Scientist | Healthcare Analytics | R Practitioner
+:::
 
-- [About Me](about.html)
-- [My Professional Experience](experience.html)
-- [Publications & Contributions](publications.html)
+I build machine learning models that help clinicians understand patient risk. With 15+ years in healthcare data, I work at the intersection of clinical knowledge and modern analytics -- turning complex EHR data into actionable insight.
 
-Stay updated and feel free to reach out through the [Contact](contact.html) page.
+:::
 
----
+::: {.highlight-cards}
 
-To learn more about building websites with Quarto, check out the [documentation](https://quarto.org/docs/websites).
+::: {.highlight-card}
+### [Healthcare ML](projects/scd-mortality.qmd)
+Building mortality prediction models and risk stratification systems for sickle cell disease using random forests, SHAP, and external validation across health systems.
+:::
+
+::: {.highlight-card}
+### [R & Tidymodels](skills.qmd)
+Deep practitioner of the modern R ecosystem -- tidyverse, tidymodels, targets pipelines, Quarto documents. I teach and mentor others in these tools.
+:::
+
+::: {.highlight-card}
+### [Knowledge Systems](ontology/index.qmd)
+Exploring how typed knowledge graphs can organize analytical reasoning -- from clinical research ontologies to this website's own structure.
+:::
+
+::: {.highlight-card}
+### [Published Researcher](publications.qmd)
+Peer-reviewed work in hepatocellular carcinoma epidemiology, respiratory screening tools, and hospital quality measurement.
+:::
+
+:::
+
+## Explore
+
+- [About Me](about.qmd) -- who I am and how I think
+- [Projects](projects/index.qmd) -- what I'm building
+- [Experience](experience/index.qmd) -- where I've worked
+- [Publications](publications.qmd) -- peer-reviewed research
+- [Skills](skills.qmd) -- tools and domains
+- [Writings](writings/index.qmd) -- teaching and personal essays
+- [How This Site Works](ontology/index.qmd) -- the ontology behind these pages

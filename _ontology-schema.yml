@@ -1,0 +1,45 @@
+# Personal Website Ontology Schema
+# Defines typed front matter for content pages
+# Inspired by the SCDCernerProject knowledge graph architecture
+
+node_types:
+  project:
+    required: [title, status, skills, summary]
+    optional: [role, github, dates, categories]
+    statuses: [active, complete, archived]
+  role:
+    required: [title, organization, start-date]
+    optional: [end-date, skills, highlights]
+  publication:
+    required: [title, year, url]
+    optional: [journal, domain, skills]
+  skill:
+    required: [name, category]
+    optional: [proficiency, evidence]
+    categories: [languages, frameworks, domains, tools]
+    proficiency_levels: [foundational, working, advanced, expert]
+  writing:
+    required: [title, date, topic]
+    optional: [audience, language]
+
+edge_types:
+  uses-skill:
+    from: project
+    to: skill
+    encoding: "skills: [r, tidymodels] in project front matter"
+  produced-during:
+    from: project
+    to: role
+    encoding: "role: iuhealth in project front matter"
+  demonstrates:
+    from: publication
+    to: skill
+    encoding: "skills: [statistics] in publication metadata"
+  requires:
+    from: role
+    to: skill
+    encoding: "skills: [r, sql] in role front matter"
+  categorized-as:
+    from: any
+    to: category
+    encoding: "categories: [healthcare-ai] — standard Quarto categories"

@@ -1,0 +1,32 @@
+---
+title: "Senior Data Scientist Analyst"
+description: "Indiana University Health -- healthcare ML, cohort development, sickle cell disease research."
+node-type: role
+organization: "Indiana University Health"
+start-date: 2021-02-01
+skills: [r, tidymodels, sql, azure, shap, cohort-development]
+categories: [healthcare-ai]
+---
+
+# Senior Data Scientist Analyst
+
+**Indiana University Health** | February 2021 -- Present
+
+::: {.timeline-entry}
+
+### What I Do
+
+Driving data-driven decision-making in healthcare by developing patient cohorts and implementing advanced data analysis techniques. My primary focus is sickle cell disease research under a grant-funded project led by Dr. Gerard Hills.
+
+### Key Contributions
+
+- **SCD Mortality Prediction:** Built random forest models for 5-year mortality risk using multi-site EHR data, with SHAP-based clinical interpretation and external validation
+- **Cohort Development:** Automated patient cohort extraction from Azure Data Warehouse using R, replacing manual SQL workflows
+- **Student Mentorship:** Collaborated with students on capstone projects in healthcare analytics
+- **Analytical Infrastructure:** Established reproducible analysis pipelines using targets, Quarto, and tidymodels
+
+### Tools & Methods
+
+R, tidymodels, ranger, SHAP (kernelshap), Azure Data Warehouse, SQL, Quarto, targets, survival analysis, gtsummary
+
+:::

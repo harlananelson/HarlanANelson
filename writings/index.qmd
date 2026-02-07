@@ -1,0 +1,12 @@
+---
+title: "Writings"
+listing:
+  contents: "*.qmd"
+  type: default
+  sort: "date desc"
+  fields: [title, description, categories]
+  filter-ui: false
+  sort-ui: false
+---
+
+Personal essays, teaching materials, and Bible study guides.

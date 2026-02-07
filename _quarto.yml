@@ -1,5 +1,15 @@
 project:
   type: website
+  render:
+    - "*.qmd"
+    - "projects/"
+    - "experience/"
+    - "writings/"
+    - "ontology/"
+    - "!documents/"
+    - "!_archive/"
+    - "!addpage/"
+    - "!python/"
 
 website:
   title: "Harlan A Nelson"
@@ -9,10 +19,18 @@ website:
         text: Home
       - href: about.qmd
         text: About
-      - href: experience.qmd
+      - href: projects/index.qmd
+        text: Projects
+      - href: experience/index.qmd
         text: Experience
       - href: publications.qmd
         text: Publications
+      - href: skills.qmd
+        text: Skills
+      - href: writings/index.qmd
+        text: Writings
+      - href: ontology/index.qmd
+        text: Ontology
     right:
       - icon: linkedin
         href: https://www.linkedin.com/in/harlananelson/

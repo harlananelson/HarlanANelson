@@ -1,0 +1,42 @@
+---
+title: "SCD Mortality Prediction"
+description: "Machine learning models for 5-year mortality prediction in sickle cell disease using EHR data."
+node-type: project
+status: active
+role: iuhealth
+skills: [r, tidymodels, ranger, shap, survival-analysis]
+categories: [healthcare-ai, sickle-cell-disease]
+date: 2024-01-01
+---
+
+# SCD Mortality Prediction
+
+## Summary
+
+Building random forest models to predict 5-year mortality in sickle cell disease patients using electronic health record data from multiple health systems. The project uses multi-site external validation (Cerner training, IU Health external) and SHAP-based interpretation to identify the clinical features most predictive of patient risk.
+
+## Key Methods
+
+- **Algorithm:** Random forest (ranger) via tidymodels, with tuned hyperparameters (mtry=11, min_n=20)
+- **Validation:** 80/20 train/test split + independent IU Health external validation
+- **Interpretation:** SHAP values (kernelshap + shapviz) for individual and global feature importance
+- **Threshold:** Youden's J index for optimal classification with low-prevalence outcomes
+- **Calibration:** Assessed via calibration plots and Brier score
+
+## Features
+
+Over 100 predictors drawn from:
+
+- Demographics (age, gender)
+- SCD comorbidities (pulmonary hypertension, CKD, stroke, acute chest syndrome)
+- Laboratory values (creatinine, hemoglobin, oxygen saturation, LDH)
+- Procedures (echocardiography, spirometry, imaging)
+- Medications (hydroxyurea duration and usage)
+
+## Status
+
+Active development through the 300-series analysis notebooks (300-335), with ongoing work on risk stratification and clinical narrative. The model achieves clinically meaningful discrimination with interpretable feature importance aligned to known SCD pathophysiology.
+
+## Role Context
+
+This work is part of a grant-funded project at Indiana University Health under Dr. Gerard Hills, focused on translating EHR data into clinically actionable risk models for sickle cell disease.
