@@ -1,0 +1,327 @@
+---
+title: "Styling Guide for harlananelson.com"
+subtitle: "CSS techniques for your Quarto website, inspired by CSS Zen Garden"
+date: 2026-03-07
+toc: true
+---
+
+## The CSS Zen Garden Principle
+
+[CSS Zen Garden](https://www.csszengarden.com/) demonstrates one powerful idea: **the same HTML can look completely different just by changing CSS**. The HTML never changes -- only the stylesheet does.
+
+Your Quarto site works the same way. Quarto generates HTML from `.qmd` files, and you control appearance through:
+
+1. **Theme** (`cosmo` in `_quarto.yml`)
+2. **Custom CSS** (`styles.css`)
+3. **Div classes** (`::: {.class-name}` fenced divs in `.qmd` files)
+
+You never edit HTML directly. You style by writing CSS rules that target the classes you assign in your Quarto documents.
+
+## How Your Site's Styling Works
+
+### Layer 1: The Quarto Theme
+
+In `_quarto.yml`:
+
+```yaml
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+```
+
+The `cosmo` theme (a Bootstrap theme) provides base typography, colors, navbar, and layout. Other built-in themes include `flatly`, `lumen`, `journal`, `minty`, `sandstone`, `slate` (dark), and `darkly`. Try swapping themes to see instant changes -- no other edits needed.
+
+### Layer 2: Your Custom CSS (`styles.css`)
+
+This file overrides the theme. Your current custom classes:
+
+| Class | Used In | Purpose |
+|-------|---------|---------|
+| `.hero-section` | `index.qmd` | Landing page header with border |
+| `.highlight-card` | `index.qmd` | Grid of feature cards |
+| `.timeline-entry` | `experience/` | Timeline with dots and left border |
+| `.skill-list` + `.expert` / `.advanced` / `.working` | `skills.qmd` | Colored skill badges |
+| `.ontology-diagram` | `ontology/` | Gray box for diagrams |
+| `.pub-entry` | `publications.qmd` | Publication list items |
+
+### Layer 3: Quarto Fenced Divs
+
+In `.qmd` files, you apply CSS classes using fenced divs:
+
+```markdown
+::: {.highlight-card}
+### Title
+Description text.
+:::
+```
+
+Quarto converts this to `<div class="highlight-card">`, and your CSS rules in `styles.css` take over.
+
+## Techniques You Can Use
+
+### 1. Change Colors Site-Wide with CSS Variables
+
+Add this to the top of `styles.css` to define a color palette you can change in one place:
+
+```css
+:root {
+  --color-primary: #2c3e50;
+  --color-accent: #3498db;
+  --color-muted: #6c757d;
+  --color-bg-light: #f8f9fa;
+  --color-border: #dee2e6;
+}
+```
+
+Then reference them in your rules:
+
+```css
+.highlight-card h3 {
+  color: var(--color-primary);
+}
+
+.timeline-entry {
+  border-left: 3px solid var(--color-primary);
+}
+```
+
+Now changing `--color-primary` once updates every element that uses it.
+
+### 2. Responsive Grid Layout
+
+Your `.highlight-cards` grid already uses this pattern:
+
+```css
+.highlight-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+```
+
+- `auto-fit` + `minmax()` = cards wrap to fewer columns on narrow screens
+- No media queries needed for basic responsiveness
+
+For a two-column layout (e.g., sidebar + content):
+
+```css
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+}
+```
+
+### 3. Hover Effects and Transitions
+
+Your cards already have a hover shadow. Other useful transitions:
+
+```css
+/* Scale up slightly on hover */
+.highlight-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Color shift on link hover */
+a {
+  transition: color 0.15s;
+}
+```
+
+### 4. Pseudo-Elements for Decorative Touches
+
+Your `.timeline-entry::before` creates the timeline dots. Other uses:
+
+```css
+/* Add a left accent bar to blockquotes */
+blockquote {
+  border-left: 4px solid var(--color-accent);
+  padding-left: 1rem;
+  color: var(--color-muted);
+}
+
+/* Badge-style labels */
+.skill-list li.expert::before {
+  content: "★ ";
+}
+```
+
+### 5. Dark Mode Support
+
+Add a dark mode that respects the user's system preference:
+
+```css
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #ecf0f1;
+    --color-bg-light: #1a1a2e;
+    --color-border: #333;
+  }
+
+  body {
+    background: #0f0f23;
+    color: #e0e0e0;
+  }
+
+  .highlight-card {
+    border-color: #333;
+    background: #1a1a2e;
+  }
+}
+```
+
+Or use Quarto's built-in dark mode by specifying two themes:
+
+```yaml
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+```
+
+### 6. Typography Customization
+
+```css
+/* Import a Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Adjust heading weight and spacing */
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Improve readability of body text */
+.content p {
+  line-height: 1.7;
+  max-width: 65ch; /* optimal reading width */
+}
+```
+
+### 7. Quarto-Specific Selectors
+
+Quarto generates specific classes you can target:
+
+```css
+/* Style the table of contents */
+#TOC {
+  border-left: 2px solid var(--color-border);
+  padding-left: 1rem;
+}
+
+/* Style the navbar */
+.navbar {
+  border-bottom: 2px solid var(--color-accent);
+}
+
+/* Style listing pages (projects, writings) */
+.quarto-listing .listing-title {
+  font-weight: 600;
+}
+
+/* Style code blocks */
+div.sourceCode {
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+```
+
+## Applying Classes in Quarto Documents
+
+### Single Element
+
+```markdown
+[highlighted text]{.accent-text}
+```
+
+### Block of Content
+
+```markdown
+::: {.my-class}
+Content here gets wrapped in a div with class "my-class".
+:::
+```
+
+### Nested Divs
+
+```markdown
+::: {.card-grid}
+::: {.card}
+Card 1
+:::
+::: {.card}
+Card 2
+:::
+:::
+```
+
+### Multiple Classes and IDs
+
+```markdown
+::: {#unique-id .class-one .class-two}
+Content with an ID and two classes.
+:::
+```
+
+### Inline Styles (Use Sparingly)
+
+```markdown
+::: {style="background: #f0f0f0; padding: 1rem;"}
+One-off styled block.
+:::
+```
+
+## Workflow for Styling Changes
+
+1. **Preview live:** `quarto preview` in the terminal -- changes to `styles.css` reload automatically
+2. **Browser DevTools:** Right-click any element > Inspect. Edit CSS in the browser to experiment, then copy working rules to `styles.css`
+3. **One class at a time:** Add a new class to `styles.css`, apply it in a `.qmd` file, verify in preview
+4. **Theme first, override second:** If a built-in theme does 90% of what you want, switch to it and only override the remaining 10%
+
+## Your Current Class Inventory
+
+These are the custom classes defined in `styles.css` -- reuse them across pages:
+
+- **`.hero-section`** + **`.lead`** -- page header with subtitle
+- **`.highlight-cards`** + **`.highlight-card`** -- responsive card grid
+- **`.timeline-entry`** -- timeline with dots (experience pages)
+- **`.skill-category`** + **`.skill-list`** -- badge-style lists
+- **`.skill-list li.expert`** / **`.advanced`** / **`.working`** -- proficiency colors
+- **`.ontology-diagram`** -- gray bordered box
+- **`.pub-entry`** + **`.pub-title`** + **`.pub-meta`** -- publication formatting
+
+## Quick Reference: CSS Properties You'll Use Most
+
+| Property | What It Does | Example |
+|----------|-------------|---------|
+| `color` | Text color | `color: #2c3e50;` |
+| `background` | Background color/image | `background: #f8f9fa;` |
+| `padding` | Space inside the element | `padding: 1.5rem;` |
+| `margin` | Space outside the element | `margin-bottom: 2rem;` |
+| `border` | Border line | `border: 1px solid #dee2e6;` |
+| `border-radius` | Rounded corners | `border-radius: 8px;` |
+| `font-size` | Text size | `font-size: 1.1rem;` |
+| `font-weight` | Bold/light text | `font-weight: 600;` |
+| `display: grid` | Grid layout | See card grid example above |
+| `display: flex` | Flexible layout | `display: flex; gap: 0.5rem;` |
+| `transition` | Animate changes | `transition: all 0.2s;` |
+| `box-shadow` | Drop shadow | `box-shadow: 0 4px 12px rgba(0,0,0,0.1);` |
+| `max-width` | Limit width | `max-width: 65ch;` |
