@@ -90,6 +90,7 @@
           <span class="pill" id="vozPill">Micrófono: listo</span>
         </div>
         <div class="target" id="verboLine"></div>
+        <div class="hint" id="definicionLine" style="margin-top:var(--space-2); font-style:italic;"></div>
         <div class="context" id="contextoLine"></div>
         <div class="hint" id="pistaLine"></div>
 
@@ -64876,6 +64877,79 @@ const actividades = [
   }
 ];
 
+const definiciones = {
+  abandonar:"to abandon, leave",abrir:"to open",acabar:"to finish, end",aceptar:"to accept",
+  acercar:"to bring closer",acompañar:"to accompany",acordar:"to agree, remember",actuar:"to act",
+  admitir:"to admit",aforar:"to appraise, gauge",agradecer:"to thank, be grateful",
+  alcanzar:"to reach, achieve",alegrar:"to make happy, cheer up",alejar:"to move away",
+  amar:"to love",andar:"to walk",aparecer:"to appear",apartar:"to separate, move aside",
+  apostar:"to bet",apoyar:"to support",aprender:"to learn",arreglar:"to fix, arrange",
+  asegurar:"to assure, secure",asesinar:"to murder",asustar:"to scare",atacar:"to attack",
+  atrapar:"to catch, trap",averiguar:"to find out",ayudar:"to help",bailar:"to dance",
+  bajar:"to go down, lower",bastar:"to be enough",beber:"to drink",besar:"to kiss",
+  buscar:"to look for, search",caer:"to fall",callar:"to be quiet",calmar:"to calm",
+  cambiar:"to change",caminar:"to walk",cantar:"to sing",casar:"to marry",cerrar:"to close",
+  coger:"to take, grab",comenzar:"to begin",comer:"to eat",cometer:"to commit",
+  compartir:"to share",comprar:"to buy",comprender:"to understand",conducir:"to drive",
+  confiar:"to trust",conocer:"to know (a person/place)",conseguir:"to get, obtain",
+  considerar:"to consider",construir:"to build",contar:"to count, tell",contestar:"to answer",
+  continuar:"to continue",controlar:"to control",convertir:"to convert, turn into",
+  correr:"to run",cortar:"to cut",costar:"to cost",crear:"to create",crecer:"to grow",
+  creer:"to believe",cubrir:"to cover",cuidar:"to take care of",cumplir:"to fulfill, turn (age)",
+  dar:"to give",deber:"to owe, should",decidir:"to decide",decir:"to say, tell",
+  defender:"to defend",dejar:"to leave, let",demostrar:"to demonstrate",depender:"to depend",
+  desaparecer:"to disappear",desarrollar:"to develop",descubrir:"to discover",desear:"to wish, desire",
+  despedir:"to fire, say goodbye",despertar:"to wake up",destruir:"to destroy",
+  detener:"to stop, detain",devolver:"to return (something)",dirigir:"to direct, lead",
+  disculpar:"to excuse, forgive",discutir:"to argue, discuss",disfrutar:"to enjoy",
+  disparar:"to shoot",dormir:"to sleep",echar:"to throw, pour",elegir:"to choose",
+  empezar:"to start, begin",encantar:"to love, enchant",encontrar:"to find",
+  enfrentar:"to face, confront",engañar:"to deceive",enseñar:"to teach, show",
+  entender:"to understand",enterar:"to find out",entrar:"to enter",entregar:"to deliver, hand over",
+  enviar:"to send",escapar:"to escape",esconder:"to hide",escribir:"to write",
+  escuchar:"to listen",esperar:"to wait, hope",estar:"to be (state/location)",
+  estudiar:"to study",evitar:"to avoid",existir:"to exist",explicar:"to explain",
+  formar:"to form",funcionar:"to work, function",ganar:"to win, earn",golpear:"to hit, strike",
+  gritar:"to shout",guardar:"to keep, save",gustar:"to like, please",haber:"to have (auxiliary)",
+  hablar:"to speak, talk",hacer:"to do, make",hallar:"to find",huir:"to flee",
+  imaginar:"to imagine",importar:"to matter, import",incluir:"to include",informar:"to inform",
+  intentar:"to try, attempt",interesar:"to interest",invitar:"to invite",ir:"to go",
+  joder:"to annoy (vulgar)",jugar:"to play",jurar:"to swear",leer:"to read",
+  levantar:"to lift, raise",llamar:"to call",llegar:"to arrive",llevar:"to carry, wear",
+  llorar:"to cry",lograr:"to achieve",luchar:"to fight, struggle",mandar:"to send, order",
+  manejar:"to drive, handle",mantener:"to maintain, keep",marchar:"to march, leave",
+  matar:"to kill",mencionar:"to mention",mentir:"to lie",merecer:"to deserve",
+  meter:"to put in",mirar:"to look, watch",molestar:"to bother",morir:"to die",
+  mostrar:"to show",mover:"to move",nacer:"to be born",necesitar:"to need",
+  negar:"to deny",observar:"to observe",obtener:"to obtain",ocupar:"to occupy",
+  ocurrir:"to occur, happen",odiar:"to hate",ofrecer:"to offer",oír:"to hear",
+  olvidar:"to forget",pagar:"to pay",parar:"to stop",parecer:"to seem, appear",
+  partir:"to leave, split",pasar:"to pass, happen",pedir:"to ask for, request",
+  pegar:"to hit, stick",pelear:"to fight",pensar:"to think",perder:"to lose",
+  perdonar:"to forgive",permanecer:"to remain",permitir:"to allow",pertenecer:"to belong",
+  pesar:"to weigh, regret",poder:"to be able to, can",poner:"to put, place",
+  preferir:"to prefer",preguntar:"to ask (a question)",preocupar:"to worry",
+  preparar:"to prepare",presentar:"to present, introduce",prestar:"to lend",
+  probar:"to try, taste, prove",producir:"to produce",prometer:"to promise",
+  proteger:"to protect",quedar:"to stay, remain",querer:"to want, love",quitar:"to remove",
+  realizar:"to carry out, accomplish",recibir:"to receive",recoger:"to pick up, collect",
+  reconocer:"to recognize",recordar:"to remember",recuperar:"to recover",referir:"to refer",
+  regresar:"to return",reír:"to laugh",repetir:"to repeat",representar:"to represent",
+  resolver:"to solve",responder:"to respond",resultar:"to result, turn out",
+  reunir:"to gather, meet",revisar:"to review, check",robar:"to steal",romper:"to break",
+  saber:"to know (a fact)",sacar:"to take out",salir:"to leave, go out",salvar:"to save (rescue)",
+  seguir:"to follow, continue",señalar:"to point out",sentar:"to sit",sentir:"to feel",
+  ser:"to be (identity/essence)",servir:"to serve",significar:"to mean, signify",
+  soler:"to usually do",soltar:"to release, let go",sonar:"to sound, ring",subir:"to go up, climb",
+  suceder:"to happen",sufrir:"to suffer",superar:"to overcome",suponer:"to suppose",
+  temer:"to fear",tener:"to have",terminar:"to finish",tirar:"to throw, pull",
+  tocar:"to touch, play (instrument)",tomar:"to take, drink",trabajar:"to work",
+  traer:"to bring",tranquilar:"to calm down",tratar:"to try, treat",unir:"to unite",
+  usar:"to use",utilizar:"to use, utilize",valer:"to be worth",vender:"to sell",
+  venir:"to come",ver:"to see",viajar:"to travel",vivir:"to live",volar:"to fly",
+  volver:"to return"
+};
+
 let actual = null;
 let colaRepaso = [];
 let registro = [];
@@ -65002,6 +65076,7 @@ function elegir(){
   $('estadoPill').textContent = usarRepaso ? 'Estado: repaso' : 'Estado: nuevo';
   $('colaPill').textContent = `Repaso: ${colaRepaso.length}`;
   $('verboLine').textContent = `Verbo: ${actual.verbo}`;
+  $('definicionLine').textContent = definiciones[actual.verbo] || '';
   $('contextoLine').textContent = `Contexto: ${actual.contexto}`;
   $('pistaLine').textContent = `Pista: ${actual.pista}`;
   $('transcripcionBox').textContent = 'Todavía no hay respuesta.';
