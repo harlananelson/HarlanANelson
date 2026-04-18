@@ -41,13 +41,15 @@
             pkgs.quarto
             pkgs.pandoc
             pkgs.claude-code
+            pkgs.netlify-cli
           ];
 
           shellHook = ''
             echo "HarlanANelson website dev environment"
-            echo "  R:      $(R --version | head -1)"
-            echo "  Quarto: $(quarto --version)"
-            echo "  Claude: $(claude --version 2>/dev/null || echo 'available')"
+            echo "  R:       $(R --version | head -1)"
+            echo "  Quarto:  $(quarto --version)"
+            echo "  Claude:  $(claude --version 2>/dev/null || echo 'available')"
+            echo "  Netlify: $(netlify --version 2>/dev/null | head -1 || echo 'available')"
           '';
         };
       }
