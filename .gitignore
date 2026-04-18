@@ -46,3 +46,6 @@ _archive/
 _remarkable/
 
 **/*.quarto_ipynb
+
+# Local Netlify folder
+.netlify
