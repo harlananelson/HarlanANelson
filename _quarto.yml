@@ -12,6 +12,7 @@ project:
     - "!python/"
   resources:
     - "spanish-speech-drill.html"
+    - "english-speech-drill.html"
 
 website:
   title: "Harlan A Nelson"
@@ -35,6 +36,8 @@ website:
         text: Ontology
       - href: spanish-speech-drill.html
         text: Spanish Drill
+      - href: english-speech-drill.html
+        text: English Drill
     right:
       - icon: linkedin
         href: https://www.linkedin.com/in/harlananelson/
