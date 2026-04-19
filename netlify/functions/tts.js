@@ -20,7 +20,7 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: 'Invalid JSON' };
   }
 
-  const { text, voice_id } = body;
+  const { text, voice_id, speed } = body;
 
   if (typeof text !== 'string' || text.length === 0) {
     return { statusCode: 400, body: 'Missing text' };
@@ -31,6 +31,7 @@ exports.handler = async (event) => {
   if (typeof voice_id !== 'string' || !/^[a-zA-Z0-9]{16,32}$/.test(voice_id)) {
     return { statusCode: 400, body: 'Invalid voice_id' };
   }
+  const safeSpeed = typeof speed === 'number' && speed >= 0.5 && speed <= 1.2 ? speed : 0.95;
 
   const apiKey = process.env.ELEVENLABS_API_KEY;
   if (!apiKey) {
@@ -48,7 +49,7 @@ exports.handler = async (event) => {
       body: JSON.stringify({
         text,
         model_id: 'eleven_multilingual_v2',
-        voice_settings: { stability: 0.75, similarity_boost: 0.85, style: 0.0, speed: 0.95 },
+        voice_settings: { stability: 0.75, similarity_boost: 0.85, style: 0.0, speed: safeSpeed },
       }),
     });
 

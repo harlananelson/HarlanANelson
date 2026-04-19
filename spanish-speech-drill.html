@@ -133,6 +133,7 @@
           <span class="pill" id="estadoPill">Estado: nuevo</span>
           <span class="pill" id="colaPill">Repaso: 0</span>
           <span class="pill" id="vozPill">Micrófono: listo</span>
+          <button type="button" class="pill" id="slowToggle" style="cursor:pointer; border:none; font:inherit;">Velocidad: normal</button>
         </div>
         <div class="target"><span id="verboLine"></span> <span class="tense-label" id="tenseLabel"></span></div>
         <div class="hint" id="definicionLine" style="margin-top:var(--space-2); font-style:italic;"></div>
@@ -201157,6 +201158,7 @@ function elegir(){
 let elApiKey = localStorage.getItem('el_api_key') || '';
 let elVoiceId = localStorage.getItem('el_voice_id') || '';
 let elEnabled = localStorage.getItem('el_enabled') !== 'false';
+let elSlow = localStorage.getItem('el_slow') === 'true';
 let audioQueue = [];
 let isPlaying = false;
 let currentAudio = null;
@@ -201183,6 +201185,7 @@ function playNext(){
   isPlaying = true;
   const current = audioQueue.shift();
   const useUserKey = !!elApiKey;
+  const speed = elSlow ? 0.75 : 0.95;
   const url = useUserKey
     ? `https://api.elevenlabs.io/v1/text-to-speech/${elVoiceId}`
     : '/.netlify/functions/tts';
@@ -201193,9 +201196,9 @@ function playNext(){
     ? JSON.stringify({
         text: current.text,
         model_id: 'eleven_multilingual_v2',
-        voice_settings: { stability: 0.75, similarity_boost: 0.85, style: 0.0, speed: 0.95 }
+        voice_settings: { stability: 0.75, similarity_boost: 0.85, style: 0.0, speed }
       })
-    : JSON.stringify({ text: current.text, voice_id: elVoiceId });
+    : JSON.stringify({ text: current.text, voice_id: elVoiceId, speed });
   fetch(url, { method: 'POST', headers, body })
   .then(res => { if (!res.ok) throw new Error('ElevenLabs ' + res.status); return res.blob(); })
   .then(blob => {
@@ -201238,7 +201241,8 @@ function hablarNativo(texto, alTerminar, opciones = {}){
   const u = new SpeechSynthesisUtterance(texto);
   u.lang = 'es-ES';
   if (vozPreferida) u.voice = vozPreferida;
-  u.rate = opciones.rate || 0.78;
+  const baseRate = opciones.rate || 0.78;
+  u.rate = elSlow ? baseRate * 0.78 : baseRate;
   u.pitch = opciones.pitch || 1.05;
   u.volume = opciones.volume || 1;
   u.onend = () => { if (alTerminar) alTerminar(); };
@@ -201404,6 +201408,16 @@ $('exportBtn').addEventListener('click', () => {
 document.querySelector('[data-theme-toggle]').addEventListener('click', () => {
   const root = document.documentElement;
   root.setAttribute('data-theme', root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+});
+
+function actualizarSlowPill(){
+  $('slowToggle').textContent = elSlow ? 'Velocidad: lenta' : 'Velocidad: normal';
+}
+actualizarSlowPill();
+$('slowToggle').addEventListener('click', () => {
+  elSlow = !elSlow;
+  localStorage.setItem('el_slow', elSlow);
+  actualizarSlowPill();
 });
 
 // Tense filter pill handlers
