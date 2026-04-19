@@ -201156,7 +201156,7 @@ function elegir(){
 // ==================== ELEVENLABS TTS ====================
 let elApiKey = localStorage.getItem('el_api_key') || '';
 let elVoiceId = localStorage.getItem('el_voice_id') || '';
-let elEnabled = localStorage.getItem('el_enabled') === 'true';
+let elEnabled = localStorage.getItem('el_enabled') !== 'false';
 let audioQueue = [];
 let isPlaying = false;
 let currentAudio = null;
@@ -201170,7 +201170,7 @@ function cancelarAudio(){
 
 function hablar(texto, alTerminar, opciones = {}){
   cancelarAudio();
-  if (elEnabled && elApiKey && elVoiceId) {
+  if (elEnabled && elVoiceId) {
     audioQueue.push({ text: texto, callback: alTerminar });
     if (!isPlaying) playNext();
   } else {
@@ -201182,15 +201182,21 @@ function playNext(){
   if (audioQueue.length === 0) { isPlaying = false; return; }
   isPlaying = true;
   const current = audioQueue.shift();
-  fetch(`https://api.elevenlabs.io/v1/text-to-speech/${elVoiceId}`, {
-    method: 'POST',
-    headers: { 'Accept': 'audio/mpeg', 'Content-Type': 'application/json', 'xi-api-key': elApiKey },
-    body: JSON.stringify({
-      text: current.text,
-      model_id: 'eleven_multilingual_v2',
-      voice_settings: { stability: 0.75, similarity_boost: 0.85, style: 0.0, speed: 0.95 }
-    })
-  })
+  const useUserKey = !!elApiKey;
+  const url = useUserKey
+    ? `https://api.elevenlabs.io/v1/text-to-speech/${elVoiceId}`
+    : '/.netlify/functions/tts';
+  const headers = useUserKey
+    ? { 'Accept': 'audio/mpeg', 'Content-Type': 'application/json', 'xi-api-key': elApiKey }
+    : { 'Accept': 'audio/mpeg', 'Content-Type': 'application/json' };
+  const body = useUserKey
+    ? JSON.stringify({
+        text: current.text,
+        model_id: 'eleven_multilingual_v2',
+        voice_settings: { stability: 0.75, similarity_boost: 0.85, style: 0.0, speed: 0.95 }
+      })
+    : JSON.stringify({ text: current.text, voice_id: elVoiceId });
+  fetch(url, { method: 'POST', headers, body })
   .then(res => { if (!res.ok) throw new Error('ElevenLabs ' + res.status); return res.blob(); })
   .then(blob => {
     const url = URL.createObjectURL(blob);
