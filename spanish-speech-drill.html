@@ -145,7 +145,6 @@
           <button class="btn secondary-strong" id="verboBtn">Oír verbo</button>
           <button class="btn" id="pistaBtn">Oír pista</button>
           <button class="btn" id="decirBtn">Decir respuesta</button>
-          <button class="btn" id="iniciarBtn">Escuchar y responder</button>
           <button class="btn" id="repetirBtn">Repetir ejercicio</button>
           <button class="btn" id="fraseBtn">Oír frase modelo</button>
           <button class="btn" id="instruccionesBtn">Oír instrucciones</button>
@@ -157,7 +156,7 @@
           <div class="live" id="transcripcionBox">Todavía no hay respuesta.</div>
         </div>
 
-        <div class="feedback" id="feedbackBox">Pulsa “Escuchar y responder”. La app leerá la consigna y después activará el micrófono.</div>
+        <div class="feedback" id="feedbackBox">Pulsa “Decir respuesta” cuando estés listo para hablar.</div>
         <div class="stats">
           <div class="stat"><span>Correctas</span><strong id="correctCount">0</strong></div>
           <div class="stat"><span>Para repasar</span><strong id="wrongCount">0</strong></div>
@@ -201002,8 +201001,6 @@ if (SpeechRecognition) {
   reconocimiento.onend = () => {
     escuchando = false;
     $('vozPill').textContent = 'Micrófono: en pausa';
-    $('iniciarBtn').classList.remove('recording');
-    $('iniciarBtn').textContent = 'Escuchar y responder';
     $('decirBtn').classList.remove('recording');
     $('decirBtn').textContent = 'Decir respuesta';
     if ((modoAutomatico || modoDecir) && ultimaTranscripcion.trim()) {
@@ -201020,8 +201017,6 @@ if (SpeechRecognition) {
     escuchando = false;
     modoAutomatico = false;
     modoDecir = false;
-    $('iniciarBtn').classList.remove('recording');
-    $('iniciarBtn').textContent = 'Escuchar y responder';
     $('decirBtn').classList.remove('recording');
     $('decirBtn').textContent = 'Decir respuesta';
     if (event && event.error === 'no-speech') {
@@ -201165,7 +201160,7 @@ function elegir(){
   $('pistaLine').textContent = `Pista: ${actual.pista}`;
   $('transcripcionBox').textContent = 'Todavía no hay respuesta.';
   ultimaTranscripcion = '';
-  $('feedbackBox').textContent = 'Pulsa “Escuchar y responder”. La app leerá la consigna y después activará el micrófono.';
+  $('feedbackBox').textContent = 'Pulsa “Decir respuesta” cuando estés listo para hablar.';
 }
 
 // ==================== ELEVENLABS TTS ====================
@@ -201294,13 +201289,11 @@ function detenerReconocimiento(){
   modoAutomatico = false;
   modoDecir = false;
   ultimaTranscripcion = '';
-  $('iniciarBtn').classList.remove('recording');
-  $('iniciarBtn').textContent = 'Escuchar y responder';
   $('decirBtn').classList.remove('recording');
   $('decirBtn').textContent = 'Decir respuesta';
 }
 
-function iniciarEscucha(fuente){
+function iniciarEscucha(){
   if (!reconocimiento) {
     $('feedbackBox').innerHTML = '<span class="bad">El reconocimiento de voz no está disponible en este navegador.</span> Chrome o Edge suelen funcionar mejor.';
     return;
@@ -201308,22 +201301,14 @@ function iniciarEscucha(fuente){
   ultimaTranscripcion = '';
   $('transcripcionBox').textContent = 'Escuchando...';
   $('vozPill').textContent = 'Micrófono: escuchando';
-  // Mark whichever button started the session so the user can tap it to stop.
-  if (fuente === 'decir') {
-    $('decirBtn').classList.add('recording');
-    $('decirBtn').textContent = 'Escuchando — pulsa para parar';
-  } else {
-    $('iniciarBtn').classList.add('recording');
-    $('iniciarBtn').textContent = 'Escuchando';
-  }
+  $('decirBtn').classList.add('recording');
+  $('decirBtn').textContent = 'Escuchando — pulsa para parar';
   escuchando = true;
   try {
     reconocimiento.start();
   } catch (err) {
     console.error('Recognition start failed:', err);
     escuchando = false;
-    $('iniciarBtn').classList.remove('recording');
-    $('iniciarBtn').textContent = 'Escuchar y responder';
     $('decirBtn').classList.remove('recording');
     $('decirBtn').textContent = 'Decir respuesta';
     $('feedbackBox').innerHTML = '<span class="bad">No se pudo iniciar el micrófono.</span> Inténtalo de nuevo.';
@@ -201338,7 +201323,7 @@ function decirRespuesta(){
   modoAutomatico = false;
   modoDecir = true;
   $('feedbackBox').textContent = 'Di tu respuesta ahora. La aplicación la revisará al terminar.';
-  iniciarEscucha('decir');
+  iniciarEscucha();
 }
 
 function textoEjercicio(){ return `${actual.verbo}. ${actual.contexto}. ${actual.pista}`; }
@@ -201347,16 +201332,6 @@ function textoContexto(){ return actual.contexto; }
 function textoPista(){ return actual.pista; }
 function textoVerbo(){ return actual.verbo; }
 function textoInstrucciones(){ return 'Escucha el ejercicio. Después responde con una sola oración completa en español. La aplicación escuchará tu respuesta y la revisará automáticamente.'; }
-
-function secuenciaVoz(){
-  if (escuchando) {
-    detenerReconocimiento();
-    return;
-  }
-  modoAutomatico = true;
-  $('feedbackBox').textContent = 'Escucha el ejercicio y responde en voz alta cuando termine.';
-  hablar(textoEjercicio(), () => setTimeout(() => iniciarEscucha('iniciar'), 350));
-}
 
 function actualizar(){
   $('correctCount').textContent = conteo.correctas;
@@ -201441,7 +201416,6 @@ $('contextoBtn').addEventListener('click', () => hablar(textoContexto()));
 $('verboBtn').addEventListener('click', () => hablar(textoVerbo()));
 $('pistaBtn').addEventListener('click', () => hablar(textoPista()));
 $('decirBtn').addEventListener('click', decirRespuesta);
-$('iniciarBtn').addEventListener('click', secuenciaVoz);
 $('repetirBtn').addEventListener('click', () => hablar(textoEjercicio()));
 $('fraseBtn').addEventListener('click', () => hablar(textoFrase(), null, { rate: 0.7 }));
 $('instruccionesBtn').addEventListener('click', () => hablar(textoInstrucciones()));
