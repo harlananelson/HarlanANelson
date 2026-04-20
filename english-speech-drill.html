@@ -147,8 +147,6 @@
           <button class="btn secondary-strong" id="verboBtn">Hear verb</button>
           <button class="btn" id="pistaBtn">Hear hint</button>
           <button class="btn" id="decirBtn">Say answer</button>
-          <button class="btn" id="iniciarBtn">Listen & respond</button>
-          <button class="btn" id="repetirBtn">Repeat exercise</button>
           <button class="btn" id="fraseBtn">Hear model sentence</button>
           <button class="btn" id="instruccionesBtn">Hear instructions</button>
           <button class="btn" id="nextBtn">Next</button>
@@ -11412,8 +11410,8 @@ if (SpeechRecognition) {
   reconocimiento.onend = () => {
     escuchando = false;
     $('vozPill').textContent = 'Mic: ready';
-    $('iniciarBtn').classList.remove('recording');
-    $('iniciarBtn').textContent = 'Listen & respond';
+    $('decirBtn').classList.remove('recording');
+    $('decirBtn').textContent = 'Say answer';
     if ((modoAutomatico || modoDecir) && ultimaTranscripcion.trim()) {
       modoAutomatico = false;
       modoDecir = false;
@@ -11424,12 +11422,22 @@ if (SpeechRecognition) {
       $('feedbackBox').innerHTML = '<span class="bad">No voice response was detected.</span> Press again to try.';
     }
   };
-  reconocimiento.onerror = () => {
+  reconocimiento.onerror = (event) => {
     escuchando = false;
     modoAutomatico = false;
     modoDecir = false;
-    $('vozPill').textContent = 'Mic: error';
-    $('feedbackBox').innerHTML = '<span class="bad">Could not access the microphone.</span> Check your browser permissions.';
+    $('decirBtn').classList.remove('recording');
+    $('decirBtn').textContent = 'Say answer';
+    if (event && event.error === 'no-speech') {
+      $('vozPill').textContent = 'Mic: no speech';
+      $('feedbackBox').innerHTML = '<span class="bad">No speech detected.</span> Tap "Say answer" again.';
+    } else if (event && (event.error === 'not-allowed' || event.error === 'service-not-allowed')) {
+      $('vozPill').textContent = 'Mic: blocked';
+      $('feedbackBox').innerHTML = '<span class="bad">Microphone access was blocked.</span> Check your browser permissions.';
+    } else {
+      $('vozPill').textContent = 'Mic: error';
+      $('feedbackBox').innerHTML = '<span class="bad">Could not access the microphone.</span> Check your browser permissions.';
+    }
   };
 }
 
@@ -11606,6 +11614,7 @@ function cancelarAudio(){
 }
 
 function hablar(texto, alTerminar, opciones = {}){
+  if (typeof detenerReconocimiento === 'function') detenerReconocimiento();
   cancelarAudio();
   if (elEnabled && elVoiceId) {
     audioQueue.push({ text: texto, callback: alTerminar });
@@ -11703,6 +11712,21 @@ $('settingsSaveBtn').addEventListener('click', () => {
   $('vozPill').textContent = elEnabled ? 'Voice: ElevenLabs' : 'Voice: browser';
 });
 
+function detenerReconocimiento(){
+  if (reconocimiento && escuchando) {
+    try {
+      if (typeof reconocimiento.abort === 'function') reconocimiento.abort();
+      else reconocimiento.stop();
+    } catch (e) { /* ignore */ }
+  }
+  escuchando = false;
+  modoAutomatico = false;
+  modoDecir = false;
+  ultimaTranscripcion = '';
+  $('decirBtn').classList.remove('recording');
+  $('decirBtn').textContent = 'Say answer';
+}
+
 function iniciarEscucha(){
   if (!reconocimiento) {
     $('feedbackBox').innerHTML = '<span class="bad">Speech recognition is not available in this browser.</span> Chrome or Edge usually work best.';
@@ -11711,13 +11735,25 @@ function iniciarEscucha(){
   ultimaTranscripcion = '';
   $('transcripcionBox').textContent = 'Listening...';
   $('vozPill').textContent = 'Mic: listening';
-  $('iniciarBtn').classList.add('recording');
-  $('iniciarBtn').textContent = 'Listening';
+  $('decirBtn').classList.add('recording');
+  $('decirBtn').textContent = 'Listening — tap to stop';
   escuchando = true;
-  reconocimiento.start();
+  try {
+    reconocimiento.start();
+  } catch (err) {
+    console.error('Recognition start failed:', err);
+    escuchando = false;
+    $('decirBtn').classList.remove('recording');
+    $('decirBtn').textContent = 'Say answer';
+    $('feedbackBox').innerHTML = '<span class="bad">Could not start the microphone.</span> Try again.';
+  }
 }
 
 function decirRespuesta(){
+  if (escuchando) {
+    detenerReconocimiento();
+    return;
+  }
   modoAutomatico = false;
   modoDecir = true;
   $('feedbackBox').textContent = 'Say your answer now. The app will check it when you finish.';
@@ -11822,8 +11858,6 @@ $('contextoBtn').addEventListener('click', () => hablar(textoContexto()));
 $('verboBtn').addEventListener('click', () => hablar(textoVerbo()));
 $('pistaBtn').addEventListener('click', () => hablar(textoPista()));
 $('decirBtn').addEventListener('click', decirRespuesta);
-$('iniciarBtn').addEventListener('click', secuenciaVoz);
-$('repetirBtn').addEventListener('click', () => hablar(textoEjercicio()));
 $('fraseBtn').addEventListener('click', () => hablar(textoFrase(), null, { rate: 0.7 }));
 $('instruccionesBtn').addEventListener('click', () => hablar(textoInstrucciones()));
 $('nextBtn').addEventListener('click', elegir);
@@ -11855,6 +11889,10 @@ $('slowToggle').addEventListener('click', () => {
   elSlow = !elSlow;
   localStorage.setItem('el_slow', elSlow);
   actualizarSlowPill();
+});
+
+window.addEventListener('beforeunload', () => {
+  if (typeof detenerReconocimiento === 'function') detenerReconocimiento();
 });
 
 // Tense filter pill handlers
