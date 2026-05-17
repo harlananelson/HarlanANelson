@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Spanish → English Translator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-6: 1.5rem; --space-8: 2rem;
+      --color-bg:#f7f6f2; --color-surface:#fbfbf9; --color-surface-2:#f1efea; --color-border:#d4d1ca; --color-text:#28251d; --color-text-muted:#6f6d68; --color-primary:#01696f; --color-primary-hover:#0c4e54; --color-success:#437a22; --color-error:#a12c7b; --color-warning:#964219;
+      --radius-md:0.75rem; --radius-lg:1rem; --shadow-md:0 8px 24px rgba(0,0,0,.08);
+      --font-body:'Inter',sans-serif; --font-display:'Source Serif 4',serif;
+      --transcript-scale:1;
+    }
+    [data-theme="dark"] {
+      --color-bg:#171614; --color-surface:#1c1b19; --color-surface-2:#23211f; --color-border:#393836; --color-text:#e2dfd8; --color-text-muted:#a09e99; --color-primary:#4f98a3; --color-primary-hover:#227f8b; --color-success:#6daa45; --color-error:#d163a7; --color-warning:#e8af34;
+      --shadow-md:0 12px 32px rgba(0,0,0,.35);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; background:var(--color-bg); color:var(--color-text); font:var(--text-base)/1.55 var(--font-body); }
+    button, input, select { font:inherit; }
+    .app { max-width:1180px; margin:0 auto; padding:var(--space-6); }
+    .topbar { display:flex; justify-content:space-between; align-items:center; gap:var(--space-4); margin-bottom:var(--space-4); }
+    .brand { display:flex; gap:var(--space-3); align-items:center; }
+    .logo { width:42px; height:42px; border-radius:12px; background:linear-gradient(135deg,var(--color-primary),transparent), var(--color-surface-2); border:1px solid var(--color-border); display:grid; place-items:center; box-shadow:var(--shadow-md); }
+    .logo svg { width:24px; height:24px; color:var(--color-primary); }
+    h1 { margin:0; font:700 var(--text-xl)/1.05 var(--font-display); }
+    .sub { color:var(--color-text-muted); max-width:80ch; margin:0.4rem 0 0; }
+    .panel { background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:var(--space-4); box-shadow:var(--shadow-md); }
+    .settings { margin:var(--space-4) 0; display:grid; gap:var(--space-3); }
+    .field-row { display:flex; flex-wrap:wrap; gap:var(--space-3); align-items:flex-end; }
+    .field { display:flex; flex-direction:column; gap:0.3rem; }
+    .field label { font-size:var(--text-sm); font-weight:600; color:var(--color-text-muted); }
+    .field.grow { flex:1; min-width:240px; }
+    input, select { color:var(--color-text); background:var(--color-surface-2); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:0.6rem 0.7rem; min-height:42px; }
+    input:focus, select:focus { outline:2px solid var(--color-primary); outline-offset:1px; }
+    input[type="range"] { width:260px; max-width:100%; min-height:auto; padding:0; accent-color:var(--color-primary); background:transparent; border:0; }
+    .checkbox { display:flex; align-items:center; gap:0.4rem; font-size:var(--text-sm); color:var(--color-text-muted); font-weight:600; min-height:42px; }
+    .checkbox input { min-height:auto; width:auto; }
+    hr.sep { border:0; border-top:1px solid var(--color-border); margin:var(--space-2) 0; width:100%; }
+    .btn { border:1px solid var(--color-border); background:var(--color-surface); color:var(--color-text); padding:0.7rem 1rem; border-radius:999px; min-height:44px; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem; }
+    .btn:hover { border-color:var(--color-primary); }
+    .btn:disabled { opacity:0.5; cursor:not-allowed; }
+    .btn.primary { background:var(--color-primary); color:#fff; border-color:transparent; }
+    .btn.primary:hover { background:var(--color-primary-hover); }
+    .btn.recording { background:var(--color-error); color:#fff; border-color:transparent; }
+    .btn.small { padding:0.4rem 0.7rem; min-height:36px; font-size:var(--text-sm); }
+    .controls { display:flex; flex-wrap:wrap; gap:var(--space-3); align-items:center; margin:var(--space-4) 0 var(--space-2); }
+    .spacer { flex:1; }
+    .seg-toggle { display:inline-flex; border:1px solid var(--color-border); border-radius:999px; overflow:hidden; }
+    .seg-toggle button { border:0; background:var(--color-surface); color:var(--color-text-muted); padding:0.5rem 0.95rem; cursor:pointer; }
+    .seg-toggle button.active { background:var(--color-primary); color:#fff; }
+    .statusbar { display:flex; align-items:center; gap:0.5rem; font-size:var(--text-sm); color:var(--color-text-muted); margin:var(--space-3) 0 0.5rem; min-height:24px; flex-wrap:wrap; }
+    .dot { width:10px; height:10px; border-radius:50%; background:var(--color-text-muted); flex:none; }
+    .dot.live { background:var(--color-error); animation:pulse 1.4s infinite; }
+    .dot.ok { background:var(--color-success); }
+    .dot.err { background:var(--color-error); }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
+    .level { width:130px; height:9px; border-radius:999px; background:var(--color-surface-2); border:1px solid var(--color-border); overflow:hidden; flex:none; }
+    .level > i { display:block; height:100%; width:0; background:var(--color-primary); transition:width 0.08s linear; }
+    .transcript { border:1px solid var(--color-border); border-radius:var(--radius-lg); background:var(--color-border); overflow-y:auto; max-height:62vh; min-height:320px; box-shadow:var(--shadow-md); font-size:calc(var(--text-base) * var(--transcript-scale)); }
+    .transcript:fullscreen { max-height:none; height:100%; border-radius:0; background:var(--color-bg); }
+    .rows { display:flex; flex-direction:column; gap:1px; }
+    .row { display:grid; grid-template-columns:1fr 1fr; gap:1px; }
+    .row.head { position:sticky; top:0; z-index:2; }
+    .cell { background:var(--color-surface); padding:0.7rem 1rem; line-height:1.5; white-space:pre-wrap; overflow-wrap:anywhere; }
+    .cell.head { font:600 var(--text-sm)/1.2 var(--font-body); color:var(--color-text-muted); text-transform:uppercase; letter-spacing:0.04em; background:var(--color-surface-2); padding:0.55rem 1rem; }
+    .row.interim .cell.es { color:var(--color-text-muted); font-style:italic; }
+    .row.interim .cell.en { color:var(--color-text-muted); }
+    .cell.pending { color:var(--color-text-muted); }
+    .shimmer { background:linear-gradient(90deg,var(--color-text-muted) 30%,var(--color-text) 50%,var(--color-text-muted) 70%); background-size:200% 100%; -webkit-background-clip:text; background-clip:text; color:transparent; animation:sh 1.6s linear infinite; font-style:italic; }
+    @keyframes sh { to { background-position:-200% 0; } }
+    .cell.failed { color:var(--color-error); }
+    .errmsg { font-size:var(--text-sm); }
+    .linkbtn { background:none; border:0; color:var(--color-primary); cursor:pointer; text-decoration:underline; padding:0; }
+    .transcript.view-es .row { grid-template-columns:1fr; }
+    .transcript.view-es .cell.en { display:none; }
+    .transcript.view-en .row { grid-template-columns:1fr; }
+    .transcript.view-en .cell.es { display:none; }
+    .transcript.view-en .row.interim { display:none !important; }
+    .placeholder { padding:var(--space-8); text-align:center; color:var(--color-text-muted); background:var(--color-surface); }
+    .note { font-size:var(--text-sm); color:var(--color-text-muted); margin:0.2rem 0; }
+    .note.warn { color:var(--color-warning); }
+    .callout { border-left:3px solid var(--color-primary); background:var(--color-surface-2); padding:0.7rem 1rem; border-radius:var(--radius-md); font-size:var(--text-sm); }
+    footer { margin-top:var(--space-6); }
+    @media (max-width:680px) {
+      .row { grid-template-columns:1fr !important; }
+      .row.head { display:none; }
+      .cell.en { border-top:1px dashed var(--color-border); }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 5h8M7 4v1.5M10 5c0 4-3 7.5-7 9M5.5 9.5c1.3 2 3.4 3.3 5.5 3.9" />
+            <path d="M13 21l4-9 4 9M14.4 17.4h5.2" />
+          </svg>
+        </div>
+        <div><h1>Live Spanish → English Translator</h1></div>
+      </div>
+      <button id="themeBtn" class="btn small" type="button" title="Toggle light / dark" aria-label="Toggle theme">☾</button>
+    </div>
+
+    <p class="sub">Listens to spoken Spanish, transcribes it on your device with a Whisper speech model, and shows a running English translation beside it. The audio is transcribed entirely in your browser — it never leaves the device. Only the recognized text is sent to your chosen LLM for translation, using your own API key.</p>
+
+    <section class="settings panel" aria-label="Settings">
+      <div class="field-row">
+        <div class="field">
+          <label for="provider">Translation provider</label>
+          <select id="provider">
+            <option value="anthropic">Anthropic (Claude)</option>
+            <option value="openai">OpenAI</option>
+          </select>
+        </div>
+        <div class="field grow">
+          <label for="model">Translation model</label>
+          <input id="model" list="modelList" autocomplete="off" spellcheck="false" placeholder="model id" />
+          <datalist id="modelList"></datalist>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field grow">
+          <label for="apiKey">API key &mdash; stored only in this browser</label>
+          <input id="apiKey" type="password" autocomplete="off" spellcheck="false" placeholder="paste your API key" />
+        </div>
+        <button id="showKey" class="btn small" type="button">Show</button>
+        <button id="checkBtn" class="btn small" type="button">Check key</button>
+      </div>
+      <div id="keyHint" class="note warn"></div>
+      <div id="checkResult" class="note"></div>
+      <hr class="sep" />
+      <div class="field-row">
+        <div class="field grow">
+          <label for="whisperModel">Speech model &mdash; runs on-device, downloaded once</label>
+          <input id="whisperModel" list="whisperList" autocomplete="off" spellcheck="false" placeholder="whisper model id" />
+          <datalist id="whisperList"></datalist>
+        </div>
+        <label class="checkbox"><input type="checkbox" id="webgpu" /> Use WebGPU</label>
+        <button id="preloadBtn" class="btn small" type="button">Preload model</button>
+      </div>
+      <div class="field">
+        <label for="sens">Mic sensitivity &mdash; move right if it misses quiet speech, left if background noise triggers it</label>
+        <input type="range" id="sens" min="0" max="100" step="2" />
+      </div>
+      <div id="modelStatus" class="note"></div>
+      <div class="callout">🔒 Your API key is saved only in this browser (its <em>localStorage</em>) and sent directly from your device to the LLM provider — never to this website's server. Speech recognition runs fully on-device, so your audio is never uploaded anywhere. Don't enter your key on a shared computer.</div>
+    </section>
+
+    <div class="controls">
+      <button id="startBtn" class="btn primary" type="button">● Start listening</button>
+      <button id="clearBtn" class="btn" type="button">Clear</button>
+      <button id="copyBtn" class="btn" type="button">Copy</button>
+      <span class="spacer"></span>
+      <div class="seg-toggle" role="group" aria-label="Which panes to show">
+        <button data-view="both" type="button">Both</button>
+        <button data-view="es" type="button">Spanish</button>
+        <button data-view="en" type="button">English</button>
+      </div>
+      <button id="fontDown" class="btn small" type="button" aria-label="Smaller text">A&minus;</button>
+      <button id="fontUp" class="btn small" type="button" aria-label="Larger text">A+</button>
+      <button id="fsBtn" class="btn small" type="button" aria-label="Fullscreen transcript" title="Fullscreen transcript">⛶</button>
+    </div>
+    <div id="startHint" class="note"></div>
+
+    <div class="statusbar">
+      <span id="statusDot" class="dot"></span>
+      <span id="statusText">Idle</span>
+      <span class="spacer"></span>
+      <span>mic level</span>
+      <span class="level"><i id="levelFill"></i></span>
+    </div>
+
+    <div class="transcript" id="transcript">
+      <div class="rows" id="rows" aria-live="polite">
+        <div class="row head">
+          <div class="cell head es">Spanish &mdash; heard</div>
+          <div class="cell head en">English &mdash; translated</div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="note">Two background pipelines run independently: one Web Worker transcribes speech with an on-device Whisper model, a second Web Worker translates each finished sentence through your LLM. A per-sentence merge buffer joins them, so the Spanish and English panes never block one another. The first time you use it the speech model downloads (tens of MB) and is then cached for next time. Works in recent Chrome, Edge, Firefox, and Safari — including on iPad.</p>
+    </footer>
+  </div>
+
+  <!-- Transcription pipeline: on-device Whisper, ES module worker. Not executed as a normal script. -->
+  <script id="whisper-worker" type="text/js-worker">
+    import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.2.0';
+
+    env.allowLocalModels = false;
+
+    let transcriber = null;
+    let loadedKey = '';
+    let loadingPromise = null;
+    const jobs = [];
+    let draining = false;
+
+    self.onmessage = function (e) {
+      const m = e.data || {};
+      if (m.type === 'load') {
+        ensure(m.model, m.device).catch(function () { /* status already posted */ });
+      } else if (m.type === 'transcribe') {
+        jobs.push(m);
+        ensure(m.model, m.device).then(drain).catch(function () {
+          failAll('Speech model failed to load');
+        });
+      } else if (m.type === 'clear') {
+        jobs.length = 0;
+      }
+    };
+
+    function ensure(model, device) {
+      const dev = device === 'webgpu' ? 'webgpu' : 'wasm';
+      const key = model + '|' + dev;
+      if (transcriber && loadedKey === key) { return Promise.resolve(transcriber); }
+      if (loadingPromise && loadedKey === key) { return loadingPromise; }
+      loadedKey = key;
+      transcriber = null;
+      self.postMessage({ type: 'status', state: 'loading', model: model });
+      loadingPromise = loadModel(model, dev);
+      return loadingPromise;
+    }
+
+    async function loadModel(model, dev) {
+      const opts = {
+        dtype: 'q8',
+        progress_callback: function (p) { self.postMessage({ type: 'progress', data: p }); }
+      };
+      try {
+        transcriber = await pipeline('automatic-speech-recognition', model, Object.assign({ device: dev }, opts));
+        self.postMessage({ type: 'status', state: 'ready', model: model, device: dev });
+        return transcriber;
+      } catch (err) {
+        if (dev === 'webgpu') {
+          try {
+            transcriber = await pipeline('automatic-speech-recognition', model, Object.assign({ device: 'wasm' }, opts));
+            self.postMessage({ type: 'status', state: 'ready', model: model, device: 'wasm', note: '(WebGPU unavailable — using WASM)' });
+            return transcriber;
+          } catch (err2) {
+            self.postMessage({ type: 'status', state: 'error', error: String((err2 && err2.message) || err2) });
+            throw err2;
+          }
+        }
+        self.postMessage({ type: 'status', state: 'error', error: String((err && err.message) || err) });
+        throw err;
+      }
+    }
+
+    async function drain() {
+      if (draining) { return; }
+      draining = true;
+      try {
+        while (jobs.length) {
+          const job = jobs.shift();
+          if (!transcriber) {
+            self.postMessage({ type: 'transcript', id: job.id, ok: false, error: 'Speech model not loaded' });
+            continue;
+          }
+          try {
+            const out = await transcriber(job.audio, { language: 'spanish', task: 'transcribe' });
+            const text = (out && typeof out.text === 'string' ? out.text : '').trim();
+            self.postMessage({ type: 'transcript', id: job.id, ok: true, text: text });
+          } catch (err) {
+            self.postMessage({ type: 'transcript', id: job.id, ok: false, error: String((err && err.message) || err) });
+          }
+        }
+      } finally {
+        draining = false;
+      }
+    }
+
+    function failAll(msg) {
+      while (jobs.length) {
+        const job = jobs.shift();
+        self.postMessage({ type: 'transcript', id: job.id, ok: false, error: msg });
+      }
+    }
+  </script>
+
+  <!-- Translation pipeline: BYOK LLM calls, classic worker. Not executed as a normal script. -->
+  <script id="translation-worker" type="text/js-worker">
+    let cfg = { provider: 'anthropic', model: '', apiKey: '' };
+    const queue = [];
+    let active = 0;
+    const MAX_ACTIVE = 2;
+
+    self.onmessage = function (e) {
+      const m = e.data || {};
+      if (m.type === 'config') {
+        cfg = Object.assign({}, cfg, m.config || {});
+        pump();
+      } else if (m.type === 'translate') {
+        queue.push({ id: m.id, text: m.text, context: m.context || null });
+        pump();
+      } else if (m.type === 'test') {
+        runTest();
+      } else if (m.type === 'clear') {
+        queue.length = 0;
+      }
+    };
+
+    function pump() {
+      while (active < MAX_ACTIVE && queue.length) {
+        const job = queue.shift();
+        active++;
+        handle(job, 0).finally(function () { active--; pump(); });
+      }
+    }
+
+    async function handle(job, attempt) {
+      try {
+        const text = await callProvider(job.text, job.context);
+        self.postMessage({ type: 'result', id: job.id, ok: true, text: text });
+      } catch (err) {
+        const msg = String((err && err.message) || err);
+        if (attempt < 2 && retryable(msg)) {
+          await sleep(900 * (attempt + 1));
+          return handle(job, attempt + 1);
+        }
+        self.postMessage({ type: 'result', id: job.id, ok: false, error: msg });
+      }
+    }
+
+    async function runTest() {
+      try {
+        const text = await callProvider('Hola, esta es una prueba de la clave.', null);
+        self.postMessage({ type: 'testResult', ok: true, text: text });
+      } catch (err) {
+        self.postMessage({ type: 'testResult', ok: false, error: String((err && err.message) || err) });
+      }
+    }
+
+    function retryable(msg) {
+      return /\b(408|425|429|500|502|503|504|529)\b/.test(msg) ||
+             /failed to fetch|networkerror|load failed/i.test(msg);
+    }
+    function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+
+    const SYSTEM_PROMPT =
+      'You are a professional live interpreter. Translate the given Spanish speech transcript into natural, fluent English. ' +
+      'Output ONLY the English translation - no quotation marks, no commentary, no notes, no preamble. ' +
+      'The Spanish is auto-transcribed live speech: it may be a sentence fragment, lack punctuation, or contain transcription errors. ' +
+      'Translate the intended meaning as faithfully and idiomatically as you can, preserving tone and register.';
+
+    function userPrompt(text, context) {
+      let p = '';
+      if (context && context.es) {
+        p += 'Preceding sentence already spoken (context only - do not translate or repeat it):\n';
+        p += 'Spanish: ' + context.es + '\n';
+        if (context.en) { p += 'English: ' + context.en + '\n'; }
+        p += '\n';
+      }
+      p += 'Translate this Spanish segment into English:\n' + text;
+      return p;
+    }
+
+    async function callProvider(text, context) {
+      if (!cfg.apiKey) { throw new Error('No API key set'); }
+      if (!cfg.model) { throw new Error('No model set'); }
+      return cfg.provider === 'openai'
+        ? callOpenAI(text, context)
+        : callAnthropic(text, context);
+    }
+
+    async function callAnthropic(text, context) {
+      const res = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          'x-api-key': cfg.apiKey,
+          'anthropic-version': '2023-06-01',
+          'anthropic-dangerous-direct-browser-access': 'true'
+        },
+        body: JSON.stringify({
+          model: cfg.model,
+          max_tokens: 1024,
+          system: SYSTEM_PROMPT,
+          messages: [{ role: 'user', content: userPrompt(text, context) }]
+        })
+      });
+      if (!res.ok) { throw new Error(await errorText(res)); }
+      const data = await res.json();
+      const out = (data.content || [])
+        .filter(function (b) { return b && b.type === 'text'; })
+        .map(function (b) { return b.text; })
+        .join('')
+        .trim();
+      if (!out) { throw new Error('Empty response from Anthropic'); }
+      return clean(out);
+    }
+
+    async function callOpenAI(text, context) {
+      const res = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          'authorization': 'Bearer ' + cfg.apiKey
+        },
+        body: JSON.stringify({
+          model: cfg.model,
+          messages: [
+            { role: 'system', content: SYSTEM_PROMPT },
+            { role: 'user', content: userPrompt(text, context) }
+          ]
+        })
+      });
+      if (!res.ok) { throw new Error(await errorText(res)); }
+      const data = await res.json();
+      const choice = data.choices && data.choices[0];
+      const out = (choice && choice.message && choice.message.content ? choice.message.content : '').trim();
+      if (!out) { throw new Error('Empty response from OpenAI'); }
+      return clean(out);
+    }
+
+    function clean(s) {
+      if (s.length > 1 && /^["“'][\s\S]*["”']$/.test(s)) { return s.slice(1, -1).trim(); }
+      return s;
+    }
+
+    async function errorText(res) {
+      let body = '';
+      try { body = await res.text(); } catch (_) { body = ''; }
+      let detail = '';
+      if (body) {
+        try {
+          const j = JSON.parse(body);
+          if (j && j.error) { detail = j.error.message || j.error.type || ''; }
+        } catch (_) { detail = body; }
+      }
+      if (detail && detail.length > 240) { detail = detail.slice(0, 240) + '…'; }
+      return res.status + ' ' + (res.statusText || '') + (detail ? ' — ' + detail : '');
+    }
+  </script>
+
+  <script>
+  (function () {
+    'use strict';
+
+    var $ = function (id) { return document.getElementById(id); };
+    var els = {
+      themeBtn: $('themeBtn'), provider: $('provider'), model: $('model'), modelList: $('modelList'),
+      apiKey: $('apiKey'), showKey: $('showKey'), keyHint: $('keyHint'),
+      checkBtn: $('checkBtn'), checkResult: $('checkResult'),
+      whisperModel: $('whisperModel'), whisperList: $('whisperList'), webgpu: $('webgpu'),
+      preloadBtn: $('preloadBtn'), sens: $('sens'), modelStatus: $('modelStatus'),
+      startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), fsBtn: $('fsBtn'),
+      fontDown: $('fontDown'), fontUp: $('fontUp'), statusDot: $('statusDot'), statusText: $('statusText'),
+      levelFill: $('levelFill'), transcript: $('transcript'), rows: $('rows'), startHint: $('startHint'),
+      view: document.querySelectorAll('.seg-toggle button')
+    };
+
+    var MODEL_SUGGESTIONS = {
+      anthropic: ['claude-haiku-4-5-20251001', 'claude-sonnet-4-6', 'claude-opus-4-7'],
+      openai: ['gpt-5-mini', 'gpt-5', 'gpt-4.1-mini', 'gpt-4o-mini']
+    };
+    var WHISPER_SUGGESTIONS = [
+      'onnx-community/whisper-base', 'onnx-community/whisper-tiny',
+      'onnx-community/whisper-small-ONNX', 'Xenova/whisper-base'
+    ];
+    var DEFAULTS = {
+      provider: 'anthropic',
+      models: { anthropic: 'claude-haiku-4-5-20251001', openai: 'gpt-5-mini' },
+      apiKeys: { anthropic: '', openai: '' },
+      whisperModel: 'onnx-community/whisper-base',
+      useWebGPU: false,
+      sensitivity: 70,
+      theme: 'light', scale: 1, view: 'both'
+    };
+    var STORE_KEY = 'liveTranslator.v2';
+
+    // ---- state ----
+    var state = loadState();
+    var translator = null;
+    var whisper = null;
+    var segments = [];
+    var nextId = 1;
+    var autoScroll = true;
+    var listening = false;
+    var modelFiles = {};
+    var interimRow = null, interimEs = null, interimEn = null;
+    var placeholderEl = null;
+    var segEl = {};
+
+    // audio capture / voice-activity detection
+    var audioCtx = null, micStream = null, micSource = null, processor = null, muteGain = null;
+    var capturing = false;
+    var srcRate = 48000;
+    var FRAME = 4096, HANG_MS = 700, MIN_MS = 350, MAX_MS = 22000, PREROLL_FRAMES = 4;
+    var vad = { speaking: false, silenceMs: 0, frames: [], preRoll: [], totalSamples: 0 };
+
+    function loadState() {
+      try {
+        var raw = localStorage.getItem(STORE_KEY);
+        if (!raw) { return JSON.parse(JSON.stringify(DEFAULTS)); }
+        var s = JSON.parse(raw);
+        return {
+          provider: s.provider === 'openai' ? 'openai' : 'anthropic',
+          models: Object.assign({}, DEFAULTS.models, s.models || {}),
+          apiKeys: Object.assign({}, DEFAULTS.apiKeys, s.apiKeys || {}),
+          whisperModel: s.whisperModel || DEFAULTS.whisperModel,
+          useWebGPU: !!s.useWebGPU,
+          sensitivity: typeof s.sensitivity === 'number' ? s.sensitivity : DEFAULTS.sensitivity,
+          theme: s.theme === 'dark' ? 'dark' : 'light',
+          scale: typeof s.scale === 'number' ? s.scale : 1,
+          view: ['both', 'es', 'en'].indexOf(s.view) >= 0 ? s.view : 'both'
+        };
+      } catch (e) {
+        return JSON.parse(JSON.stringify(DEFAULTS));
+      }
+    }
+    function saveState() {
+      try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) { /* storage blocked */ }
+    }
+    function hasKey() { return !!(state.apiKeys[state.provider] || '').trim(); }
+    function whisperDevice() { return state.useWebGPU ? 'webgpu' : 'wasm'; }
+    function micThreshold() { return 0.032 - (state.sensitivity / 100) * 0.028; }
+
+    function pushConfig() {
+      if (!translator) { return; }
+      translator.postMessage({
+        type: 'config',
+        config: {
+          provider: state.provider,
+          model: (state.models[state.provider] || '').trim(),
+          apiKey: (state.apiKeys[state.provider] || '').trim()
+        }
+      });
+    }
+
+    // ---- segment helpers ----
+    function findSeg(id) {
+      for (var i = 0; i < segments.length; i++) { if (segments[i].id === id) { return segments[i]; } }
+      return null;
+    }
+    function prevSeg(seg) {
+      var i = segments.indexOf(seg);
+      return i > 0 ? segments[i - 1] : null;
+    }
+    function removeSeg(seg) {
+      var i = segments.indexOf(seg);
+      if (i >= 0) { segments.splice(i, 1); }
+      var refs = segEl[seg.id];
+      if (refs && refs.row) { refs.row.remove(); }
+      delete segEl[seg.id];
+      if (!segments.length) { showPlaceholder(); }
+      updateStatus();
+    }
+
+    // ---- transcript rendering ----
+    function showPlaceholder() {
+      if (placeholderEl) { return; }
+      placeholderEl = document.createElement('div');
+      placeholderEl.className = 'placeholder';
+      placeholderEl.textContent = 'Press “Start listening” and let Spanish speech reach your microphone. '
+        + 'Each spoken sentence is transcribed on-device, then translated — Spanish on the left, English on the right. '
+        + 'The first run downloads the speech model.';
+      els.rows.insertBefore(placeholderEl, interimRow);
+    }
+    function removePlaceholder() {
+      if (placeholderEl) { placeholderEl.remove(); placeholderEl = null; }
+    }
+
+    function addRow(seg) {
+      var row = document.createElement('div');
+      row.className = 'row seg';
+      var es = document.createElement('div'); es.className = 'cell es';
+      var en = document.createElement('div'); en.className = 'cell en';
+      row.appendChild(es);
+      row.appendChild(en);
+      els.rows.insertBefore(row, interimRow);
+      segEl[seg.id] = { row: row, es: es, en: en };
+      paintRow(seg);
+      maybeScroll();
+    }
+
+    function paintCell(cell, kind, st, text, error, pendingLabel, retryFn) {
+      cell.className = 'cell ' + kind;
+      cell.textContent = '';
+      if (st === 'transcribing' || st === 'translating') {
+        cell.classList.add('pending');
+        var sp = document.createElement('span');
+        sp.className = 'shimmer';
+        sp.textContent = pendingLabel;
+        cell.appendChild(sp);
+      } else if (st === 'done') {
+        cell.textContent = text;
+      } else if (st === 'error') {
+        cell.classList.add('failed');
+        var msg = document.createElement('span');
+        msg.className = 'errmsg';
+        msg.textContent = '⚠ ' + (error || 'failed') + '  ';
+        cell.appendChild(msg);
+        if (retryFn) {
+          var b = document.createElement('button');
+          b.className = 'linkbtn';
+          b.type = 'button';
+          b.textContent = 'retry';
+          b.addEventListener('click', retryFn);
+          cell.appendChild(b);
+        }
+      }
+    }
+
+    function paintRow(seg) {
+      var refs = segEl[seg.id];
+      if (!refs) { return; }
+      paintCell(refs.es, 'es', seg.esState, seg.es, seg.error, 'transcribing…', null);
+      var retry = seg.enState === 'error' ? function () { retrySeg(seg.id); } : null;
+      paintCell(refs.en, 'en', seg.enState, seg.en, seg.error, 'translating…', retry);
+    }
+
+    function setInterim(txt) {
+      if (txt) {
+        interimEs.textContent = txt;
+        interimRow.style.display = '';
+      } else {
+        interimEs.textContent = '';
+        interimRow.style.display = 'none';
+      }
+      maybeScroll();
+    }
+    function maybeScroll() {
+      if (autoScroll) { els.transcript.scrollTop = els.transcript.scrollHeight; }
+    }
+    function setLevel(rms) {
+      var pct = Math.max(0, Math.min(100, (rms / 0.05) * 100));
+      els.levelFill.style.width = pct + '%';
+    }
+
+    // ---- merge buffer: utterance -> transcription -> translation ----
+    function finalizeUtterance(samples, rate) {
+      var seg = { id: nextId++, es: '', esState: 'transcribing', en: '', enState: 'idle', error: '' };
+      segments.push(seg);
+      removePlaceholder();
+      addRow(seg);
+      updateStatus();
+      resampleTo16k(samples, rate).then(function (audio16k) {
+        if (whisper) {
+          whisper.postMessage(
+            { type: 'transcribe', id: seg.id, audio: audio16k, model: state.whisperModel, device: whisperDevice() },
+            [audio16k.buffer]
+          );
+        } else {
+          seg.esState = 'error';
+          seg.error = 'Transcription worker unavailable';
+          paintRow(seg);
+        }
+      }).catch(function () {
+        seg.esState = 'error';
+        seg.error = 'Audio processing failed';
+        paintRow(seg);
+      });
+    }
+
+    function onWhisperMessage(e) {
+      var m = e.data || {};
+      if (m.type === 'progress') { onModelProgress(m.data); return; }
+      if (m.type === 'status') { onModelStatus(m); return; }
+      if (m.type !== 'transcript') { return; }
+      var seg = findSeg(m.id);
+      if (!seg) { return; }
+      if (m.ok) {
+        var txt = (m.text || '').trim();
+        if (!txt) { removeSeg(seg); return; }   // VAD false trigger / no speech
+        seg.es = txt;
+        seg.esState = 'done';
+        seg.enState = 'translating';
+        paintRow(seg);
+        maybeScroll();
+        if (translator) {
+          var prev = prevSeg(seg);
+          translator.postMessage({
+            type: 'translate', id: seg.id, text: txt,
+            context: prev ? { es: prev.es, en: prev.enState === 'done' ? prev.en : '' } : null
+          });
+        } else {
+          seg.enState = 'error';
+          seg.error = 'Translation worker unavailable';
+          paintRow(seg);
+        }
+      } else {
+        seg.esState = 'error';
+        seg.error = m.error || 'Transcription failed';
+        paintRow(seg);
+      }
+      updateStatus();
+    }
+
+    function onTranslatorMessage(e) {
+      var m = e.data || {};
+      if (m.type === 'result') {
+        var seg = findSeg(m.id);
+        if (!seg) { return; }
+        if (m.ok) { seg.en = m.text; seg.enState = 'done'; seg.error = ''; }
+        else { seg.enState = 'error'; seg.error = m.error || 'Translation failed'; }
+        paintRow(seg);
+        maybeScroll();
+      } else if (m.type === 'testResult') {
+        els.checkBtn.disabled = !hasKey();
+        els.checkBtn.textContent = 'Check key';
+        if (m.ok) {
+          els.checkResult.textContent = '✓ Key works — sample translation: “' + m.text + '”';
+          els.checkResult.style.color = 'var(--color-success)';
+        } else {
+          els.checkResult.textContent = '✗ ' + m.error;
+          els.checkResult.style.color = 'var(--color-error)';
+        }
+      }
+    }
+
+    function retrySeg(id) {
+      var seg = findSeg(id);
+      if (!seg || !translator || seg.esState !== 'done') { return; }
+      var prev = prevSeg(seg);
+      seg.enState = 'translating';
+      seg.error = '';
+      paintRow(seg);
+      translator.postMessage({
+        type: 'translate', id: seg.id, text: seg.es,
+        context: prev ? { es: prev.es, en: prev.enState === 'done' ? prev.en : '' } : null
+      });
+    }
+
+    // ---- speech model status ----
+    function setModelStatus(text, color) {
+      els.modelStatus.textContent = text;
+      els.modelStatus.style.color = color || '';
+    }
+    function fmtMB(b) { return (b / 1048576).toFixed(1) + ' MB'; }
+    function onModelProgress(d) {
+      if (!d || d.status !== 'progress' || !d.file || !d.total) { return; }
+      modelFiles[d.file] = { loaded: d.loaded || 0, total: d.total };
+      var loaded = 0, total = 0, k;
+      for (k in modelFiles) { loaded += modelFiles[k].loaded; total += modelFiles[k].total; }
+      var pct = total ? Math.floor(loaded / total * 100) : 0;
+      setModelStatus('Downloading speech model… ' + pct + '%  (' + fmtMB(loaded) + ' / ' + fmtMB(total) + ')', '');
+    }
+    function onModelStatus(m) {
+      if (m.state === 'loading') {
+        setModelStatus('Loading speech model…', '');
+      } else if (m.state === 'ready') {
+        modelFiles = {};
+        setModelStatus('Speech model ready ✓  ' + (m.note || '') + (m.device ? ' [' + m.device + ']' : ''), 'var(--color-success)');
+      } else if (m.state === 'error') {
+        setModelStatus('Speech model failed to load: ' + m.error + ' — try a different model id.', 'var(--color-error)');
+      }
+    }
+
+    // ---- audio capture + energy voice-activity detection ----
+    function resetVad() {
+      vad.speaking = false; vad.silenceMs = 0; vad.frames = []; vad.preRoll = []; vad.totalSamples = 0;
+    }
+
+    function startCapture() {
+      return navigator.mediaDevices.getUserMedia({
+        audio: { channelCount: 1, echoCancellation: true, noiseSuppression: true, autoGainControl: true }
+      }).then(function (stream) {
+        micStream = stream;
+        var Ctx = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new Ctx();
+        srcRate = audioCtx.sampleRate || 48000;
+        micSource = audioCtx.createMediaStreamSource(micStream);
+        processor = audioCtx.createScriptProcessor(FRAME, 1, 1);
+        muteGain = audioCtx.createGain();
+        muteGain.gain.value = 0;
+        processor.onaudioprocess = onAudio;
+        micSource.connect(processor);
+        processor.connect(muteGain);
+        muteGain.connect(audioCtx.destination);
+        capturing = true;
+        resetVad();
+        if (audioCtx.resume) { audioCtx.resume(); }
+        return true;
+      }).catch(function (err) {
+        setStatus('err', 'Microphone access failed: ' + ((err && err.message) || err));
+        return false;
+      });
+    }
+
+    function stopCapture() {
+      capturing = false;
+      if (processor) { try { processor.disconnect(); processor.onaudioprocess = null; } catch (e) {} }
+      if (micSource) { try { micSource.disconnect(); } catch (e) {} }
+      if (muteGain) { try { muteGain.disconnect(); } catch (e) {} }
+      if (micStream) { micStream.getTracks().forEach(function (t) { t.stop(); }); }
+      if (audioCtx) { try { audioCtx.close(); } catch (e) {} }
+      audioCtx = micStream = micSource = processor = muteGain = null;
+      resetVad();
+      setLevel(0);
+    }
+
+    function onAudio(e) {
+      if (!capturing) { return; }
+      var input = e.inputBuffer.getChannelData(0);
+      var frame = new Float32Array(input);
+      var n = frame.length;
+      var sum = 0, i;
+      for (i = 0; i < n; i++) { sum += frame[i] * frame[i]; }
+      var rms = Math.sqrt(sum / n);
+      var frameMs = (n / srcRate) * 1000;
+      setLevel(rms);
+      var threshold = micThreshold();
+      if (rms >= threshold) {
+        if (!vad.speaking) {
+          vad.speaking = true;
+          vad.frames = vad.preRoll.slice();
+          vad.totalSamples = vad.frames.reduce(function (a, f) { return a + f.length; }, 0);
+          setInterim('🎙  speech detected…');
+        }
+        vad.frames.push(frame);
+        vad.totalSamples += n;
+        vad.silenceMs = 0;
+      } else {
+        if (vad.speaking) {
+          vad.frames.push(frame);
+          vad.totalSamples += n;
+          vad.silenceMs += frameMs;
+          if (vad.silenceMs >= HANG_MS) { endUtterance(); return; }
+        } else {
+          vad.preRoll.push(frame);
+          if (vad.preRoll.length > PREROLL_FRAMES) { vad.preRoll.shift(); }
+        }
+      }
+      if (vad.speaking && (vad.totalSamples / srcRate) * 1000 >= MAX_MS) { endUtterance(); }
+    }
+
+    function endUtterance() {
+      var frames = vad.frames;
+      var total = vad.totalSamples;
+      resetVad();
+      setInterim('');
+      if (!total || (total / srcRate) * 1000 < MIN_MS) { return; }
+      var merged = new Float32Array(total);
+      var off = 0, k;
+      for (k = 0; k < frames.length; k++) { merged.set(frames[k], off); off += frames[k].length; }
+      finalizeUtterance(merged, srcRate);
+    }
+
+    function resampleTo16k(samples, rate) {
+      if (rate === 16000) { return Promise.resolve(samples); }
+      var OAC = window.OfflineAudioContext || window.webkitOfflineAudioContext;
+      var frames = Math.max(1, Math.round(samples.length * 16000 / rate));
+      var oac = new OAC(1, frames, 16000);
+      var buf = oac.createBuffer(1, samples.length, rate);
+      if (buf.copyToChannel) { buf.copyToChannel(samples, 0); }
+      else { buf.getChannelData(0).set(samples); }
+      var src = oac.createBufferSource();
+      src.buffer = buf;
+      src.connect(oac.destination);
+      src.start();
+      return oac.startRendering().then(function (rendered) {
+        return new Float32Array(rendered.getChannelData(0));
+      });
+    }
+
+    // ---- start / stop ----
+    function start() {
+      if (!hasKey()) { setStatus('err', 'Enter your API key first.'); return; }
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        setStatus('err', 'This browser cannot access the microphone.');
+        return;
+      }
+      listening = true;
+      updateControls();
+      pushConfig();
+      if (whisper) {
+        whisper.postMessage({ type: 'load', model: state.whisperModel, device: whisperDevice() });
+      }
+      startCapture().then(function (ok) {
+        if (!ok) { listening = false; updateControls(); return; }
+        setStatus('live', 'Listening — speak or play Spanish audio.');
+      });
+    }
+
+    function stop() {
+      listening = false;
+      stopCapture();
+      setStatus('idle', 'Stopped.');
+      updateControls();
+    }
+
+    // ---- status / controls ----
+    function setStatus(kind, text) {
+      els.statusDot.className = 'dot' + (kind === 'live' ? ' live' : kind === 'err' ? ' err' : kind === 'ok' ? ' ok' : '');
+      if (text) { els.statusText.dataset.msg = text; }
+      updateStatus();
+    }
+    function updateStatus() {
+      var base = els.statusText.dataset.msg || (listening ? 'Listening…' : 'Idle');
+      var n = segments.length;
+      els.statusText.textContent = base + (n ? '   ·   ' + n + ' line' + (n === 1 ? '' : 's') : '');
+    }
+    function updateControls() {
+      var canStart = hasKey() && navigator.mediaDevices && navigator.mediaDevices.getUserMedia;
+      els.startBtn.disabled = !canStart && !listening;
+      els.startBtn.textContent = listening ? '■ Stop' : '● Start listening';
+      els.startBtn.classList.toggle('recording', listening);
+      els.startBtn.classList.toggle('primary', !listening);
+      els.checkBtn.disabled = !hasKey();
+      var hint = '';
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        hint = 'This browser cannot access the microphone.';
+      } else if (!hasKey()) {
+        hint = 'Enter your API key above to enable listening.';
+      }
+      els.startHint.textContent = hint;
+      els.startHint.className = hint ? 'note warn' : 'note';
+    }
+
+    // ---- settings fields ----
+    function fillDatalist(listEl, items) {
+      listEl.innerHTML = '';
+      items.forEach(function (m) {
+        var o = document.createElement('option');
+        o.value = m;
+        listEl.appendChild(o);
+      });
+    }
+    function refreshModelField() {
+      els.model.value = state.models[state.provider] || '';
+      fillDatalist(els.modelList, MODEL_SUGGESTIONS[state.provider]);
+    }
+    function refreshKeyField() {
+      els.apiKey.value = state.apiKeys[state.provider] || '';
+      updateKeyHint();
+    }
+    function updateKeyHint() {
+      var v = (els.apiKey.value || '').trim();
+      var hint = '';
+      if (v && state.provider === 'anthropic' && v.indexOf('sk-ant-') !== 0) {
+        hint = 'Anthropic keys normally start with “sk-ant-”.';
+      } else if (v && state.provider === 'openai' && v.indexOf('sk-') !== 0) {
+        hint = 'OpenAI keys normally start with “sk-”.';
+      }
+      els.keyHint.textContent = hint;
+    }
+    function applyView() {
+      els.transcript.className = 'transcript view-' + state.view;
+      Array.prototype.forEach.call(els.view, function (b) {
+        b.classList.toggle('active', b.dataset.view === state.view);
+      });
+    }
+    function applyScale() {
+      document.documentElement.style.setProperty('--transcript-scale', String(state.scale));
+    }
+    function applyTheme() {
+      document.documentElement.setAttribute('data-theme', state.theme);
+      els.themeBtn.textContent = state.theme === 'dark' ? '☀' : '☾';
+    }
+
+    function clearTranscript() {
+      segments = [];
+      segEl = {};
+      var olds = els.rows.querySelectorAll('.row.seg');
+      Array.prototype.forEach.call(olds, function (r) { r.remove(); });
+      removePlaceholder();
+      showPlaceholder();
+      setInterim('');
+      if (translator) { translator.postMessage({ type: 'clear' }); }
+      if (whisper) { whisper.postMessage({ type: 'clear' }); }
+      els.statusText.dataset.msg = listening ? 'Listening…' : 'Idle';
+      updateStatus();
+    }
+
+    function copyTranscript() {
+      if (!segments.length) { return; }
+      var text = segments.map(function (s) {
+        return 'ES: ' + (s.esState === 'done' ? s.es : '[' + s.esState + ']')
+          + '\nEN: ' + (s.enState === 'done' ? s.en : '[' + s.enState + ']');
+      }).join('\n\n');
+      navigator.clipboard.writeText(text).then(function () {
+        els.copyBtn.textContent = 'Copied ✓';
+        setTimeout(function () { els.copyBtn.textContent = 'Copy'; }, 1500);
+      }).catch(function () { /* clipboard blocked */ });
+    }
+
+    // ---- init ----
+    function init() {
+      interimRow = document.createElement('div');
+      interimRow.className = 'row interim';
+      interimRow.style.display = 'none';
+      interimEs = document.createElement('div'); interimEs.className = 'cell es';
+      interimEn = document.createElement('div'); interimEn.className = 'cell en';
+      interimEn.textContent = '…';
+      interimRow.appendChild(interimEs);
+      interimRow.appendChild(interimEn);
+      els.rows.appendChild(interimRow);
+
+      // translation worker (classic)
+      try {
+        var tsrc = document.getElementById('translation-worker').textContent;
+        translator = new Worker(URL.createObjectURL(new Blob([tsrc], { type: 'application/javascript' })));
+        translator.onmessage = onTranslatorMessage;
+        translator.onerror = function () { setStatus('err', 'Translation worker error.'); };
+      } catch (e) {
+        translator = null;
+        setStatus('err', 'Could not start the translation worker: ' + e.message);
+      }
+
+      // transcription worker (ES module)
+      try {
+        var wsrc = document.getElementById('whisper-worker').textContent;
+        whisper = new Worker(URL.createObjectURL(new Blob([wsrc], { type: 'application/javascript' })), { type: 'module' });
+        whisper.onmessage = onWhisperMessage;
+        whisper.onerror = function (err) {
+          setModelStatus('Transcription worker error: ' + ((err && err.message) || 'failed to start'), 'var(--color-error)');
+        };
+      } catch (e) {
+        whisper = null;
+        setModelStatus('Could not start the transcription worker: ' + e.message, 'var(--color-error)');
+      }
+
+      // populate settings
+      els.provider.value = state.provider;
+      refreshModelField();
+      refreshKeyField();
+      els.whisperModel.value = state.whisperModel;
+      fillDatalist(els.whisperList, WHISPER_SUGGESTIONS);
+      els.webgpu.checked = state.useWebGPU;
+      els.sens.value = String(state.sensitivity);
+      applyView();
+      applyScale();
+      applyTheme();
+      showPlaceholder();
+      pushConfig();
+      updateControls();
+      updateStatus();
+
+      // events
+      els.provider.addEventListener('change', function () {
+        state.provider = els.provider.value === 'openai' ? 'openai' : 'anthropic';
+        refreshModelField();
+        refreshKeyField();
+        els.checkResult.textContent = '';
+        saveState(); pushConfig(); updateControls();
+      });
+      els.model.addEventListener('input', function () {
+        state.models[state.provider] = els.model.value.trim();
+        saveState(); pushConfig();
+      });
+      els.apiKey.addEventListener('input', function () {
+        state.apiKeys[state.provider] = els.apiKey.value.trim();
+        els.checkResult.textContent = '';
+        updateKeyHint();
+        saveState(); pushConfig(); updateControls();
+      });
+      els.showKey.addEventListener('click', function () {
+        els.apiKey.type = els.apiKey.type === 'password' ? 'text' : 'password';
+        els.showKey.textContent = els.apiKey.type === 'password' ? 'Show' : 'Hide';
+      });
+      els.checkBtn.addEventListener('click', function () {
+        if (!translator || !hasKey()) { return; }
+        pushConfig();
+        els.checkBtn.disabled = true;
+        els.checkBtn.textContent = 'Checking…';
+        els.checkResult.textContent = '';
+        translator.postMessage({ type: 'test' });
+      });
+      els.whisperModel.addEventListener('input', function () {
+        state.whisperModel = els.whisperModel.value.trim();
+        saveState();
+      });
+      els.webgpu.addEventListener('change', function () {
+        state.useWebGPU = els.webgpu.checked;
+        saveState();
+      });
+      els.preloadBtn.addEventListener('click', function () {
+        if (!whisper || !state.whisperModel) { return; }
+        whisper.postMessage({ type: 'load', model: state.whisperModel, device: whisperDevice() });
+      });
+      els.sens.addEventListener('input', function () {
+        state.sensitivity = parseInt(els.sens.value, 10) || 0;
+        saveState();
+      });
+      els.startBtn.addEventListener('click', function () {
+        if (listening) { stop(); } else { start(); }
+      });
+      els.clearBtn.addEventListener('click', clearTranscript);
+      els.copyBtn.addEventListener('click', copyTranscript);
+      els.fsBtn.addEventListener('click', function () {
+        if (document.fullscreenElement) { document.exitFullscreen(); }
+        else if (els.transcript.requestFullscreen) { els.transcript.requestFullscreen(); }
+      });
+      els.fontDown.addEventListener('click', function () {
+        state.scale = Math.max(0.8, Math.round((state.scale - 0.1) * 10) / 10);
+        applyScale(); saveState();
+      });
+      els.fontUp.addEventListener('click', function () {
+        state.scale = Math.min(2, Math.round((state.scale + 0.1) * 10) / 10);
+        applyScale(); saveState();
+      });
+      Array.prototype.forEach.call(els.view, function (b) {
+        b.addEventListener('click', function () {
+          state.view = b.dataset.view;
+          applyView(); saveState();
+        });
+      });
+      els.themeBtn.addEventListener('click', function () {
+        state.theme = state.theme === 'dark' ? 'light' : 'dark';
+        applyTheme(); saveState();
+      });
+      els.transcript.addEventListener('scroll', function () {
+        autoScroll = els.transcript.scrollHeight - els.transcript.scrollTop - els.transcript.clientHeight < 90;
+      });
+    }
+
+    init();
+  })();
+  </script>
+</body>
+</html>

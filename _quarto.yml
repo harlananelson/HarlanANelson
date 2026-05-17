@@ -13,6 +13,7 @@ project:
   resources:
     - "spanish-speech-drill.html"
     - "english-speech-drill.html"
+    - "live-translator.html"
 
 website:
   title: "Harlan A Nelson"
@@ -38,6 +39,8 @@ website:
         text: Spanish Drill
       - href: english-speech-drill.html
         text: English Drill
+      - href: live-translator.html
+        text: Live Translator
     right:
       - icon: linkedin
         href: https://www.linkedin.com/in/harlananelson/
