@@ -197,8 +197,13 @@
     <details id="diagBox" class="panel diag" open>
       <summary>Diagnostics <span id="diagCount"></span></summary>
       <p class="note">If something fails, tap <strong>Copy diagnostics</strong> and paste the result to Claude. The log stays on your device; anything that looks like an API key is redacted automatically.</p>
+      <div class="field" style="margin:var(--space-2) 0 var(--space-3)">
+        <label for="logUrl">Live log endpoint (optional) &mdash; if set, the log is POSTed here so it can be read remotely</label>
+        <input id="logUrl" type="url" autocomplete="off" spellcheck="false" placeholder="https://webhook.site/your-unique-id" />
+      </div>
       <div class="diag-actions">
         <button id="copyDiag" class="btn small" type="button">Copy diagnostics</button>
+        <button id="sendDiag" class="btn small" type="button">Send log</button>
         <button id="clearDiag" class="btn small" type="button">Clear</button>
       </div>
       <textarea id="diagLog" class="diag-log" readonly rows="14" aria-label="Diagnostics log"></textarea>
@@ -299,23 +304,35 @@
         self.postMessage({ type: 'status', state: 'error', error: msg });
         throw new Error(msg);
       }
-      const order = dev === 'webgpu' ? ['webgpu', 'wasm'] : ['wasm'];
+      // Attempt list. fp16 first (good size, no quantization-optimizer bugs);
+      // fp32/wasm last — un-quantized, universally loadable. Block-quantized
+      // weights (q8/q4) are deliberately avoided: some ONNX Runtime builds fail
+      // session creation with "TransposeDQWeightsForMatMulNBits missing required scale".
+      const attempts = [];
+      function addAttempt(dt, dv) {
+        const k = dt + '|' + dv;
+        for (let j = 0; j < attempts.length; j++) { if (attempts[j].k === k) { return; } }
+        attempts.push({ dt: dt, dv: dv, k: k });
+      }
+      if (dev === 'webgpu') { addAttempt('fp16', 'webgpu'); }
+      addAttempt('fp16', 'wasm');
+      addAttempt('fp32', 'wasm');
       let lastErr = null;
-      for (let i = 0; i < order.length; i++) {
-        const d = order[i];
+      for (let i = 0; i < attempts.length; i++) {
+        const a = attempts[i];
         try {
-          log('loading model "' + model + '" dtype=q8 device=' + d);
+          log('loading "' + model + '"  dtype=' + a.dt + '  device=' + a.dv);
           transcriber = await pipeline('automatic-speech-recognition', model, {
-            dtype: 'q8',
-            device: d,
+            dtype: a.dt,
+            device: a.dv,
             progress_callback: function (p) { self.postMessage({ type: 'progress', data: p }); }
           });
-          log('model ready: ' + model + ' [' + d + ']');
-          self.postMessage({ type: 'status', state: 'ready', model: model, device: d, note: (d !== dev ? '(fell back from ' + dev + ')' : '') });
+          log('model ready: ' + model + ' [dtype=' + a.dt + ', ' + a.dv + ']');
+          self.postMessage({ type: 'status', state: 'ready', model: model, device: a.dv, note: 'dtype=' + a.dt + (i > 0 ? ' (fallback)' : '') });
           return transcriber;
         } catch (err) {
           lastErr = err;
-          log('load failed (' + model + ', device=' + d + '): ' + errDetail(err));
+          log('attempt failed (dtype=' + a.dt + ', device=' + a.dv + '): ' + errDetail(err));
         }
       }
       self.postMessage({ type: 'status', state: 'error', error: String((lastErr && lastErr.message) || lastErr || 'model load failed') });
@@ -524,7 +541,7 @@
       fontDown: $('fontDown'), fontUp: $('fontUp'), statusDot: $('statusDot'), statusText: $('statusText'),
       levelFill: $('levelFill'), transcript: $('transcript'), rows: $('rows'), startHint: $('startHint'),
       diagBox: $('diagBox'), diagCount: $('diagCount'), diagLog: $('diagLog'),
-      copyDiag: $('copyDiag'), clearDiag: $('clearDiag'),
+      copyDiag: $('copyDiag'), sendDiag: $('sendDiag'), clearDiag: $('clearDiag'), logUrl: $('logUrl'),
       view: document.querySelectorAll('.seg-toggle button')
     };
 
@@ -543,6 +560,7 @@
       whisperModel: 'onnx-community/whisper-base',
       useWebGPU: false,
       sensitivity: 70,
+      logEndpoint: '',
       theme: 'light', scale: 1, view: 'both'
     };
     var STORE_KEY = 'liveTranslator.v2';
@@ -581,6 +599,7 @@
           whisperModel: s.whisperModel || DEFAULTS.whisperModel,
           useWebGPU: !!s.useWebGPU,
           sensitivity: typeof s.sensitivity === 'number' ? s.sensitivity : DEFAULTS.sensitivity,
+          logEndpoint: s.logEndpoint || '',
           theme: s.theme === 'dark' ? 'dark' : 'light',
           scale: typeof s.scale === 'number' ? s.scale : 1,
           view: ['both', 'es', 'en'].indexOf(s.view) >= 0 ? s.view : 'both'
@@ -615,6 +634,7 @@
       logBuffer.push(stamp + '  ' + (level === 'error' ? '[error] ' : level === 'warn' ? '[warn] ' : '') + msg);
       if (logBuffer.length > LOG_MAX) { logBuffer.splice(0, logBuffer.length - LOG_MAX); }
       renderDiag(level === 'error');
+      if (level === 'error') { scheduleLogSend(); }
     }
     function renderDiag(bumpOpen) {
       if (!els.diagLog) { return; }
@@ -1145,6 +1165,50 @@
       });
     }
 
+    // optional remote logging: POST the (key-redacted) log to a user-supplied
+    // collector URL (e.g. a webhook.site URL) so it can be read remotely.
+    var logSendTimer = null;
+    var sendingLog = false;
+
+    function sendLog(manual) {
+      var url = (state.logEndpoint || '').trim();
+      if (!url) {
+        if (manual) {
+          els.sendDiag.textContent = 'No endpoint set';
+          setTimeout(function () { els.sendDiag.textContent = 'Send log'; }, 1800);
+        }
+        return;
+      }
+      if (sendingLog) { return; }
+      sendingLog = true;
+      fetch(url, { method: 'POST', headers: { 'content-type': 'text/plain' }, body: redact(logBuffer.join('\n')) })
+        .then(function (r) {
+          sendingLog = false;
+          if (manual) {
+            els.sendDiag.textContent = r.ok ? 'Sent ✓' : 'Sent (HTTP ' + r.status + ')';
+            setTimeout(function () { els.sendDiag.textContent = 'Send log'; }, 1800);
+          }
+        })
+        .catch(function (err) {
+          sendingLog = false;
+          // record as a plain line (not pushLog 'error') so it cannot re-trigger a send loop
+          logBuffer.push('-- remote log send failed: ' + ((err && err.message) || err));
+          renderDiag(false);
+          if (manual) {
+            els.sendDiag.textContent = 'Send failed';
+            setTimeout(function () { els.sendDiag.textContent = 'Send log'; }, 1800);
+          }
+        });
+    }
+
+    function scheduleLogSend() {
+      if (!state.logEndpoint || logSendTimer) { return; }
+      logSendTimer = setTimeout(function () {
+        logSendTimer = null;
+        sendLog(false);
+      }, 4000);
+    }
+
     // ---- init ----
     function init() {
       hookConsole();
@@ -1201,6 +1265,7 @@
       fillDatalist(els.whisperList, WHISPER_SUGGESTIONS);
       els.webgpu.checked = state.useWebGPU;
       els.sens.value = String(state.sensitivity);
+      els.logUrl.value = state.logEndpoint || '';
       applyView();
       applyScale();
       applyTheme();
@@ -1262,6 +1327,11 @@
       els.clearBtn.addEventListener('click', clearTranscript);
       els.copyBtn.addEventListener('click', copyTranscript);
       els.copyDiag.addEventListener('click', copyDiagnostics);
+      els.sendDiag.addEventListener('click', function () { sendLog(true); });
+      els.logUrl.addEventListener('input', function () {
+        state.logEndpoint = els.logUrl.value.trim();
+        saveState();
+      });
       els.clearDiag.addEventListener('click', function () {
         logBuffer = [];
         renderDiag(false);
