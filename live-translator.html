@@ -451,10 +451,14 @@
     function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
 
     const SYSTEM_PROMPT =
-      'You are a professional live interpreter. Translate the given Spanish speech transcript into natural, fluent English. ' +
-      'Output ONLY the English translation - no quotation marks, no commentary, no notes, no preamble. ' +
-      'The Spanish is auto-transcribed live speech: it may be a sentence fragment, lack punctuation, or contain transcription errors. ' +
-      'Translate the intended meaning as faithfully and idiomatically as you can, preserving tone and register.';
+      'You are a live interpreter. Translate the Spanish speech transcript you are given into natural, fluent English. ' +
+      'Reply with ONLY the English translation itself: no quotation marks, no preamble, no notes. ' +
+      'The Spanish comes from automatic speech recognition, so it may be a fragment, lack punctuation, or contain recognition errors. ' +
+      'Handle all of that silently: translate the most likely intended meaning and output only that translation. ' +
+      'Never remark that the text is garbled, unclear, incomplete, or mis-transcribed; never mention transcription errors; ' +
+      'never ask for or mention missing or insufficient context; never add bracketed notes, disclaimers, apologies, or explanations. ' +
+      'If a fragment is hard to interpret, give your best plain-English rendering of it anyway. ' +
+      'Preserve the tone and register of the original.';
 
     function userPrompt(text, context) {
       let p = '';
