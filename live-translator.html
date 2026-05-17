@@ -166,9 +166,13 @@
       <div id="cloudOpts">
         <div class="field-row">
           <div class="field grow">
-            <label for="cloudModel">Cloud transcription model &mdash; uses your OpenAI key</label>
+            <label for="cloudModel">Cloud transcription model</label>
             <input id="cloudModel" list="cloudList" autocomplete="off" spellcheck="false" placeholder="gpt-4o-transcribe" />
             <datalist id="cloudList"></datalist>
+          </div>
+          <div class="field grow">
+            <label for="openaiKey">OpenAI API key &mdash; for cloud transcription</label>
+            <input id="openaiKey" type="password" autocomplete="off" spellcheck="false" placeholder="sk-..." />
           </div>
         </div>
         <div class="field">
@@ -585,7 +589,7 @@
       whisperModel: $('whisperModel'), whisperList: $('whisperList'), webgpu: $('webgpu'),
       preloadBtn: $('preloadBtn'), sens: $('sens'), modelStatus: $('modelStatus'),
       engine: $('engine'), localOpts: $('localOpts'), cloudOpts: $('cloudOpts'),
-      cloudModel: $('cloudModel'), cloudList: $('cloudList'), vocab: $('vocab'),
+      cloudModel: $('cloudModel'), cloudList: $('cloudList'), vocab: $('vocab'), openaiKey: $('openaiKey'),
       startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), fsBtn: $('fsBtn'),
       fontDown: $('fontDown'), fontUp: $('fontUp'), statusDot: $('statusDot'), statusText: $('statusText'),
       levelFill: $('levelFill'), transcript: $('transcript'), rows: $('rows'), startHint: $('startHint'),
@@ -1244,6 +1248,7 @@
     }
     function refreshKeyField() {
       els.apiKey.value = state.apiKeys[state.provider] || '';
+      els.openaiKey.value = state.apiKeys.openai || '';
       updateKeyHint();
     }
     function updateKeyHint() {
@@ -1436,6 +1441,7 @@
       });
       els.apiKey.addEventListener('input', function () {
         state.apiKeys[state.provider] = els.apiKey.value.trim();
+        if (state.provider === 'openai') { els.openaiKey.value = els.apiKey.value.trim(); }
         els.checkResult.textContent = '';
         updateKeyHint();
         saveState(); pushConfig(); updateControls();
@@ -1473,6 +1479,12 @@
       els.vocab.addEventListener('input', function () {
         state.vocab = els.vocab.value;
         saveState();
+      });
+      els.openaiKey.addEventListener('input', function () {
+        state.apiKeys.openai = els.openaiKey.value.trim();
+        if (state.provider === 'openai') { els.apiKey.value = els.openaiKey.value.trim(); updateKeyHint(); }
+        els.checkResult.textContent = '';
+        saveState(); pushConfig(); updateControls();
       });
       els.preloadBtn.addEventListener('click', function () {
         if (!whisper || !state.whisperModel) { return; }
