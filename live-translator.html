@@ -39,8 +39,9 @@
     .field { display:flex; flex-direction:column; gap:0.3rem; }
     .field label { font-size:var(--text-sm); font-weight:600; color:var(--color-text-muted); }
     .field.grow { flex:1; min-width:240px; }
-    input, select { color:var(--color-text); background:var(--color-surface-2); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:0.6rem 0.7rem; min-height:42px; }
-    input:focus, select:focus { outline:2px solid var(--color-primary); outline-offset:1px; }
+    input, select, textarea { color:var(--color-text); background:var(--color-surface-2); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:0.6rem 0.7rem; min-height:42px; }
+    textarea { width:100%; resize:vertical; line-height:1.45; }
+    input:focus, select:focus, textarea:focus { outline:2px solid var(--color-primary); outline-offset:1px; }
     input[type="range"] { width:260px; max-width:100%; min-height:auto; padding:0; accent-color:var(--color-primary); background:transparent; border:0; }
     .checkbox { display:flex; align-items:center; gap:0.4rem; font-size:var(--text-sm); color:var(--color-text-muted); font-weight:600; min-height:42px; }
     .checkbox input { min-height:auto; width:auto; }
@@ -146,12 +147,34 @@
       <hr class="sep" />
       <div class="field-row">
         <div class="field grow">
+          <label for="engine">Transcription engine</label>
+          <select id="engine">
+            <option value="local">On-device Whisper (private, no upload)</option>
+            <option value="cloud">Cloud &mdash; OpenAI gpt-4o-transcribe (most accurate)</option>
+          </select>
+        </div>
+      </div>
+      <div id="localOpts" class="field-row">
+        <div class="field grow">
           <label for="whisperModel">Speech model &mdash; runs on-device, downloaded once</label>
           <input id="whisperModel" list="whisperList" autocomplete="off" spellcheck="false" placeholder="whisper model id" />
           <datalist id="whisperList"></datalist>
         </div>
         <label class="checkbox"><input type="checkbox" id="webgpu" /> Use WebGPU</label>
         <button id="preloadBtn" class="btn small" type="button">Preload model</button>
+      </div>
+      <div id="cloudOpts">
+        <div class="field-row">
+          <div class="field grow">
+            <label for="cloudModel">Cloud transcription model &mdash; uses your OpenAI key</label>
+            <input id="cloudModel" list="cloudList" autocomplete="off" spellcheck="false" placeholder="gpt-4o-transcribe" />
+            <datalist id="cloudList"></datalist>
+          </div>
+        </div>
+        <div class="field">
+          <label for="vocab">Vocabulary hints (optional) &mdash; proper names, places, and archaic or regional words the speaker uses, so the transcriber expects them</label>
+          <textarea id="vocab" rows="3" autocomplete="off" spellcheck="false" placeholder="Names and unusual terms the speaker uses, e.g. regional vocabulary and theological words."></textarea>
+        </div>
       </div>
       <div class="field">
         <label for="sens">Mic sensitivity &mdash; move right if it misses quiet speech, left if background noise triggers it</label>
@@ -561,6 +584,8 @@
       checkBtn: $('checkBtn'), checkResult: $('checkResult'),
       whisperModel: $('whisperModel'), whisperList: $('whisperList'), webgpu: $('webgpu'),
       preloadBtn: $('preloadBtn'), sens: $('sens'), modelStatus: $('modelStatus'),
+      engine: $('engine'), localOpts: $('localOpts'), cloudOpts: $('cloudOpts'),
+      cloudModel: $('cloudModel'), cloudList: $('cloudList'), vocab: $('vocab'),
       startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), fsBtn: $('fsBtn'),
       fontDown: $('fontDown'), fontUp: $('fontUp'), statusDot: $('statusDot'), statusText: $('statusText'),
       levelFill: $('levelFill'), transcript: $('transcript'), rows: $('rows'), startHint: $('startHint'),
@@ -577,6 +602,7 @@
       'onnx-community/whisper-base', 'onnx-community/whisper-tiny',
       'onnx-community/whisper-small-ONNX', 'Xenova/whisper-base'
     ];
+    var CLOUD_SUGGESTIONS = ['gpt-4o-transcribe', 'gpt-4o-mini-transcribe', 'whisper-1'];
     var DEFAULTS = {
       provider: 'anthropic',
       models: { anthropic: 'claude-haiku-4-5-20251001', openai: 'gpt-5-mini' },
@@ -584,6 +610,9 @@
       whisperModel: 'onnx-community/whisper-tiny',
       useWebGPU: false,
       sensitivity: 70,
+      transcribeEngine: 'local',
+      cloudModel: 'gpt-4o-transcribe',
+      vocab: '',
       logEndpoint: '',
       theme: 'light', scale: 1, view: 'both'
     };
@@ -623,6 +652,9 @@
           whisperModel: s.whisperModel || DEFAULTS.whisperModel,
           useWebGPU: !!s.useWebGPU,
           sensitivity: typeof s.sensitivity === 'number' ? s.sensitivity : DEFAULTS.sensitivity,
+          transcribeEngine: s.transcribeEngine === 'cloud' ? 'cloud' : 'local',
+          cloudModel: s.cloudModel || DEFAULTS.cloudModel,
+          vocab: typeof s.vocab === 'string' ? s.vocab : '',
           logEndpoint: s.logEndpoint || '',
           theme: s.theme === 'dark' ? 'dark' : 'light',
           scale: typeof s.scale === 'number' ? s.scale : 1,
@@ -811,6 +843,108 @@
       els.levelFill.style.width = pct + '%';
     }
 
+    // ---- transcription result handling (shared by on-device and cloud) ----
+    function applyTranscript(seg, text) {
+      var txt = (text || '').trim();
+      if (!txt) { removeSeg(seg); return; }   // VAD false trigger / no speech
+      seg.es = txt;
+      seg.esState = 'done';
+      seg.enState = 'translating';
+      paintRow(seg);
+      maybeScroll();
+      if (translator) {
+        var prev = prevSeg(seg);
+        translator.postMessage({
+          type: 'translate', id: seg.id, text: txt,
+          context: prev ? { es: prev.es, en: prev.enState === 'done' ? prev.en : '' } : null
+        });
+      } else {
+        seg.enState = 'error';
+        seg.error = 'Translation worker unavailable';
+        paintRow(seg);
+      }
+      updateStatus();
+    }
+
+    function applyTranscriptError(seg, errMsg) {
+      pushLog('error', 'transcription error (line ' + seg.id + '): ' + errMsg);
+      seg.esState = 'error';
+      seg.error = errMsg || 'Transcription failed';
+      paintRow(seg);
+      updateStatus();
+    }
+
+    // encode 16 kHz mono Float32 PCM as a WAV file for the cloud transcription API
+    function encodeWav(samples, sampleRate) {
+      var n = samples.length;
+      var buf = new ArrayBuffer(44 + n * 2);
+      var view = new DataView(buf);
+      function wstr(off, s) { for (var i = 0; i < s.length; i++) { view.setUint8(off + i, s.charCodeAt(i)); } }
+      wstr(0, 'RIFF');
+      view.setUint32(4, 36 + n * 2, true);
+      wstr(8, 'WAVE');
+      wstr(12, 'fmt ');
+      view.setUint32(16, 16, true);
+      view.setUint16(20, 1, true);
+      view.setUint16(22, 1, true);
+      view.setUint32(24, sampleRate, true);
+      view.setUint32(28, sampleRate * 2, true);
+      view.setUint16(32, 2, true);
+      view.setUint16(34, 16, true);
+      wstr(36, 'data');
+      view.setUint32(40, n * 2, true);
+      var off = 44;
+      for (var i = 0; i < n; i++) {
+        var s = Math.max(-1, Math.min(1, samples[i]));
+        view.setInt16(off, s < 0 ? s * 0x8000 : s * 0x7fff, true);
+        off += 2;
+      }
+      return buf;
+    }
+
+    // cloud transcription via OpenAI's audio API (uses the OpenAI key)
+    function cloudTranscribe(seg, audio16k) {
+      var key = (state.apiKeys.openai || '').trim();
+      if (!key) { applyTranscriptError(seg, 'Cloud transcription needs an OpenAI API key'); return; }
+      var form = new FormData();
+      form.append('file', new Blob([encodeWav(audio16k, 16000)], { type: 'audio/wav' }), 'utterance.wav');
+      form.append('model', (state.cloudModel || 'gpt-4o-transcribe').trim());
+      form.append('language', 'es');
+      var vocab = (state.vocab || '').trim();
+      if (vocab) { form.append('prompt', vocab); }
+      fetch('https://api.openai.com/v1/audio/transcriptions', {
+        method: 'POST',
+        headers: { 'authorization': 'Bearer ' + key },
+        body: form
+      }).then(function (res) {
+        return res.text().then(function (body) {
+          if (!res.ok) {
+            var detail = body;
+            try { var j = JSON.parse(body); if (j && j.error) { detail = j.error.message || j.error.type || body; } } catch (e) {}
+            throw new Error(res.status + ' ' + (res.statusText || '') + (detail ? ' — ' + String(detail).slice(0, 240) : ''));
+          }
+          var data;
+          try { data = JSON.parse(body); } catch (e) { throw new Error('Unreadable response from transcription API'); }
+          return (data && typeof data.text === 'string' ? data.text : '');
+        });
+      }).then(function (text) {
+        applyTranscript(seg, text);
+      }).catch(function (err) {
+        applyTranscriptError(seg, String((err && err.message) || err));
+      });
+    }
+
+    function applyEngine() {
+      var cloud = state.transcribeEngine === 'cloud';
+      els.localOpts.style.display = cloud ? 'none' : '';
+      els.cloudOpts.style.display = cloud ? '' : 'none';
+      if (cloud) {
+        setModelStatus('Cloud transcription (' + (state.cloudModel || 'gpt-4o-transcribe') + ') — no model download needed.', '');
+      } else if ((els.modelStatus.textContent || '').indexOf('Cloud transcription') === 0) {
+        setModelStatus('', '');
+      }
+    }
+
     // ---- merge buffer: utterance -> transcription -> translation ----
     function finalizeUtterance(samples, rate) {
       var seg = { id: nextId++, es: '', esState: 'transcribing', en: '', enState: 'idle', error: '' };
@@ -819,7 +953,9 @@
       addRow(seg);
       updateStatus();
       resampleTo16k(samples, rate).then(function (audio16k) {
-        if (whisper) {
+        if (state.transcribeEngine === 'cloud') {
+          cloudTranscribe(seg, audio16k);
+        } else if (whisper) {
           whisper.postMessage(
             { type: 'transcribe', id: seg.id, audio: audio16k, model: state.whisperModel, device: whisperDevice() },
             [audio16k.buffer]
@@ -845,32 +981,8 @@
       if (m.type !== 'transcript') { return; }
       var seg = findSeg(m.id);
       if (!seg) { return; }
-      if (m.ok) {
-        var txt = (m.text || '').trim();
-        if (!txt) { removeSeg(seg); return; }   // VAD false trigger / no speech
-        seg.es = txt;
-        seg.esState = 'done';
-        seg.enState = 'translating';
-        paintRow(seg);
-        maybeScroll();
-        if (translator) {
-          var prev = prevSeg(seg);
-          translator.postMessage({
-            type: 'translate', id: seg.id, text: txt,
-            context: prev ? { es: prev.es, en: prev.enState === 'done' ? prev.en : '' } : null
-          });
-        } else {
-          seg.enState = 'error';
-          seg.error = 'Translation worker unavailable';
-          paintRow(seg);
-        }
-      } else {
-        pushLog('error', 'transcription error (line ' + m.id + '): ' + m.error);
-        seg.esState = 'error';
-        seg.error = m.error || 'Transcription failed';
-        paintRow(seg);
-      }
-      updateStatus();
+      if (m.ok) { applyTranscript(seg, m.text); }
+      else { applyTranscriptError(seg, m.error); }
     }
 
     function onTranslatorMessage(e) {
@@ -1057,7 +1169,11 @@
 
     // ---- start / stop ----
     function start() {
-      if (!hasKey()) { setStatus('err', 'Enter your API key first.'); return; }
+      if (!hasKey()) { setStatus('err', 'Enter your translation API key first.'); return; }
+      if (state.transcribeEngine === 'cloud' && !(state.apiKeys.openai || '').trim()) {
+        setStatus('err', 'Cloud transcription needs an OpenAI API key — see the transcription settings.');
+        return;
+      }
       if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
         setStatus('err', 'This browser cannot access the microphone.');
         return;
@@ -1066,7 +1182,7 @@
       updateControls();
       pushConfig();
       pushLog('', 'Start pressed — model="' + state.whisperModel + '" device=' + whisperDevice());
-      if (whisper) {
+      if (state.transcribeEngine === 'local' && whisper) {
         whisper.postMessage({ type: 'load', model: state.whisperModel, device: whisperDevice() });
       }
       startCapture().then(function (ok) {
@@ -1094,7 +1210,8 @@
       els.statusText.textContent = base + (n ? '   ·   ' + n + ' line' + (n === 1 ? '' : 's') : '');
     }
     function updateControls() {
-      var canStart = hasKey() && navigator.mediaDevices && navigator.mediaDevices.getUserMedia;
+      var cloudKeyOK = state.transcribeEngine !== 'cloud' || !!(state.apiKeys.openai || '').trim();
+      var canStart = hasKey() && cloudKeyOK && navigator.mediaDevices && navigator.mediaDevices.getUserMedia;
       els.startBtn.disabled = !canStart && !listening;
       els.startBtn.textContent = listening ? '■ Stop' : '● Start listening';
       els.startBtn.classList.toggle('recording', listening);
@@ -1104,7 +1221,9 @@
       if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
         hint = 'This browser cannot access the microphone.';
       } else if (!hasKey()) {
-        hint = 'Enter your API key above to enable listening.';
+        hint = 'Enter your translation API key above to enable listening.';
+      } else if (!cloudKeyOK) {
+        hint = 'Cloud transcription needs an OpenAI key — set the Translation provider to OpenAI and paste your key.';
       }
       els.startHint.textContent = hint;
       els.startHint.className = hint ? 'note warn' : 'note';
@@ -1290,6 +1409,11 @@
       els.webgpu.checked = state.useWebGPU;
       els.sens.value = String(state.sensitivity);
       els.logUrl.value = state.logEndpoint || '';
+      els.engine.value = state.transcribeEngine;
+      els.cloudModel.value = state.cloudModel;
+      fillDatalist(els.cloudList, CLOUD_SUGGESTIONS);
+      els.vocab.value = state.vocab || '';
+      applyEngine();
       applyView();
       applyScale();
       applyTheme();
@@ -1334,6 +1458,20 @@
       });
       els.webgpu.addEventListener('change', function () {
         state.useWebGPU = els.webgpu.checked;
+        saveState();
+      });
+      els.engine.addEventListener('change', function () {
+        state.transcribeEngine = els.engine.value === 'cloud' ? 'cloud' : 'local';
+        applyEngine();
+        saveState();
+        updateControls();
+      });
+      els.cloudModel.addEventListener('input', function () {
+        state.cloudModel = els.cloudModel.value.trim();
+        saveState();
+      });
+      els.vocab.addEventListener('input', function () {
+        state.vocab = els.vocab.value;
         saveState();
       });
       els.preloadBtn.addEventListener('click', function () {
