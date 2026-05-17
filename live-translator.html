@@ -25,7 +25,7 @@
     }
     * { box-sizing:border-box; }
     body { margin:0; min-height:100vh; background:var(--color-bg); color:var(--color-text); font:var(--text-base)/1.55 var(--font-body); }
-    button, input, select { font:inherit; }
+    button, input, select, textarea { font:inherit; }
     .app { max-width:1180px; margin:0 auto; padding:var(--space-6); }
     .topbar { display:flex; justify-content:space-between; align-items:center; gap:var(--space-4); margin-bottom:var(--space-4); }
     .brand { display:flex; gap:var(--space-3); align-items:center; }
@@ -89,6 +89,10 @@
     .note { font-size:var(--text-sm); color:var(--color-text-muted); margin:0.2rem 0; }
     .note.warn { color:var(--color-warning); }
     .callout { border-left:3px solid var(--color-primary); background:var(--color-surface-2); padding:0.7rem 1rem; border-radius:var(--radius-md); font-size:var(--text-sm); }
+    .diag { margin-top:var(--space-4); }
+    .diag summary { cursor:pointer; font:600 var(--text-base)/1.2 var(--font-body); }
+    .diag-actions { display:flex; gap:var(--space-2); margin:var(--space-3) 0; flex-wrap:wrap; }
+    .diag-log { width:100%; resize:vertical; background:var(--color-surface-2); color:var(--color-text); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:0.6rem 0.8rem; font:0.78rem/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; white-space:pre-wrap; overflow-wrap:anywhere; }
     footer { margin-top:var(--space-6); }
     @media (max-width:680px) {
       .row { grid-template-columns:1fr !important; }
@@ -190,17 +194,49 @@
       </div>
     </div>
 
+    <details id="diagBox" class="panel diag" open>
+      <summary>Diagnostics <span id="diagCount"></span></summary>
+      <p class="note">If something fails, tap <strong>Copy diagnostics</strong> and paste the result to Claude. The log stays on your device; anything that looks like an API key is redacted automatically.</p>
+      <div class="diag-actions">
+        <button id="copyDiag" class="btn small" type="button">Copy diagnostics</button>
+        <button id="clearDiag" class="btn small" type="button">Clear</button>
+      </div>
+      <textarea id="diagLog" class="diag-log" readonly rows="14" aria-label="Diagnostics log"></textarea>
+    </details>
+
     <footer>
       <p class="note">Two background pipelines run independently: one Web Worker transcribes speech with an on-device Whisper model, a second Web Worker translates each finished sentence through your LLM. A per-sentence merge buffer joins them, so the Spanish and English panes never block one another. The first time you use it the speech model downloads (tens of MB) and is then cached for next time. Works in recent Chrome, Edge, Firefox, and Safari — including on iPad.</p>
     </footer>
   </div>
 
-  <!-- Transcription pipeline: on-device Whisper, ES module worker. Not executed as a normal script. -->
+  <!-- Transcription pipeline: on-device Whisper. Module worker; uses dynamic import() so a CDN/import failure is catchable and reported, not a silent worker crash. Not executed as a normal script. -->
   <script id="whisper-worker" type="text/js-worker">
-    import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.2.0';
+    /* relay this worker's console output to the page diagnostics panel */
+    ['log', 'info', 'warn', 'error'].forEach(function (lvl) {
+      var orig = console[lvl];
+      console[lvl] = function () {
+        try {
+          var p = [];
+          for (var i = 0; i < arguments.length; i++) {
+            var a = arguments[i];
+            p.push(typeof a === 'string' ? a : (function () { try { return JSON.stringify(a); } catch (e) { return String(a); } })());
+          }
+          self.postMessage({ type: 'log', msg: '[whisper.' + lvl + '] ' + p.join(' ') });
+        } catch (e) { /* ignore */ }
+        if (orig) { orig.apply(console, arguments); }
+      };
+    });
 
-    env.allowLocalModels = false;
+    function log(msg) { self.postMessage({ type: 'log', msg: '[whisper] ' + msg }); }
 
+    function errDetail(err) {
+      if (!err) { return 'unknown error'; }
+      var s = (err.name ? err.name + ': ' : '') + (err.message || String(err));
+      if (err.stack) { s += '  ||stack: ' + String(err.stack).split('\n').slice(0, 5).join(' | '); }
+      return s;
+    }
+
+    let tjs = null;
     let transcriber = null;
     let loadedKey = '';
     let loadingPromise = null;
@@ -221,6 +257,21 @@
       }
     };
 
+    async function getLib() {
+      if (tjs) { return tjs; }
+      const url = 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.2.0';
+      log('importing Transformers.js: ' + url);
+      try {
+        tjs = await import(url);
+      } catch (err) {
+        log('IMPORT FAILED: ' + errDetail(err));
+        throw new Error('Transformers.js failed to import — ' + ((err && err.message) || err));
+      }
+      if (tjs && tjs.env) { tjs.env.allowLocalModels = false; }
+      log('Transformers.js imported OK (exports: ' + Object.keys(tjs || {}).slice(0, 10).join(',') + ')');
+      return tjs;
+    }
+
     function ensure(model, device) {
       const dev = device === 'webgpu' ? 'webgpu' : 'wasm';
       const key = model + '|' + dev;
@@ -234,28 +285,41 @@
     }
 
     async function loadModel(model, dev) {
-      const opts = {
-        dtype: 'q8',
-        progress_callback: function (p) { self.postMessage({ type: 'progress', data: p }); }
-      };
+      let lib;
       try {
-        transcriber = await pipeline('automatic-speech-recognition', model, Object.assign({ device: dev }, opts));
-        self.postMessage({ type: 'status', state: 'ready', model: model, device: dev });
-        return transcriber;
+        lib = await getLib();
       } catch (err) {
-        if (dev === 'webgpu') {
-          try {
-            transcriber = await pipeline('automatic-speech-recognition', model, Object.assign({ device: 'wasm' }, opts));
-            self.postMessage({ type: 'status', state: 'ready', model: model, device: 'wasm', note: '(WebGPU unavailable — using WASM)' });
-            return transcriber;
-          } catch (err2) {
-            self.postMessage({ type: 'status', state: 'error', error: String((err2 && err2.message) || err2) });
-            throw err2;
-          }
-        }
         self.postMessage({ type: 'status', state: 'error', error: String((err && err.message) || err) });
         throw err;
       }
+      const pipeline = lib.pipeline;
+      if (typeof pipeline !== 'function') {
+        const msg = 'Transformers.js loaded but exposes no pipeline() function';
+        log(msg);
+        self.postMessage({ type: 'status', state: 'error', error: msg });
+        throw new Error(msg);
+      }
+      const order = dev === 'webgpu' ? ['webgpu', 'wasm'] : ['wasm'];
+      let lastErr = null;
+      for (let i = 0; i < order.length; i++) {
+        const d = order[i];
+        try {
+          log('loading model "' + model + '" dtype=q8 device=' + d);
+          transcriber = await pipeline('automatic-speech-recognition', model, {
+            dtype: 'q8',
+            device: d,
+            progress_callback: function (p) { self.postMessage({ type: 'progress', data: p }); }
+          });
+          log('model ready: ' + model + ' [' + d + ']');
+          self.postMessage({ type: 'status', state: 'ready', model: model, device: d, note: (d !== dev ? '(fell back from ' + dev + ')' : '') });
+          return transcriber;
+        } catch (err) {
+          lastErr = err;
+          log('load failed (' + model + ', device=' + d + '): ' + errDetail(err));
+        }
+      }
+      self.postMessage({ type: 'status', state: 'error', error: String((lastErr && lastErr.message) || lastErr || 'model load failed') });
+      throw lastErr || new Error('Model load failed');
     }
 
     async function drain() {
@@ -273,6 +337,7 @@
             const text = (out && typeof out.text === 'string' ? out.text : '').trim();
             self.postMessage({ type: 'transcript', id: job.id, ok: true, text: text });
           } catch (err) {
+            log('transcription failed: ' + errDetail(err));
             self.postMessage({ type: 'transcript', id: job.id, ok: false, error: String((err && err.message) || err) });
           }
         }
@@ -458,6 +523,8 @@
       startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), fsBtn: $('fsBtn'),
       fontDown: $('fontDown'), fontUp: $('fontUp'), statusDot: $('statusDot'), statusText: $('statusText'),
       levelFill: $('levelFill'), transcript: $('transcript'), rows: $('rows'), startHint: $('startHint'),
+      diagBox: $('diagBox'), diagCount: $('diagCount'), diagLog: $('diagLog'),
+      copyDiag: $('copyDiag'), clearDiag: $('clearDiag'),
       view: document.querySelectorAll('.seg-toggle button')
     };
 
@@ -492,6 +559,8 @@
     var interimRow = null, interimEs = null, interimEn = null;
     var placeholderEl = null;
     var segEl = {};
+    var logBuffer = [];
+    var LOG_MAX = 500;
 
     // audio capture / voice-activity detection
     var audioCtx = null, micStream = null, micSource = null, processor = null, muteGain = null;
@@ -537,6 +606,65 @@
           apiKey: (state.apiKeys[state.provider] || '').trim()
         }
       });
+    }
+
+    // ---- diagnostics ----
+    function pushLog(level, msg) {
+      var stamp = '';
+      try { stamp = new Date().toISOString().slice(11, 23); } catch (e) { stamp = '--'; }
+      logBuffer.push(stamp + '  ' + (level === 'error' ? '[error] ' : level === 'warn' ? '[warn] ' : '') + msg);
+      if (logBuffer.length > LOG_MAX) { logBuffer.splice(0, logBuffer.length - LOG_MAX); }
+      renderDiag(level === 'error');
+    }
+    function renderDiag(bumpOpen) {
+      if (!els.diagLog) { return; }
+      els.diagLog.value = logBuffer.join('\n');
+      els.diagLog.scrollTop = els.diagLog.scrollHeight;
+      var errs = 0, i;
+      for (i = 0; i < logBuffer.length; i++) { if (logBuffer[i].indexOf('[error]') >= 0) { errs++; } }
+      els.diagCount.textContent = errs ? '— ' + errs + ' error' + (errs === 1 ? '' : 's') : '';
+      if (bumpOpen && els.diagBox && !els.diagBox.open) { els.diagBox.open = true; }
+    }
+    function redact(s) {
+      return String(s)
+        .replace(/sk-ant-[A-Za-z0-9_\-]+/g, 'sk-ant-[REDACTED]')
+        .replace(/sk-[A-Za-z0-9_\-]{16,}/g, 'sk-[REDACTED]');
+    }
+    function safeStr(a) {
+      if (typeof a === 'string') { return a; }
+      try { return JSON.stringify(a); } catch (e) { return String(a); }
+    }
+    function hookConsole() {
+      ['log', 'info', 'warn', 'error'].forEach(function (lvl) {
+        var orig = console[lvl];
+        console[lvl] = function () {
+          try {
+            var parts = [], i;
+            for (i = 0; i < arguments.length; i++) { parts.push(safeStr(arguments[i])); }
+            pushLog(lvl === 'warn' ? 'warn' : lvl === 'error' ? 'error' : '', 'console.' + lvl + ': ' + parts.join(' '));
+          } catch (e) { /* ignore */ }
+          if (orig) { orig.apply(console, arguments); }
+        };
+      });
+      window.addEventListener('error', function (e) {
+        pushLog('error', 'window error: ' + (e.message || 'script error')
+          + (e.filename ? '  @ ' + e.filename + ':' + (e.lineno || '?') : ''));
+      });
+      window.addEventListener('unhandledrejection', function (e) {
+        var r = e && e.reason;
+        pushLog('error', 'unhandled promise rejection: ' + ((r && (r.message || (r.toString && r.toString()))) || safeStr(r)));
+      });
+    }
+    function logEnvironment() {
+      pushLog('', '=== Live Translator diagnostics ===');
+      pushLog('', 'page: ' + location.href);
+      pushLog('', 'userAgent: ' + navigator.userAgent);
+      pushLog('', 'secureContext: ' + window.isSecureContext + '   crossOriginIsolated: ' + !!window.crossOriginIsolated);
+      pushLog('', 'navigator.gpu (WebGPU): ' + ('gpu' in navigator)
+        + '   getUserMedia: ' + !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia)
+        + '   Worker: ' + (typeof Worker !== 'undefined'));
+      pushLog('', 'AudioContext: ' + !!(window.AudioContext || window.webkitAudioContext)
+        + '   OfflineAudioContext: ' + !!(window.OfflineAudioContext || window.webkitOfflineAudioContext));
     }
 
     // ---- segment helpers ----
@@ -657,7 +785,8 @@
           seg.error = 'Transcription worker unavailable';
           paintRow(seg);
         }
-      }).catch(function () {
+      }).catch(function (err) {
+        pushLog('error', 'audio resample failed: ' + ((err && err.message) || err));
         seg.esState = 'error';
         seg.error = 'Audio processing failed';
         paintRow(seg);
@@ -666,6 +795,7 @@
 
     function onWhisperMessage(e) {
       var m = e.data || {};
+      if (m.type === 'log') { pushLog('', m.msg); return; }
       if (m.type === 'progress') { onModelProgress(m.data); return; }
       if (m.type === 'status') { onModelStatus(m); return; }
       if (m.type !== 'transcript') { return; }
@@ -691,6 +821,7 @@
           paintRow(seg);
         }
       } else {
+        pushLog('error', 'transcription error (line ' + m.id + '): ' + m.error);
         seg.esState = 'error';
         seg.error = m.error || 'Transcription failed';
         paintRow(seg);
@@ -704,7 +835,11 @@
         var seg = findSeg(m.id);
         if (!seg) { return; }
         if (m.ok) { seg.en = m.text; seg.enState = 'done'; seg.error = ''; }
-        else { seg.enState = 'error'; seg.error = m.error || 'Translation failed'; }
+        else {
+          pushLog('error', 'translation error (line ' + m.id + '): ' + m.error);
+          seg.enState = 'error';
+          seg.error = m.error || 'Translation failed';
+        }
         paintRow(seg);
         maybeScroll();
       } else if (m.type === 'testResult') {
@@ -713,9 +848,11 @@
         if (m.ok) {
           els.checkResult.textContent = '✓ Key works — sample translation: “' + m.text + '”';
           els.checkResult.style.color = 'var(--color-success)';
+          pushLog('', 'key check OK');
         } else {
           els.checkResult.textContent = '✗ ' + m.error;
           els.checkResult.style.color = 'var(--color-error)';
+          pushLog('error', 'key check failed: ' + m.error);
         }
       }
     }
@@ -740,7 +877,10 @@
     }
     function fmtMB(b) { return (b / 1048576).toFixed(1) + ' MB'; }
     function onModelProgress(d) {
-      if (!d || d.status !== 'progress' || !d.file || !d.total) { return; }
+      if (!d) { return; }
+      if (d.status === 'initiate' && d.file) { pushLog('', 'model fetch started: ' + d.file); }
+      if (d.status === 'done' && d.file) { pushLog('', 'model file ready: ' + d.file); }
+      if (d.status !== 'progress' || !d.file || !d.total) { return; }
       modelFiles[d.file] = { loaded: d.loaded || 0, total: d.total };
       var loaded = 0, total = 0, k;
       for (k in modelFiles) { loaded += modelFiles[k].loaded; total += modelFiles[k].total; }
@@ -748,6 +888,9 @@
       setModelStatus('Downloading speech model… ' + pct + '%  (' + fmtMB(loaded) + ' / ' + fmtMB(total) + ')', '');
     }
     function onModelStatus(m) {
+      pushLog(m.state === 'error' ? 'error' : '',
+        'speech model: ' + m.state + (m.model ? ' "' + m.model + '"' : '')
+        + (m.device ? ' [' + m.device + ']' : '') + (m.error ? ' — ' + m.error : '') + (m.note ? ' ' + m.note : ''));
       if (m.state === 'loading') {
         setModelStatus('Loading speech model…', '');
       } else if (m.state === 'ready') {
@@ -782,8 +925,10 @@
         capturing = true;
         resetVad();
         if (audioCtx.resume) { audioCtx.resume(); }
+        pushLog('', 'microphone capture started (sampleRate=' + srcRate + ')');
         return true;
       }).catch(function (err) {
+        pushLog('error', 'getUserMedia failed: ' + ((err && (err.name + ': ' + err.message)) || err));
         setStatus('err', 'Microphone access failed: ' + ((err && err.message) || err));
         return false;
       });
@@ -845,6 +990,7 @@
       var merged = new Float32Array(total);
       var off = 0, k;
       for (k = 0; k < frames.length; k++) { merged.set(frames[k], off); off += frames[k].length; }
+      pushLog('', 'utterance captured: ' + ((total / srcRate).toFixed(1)) + ' s');
       finalizeUtterance(merged, srcRate);
     }
 
@@ -875,6 +1021,7 @@
       listening = true;
       updateControls();
       pushConfig();
+      pushLog('', 'Start pressed — model="' + state.whisperModel + '" device=' + whisperDevice());
       if (whisper) {
         whisper.postMessage({ type: 'load', model: state.whisperModel, device: whisperDevice() });
       }
@@ -986,8 +1133,23 @@
       }).catch(function () { /* clipboard blocked */ });
     }
 
+    function copyDiagnostics() {
+      var text = redact(logBuffer.join('\n'));
+      navigator.clipboard.writeText(text).then(function () {
+        els.copyDiag.textContent = 'Copied ✓';
+        setTimeout(function () { els.copyDiag.textContent = 'Copy diagnostics'; }, 1500);
+      }).catch(function () {
+        els.diagLog.focus();
+        els.diagLog.select();
+        pushLog('warn', 'clipboard blocked — the log is selected, copy it manually');
+      });
+    }
+
     // ---- init ----
     function init() {
+      hookConsole();
+      logEnvironment();
+
       interimRow = document.createElement('div');
       interimRow.className = 'row interim';
       interimRow.style.display = 'none';
@@ -1003,22 +1165,31 @@
         var tsrc = document.getElementById('translation-worker').textContent;
         translator = new Worker(URL.createObjectURL(new Blob([tsrc], { type: 'application/javascript' })));
         translator.onmessage = onTranslatorMessage;
-        translator.onerror = function () { setStatus('err', 'Translation worker error.'); };
+        translator.onerror = function (err) {
+          pushLog('error', 'translation worker onerror: ' + ((err && err.message) || 'failed'));
+          setStatus('err', 'Translation worker error.');
+        };
+        pushLog('', 'translation worker started');
       } catch (e) {
         translator = null;
+        pushLog('error', 'translation worker failed to start: ' + e.message);
         setStatus('err', 'Could not start the translation worker: ' + e.message);
       }
 
-      // transcription worker (ES module)
+      // transcription worker (Whisper, module worker)
       try {
         var wsrc = document.getElementById('whisper-worker').textContent;
         whisper = new Worker(URL.createObjectURL(new Blob([wsrc], { type: 'application/javascript' })), { type: 'module' });
         whisper.onmessage = onWhisperMessage;
         whisper.onerror = function (err) {
+          pushLog('error', 'transcription worker onerror: ' + ((err && err.message) || 'failed to start')
+            + (err && err.filename ? '  @ ' + err.filename + ':' + (err.lineno || '?') : ''));
           setModelStatus('Transcription worker error: ' + ((err && err.message) || 'failed to start'), 'var(--color-error)');
         };
+        pushLog('', 'transcription worker started');
       } catch (e) {
         whisper = null;
+        pushLog('error', 'transcription worker failed to start: ' + e.message);
         setModelStatus('Could not start the transcription worker: ' + e.message, 'var(--color-error)');
       }
 
@@ -1078,6 +1249,7 @@
       });
       els.preloadBtn.addEventListener('click', function () {
         if (!whisper || !state.whisperModel) { return; }
+        pushLog('', 'Preload pressed — model="' + state.whisperModel + '" device=' + whisperDevice());
         whisper.postMessage({ type: 'load', model: state.whisperModel, device: whisperDevice() });
       });
       els.sens.addEventListener('input', function () {
@@ -1089,6 +1261,12 @@
       });
       els.clearBtn.addEventListener('click', clearTranscript);
       els.copyBtn.addEventListener('click', copyTranscript);
+      els.copyDiag.addEventListener('click', copyDiagnostics);
+      els.clearDiag.addEventListener('click', function () {
+        logBuffer = [];
+        renderDiag(false);
+        logEnvironment();
+      });
       els.fsBtn.addEventListener('click', function () {
         if (document.fullscreenElement) { document.exitFullscreen(); }
         else if (els.transcript.requestFullscreen) { els.transcript.requestFullscreen(); }
@@ -1114,6 +1292,8 @@
       els.transcript.addEventListener('scroll', function () {
         autoScroll = els.transcript.scrollHeight - els.transcript.scrollTop - els.transcript.clientHeight < 90;
       });
+
+      pushLog('', 'app initialised');
     }
 
     init();
