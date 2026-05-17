@@ -304,27 +304,30 @@
         self.postMessage({ type: 'status', state: 'error', error: msg });
         throw new Error(msg);
       }
-      // Attempt list. fp16 first (good size, no quantization-optimizer bugs);
-      // fp32/wasm last — un-quantized, universally loadable. Block-quantized
-      // weights (q8/q4) are deliberately avoided: some ONNX Runtime builds fail
-      // session creation with "TransposeDQWeightsForMatMulNBits missing required scale".
+      // ONNX Runtime's graph optimizer crashes on these Whisper exports
+      // ("SimplifiedLayerNormFusion ... InsertedPrecisionFreeCast ... index does
+      // not exist"), so every attempt disables graph optimization. WebGPU is
+      // preferred when the browser has it (fast); fp32/wasm is the universal
+      // fallback. Block-quantized weights (q8/q4) are avoided — separate ORT bug.
+      const hasGPU = (typeof navigator !== 'undefined') && !!navigator.gpu;
       const attempts = [];
       function addAttempt(dt, dv) {
         const k = dt + '|' + dv;
         for (let j = 0; j < attempts.length; j++) { if (attempts[j].k === k) { return; } }
         attempts.push({ dt: dt, dv: dv, k: k });
       }
-      if (dev === 'webgpu') { addAttempt('fp16', 'webgpu'); }
-      addAttempt('fp16', 'wasm');
+      if (dev === 'webgpu' || hasGPU) { addAttempt('fp16', 'webgpu'); }
       addAttempt('fp32', 'wasm');
+      addAttempt('fp16', 'wasm');
       let lastErr = null;
       for (let i = 0; i < attempts.length; i++) {
         const a = attempts[i];
         try {
-          log('loading "' + model + '"  dtype=' + a.dt + '  device=' + a.dv);
+          log('loading "' + model + '"  dtype=' + a.dt + '  device=' + a.dv + '  (graph-opt disabled)');
           transcriber = await pipeline('automatic-speech-recognition', model, {
             dtype: a.dt,
             device: a.dv,
+            session_options: { graphOptimizationLevel: 'disabled' },
             progress_callback: function (p) { self.postMessage({ type: 'progress', data: p }); }
           });
           log('model ready: ' + model + ' [dtype=' + a.dt + ', ' + a.dv + ']');
