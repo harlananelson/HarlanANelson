@@ -245,6 +245,8 @@
     let transcriber = null;
     let loadedKey = '';
     let loadingPromise = null;
+    let forcedDevice = null;
+    let currentDevice = null;
     const jobs = [];
     let draining = false;
 
@@ -278,7 +280,7 @@
     }
 
     function ensure(model, device) {
-      const dev = device === 'webgpu' ? 'webgpu' : 'wasm';
+      const dev = forcedDevice || (device === 'webgpu' ? 'webgpu' : 'wasm');
       const key = model + '|' + dev;
       if (transcriber && loadedKey === key) { return Promise.resolve(transcriber); }
       if (loadingPromise && loadedKey === key) { return loadingPromise; }
@@ -306,17 +308,16 @@
       }
       // ONNX Runtime's graph optimizer crashes on these Whisper exports
       // ("SimplifiedLayerNormFusion ... InsertedPrecisionFreeCast ... index does
-      // not exist"), so every attempt disables graph optimization. WebGPU is
-      // preferred when the browser has it (fast); fp32/wasm is the universal
-      // fallback. Block-quantized weights (q8/q4) are avoided — separate ORT bug.
-      const hasGPU = (typeof navigator !== 'undefined') && !!navigator.gpu;
+      // not exist"), so every attempt disables graph optimization. WASM is the
+      // default and most reliable provider; WebGPU is tried only when the user
+      // explicitly asks for it (fast on Chrome, but unstable on Safari).
       const attempts = [];
       function addAttempt(dt, dv) {
         const k = dt + '|' + dv;
         for (let j = 0; j < attempts.length; j++) { if (attempts[j].k === k) { return; } }
         attempts.push({ dt: dt, dv: dv, k: k });
       }
-      if (dev === 'webgpu' || hasGPU) { addAttempt('fp16', 'webgpu'); }
+      if (dev === 'webgpu') { addAttempt('fp16', 'webgpu'); }
       addAttempt('fp32', 'wasm');
       addAttempt('fp16', 'wasm');
       let lastErr = null;
@@ -330,6 +331,7 @@
             session_options: { graphOptimizationLevel: 'disabled' },
             progress_callback: function (p) { self.postMessage({ type: 'progress', data: p }); }
           });
+          currentDevice = a.dv;
           log('model ready: ' + model + ' [dtype=' + a.dt + ', ' + a.dv + ']');
           self.postMessage({ type: 'status', state: 'ready', model: model, device: a.dv, note: 'dtype=' + a.dt + (i > 0 ? ' (fallback)' : '') });
           return transcriber;
@@ -358,6 +360,21 @@
             self.postMessage({ type: 'transcript', id: job.id, ok: true, text: text });
           } catch (err) {
             log('transcription failed: ' + errDetail(err));
+            // WebGPU inference is unstable on some browsers (GPU buffer map errors);
+            // fall back to WASM once, reload, and retry the same utterance.
+            if (currentDevice === 'webgpu' && forcedDevice !== 'wasm') {
+              forcedDevice = 'wasm';
+              log('inference failed on WebGPU — reloading on WASM and retrying');
+              transcriber = null; loadedKey = ''; loadingPromise = null;
+              try {
+                await ensure(job.model, 'wasm');
+                jobs.unshift(job);
+                continue;
+              } catch (e2) {
+                self.postMessage({ type: 'transcript', id: job.id, ok: false, error: 'WASM fallback failed: ' + errDetail(e2) });
+                continue;
+              }
+            }
             self.postMessage({ type: 'transcript', id: job.id, ok: false, error: String((err && err.message) || err) });
           }
         }
@@ -560,7 +577,7 @@
       provider: 'anthropic',
       models: { anthropic: 'claude-haiku-4-5-20251001', openai: 'gpt-5-mini' },
       apiKeys: { anthropic: '', openai: '' },
-      whisperModel: 'onnx-community/whisper-base',
+      whisperModel: 'onnx-community/whisper-tiny',
       useWebGPU: false,
       sensitivity: 70,
       logEndpoint: '',
