@@ -14,6 +14,7 @@ project:
     - "spanish-speech-drill.html"
     - "english-speech-drill.html"
     - "live-translator.html"
+    - "swahili-speech-drill.html"
 
 website:
   title: "Harlan A Nelson"
@@ -39,6 +40,8 @@ website:
         text: Spanish Drill
       - href: english-speech-drill.html
         text: English Drill
+      - href: swahili-speech-drill.html
+        text: Swahili Drill
       - href: live-translator.html
         text: Live Translator
     right:
