@@ -161,6 +161,16 @@ def main():
     else:
         print("  WARNING: speech-recognition error handler not found")
 
+    # ── Pluggable recognition engines (browser / on-device Whisper / cloud) ──
+    # Adds an external script that swaps in a choice of recognition engine.
+    if "drill-recognition-engines.js" not in html:
+        html = html.replace(
+            "</body>",
+            '  <script src="drill-recognition-engines.js"></script>\n</body>', 1)
+        print("  injected recognition-engines script tag")
+    else:
+        print("  recognition-engines script tag already present")
+
     HTML_FILE.write_text(html)
     print(f"\nWrote {HTML_FILE.name}: {len(exercises)} exercises, {len(definitions)} verbs.")
 
