@@ -135,6 +135,32 @@ def main():
                         "Find a multilingual voice at elevenlabs.io/voices")
     html = html.replace("'practice-log-english.json'", "'practice-log-swahili.json'")
 
+    # ── Speech-recognition error message ─────────────────────────────
+    # Not every browser supports Swahili recognition; a 'service-not-allowed'
+    # there is a missing-language issue, not a blocked microphone. Reword it,
+    # and confirm via the Permissions API before claiming the mic is blocked.
+    old_err = """    } else if (event && (event.error === 'not-allowed' || event.error === 'service-not-allowed')) {
+      $('vozPill').textContent = 'Mic: blocked';
+      $('feedbackBox').innerHTML = '<span class="bad">Microphone access was blocked.</span> Check your browser permissions.';
+    } else {"""
+    new_err = """    } else if (event && (event.error === 'not-allowed' || event.error === 'service-not-allowed' || event.error === 'language-not-supported')) {
+      $('vozPill').textContent = 'Mic: unavailable';
+      $('feedbackBox').innerHTML = '<span class="bad">Swahili speech recognition could not start.</span> This browser most likely does not support Swahili recognition. Try this drill in Chrome on a computer, where Swahili recognition works.';
+      if (navigator.permissions && navigator.permissions.query) {
+        navigator.permissions.query({name:'microphone'}).then(function(p){
+          if (p && p.state && p.state !== 'granted') {
+            $('vozPill').textContent = 'Mic: blocked';
+            $('feedbackBox').innerHTML = '<span class="bad">Microphone access was blocked.</span> Allow the microphone in your browser settings.';
+          }
+        }).catch(function(){});
+      }
+    } else {"""
+    if old_err in html:
+        html = html.replace(old_err, new_err, 1)
+        print("  replaced speech-recognition error handler")
+    else:
+        print("  WARNING: speech-recognition error handler not found")
+
     HTML_FILE.write_text(html)
     print(f"\nWrote {HTML_FILE.name}: {len(exercises)} exercises, {len(definitions)} verbs.")
 

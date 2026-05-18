@@ -8898,9 +8898,17 @@ if (SpeechRecognition) {
     if (event && event.error === 'no-speech') {
       $('vozPill').textContent = 'Mic: no speech';
       $('feedbackBox').innerHTML = '<span class="bad">No speech detected.</span> Tap "Say answer" again.';
-    } else if (event && (event.error === 'not-allowed' || event.error === 'service-not-allowed')) {
-      $('vozPill').textContent = 'Mic: blocked';
-      $('feedbackBox').innerHTML = '<span class="bad">Microphone access was blocked.</span> Check your browser permissions.';
+    } else if (event && (event.error === 'not-allowed' || event.error === 'service-not-allowed' || event.error === 'language-not-supported')) {
+      $('vozPill').textContent = 'Mic: unavailable';
+      $('feedbackBox').innerHTML = '<span class="bad">Swahili speech recognition could not start.</span> This browser most likely does not support Swahili recognition. Try this drill in Chrome on a computer, where Swahili recognition works.';
+      if (navigator.permissions && navigator.permissions.query) {
+        navigator.permissions.query({name:'microphone'}).then(function(p){
+          if (p && p.state && p.state !== 'granted') {
+            $('vozPill').textContent = 'Mic: blocked';
+            $('feedbackBox').innerHTML = '<span class="bad">Microphone access was blocked.</span> Allow the microphone in your browser settings.';
+          }
+        }).catch(function(){});
+      }
     } else {
       $('vozPill').textContent = 'Mic: error';
       $('feedbackBox').innerHTML = '<span class="bad">Could not access the microphone.</span> Check your browser permissions.';
