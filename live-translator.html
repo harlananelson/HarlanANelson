@@ -641,7 +641,7 @@
     var audioCtx = null, micStream = null, micSource = null, processor = null, muteGain = null;
     var capturing = false;
     var srcRate = 48000;
-    var FRAME = 4096, HANG_MS = 700, MIN_MS = 350, MAX_MS = 22000, PREROLL_FRAMES = 4;
+    var FRAME = 4096, HANG_MS = 1400, MIN_MS = 350, MAX_MS = 22000, PREROLL_FRAMES = 4;
     var vad = { speaking: false, silenceMs: 0, frames: [], preRoll: [], totalSamples: 0 };
 
     function loadState() {
@@ -850,7 +850,7 @@
     // ---- transcription result handling (shared by on-device and cloud) ----
     function applyTranscript(seg, text) {
       var txt = (text || '').trim();
-      if (!txt) { removeSeg(seg); return; }   // VAD false trigger / no speech
+      if (!txt || !/\p{L}/u.test(txt)) { removeSeg(seg); return; }   // empty / punctuation-only / noise
       seg.es = txt;
       seg.esState = 'done';
       seg.enState = 'translating';
