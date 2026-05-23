@@ -193,6 +193,7 @@
       <button id="clearBtn" class="btn" type="button">Clear</button>
       <button id="copyBtn" class="btn" type="button">Copy</button>
       <button id="downloadBtn" class="btn" type="button">Download .md</button>
+      <button id="diarizeBtn" class="btn" type="button">Diarize speakers</button>
       <span class="spacer"></span>
       <div class="seg-toggle" role="group" aria-label="Which panes to show">
         <button data-view="both" type="button">Both</button>
@@ -591,7 +592,7 @@
       preloadBtn: $('preloadBtn'), sens: $('sens'), modelStatus: $('modelStatus'),
       engine: $('engine'), localOpts: $('localOpts'), cloudOpts: $('cloudOpts'),
       cloudModel: $('cloudModel'), cloudList: $('cloudList'), vocab: $('vocab'), openaiKey: $('openaiKey'),
-      startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), downloadBtn: $('downloadBtn'), fsBtn: $('fsBtn'),
+      startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), downloadBtn: $('downloadBtn'), diarizeBtn: $('diarizeBtn'), fsBtn: $('fsBtn'),
       fontDown: $('fontDown'), fontUp: $('fontUp'), statusDot: $('statusDot'), statusText: $('statusText'),
       levelFill: $('levelFill'), transcript: $('transcript'), rows: $('rows'), startHint: $('startHint'),
       diagBox: $('diagBox'), diagCount: $('diagCount'), diagLog: $('diagLog'),
@@ -635,6 +636,8 @@
     var interimRow = null, interimEs = null, interimEn = null;
     var placeholderEl = null;
     var segEl = {};
+    var sessionAudio = [];        // Float32 chunks @16k, accumulated for post-session diarization
+    var sessionAudioSamples = 0;
     var logBuffer = [];
     var LOG_MAX = 500;
 
@@ -825,9 +828,16 @@
     function paintRow(seg) {
       var refs = segEl[seg.id];
       if (!refs) { return; }
-      paintCell(refs.es, 'es', seg.esState, seg.es, seg.error, 'transcribing…', null);
+      var esText = seg.es;
+      var enText = seg.en;
+      if (seg.speaker != null) {
+        var tag = '[Voice ' + (seg.speaker + 1) + ']  ';
+        if (seg.esState === 'done') { esText = tag + seg.es; }
+        if (seg.enState === 'done') { enText = tag + seg.en; }
+      }
+      paintCell(refs.es, 'es', seg.esState, esText, seg.error, 'transcribing…', null);
       var retry = seg.enState === 'error' ? function () { retrySeg(seg.id); } : null;
-      paintCell(refs.en, 'en', seg.enState, seg.en, seg.error, 'translating…', retry);
+      paintCell(refs.en, 'en', seg.enState, enText, seg.error, 'translating…', retry);
     }
 
     function setInterim(txt) {
@@ -958,6 +968,12 @@
       addRow(seg);
       updateStatus();
       resampleTo16k(samples, rate).then(function (audio16k) {
+        // Keep a copy for later speaker diarization (workers transfer the original buffer).
+        var audioCopy = new Float32Array(audio16k);
+        seg.audioStart = sessionAudioSamples;
+        seg.audioEnd = sessionAudioSamples + audioCopy.length;
+        sessionAudio.push(audioCopy);
+        sessionAudioSamples += audioCopy.length;
         if (state.transcribeEngine === 'cloud') {
           cloudTranscribe(seg, audio16k);
         } else if (whisper) {
@@ -1279,6 +1295,8 @@
     function clearTranscript() {
       segments = [];
       segEl = {};
+      sessionAudio = [];
+      sessionAudioSamples = 0;
       var olds = els.rows.querySelectorAll('.row.seg');
       Array.prototype.forEach.call(olds, function (r) { r.remove(); });
       removePlaceholder();
@@ -1329,7 +1347,8 @@
         var stamp = fmtElapsed((s.t || t0) - t0);
         var es = s.esState === 'done' ? s.es : '[' + s.esState + ']';
         var en = s.enState === 'done' ? s.en : '[' + s.enState + ']';
-        lines.push('**[' + stamp + ']** *' + es + '*  ');
+        var spk = (s.speaker != null) ? '**Voice ' + (s.speaker + 1) + '** · ' : '';
+        lines.push('**[' + stamp + ']** · ' + spk + '*' + es + '*  ');
         lines.push(en);
         lines.push('');
       }
@@ -1411,6 +1430,72 @@
     }
 
     // ---- init ----
+    // ---- speaker diarization (sherpa-onnx, lazy-loaded) ----
+    function diarizeSession() {
+      if (!segments.length || !sessionAudioSamples) {
+        pushLog('warn', 'diarize: nothing to diarize yet');
+        return;
+      }
+      if (typeof window.TranslatorDiarize === 'undefined') {
+        pushLog('error', 'diarize: TranslatorDiarize module not loaded');
+        return;
+      }
+      els.diarizeBtn.disabled = true;
+      els.diarizeBtn.textContent = 'Loading speaker model…';
+      pushLog('', 'diarization: load start');
+      window.TranslatorDiarize.load(function (p) {
+        if (p.state === 'loading') {
+          els.diarizeBtn.textContent = 'Downloading model (~57 MB, one-time)…';
+        } else if (p.state === 'ready') {
+          els.diarizeBtn.textContent = 'Diarizing…';
+          pushLog('', 'diarization: model ready, processing ' + (sessionAudioSamples / 16000).toFixed(1) + ' s of audio');
+        } else if (p.state === 'error') {
+          pushLog('error', 'diarization load: ' + p.error);
+        }
+      }).then(function () {
+        var merged = new Float32Array(sessionAudioSamples);
+        var off = 0, i;
+        for (i = 0; i < sessionAudio.length; i++) {
+          merged.set(sessionAudio[i], off);
+          off += sessionAudio[i].length;
+        }
+        var diarSegs = window.TranslatorDiarize.diarize(merged);
+        pushLog('', 'diarization: ' + diarSegs.length + ' speaker segments');
+        applyDiarization(diarSegs);
+        els.diarizeBtn.textContent = 'Diarized ✓';
+        setTimeout(function () {
+          els.diarizeBtn.textContent = 'Diarize speakers';
+          els.diarizeBtn.disabled = false;
+        }, 2000);
+      }).catch(function (err) {
+        els.diarizeBtn.textContent = 'Diarize speakers';
+        els.diarizeBtn.disabled = false;
+        pushLog('error', 'diarization failed: ' + ((err && err.message) || err));
+      });
+    }
+
+    function applyDiarization(diarSegs) {
+      var SR = 16000;
+      for (var i = 0; i < segments.length; i++) {
+        var seg = segments[i];
+        if (seg.audioStart == null) { continue; }
+        var t0 = seg.audioStart / SR;
+        var t1 = seg.audioEnd / SR;
+        var counts = {};
+        for (var j = 0; j < diarSegs.length; j++) {
+          var d = diarSegs[j];
+          var overlap = Math.max(0, Math.min(d.end, t1) - Math.max(d.start, t0));
+          if (overlap > 0) { counts[d.speaker] = (counts[d.speaker] || 0) + overlap; }
+        }
+        var best = null, bestCnt = 0;
+        for (var sp in counts) {
+          if (counts[sp] > bestCnt) { best = sp; bestCnt = counts[sp]; }
+        }
+        seg.speaker = best != null ? parseInt(best, 10) : null;
+        paintRow(seg);
+      }
+    }
+
     function init() {
       hookConsole();
       logEnvironment();
@@ -1554,6 +1639,7 @@
       els.clearBtn.addEventListener('click', clearTranscript);
       els.copyBtn.addEventListener('click', copyTranscript);
       els.downloadBtn.addEventListener('click', downloadTranscript);
+      els.diarizeBtn.addEventListener('click', diarizeSession);
       els.copyDiag.addEventListener('click', copyDiagnostics);
       els.sendDiag.addEventListener('click', function () { sendLog(true); });
       els.logUrl.addEventListener('input', function () {
@@ -1597,5 +1683,6 @@
     init();
   })();
   </script>
+  <script src="live-translator-diarize.js"></script>
 </body>
 </html>
