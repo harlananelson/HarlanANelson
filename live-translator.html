@@ -192,6 +192,7 @@
       <button id="startBtn" class="btn primary" type="button">● Start listening</button>
       <button id="clearBtn" class="btn" type="button">Clear</button>
       <button id="copyBtn" class="btn" type="button">Copy</button>
+      <button id="downloadBtn" class="btn" type="button">Download .md</button>
       <span class="spacer"></span>
       <div class="seg-toggle" role="group" aria-label="Which panes to show">
         <button data-view="both" type="button">Both</button>
@@ -590,7 +591,7 @@
       preloadBtn: $('preloadBtn'), sens: $('sens'), modelStatus: $('modelStatus'),
       engine: $('engine'), localOpts: $('localOpts'), cloudOpts: $('cloudOpts'),
       cloudModel: $('cloudModel'), cloudList: $('cloudList'), vocab: $('vocab'), openaiKey: $('openaiKey'),
-      startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), fsBtn: $('fsBtn'),
+      startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), downloadBtn: $('downloadBtn'), fsBtn: $('fsBtn'),
       fontDown: $('fontDown'), fontUp: $('fontUp'), statusDot: $('statusDot'), statusText: $('statusText'),
       levelFill: $('levelFill'), transcript: $('transcript'), rows: $('rows'), startHint: $('startHint'),
       diagBox: $('diagBox'), diagCount: $('diagCount'), diagLog: $('diagLog'),
@@ -951,7 +952,7 @@
 
     // ---- merge buffer: utterance -> transcription -> translation ----
     function finalizeUtterance(samples, rate) {
-      var seg = { id: nextId++, es: '', esState: 'transcribing', en: '', enState: 'idle', error: '' };
+      var seg = { id: nextId++, es: '', esState: 'transcribing', en: '', enState: 'idle', error: '', t: Date.now() };
       segments.push(seg);
       removePlaceholder();
       addRow(seg);
@@ -1301,6 +1302,58 @@
       }).catch(function () { /* clipboard blocked */ });
     }
 
+    function pad2(n) { return (n < 10 ? '0' : '') + n; }
+    function fmtElapsed(ms) {
+      var s = Math.max(0, ms) / 1000;
+      var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+      return pad2(h) + ':' + pad2(m) + ':' + (sec < 10 ? '0' : '') + sec.toFixed(1);
+    }
+
+    function buildMarkdownTranscript() {
+      if (!segments.length) { return ''; }
+      var t0 = segments[0].t || Date.now();
+      var engine = state.transcribeEngine === 'cloud'
+        ? 'cloud ' + (state.cloudModel || 'gpt-4o-transcribe')
+        : 'on-device ' + (state.whisperModel || 'whisper');
+      var translator = (state.models[state.provider] || state.provider) + ' (' + state.provider + ')';
+      var lines = [
+        '# Spanish → English Transcript',
+        '',
+        '*Recorded ' + new Date(t0).toLocaleString() + ' • transcription: ' + engine + ' • translation: ' + translator + '*',
+        '',
+        '---',
+        ''
+      ];
+      for (var i = 0; i < segments.length; i++) {
+        var s = segments[i];
+        var stamp = fmtElapsed((s.t || t0) - t0);
+        var es = s.esState === 'done' ? s.es : '[' + s.esState + ']';
+        var en = s.enState === 'done' ? s.en : '[' + s.enState + ']';
+        lines.push('**[' + stamp + ']** *' + es + '*  ');
+        lines.push(en);
+        lines.push('');
+      }
+      return lines.join('\n');
+    }
+
+    function downloadTranscript() {
+      if (!segments.length) { return; }
+      var md = buildMarkdownTranscript();
+      var blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var t0 = segments[0].t ? new Date(segments[0].t) : new Date();
+      var fname = 'transcript-' + t0.getFullYear() + pad2(t0.getMonth() + 1) + pad2(t0.getDate())
+        + '-' + pad2(t0.getHours()) + pad2(t0.getMinutes()) + '.md';
+      var a = document.createElement('a');
+      a.href = url; a.download = fname; a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 0);
+      els.downloadBtn.textContent = 'Downloaded ✓';
+      setTimeout(function () { els.downloadBtn.textContent = 'Download .md'; }, 1500);
+    }
+
     function copyDiagnostics() {
       var text = redact(logBuffer.join('\n'));
       navigator.clipboard.writeText(text).then(function () {
@@ -1500,6 +1553,7 @@
       });
       els.clearBtn.addEventListener('click', clearTranscript);
       els.copyBtn.addEventListener('click', copyTranscript);
+      els.downloadBtn.addEventListener('click', downloadTranscript);
       els.copyDiag.addEventListener('click', copyDiagnostics);
       els.sendDiag.addEventListener('click', function () { sendLog(true); });
       els.logUrl.addEventListener('input', function () {
