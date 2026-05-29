@@ -11361,6 +11361,7 @@ let registro = [];
 let debiles = {};
 let conteo = {correctas:0, incorrectas:0};
 let ultimaTranscripcion = '';
+let ultimaParcial = '';
 let escuchando = false;
 let modoAutomatico = false;
 let modoDecir = false;
@@ -11405,6 +11406,7 @@ if (SpeechRecognition) {
       if (result.isFinal) finalTexto += result[0].transcript + ' ';
     }
     $('transcripcionBox').textContent = texto.trim() || 'Listening...';
+    if (texto.trim()) ultimaParcial = texto.trim();
     if (finalTexto.trim()) ultimaTranscripcion = finalTexto.trim();
   };
   reconocimiento.onend = () => {
@@ -11412,10 +11414,11 @@ if (SpeechRecognition) {
     $('vozPill').textContent = 'Mic: ready';
     $('decirBtn').classList.remove('recording');
     $('decirBtn').textContent = 'Say answer';
-    if ((modoAutomatico || modoDecir) && ultimaTranscripcion.trim()) {
+    const respuesta = ultimaTranscripcion.trim() || ultimaParcial.trim();
+    if ((modoAutomatico || modoDecir) && respuesta) {
       modoAutomatico = false;
       modoDecir = false;
-      revisar(ultimaTranscripcion.trim());
+      revisar(respuesta);
     } else if (modoAutomatico || modoDecir) {
       modoAutomatico = false;
       modoDecir = false;
@@ -11723,6 +11726,7 @@ function detenerReconocimiento(){
   modoAutomatico = false;
   modoDecir = false;
   ultimaTranscripcion = '';
+  ultimaParcial = '';
   $('decirBtn').classList.remove('recording');
   $('decirBtn').textContent = 'Say answer';
 }
@@ -11733,6 +11737,7 @@ function iniciarEscucha(){
     return;
   }
   ultimaTranscripcion = '';
+  ultimaParcial = '';
   $('transcripcionBox').textContent = 'Listening...';
   $('vozPill').textContent = 'Mic: listening';
   $('decirBtn').classList.add('recording');
@@ -11751,7 +11756,12 @@ function iniciarEscucha(){
 
 function decirRespuesta(){
   if (escuchando) {
-    detenerReconocimiento();
+    // Pressing the button again means "I'm done speaking" — finalize and evaluate.
+    // Use stop() (not abort()) so the pending transcript is delivered to onresult/onend,
+    // and leave modoDecir/ultimaTranscripcion intact so onend can run revisar().
+    if (reconocimiento) {
+      try { reconocimiento.stop(); } catch (e) { /* ignore */ }
+    }
     return;
   }
   modoAutomatico = false;
