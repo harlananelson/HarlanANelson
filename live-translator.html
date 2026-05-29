@@ -42,6 +42,10 @@
     input, select, textarea { color:var(--color-text); background:var(--color-surface-2); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:0.6rem 0.7rem; min-height:42px; }
     textarea { width:100%; resize:vertical; line-height:1.45; }
     input:focus, select:focus, textarea:focus { outline:2px solid var(--color-primary); outline-offset:1px; }
+    .hidden { display:none !important; }
+    /* API key boxes: plain text inputs masked via CSS so Safari/iCloud Keychain does not
+       treat them as a password pair and autofill one saved key into both boxes. */
+    .key-input.masked { -webkit-text-security:disc; text-security:disc; }
     input[type="range"] { width:260px; max-width:100%; min-height:auto; padding:0; accent-color:var(--color-primary); background:transparent; border:0; }
     .checkbox { display:flex; align-items:center; gap:0.4rem; font-size:var(--text-sm); color:var(--color-text-muted); font-weight:600; min-height:42px; }
     .checkbox input { min-height:auto; width:auto; }
@@ -130,14 +134,14 @@
         </div>
         <div class="field grow">
           <label for="model">Translation model</label>
-          <input id="model" list="modelList" autocomplete="off" spellcheck="false" placeholder="model id" />
-          <datalist id="modelList"></datalist>
+          <select id="model"></select>
+          <input id="modelCustom" class="hidden" type="text" autocomplete="off" spellcheck="false" placeholder="custom model id" />
         </div>
       </div>
       <div class="field-row">
         <div class="field grow">
           <label for="apiKey">API key &mdash; stored only in this browser</label>
-          <input id="apiKey" type="password" autocomplete="off" spellcheck="false" placeholder="paste your API key" />
+          <input id="apiKey" name="translation_key" type="text" class="key-input masked" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="paste your API key" />
         </div>
         <button id="showKey" class="btn small" type="button">Show</button>
         <button id="checkBtn" class="btn small" type="button">Check key</button>
@@ -157,8 +161,8 @@
       <div id="localOpts" class="field-row">
         <div class="field grow">
           <label for="whisperModel">Speech model &mdash; runs on-device, downloaded once</label>
-          <input id="whisperModel" list="whisperList" autocomplete="off" spellcheck="false" placeholder="whisper model id" />
-          <datalist id="whisperList"></datalist>
+          <select id="whisperModel"></select>
+          <input id="whisperCustom" class="hidden" type="text" autocomplete="off" spellcheck="false" placeholder="custom whisper model id" />
         </div>
         <label class="checkbox"><input type="checkbox" id="webgpu" /> Use WebGPU</label>
         <button id="preloadBtn" class="btn small" type="button">Preload model</button>
@@ -167,12 +171,12 @@
         <div class="field-row">
           <div class="field grow">
             <label for="cloudModel">Cloud transcription model</label>
-            <input id="cloudModel" list="cloudList" autocomplete="off" spellcheck="false" placeholder="gpt-4o-transcribe" />
-            <datalist id="cloudList"></datalist>
+            <select id="cloudModel"></select>
+            <input id="cloudModelCustom" class="hidden" type="text" autocomplete="off" spellcheck="false" placeholder="custom transcription model id" />
           </div>
           <div class="field grow">
             <label for="openaiKey">OpenAI API key &mdash; for cloud transcription</label>
-            <input id="openaiKey" type="password" autocomplete="off" spellcheck="false" placeholder="sk-..." />
+            <input id="openaiKey" name="transcription_key" type="text" class="key-input masked" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="sk-..." />
           </div>
         </div>
         <div class="field">
@@ -585,13 +589,13 @@
 
     var $ = function (id) { return document.getElementById(id); };
     var els = {
-      themeBtn: $('themeBtn'), provider: $('provider'), model: $('model'), modelList: $('modelList'),
+      themeBtn: $('themeBtn'), provider: $('provider'), model: $('model'), modelCustom: $('modelCustom'),
       apiKey: $('apiKey'), showKey: $('showKey'), keyHint: $('keyHint'),
       checkBtn: $('checkBtn'), checkResult: $('checkResult'),
-      whisperModel: $('whisperModel'), whisperList: $('whisperList'), webgpu: $('webgpu'),
+      whisperModel: $('whisperModel'), whisperCustom: $('whisperCustom'), webgpu: $('webgpu'),
       preloadBtn: $('preloadBtn'), sens: $('sens'), modelStatus: $('modelStatus'),
       engine: $('engine'), localOpts: $('localOpts'), cloudOpts: $('cloudOpts'),
-      cloudModel: $('cloudModel'), cloudList: $('cloudList'), vocab: $('vocab'), openaiKey: $('openaiKey'),
+      cloudModel: $('cloudModel'), cloudModelCustom: $('cloudModelCustom'), vocab: $('vocab'), openaiKey: $('openaiKey'),
       startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), downloadBtn: $('downloadBtn'), diarizeBtn: $('diarizeBtn'), fsBtn: $('fsBtn'),
       fontDown: $('fontDown'), fontUp: $('fontUp'), statusDot: $('statusDot'), statusText: $('statusText'),
       levelFill: $('levelFill'), transcript: $('transcript'), rows: $('rows'), startHint: $('startHint'),
@@ -1251,17 +1255,51 @@
     }
 
     // ---- settings fields ----
-    function fillDatalist(listEl, items) {
-      listEl.innerHTML = '';
+    var CUSTOM = '__custom__';
+    // Populate a <select> with model ids plus a "Custom…" escape hatch. A real <select>
+    // is used instead of an <input list=datalist> because datalist dropdowns are unreliable
+    // in Safari/iOS. If `current` isn't a listed suggestion, select Custom… and reveal the
+    // free-text input so any model id can still be entered.
+    function fillModelSelect(selectEl, customEl, items, current) {
+      selectEl.innerHTML = '';
       items.forEach(function (m) {
         var o = document.createElement('option');
-        o.value = m;
-        listEl.appendChild(o);
+        o.value = m; o.textContent = m;
+        selectEl.appendChild(o);
       });
+      var co = document.createElement('option');
+      co.value = CUSTOM; co.textContent = 'Custom…';
+      selectEl.appendChild(co);
+      if (current && items.indexOf(current) >= 0) {
+        selectEl.value = current;
+        customEl.value = '';
+        customEl.classList.add('hidden');
+      } else if (current) {
+        selectEl.value = CUSTOM;
+        customEl.value = current;
+        customEl.classList.remove('hidden');
+      } else {
+        selectEl.value = items[0] || CUSTOM;
+        customEl.value = '';
+        customEl.classList.add('hidden');
+      }
+    }
+    // Wire a select + custom-input pair so either source updates state via setVal().
+    function wireModelSelect(selectEl, customEl, setVal) {
+      selectEl.addEventListener('change', function () {
+        if (selectEl.value === CUSTOM) {
+          customEl.classList.remove('hidden');
+          customEl.focus();
+          setVal(customEl.value.trim());
+        } else {
+          customEl.classList.add('hidden');
+          setVal(selectEl.value);
+        }
+      });
+      customEl.addEventListener('input', function () { setVal(customEl.value.trim()); });
     }
     function refreshModelField() {
-      els.model.value = state.models[state.provider] || '';
-      fillDatalist(els.modelList, MODEL_SUGGESTIONS[state.provider]);
+      fillModelSelect(els.model, els.modelCustom, MODEL_SUGGESTIONS[state.provider], state.models[state.provider] || '');
     }
     function refreshKeyField() {
       els.apiKey.value = state.apiKeys[state.provider] || '';
@@ -1547,14 +1585,12 @@
       els.provider.value = state.provider;
       refreshModelField();
       refreshKeyField();
-      els.whisperModel.value = state.whisperModel;
-      fillDatalist(els.whisperList, WHISPER_SUGGESTIONS);
+      fillModelSelect(els.whisperModel, els.whisperCustom, WHISPER_SUGGESTIONS, state.whisperModel);
       els.webgpu.checked = state.useWebGPU;
       els.sens.value = String(state.sensitivity);
       els.logUrl.value = state.logEndpoint || '';
       els.engine.value = state.transcribeEngine;
-      els.cloudModel.value = state.cloudModel;
-      fillDatalist(els.cloudList, CLOUD_SUGGESTIONS);
+      fillModelSelect(els.cloudModel, els.cloudModelCustom, CLOUD_SUGGESTIONS, state.cloudModel);
       els.vocab.value = state.vocab || '';
       applyEngine();
       applyView();
@@ -1573,8 +1609,8 @@
         els.checkResult.textContent = '';
         saveState(); pushConfig(); updateControls();
       });
-      els.model.addEventListener('input', function () {
-        state.models[state.provider] = els.model.value.trim();
+      wireModelSelect(els.model, els.modelCustom, function (v) {
+        state.models[state.provider] = v;
         saveState(); pushConfig();
       });
       els.apiKey.addEventListener('input', function () {
@@ -1585,8 +1621,8 @@
         saveState(); pushConfig(); updateControls();
       });
       els.showKey.addEventListener('click', function () {
-        els.apiKey.type = els.apiKey.type === 'password' ? 'text' : 'password';
-        els.showKey.textContent = els.apiKey.type === 'password' ? 'Show' : 'Hide';
+        var masked = els.apiKey.classList.toggle('masked');
+        els.showKey.textContent = masked ? 'Show' : 'Hide';
       });
       els.checkBtn.addEventListener('click', function () {
         if (!translator || !hasKey()) { return; }
@@ -1596,8 +1632,8 @@
         els.checkResult.textContent = '';
         translator.postMessage({ type: 'test' });
       });
-      els.whisperModel.addEventListener('input', function () {
-        state.whisperModel = els.whisperModel.value.trim();
+      wireModelSelect(els.whisperModel, els.whisperCustom, function (v) {
+        state.whisperModel = v;
         saveState();
       });
       els.webgpu.addEventListener('change', function () {
@@ -1610,8 +1646,8 @@
         saveState();
         updateControls();
       });
-      els.cloudModel.addEventListener('input', function () {
-        state.cloudModel = els.cloudModel.value.trim();
+      wireModelSelect(els.cloudModel, els.cloudModelCustom, function (v) {
+        state.cloudModel = v;
         saveState();
       });
       els.vocab.addEventListener('input', function () {
