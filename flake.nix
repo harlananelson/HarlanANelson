@@ -42,6 +42,7 @@
             pkgs.pandoc
             pkgs.claude-code
             pkgs.netlify-cli
+            pkgs.tmux
           ];
 
           shellHook = ''
@@ -50,6 +51,7 @@
             echo "  Quarto:  $(quarto --version)"
             echo "  Claude:  $(claude --version 2>/dev/null || echo 'available')"
             echo "  Netlify: $(netlify --version 2>/dev/null | head -1 || echo 'available')"
+            echo "  tmux:    $(tmux -V 2>/dev/null || echo 'available')"
           '';
         };
       }
