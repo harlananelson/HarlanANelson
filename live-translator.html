@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Live Spanish → English Translator</title>
+  <title>Live Spanish ⇄ English Translator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -116,7 +116,7 @@
             <path d="M13 21l4-9 4 9M14.4 17.4h5.2" />
           </svg>
         </div>
-        <div><h1>Live Spanish → English Translator</h1></div>
+        <div><h1>Live Spanish ⇄ English Translator</h1></div>
       </div>
       <button id="themeBtn" class="btn small" type="button" title="Toggle light / dark" aria-label="Toggle theme">☾</button>
     </div>
@@ -124,6 +124,16 @@
     <p class="sub">Listens to spoken Spanish, transcribes it on your device with a Whisper speech model, and shows a running English translation beside it. The audio is transcribed entirely in your browser — it never leaves the device. Only the recognized text is sent to your chosen LLM for translation, using your own API key.</p>
 
     <section class="settings panel" aria-label="Settings">
+      <div class="field-row">
+        <div class="field grow">
+          <label for="direction">Direction</label>
+          <select id="direction">
+            <option value="es-en">Spanish → English</option>
+            <option value="en-es">English → Spanish</option>
+            <option value="auto">Bidirectional — auto-detect (conversation)</option>
+          </select>
+        </div>
+      </div>
       <div class="field-row">
         <div class="field">
           <label for="provider">Translation provider</label>
@@ -221,8 +231,8 @@
     <div class="transcript" id="transcript">
       <div class="rows" id="rows" aria-live="polite">
         <div class="row head">
-          <div class="cell head es">Spanish &mdash; heard</div>
-          <div class="cell head en">English &mdash; translated</div>
+          <div class="cell head es">Spanish</div>
+          <div class="cell head en">English</div>
         </div>
       </div>
     </div>
@@ -388,7 +398,9 @@
             continue;
           }
           try {
-            const out = await transcriber(job.audio, { language: 'spanish', task: 'transcribe' });
+            const opts = { task: 'transcribe' };
+            if (job.language) { opts.language = job.language; }   // omitted => Whisper auto-detects (conversation mode)
+            const out = await transcriber(job.audio, opts);
             const text = (out && typeof out.text === 'string' ? out.text : '').trim();
             self.postMessage({ type: 'transcript', id: job.id, ok: true, text: text });
           } catch (err) {
@@ -437,7 +449,7 @@
         cfg = Object.assign({}, cfg, m.config || {});
         pump();
       } else if (m.type === 'translate') {
-        queue.push({ id: m.id, text: m.text, context: m.context || null });
+        queue.push({ id: m.id, text: m.text, context: m.context || null, target: m.target || 'en' });
         pump();
       } else if (m.type === 'test') {
         runTest();
@@ -456,8 +468,13 @@
 
     async function handle(job, attempt) {
       try {
-        const text = await callProvider(job.text, job.context);
-        self.postMessage({ type: 'result', id: job.id, ok: true, text: text });
+        const raw = await callProvider(job.text, job.context, job.target);
+        if (job.target === 'auto') {
+          const parsed = parseAuto(raw);
+          self.postMessage({ type: 'result', id: job.id, ok: true, text: parsed.t, lang: parsed.lang });
+        } else {
+          self.postMessage({ type: 'result', id: job.id, ok: true, text: raw });
+        }
       } catch (err) {
         const msg = String((err && err.message) || err);
         if (attempt < 2 && retryable(msg)) {
@@ -468,9 +485,20 @@
       }
     }
 
+    function parseAuto(raw) {
+      var s = String(raw || '').trim().replace(/^```(?:json)?/i, '').replace(/```$/, '').trim();
+      var i = s.indexOf('{'), j = s.lastIndexOf('}');
+      if (i >= 0 && j > i) { s = s.slice(i, j + 1); }
+      var obj = JSON.parse(s);   // throws on bad output -> retried by handle()
+      var lang = obj.lang === 'en' ? 'en' : 'es';
+      var t = String(obj.t == null ? '' : obj.t).trim();
+      if (!t) { throw new Error('Empty translation in auto response'); }
+      return { lang: lang, t: t };
+    }
+
     async function runTest() {
       try {
-        const text = await callProvider('Hola, esta es una prueba de la clave.', null);
+        const text = await callProvider('Hola, esta es una prueba de la clave.', null, 'en');
         self.postMessage({ type: 'testResult', ok: true, text: text });
       } catch (err) {
         self.postMessage({ type: 'testResult', ok: false, error: String((err && err.message) || err) });
@@ -483,37 +511,50 @@
     }
     function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
 
-    const SYSTEM_PROMPT =
-      'You are a live interpreter. Translate the Spanish speech transcript you are given into natural, fluent English. ' +
-      'Reply with ONLY the English translation itself: no quotation marks, no preamble, no notes. ' +
-      'The Spanish comes from automatic speech recognition, so it may be a fragment, lack punctuation, or contain recognition errors. ' +
-      'Handle all of that silently: translate the most likely intended meaning and output only that translation. ' +
+    var SHARED_RULES =
+      'The text comes from automatic speech recognition, so it may be a fragment, lack punctuation, or contain recognition errors. ' +
+      'Handle all of that silently: render the most likely intended meaning. ' +
       'Never remark that the text is garbled, unclear, incomplete, or mis-transcribed; never mention transcription errors; ' +
       'never ask for or mention missing or insufficient context; never add bracketed notes, disclaimers, apologies, or explanations. ' +
-      'If a fragment is hard to interpret, give your best plain-English rendering of it anyway. ' +
       'Preserve the tone and register of the original.';
 
-    function userPrompt(text, context) {
-      let p = '';
-      if (context && context.es) {
-        p += 'Preceding sentence already spoken (context only - do not translate or repeat it):\n';
-        p += 'Spanish: ' + context.es + '\n';
+    function systemFor(target) {
+      if (target === 'auto') {
+        return 'You are a live bilingual interpreter for a Spanish/English conversation. You receive one spoken utterance. ' +
+          'Detect whether it is Spanish or English, then translate it into the OTHER language. ' +
+          'Reply with ONLY a compact JSON object and nothing else: {"lang":"es"|"en","t":"<the translation in the other language>"}. ' +
+          '"lang" is the language of the INPUT; "t" is its translation. No code fences, no extra text. ' + SHARED_RULES;
+      }
+      var tgt = target === 'es' ? 'Spanish' : 'English';
+      return 'You are a live interpreter. Translate the speech transcript you are given into natural, fluent ' + tgt + '. ' +
+        'Reply with ONLY the ' + tgt + ' translation itself: no quotation marks, no preamble, no notes. ' + SHARED_RULES;
+    }
+
+    function userPrompt(text, context, target) {
+      var p = '';
+      if (context && (context.es || context.en)) {
+        p += 'Preceding turn (context only - do not translate or repeat it):\n';
+        if (context.es) { p += 'Spanish: ' + context.es + '\n'; }
         if (context.en) { p += 'English: ' + context.en + '\n'; }
         p += '\n';
       }
-      p += 'Translate this Spanish segment into English:\n' + text;
+      if (target === 'auto') {
+        p += 'Utterance:\n' + text;
+      } else {
+        p += 'Translate this segment into ' + (target === 'es' ? 'Spanish' : 'English') + ':\n' + text;
+      }
       return p;
     }
 
-    async function callProvider(text, context) {
+    async function callProvider(text, context, target) {
       if (!cfg.apiKey) { throw new Error('No API key set'); }
       if (!cfg.model) { throw new Error('No model set'); }
       return cfg.provider === 'openai'
-        ? callOpenAI(text, context)
-        : callAnthropic(text, context);
+        ? callOpenAI(text, context, target)
+        : callAnthropic(text, context, target);
     }
 
-    async function callAnthropic(text, context) {
+    async function callAnthropic(text, context, target) {
       const res = await fetch('https://api.anthropic.com/v1/messages', {
         method: 'POST',
         headers: {
@@ -525,8 +566,8 @@
         body: JSON.stringify({
           model: cfg.model,
           max_tokens: 1024,
-          system: SYSTEM_PROMPT,
-          messages: [{ role: 'user', content: userPrompt(text, context) }]
+          system: systemFor(target),
+          messages: [{ role: 'user', content: userPrompt(text, context, target) }]
         })
       });
       if (!res.ok) { throw new Error(await errorText(res)); }
@@ -540,7 +581,7 @@
       return clean(out);
     }
 
-    async function callOpenAI(text, context) {
+    async function callOpenAI(text, context, target) {
       const res = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
         headers: {
@@ -550,8 +591,8 @@
         body: JSON.stringify({
           model: cfg.model,
           messages: [
-            { role: 'system', content: SYSTEM_PROMPT },
-            { role: 'user', content: userPrompt(text, context) }
+            { role: 'system', content: systemFor(target) },
+            { role: 'user', content: userPrompt(text, context, target) }
           ]
         })
       });
@@ -589,7 +630,7 @@
 
     var $ = function (id) { return document.getElementById(id); };
     var els = {
-      themeBtn: $('themeBtn'), provider: $('provider'), model: $('model'), modelCustom: $('modelCustom'),
+      themeBtn: $('themeBtn'), direction: $('direction'), provider: $('provider'), model: $('model'), modelCustom: $('modelCustom'),
       apiKey: $('apiKey'), showKey: $('showKey'), keyHint: $('keyHint'),
       checkBtn: $('checkBtn'), checkResult: $('checkResult'),
       whisperModel: $('whisperModel'), whisperCustom: $('whisperCustom'), webgpu: $('webgpu'),
@@ -624,6 +665,7 @@
       cloudModel: 'gpt-4o-transcribe',
       vocab: '',
       logEndpoint: '',
+      direction: 'es-en',
       theme: 'light', scale: 1, view: 'both'
     };
     var STORE_KEY = 'liveTranslator.v2';
@@ -668,6 +710,7 @@
           cloudModel: s.cloudModel || DEFAULTS.cloudModel,
           vocab: typeof s.vocab === 'string' ? s.vocab : '',
           logEndpoint: s.logEndpoint || '',
+          direction: ['es-en', 'en-es', 'auto'].indexOf(s.direction) >= 0 ? s.direction : 'es-en',
           theme: s.theme === 'dark' ? 'dark' : 'light',
           scale: typeof s.scale === 'number' ? s.scale : 1,
           view: ['both', 'es', 'en'].indexOf(s.view) >= 0 ? s.view : 'both'
@@ -681,6 +724,10 @@
     }
     function hasKey() { return !!(state.apiKeys[state.provider] || '').trim(); }
     function whisperDevice() { return state.useWebGPU ? 'webgpu' : 'wasm'; }
+    // Direction-aware language hints (null = auto-detect for conversation mode).
+    function srcWhisperLang() { var d = state.direction; return d === 'en-es' ? 'english' : d === 'auto' ? null : 'spanish'; }
+    function srcCloudLang() { var d = state.direction; return d === 'en-es' ? 'en' : d === 'auto' ? null : 'es'; }
+    function translateTarget() { var d = state.direction; return d === 'en-es' ? 'es' : d === 'auto' ? 'auto' : 'en'; }
     function micThreshold() { return 0.032 - (state.sensitivity / 100) * 0.028; }
 
     function pushConfig() {
@@ -839,9 +886,15 @@
         if (seg.esState === 'done') { esText = tag + seg.es; }
         if (seg.enState === 'done') { enText = tag + seg.en; }
       }
-      paintCell(refs.es, 'es', seg.esState, esText, seg.error, 'transcribing…', null);
-      var retry = seg.enState === 'error' ? function () { retrySeg(seg.id); } : null;
-      paintCell(refs.en, 'en', seg.enState, enText, seg.error, 'translating…', retry);
+      // which column is the source (heard) vs. the translation depends on direction
+      var dir = seg.dir || 'es-en';
+      var esIsSource = (dir === 'es-en');                 // en-es: en is source; auto: decided after detect
+      var esLabel = esIsSource ? 'transcribing…' : 'translating…';
+      var enLabel = (dir === 'en-es') ? 'transcribing…' : 'translating…';
+      var retryEs = seg.esState === 'error' ? function () { retrySeg(seg.id); } : null;
+      var retryEn = seg.enState === 'error' ? function () { retrySeg(seg.id); } : null;
+      paintCell(refs.es, 'es', seg.esState, esText, seg.error, esLabel, retryEs);
+      paintCell(refs.en, 'en', seg.enState, enText, seg.error, enLabel, retryEn);
     }
 
     function setInterim(txt) {
@@ -863,22 +916,35 @@
     }
 
     // ---- transcription result handling (shared by on-device and cloud) ----
+    function transCtx(seg) {
+      var prev = prevSeg(seg);
+      if (!prev) { return null; }
+      var c = {};
+      if (prev.esState === 'done' && prev.es) { c.es = prev.es; }
+      if (prev.enState === 'done' && prev.en) { c.en = prev.en; }
+      return (c.es || c.en) ? c : null;
+    }
+    function segTarget(seg) {
+      return seg.dir === 'en-es' ? 'es' : seg.dir === 'auto' ? 'auto' : 'en';
+    }
+
     function applyTranscript(seg, text) {
       var txt = (text || '').trim();
       if (!txt || !/\p{L}/u.test(txt)) { removeSeg(seg); return; }   // empty / punctuation-only / noise
-      seg.es = txt;
-      seg.esState = 'done';
-      seg.enState = 'translating';
+      var dir = seg.dir || 'es-en';
+      seg.heard = txt;
+      // place the heard text in its language column; the other column awaits the translation.
+      if (dir === 'es-en') { seg.es = txt; seg.esState = 'done'; seg.enState = 'translating'; }
+      else if (dir === 'en-es') { seg.en = txt; seg.enState = 'done'; seg.esState = 'translating'; }
+      else { seg.esState = 'translating'; seg.enState = 'translating'; }   // auto: column decided after detect
       paintRow(seg);
       maybeScroll();
       if (translator) {
-        var prev = prevSeg(seg);
-        translator.postMessage({
-          type: 'translate', id: seg.id, text: txt,
-          context: prev ? { es: prev.es, en: prev.enState === 'done' ? prev.en : '' } : null
-        });
+        translator.postMessage({ type: 'translate', id: seg.id, text: txt, target: segTarget(seg), context: transCtx(seg) });
       } else {
-        seg.enState = 'error';
+        if (dir === 'es-en') { seg.enState = 'error'; }
+        else if (dir === 'en-es') { seg.esState = 'error'; }
+        else { seg.esState = 'error'; seg.enState = 'error'; }
         seg.error = 'Translation worker unavailable';
         paintRow(seg);
       }
@@ -928,7 +994,8 @@
       var form = new FormData();
       form.append('file', new Blob([encodeWav(audio16k, 16000)], { type: 'audio/wav' }), 'utterance.wav');
       form.append('model', (state.cloudModel || 'gpt-4o-transcribe').trim());
-      form.append('language', 'es');
+      var clang = srcCloudLang();
+      if (clang) { form.append('language', clang); }   // omitted => OpenAI auto-detects (conversation mode)
       var vocab = (state.vocab || '').trim();
       if (vocab) { form.append('prompt', vocab); }
       fetch('https://api.openai.com/v1/audio/transcriptions', {
@@ -966,7 +1033,7 @@
 
     // ---- merge buffer: utterance -> transcription -> translation ----
     function finalizeUtterance(samples, rate) {
-      var seg = { id: nextId++, es: '', esState: 'transcribing', en: '', enState: 'idle', error: '', t: Date.now() };
+      var seg = { id: nextId++, es: '', esState: 'transcribing', en: '', enState: 'idle', error: '', t: Date.now(), heard: '', dir: state.direction };
       segments.push(seg);
       removePlaceholder();
       addRow(seg);
@@ -982,7 +1049,7 @@
           cloudTranscribe(seg, audio16k);
         } else if (whisper) {
           whisper.postMessage(
-            { type: 'transcribe', id: seg.id, audio: audio16k, model: state.whisperModel, device: whisperDevice() },
+            { type: 'transcribe', id: seg.id, audio: audio16k, model: state.whisperModel, device: whisperDevice(), language: srcWhisperLang() },
             [audio16k.buffer]
           );
         } else {
@@ -1015,10 +1082,21 @@
       if (m.type === 'result') {
         var seg = findSeg(m.id);
         if (!seg) { return; }
-        if (m.ok) { seg.en = m.text; seg.enState = 'done'; seg.error = ''; }
-        else {
+        var dir = seg.dir || 'es-en';
+        if (m.ok) {
+          if (dir === 'es-en') { seg.en = m.text; seg.enState = 'done'; }
+          else if (dir === 'en-es') { seg.es = m.text; seg.esState = 'done'; }
+          else {   // auto: heard text goes in its detected-language column, translation in the other
+            if (m.lang === 'en') { seg.en = seg.heard; seg.es = m.text; }
+            else { seg.es = seg.heard; seg.en = m.text; }
+            seg.esState = 'done'; seg.enState = 'done';
+          }
+          seg.error = '';
+        } else {
           pushLog('error', 'translation error (line ' + m.id + '): ' + m.error);
-          seg.enState = 'error';
+          if (dir === 'en-es') { seg.esState = 'error'; }
+          else if (dir === 'auto') { seg.es = seg.heard || seg.es; seg.esState = 'done'; seg.enState = 'error'; }
+          else { seg.enState = 'error'; }
           seg.error = m.error || 'Translation failed';
         }
         paintRow(seg);
@@ -1040,15 +1118,16 @@
 
     function retrySeg(id) {
       var seg = findSeg(id);
-      if (!seg || !translator || seg.esState !== 'done') { return; }
-      var prev = prevSeg(seg);
-      seg.enState = 'translating';
+      if (!seg || !translator) { return; }
+      var dir = seg.dir || 'es-en';
+      var src = seg.heard || (dir === 'en-es' ? seg.en : seg.es);
+      if (!src) { return; }
+      if (dir === 'es-en') { seg.enState = 'translating'; }
+      else if (dir === 'en-es') { seg.esState = 'translating'; }
+      else { seg.esState = 'translating'; seg.enState = 'translating'; }
       seg.error = '';
       paintRow(seg);
-      translator.postMessage({
-        type: 'translate', id: seg.id, text: seg.es,
-        context: prev ? { es: prev.es, en: prev.enState === 'done' ? prev.en : '' } : null
-      });
+      translator.postMessage({ type: 'translate', id: seg.id, text: src, target: segTarget(seg), context: transCtx(seg) });
     }
 
     // ---- speech model status ----
@@ -1582,6 +1661,7 @@
       }
 
       // populate settings
+      els.direction.value = state.direction;
       els.provider.value = state.provider;
       refreshModelField();
       refreshKeyField();
@@ -1602,6 +1682,11 @@
       updateStatus();
 
       // events
+      els.direction.addEventListener('change', function () {
+        var v = els.direction.value;
+        state.direction = ['es-en', 'en-es', 'auto'].indexOf(v) >= 0 ? v : 'es-en';
+        saveState(); updateControls();
+      });
       els.provider.addEventListener('change', function () {
         state.provider = els.provider.value === 'openai' ? 'openai' : 'anthropic';
         refreshModelField();
