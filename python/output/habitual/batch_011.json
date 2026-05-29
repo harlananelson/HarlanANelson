@@ -1,0 +1,226 @@
+[
+  {
+    "id": "mandar-habitual-0",
+    "verbo": "mandar",
+    "contexto": "mi madre, con frecuencia, a mi hermano a comprar pan",
+    "respuesta": "Mi madre mandaba a mi hermano a comprar pan con frecuencia.",
+    "pista": "Frequently repeated command - use imperfect",
+    "grupos": [["mi madre"], ["mandaba"], ["a mi hermano a comprar pan"], ["con frecuencia"]]
+  },
+  {
+    "id": "mandar-habitual-1",
+    "verbo": "mandar",
+    "contexto": "el jefe, los martes y jueves, correos con instrucciones",
+    "respuesta": "Los martes y jueves, el jefe mandaba correos con instrucciones.",
+    "pista": "Regular scheduled communication - use imperfect",
+    "grupos": [["el jefe"], ["mandaba"], ["correos con instrucciones"], ["los martes y jueves"]]
+  },
+  {
+    "id": "manejar-habitual-0",
+    "verbo": "manejar",
+    "contexto": "mi padre, por las tardes, el taxi por toda la ciudad",
+    "respuesta": "Por las tardes, mi padre manejaba el taxi por toda la ciudad.",
+    "pista": "Daily afternoon work routine - use imperfect",
+    "grupos": [["mi padre"], ["manejaba"], ["el taxi por toda la ciudad"], ["por las tardes"]]
+  },
+  {
+    "id": "manejar-habitual-1",
+    "verbo": "manejar",
+    "contexto": "ella, cuando trabajaba alli, las finanzas de la empresa",
+    "respuesta": "Cuando trabajaba alli, ella manejaba las finanzas de la empresa.",
+    "pista": "Habitual workplace responsibility - use imperfect",
+    "grupos": [["ella"], ["manejaba"], ["las finanzas de la empresa"], ["cuando trabajaba alli"]]
+  },
+  {
+    "id": "mantener-habitual-0",
+    "verbo": "mantener",
+    "contexto": "mi abuela, en aquellos tiempos, la casa impecable",
+    "respuesta": "En aquellos tiempos, mi abuela mantenia la casa impecable.",
+    "pista": "Habitual past care - use imperfect",
+    "grupos": [["mi abuela"], ["mantenia"], ["la casa impecable"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "mantener-habitual-1",
+    "verbo": "mantener",
+    "contexto": "nosotros, semana tras semana, el jardin bien cuidado",
+    "respuesta": "Semana tras semana, nosotros manteniamos el jardin bien cuidado.",
+    "pista": "Repeated weekly maintenance - use imperfect",
+    "grupos": [["nosotros"], ["manteniamos"], ["el jardin bien cuidado"], ["semana tras semana"]]
+  },
+  {
+    "id": "marchar-habitual-0",
+    "verbo": "marchar",
+    "contexto": "los soldados, en aquellos tiempos, por las calles del pueblo",
+    "respuesta": "En aquellos tiempos, los soldados marchaban por las calles del pueblo.",
+    "pista": "Habitual past marching - use imperfect",
+    "grupos": [["los soldados"], ["marchaban"], ["por las calles del pueblo"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "marchar-habitual-1",
+    "verbo": "marchar",
+    "contexto": "todo, durante la infancia, bien en nuestra familia",
+    "respuesta": "Durante la infancia, todo marchaba bien en nuestra familia.",
+    "pista": "Ongoing childhood state - use imperfect",
+    "grupos": [["todo"], ["marchaba"], ["bien en nuestra familia"], ["durante la infancia"]]
+  },
+  {
+    "id": "matar-habitual-0",
+    "verbo": "matar",
+    "contexto": "el gato, con frecuencia, ratones en el granero",
+    "respuesta": "El gato mataba ratones en el granero con frecuencia.",
+    "pista": "Frequently repeated hunting - use imperfect",
+    "grupos": [["el gato"], ["mataba"], ["ratones en el granero"], ["con frecuencia"]]
+  },
+  {
+    "id": "matar-habitual-1",
+    "verbo": "matar",
+    "contexto": "el aburrimiento, los domingos, a los jovenes del pueblo",
+    "respuesta": "Los domingos, el aburrimiento mataba a los jovenes del pueblo.",
+    "pista": "Regular Sunday boredom (figurative) - use imperfect",
+    "grupos": [["el aburrimiento"], ["mataba"], ["a los jovenes del pueblo"], ["los domingos"]]
+  },
+  {
+    "id": "mencionar-habitual-0",
+    "verbo": "mencionar",
+    "contexto": "mi abuelo, por las tardes, sus aventuras de juventud",
+    "respuesta": "Por las tardes, mi abuelo mencionaba sus aventuras de juventud.",
+    "pista": "Daily afternoon storytelling - use imperfect",
+    "grupos": [["mi abuelo"], ["mencionaba"], ["sus aventuras de juventud"], ["por las tardes"]]
+  },
+  {
+    "id": "mencionar-habitual-1",
+    "verbo": "mencionar",
+    "contexto": "la profesora, con frecuencia, la importancia de leer",
+    "respuesta": "La profesora mencionaba la importancia de leer con frecuencia.",
+    "pista": "Frequently repeated reminder - use imperfect",
+    "grupos": [["la profesora"], ["mencionaba"], ["la importancia de leer"], ["con frecuencia"]]
+  },
+  {
+    "id": "mentir-habitual-0",
+    "verbo": "mentir",
+    "contexto": "mi hermano, durante la infancia, sobre sus notas del colegio",
+    "respuesta": "Durante la infancia, mi hermano mentia sobre sus notas del colegio.",
+    "pista": "Childhood habitual deception - use imperfect",
+    "grupos": [["mi hermano"], ["mentia"], ["sobre sus notas del colegio"], ["durante la infancia"]]
+  },
+  {
+    "id": "mentir-habitual-1",
+    "verbo": "mentir",
+    "contexto": "el politico, en aquellos tiempos, a la gente sin verguenza",
+    "respuesta": "En aquellos tiempos, el politico mentia a la gente sin verguenza.",
+    "pista": "Habitual past deception - use imperfect",
+    "grupos": [["el politico"], ["mentia"], ["a la gente sin verguenza"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "merecer-habitual-0",
+    "verbo": "merecer",
+    "contexto": "ella, en aquellos tiempos, mas reconocimiento por su trabajo",
+    "respuesta": "En aquellos tiempos, ella merecia mas reconocimiento por su trabajo.",
+    "pista": "Ongoing past state - use imperfect",
+    "grupos": [["ella"], ["merecia"], ["mas reconocimiento por su trabajo"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "merecer-habitual-1",
+    "verbo": "merecer",
+    "contexto": "los estudiantes, semana tras semana, mejores oportunidades",
+    "respuesta": "Semana tras semana, los estudiantes merecian mejores oportunidades.",
+    "pista": "Ongoing repeated state - use imperfect",
+    "grupos": [["los estudiantes"], ["merecian"], ["mejores oportunidades"], ["semana tras semana"]]
+  },
+  {
+    "id": "meter-habitual-0",
+    "verbo": "meter",
+    "contexto": "yo, los domingos, la ropa sucia en la lavadora",
+    "respuesta": "Los domingos, yo metia la ropa sucia en la lavadora.",
+    "pista": "Regular Sunday chore - use imperfect",
+    "grupos": [["yo"], ["metia"], ["la ropa sucia en la lavadora"], ["los domingos"]]
+  },
+  {
+    "id": "meter-habitual-1",
+    "verbo": "meter",
+    "contexto": "el nino, con frecuencia, la mano en el tarro de galletas",
+    "respuesta": "El nino metia la mano en el tarro de galletas con frecuencia.",
+    "pista": "Frequently repeated mischief - use imperfect",
+    "grupos": [["el nino"], ["metia"], ["la mano en el tarro de galletas"], ["con frecuencia"]]
+  },
+  {
+    "id": "mirar-habitual-0",
+    "verbo": "mirar",
+    "contexto": "yo, por las tardes, las estrellas desde la terraza",
+    "respuesta": "Por las tardes, yo miraba las estrellas desde la terraza.",
+    "pista": "Daily evening habit - use imperfect",
+    "grupos": [["yo"], ["miraba"], ["las estrellas desde la terraza"], ["por las tardes"]]
+  },
+  {
+    "id": "mirar-habitual-1",
+    "verbo": "mirar",
+    "contexto": "nosotros, cada verano, el atardecer desde la playa",
+    "respuesta": "Cada verano, nosotros mirabamos el atardecer desde la playa.",
+    "pista": "Repeated summer experience - use imperfect",
+    "grupos": [["nosotros"], ["mirabamos"], ["el atardecer desde la playa"], ["cada verano"]]
+  },
+  {
+    "id": "molestar-habitual-0",
+    "verbo": "molestar",
+    "contexto": "el ruido, por las tardes, a los vecinos del piso de abajo",
+    "respuesta": "Por las tardes, el ruido molestaba a los vecinos del piso de abajo.",
+    "pista": "Daily afternoon nuisance - use imperfect",
+    "grupos": [["el ruido"], ["molestaba"], ["a los vecinos del piso de abajo"], ["por las tardes"]]
+  },
+  {
+    "id": "molestar-habitual-1",
+    "verbo": "molestar",
+    "contexto": "a mi, durante la infancia, el olor del pescado frito",
+    "respuesta": "Durante la infancia, a mi me molestaba el olor del pescado frito.",
+    "pista": "Childhood habitual dislike - use imperfect",
+    "grupos": [["a mi"], ["molestaba"], ["el olor del pescado frito"], ["durante la infancia"]]
+  },
+  {
+    "id": "morir-habitual-0",
+    "verbo": "morir",
+    "contexto": "las plantas, cada verano, por falta de agua",
+    "respuesta": "Cada verano, las plantas morian por falta de agua.",
+    "pista": "Repeated seasonal loss - use imperfect",
+    "grupos": [["las plantas"], ["morian"], ["por falta de agua"], ["cada verano"]]
+  },
+  {
+    "id": "morir-habitual-1",
+    "verbo": "morir",
+    "contexto": "yo, en aquellos tiempos, de risa con sus chistes",
+    "respuesta": "En aquellos tiempos, yo moria de risa con sus chistes.",
+    "pista": "Habitual past amusement (figurative) - use imperfect",
+    "grupos": [["yo"], ["moria"], ["de risa con sus chistes"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "mostrar-habitual-0",
+    "verbo": "mostrar",
+    "contexto": "el profesor, los martes y jueves, experimentos en el laboratorio",
+    "respuesta": "Los martes y jueves, el profesor mostraba experimentos en el laboratorio.",
+    "pista": "Regular scheduled demonstration - use imperfect",
+    "grupos": [["el profesor"], ["mostraba"], ["experimentos en el laboratorio"], ["los martes y jueves"]]
+  },
+  {
+    "id": "mostrar-habitual-1",
+    "verbo": "mostrar",
+    "contexto": "ella, con frecuencia, fotos de sus viajes a los amigos",
+    "respuesta": "Ella mostraba fotos de sus viajes a los amigos con frecuencia.",
+    "pista": "Frequently repeated sharing - use imperfect",
+    "grupos": [["ella"], ["mostraba"], ["fotos de sus viajes a los amigos"], ["con frecuencia"]]
+  },
+  {
+    "id": "mover-habitual-0",
+    "verbo": "mover",
+    "contexto": "el viento, por las tardes, las ramas de los arboles",
+    "respuesta": "Por las tardes, el viento movia las ramas de los arboles.",
+    "pista": "Daily recurring event - use imperfect",
+    "grupos": [["el viento"], ["movia"], ["las ramas de los arboles"], ["por las tardes"]]
+  },
+  {
+    "id": "mover-habitual-1",
+    "verbo": "mover",
+    "contexto": "yo, los fines de semana, los muebles para limpiar",
+    "respuesta": "Los fines de semana, yo movia los muebles para limpiar.",
+    "pista": "Regular weekend cleaning - use imperfect",
+    "grupos": [["yo"], ["movia"], ["los muebles para limpiar"], ["los fines de semana"]]
+  }
+]

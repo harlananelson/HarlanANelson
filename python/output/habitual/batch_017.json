@@ -1,0 +1,562 @@
+[
+  {
+    "id": "senalar-habitual-0",
+    "verbo": "senalar",
+    "contexto": "el profesor, con frecuencia, los errores en la pizarra",
+    "respuesta": "El profesor senalaba los errores en la pizarra con frecuencia.",
+    "pista": "Frequently repeated teaching action - use imperfect",
+    "grupos": [["el profesor"], ["senalaba"], ["los errores en la pizarra"], ["con frecuencia"]]
+  },
+  {
+    "id": "senalar-habitual-1",
+    "verbo": "senalar",
+    "contexto": "mi abuela, durante la infancia, las estrellas en el cielo nocturno",
+    "respuesta": "Durante la infancia, mi abuela senalaba las estrellas en el cielo nocturno.",
+    "pista": "Childhood habitual wonder - use imperfect",
+    "grupos": [["mi abuela"], ["senalaba"], ["las estrellas en el cielo nocturno"], ["durante la infancia"]]
+  },
+  {
+    "id": "sentar-habitual-0",
+    "verbo": "sentar",
+    "contexto": "mi abuelo, por las tardes, en su sillon favorito",
+    "respuesta": "Por las tardes, mi abuelo sentaba en su sillon favorito.",
+    "pista": "Daily afternoon habit - use imperfect",
+    "grupos": [["mi abuelo"], ["sentaba"], ["en su sillon favorito"], ["por las tardes"]]
+  },
+  {
+    "id": "sentar-habitual-1",
+    "verbo": "sentar",
+    "contexto": "nosotros, los domingos, a la mesa todos juntos",
+    "respuesta": "Los domingos, nosotros sentabamos a la mesa todos juntos.",
+    "pista": "Regular Sunday family gathering - use imperfect",
+    "grupos": [["nosotros"], ["sentabamos"], ["a la mesa todos juntos"], ["los domingos"]]
+  },
+  {
+    "id": "sentir-habitual-0",
+    "verbo": "sentir",
+    "contexto": "yo, cada verano, el calor del sol en la piel",
+    "respuesta": "Cada verano, yo sentia el calor del sol en la piel.",
+    "pista": "Repeated summer sensation - use imperfect",
+    "grupos": [["yo"], ["sentia"], ["el calor del sol en la piel"], ["cada verano"]]
+  },
+  {
+    "id": "sentir-habitual-1",
+    "verbo": "sentir",
+    "contexto": "nosotros, en aquellos tiempos, nostalgia por nuestra tierra",
+    "respuesta": "En aquellos tiempos, nosotros sentiamos nostalgia por nuestra tierra.",
+    "pista": "Habitual past feeling - use imperfect",
+    "grupos": [["nosotros"], ["sentiamos"], ["nostalgia por nuestra tierra"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "ser-habitual-0",
+    "verbo": "ser",
+    "contexto": "yo, durante la infancia, muy timido con los desconocidos",
+    "respuesta": "Durante la infancia, yo era muy timido con los desconocidos.",
+    "pista": "Ongoing childhood characteristic - use imperfect (irregular: ser -> era)",
+    "grupos": [["yo"], ["era"], ["muy timido con los desconocidos"], ["durante la infancia"]]
+  },
+  {
+    "id": "ser-habitual-1",
+    "verbo": "ser",
+    "contexto": "las noches, en aquellos tiempos, largas y silenciosas",
+    "respuesta": "En aquellos tiempos, las noches eran largas y silenciosas.",
+    "pista": "Habitual past state - use imperfect (irregular: ser -> era)",
+    "grupos": [["las noches"], ["eran"], ["largas y silenciosas"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "servir-habitual-0",
+    "verbo": "servir",
+    "contexto": "mi abuela, los domingos, la sopa en platos de porcelana",
+    "respuesta": "Los domingos, mi abuela servia la sopa en platos de porcelana.",
+    "pista": "Regular Sunday tradition - use imperfect",
+    "grupos": [["mi abuela"], ["servia"], ["la sopa en platos de porcelana"], ["los domingos"]]
+  },
+  {
+    "id": "servir-habitual-1",
+    "verbo": "servir",
+    "contexto": "el restaurante, cuando vivia en Madrid, tapas hasta medianoche",
+    "respuesta": "Cuando vivia en Madrid, el restaurante servia tapas hasta medianoche.",
+    "pista": "Habitual service during time in Madrid - use imperfect",
+    "grupos": [["el restaurante"], ["servia"], ["tapas hasta medianoche"], ["cuando vivia en madrid"]]
+  },
+  {
+    "id": "significar-habitual-0",
+    "verbo": "significar",
+    "contexto": "su apoyo, en aquellos tiempos, mucho para mi",
+    "respuesta": "En aquellos tiempos, su apoyo significaba mucho para mi.",
+    "pista": "Habitual past meaning - use imperfect",
+    "grupos": [["su apoyo"], ["significaba"], ["mucho para mi"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "significar-habitual-1",
+    "verbo": "significar",
+    "contexto": "la Navidad, durante la infancia, regalos y alegria",
+    "respuesta": "Durante la infancia, la Navidad significaba regalos y alegria.",
+    "pista": "Childhood habitual meaning - use imperfect",
+    "grupos": [["la navidad"], ["significaba"], ["regalos y alegria"], ["durante la infancia"]]
+  },
+  {
+    "id": "soler-habitual-0",
+    "verbo": "soler",
+    "contexto": "nosotros, cada verano, ir de camping al lago",
+    "respuesta": "Cada verano, nosotros soliamos ir de camping al lago.",
+    "pista": "Repeated summer habit - use imperfect",
+    "grupos": [["nosotros"], ["soliamos"], ["ir de camping al lago"], ["cada verano"]]
+  },
+  {
+    "id": "soler-habitual-1",
+    "verbo": "soler",
+    "contexto": "yo, por las tardes, leer en el jardin",
+    "respuesta": "Por las tardes, yo solia leer en el jardin.",
+    "pista": "Daily afternoon habit - use imperfect",
+    "grupos": [["yo"], ["solia"], ["leer en el jardin"], ["por las tardes"]]
+  },
+  {
+    "id": "soltar-habitual-0",
+    "verbo": "soltar",
+    "contexto": "mi abuelo, con frecuencia, carcajadas que se oian en toda la casa",
+    "respuesta": "Mi abuelo soltaba carcajadas que se oian en toda la casa con frecuencia.",
+    "pista": "Frequently repeated laughter - use imperfect",
+    "grupos": [["mi abuelo"], ["soltaba"], ["carcajadas que se oian en toda la casa"], ["con frecuencia"]]
+  },
+  {
+    "id": "soltar-habitual-1",
+    "verbo": "soltar",
+    "contexto": "el nino, durante la infancia, globos al cielo en las fiestas",
+    "respuesta": "Durante la infancia, el nino soltaba globos al cielo en las fiestas.",
+    "pista": "Childhood habitual celebration - use imperfect",
+    "grupos": [["el nino"], ["soltaba"], ["globos al cielo en las fiestas"], ["durante la infancia"]]
+  },
+  {
+    "id": "sonar-habitual-0",
+    "verbo": "sonar",
+    "contexto": "las campanas, los domingos, a las doce del mediodia",
+    "respuesta": "Los domingos, las campanas sonaban a las doce del mediodia.",
+    "pista": "Regular Sunday occurrence - use imperfect",
+    "grupos": [["las campanas"], ["sonaban"], ["a las doce del mediodia"], ["los domingos"]]
+  },
+  {
+    "id": "sonar-habitual-1",
+    "verbo": "sonar",
+    "contexto": "el telefono, por las tardes, sin parar en la oficina",
+    "respuesta": "Por las tardes, el telefono sonaba sin parar en la oficina.",
+    "pista": "Daily afternoon occurrence - use imperfect",
+    "grupos": [["el telefono"], ["sonaba"], ["sin parar en la oficina"], ["por las tardes"]]
+  },
+  {
+    "id": "subir-habitual-0",
+    "verbo": "subir",
+    "contexto": "yo, los martes y jueves, las escaleras corriendo",
+    "respuesta": "Los martes y jueves, yo subia las escaleras corriendo.",
+    "pista": "Regular scheduled activity - use imperfect",
+    "grupos": [["yo"], ["subia"], ["las escaleras corriendo"], ["los martes y jueves"]]
+  },
+  {
+    "id": "subir-habitual-1",
+    "verbo": "subir",
+    "contexto": "los precios, ano tras ano, sin parar",
+    "respuesta": "Ano tras ano, los precios subian sin parar.",
+    "pista": "Repeated yearly pattern - use imperfect",
+    "grupos": [["los precios"], ["subian"], ["sin parar"], ["ano tras ano"]]
+  },
+  {
+    "id": "suceder-habitual-0",
+    "verbo": "suceder",
+    "contexto": "cosas raras, con frecuencia, en el pueblo antiguo",
+    "respuesta": "Cosas raras sucedian en el pueblo antiguo con frecuencia.",
+    "pista": "Frequently repeated occurrences - use imperfect",
+    "grupos": [["cosas raras"], ["sucedian"], ["en el pueblo antiguo"], ["con frecuencia"]]
+  },
+  {
+    "id": "suceder-habitual-1",
+    "verbo": "suceder",
+    "contexto": "los accidentes, en aquellos tiempos, en la curva peligrosa",
+    "respuesta": "En aquellos tiempos, los accidentes sucedian en la curva peligrosa.",
+    "pista": "Habitual past occurrence - use imperfect",
+    "grupos": [["los accidentes"], ["sucedian"], ["en la curva peligrosa"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "sufrir-habitual-0",
+    "verbo": "sufrir",
+    "contexto": "mi abuela, en aquellos tiempos, de dolores de espalda",
+    "respuesta": "En aquellos tiempos, mi abuela sufria de dolores de espalda.",
+    "pista": "Habitual past suffering - use imperfect",
+    "grupos": [["mi abuela"], ["sufria"], ["de dolores de espalda"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "sufrir-habitual-1",
+    "verbo": "sufrir",
+    "contexto": "los campesinos, cada verano, por la falta de lluvia",
+    "respuesta": "Cada verano, los campesinos sufrian por la falta de lluvia.",
+    "pista": "Repeated seasonal hardship - use imperfect",
+    "grupos": [["los campesinos"], ["sufrian"], ["por la falta de lluvia"], ["cada verano"]]
+  },
+  {
+    "id": "superar-habitual-0",
+    "verbo": "superar",
+    "contexto": "ella, semana tras semana, sus propios limites",
+    "respuesta": "Semana tras semana, ella superaba sus propios limites.",
+    "pista": "Repeated weekly achievement - use imperfect",
+    "grupos": [["ella"], ["superaba"], ["sus propios limites"], ["semana tras semana"]]
+  },
+  {
+    "id": "superar-habitual-1",
+    "verbo": "superar",
+    "contexto": "nosotros, en mis anos de universidad, las dificultades juntos",
+    "respuesta": "En mis anos de universidad, nosotros superabamos las dificultades juntos.",
+    "pista": "Habitual university resilience - use imperfect",
+    "grupos": [["nosotros"], ["superabamos"], ["las dificultades juntos"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "suponer-habitual-0",
+    "verbo": "suponer",
+    "contexto": "yo, en aquellos tiempos, que todo saldria bien",
+    "respuesta": "En aquellos tiempos, yo suponia que todo saldria bien.",
+    "pista": "Habitual past assumption - use imperfect",
+    "grupos": [["yo"], ["suponia"], ["que todo saldria bien"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "suponer-habitual-1",
+    "verbo": "suponer",
+    "contexto": "el viaje, antes del accidente, una gran aventura para nosotros",
+    "respuesta": "Antes del accidente, el viaje suponia una gran aventura para nosotros.",
+    "pista": "Habitual past expectation - use imperfect",
+    "grupos": [["el viaje"], ["suponia"], ["una gran aventura para nosotros"], ["antes del accidente"]]
+  },
+  {
+    "id": "temer-habitual-0",
+    "verbo": "temer",
+    "contexto": "yo, durante la infancia, la oscuridad de la noche",
+    "respuesta": "Durante la infancia, yo temia la oscuridad de la noche.",
+    "pista": "Childhood habitual fear - use imperfect",
+    "grupos": [["yo"], ["temia"], ["la oscuridad de la noche"], ["durante la infancia"]]
+  },
+  {
+    "id": "temer-habitual-1",
+    "verbo": "temer",
+    "contexto": "los marineros, en aquellos tiempos, las tormentas del atlantico",
+    "respuesta": "En aquellos tiempos, los marineros temian las tormentas del atlantico.",
+    "pista": "Habitual past fear - use imperfect",
+    "grupos": [["los marineros"], ["temian"], ["las tormentas del atlantico"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "tener-habitual-0",
+    "verbo": "tener",
+    "contexto": "nosotros, durante la infancia, un gato naranja muy grande",
+    "respuesta": "Durante la infancia, nosotros teniamos un gato naranja muy grande.",
+    "pista": "Ongoing childhood possession - use imperfect",
+    "grupos": [["nosotros"], ["teniamos"], ["un gato naranja muy grande"], ["durante la infancia"]]
+  },
+  {
+    "id": "tener-habitual-1",
+    "verbo": "tener",
+    "contexto": "yo, en mis anos de universidad, mucha energia para todo",
+    "respuesta": "En mis anos de universidad, yo tenia mucha energia para todo.",
+    "pista": "Ongoing university state - use imperfect",
+    "grupos": [["yo"], ["tenia"], ["mucha energia para todo"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "terminar-habitual-0",
+    "verbo": "terminar",
+    "contexto": "las clases, en aquellos tiempos, a las tres de la tarde",
+    "respuesta": "En aquellos tiempos, las clases terminaban a las tres de la tarde.",
+    "pista": "Habitual past schedule - use imperfect",
+    "grupos": [["las clases"], ["terminaban"], ["a las tres de la tarde"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "terminar-habitual-1",
+    "verbo": "terminar",
+    "contexto": "yo, los fines de semana, los deberes antes de jugar",
+    "respuesta": "Los fines de semana, yo terminaba los deberes antes de jugar.",
+    "pista": "Regular weekend routine - use imperfect",
+    "grupos": [["yo"], ["terminaba"], ["los deberes antes de jugar"], ["los fines de semana"]]
+  },
+  {
+    "id": "tirar-habitual-0",
+    "verbo": "tirar",
+    "contexto": "los ninos, por las tardes, piedras al rio",
+    "respuesta": "Por las tardes, los ninos tiraban piedras al rio.",
+    "pista": "Daily afternoon play - use imperfect",
+    "grupos": [["los ninos"], ["tiraban"], ["piedras al rio"], ["por las tardes"]]
+  },
+  {
+    "id": "tirar-habitual-1",
+    "verbo": "tirar",
+    "contexto": "mi abuela, con frecuencia, la comida que sobraba",
+    "respuesta": "Mi abuela tiraba la comida que sobraba con frecuencia.",
+    "pista": "Frequently repeated action - use imperfect",
+    "grupos": [["mi abuela"], ["tiraba"], ["la comida que sobraba"], ["con frecuencia"]]
+  },
+  {
+    "id": "tocar-habitual-0",
+    "verbo": "tocar",
+    "contexto": "mi padre, por las tardes, la guitarra en el porche",
+    "respuesta": "Por las tardes, mi padre tocaba la guitarra en el porche.",
+    "pista": "Daily afternoon music - use imperfect",
+    "grupos": [["mi padre"], ["tocaba"], ["la guitarra en el porche"], ["por las tardes"]]
+  },
+  {
+    "id": "tocar-habitual-1",
+    "verbo": "tocar",
+    "contexto": "las campanas, los domingos, al mediodia en la iglesia",
+    "respuesta": "Los domingos, las campanas tocaban al mediodia en la iglesia.",
+    "pista": "Regular Sunday ringing - use imperfect",
+    "grupos": [["las campanas"], ["tocaban"], ["al mediodia en la iglesia"], ["los domingos"]]
+  },
+  {
+    "id": "tomar-habitual-0",
+    "verbo": "tomar",
+    "contexto": "yo, por las tardes, te con galletas en la terraza",
+    "respuesta": "Por las tardes, yo tomaba te con galletas en la terraza.",
+    "pista": "Daily afternoon snack - use imperfect",
+    "grupos": [["yo"], ["tomaba"], ["te con galletas en la terraza"], ["por las tardes"]]
+  },
+  {
+    "id": "tomar-habitual-1",
+    "verbo": "tomar",
+    "contexto": "nosotros, cada verano, el sol en la playa del pueblo",
+    "respuesta": "Cada verano, nosotros tomabamos el sol en la playa del pueblo.",
+    "pista": "Repeated summer activity - use imperfect",
+    "grupos": [["nosotros"], ["tomabamos"], ["el sol en la playa del pueblo"], ["cada verano"]]
+  },
+  {
+    "id": "trabajar-habitual-0",
+    "verbo": "trabajar",
+    "contexto": "mi padre, en aquellos tiempos, de sol a sol en el campo",
+    "respuesta": "En aquellos tiempos, mi padre trabajaba de sol a sol en el campo.",
+    "pista": "Habitual past labor - use imperfect",
+    "grupos": [["mi padre"], ["trabajaba"], ["de sol a sol en el campo"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "trabajar-habitual-1",
+    "verbo": "trabajar",
+    "contexto": "yo, los fines de semana, en la tienda de mi tio",
+    "respuesta": "Los fines de semana, yo trabajaba en la tienda de mi tio.",
+    "pista": "Regular weekend job - use imperfect",
+    "grupos": [["yo"], ["trabajaba"], ["en la tienda de mi tio"], ["los fines de semana"]]
+  },
+  {
+    "id": "traer-habitual-0",
+    "verbo": "traer",
+    "contexto": "mi tio, cada verano, regalos de sus viajes",
+    "respuesta": "Cada verano, mi tio traia regalos de sus viajes.",
+    "pista": "Repeated summer gifts - use imperfect",
+    "grupos": [["mi tio"], ["traia"], ["regalos de sus viajes"], ["cada verano"]]
+  },
+  {
+    "id": "traer-habitual-1",
+    "verbo": "traer",
+    "contexto": "mi madre, los domingos, pan recien hecho de la panaderia",
+    "respuesta": "Los domingos, mi madre traia pan recien hecho de la panaderia.",
+    "pista": "Regular Sunday tradition - use imperfect",
+    "grupos": [["mi madre"], ["traia"], ["pan recien hecho de la panaderia"], ["los domingos"]]
+  },
+  {
+    "id": "tranquilar-habitual-0",
+    "verbo": "tranquilar",
+    "contexto": "mi madre, por las tardes, a mi hermano pequeno con cuentos",
+    "respuesta": "Por las tardes, mi madre tranquilaba a mi hermano pequeno con cuentos.",
+    "pista": "Daily afternoon calming - use imperfect",
+    "grupos": [["mi madre"], ["tranquilaba"], ["a mi hermano pequeno con cuentos"], ["por las tardes"]]
+  },
+  {
+    "id": "tranquilar-habitual-1",
+    "verbo": "tranquilar",
+    "contexto": "la musica, durante la infancia, mis nervios antes de dormir",
+    "respuesta": "Durante la infancia, la musica tranquilaba mis nervios antes de dormir.",
+    "pista": "Childhood habitual soothing - use imperfect",
+    "grupos": [["la musica"], ["tranquilaba"], ["mis nervios antes de dormir"], ["durante la infancia"]]
+  },
+  {
+    "id": "tratar-habitual-0",
+    "verbo": "tratar",
+    "contexto": "el doctor, en aquellos tiempos, a los pacientes con mucho respeto",
+    "respuesta": "En aquellos tiempos, el doctor trataba a los pacientes con mucho respeto.",
+    "pista": "Habitual past care - use imperfect",
+    "grupos": [["el doctor"], ["trataba"], ["a los pacientes con mucho respeto"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "tratar-habitual-1",
+    "verbo": "tratar",
+    "contexto": "yo, semana tras semana, de mejorar mi pronunciacion",
+    "respuesta": "Semana tras semana, yo trataba de mejorar mi pronunciacion.",
+    "pista": "Repeated weekly effort - use imperfect",
+    "grupos": [["yo"], ["trataba"], ["de mejorar mi pronunciacion"], ["semana tras semana"]]
+  },
+  {
+    "id": "unir-habitual-0",
+    "verbo": "unir",
+    "contexto": "la musica, los fines de semana, a toda la comunidad",
+    "respuesta": "Los fines de semana, la musica unia a toda la comunidad.",
+    "pista": "Regular weekend unity - use imperfect",
+    "grupos": [["la musica"], ["unia"], ["a toda la comunidad"], ["los fines de semana"]]
+  },
+  {
+    "id": "unir-habitual-1",
+    "verbo": "unir",
+    "contexto": "las fiestas, cada verano, a las familias del barrio",
+    "respuesta": "Cada verano, las fiestas unian a las familias del barrio.",
+    "pista": "Repeated summer gathering - use imperfect",
+    "grupos": [["las fiestas"], ["unian"], ["a las familias del barrio"], ["cada verano"]]
+  },
+  {
+    "id": "usar-habitual-0",
+    "verbo": "usar",
+    "contexto": "mi abuela, en aquellos tiempos, remedios naturales para todo",
+    "respuesta": "En aquellos tiempos, mi abuela usaba remedios naturales para todo.",
+    "pista": "Habitual past practice - use imperfect",
+    "grupos": [["mi abuela"], ["usaba"], ["remedios naturales para todo"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "usar-habitual-1",
+    "verbo": "usar",
+    "contexto": "yo, durante la infancia, la bicicleta de mi hermano mayor",
+    "respuesta": "Durante la infancia, yo usaba la bicicleta de mi hermano mayor.",
+    "pista": "Childhood habitual use - use imperfect",
+    "grupos": [["yo"], ["usaba"], ["la bicicleta de mi hermano mayor"], ["durante la infancia"]]
+  },
+  {
+    "id": "utilizar-habitual-0",
+    "verbo": "utilizar",
+    "contexto": "el profesor, los martes y jueves, videos para ensenar",
+    "respuesta": "Los martes y jueves, el profesor utilizaba videos para ensenar.",
+    "pista": "Regular scheduled teaching method - use imperfect",
+    "grupos": [["el profesor"], ["utilizaba"], ["videos para ensenar"], ["los martes y jueves"]]
+  },
+  {
+    "id": "utilizar-habitual-1",
+    "verbo": "utilizar",
+    "contexto": "nosotros, cuando trabajaba alli, herramientas muy antiguas",
+    "respuesta": "Cuando trabajaba alli, nosotros utilizabamos herramientas muy antiguas.",
+    "pista": "Habitual workplace practice - use imperfect",
+    "grupos": [["nosotros"], ["utilizabamos"], ["herramientas muy antiguas"], ["cuando trabajaba alli"]]
+  },
+  {
+    "id": "valer-habitual-0",
+    "verbo": "valer",
+    "contexto": "un cafe, en aquellos tiempos, solo unas pocas pesetas",
+    "respuesta": "En aquellos tiempos, un cafe valia solo unas pocas pesetas.",
+    "pista": "Habitual past price - use imperfect",
+    "grupos": [["un cafe"], ["valia"], ["solo unas pocas pesetas"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "valer-habitual-1",
+    "verbo": "valer",
+    "contexto": "la pena, cada verano, el viaje largo hasta la costa",
+    "respuesta": "Cada verano, valia la pena el viaje largo hasta la costa.",
+    "pista": "Repeated summer worthiness - use imperfect",
+    "grupos": [["la pena"], ["valia"], ["el viaje largo hasta la costa"], ["cada verano"]]
+  },
+  {
+    "id": "vender-habitual-0",
+    "verbo": "vender",
+    "contexto": "el panadero, por las tardes, el pan que sobraba a mitad de precio",
+    "respuesta": "Por las tardes, el panadero vendia el pan que sobraba a mitad de precio.",
+    "pista": "Daily afternoon sale - use imperfect",
+    "grupos": [["el panadero"], ["vendia"], ["el pan que sobraba a mitad de precio"], ["por las tardes"]]
+  },
+  {
+    "id": "vender-habitual-1",
+    "verbo": "vender",
+    "contexto": "los comerciantes, los fines de semana, frutas y verduras en el mercado",
+    "respuesta": "Los fines de semana, los comerciantes vendian frutas y verduras en el mercado.",
+    "pista": "Regular weekend market - use imperfect",
+    "grupos": [["los comerciantes"], ["vendian"], ["frutas y verduras en el mercado"], ["los fines de semana"]]
+  },
+  {
+    "id": "venir-habitual-0",
+    "verbo": "venir",
+    "contexto": "mis primos, cada verano, a visitarnos al pueblo",
+    "respuesta": "Cada verano, mis primos venian a visitarnos al pueblo.",
+    "pista": "Repeated summer visits - use imperfect",
+    "grupos": [["mis primos"], ["venian"], ["a visitarnos al pueblo"], ["cada verano"]]
+  },
+  {
+    "id": "venir-habitual-1",
+    "verbo": "venir",
+    "contexto": "el cartero, los martes y jueves, a las diez de la manana",
+    "respuesta": "Los martes y jueves, el cartero venia a las diez de la manana.",
+    "pista": "Regular scheduled arrival - use imperfect",
+    "grupos": [["el cartero"], ["venia"], ["a las diez de la manana"], ["los martes y jueves"]]
+  },
+  {
+    "id": "ver-habitual-0",
+    "verbo": "ver",
+    "contexto": "nosotros, los domingos, peliculas en familia por la noche",
+    "respuesta": "Los domingos, nosotros veiamos peliculas en familia por la noche.",
+    "pista": "Regular Sunday movie night - use imperfect (irregular: ver -> veia)",
+    "grupos": [["nosotros"], ["veiamos"], ["peliculas en familia por la noche"], ["los domingos"]]
+  },
+  {
+    "id": "ver-habitual-1",
+    "verbo": "ver",
+    "contexto": "yo, cada verano, las estrellas fugaces en agosto",
+    "respuesta": "Cada verano, yo veia las estrellas fugaces en agosto.",
+    "pista": "Repeated summer observation - use imperfect (irregular: ver -> veia)",
+    "grupos": [["yo"], ["veia"], ["las estrellas fugaces en agosto"], ["cada verano"]]
+  },
+  {
+    "id": "viajar-habitual-0",
+    "verbo": "viajar",
+    "contexto": "nosotros, cada verano, a la costa con la familia",
+    "respuesta": "Cada verano, nosotros viajabamos a la costa con la familia.",
+    "pista": "Repeated summer travel - use imperfect",
+    "grupos": [["nosotros"], ["viajabamos"], ["a la costa con la familia"], ["cada verano"]]
+  },
+  {
+    "id": "viajar-habitual-1",
+    "verbo": "viajar",
+    "contexto": "mi abuelo, en aquellos tiempos, en tren por toda Europa",
+    "respuesta": "En aquellos tiempos, mi abuelo viajaba en tren por toda Europa.",
+    "pista": "Habitual past travel - use imperfect",
+    "grupos": [["mi abuelo"], ["viajaba"], ["en tren por toda europa"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "vivir-habitual-0",
+    "verbo": "vivir",
+    "contexto": "nosotros, en aquellos tiempos, en una casa pequena cerca del rio",
+    "respuesta": "En aquellos tiempos, nosotros viviamos en una casa pequena cerca del rio.",
+    "pista": "Habitual past living situation - use imperfect",
+    "grupos": [["nosotros"], ["viviamos"], ["en una casa pequena cerca del rio"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "vivir-habitual-1",
+    "verbo": "vivir",
+    "contexto": "yo, durante la infancia, sin preocupaciones ni miedos",
+    "respuesta": "Durante la infancia, yo vivia sin preocupaciones ni miedos.",
+    "pista": "Childhood habitual state - use imperfect",
+    "grupos": [["yo"], ["vivia"], ["sin preocupaciones ni miedos"], ["durante la infancia"]]
+  },
+  {
+    "id": "volar-habitual-0",
+    "verbo": "volar",
+    "contexto": "los pajaros, cada verano, sobre los campos de trigo",
+    "respuesta": "Cada verano, los pajaros volaban sobre los campos de trigo.",
+    "pista": "Repeated seasonal flight - use imperfect",
+    "grupos": [["los pajaros"], ["volaban"], ["sobre los campos de trigo"], ["cada verano"]]
+  },
+  {
+    "id": "volar-habitual-1",
+    "verbo": "volar",
+    "contexto": "yo, en mis ratos libres, cometas en el parque",
+    "respuesta": "En mis ratos libres, yo volaba cometas en el parque.",
+    "pista": "Habitual free-time activity - use imperfect",
+    "grupos": [["yo"], ["volaba"], ["cometas en el parque"], ["en mis ratos libres"]]
+  },
+  {
+    "id": "volver-habitual-0",
+    "verbo": "volver",
+    "contexto": "nosotros, los domingos, a casa antes del anochecer",
+    "respuesta": "Los domingos, nosotros volviamos a casa antes del anochecer.",
+    "pista": "Regular Sunday return - use imperfect",
+    "grupos": [["nosotros"], ["volviamos"], ["a casa antes del anochecer"], ["los domingos"]]
+  },
+  {
+    "id": "volver-habitual-1",
+    "verbo": "volver",
+    "contexto": "yo, semana tras semana, al mismo cafe a leer",
+    "respuesta": "Semana tras semana, yo volvia al mismo cafe a leer.",
+    "pista": "Repeated weekly routine - use imperfect",
+    "grupos": [["yo"], ["volvia"], ["al mismo cafe a leer"], ["semana tras semana"]]
+  }
+]

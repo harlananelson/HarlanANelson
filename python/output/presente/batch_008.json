@@ -1,0 +1,884 @@
+[
+  {
+    "id": "gritar-presente-0",
+    "verbo": "gritar",
+    "contexto": "yo, cada vez que, de alegría",
+    "respuesta": "Yo grito de alegría cada vez que.",
+    "pista": "expressing joy",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "grito"
+      ],
+      [
+        "de alegria"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "gritar-presente-1",
+    "verbo": "gritar",
+    "contexto": "ellos, cada semana, en el estadio",
+    "respuesta": "Cada semana, ellos gritan en el estadio.",
+    "pista": "narrating a sports event",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "gritan"
+      ],
+      [
+        "en el estadio"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "gritar-presente-2",
+    "verbo": "gritar",
+    "contexto": "tú, hoy, demasiado fuerte",
+    "respuesta": "Hoy, tú gritas demasiado fuerte.",
+    "pista": "commenting on volume",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "gritas"
+      ],
+      [
+        "demasiado fuerte"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "guardar-presente-0",
+    "verbo": "guardar",
+    "contexto": "yo, mientras, los documentos importantes",
+    "respuesta": "Yo guardo los documentos importantes mientras.",
+    "pista": "describing organization",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "guardo"
+      ],
+      [
+        "los documentos importantes"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "guardar-presente-1",
+    "verbo": "guardar",
+    "contexto": "tú, cada semana, el secreto",
+    "respuesta": "Cada semana, tú guardas el secreto.",
+    "pista": "talking about trust",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "guardas"
+      ],
+      [
+        "el secreto"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "guardar-presente-2",
+    "verbo": "guardar",
+    "contexto": "nosotros, actualmente, comida para mañana",
+    "respuesta": "Nosotros guardamos comida para mañana actualmente.",
+    "pista": "describing meal planning",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "guardamos"
+      ],
+      [
+        "comida para manana"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "gustar-presente-0",
+    "verbo": "gustar",
+    "contexto": "yo, cada vez que, a mis vecinos",
+    "respuesta": "Cada vez que, yo gusto a mis vecinos.",
+    "pista": "expressing being liked",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "gusto"
+      ],
+      [
+        "a mis vecinos"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "gustar-presente-1",
+    "verbo": "gustar",
+    "contexto": "ella, mientras, a todo el mundo",
+    "respuesta": "Ella gusta a todo el mundo mientras.",
+    "pista": "describing someone's popularity",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "gusta"
+      ],
+      [
+        "a todo el mundo"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "gustar-presente-2",
+    "verbo": "gustar",
+    "contexto": "nosotros, normalmente, a nuestros profesores",
+    "respuesta": "Nosotros gustamos a nuestros profesores normalmente.",
+    "pista": "expressing teacher approval",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "gustamos"
+      ],
+      [
+        "a nuestros profesores"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "haber-presente-0",
+    "verbo": "haber",
+    "contexto": "yo, mientras, terminado el trabajo",
+    "respuesta": "Yo he terminado el trabajo mientras.",
+    "pista": "expressing completed actions",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "he"
+      ],
+      [
+        "terminado el trabajo"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "haber-presente-1",
+    "verbo": "haber",
+    "contexto": "tú, en este momento, estudiado mucho",
+    "respuesta": "Tú has estudiado mucho en este momento.",
+    "pista": "describing effort",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "has"
+      ],
+      [
+        "estudiado mucho"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "haber-presente-2",
+    "verbo": "haber",
+    "contexto": "nosotros, esta noche, llegado temprano",
+    "respuesta": "Esta noche, nosotros hemos llegado temprano.",
+    "pista": "narrating timely arrival",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "hemos"
+      ],
+      [
+        "llegado temprano"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "hablar-presente-0",
+    "verbo": "hablar",
+    "contexto": "yo, por lo general, con mi amigo",
+    "respuesta": "Yo hablo con mi amigo por lo general.",
+    "pista": "describing conversation",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "hablo"
+      ],
+      [
+        "con mi amigo"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "hablar-presente-1",
+    "verbo": "hablar",
+    "contexto": "ella, ahora mismo, tres idiomas",
+    "respuesta": "Ella habla tres idiomas ahora mismo.",
+    "pista": "narrating language skills",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "habla"
+      ],
+      [
+        "tres idiomas"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "hablar-presente-2",
+    "verbo": "hablar",
+    "contexto": "nosotros, esta noche, sobre el futuro",
+    "respuesta": "Nosotros hablamos sobre el futuro esta noche.",
+    "pista": "discussing plans",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "hablamos"
+      ],
+      [
+        "sobre el futuro"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "hacer-presente-0",
+    "verbo": "hacer",
+    "contexto": "yo, por lo general, la cena",
+    "respuesta": "Por lo general, yo hago la cena.",
+    "pista": "describing cooking",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "hago"
+      ],
+      [
+        "la cena"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "hacer-presente-1",
+    "verbo": "hacer",
+    "contexto": "tú, actualmente, ejercicio",
+    "respuesta": "Tú haces ejercicio actualmente.",
+    "pista": "talking about fitness",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "haces"
+      ],
+      [
+        "ejercicio"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "hacer-presente-2",
+    "verbo": "hacer",
+    "contexto": "nosotros, esta tarde, planes para el fin de semana",
+    "respuesta": "Esta tarde, nosotros hacemos planes para el fin de semana.",
+    "pista": "planning activities",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "hacemos"
+      ],
+      [
+        "planes para el fin de semana"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "hallar-presente-0",
+    "verbo": "hallar",
+    "contexto": "yo, mientras, la respuesta",
+    "respuesta": "Yo hallo la respuesta mientras.",
+    "pista": "expressing discovery",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "hallo"
+      ],
+      [
+        "la respuesta"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "hallar-presente-1",
+    "verbo": "hallar",
+    "contexto": "ella, por lo general, una solución creativa",
+    "respuesta": "Por lo general, ella halla una solución creativa.",
+    "pista": "narrating problem-solving",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "halla"
+      ],
+      [
+        "una solucion creativa"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "hallar-presente-2",
+    "verbo": "hallar",
+    "contexto": "nosotros, normalmente, el camino correcto",
+    "respuesta": "Nosotros hallamos el camino correcto normalmente.",
+    "pista": "describing navigation",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "hallamos"
+      ],
+      [
+        "el camino correcto"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "huir-presente-0",
+    "verbo": "huir",
+    "contexto": "yo, ahora mismo, del peligro",
+    "respuesta": "Ahora mismo, yo huyo del peligro.",
+    "pista": "expressing escape",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "huyo"
+      ],
+      [
+        "del peligro"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "huir-presente-1",
+    "verbo": "huir",
+    "contexto": "ellos, todos los días, de la tormenta",
+    "respuesta": "Ellos huyen de la tormenta todos los días.",
+    "pista": "narrating weather escape",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "huyen"
+      ],
+      [
+        "de la tormenta"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "huir-presente-2",
+    "verbo": "huir",
+    "contexto": "él, normalmente, de la realidad",
+    "respuesta": "Normalmente, él huye de la realidad.",
+    "pista": "describing avoidance",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "huye"
+      ],
+      [
+        "de la realidad"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "imaginar-presente-0",
+    "verbo": "imaginar",
+    "contexto": "yo, esta mañana, un mundo mejor",
+    "respuesta": "Esta mañana, yo imagino un mundo mejor.",
+    "pista": "expressing idealism",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "imagino"
+      ],
+      [
+        "un mundo mejor"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "imaginar-presente-1",
+    "verbo": "imaginar",
+    "contexto": "tú, cada vez que, las posibilidades",
+    "respuesta": "Tú imaginas las posibilidades cada vez que.",
+    "pista": "encouraging creativity",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "imaginas"
+      ],
+      [
+        "las posibilidades"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "imaginar-presente-2",
+    "verbo": "imaginar",
+    "contexto": "nosotros, cada vez que, el futuro",
+    "respuesta": "Nosotros imaginamos el futuro cada vez que.",
+    "pista": "describing vision",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "imaginamos"
+      ],
+      [
+        "el futuro"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "importar-presente-0",
+    "verbo": "importar",
+    "contexto": "yo, hoy, productos del extranjero",
+    "respuesta": "Hoy, yo importo productos del extranjero.",
+    "pista": "describing imports",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "importo"
+      ],
+      [
+        "productos del extranjero"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "importar-presente-1",
+    "verbo": "importar",
+    "contexto": "ella, siempre, materiales de China",
+    "respuesta": "Ella importa materiales de China siempre.",
+    "pista": "narrating business",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "importa"
+      ],
+      [
+        "materiales de China"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "importar-presente-2",
+    "verbo": "importar",
+    "contexto": "nosotros, todos los días, tecnología nueva",
+    "respuesta": "Nosotros importamos tecnología nueva todos los días.",
+    "pista": "describing acquisition",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "importamos"
+      ],
+      [
+        "tecnologia nueva"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "incluir-presente-0",
+    "verbo": "incluir",
+    "contexto": "yo, hoy, a todos en el plan",
+    "respuesta": "Hoy, yo incluyo a todos en el plan.",
+    "pista": "expressing inclusiveness",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "incluyo"
+      ],
+      [
+        "a todos en el plan"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "incluir-presente-1",
+    "verbo": "incluir",
+    "contexto": "nosotros, actualmente, los detalles en el informe",
+    "respuesta": "Actualmente, nosotros incluimos los detalles en el informe.",
+    "pista": "describing thoroughness",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "incluimos"
+      ],
+      [
+        "los detalles en el informe"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "incluir-presente-2",
+    "verbo": "incluir",
+    "contexto": "ella, normalmente, una nota personal",
+    "respuesta": "Normalmente, ella incluye una nota personal.",
+    "pista": "narrating a thoughtful addition",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "incluye"
+      ],
+      [
+        "una nota personal"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "informar-presente-0",
+    "verbo": "informar",
+    "contexto": "yo, todos los días, a mi jefe",
+    "respuesta": "Yo informo a mi jefe todos los días.",
+    "pista": "describing reporting",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "informo"
+      ],
+      [
+        "a mi jefe"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "informar-presente-1",
+    "verbo": "informar",
+    "contexto": "ella, todos los días, a los medios",
+    "respuesta": "Ella informa a los medios todos los días.",
+    "pista": "narrating a press release",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "informa"
+      ],
+      [
+        "a los medios"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "informar-presente-2",
+    "verbo": "informar",
+    "contexto": "nosotros, ahora mismo, al público",
+    "respuesta": "Nosotros informamos al público ahora mismo.",
+    "pista": "expressing transparency",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "informamos"
+      ],
+      [
+        "al publico"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "intentar-presente-0",
+    "verbo": "intentar",
+    "contexto": "yo, mientras, algo nuevo",
+    "respuesta": "Mientras, yo intento algo nuevo.",
+    "pista": "expressing willingness to try",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "intento"
+      ],
+      [
+        "algo nuevo"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "intentar-presente-1",
+    "verbo": "intentar",
+    "contexto": "tú, actualmente, resolver el problema",
+    "respuesta": "Actualmente, tú intentas resolver el problema.",
+    "pista": "describing effort",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "intentas"
+      ],
+      [
+        "resolver el problema"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "intentar-presente-2",
+    "verbo": "intentar",
+    "contexto": "nosotros, en este momento, mejorar cada día",
+    "respuesta": "En este momento, nosotros intentamos mejorar cada día.",
+    "pista": "expressing aspiration",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "intentamos"
+      ],
+      [
+        "mejorar cada dia"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "interesar-presente-0",
+    "verbo": "interesar",
+    "contexto": "yo, por lo general, a los estudiantes con mi clase",
+    "respuesta": "Yo intereso a los estudiantes con mi clase por lo general.",
+    "pista": "expressing engagement",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "intereso"
+      ],
+      [
+        "a los estudiantes con mi clase"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "interesar-presente-1",
+    "verbo": "interesar",
+    "contexto": "ella, a veces, a los inversores",
+    "respuesta": "Ella interesa a los inversores a veces.",
+    "pista": "narrating a pitch",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "interesa"
+      ],
+      [
+        "a los inversores"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "interesar-presente-2",
+    "verbo": "interesar",
+    "contexto": "nosotros, en este momento, a la audiencia",
+    "respuesta": "Nosotros interesamos a la audiencia en este momento.",
+    "pista": "describing audience capture",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "interesamos"
+      ],
+      [
+        "a la audiencia"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  }
+]

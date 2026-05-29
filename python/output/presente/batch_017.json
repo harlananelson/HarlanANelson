@@ -1,0 +1,884 @@
+[
+  {
+    "id": "traer-presente-0",
+    "verbo": "traer",
+    "contexto": "yo, cada semana, la comida para la fiesta",
+    "respuesta": "Yo traigo la comida para la fiesta cada semana.",
+    "pista": "describing contribution",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "traigo"
+      ],
+      [
+        "la comida para la fiesta"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "traer-presente-1",
+    "verbo": "traer",
+    "contexto": "tú, esta noche, buenas noticias",
+    "respuesta": "Esta noche, tú traes buenas noticias.",
+    "pista": "expressing positive delivery",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "traes"
+      ],
+      [
+        "buenas noticias"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "traer-presente-2",
+    "verbo": "traer",
+    "contexto": "ella, ahora mismo, flores para la oficina",
+    "respuesta": "Ella trae flores para la oficina ahora mismo.",
+    "pista": "narrating a kind gesture",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "trae"
+      ],
+      [
+        "flores para la oficina"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "tranquilar-presente-0",
+    "verbo": "tranquilar",
+    "contexto": "yo, esta tarde, a los pasajeros nerviosos",
+    "respuesta": "Yo tranquilo a los pasajeros nerviosos esta tarde.",
+    "pista": "expressing calming others",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "tranquilo"
+      ],
+      [
+        "a los pasajeros nerviosos"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "tranquilar-presente-1",
+    "verbo": "tranquilar",
+    "contexto": "ella, siempre, a su hijo antes de dormir",
+    "respuesta": "Ella tranquila a su hijo antes de dormir siempre.",
+    "pista": "narrating bedtime routine",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "tranquila"
+      ],
+      [
+        "a su hijo antes de dormir"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "tranquilar-presente-2",
+    "verbo": "tranquilar",
+    "contexto": "nosotros, ahora, a los vecinos preocupados",
+    "respuesta": "Ahora, nosotros tranquilamos a los vecinos preocupados.",
+    "pista": "describing community reassurance",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "tranquilamos"
+      ],
+      [
+        "a los vecinos preocupados"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "tratar-presente-0",
+    "verbo": "tratar",
+    "contexto": "yo, todos los días, de ser amable",
+    "respuesta": "Yo trato de ser amable todos los días.",
+    "pista": "expressing effort to be kind",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "trato"
+      ],
+      [
+        "de ser amable"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "tratar-presente-1",
+    "verbo": "tratar",
+    "contexto": "nosotros, hoy, a todos con respeto",
+    "respuesta": "Nosotros tratamos a todos con respeto hoy.",
+    "pista": "describing respectful behavior",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "tratamos"
+      ],
+      [
+        "a todos con respeto"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "tratar-presente-2",
+    "verbo": "tratar",
+    "contexto": "ella, cada semana, el tema con cuidado",
+    "respuesta": "Ella trata el tema con cuidado cada semana.",
+    "pista": "narrating tactful discussion",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "trata"
+      ],
+      [
+        "el tema con cuidado"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "unir-presente-0",
+    "verbo": "unir",
+    "contexto": "nosotros, en este momento, fuerzas para el proyecto",
+    "respuesta": "Nosotros unamos fuerzas para el proyecto en este momento.",
+    "pista": "expressing collaboration",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "unamos"
+      ],
+      [
+        "fuerzas para el proyecto"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "unir-presente-1",
+    "verbo": "unir",
+    "contexto": "yo, hoy, las piezas del rompecabezas",
+    "respuesta": "Yo uno las piezas del rompecabezas hoy.",
+    "pista": "describing assembly",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "uno"
+      ],
+      [
+        "las piezas del rompecabezas"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "unir-presente-2",
+    "verbo": "unir",
+    "contexto": "ella, esta tarde, a la familia en momentos difíciles",
+    "respuesta": "Esta tarde, ella una a la familia en momentos difíciles.",
+    "pista": "narrating family unity",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "una"
+      ],
+      [
+        "a la familia en momentos dificiles"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "usar-presente-0",
+    "verbo": "usar",
+    "contexto": "yo, siempre, el transporte público",
+    "respuesta": "Yo uso el transporte público siempre.",
+    "pista": "describing commuting",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "uso"
+      ],
+      [
+        "el transporte publico"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "usar-presente-1",
+    "verbo": "usar",
+    "contexto": "tú, todos los días, mucha tecnología",
+    "respuesta": "Tú usas mucha tecnología todos los días.",
+    "pista": "talking about tech habits",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "usas"
+      ],
+      [
+        "mucha tecnologia"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "usar-presente-2",
+    "verbo": "usar",
+    "contexto": "nosotros, esta tarde, materiales reciclados",
+    "respuesta": "Esta tarde, nosotros usamos materiales reciclados.",
+    "pista": "expressing eco-friendly choices",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "usamos"
+      ],
+      [
+        "materiales reciclados"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "utilizar-presente-0",
+    "verbo": "utilizar",
+    "contexto": "yo, ahora, herramientas modernas",
+    "respuesta": "Yo utilizo herramientas modernas ahora.",
+    "pista": "describing tool usage",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "utilizo"
+      ],
+      [
+        "herramientas modernas"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "utilizar-presente-1",
+    "verbo": "utilizar",
+    "contexto": "nosotros, en este momento, energía renovable",
+    "respuesta": "En este momento, nosotros utilizamos energía renovable.",
+    "pista": "expressing sustainability",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "utilizamos"
+      ],
+      [
+        "energia renovable"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "utilizar-presente-2",
+    "verbo": "utilizar",
+    "contexto": "ella, cada vez que, métodos innovadores",
+    "respuesta": "Cada vez que, ella utiliza métodos innovadores.",
+    "pista": "narrating creative approaches",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "utiliza"
+      ],
+      [
+        "metodos innovadores"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "valer-presente-0",
+    "verbo": "valer",
+    "contexto": "eso, a veces, mucho dinero",
+    "respuesta": "Eso vale mucho dinero a veces.",
+    "pista": "expressing value",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "vale"
+      ],
+      [
+        "mucho dinero"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "valer-presente-1",
+    "verbo": "valer",
+    "contexto": "yo, hoy, por mis habilidades",
+    "respuesta": "Hoy, yo valgo por mis habilidades.",
+    "pista": "expressing self-worth",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "valgo"
+      ],
+      [
+        "por mis habilidades"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "valer-presente-2",
+    "verbo": "valer",
+    "contexto": "el esfuerzo, esta tarde, la pena",
+    "respuesta": "El esfuerzo vale la pena esta tarde.",
+    "pista": "describing worthwhile effort",
+    "grupos": [
+      [
+        "el esfuerzo"
+      ],
+      [
+        "vale"
+      ],
+      [
+        "la pena"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "vender-presente-0",
+    "verbo": "vender",
+    "contexto": "yo, ahora mismo, productos artesanales",
+    "respuesta": "Ahora mismo, yo vendo productos artesanales.",
+    "pista": "describing a business",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "vendo"
+      ],
+      [
+        "productos artesanales"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "vender-presente-1",
+    "verbo": "vender",
+    "contexto": "tú, cada semana, tu coche viejo",
+    "respuesta": "Tú vendes tu coche viejo cada semana.",
+    "pista": "talking about selling possessions",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "vendes"
+      ],
+      [
+        "tu coche viejo"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "vender-presente-2",
+    "verbo": "vender",
+    "contexto": "nosotros, cada vez que, servicios de consultoría",
+    "respuesta": "Nosotros vendemos servicios de consultoría cada vez que.",
+    "pista": "describing professional offerings",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "vendemos"
+      ],
+      [
+        "servicios de consultoria"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "venir-presente-0",
+    "verbo": "venir",
+    "contexto": "yo, ahora mismo, de una familia grande",
+    "respuesta": "Ahora mismo, yo vengo de una familia grande.",
+    "pista": "expressing origin",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "vengo"
+      ],
+      [
+        "de una familia grande"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "venir-presente-1",
+    "verbo": "venir",
+    "contexto": "ella, cada semana, a la reunión puntual",
+    "respuesta": "Ella viene a la reunión puntual cada semana.",
+    "pista": "narrating punctuality",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "viene"
+      ],
+      [
+        "a la reunion puntual"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "venir-presente-2",
+    "verbo": "venir",
+    "contexto": "ellos, ahora mismo, de muy lejos",
+    "respuesta": "Ellos vienen de muy lejos ahora mismo.",
+    "pista": "describing long-distance travel",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "vienen"
+      ],
+      [
+        "de muy lejos"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "ver-presente-0",
+    "verbo": "ver",
+    "contexto": "yo, esta tarde, una película interesante",
+    "respuesta": "Esta tarde, yo veo una película interesante.",
+    "pista": "describing entertainment",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "veo"
+      ],
+      [
+        "una pelicula interesante"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "ver-presente-1",
+    "verbo": "ver",
+    "contexto": "tú, esta mañana, el partido de fútbol",
+    "respuesta": "Esta mañana, tú ves el partido de fútbol.",
+    "pista": "talking about watching sports",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "ves"
+      ],
+      [
+        "el partido de futbol"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "ver-presente-2",
+    "verbo": "ver",
+    "contexto": "nosotros, ahora mismo, las noticias juntos",
+    "respuesta": "Nosotros vemos las noticias juntos ahora mismo.",
+    "pista": "describing a shared activity",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "vemos"
+      ],
+      [
+        "las noticias juntos"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "viajar-presente-0",
+    "verbo": "viajar",
+    "contexto": "yo, cada vez que, por Europa",
+    "respuesta": "Cada vez que, yo viajo por Europa.",
+    "pista": "describing travel",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "viajo"
+      ],
+      [
+        "por Europa"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "viajar-presente-1",
+    "verbo": "viajar",
+    "contexto": "ella, esta tarde, por trabajo",
+    "respuesta": "Ella viaja por trabajo esta tarde.",
+    "pista": "narrating business travel",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "viaja"
+      ],
+      [
+        "por trabajo"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "viajar-presente-2",
+    "verbo": "viajar",
+    "contexto": "nosotros, siempre, en tren",
+    "respuesta": "Siempre, nosotros viajamos en tren.",
+    "pista": "describing a mode of transport",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "viajamos"
+      ],
+      [
+        "en tren"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "vivir-presente-0",
+    "verbo": "vivir",
+    "contexto": "yo, cada vez que, en una ciudad grande",
+    "respuesta": "Yo vivo en una ciudad grande cada vez que.",
+    "pista": "expressing where I live",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "vivo"
+      ],
+      [
+        "en una ciudad grande"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "vivir-presente-1",
+    "verbo": "vivir",
+    "contexto": "tú, todos los días, cerca del centro",
+    "respuesta": "Tú vives cerca del centro todos los días.",
+    "pista": "describing location",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "vives"
+      ],
+      [
+        "cerca del centro"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "vivir-presente-2",
+    "verbo": "vivir",
+    "contexto": "nosotros, esta tarde, una vida tranquila",
+    "respuesta": "Esta tarde, nosotros vivimos una vida tranquila.",
+    "pista": "expressing lifestyle",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "vivimos"
+      ],
+      [
+        "una vida tranquila"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "volar-presente-0",
+    "verbo": "volar",
+    "contexto": "yo, siempre, a Madrid",
+    "respuesta": "Yo vuelo a Madrid siempre.",
+    "pista": "describing air travel",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "vuelo"
+      ],
+      [
+        "a Madrid"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "volar-presente-1",
+    "verbo": "volar",
+    "contexto": "nosotros, esta tarde, en primera clase",
+    "respuesta": "Nosotros volamos en primera clase esta tarde.",
+    "pista": "describing travel luxury",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "volamos"
+      ],
+      [
+        "en primera clase"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "volar-presente-2",
+    "verbo": "volar",
+    "contexto": "ella, a veces, a su destino favorito",
+    "respuesta": "Ella vuela a su destino favorito a veces.",
+    "pista": "narrating travel plans",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "vuela"
+      ],
+      [
+        "a su destino favorito"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "volver-presente-0",
+    "verbo": "volver",
+    "contexto": "yo, siempre, a casa después del trabajo",
+    "respuesta": "Siempre, yo vuelvo a casa después del trabajo.",
+    "pista": "describing return home",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "vuelvo"
+      ],
+      [
+        "a casa despues del trabajo"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "volver-presente-1",
+    "verbo": "volver",
+    "contexto": "tú, todos los días, a intentar",
+    "respuesta": "Tú vuelves a intentar todos los días.",
+    "pista": "encouraging persistence",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "vuelves"
+      ],
+      [
+        "a intentar"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "volver-presente-2",
+    "verbo": "volver",
+    "contexto": "nosotros, a veces, al mismo lugar cada año",
+    "respuesta": "A veces, nosotros volvemos al mismo lugar cada año.",
+    "pista": "describing tradition",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "volvemos"
+      ],
+      [
+        "al mismo lugar cada ano"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  }
+]

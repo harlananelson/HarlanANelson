@@ -1,0 +1,266 @@
+[
+  {
+    "id": "golpear-subj_pluscuam-0",
+    "verbo": "golpear",
+    "contexto": "Si el, la pelota, mas fuerte, habria marcado un gol",
+    "respuesta": "Si el hubiera golpeado la pelota mas fuerte, habria marcado un gol.",
+    "pista": "Pluperfect subjunctive for insufficient force in the past.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["golpeado"], ["el"], ["la pelota"]]
+  },
+  {
+    "id": "golpear-subj_pluscuam-1",
+    "verbo": "golpear",
+    "contexto": "No creia que ella, la mesa, con tanta furia",
+    "respuesta": "No creia que ella hubiera golpeado la mesa con tanta furia.",
+    "pista": "Disbelief about hitting something in anger.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["golpeado"], ["ella"], ["la mesa"]]
+  },
+  {
+    "id": "golpear-subj_pluscuam-2",
+    "verbo": "golpear",
+    "contexto": "Era imposible que tu, al otro jugador, sin intencion",
+    "respuesta": "Era imposible que tu hubieras golpeado al otro jugador sin intencion.",
+    "pista": "Past impossibility of accidentally hitting someone.",
+    "grupos": [["era imposible que"], ["hubieras", "hubieses"], ["golpeado"], ["tu"], ["al otro jugador"]]
+  },
+  {
+    "id": "gritar-subj_pluscuam-0",
+    "verbo": "gritar",
+    "contexto": "Si yo, mas fuerte, alguien habria venido",
+    "respuesta": "Si yo hubiera gritado mas fuerte, alguien habria venido.",
+    "pista": "Pluperfect subjunctive for not shouting loud enough.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["gritado"], ["yo"], ["mas fuerte"]]
+  },
+  {
+    "id": "gritar-subj_pluscuam-1",
+    "verbo": "gritar",
+    "contexto": "Dudaba que ella, de alegria, al recibir la noticia",
+    "respuesta": "Dudaba que ella hubiera gritado de alegria al recibir la noticia.",
+    "pista": "Doubt about shouting with joy.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["gritado"], ["ella"], ["de alegria"]]
+  },
+  {
+    "id": "gritar-subj_pluscuam-2",
+    "verbo": "gritar",
+    "contexto": "Como si nosotros, como locos, en medio de la calle",
+    "respuesta": "Nos miraban como si nosotros hubieramos gritado como locos en medio de la calle.",
+    "pista": "Como si + pluperfect subjunctive for perceived crazy behavior.",
+    "grupos": [["como si"], ["hubieramos", "hubiesemos"], ["gritado"], ["nosotros"], ["como locos"]]
+  },
+  {
+    "id": "guardar-subj_pluscuam-0",
+    "verbo": "guardar",
+    "contexto": "Si tu, el secreto, nada habria pasado",
+    "respuesta": "Si tu hubieras guardado el secreto, nada habria pasado.",
+    "pista": "Pluperfect subjunctive for revealing a secret.",
+    "grupos": [["si"], ["hubieras", "hubieses"], ["guardado"], ["tu"], ["el secreto"]]
+  },
+  {
+    "id": "guardar-subj_pluscuam-1",
+    "verbo": "guardar",
+    "contexto": "No creia que el, tanto dinero, debajo del colchon",
+    "respuesta": "No creia que el hubiera guardado tanto dinero debajo del colchon.",
+    "pista": "Disbelief about hiding money under a mattress.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["guardado"], ["el"], ["tanto dinero"]]
+  },
+  {
+    "id": "guardar-subj_pluscuam-2",
+    "verbo": "guardar",
+    "contexto": "Ojala nosotros, los recuerdos, en un lugar seguro",
+    "respuesta": "Ojala nosotros hubieramos guardado los recuerdos en un lugar seguro.",
+    "pista": "Wishing you had kept mementos safe.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["guardado"], ["nosotros"], ["los recuerdos"]]
+  },
+  {
+    "id": "gustar-subj_pluscuam-0",
+    "verbo": "gustar",
+    "contexto": "Si la pelicula, a todos, habriamos ido otra vez",
+    "respuesta": "Si la pelicula hubiera gustado a todos, habriamos ido otra vez.",
+    "pista": "Pluperfect subjunctive for hypothetical universal enjoyment.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["gustado"], ["la pelicula"], ["a todos"]]
+  },
+  {
+    "id": "gustar-subj_pluscuam-1",
+    "verbo": "gustar",
+    "contexto": "Dudaba que la comida, a los invitados, de verdad",
+    "respuesta": "Dudaba que la comida hubiera gustado a los invitados de verdad.",
+    "pista": "Doubt about whether guests liked the food.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["gustado"], ["la comida"], ["a los invitados"]]
+  },
+  {
+    "id": "gustar-subj_pluscuam-2",
+    "verbo": "gustar",
+    "contexto": "No creia que el regalo, a mi esposa, tanto",
+    "respuesta": "No creia que el regalo hubiera gustado a mi esposa tanto.",
+    "pista": "Disbelief about how much a gift was liked.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["gustado"], ["el regalo"], ["a mi esposa"]]
+  },
+  {
+    "id": "haber-subj_pluscuam-0",
+    "verbo": "haber",
+    "contexto": "Si, mas tiempo, habriamos terminado",
+    "respuesta": "Si hubiera habido mas tiempo, habriamos terminado.",
+    "pista": "Pluperfect subjunctive for insufficient past time.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["habido"], ["mas tiempo"], ["habriamos terminado"]]
+  },
+  {
+    "id": "haber-subj_pluscuam-1",
+    "verbo": "haber",
+    "contexto": "Dudaba que, suficientes recursos, para el proyecto",
+    "respuesta": "Dudaba que hubiera habido suficientes recursos para el proyecto.",
+    "pista": "Doubt about past resource availability.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["habido"], ["suficientes recursos"], ["para el proyecto"]]
+  },
+  {
+    "id": "haber-subj_pluscuam-2",
+    "verbo": "haber",
+    "contexto": "Ojala, otra oportunidad, para intentarlo",
+    "respuesta": "Ojala hubiera habido otra oportunidad para intentarlo.",
+    "pista": "Wishing there had been another chance.",
+    "grupos": [["ojala"], ["hubiera", "hubiese"], ["habido"], ["otra oportunidad"], ["para intentarlo"]]
+  },
+  {
+    "id": "hablar-subj_pluscuam-0",
+    "verbo": "hablar",
+    "contexto": "Si yo, con ella, antes de la decision",
+    "respuesta": "Si yo hubiera hablado con ella antes de la decision, todo seria diferente.",
+    "pista": "Pluperfect subjunctive for not communicating in time.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["hablado"], ["yo"], ["con ella"]]
+  },
+  {
+    "id": "hablar-subj_pluscuam-1",
+    "verbo": "hablar",
+    "contexto": "Dudaba que tu, con el director, directamente",
+    "respuesta": "Dudaba que tu hubieras hablado con el director directamente.",
+    "pista": "Doubt about direct communication with authority.",
+    "grupos": [["dudaba que"], ["hubieras", "hubieses"], ["hablado"], ["tu"], ["con el director"]]
+  },
+  {
+    "id": "hablar-subj_pluscuam-2",
+    "verbo": "hablar",
+    "contexto": "Como si nosotros, con el presidente, en persona",
+    "respuesta": "Presumiamos como si nosotros hubieramos hablado con el presidente en persona.",
+    "pista": "Como si + pluperfect subjunctive for boastful claims.",
+    "grupos": [["como si"], ["hubieramos", "hubiesemos"], ["hablado"], ["nosotros"], ["con el presidente"]]
+  },
+  {
+    "id": "hacer-subj_pluscuam-0",
+    "verbo": "hacer",
+    "contexto": "Si ella, la tarea, a tiempo",
+    "respuesta": "Si ella hubiera hecho la tarea a tiempo, habria aprobado.",
+    "pista": "Hacer has an irregular past participle: hecho. Pluperfect subjunctive for undone homework.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["hecho"], ["ella"], ["la tarea"]]
+  },
+  {
+    "id": "hacer-subj_pluscuam-1",
+    "verbo": "hacer",
+    "contexto": "No creia que tu, todo eso, en un solo dia",
+    "respuesta": "No creia que tu hubieras hecho todo eso en un solo dia.",
+    "pista": "Disbelief about accomplishing so much. Irregular participle: hecho.",
+    "grupos": [["no creia que"], ["hubieras", "hubieses"], ["hecho"], ["tu"], ["todo eso"]]
+  },
+  {
+    "id": "hacer-subj_pluscuam-2",
+    "verbo": "hacer",
+    "contexto": "Ojala nosotros, las cosas, de otra manera",
+    "respuesta": "Ojala nosotros hubieramos hecho las cosas de otra manera.",
+    "pista": "Wishing you had done things differently. Irregular participle: hecho.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["hecho"], ["nosotros"], ["las cosas"]]
+  },
+  {
+    "id": "hallar-subj_pluscuam-0",
+    "verbo": "hallar",
+    "contexto": "Si los exploradores, la ruta, antes",
+    "respuesta": "Si los exploradores hubieran hallado la ruta antes, habrian llegado a salvo.",
+    "pista": "Pluperfect subjunctive for not finding something in time.",
+    "grupos": [["si"], ["hubieran", "hubiesen"], ["hallado"], ["los exploradores"], ["la ruta"]]
+  },
+  {
+    "id": "hallar-subj_pluscuam-1",
+    "verbo": "hallar",
+    "contexto": "Dudaba que el, la respuesta, sin calcular",
+    "respuesta": "Dudaba que el hubiera hallado la respuesta sin calcular.",
+    "pista": "Doubt about finding an answer without calculating.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["hallado"], ["el"], ["la respuesta"]]
+  },
+  {
+    "id": "hallar-subj_pluscuam-2",
+    "verbo": "hallar",
+    "contexto": "Era imposible que nosotros, la salida, en la oscuridad",
+    "respuesta": "Era imposible que nosotros hubieramos hallado la salida en la oscuridad.",
+    "pista": "Past impossibility of finding the exit in darkness.",
+    "grupos": [["era imposible que"], ["hubieramos", "hubiesemos"], ["hallado"], ["nosotros"], ["la salida"]]
+  },
+  {
+    "id": "huir-subj_pluscuam-0",
+    "verbo": "huir",
+    "contexto": "Si el, del pais, a tiempo, estaria libre",
+    "respuesta": "Si el hubiera huido del pais a tiempo, estaria libre.",
+    "pista": "Pluperfect subjunctive for not escaping in time.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["huido"], ["el"], ["del pais"]]
+  },
+  {
+    "id": "huir-subj_pluscuam-1",
+    "verbo": "huir",
+    "contexto": "No creia que ella, de su casa, por miedo",
+    "respuesta": "No creia que ella hubiera huido de su casa por miedo.",
+    "pista": "Disbelief about fleeing from fear.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["huido"], ["ella"], ["de su casa"]]
+  },
+  {
+    "id": "huir-subj_pluscuam-2",
+    "verbo": "huir",
+    "contexto": "Como si nosotros, de un incendio, desesperadamente",
+    "respuesta": "Corriamos como si nosotros hubieramos huido de un incendio desesperadamente.",
+    "pista": "Como si + pluperfect subjunctive for panicked flight.",
+    "grupos": [["como si"], ["hubieramos", "hubiesemos"], ["huido"], ["nosotros"], ["de un incendio"]]
+  },
+  {
+    "id": "imaginar-subj_pluscuam-0",
+    "verbo": "imaginar",
+    "contexto": "Si tu, las consecuencias, no habrias actuado asi",
+    "respuesta": "Si tu hubieras imaginado las consecuencias, no habrias actuado asi.",
+    "pista": "Pluperfect subjunctive for lack of foresight.",
+    "grupos": [["si"], ["hubieras", "hubieses"], ["imaginado"], ["tu"], ["las consecuencias"]]
+  },
+  {
+    "id": "imaginar-subj_pluscuam-1",
+    "verbo": "imaginar",
+    "contexto": "Dudaba que ella, un final tan triste, para la historia",
+    "respuesta": "Dudaba que ella hubiera imaginado un final tan triste para la historia.",
+    "pista": "Doubt about imagining a sad ending.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["imaginado"], ["ella"], ["un final tan triste"]]
+  },
+  {
+    "id": "imaginar-subj_pluscuam-2",
+    "verbo": "imaginar",
+    "contexto": "No creia que nosotros, algo tan absurdo, en serio",
+    "respuesta": "No creia que nosotros hubieramos imaginado algo tan absurdo en serio.",
+    "pista": "Disbelief about seriously imagining something absurd.",
+    "grupos": [["no creia que"], ["hubieramos", "hubiesemos"], ["imaginado"], ["nosotros"], ["algo tan absurdo"]]
+  },
+  {
+    "id": "importar-subj_pluscuam-0",
+    "verbo": "importar",
+    "contexto": "Si la decision, a todos, habriamos votado",
+    "respuesta": "Si la decision hubiera importado a todos, habriamos votado.",
+    "pista": "Pluperfect subjunctive for hypothetical universal concern.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["importado"], ["la decision"], ["a todos"]]
+  },
+  {
+    "id": "importar-subj_pluscuam-1",
+    "verbo": "importar",
+    "contexto": "No creia que mi opinion, a nadie, en la empresa",
+    "respuesta": "No creia que mi opinion hubiera importado a nadie en la empresa.",
+    "pista": "Disbelief about opinions mattering.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["importado"], ["mi opinion"], ["a nadie"]]
+  },
+  {
+    "id": "importar-subj_pluscuam-2",
+    "verbo": "importar",
+    "contexto": "Dudaba que el resultado, al publico, de verdad",
+    "respuesta": "Dudaba que el resultado hubiera importado al publico de verdad.",
+    "pista": "Doubt about public interest in a result.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["importado"], ["el resultado"], ["al publico"]]
+  }
+]

@@ -1,0 +1,30 @@
+Generate ADDITIONAL Spanish imperfect (habitual) speech drill exercises to add variety to existing ones.
+
+TENSE: habitual (pretérito imperfecto — habitual/repeated past action)
+CONJUGATION RULES:
+- Regular -ar: hablaba, hablabas, hablaba, hablábamos, hablabais, hablaban
+- Regular -er: comía, comías, comía, comíamos, comíais, comían
+- Regular -ir: vivía, vivías, vivía, vivíamos, vivíais, vivían
+- Only 3 irregulars: era/eras/era (ser), iba/ibas/iba (ir), veía/veías/veía (ver)
+
+NEW TIME PHRASES (different from existing — use diverse mix, no phrase more than 3x total):
+cada verano, los fines de semana, en mis años de universidad, cuando vivía en Madrid, por las tardes, los domingos, en aquellos tiempos, durante la infancia, cuando trabajaba allí, con frecuencia, semana tras semana, año tras año, los martes y jueves, en mis ratos libres, antes del accidente
+
+EXERCISE FORMAT:
+Each exercise must have these 6 fields:
+- id: "{verb}-habitual-{number}" (number will be assigned later, use 0)
+- verbo: the infinitive
+- contexto: subject + NEW time phrase + complement (comma-separated fragments)
+- respuesta: complete sentence with correct imperfect conjugation
+- pista: a hint about habitual/repeated past action
+- grupos: array of arrays, each inner array has the key idea unit
+
+CRITICAL RULES FOR grupos:
+1. Every element in grupos must appear verbatim in respuesta (after accent removal and lowercasing)
+2. grupos elements must NOT contain accented characters
+3. The conjugated verb form is always its own grupo
+4. Include alternative speech recognition forms where relevant
+
+Generate 2 exercises per verb with NEW time phrases. Use different subjects.
+
+OUTPUT: Valid JSON array of exercise objects. Nothing else.

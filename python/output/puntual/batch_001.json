@@ -1,0 +1,242 @@
+[
+  {
+    "id": "andar-puntual-0",
+    "verbo": "andar",
+    "contexto": "nosotros, durante el viaje, por las calles antiguas",
+    "respuesta": "Nosotros anduvimos por las calles antiguas durante el viaje.",
+    "pista": "completed action of walking through old streets during the trip",
+    "grupos": [["nosotros"], ["anduvimos"], ["por las calles antiguas"], ["durante el viaje"]]
+  },
+  {
+    "id": "andar-puntual-1",
+    "verbo": "andar",
+    "contexto": "yo, en la madrugada, por el parque",
+    "respuesta": "Yo anduve por el parque en la madrugada.",
+    "pista": "completed action of walking through the park in the early morning",
+    "grupos": [["yo"], ["anduve"], ["por el parque"], ["en la madrugada"]]
+  },
+  {
+    "id": "aparecer-puntual-0",
+    "verbo": "aparecer",
+    "contexto": "el gato, de repente, en la cocina",
+    "respuesta": "El gato aparecio en la cocina de repente.",
+    "pista": "completed action of the cat appearing in the kitchen suddenly",
+    "grupos": [["el gato"], ["aparecio"], ["en la cocina"], ["de repente"]]
+  },
+  {
+    "id": "aparecer-puntual-1",
+    "verbo": "aparecer",
+    "contexto": "las llaves, al final del dia, en el sofa",
+    "respuesta": "Las llaves aparecieron en el sofa al final del dia.",
+    "pista": "completed action of the keys appearing on the sofa at the end of the day",
+    "grupos": [["las llaves"], ["aparecieron"], ["en el sofa"], ["al final del dia"]]
+  },
+  {
+    "id": "apartar-puntual-0",
+    "verbo": "apartar",
+    "contexto": "yo, justo en ese instante, la mirada",
+    "respuesta": "Yo aparte la mirada justo en ese instante.",
+    "pista": "completed action of looking away at that exact moment",
+    "grupos": [["yo"], ["aparte"], ["la mirada"], ["justo en ese instante"]]
+  },
+  {
+    "id": "apartar-puntual-1",
+    "verbo": "apartar",
+    "contexto": "ella, nada mas llegar, los platos de la mesa",
+    "respuesta": "Ella aparto los platos de la mesa nada mas llegar.",
+    "pista": "completed action of moving the plates off the table right upon arriving",
+    "grupos": [["ella"], ["aparto"], ["los platos de la mesa"], ["nada mas llegar"]]
+  },
+  {
+    "id": "apostar-puntual-0",
+    "verbo": "apostar",
+    "contexto": "el, aquel verano, todo su dinero",
+    "respuesta": "El aposto todo su dinero aquel verano.",
+    "pista": "completed action of betting all his money that summer",
+    "grupos": [["el"], ["aposto"], ["todo su dinero"], ["aquel verano"]]
+  },
+  {
+    "id": "apostar-puntual-1",
+    "verbo": "apostar",
+    "contexto": "nosotros, el martes pasado, por el equipo local",
+    "respuesta": "Nosotros apostamos por el equipo local el martes pasado.",
+    "pista": "completed action of betting on the local team last Tuesday",
+    "grupos": [["nosotros"], ["apostamos"], ["por el equipo local"], ["el martes pasado"]]
+  },
+  {
+    "id": "apoyar-puntual-0",
+    "verbo": "apoyar",
+    "contexto": "ella, en aquel momento, a su hermano",
+    "respuesta": "Ella apoyo a su hermano en aquel momento.",
+    "pista": "completed action of supporting her brother at that moment",
+    "grupos": [["ella"], ["apoyo"], ["a su hermano"], ["en aquel momento"]]
+  },
+  {
+    "id": "apoyar-puntual-1",
+    "verbo": "apoyar",
+    "contexto": "yo, durante la tormenta, la puerta con fuerza",
+    "respuesta": "Yo apoye la puerta con fuerza durante la tormenta.",
+    "pista": "completed action of bracing the door firmly during the storm",
+    "grupos": [["yo"], ["apoye"], ["la puerta con fuerza"], ["durante la tormenta"]]
+  },
+  {
+    "id": "aprender-puntual-0",
+    "verbo": "aprender",
+    "contexto": "tu, aquel verano, a nadar",
+    "respuesta": "Tu aprendiste a nadar aquel verano.",
+    "pista": "completed action of learning to swim that summer",
+    "grupos": [["tu"], ["aprendiste"], ["a nadar"], ["aquel verano"]]
+  },
+  {
+    "id": "aprender-puntual-1",
+    "verbo": "aprender",
+    "contexto": "yo, hace una semana, la leccion",
+    "respuesta": "Yo aprendi la leccion hace una semana.",
+    "pista": "completed action of learning the lesson a week ago",
+    "grupos": [["yo"], ["aprendi"], ["la leccion"], ["hace una semana"]]
+  },
+  {
+    "id": "arreglar-puntual-0",
+    "verbo": "arreglar",
+    "contexto": "el, al mediodia, el coche",
+    "respuesta": "El arreglo el coche al mediodia.",
+    "pista": "completed action of fixing the car at noon",
+    "grupos": [["el"], ["arreglo"], ["el coche"], ["al mediodia"]]
+  },
+  {
+    "id": "arreglar-puntual-1",
+    "verbo": "arreglar",
+    "contexto": "nosotros, hace tres dias, la tuberia",
+    "respuesta": "Nosotros arreglamos la tuberia hace tres dias.",
+    "pista": "completed action of fixing the pipe three days ago",
+    "grupos": [["nosotros"], ["arreglamos"], ["la tuberia"], ["hace tres dias"]]
+  },
+  {
+    "id": "asegurar-puntual-0",
+    "verbo": "asegurar",
+    "contexto": "ella, tras la reunion, la victoria",
+    "respuesta": "Ella aseguro la victoria tras la reunion.",
+    "pista": "completed action of securing the victory after the meeting",
+    "grupos": [["ella"], ["aseguro"], ["la victoria"], ["tras la reunion"]]
+  },
+  {
+    "id": "asegurar-puntual-1",
+    "verbo": "asegurar",
+    "contexto": "yo, esa misma noche, las ventanas",
+    "respuesta": "Yo asegure las ventanas esa misma noche.",
+    "pista": "completed action of securing the windows that very night",
+    "grupos": [["yo"], ["asegure"], ["las ventanas"], ["esa misma noche"]]
+  },
+  {
+    "id": "asesinar-puntual-0",
+    "verbo": "asesinar",
+    "contexto": "el criminal, en la madrugada, al testigo",
+    "respuesta": "El criminal asesino al testigo en la madrugada.",
+    "pista": "completed action of murdering the witness in the early morning",
+    "grupos": [["el criminal"], ["asesino"], ["al testigo"], ["en la madrugada"]]
+  },
+  {
+    "id": "asesinar-puntual-1",
+    "verbo": "asesinar",
+    "contexto": "ellos, aquel verano, al lider",
+    "respuesta": "Ellos asesinaron al lider aquel verano.",
+    "pista": "completed action of assassinating the leader that summer",
+    "grupos": [["ellos"], ["asesinaron"], ["al lider"], ["aquel verano"]]
+  },
+  {
+    "id": "asustar-puntual-0",
+    "verbo": "asustar",
+    "contexto": "el ruido, de repente, a los ninos",
+    "respuesta": "El ruido asusto a los ninos de repente.",
+    "pista": "completed action of the noise scaring the children suddenly",
+    "grupos": [["el ruido"], ["asusto"], ["a los ninos"], ["de repente"]]
+  },
+  {
+    "id": "asustar-puntual-1",
+    "verbo": "asustar",
+    "contexto": "yo, justo en ese instante, a mi hermana",
+    "respuesta": "Yo asuste a mi hermana justo en ese instante.",
+    "pista": "completed action of scaring my sister at that exact moment",
+    "grupos": [["yo"], ["asuste"], ["a mi hermana"], ["justo en ese instante"]]
+  },
+  {
+    "id": "atacar-puntual-0",
+    "verbo": "atacar",
+    "contexto": "el ejercito, al anochecer, la fortaleza",
+    "respuesta": "El ejercito ataco la fortaleza al anochecer.",
+    "pista": "completed action of the army attacking the fortress at nightfall",
+    "grupos": [["el ejercito"], ["ataco"], ["la fortaleza"], ["al anochecer"]]
+  },
+  {
+    "id": "atacar-puntual-1",
+    "verbo": "atacar",
+    "contexto": "yo, en aquel momento, el problema directamente",
+    "respuesta": "Yo ataque el problema directamente en aquel momento.",
+    "pista": "completed action of tackling the problem directly at that moment",
+    "grupos": [["yo"], ["ataque"], ["el problema directamente"], ["en aquel momento"]]
+  },
+  {
+    "id": "atrapar-puntual-0",
+    "verbo": "atrapar",
+    "contexto": "la policia, hace una semana, al ladron",
+    "respuesta": "La policia atrapo al ladron hace una semana.",
+    "pista": "completed action of the police catching the thief a week ago",
+    "grupos": [["la policia"], ["atrapo"], ["al ladron"], ["hace una semana"]]
+  },
+  {
+    "id": "atrapar-puntual-1",
+    "verbo": "atrapar",
+    "contexto": "el, nada mas llegar, la pelota",
+    "respuesta": "El atrapo la pelota nada mas llegar.",
+    "pista": "completed action of catching the ball right upon arriving",
+    "grupos": [["el"], ["atrapo"], ["la pelota"], ["nada mas llegar"]]
+  },
+  {
+    "id": "averiguar-puntual-0",
+    "verbo": "averiguar",
+    "contexto": "yo, al final del dia, la verdad",
+    "respuesta": "Yo averigue la verdad al final del dia.",
+    "pista": "completed action of finding out the truth at the end of the day",
+    "grupos": [["yo"], ["averigue"], ["la verdad"], ["al final del dia"]]
+  },
+  {
+    "id": "averiguar-puntual-1",
+    "verbo": "averiguar",
+    "contexto": "ella, esa misma noche, el secreto",
+    "respuesta": "Ella averiguo el secreto esa misma noche.",
+    "pista": "completed action of finding out the secret that very night",
+    "grupos": [["ella"], ["averiguo"], ["el secreto"], ["esa misma noche"]]
+  },
+  {
+    "id": "ayudar-puntual-0",
+    "verbo": "ayudar",
+    "contexto": "tu, durante la tormenta, a los vecinos",
+    "respuesta": "Tu ayudaste a los vecinos durante la tormenta.",
+    "pista": "completed action of helping the neighbors during the storm",
+    "grupos": [["tu"], ["ayudaste"], ["a los vecinos"], ["durante la tormenta"]]
+  },
+  {
+    "id": "ayudar-puntual-1",
+    "verbo": "ayudar",
+    "contexto": "nosotros, el martes pasado, a preparar la cena",
+    "respuesta": "Nosotros ayudamos a preparar la cena el martes pasado.",
+    "pista": "completed action of helping prepare dinner last Tuesday",
+    "grupos": [["nosotros"], ["ayudamos"], ["a preparar la cena"], ["el martes pasado"]]
+  },
+  {
+    "id": "bailar-puntual-0",
+    "verbo": "bailar",
+    "contexto": "ella, aquel verano, toda la noche",
+    "respuesta": "Ella bailo toda la noche aquel verano.",
+    "pista": "completed action of dancing all night that summer",
+    "grupos": [["ella"], ["bailo"], ["toda la noche"], ["aquel verano"]]
+  },
+  {
+    "id": "bailar-puntual-1",
+    "verbo": "bailar",
+    "contexto": "yo, en la madrugada, con mi pareja",
+    "respuesta": "Yo baile con mi pareja en la madrugada.",
+    "pista": "completed action of dancing with my partner in the early morning",
+    "grupos": [["yo"], ["baile"], ["con mi pareja"], ["en la madrugada"]]
+  }
+]

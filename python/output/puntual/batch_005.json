@@ -1,0 +1,242 @@
+[
+  {
+    "id": "dejar-puntual-0",
+    "verbo": "dejar",
+    "contexto": "ella, al anochecer, las llaves en la mesa",
+    "respuesta": "Ella dejo las llaves en la mesa al anochecer.",
+    "pista": "completed action of leaving the keys on the table at nightfall",
+    "grupos": [["ella"], ["dejo"], ["las llaves en la mesa"], ["al anochecer"]]
+  },
+  {
+    "id": "dejar-puntual-1",
+    "verbo": "dejar",
+    "contexto": "yo, hace tres dias, de fumar",
+    "respuesta": "Yo deje de fumar hace tres dias.",
+    "pista": "completed action of quitting smoking three days ago",
+    "grupos": [["yo"], ["deje"], ["de fumar"], ["hace tres dias"]]
+  },
+  {
+    "id": "demostrar-puntual-0",
+    "verbo": "demostrar",
+    "contexto": "el, tras la reunion, su inocencia",
+    "respuesta": "El demostro su inocencia tras la reunion.",
+    "pista": "completed action of proving his innocence after the meeting",
+    "grupos": [["el"], ["demostro"], ["su inocencia"], ["tras la reunion"]]
+  },
+  {
+    "id": "demostrar-puntual-1",
+    "verbo": "demostrar",
+    "contexto": "ella, en aquel momento, gran valentia",
+    "respuesta": "Ella demostro gran valentia en aquel momento.",
+    "pista": "completed action of demonstrating great courage at that moment",
+    "grupos": [["ella"], ["demostro"], ["gran valentia"], ["en aquel momento"]]
+  },
+  {
+    "id": "depender-puntual-0",
+    "verbo": "depender",
+    "contexto": "todo, en aquel momento, de una decision",
+    "respuesta": "Todo dependio de una decision en aquel momento.",
+    "pista": "completed action of everything depending on one decision at that moment",
+    "grupos": [["todo"], ["dependio"], ["de una decision"], ["en aquel momento"]]
+  },
+  {
+    "id": "depender-puntual-1",
+    "verbo": "depender",
+    "contexto": "el resultado, aquel verano, del clima",
+    "respuesta": "El resultado dependio del clima aquel verano.",
+    "pista": "completed action of the result depending on the weather that summer",
+    "grupos": [["el resultado"], ["dependio"], ["del clima"], ["aquel verano"]]
+  },
+  {
+    "id": "desaparecer-puntual-0",
+    "verbo": "desaparecer",
+    "contexto": "el gato, de repente, del jardin",
+    "respuesta": "El gato desaparecio del jardin de repente.",
+    "pista": "completed action of the cat disappearing from the garden suddenly",
+    "grupos": [["el gato"], ["desaparecio"], ["del jardin"], ["de repente"]]
+  },
+  {
+    "id": "desaparecer-puntual-1",
+    "verbo": "desaparecer",
+    "contexto": "las nubes, al mediodia, del cielo",
+    "respuesta": "Las nubes desaparecieron del cielo al mediodia.",
+    "pista": "completed action of the clouds disappearing from the sky at noon",
+    "grupos": [["las nubes"], ["desaparecieron"], ["del cielo"], ["al mediodia"]]
+  },
+  {
+    "id": "desarrollar-puntual-0",
+    "verbo": "desarrollar",
+    "contexto": "ellos, aquel verano, un nuevo producto",
+    "respuesta": "Ellos desarrollaron un nuevo producto aquel verano.",
+    "pista": "completed action of developing a new product that summer",
+    "grupos": [["ellos"], ["desarrollaron"], ["un nuevo producto"], ["aquel verano"]]
+  },
+  {
+    "id": "desarrollar-puntual-1",
+    "verbo": "desarrollar",
+    "contexto": "yo, hace una semana, la idea",
+    "respuesta": "Yo desarrolle la idea hace una semana.",
+    "pista": "completed action of developing the idea a week ago",
+    "grupos": [["yo"], ["desarrolle"], ["la idea"], ["hace una semana"]]
+  },
+  {
+    "id": "descubrir-puntual-0",
+    "verbo": "descubrir",
+    "contexto": "ella, esa misma noche, la verdad",
+    "respuesta": "Ella descubrio la verdad esa misma noche.",
+    "pista": "completed action of discovering the truth that very night",
+    "grupos": [["ella"], ["descubrio"], ["la verdad"], ["esa misma noche"]]
+  },
+  {
+    "id": "descubrir-puntual-1",
+    "verbo": "descubrir",
+    "contexto": "nosotros, durante el viaje, un lugar magico",
+    "respuesta": "Nosotros descubrimos un lugar magico durante el viaje.",
+    "pista": "completed action of discovering a magical place during the trip",
+    "grupos": [["nosotros"], ["descubrimos"], ["un lugar magico"], ["durante el viaje"]]
+  },
+  {
+    "id": "desear-puntual-0",
+    "verbo": "desear",
+    "contexto": "yo, en aquel momento, estar lejos",
+    "respuesta": "Yo desee estar lejos en aquel momento.",
+    "pista": "completed action of wishing to be far away at that moment",
+    "grupos": [["yo"], ["desee"], ["estar lejos"], ["en aquel momento"]]
+  },
+  {
+    "id": "desear-puntual-1",
+    "verbo": "desear",
+    "contexto": "ella, justo en ese instante, volver a casa",
+    "respuesta": "Ella deseo volver a casa justo en ese instante.",
+    "pista": "completed action of wishing to go home at that exact moment",
+    "grupos": [["ella"], ["deseo"], ["volver a casa"], ["justo en ese instante"]]
+  },
+  {
+    "id": "despedir-puntual-0",
+    "verbo": "despedir",
+    "contexto": "el jefe, el martes pasado, a tres empleados",
+    "respuesta": "El jefe despidio a tres empleados el martes pasado.",
+    "pista": "completed action of the boss firing three employees last Tuesday",
+    "grupos": [["el jefe"], ["despidio"], ["a tres empleados"], ["el martes pasado"]]
+  },
+  {
+    "id": "despedir-puntual-1",
+    "verbo": "despedir",
+    "contexto": "nosotros, al anochecer, a nuestros amigos",
+    "respuesta": "Nosotros despedimos a nuestros amigos al anochecer.",
+    "pista": "completed action of saying goodbye to our friends at nightfall",
+    "grupos": [["nosotros"], ["despedimos"], ["a nuestros amigos"], ["al anochecer"]]
+  },
+  {
+    "id": "despertar-puntual-0",
+    "verbo": "despertar",
+    "contexto": "yo, en la madrugada, con un ruido extrano",
+    "respuesta": "Yo desperte con un ruido extrano en la madrugada.",
+    "pista": "completed action of waking up to a strange noise in the early morning",
+    "grupos": [["yo"], ["desperte"], ["con un ruido extrano"], ["en la madrugada"]]
+  },
+  {
+    "id": "despertar-puntual-1",
+    "verbo": "despertar",
+    "contexto": "ella, a las dos en punto, a los ninos",
+    "respuesta": "Ella desperto a los ninos a las dos en punto.",
+    "pista": "completed action of waking the children at two o'clock",
+    "grupos": [["ella"], ["desperto"], ["a los ninos"], ["a las dos en punto"]]
+  },
+  {
+    "id": "destruir-puntual-0",
+    "verbo": "destruir",
+    "contexto": "la tormenta, aquel verano, el puente",
+    "respuesta": "La tormenta destruyo el puente aquel verano.",
+    "pista": "completed action of the storm destroying the bridge that summer",
+    "grupos": [["la tormenta"], ["destruyo"], ["el puente"], ["aquel verano"]]
+  },
+  {
+    "id": "destruir-puntual-1",
+    "verbo": "destruir",
+    "contexto": "ellos, hace tres dias, las pruebas",
+    "respuesta": "Ellos destruyeron las pruebas hace tres dias.",
+    "pista": "completed action of destroying the evidence three days ago",
+    "grupos": [["ellos"], ["destruyeron"], ["las pruebas"], ["hace tres dias"]]
+  },
+  {
+    "id": "detener-puntual-0",
+    "verbo": "detener",
+    "contexto": "la policia, al mediodia, al sospechoso",
+    "respuesta": "La policia detuvo al sospechoso al mediodia.",
+    "pista": "completed action of the police arresting the suspect at noon",
+    "grupos": [["la policia"], ["detuvo"], ["al sospechoso"], ["al mediodia"]]
+  },
+  {
+    "id": "detener-puntual-1",
+    "verbo": "detener",
+    "contexto": "yo, justo en ese instante, el coche",
+    "respuesta": "Yo detuve el coche justo en ese instante.",
+    "pista": "completed action of stopping the car at that exact moment",
+    "grupos": [["yo"], ["detuve"], ["el coche"], ["justo en ese instante"]]
+  },
+  {
+    "id": "devolver-puntual-0",
+    "verbo": "devolver",
+    "contexto": "el, hace una semana, el libro a la biblioteca",
+    "respuesta": "El devolvio el libro a la biblioteca hace una semana.",
+    "pista": "completed action of returning the book to the library a week ago",
+    "grupos": [["el"], ["devolvio"], ["el libro a la biblioteca"], ["hace una semana"]]
+  },
+  {
+    "id": "devolver-puntual-1",
+    "verbo": "devolver",
+    "contexto": "yo, nada mas llegar, el dinero",
+    "respuesta": "Yo devolvi el dinero nada mas llegar.",
+    "pista": "completed action of returning the money right upon arriving",
+    "grupos": [["yo"], ["devolvi"], ["el dinero"], ["nada mas llegar"]]
+  },
+  {
+    "id": "dirigir-puntual-0",
+    "verbo": "dirigir",
+    "contexto": "ella, aquel verano, la empresa",
+    "respuesta": "Ella dirigio la empresa aquel verano.",
+    "pista": "completed action of directing the company that summer",
+    "grupos": [["ella"], ["dirigio"], ["la empresa"], ["aquel verano"]]
+  },
+  {
+    "id": "dirigir-puntual-1",
+    "verbo": "dirigir",
+    "contexto": "yo, durante el viaje, al grupo",
+    "respuesta": "Yo dirigi al grupo durante el viaje.",
+    "pista": "completed action of leading the group during the trip",
+    "grupos": [["yo"], ["dirigi"], ["al grupo"], ["durante el viaje"]]
+  },
+  {
+    "id": "disculpar-puntual-0",
+    "verbo": "disculpar",
+    "contexto": "ella, tras la reunion, a su companero",
+    "respuesta": "Ella disculpo a su companero tras la reunion.",
+    "pista": "completed action of excusing her colleague after the meeting",
+    "grupos": [["ella"], ["disculpo"], ["a su companero"], ["tras la reunion"]]
+  },
+  {
+    "id": "disculpar-puntual-1",
+    "verbo": "disculpar",
+    "contexto": "yo, de repente, mi comportamiento",
+    "respuesta": "Yo disculpe mi comportamiento de repente.",
+    "pista": "completed action of apologizing for my behavior suddenly",
+    "grupos": [["yo"], ["disculpe"], ["mi comportamiento"], ["de repente"]]
+  },
+  {
+    "id": "discutir-puntual-0",
+    "verbo": "discutir",
+    "contexto": "ellos, esa misma noche, el problema",
+    "respuesta": "Ellos discutieron el problema esa misma noche.",
+    "pista": "completed action of discussing the problem that very night",
+    "grupos": [["ellos"], ["discutieron"], ["el problema"], ["esa misma noche"]]
+  },
+  {
+    "id": "discutir-puntual-1",
+    "verbo": "discutir",
+    "contexto": "nosotros, al final del dia, las opciones",
+    "respuesta": "Nosotros discutimos las opciones al final del dia.",
+    "pista": "completed action of discussing the options at the end of the day",
+    "grupos": [["nosotros"], ["discutimos"], ["las opciones"], ["al final del dia"]]
+  }
+]

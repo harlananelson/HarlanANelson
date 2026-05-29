@@ -1,0 +1,242 @@
+[
+  {
+    "id": "abandonar-puntual-0",
+    "verbo": "abandonar",
+    "contexto": "ella, hace tres dias, la casa vieja",
+    "respuesta": "Ella abandono la casa vieja hace tres dias.",
+    "pista": "completed action of leaving behind three days ago",
+    "grupos": [["ella"], ["abandono"], ["la casa vieja"], ["hace tres dias"]]
+  },
+  {
+    "id": "abandonar-puntual-1",
+    "verbo": "abandonar",
+    "contexto": "nosotros, justo en ese instante, el proyecto",
+    "respuesta": "Nosotros abandonamos el proyecto justo en ese instante.",
+    "pista": "completed action of giving up the project at that exact moment",
+    "grupos": [["nosotros"], ["abandonamos"], ["el proyecto"], ["justo en ese instante"]]
+  },
+  {
+    "id": "abrir-puntual-0",
+    "verbo": "abrir",
+    "contexto": "yo, en la madrugada, la puerta",
+    "respuesta": "Yo abri la puerta en la madrugada.",
+    "pista": "completed action of opening the door in the early morning",
+    "grupos": [["yo"], ["abri"], ["la puerta"], ["en la madrugada"]]
+  },
+  {
+    "id": "abrir-puntual-1",
+    "verbo": "abrir",
+    "contexto": "ellos, al mediodia, la tienda",
+    "respuesta": "Ellos abrieron la tienda al mediodia.",
+    "pista": "completed action of opening the store at noon",
+    "grupos": [["ellos"], ["abrieron"], ["la tienda"], ["al mediodia"]]
+  },
+  {
+    "id": "acabar-puntual-0",
+    "verbo": "acabar",
+    "contexto": "tu, al final del dia, la tarea",
+    "respuesta": "Tu acabaste la tarea al final del dia.",
+    "pista": "completed action of finishing the task at the end of the day",
+    "grupos": [["tu"], ["acabaste"], ["la tarea"], ["al final del dia"]]
+  },
+  {
+    "id": "acabar-puntual-1",
+    "verbo": "acabar",
+    "contexto": "ella, esa misma noche, el libro",
+    "respuesta": "Ella acabo el libro esa misma noche.",
+    "pista": "completed action of finishing the book that very night",
+    "grupos": [["ella"], ["acabo"], ["el libro"], ["esa misma noche"]]
+  },
+  {
+    "id": "aceptar-puntual-0",
+    "verbo": "aceptar",
+    "contexto": "el, tras la reunion, la oferta",
+    "respuesta": "El acepto la oferta tras la reunion.",
+    "pista": "completed action of accepting the offer after the meeting",
+    "grupos": [["el"], ["acepto"], ["la oferta"], ["tras la reunion"]]
+  },
+  {
+    "id": "aceptar-puntual-1",
+    "verbo": "aceptar",
+    "contexto": "nosotros, de repente, la verdad",
+    "respuesta": "Nosotros aceptamos la verdad de repente.",
+    "pista": "completed action of accepting the truth suddenly",
+    "grupos": [["nosotros"], ["aceptamos"], ["la verdad"], ["de repente"]]
+  },
+  {
+    "id": "acercar-puntual-0",
+    "verbo": "acercar",
+    "contexto": "yo, en aquel momento, la silla a la mesa",
+    "respuesta": "Yo acerque la silla a la mesa en aquel momento.",
+    "pista": "completed action of bringing the chair closer at that moment",
+    "grupos": [["yo"], ["acerque"], ["la silla a la mesa"], ["en aquel momento"]]
+  },
+  {
+    "id": "acercar-puntual-1",
+    "verbo": "acercar",
+    "contexto": "ella, nada mas llegar, el vaso",
+    "respuesta": "Ella acerco el vaso nada mas llegar.",
+    "pista": "completed action of bringing the glass closer right upon arriving",
+    "grupos": [["ella"], ["acerco"], ["el vaso"], ["nada mas llegar"]]
+  },
+  {
+    "id": "acompanar-puntual-0",
+    "verbo": "acompanar",
+    "contexto": "el, durante el viaje, a su madre",
+    "respuesta": "El acompano a su madre durante el viaje.",
+    "pista": "completed action of accompanying his mother during the trip",
+    "grupos": [["el"], ["acompano"], ["a su madre"], ["durante el viaje"]]
+  },
+  {
+    "id": "acompanar-puntual-1",
+    "verbo": "acompanar",
+    "contexto": "yo, al anochecer, a mi amiga",
+    "respuesta": "Yo acompane a mi amiga al anochecer.",
+    "pista": "completed action of accompanying my friend at nightfall",
+    "grupos": [["yo"], ["acompane"], ["a mi amiga"], ["al anochecer"]]
+  },
+  {
+    "id": "acordar-puntual-0",
+    "verbo": "acordar",
+    "contexto": "ellos, el martes pasado, los terminos del contrato",
+    "respuesta": "Ellos acordaron los terminos del contrato el martes pasado.",
+    "pista": "completed action of agreeing on contract terms last Tuesday",
+    "grupos": [["ellos"], ["acordaron"], ["los terminos del contrato"], ["el martes pasado"]]
+  },
+  {
+    "id": "acordar-puntual-1",
+    "verbo": "acordar",
+    "contexto": "nosotros, tras la reunion, el plan",
+    "respuesta": "Nosotros acordamos el plan tras la reunion.",
+    "pista": "completed action of agreeing on the plan after the meeting",
+    "grupos": [["nosotros"], ["acordamos"], ["el plan"], ["tras la reunion"]]
+  },
+  {
+    "id": "actuar-puntual-0",
+    "verbo": "actuar",
+    "contexto": "ella, justo en ese instante, con valentia",
+    "respuesta": "Ella actuo con valentia justo en ese instante.",
+    "pista": "completed action of acting bravely at that exact moment",
+    "grupos": [["ella"], ["actuo"], ["con valentia"], ["justo en ese instante"]]
+  },
+  {
+    "id": "actuar-puntual-1",
+    "verbo": "actuar",
+    "contexto": "yo, aquel verano, en la obra de teatro",
+    "respuesta": "Yo actue en la obra de teatro aquel verano.",
+    "pista": "completed action of performing in the play that summer",
+    "grupos": [["yo"], ["actue"], ["en la obra de teatro"], ["aquel verano"]]
+  },
+  {
+    "id": "admitir-puntual-0",
+    "verbo": "admitir",
+    "contexto": "el, de repente, su error",
+    "respuesta": "El admitio su error de repente.",
+    "pista": "completed action of admitting his mistake suddenly",
+    "grupos": [["el"], ["admitio"], ["su error"], ["de repente"]]
+  },
+  {
+    "id": "admitir-puntual-1",
+    "verbo": "admitir",
+    "contexto": "tu, al final del dia, la derrota",
+    "respuesta": "Tu admitiste la derrota al final del dia.",
+    "pista": "completed action of admitting defeat at the end of the day",
+    "grupos": [["tu"], ["admitiste"], ["la derrota"], ["al final del dia"]]
+  },
+  {
+    "id": "aforar-puntual-0",
+    "verbo": "aforar",
+    "contexto": "ellos, hace una semana, el recinto",
+    "respuesta": "Ellos aforaron el recinto hace una semana.",
+    "pista": "completed action of gauging the venue a week ago",
+    "grupos": [["ellos"], ["aforaron"], ["el recinto"], ["hace una semana"]]
+  },
+  {
+    "id": "aforar-puntual-1",
+    "verbo": "aforar",
+    "contexto": "nosotros, el martes pasado, la sala",
+    "respuesta": "Nosotros aforamos la sala el martes pasado.",
+    "pista": "completed action of gauging the room last Tuesday",
+    "grupos": [["nosotros"], ["aforamos"], ["la sala"], ["el martes pasado"]]
+  },
+  {
+    "id": "agradecer-puntual-0",
+    "verbo": "agradecer",
+    "contexto": "yo, en aquel momento, su ayuda",
+    "respuesta": "Yo agradeci su ayuda en aquel momento.",
+    "pista": "completed action of being grateful for the help at that moment",
+    "grupos": [["yo"], ["agradeci"], ["su ayuda"], ["en aquel momento"]]
+  },
+  {
+    "id": "agradecer-puntual-1",
+    "verbo": "agradecer",
+    "contexto": "ella, tras la reunion, el consejo",
+    "respuesta": "Ella agradecio el consejo tras la reunion.",
+    "pista": "completed action of being grateful for the advice after the meeting",
+    "grupos": [["ella"], ["agradecio"], ["el consejo"], ["tras la reunion"]]
+  },
+  {
+    "id": "alcanzar-puntual-0",
+    "verbo": "alcanzar",
+    "contexto": "el, al mediodia, la cima",
+    "respuesta": "El alcanzo la cima al mediodia.",
+    "pista": "completed action of reaching the summit at noon",
+    "grupos": [["el"], ["alcanzo"], ["la cima"], ["al mediodia"]]
+  },
+  {
+    "id": "alcanzar-puntual-1",
+    "verbo": "alcanzar",
+    "contexto": "yo, hace tres dias, mi meta",
+    "respuesta": "Yo alcance mi meta hace tres dias.",
+    "pista": "completed action of reaching my goal three days ago",
+    "grupos": [["yo"], ["alcance"], ["mi meta"], ["hace tres dias"]]
+  },
+  {
+    "id": "alegrar-puntual-0",
+    "verbo": "alegrar",
+    "contexto": "la noticia, esa misma noche, a todos",
+    "respuesta": "La noticia alegro a todos esa misma noche.",
+    "pista": "completed action of making everyone happy that very night",
+    "grupos": [["la noticia"], ["alegro"], ["a todos"], ["esa misma noche"]]
+  },
+  {
+    "id": "alegrar-puntual-1",
+    "verbo": "alegrar",
+    "contexto": "tu visita, de repente, a mi abuela",
+    "respuesta": "Tu visita alegro a mi abuela de repente.",
+    "pista": "completed action of cheering up my grandmother suddenly",
+    "grupos": [["tu visita"], ["alegro"], ["a mi abuela"], ["de repente"]]
+  },
+  {
+    "id": "alejar-puntual-0",
+    "verbo": "alejar",
+    "contexto": "yo, durante la tormenta, el coche del arbol",
+    "respuesta": "Yo aleje el coche del arbol durante la tormenta.",
+    "pista": "completed action of moving the car away from the tree during the storm",
+    "grupos": [["yo"], ["aleje"], ["el coche del arbol"], ["durante la tormenta"]]
+  },
+  {
+    "id": "alejar-puntual-1",
+    "verbo": "alejar",
+    "contexto": "ella, justo en ese instante, a los ninos del peligro",
+    "respuesta": "Ella alejo a los ninos del peligro justo en ese instante.",
+    "pista": "completed action of moving the children away from danger at that instant",
+    "grupos": [["ella"], ["alejo"], ["a los ninos del peligro"], ["justo en ese instante"]]
+  },
+  {
+    "id": "amar-puntual-0",
+    "verbo": "amar",
+    "contexto": "el, aquel verano, con todo su corazon",
+    "respuesta": "El amo con todo su corazon aquel verano.",
+    "pista": "completed action of loving with all his heart that summer",
+    "grupos": [["el"], ["amo"], ["con todo su corazon"], ["aquel verano"]]
+  },
+  {
+    "id": "amar-puntual-1",
+    "verbo": "amar",
+    "contexto": "yo, en aquel momento, la vida",
+    "respuesta": "Yo ame la vida en aquel momento.",
+    "pista": "completed action of loving life at that moment",
+    "grupos": [["yo"], ["ame"], ["la vida"], ["en aquel momento"]]
+  }
+]

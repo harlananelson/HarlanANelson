@@ -1,0 +1,947 @@
+[
+  {
+    "id": "abandonar-presente-0",
+    "verbo": "abandonar",
+    "contexto": "yo, normalmente, la ciudad",
+    "respuesta": "Normalmente, yo abandono la ciudad.",
+    "pista": "expressing a current decision",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "abandono"
+      ],
+      [
+        "la ciudad"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "abandonar-presente-1",
+    "verbo": "abandonar",
+    "contexto": "ellos, siempre, el proyecto",
+    "respuesta": "Siempre, ellos abandonan el proyecto.",
+    "pista": "describing what they do",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "abandonan"
+      ],
+      [
+        "el proyecto"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "abandonar-presente-2",
+    "verbo": "abandonar",
+    "contexto": "tú, esta tarde, tus planes antiguos",
+    "respuesta": "Esta tarde, tú abandonas tus planes antiguos.",
+    "pista": "talking about a habit",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "abandonas"
+      ],
+      [
+        "tus planes antiguos"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "abrir-presente-0",
+    "verbo": "abrir",
+    "contexto": "yo, normalmente, la puerta",
+    "respuesta": "Normalmente, yo abro la puerta.",
+    "pista": "describing a current action",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "abro"
+      ],
+      [
+        "la puerta"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "abrir-presente-1",
+    "verbo": "abrir",
+    "contexto": "ella, todos los días, el libro",
+    "respuesta": "Todos los días, ella abre el libro.",
+    "pista": "narrating what she does",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "abre"
+      ],
+      [
+        "el libro"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "abrir-presente-2",
+    "verbo": "abrir",
+    "contexto": "nosotros, ahora, las ventanas",
+    "respuesta": "Ahora, nosotros abrimos las ventanas.",
+    "pista": "describing a routine",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "abrimos"
+      ],
+      [
+        "las ventanas"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "acabar-presente-0",
+    "verbo": "acabar",
+    "contexto": "yo, esta noche, el trabajo",
+    "respuesta": "Esta noche, yo acabo el trabajo.",
+    "pista": "expressing completion",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "acabo"
+      ],
+      [
+        "el trabajo"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "acabar-presente-1",
+    "verbo": "acabar",
+    "contexto": "tú, cada semana, la tarea",
+    "respuesta": "Tú acabas la tarea cada semana.",
+    "pista": "describing what you do",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "acabas"
+      ],
+      [
+        "la tarea"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "acabar-presente-2",
+    "verbo": "acabar",
+    "contexto": "ellos, esta tarde, la comida",
+    "respuesta": "Ellos acaban la comida esta tarde.",
+    "pista": "narrating present actions",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "acaban"
+      ],
+      [
+        "la comida"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "aceptar-presente-0",
+    "verbo": "aceptar",
+    "contexto": "nosotros, por lo general, la oferta",
+    "respuesta": "Por lo general, nosotros aceptamos la oferta.",
+    "pista": "making a decision now",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "aceptamos"
+      ],
+      [
+        "la oferta"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "aceptar-presente-1",
+    "verbo": "aceptar",
+    "contexto": "él, a veces, las condiciones",
+    "respuesta": "A veces, él acepta las condiciones.",
+    "pista": "describing his action",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "acepta"
+      ],
+      [
+        "las condiciones"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "aceptar-presente-2",
+    "verbo": "aceptar",
+    "contexto": "yo, siempre, la invitación",
+    "respuesta": "Yo acepto la invitación siempre.",
+    "pista": "expressing current acceptance",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "acepto"
+      ],
+      [
+        "la invitacion"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "acercar-presente-0",
+    "verbo": "acercar",
+    "contexto": "yo, esta noche, la silla a la mesa",
+    "respuesta": "Esta noche, yo acerco la silla a la mesa.",
+    "pista": "describing a current action",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "acerco"
+      ],
+      [
+        "la silla a la mesa"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "acercar-presente-1",
+    "verbo": "acercar",
+    "contexto": "ella, mientras, el vaso",
+    "respuesta": "Ella acerca el vaso mientras.",
+    "pista": "narrating present events",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "acerca"
+      ],
+      [
+        "el vaso"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "acercar-presente-2",
+    "verbo": "acercar",
+    "contexto": "ustedes, hoy, los documentos",
+    "respuesta": "Ustedes acercan los documentos hoy.",
+    "pista": "addressing a group formally",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "acercan"
+      ],
+      [
+        "los documentos"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "acompañar-presente-0",
+    "verbo": "acompañar",
+    "contexto": "yo, hoy, a mi madre",
+    "respuesta": "Yo acompaño a mi madre hoy.",
+    "pista": "expressing a present action",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "acompano"
+      ],
+      [
+        "a mi madre"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "acompañar-presente-1",
+    "verbo": "acompañar",
+    "contexto": "tú, todos los días, a tu amigo al hospital",
+    "respuesta": "Todos los días, tú acompañas a tu amigo al hospital.",
+    "pista": "describing what you do",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "acompanas"
+      ],
+      [
+        "a tu amigo al hospital"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "acompañar-presente-2",
+    "verbo": "acompañar",
+    "contexto": "nosotros, siempre, a los niños a la escuela",
+    "respuesta": "Siempre, nosotros acompañamos a los niños a la escuela.",
+    "pista": "talking about a routine",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "acompanamos"
+      ],
+      [
+        "a los ninos a la escuela"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "acordar-presente-0",
+    "verbo": "acordar",
+    "contexto": "nosotros, mientras, los términos del contrato",
+    "respuesta": "Nosotros acordamos los términos del contrato mientras.",
+    "pista": "reaching agreement now",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "acordamos"
+      ],
+      [
+        "los terminos del contrato"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "acordar-presente-1",
+    "verbo": "acordar",
+    "contexto": "ellos, hoy, una fecha para la reunión",
+    "respuesta": "Ellos acuerdan una fecha para la reunión hoy.",
+    "pista": "describing their action",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "acuerdan"
+      ],
+      [
+        "una fecha para la reunion"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "acordar-presente-2",
+    "verbo": "acordar",
+    "contexto": "yo, por lo general, una cita con el doctor",
+    "respuesta": "Yo acuerdo una cita con el doctor por lo general.",
+    "pista": "expressing current planning",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "acuerdo"
+      ],
+      [
+        "una cita con el doctor"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "actuar-presente-0",
+    "verbo": "actuar",
+    "contexto": "él, actualmente, en la película",
+    "respuesta": "Actualmente, él actua en la película.",
+    "pista": "describing his current role",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "actua"
+      ],
+      [
+        "en la pelicula"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "actuar-presente-1",
+    "verbo": "actuar",
+    "contexto": "yo, ahora, con responsabilidad",
+    "respuesta": "Ahora, yo actuo con responsabilidad.",
+    "pista": "expressing how I behave",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "actuo"
+      ],
+      [
+        "con responsabilidad"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "actuar-presente-2",
+    "verbo": "actuar",
+    "contexto": "ellas, a veces, en el teatro",
+    "respuesta": "A veces, ellas actuan en el teatro.",
+    "pista": "narrating present activities",
+    "grupos": [
+      [
+        "ellas"
+      ],
+      [
+        "actuan"
+      ],
+      [
+        "en el teatro"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "admitir-presente-0",
+    "verbo": "admitir",
+    "contexto": "yo, cada vez que, mi error",
+    "respuesta": "Cada vez que, yo admito mi error.",
+    "pista": "confessing something now",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "admito"
+      ],
+      [
+        "mi error"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "admitir-presente-1",
+    "verbo": "admitir",
+    "contexto": "tú, en este momento, la verdad",
+    "respuesta": "Tú admites la verdad en este momento.",
+    "pista": "describing what you do",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "admites"
+      ],
+      [
+        "la verdad"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "admitir-presente-2",
+    "verbo": "admitir",
+    "contexto": "él, todos los días, sus problemas",
+    "respuesta": "Él admite sus problemas todos los días.",
+    "pista": "narrating his action",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "admite"
+      ],
+      [
+        "sus problemas"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "aforar-presente-0",
+    "verbo": "aforar",
+    "contexto": "nosotros, esta mañana, el río",
+    "respuesta": "Nosotros aforamos el río esta mañana.",
+    "pista": "describing a measurement activity",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "aforamos"
+      ],
+      [
+        "el rio"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "aforar-presente-1",
+    "verbo": "aforar",
+    "contexto": "él, esta tarde, el caudal del agua",
+    "respuesta": "Él afora el caudal del agua esta tarde.",
+    "pista": "expressing a technical action",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "afora"
+      ],
+      [
+        "el caudal del agua"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "aforar-presente-2",
+    "verbo": "aforar",
+    "contexto": "yo, normalmente, la capacidad del tanque",
+    "respuesta": "Normalmente, yo aforo la capacidad del tanque.",
+    "pista": "talking about current work",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "aforo"
+      ],
+      [
+        "la capacidad del tanque"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "agradecer-presente-0",
+    "verbo": "agradecer",
+    "contexto": "yo, todos los días, tu ayuda",
+    "respuesta": "Todos los días, yo agradezco tu ayuda.",
+    "pista": "expressing gratitude now",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "agradezco"
+      ],
+      [
+        "tu ayuda"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "agradecer-presente-1",
+    "verbo": "agradecer",
+    "contexto": "nosotros, actualmente, la oportunidad",
+    "respuesta": "Actualmente, nosotros agradecemos la oportunidad.",
+    "pista": "showing appreciation",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "agradecemos"
+      ],
+      [
+        "la oportunidad"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "agradecer-presente-2",
+    "verbo": "agradecer",
+    "contexto": "ella, esta mañana, el regalo",
+    "respuesta": "Ella agradece el regalo esta mañana.",
+    "pista": "describing her reaction",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "agradece"
+      ],
+      [
+        "el regalo"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "alcanzar-presente-0",
+    "verbo": "alcanzar",
+    "contexto": "tú, en este momento, tus metas",
+    "respuesta": "En este momento, tú alcanzas tus metas.",
+    "pista": "describing achievement",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "alcanzas"
+      ],
+      [
+        "tus metas"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "alcanzar-presente-1",
+    "verbo": "alcanzar",
+    "contexto": "nosotros, normalmente, el objetivo",
+    "respuesta": "Normalmente, nosotros alcanzamos el objetivo.",
+    "pista": "expressing team progress",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "alcanzamos"
+      ],
+      [
+        "el objetivo"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "alcanzar-presente-2",
+    "verbo": "alcanzar",
+    "contexto": "ella, esta noche, el estante alto",
+    "respuesta": "Esta noche, ella alcanza el estante alto.",
+    "pista": "narrating a present action",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "alcanza"
+      ],
+      [
+        "el estante alto"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "alegrar-presente-0",
+    "verbo": "alegrar",
+    "contexto": "yo, por lo general, a mis padres",
+    "respuesta": "Yo alegro a mis padres por lo general.",
+    "pista": "expressing what makes others happy",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "alegro"
+      ],
+      [
+        "a mis padres"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "alegrar-presente-1",
+    "verbo": "alegrar",
+    "contexto": "ella, en este momento, a todos con su sonrisa",
+    "respuesta": "En este momento, ella alegra a todos con su sonrisa.",
+    "pista": "describing her effect",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "alegra"
+      ],
+      [
+        "a todos con su sonrisa"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "alegrar-presente-2",
+    "verbo": "alegrar",
+    "contexto": "tú, cada vez que, a tus amigos",
+    "respuesta": "Tú alegras a tus amigos cada vez que.",
+    "pista": "talking about your personality",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "alegras"
+      ],
+      [
+        "a tus amigos"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "alejar-presente-0",
+    "verbo": "alejar",
+    "contexto": "yo, esta tarde, el peligro",
+    "respuesta": "Yo alejo el peligro esta tarde.",
+    "pista": "expressing a protective action",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "alejo"
+      ],
+      [
+        "el peligro"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "alejar-presente-1",
+    "verbo": "alejar",
+    "contexto": "nosotros, ahora mismo, las dudas",
+    "respuesta": "Nosotros alejamos las dudas ahora mismo.",
+    "pista": "describing what we eliminate",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "alejamos"
+      ],
+      [
+        "las dudas"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "alejar-presente-2",
+    "verbo": "alejar",
+    "contexto": "tú, esta mañana, los malos pensamientos",
+    "respuesta": "Esta mañana, tú alejas los malos pensamientos.",
+    "pista": "giving advice about habits",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "alejas"
+      ],
+      [
+        "los malos pensamientos"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "amar-presente-0",
+    "verbo": "amar",
+    "contexto": "yo, esta noche, a mi familia",
+    "respuesta": "Yo amo a mi familia esta noche.",
+    "pista": "expressing deep feelings",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "amo"
+      ],
+      [
+        "a mi familia"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "amar-presente-1",
+    "verbo": "amar",
+    "contexto": "él, a veces, a su esposa",
+    "respuesta": "Él ama a su esposa a veces.",
+    "pista": "describing his devotion",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "ama"
+      ],
+      [
+        "a su esposa"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "amar-presente-2",
+    "verbo": "amar",
+    "contexto": "nosotros, cada vez que, la naturaleza",
+    "respuesta": "Nosotros amamos la naturaleza cada vez que.",
+    "pista": "expressing shared passion",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "amamos"
+      ],
+      [
+        "la naturaleza"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  }
+]

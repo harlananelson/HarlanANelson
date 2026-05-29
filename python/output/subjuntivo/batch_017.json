@@ -1,0 +1,317 @@
+[
+  {
+    "id": "ver-subjuntivo-0",
+    "verbo": "ver",
+    "contexto": "es necesario que, tú, ver (subjuntivo)",
+    "respuesta": "es necesario que tú veas antes del viernes.",
+    "pista": "La expresión impersonal 'es necesario que' exige el subjuntivo.",
+    "grupos": [
+      [
+        "es necesario que"
+      ],
+      [
+        "veas"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "antes del viernes"
+      ]
+    ]
+  },
+  {
+    "id": "ver-subjuntivo-1",
+    "verbo": "ver",
+    "contexto": "aunque, ella, ver (subjuntivo)",
+    "respuesta": "aunque ella vea mal.",
+    "pista": "'Aunque' con subjuntivo indica una situación hipotética o no confirmada.",
+    "grupos": [
+      [
+        "aunque"
+      ],
+      [
+        "vea"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "mal"
+      ]
+    ]
+  },
+  {
+    "id": "ver-subjuntivo-2",
+    "verbo": "ver",
+    "contexto": "antes de que, usted, ver (subjuntivo)",
+    "respuesta": "antes de que usted vea sin permiso.",
+    "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "vea"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "sin permiso"
+      ]
+    ]
+  },
+  {
+    "id": "viajar-subjuntivo-0",
+    "verbo": "viajar",
+    "contexto": "es importante que, él, viajar (subjuntivo)",
+    "respuesta": "es importante que él viaje de forma adecuada.",
+    "pista": "'Es importante que' expresa una valoración y necesita el subjuntivo.",
+    "grupos": [
+      [
+        "es importante que"
+      ],
+      [
+        "viaje"
+      ],
+      [
+        "el"
+      ],
+      [
+        "de forma adecuada"
+      ]
+    ]
+  },
+  {
+    "id": "viajar-subjuntivo-1",
+    "verbo": "viajar",
+    "contexto": "sin que, ellos, viajar (subjuntivo)",
+    "respuesta": "sin que ellos viajen antes.",
+    "pista": "'Sin que' expresa una acción que no ocurre y necesita el subjuntivo.",
+    "grupos": [
+      [
+        "sin que"
+      ],
+      [
+        "viajen"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "antes"
+      ]
+    ]
+  },
+  {
+    "id": "viajar-subjuntivo-2",
+    "verbo": "viajar",
+    "contexto": "ojalá, ustedes, viajar (subjuntivo)",
+    "respuesta": "ojalá ustedes viajen esta noche.",
+    "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "viajen"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "vivir-subjuntivo-0",
+    "verbo": "vivir",
+    "contexto": "dudo que, nosotros, vivir (subjuntivo)",
+    "respuesta": "dudo que nosotros vivamos tan rápido.",
+    "pista": "El verbo 'dudar' expresa incertidumbre y requiere el subjuntivo.",
+    "grupos": [
+      [
+        "dudo que"
+      ],
+      [
+        "vivamos"
+      ],
+      [
+        "nosotros"
+      ],
+      [
+        "tan rapido"
+      ]
+    ]
+  },
+  {
+    "id": "vivir-subjuntivo-1",
+    "verbo": "vivir",
+    "contexto": "ojalá, yo, vivir (subjuntivo)",
+    "respuesta": "ojalá yo viva esta noche.",
+    "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "viva"
+      ],
+      [
+        "yo"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "vivir-subjuntivo-2",
+    "verbo": "vivir",
+    "contexto": "antes de que, tú, vivir (subjuntivo)",
+    "respuesta": "antes de que tú vivas por la noche.",
+    "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "vivas"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "por la noche"
+      ]
+    ]
+  },
+  {
+    "id": "volar-subjuntivo-0",
+    "verbo": "volar",
+    "contexto": "no creo que, tú, volar (subjuntivo)",
+    "respuesta": "no creo que tú vueles solo.",
+    "pista": "'No creo que' expresa duda y necesita el subjuntivo.",
+    "grupos": [
+      [
+        "no creo que"
+      ],
+      [
+        "vueles"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "solo"
+      ]
+    ]
+  },
+  {
+    "id": "volar-subjuntivo-1",
+    "verbo": "volar",
+    "contexto": "dudo que, ella, volar (subjuntivo)",
+    "respuesta": "dudo que ella vuele antes del lunes.",
+    "pista": "El verbo 'dudar' expresa incertidumbre y requiere el subjuntivo.",
+    "grupos": [
+      [
+        "dudo que"
+      ],
+      [
+        "vuele"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "antes del lunes"
+      ]
+    ]
+  },
+  {
+    "id": "volar-subjuntivo-2",
+    "verbo": "volar",
+    "contexto": "ojalá, usted, volar (subjuntivo)",
+    "respuesta": "ojalá usted vuele hoy.",
+    "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "vuele"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "volver-subjuntivo-0",
+    "verbo": "volver",
+    "contexto": "es posible que, él, volver (subjuntivo)",
+    "respuesta": "es posible que él vuelva este mes.",
+    "pista": "'Es posible que' expresa posibilidad y requiere el subjuntivo.",
+    "grupos": [
+      [
+        "es posible que"
+      ],
+      [
+        "vuelva"
+      ],
+      [
+        "el"
+      ],
+      [
+        "este mes"
+      ]
+    ]
+  },
+  {
+    "id": "volver-subjuntivo-1",
+    "verbo": "volver",
+    "contexto": "para que, ellos, volver (subjuntivo)",
+    "respuesta": "para que ellos vuelvan mejor.",
+    "pista": "'Para que' introduce un propósito y siempre lleva subjuntivo.",
+    "grupos": [
+      [
+        "para que"
+      ],
+      [
+        "vuelvan"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "mejor"
+      ]
+    ]
+  },
+  {
+    "id": "volver-subjuntivo-2",
+    "verbo": "volver",
+    "contexto": "antes de que, ustedes, volver (subjuntivo)",
+    "respuesta": "antes de que ustedes vuelvan otra vez.",
+    "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "vuelvan"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "otra vez"
+      ]
+    ]
+  }
+]

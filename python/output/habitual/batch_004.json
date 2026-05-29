@@ -1,0 +1,226 @@
+[
+  {
+    "id": "construir-habitual-0",
+    "verbo": "construir",
+    "contexto": "mi abuelo, cada verano, muebles de madera en el taller",
+    "respuesta": "Cada verano, mi abuelo construia muebles de madera en el taller.",
+    "pista": "Repeated summer activity - use imperfect",
+    "grupos": [["mi abuelo"], ["construia"], ["muebles de madera en el taller"], ["cada verano"]]
+  },
+  {
+    "id": "construir-habitual-1",
+    "verbo": "construir",
+    "contexto": "los ninos, durante la infancia, castillos de arena en la playa",
+    "respuesta": "Durante la infancia, los ninos construian castillos de arena en la playa.",
+    "pista": "Childhood habitual play - use imperfect",
+    "grupos": [["los ninos"], ["construian"], ["castillos de arena en la playa"], ["durante la infancia"]]
+  },
+  {
+    "id": "contar-habitual-0",
+    "verbo": "contar",
+    "contexto": "mi abuela, por las tardes, historias de su juventud",
+    "respuesta": "Por las tardes, mi abuela contaba historias de su juventud.",
+    "pista": "Daily afternoon storytelling - use imperfect",
+    "grupos": [["mi abuela"], ["contaba"], ["historias de su juventud"], ["por las tardes"]]
+  },
+  {
+    "id": "contar-habitual-1",
+    "verbo": "contar",
+    "contexto": "yo, los domingos, chistes a mis primos en la comida",
+    "respuesta": "Los domingos, yo contaba chistes a mis primos en la comida.",
+    "pista": "Regular Sunday activity - use imperfect",
+    "grupos": [["yo"], ["contaba"], ["chistes a mis primos en la comida"], ["los domingos"]]
+  },
+  {
+    "id": "contestar-habitual-0",
+    "verbo": "contestar",
+    "contexto": "ella, con frecuencia, el telefono antes que nadie",
+    "respuesta": "Ella contestaba el telefono antes que nadie con frecuencia.",
+    "pista": "Frequently repeated action - use imperfect",
+    "grupos": [["ella"], ["contestaba"], ["el telefono antes que nadie"], ["con frecuencia"]]
+  },
+  {
+    "id": "contestar-habitual-1",
+    "verbo": "contestar",
+    "contexto": "los estudiantes, en aquellos tiempos, las preguntas del examen con calma",
+    "respuesta": "En aquellos tiempos, los estudiantes contestaban las preguntas del examen con calma.",
+    "pista": "Habitual exam behavior - use imperfect",
+    "grupos": [["los estudiantes"], ["contestaban"], ["las preguntas del examen con calma"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "continuar-habitual-0",
+    "verbo": "continuar",
+    "contexto": "yo, semana tras semana, con mi rutina de ejercicio",
+    "respuesta": "Semana tras semana, yo continuaba con mi rutina de ejercicio.",
+    "pista": "Repeated weekly pattern - use imperfect",
+    "grupos": [["yo"], ["continuaba"], ["con mi rutina de ejercicio"], ["semana tras semana"]]
+  },
+  {
+    "id": "continuar-habitual-1",
+    "verbo": "continuar",
+    "contexto": "la vida, en aquellos tiempos, sin grandes cambios",
+    "respuesta": "En aquellos tiempos, la vida continuaba sin grandes cambios.",
+    "pista": "Ongoing past state - use imperfect",
+    "grupos": [["la vida"], ["continuaba"], ["sin grandes cambios"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "controlar-habitual-0",
+    "verbo": "controlar",
+    "contexto": "mi madre, los fines de semana, las tareas de la casa",
+    "respuesta": "Los fines de semana, mi madre controlaba las tareas de la casa.",
+    "pista": "Regular weekend oversight - use imperfect",
+    "grupos": [["mi madre"], ["controlaba"], ["las tareas de la casa"], ["los fines de semana"]]
+  },
+  {
+    "id": "controlar-habitual-1",
+    "verbo": "controlar",
+    "contexto": "el jefe, cuando trabajaba alli, cada detalle del proyecto",
+    "respuesta": "Cuando trabajaba alli, el jefe controlaba cada detalle del proyecto.",
+    "pista": "Habitual workplace behavior - use imperfect",
+    "grupos": [["el jefe"], ["controlaba"], ["cada detalle del proyecto"], ["cuando trabajaba alli"]]
+  },
+  {
+    "id": "convertir-habitual-0",
+    "verbo": "convertir",
+    "contexto": "mi abuela, los domingos, las sobras en platos deliciosos",
+    "respuesta": "Los domingos, mi abuela convertia las sobras en platos deliciosos.",
+    "pista": "Regular Sunday cooking habit - use imperfect",
+    "grupos": [["mi abuela"], ["convertia"], ["las sobras en platos deliciosos"], ["los domingos"]]
+  },
+  {
+    "id": "convertir-habitual-1",
+    "verbo": "convertir",
+    "contexto": "el artista, en mis ratos libres, basura en arte",
+    "respuesta": "En mis ratos libres, el artista convertia basura en arte.",
+    "pista": "Habitual creative activity - use imperfect",
+    "grupos": [["el artista"], ["convertia"], ["basura en arte"], ["en mis ratos libres"]]
+  },
+  {
+    "id": "correr-habitual-0",
+    "verbo": "correr",
+    "contexto": "yo, por las tardes, cinco kilometros en el parque",
+    "respuesta": "Por las tardes, yo corria cinco kilometros en el parque.",
+    "pista": "Daily afternoon exercise - use imperfect",
+    "grupos": [["yo"], ["corria"], ["cinco kilometros en el parque"], ["por las tardes"]]
+  },
+  {
+    "id": "correr-habitual-1",
+    "verbo": "correr",
+    "contexto": "los ninos, durante la infancia, por los pasillos del colegio",
+    "respuesta": "Durante la infancia, los ninos corrian por los pasillos del colegio.",
+    "pista": "Childhood habitual behavior - use imperfect",
+    "grupos": [["los ninos"], ["corrian"], ["por los pasillos del colegio"], ["durante la infancia"]]
+  },
+  {
+    "id": "cortar-habitual-0",
+    "verbo": "cortar",
+    "contexto": "mi padre, los fines de semana, el cesped del jardin",
+    "respuesta": "Los fines de semana, mi padre cortaba el cesped del jardin.",
+    "pista": "Regular weekend chore - use imperfect",
+    "grupos": [["mi padre"], ["cortaba"], ["el cesped del jardin"], ["los fines de semana"]]
+  },
+  {
+    "id": "cortar-habitual-1",
+    "verbo": "cortar",
+    "contexto": "ella, cada verano, rosas del jardin para la mesa",
+    "respuesta": "Cada verano, ella cortaba rosas del jardin para la mesa.",
+    "pista": "Repeated summer habit - use imperfect",
+    "grupos": [["ella"], ["cortaba"], ["rosas del jardin para la mesa"], ["cada verano"]]
+  },
+  {
+    "id": "costar-habitual-0",
+    "verbo": "costar",
+    "contexto": "el pan, en aquellos tiempos, muy poco dinero",
+    "respuesta": "En aquellos tiempos, el pan costaba muy poco dinero.",
+    "pista": "Past habitual price - use imperfect",
+    "grupos": [["el pan"], ["costaba"], ["muy poco dinero"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "costar-habitual-1",
+    "verbo": "costar",
+    "contexto": "los viajes, antes del accidente, mucho menos que ahora",
+    "respuesta": "Antes del accidente, los viajes costaban mucho menos que ahora.",
+    "pista": "Habitual past cost - use imperfect",
+    "grupos": [["los viajes"], ["costaban"], ["mucho menos que ahora"], ["antes del accidente"]]
+  },
+  {
+    "id": "crear-habitual-0",
+    "verbo": "crear",
+    "contexto": "el artista, en mis ratos libres, pinturas hermosas",
+    "respuesta": "En mis ratos libres, el artista creaba pinturas hermosas.",
+    "pista": "Habitual creative activity - use imperfect",
+    "grupos": [["el artista"], ["creaba"], ["pinturas hermosas"], ["en mis ratos libres"]]
+  },
+  {
+    "id": "crear-habitual-1",
+    "verbo": "crear",
+    "contexto": "nosotros, los fines de semana, historias para los ninos",
+    "respuesta": "Los fines de semana, nosotros creabamos historias para los ninos.",
+    "pista": "Regular weekend creativity - use imperfect",
+    "grupos": [["nosotros"], ["creabamos"], ["historias para los ninos"], ["los fines de semana"]]
+  },
+  {
+    "id": "crecer-habitual-0",
+    "verbo": "crecer",
+    "contexto": "las flores, cada verano, en el jardin de la abuela",
+    "respuesta": "Cada verano, las flores crecian en el jardin de la abuela.",
+    "pista": "Repeated seasonal growth - use imperfect",
+    "grupos": [["las flores"], ["crecian"], ["en el jardin de la abuela"], ["cada verano"]]
+  },
+  {
+    "id": "crecer-habitual-1",
+    "verbo": "crecer",
+    "contexto": "los ninos, ano tras ano, mas fuertes y altos",
+    "respuesta": "Ano tras ano, los ninos crecian mas fuertes y altos.",
+    "pista": "Repeated yearly growth - use imperfect",
+    "grupos": [["los ninos"], ["crecian"], ["mas fuertes y altos"], ["ano tras ano"]]
+  },
+  {
+    "id": "creer-habitual-0",
+    "verbo": "creer",
+    "contexto": "yo, durante la infancia, en los cuentos de hadas",
+    "respuesta": "Durante la infancia, yo creia en los cuentos de hadas.",
+    "pista": "Childhood habitual belief - use imperfect",
+    "grupos": [["yo"], ["creia"], ["en los cuentos de hadas"], ["durante la infancia"]]
+  },
+  {
+    "id": "creer-habitual-1",
+    "verbo": "creer",
+    "contexto": "mis abuelos, en aquellos tiempos, en la bondad de la gente",
+    "respuesta": "En aquellos tiempos, mis abuelos creian en la bondad de la gente.",
+    "pista": "Habitual past belief - use imperfect",
+    "grupos": [["mis abuelos"], ["creian"], ["en la bondad de la gente"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "cubrir-habitual-0",
+    "verbo": "cubrir",
+    "contexto": "la nieve, cada verano, las montanas del norte",
+    "respuesta": "Cada verano, la nieve cubria las montanas del norte.",
+    "pista": "Repeated seasonal covering - use imperfect",
+    "grupos": [["la nieve"], ["cubria"], ["las montanas del norte"], ["cada verano"]]
+  },
+  {
+    "id": "cubrir-habitual-1",
+    "verbo": "cubrir",
+    "contexto": "mi madre, por las tardes, las plantas con una tela",
+    "respuesta": "Por las tardes, mi madre cubria las plantas con una tela.",
+    "pista": "Daily afternoon routine - use imperfect",
+    "grupos": [["mi madre"], ["cubria"], ["las plantas con una tela"], ["por las tardes"]]
+  },
+  {
+    "id": "cuidar-habitual-0",
+    "verbo": "cuidar",
+    "contexto": "mi hermana, los fines de semana, a los ninos del vecino",
+    "respuesta": "Los fines de semana, mi hermana cuidaba a los ninos del vecino.",
+    "pista": "Regular weekend job - use imperfect",
+    "grupos": [["mi hermana"], ["cuidaba"], ["a los ninos del vecino"], ["los fines de semana"]]
+  },
+  {
+    "id": "cuidar-habitual-1",
+    "verbo": "cuidar",
+    "contexto": "nosotros, durante la infancia, un jardin lleno de flores",
+    "respuesta": "Durante la infancia, nosotros cuidabamos un jardin lleno de flores.",
+    "pista": "Childhood habitual care - use imperfect",
+    "grupos": [["nosotros"], ["cuidabamos"], ["un jardin lleno de flores"], ["durante la infancia"]]
+  }
+]

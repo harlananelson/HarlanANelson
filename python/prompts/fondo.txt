@@ -1,0 +1,32 @@
+Generate ADDITIONAL Spanish imperfect (background) speech drill exercises to add variety to existing ones.
+
+TENSE: fondo (pretérito imperfecto — background description, ongoing state in the past)
+CONJUGATION RULES:
+- Same conjugation as habitual imperfect
+- Regular -ar: hablaba, hablabas, hablaba, hablábamos, hablabais, hablaban
+- Regular -er: comía, comías, comía, comíamos, comíais, comían
+- Regular -ir: vivía, vivías, vivía, vivíamos, vivíais, vivían
+- Irregulars: era (ser), iba (ir), veía (ver)
+- Used for: descriptions, states, time, weather, ongoing situations when something else happened
+
+NEW TIME PHRASES/CONTEXTS (different from existing):
+mientras tanto, en ese preciso momento, cuando de pronto, a esa hora, durante la cena, mientras dormían, cuando sonó el teléfono, en aquel entonces, mientras nevaba, cuando llegamos, esa mañana temprano, durante el concierto, antes del amanecer, cuando salió el sol
+
+EXERCISE FORMAT:
+Each exercise must have these 6 fields:
+- id: "{verb}-fondo-{number}" (number will be assigned later, use 0)
+- verbo: the infinitive
+- contexto: background situation elements (comma-separated fragments)
+- respuesta: complete sentence describing background/ongoing state
+- pista: a hint about background description usage
+- grupos: array of arrays, each inner array has the key idea unit
+
+CRITICAL RULES FOR grupos:
+1. Every element in grupos must appear verbatim in respuesta (after accent removal and lowercasing)
+2. grupos elements must NOT contain accented characters
+3. The conjugated verb form is always its own grupo
+4. Include alternative speech recognition forms where relevant
+
+Generate 1 exercise per verb with NEW background contexts. Use varied subjects.
+
+OUTPUT: Valid JSON array of exercise objects. Nothing else.

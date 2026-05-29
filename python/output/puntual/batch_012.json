@@ -1,0 +1,242 @@
+[
+  {
+    "id": "pensar-puntual-0",
+    "verbo": "pensar",
+    "contexto": "yo, en aquel momento, en mi familia",
+    "respuesta": "Yo pense en mi familia en aquel momento.",
+    "pista": "completed action of thinking about my family at that moment",
+    "grupos": [["yo"], ["pense"], ["en mi familia"], ["en aquel momento"]]
+  },
+  {
+    "id": "pensar-puntual-1",
+    "verbo": "pensar",
+    "contexto": "ella, durante el viaje, en el futuro",
+    "respuesta": "Ella penso en el futuro durante el viaje.",
+    "pista": "completed action of thinking about the future during the trip",
+    "grupos": [["ella"], ["penso"], ["en el futuro"], ["durante el viaje"]]
+  },
+  {
+    "id": "perder-puntual-0",
+    "verbo": "perder",
+    "contexto": "el, aquel verano, su cartera",
+    "respuesta": "El perdio su cartera aquel verano.",
+    "pista": "completed action of losing his wallet that summer",
+    "grupos": [["el"], ["perdio"], ["su cartera"], ["aquel verano"]]
+  },
+  {
+    "id": "perder-puntual-1",
+    "verbo": "perder",
+    "contexto": "nosotros, al final del dia, el partido",
+    "respuesta": "Nosotros perdimos el partido al final del dia.",
+    "pista": "completed action of losing the game at the end of the day",
+    "grupos": [["nosotros"], ["perdimos"], ["el partido"], ["al final del dia"]]
+  },
+  {
+    "id": "perdonar-puntual-0",
+    "verbo": "perdonar",
+    "contexto": "ella, esa misma noche, a su hermano",
+    "respuesta": "Ella perdono a su hermano esa misma noche.",
+    "pista": "completed action of forgiving her brother that very night",
+    "grupos": [["ella"], ["perdono"], ["a su hermano"], ["esa misma noche"]]
+  },
+  {
+    "id": "perdonar-puntual-1",
+    "verbo": "perdonar",
+    "contexto": "yo, tras la reunion, el malentendido",
+    "respuesta": "Yo perdone el malentendido tras la reunion.",
+    "pista": "completed action of forgiving the misunderstanding after the meeting",
+    "grupos": [["yo"], ["perdone"], ["el malentendido"], ["tras la reunion"]]
+  },
+  {
+    "id": "permanecer-puntual-0",
+    "verbo": "permanecer",
+    "contexto": "el, durante la tormenta, en su puesto",
+    "respuesta": "El permanecio en su puesto durante la tormenta.",
+    "pista": "completed action of remaining at his post during the storm",
+    "grupos": [["el"], ["permanecio"], ["en su puesto"], ["durante la tormenta"]]
+  },
+  {
+    "id": "permanecer-puntual-1",
+    "verbo": "permanecer",
+    "contexto": "nosotros, aquel verano, en silencio",
+    "respuesta": "Nosotros permanecimos en silencio aquel verano.",
+    "pista": "completed action of remaining in silence that summer",
+    "grupos": [["nosotros"], ["permanecimos"], ["en silencio"], ["aquel verano"]]
+  },
+  {
+    "id": "permitir-puntual-0",
+    "verbo": "permitir",
+    "contexto": "el juez, en aquel momento, la entrada",
+    "respuesta": "El juez permitio la entrada en aquel momento.",
+    "pista": "completed action of the judge allowing entry at that moment",
+    "grupos": [["el juez"], ["permitio"], ["la entrada"], ["en aquel momento"]]
+  },
+  {
+    "id": "permitir-puntual-1",
+    "verbo": "permitir",
+    "contexto": "ella, el martes pasado, que jugaran afuera",
+    "respuesta": "Ella permitio que jugaran afuera el martes pasado.",
+    "pista": "completed action of allowing them to play outside last Tuesday",
+    "grupos": [["ella"], ["permitio"], ["que jugaran afuera"], ["el martes pasado"]]
+  },
+  {
+    "id": "pertenecer-puntual-0",
+    "verbo": "pertenecer",
+    "contexto": "esa casa, aquel verano, a mi abuelo",
+    "respuesta": "Esa casa pertenecio a mi abuelo aquel verano.",
+    "pista": "completed action of that house belonging to my grandfather that summer",
+    "grupos": [["esa casa"], ["pertenecio"], ["a mi abuelo"], ["aquel verano"]]
+  },
+  {
+    "id": "pertenecer-puntual-1",
+    "verbo": "pertenecer",
+    "contexto": "el libro, hace una semana, a la biblioteca",
+    "respuesta": "El libro pertenecio a la biblioteca hace una semana.",
+    "pista": "completed action of the book belonging to the library a week ago",
+    "grupos": [["el libro"], ["pertenecio"], ["a la biblioteca"], ["hace una semana"]]
+  },
+  {
+    "id": "pesar-puntual-0",
+    "verbo": "pesar",
+    "contexto": "la maleta, al mediodia, veinte kilos",
+    "respuesta": "La maleta peso veinte kilos al mediodia.",
+    "pista": "completed action of the suitcase weighing twenty kilos at noon",
+    "grupos": [["la maleta"], ["peso"], ["veinte kilos"], ["al mediodia"]]
+  },
+  {
+    "id": "pesar-puntual-1",
+    "verbo": "pesar",
+    "contexto": "la decision, en aquel momento, mucho",
+    "respuesta": "La decision peso mucho en aquel momento.",
+    "pista": "completed action of the decision weighing heavily at that moment",
+    "grupos": [["la decision"], ["peso"], ["mucho"], ["en aquel momento"]]
+  },
+  {
+    "id": "poder-puntual-0",
+    "verbo": "poder",
+    "contexto": "yo, al final del dia, terminar el trabajo",
+    "respuesta": "Yo pude terminar el trabajo al final del dia.",
+    "pista": "completed action of being able to finish the work at the end of the day",
+    "grupos": [["yo"], ["pude"], ["terminar el trabajo"], ["al final del dia"]]
+  },
+  {
+    "id": "poder-puntual-1",
+    "verbo": "poder",
+    "contexto": "ella, justo en ese instante, escapar",
+    "respuesta": "Ella pudo escapar justo en ese instante.",
+    "pista": "completed action of being able to escape at that exact moment",
+    "grupos": [["ella"], ["pudo"], ["escapar"], ["justo en ese instante"]]
+  },
+  {
+    "id": "poner-puntual-0",
+    "verbo": "poner",
+    "contexto": "yo, nada mas llegar, la mesa",
+    "respuesta": "Yo puse la mesa nada mas llegar.",
+    "pista": "completed action of setting the table right upon arriving",
+    "grupos": [["yo"], ["puse"], ["la mesa"], ["nada mas llegar"]]
+  },
+  {
+    "id": "poner-puntual-1",
+    "verbo": "poner",
+    "contexto": "ella, de repente, cara de sorpresa",
+    "respuesta": "Ella puso cara de sorpresa de repente.",
+    "pista": "completed action of making a surprised face suddenly",
+    "grupos": [["ella"], ["puso"], ["cara de sorpresa"], ["de repente"]]
+  },
+  {
+    "id": "preferir-puntual-0",
+    "verbo": "preferir",
+    "contexto": "yo, en aquel momento, quedarme en casa",
+    "respuesta": "Yo preferi quedarme en casa en aquel momento.",
+    "pista": "completed action of preferring to stay home at that moment",
+    "grupos": [["yo"], ["preferi"], ["quedarme en casa"], ["en aquel momento"]]
+  },
+  {
+    "id": "preferir-puntual-1",
+    "verbo": "preferir",
+    "contexto": "ella, esa misma noche, el silencio",
+    "respuesta": "Ella prefirio el silencio esa misma noche.",
+    "pista": "completed action of preferring the silence that very night",
+    "grupos": [["ella"], ["prefirio"], ["el silencio"], ["esa misma noche"]]
+  },
+  {
+    "id": "preguntar-puntual-0",
+    "verbo": "preguntar",
+    "contexto": "el, tras la reunion, por el horario",
+    "respuesta": "El pregunto por el horario tras la reunion.",
+    "pista": "completed action of asking about the schedule after the meeting",
+    "grupos": [["el"], ["pregunto"], ["por el horario"], ["tras la reunion"]]
+  },
+  {
+    "id": "preguntar-puntual-1",
+    "verbo": "preguntar",
+    "contexto": "yo, al mediodia, la direccion",
+    "respuesta": "Yo pregunte la direccion al mediodia.",
+    "pista": "completed action of asking for directions at noon",
+    "grupos": [["yo"], ["pregunte"], ["la direccion"], ["al mediodia"]]
+  },
+  {
+    "id": "preocupar-puntual-0",
+    "verbo": "preocupar",
+    "contexto": "la noticia, de repente, a mi madre",
+    "respuesta": "La noticia preocupo a mi madre de repente.",
+    "pista": "completed action of the news worrying my mother suddenly",
+    "grupos": [["la noticia"], ["preocupo"], ["a mi madre"], ["de repente"]]
+  },
+  {
+    "id": "preocupar-puntual-1",
+    "verbo": "preocupar",
+    "contexto": "el examen, aquel verano, a todos los estudiantes",
+    "respuesta": "El examen preocupo a todos los estudiantes aquel verano.",
+    "pista": "completed action of the exam worrying all the students that summer",
+    "grupos": [["el examen"], ["preocupo"], ["a todos los estudiantes"], ["aquel verano"]]
+  },
+  {
+    "id": "preparar-puntual-0",
+    "verbo": "preparar",
+    "contexto": "ella, al anochecer, una cena especial",
+    "respuesta": "Ella preparo una cena especial al anochecer.",
+    "pista": "completed action of preparing a special dinner at nightfall",
+    "grupos": [["ella"], ["preparo"], ["una cena especial"], ["al anochecer"]]
+  },
+  {
+    "id": "preparar-puntual-1",
+    "verbo": "preparar",
+    "contexto": "yo, hace tres dias, las maletas",
+    "respuesta": "Yo prepare las maletas hace tres dias.",
+    "pista": "completed action of packing the suitcases three days ago",
+    "grupos": [["yo"], ["prepare"], ["las maletas"], ["hace tres dias"]]
+  },
+  {
+    "id": "presentar-puntual-0",
+    "verbo": "presentar",
+    "contexto": "el, el martes pasado, el proyecto",
+    "respuesta": "El presento el proyecto el martes pasado.",
+    "pista": "completed action of presenting the project last Tuesday",
+    "grupos": [["el"], ["presento"], ["el proyecto"], ["el martes pasado"]]
+  },
+  {
+    "id": "presentar-puntual-1",
+    "verbo": "presentar",
+    "contexto": "yo, durante el viaje, a mis amigos",
+    "respuesta": "Yo presente a mis amigos durante el viaje.",
+    "pista": "completed action of introducing my friends during the trip",
+    "grupos": [["yo"], ["presente"], ["a mis amigos"], ["durante el viaje"]]
+  },
+  {
+    "id": "prestar-puntual-0",
+    "verbo": "prestar",
+    "contexto": "ella, hace una semana, su coche a un amigo",
+    "respuesta": "Ella presto su coche a un amigo hace una semana.",
+    "pista": "completed action of lending her car to a friend a week ago",
+    "grupos": [["ella"], ["presto"], ["su coche a un amigo"], ["hace una semana"]]
+  },
+  {
+    "id": "prestar-puntual-1",
+    "verbo": "prestar",
+    "contexto": "yo, en aquel momento, atencion",
+    "respuesta": "Yo preste atencion en aquel momento.",
+    "pista": "completed action of paying attention at that moment",
+    "grupos": [["yo"], ["preste"], ["atencion"], ["en aquel momento"]]
+  }
+]

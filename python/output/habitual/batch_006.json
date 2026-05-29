@@ -1,0 +1,226 @@
+[
+  {
+    "id": "despedir-habitual-0",
+    "verbo": "despedir",
+    "contexto": "mi madre, los domingos, a los invitados con un abrazo",
+    "respuesta": "Los domingos, mi madre despedia a los invitados con un abrazo.",
+    "pista": "Regular Sunday farewell - use imperfect",
+    "grupos": [["mi madre"], ["despedia"], ["a los invitados con un abrazo"], ["los domingos"]]
+  },
+  {
+    "id": "despedir-habitual-1",
+    "verbo": "despedir",
+    "contexto": "el jefe, con frecuencia, a los empleados nuevos",
+    "respuesta": "El jefe despedia a los empleados nuevos con frecuencia.",
+    "pista": "Frequently repeated action - use imperfect",
+    "grupos": [["el jefe"], ["despedia"], ["a los empleados nuevos"], ["con frecuencia"]]
+  },
+  {
+    "id": "despertar-habitual-0",
+    "verbo": "despertar",
+    "contexto": "yo, en aquellos tiempos, con el canto de los gallos",
+    "respuesta": "En aquellos tiempos, yo despertaba con el canto de los gallos.",
+    "pista": "Habitual past awakening - use imperfect",
+    "grupos": [["yo"], ["despertaba"], ["con el canto de los gallos"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "despertar-habitual-1",
+    "verbo": "despertar",
+    "contexto": "los ninos, cada verano, muy temprano para ir a la playa",
+    "respuesta": "Cada verano, los ninos despertaban muy temprano para ir a la playa.",
+    "pista": "Repeated summer behavior - use imperfect",
+    "grupos": [["los ninos"], ["despertaban"], ["muy temprano para ir a la playa"], ["cada verano"]]
+  },
+  {
+    "id": "destruir-habitual-0",
+    "verbo": "destruir",
+    "contexto": "las tormentas, cada verano, los cultivos de la region",
+    "respuesta": "Cada verano, las tormentas destruian los cultivos de la region.",
+    "pista": "Repeated seasonal destruction - use imperfect",
+    "grupos": [["las tormentas"], ["destruian"], ["los cultivos de la region"], ["cada verano"]]
+  },
+  {
+    "id": "destruir-habitual-1",
+    "verbo": "destruir",
+    "contexto": "el perro, con frecuencia, los zapatos de mi padre",
+    "respuesta": "El perro destruia los zapatos de mi padre con frecuencia.",
+    "pista": "Frequently repeated behavior - use imperfect",
+    "grupos": [["el perro"], ["destruia"], ["los zapatos de mi padre"], ["con frecuencia"]]
+  },
+  {
+    "id": "detener-habitual-0",
+    "verbo": "detener",
+    "contexto": "la policia, los fines de semana, a los conductores ebrios",
+    "respuesta": "Los fines de semana, la policia detenia a los conductores ebrios.",
+    "pista": "Regular weekend enforcement - use imperfect",
+    "grupos": [["la policia"], ["detenia"], ["a los conductores ebrios"], ["los fines de semana"]]
+  },
+  {
+    "id": "detener-habitual-1",
+    "verbo": "detener",
+    "contexto": "yo, por las tardes, mi trabajo para tomar un descanso",
+    "respuesta": "Por las tardes, yo detenia mi trabajo para tomar un descanso.",
+    "pista": "Daily afternoon pause - use imperfect",
+    "grupos": [["yo"], ["detenia"], ["mi trabajo para tomar un descanso"], ["por las tardes"]]
+  },
+  {
+    "id": "devolver-habitual-0",
+    "verbo": "devolver",
+    "contexto": "yo, semana tras semana, los libros a la biblioteca",
+    "respuesta": "Semana tras semana, yo devolvia los libros a la biblioteca.",
+    "pista": "Repeated weekly action - use imperfect",
+    "grupos": [["yo"], ["devolvia"], ["los libros a la biblioteca"], ["semana tras semana"]]
+  },
+  {
+    "id": "devolver-habitual-1",
+    "verbo": "devolver",
+    "contexto": "la tienda, en aquellos tiempos, el dinero sin problemas",
+    "respuesta": "En aquellos tiempos, la tienda devolvia el dinero sin problemas.",
+    "pista": "Habitual past business practice - use imperfect",
+    "grupos": [["la tienda"], ["devolvia"], ["el dinero sin problemas"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "dirigir-habitual-0",
+    "verbo": "dirigir",
+    "contexto": "el abuelo, en aquellos tiempos, la empresa familiar",
+    "respuesta": "En aquellos tiempos, el abuelo dirigia la empresa familiar.",
+    "pista": "Ongoing past leadership - use imperfect",
+    "grupos": [["el abuelo"], ["dirigia"], ["la empresa familiar"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "dirigir-habitual-1",
+    "verbo": "dirigir",
+    "contexto": "ella, los martes y jueves, el coro de la iglesia",
+    "respuesta": "Los martes y jueves, ella dirigia el coro de la iglesia.",
+    "pista": "Regular schedule on specific days - use imperfect",
+    "grupos": [["ella"], ["dirigia"], ["el coro de la iglesia"], ["los martes y jueves"]]
+  },
+  {
+    "id": "disculpar-habitual-0",
+    "verbo": "disculpar",
+    "contexto": "mi madre, con frecuencia, el comportamiento de mi hermano",
+    "respuesta": "Mi madre disculpaba el comportamiento de mi hermano con frecuencia.",
+    "pista": "Frequently repeated pardon - use imperfect",
+    "grupos": [["mi madre"], ["disculpaba"], ["el comportamiento de mi hermano"], ["con frecuencia"]]
+  },
+  {
+    "id": "disculpar-habitual-1",
+    "verbo": "disculpar",
+    "contexto": "yo, durante la infancia, mis errores con una sonrisa",
+    "respuesta": "Durante la infancia, yo disculpaba mis errores con una sonrisa.",
+    "pista": "Childhood habitual behavior - use imperfect",
+    "grupos": [["yo"], ["disculpaba"], ["mis errores con una sonrisa"], ["durante la infancia"]]
+  },
+  {
+    "id": "discutir-habitual-0",
+    "verbo": "discutir",
+    "contexto": "mis padres, los fines de semana, sobre politica en la cena",
+    "respuesta": "Los fines de semana, mis padres discutian sobre politica en la cena.",
+    "pista": "Regular weekend discussion - use imperfect",
+    "grupos": [["mis padres"], ["discutian"], ["sobre politica en la cena"], ["los fines de semana"]]
+  },
+  {
+    "id": "discutir-habitual-1",
+    "verbo": "discutir",
+    "contexto": "nosotros, en mis anos de universidad, las teorias en clase",
+    "respuesta": "En mis anos de universidad, nosotros discutiamos las teorias en clase.",
+    "pista": "Habitual university activity - use imperfect",
+    "grupos": [["nosotros"], ["discutiamos"], ["las teorias en clase"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "disfrutar-habitual-0",
+    "verbo": "disfrutar",
+    "contexto": "nosotros, cada verano, de las vacaciones en el campo",
+    "respuesta": "Cada verano, nosotros disfrutabamos de las vacaciones en el campo.",
+    "pista": "Repeated summer enjoyment - use imperfect",
+    "grupos": [["nosotros"], ["disfrutabamos"], ["de las vacaciones en el campo"], ["cada verano"]]
+  },
+  {
+    "id": "disfrutar-habitual-1",
+    "verbo": "disfrutar",
+    "contexto": "yo, por las tardes, de un buen libro en el sofa",
+    "respuesta": "Por las tardes, yo disfrutaba de un buen libro en el sofa.",
+    "pista": "Daily afternoon pleasure - use imperfect",
+    "grupos": [["yo"], ["disfrutaba"], ["de un buen libro en el sofa"], ["por las tardes"]]
+  },
+  {
+    "id": "disparar-habitual-0",
+    "verbo": "disparar",
+    "contexto": "los cazadores, en aquellos tiempos, al aire para asustar a los pajaros",
+    "respuesta": "En aquellos tiempos, los cazadores disparaban al aire para asustar a los pajaros.",
+    "pista": "Habitual past practice - use imperfect",
+    "grupos": [["los cazadores"], ["disparaban"], ["al aire para asustar a los pajaros"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "disparar-habitual-1",
+    "verbo": "disparar",
+    "contexto": "el arquero, los martes y jueves, flechas en el campo de tiro",
+    "respuesta": "Los martes y jueves, el arquero disparaba flechas en el campo de tiro.",
+    "pista": "Regular scheduled practice - use imperfect",
+    "grupos": [["el arquero"], ["disparaba"], ["flechas en el campo de tiro"], ["los martes y jueves"]]
+  },
+  {
+    "id": "dormir-habitual-0",
+    "verbo": "dormir",
+    "contexto": "yo, durante la infancia, con la luz encendida",
+    "respuesta": "Durante la infancia, yo dormia con la luz encendida.",
+    "pista": "Childhood habitual sleep pattern - use imperfect",
+    "grupos": [["yo"], ["dormia"], ["con la luz encendida"], ["durante la infancia"]]
+  },
+  {
+    "id": "dormir-habitual-1",
+    "verbo": "dormir",
+    "contexto": "el gato, por las tardes, en el sillon del salon",
+    "respuesta": "Por las tardes, el gato dormia en el sillon del salon.",
+    "pista": "Daily afternoon napping habit - use imperfect",
+    "grupos": [["el gato"], ["dormia"], ["en el sillon del salon"], ["por las tardes"]]
+  },
+  {
+    "id": "echar-habitual-0",
+    "verbo": "echar",
+    "contexto": "mi abuela, los domingos, sal a la comida con generosidad",
+    "respuesta": "Los domingos, mi abuela echaba sal a la comida con generosidad.",
+    "pista": "Regular Sunday cooking habit - use imperfect",
+    "grupos": [["mi abuela"], ["echaba"], ["sal a la comida con generosidad"], ["los domingos"]]
+  },
+  {
+    "id": "echar-habitual-1",
+    "verbo": "echar",
+    "contexto": "yo, con frecuencia, de menos a mis amigos de la infancia",
+    "respuesta": "Yo echaba de menos a mis amigos de la infancia con frecuencia.",
+    "pista": "Frequently recurring feeling - use imperfect",
+    "grupos": [["yo"], ["echaba"], ["de menos a mis amigos de la infancia"], ["con frecuencia"]]
+  },
+  {
+    "id": "elegir-habitual-0",
+    "verbo": "elegir",
+    "contexto": "yo, los fines de semana, peliculas de terror para la noche",
+    "respuesta": "Los fines de semana, yo elegia peliculas de terror para la noche.",
+    "pista": "Regular weekend choice - use imperfect",
+    "grupos": [["yo"], ["elegia"], ["peliculas de terror para la noche"], ["los fines de semana"]]
+  },
+  {
+    "id": "elegir-habitual-1",
+    "verbo": "elegir",
+    "contexto": "ella, semana tras semana, la ropa con mucho cuidado",
+    "respuesta": "Semana tras semana, ella elegia la ropa con mucho cuidado.",
+    "pista": "Repeated weekly ritual - use imperfect",
+    "grupos": [["ella"], ["elegia"], ["la ropa con mucho cuidado"], ["semana tras semana"]]
+  },
+  {
+    "id": "empezar-habitual-0",
+    "verbo": "empezar",
+    "contexto": "las clases, en aquellos tiempos, a las ocho de la manana",
+    "respuesta": "En aquellos tiempos, las clases empezaban a las ocho de la manana.",
+    "pista": "Habitual past schedule - use imperfect",
+    "grupos": [["las clases"], ["empezaban"], ["a las ocho de la manana"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "empezar-habitual-1",
+    "verbo": "empezar",
+    "contexto": "yo, por las tardes, a estudiar despues de merendar",
+    "respuesta": "Por las tardes, yo empezaba a estudiar despues de merendar.",
+    "pista": "Daily afternoon routine - use imperfect",
+    "grupos": [["yo"], ["empezaba"], ["a estudiar despues de merendar"], ["por las tardes"]]
+  }
+]

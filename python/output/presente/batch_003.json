@@ -1,0 +1,947 @@
+[
+  {
+    "id": "comer-presente-0",
+    "verbo": "comer",
+    "contexto": "yo, cada semana, una ensalada",
+    "respuesta": "Cada semana, yo como una ensalada.",
+    "pista": "describing a healthy choice",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "como"
+      ],
+      [
+        "una ensalada"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "comer-presente-1",
+    "verbo": "comer",
+    "contexto": "tú, normalmente, demasiado rápido",
+    "respuesta": "Tú comes demasiado rápido normalmente.",
+    "pista": "commenting on eating habits",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "comes"
+      ],
+      [
+        "demasiado rapido"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "comer-presente-2",
+    "verbo": "comer",
+    "contexto": "nosotros, cada vez que, juntos en familia",
+    "respuesta": "Cada vez que, nosotros comemos juntos en familia.",
+    "pista": "expressing family tradition",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "comemos"
+      ],
+      [
+        "juntos en familia"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "cometer-presente-0",
+    "verbo": "cometer",
+    "contexto": "yo, mientras, un error",
+    "respuesta": "Mientras, yo cometo un error.",
+    "pista": "expressing a mistake",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "cometo"
+      ],
+      [
+        "un error"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "cometer-presente-1",
+    "verbo": "cometer",
+    "contexto": "tú, esta noche, errores a veces",
+    "respuesta": "Esta noche, tú cometas errores a veces.",
+    "pista": "talking about being human",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "cometas"
+      ],
+      [
+        "errores a veces"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "cometer-presente-2",
+    "verbo": "cometer",
+    "contexto": "ellos, siempre, faltas graves",
+    "respuesta": "Siempre, ellos cometan faltas graves.",
+    "pista": "describing serious issues",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "cometan"
+      ],
+      [
+        "faltas graves"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "compartir-presente-0",
+    "verbo": "compartir",
+    "contexto": "nosotros, esta noche, la comida",
+    "respuesta": "Esta noche, nosotros compartimos la comida.",
+    "pista": "expressing generosity",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "compartimos"
+      ],
+      [
+        "la comida"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "compartir-presente-1",
+    "verbo": "compartir",
+    "contexto": "yo, siempre, mis ideas",
+    "respuesta": "Siempre, yo comparto mis ideas.",
+    "pista": "describing openness",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "comparto"
+      ],
+      [
+        "mis ideas"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "compartir-presente-2",
+    "verbo": "compartir",
+    "contexto": "ella, normalmente, su experiencia",
+    "respuesta": "Ella comparte su experiencia normalmente.",
+    "pista": "narrating her contribution",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "comparte"
+      ],
+      [
+        "su experiencia"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "comprar-presente-0",
+    "verbo": "comprar",
+    "contexto": "yo, actualmente, un regalo",
+    "respuesta": "Yo compro un regalo actualmente.",
+    "pista": "describing a purchase",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "compro"
+      ],
+      [
+        "un regalo"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "comprar-presente-1",
+    "verbo": "comprar",
+    "contexto": "nosotros, cada vez que, comida para la cena",
+    "respuesta": "Cada vez que, nosotros compramos comida para la cena.",
+    "pista": "talking about meal planning",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "compramos"
+      ],
+      [
+        "comida para la cena"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "comprar-presente-2",
+    "verbo": "comprar",
+    "contexto": "tú, hoy, ropa nueva",
+    "respuesta": "Tú compras ropa nueva hoy.",
+    "pista": "describing shopping",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "compras"
+      ],
+      [
+        "ropa nueva"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "comprender-presente-0",
+    "verbo": "comprender",
+    "contexto": "yo, por lo general, la situación",
+    "respuesta": "Por lo general, yo comprendo la situación.",
+    "pista": "expressing understanding",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "comprendo"
+      ],
+      [
+        "la situacion"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "comprender-presente-1",
+    "verbo": "comprender",
+    "contexto": "tú, ahora, el problema",
+    "respuesta": "Ahora, tú comprendes el problema.",
+    "pista": "acknowledging awareness",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "comprendes"
+      ],
+      [
+        "el problema"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "comprender-presente-2",
+    "verbo": "comprender",
+    "contexto": "nosotros, cada semana, la lección",
+    "respuesta": "Nosotros comprendemos la lección cada semana.",
+    "pista": "describing learning",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "comprendemos"
+      ],
+      [
+        "la leccion"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "conducir-presente-0",
+    "verbo": "conducir",
+    "contexto": "yo, esta mañana, el coche al trabajo",
+    "respuesta": "Yo conduzco el coche al trabajo esta mañana.",
+    "pista": "describing a commute",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "conduzco"
+      ],
+      [
+        "el coche al trabajo"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "conducir-presente-1",
+    "verbo": "conducir",
+    "contexto": "él, todos los días, con cuidado",
+    "respuesta": "Él conduce con cuidado todos los días.",
+    "pista": "narrating safe driving",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "conduce"
+      ],
+      [
+        "con cuidado"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "conducir-presente-2",
+    "verbo": "conducir",
+    "contexto": "tú, todos los días, muy bien",
+    "respuesta": "Todos los días, tú conduces muy bien.",
+    "pista": "complimenting driving skills",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "conduces"
+      ],
+      [
+        "muy bien"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "confiar-presente-0",
+    "verbo": "confiar",
+    "contexto": "yo, hoy, en mi equipo",
+    "respuesta": "Hoy, yo confio en mi equipo.",
+    "pista": "expressing trust",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "confio"
+      ],
+      [
+        "en mi equipo"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "confiar-presente-1",
+    "verbo": "confiar",
+    "contexto": "ella, todos los días, en sus amigos",
+    "respuesta": "Ella confia en sus amigos todos los días.",
+    "pista": "describing her relationships",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "confia"
+      ],
+      [
+        "en sus amigos"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "confiar-presente-2",
+    "verbo": "confiar",
+    "contexto": "nosotros, cada semana, en el proceso",
+    "respuesta": "Cada semana, nosotros confiamos en el proceso.",
+    "pista": "expressing faith in method",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "confiamos"
+      ],
+      [
+        "en el proceso"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "conocer-presente-0",
+    "verbo": "conocer",
+    "contexto": "yo, ahora mismo, a mucha gente",
+    "respuesta": "Ahora mismo, yo conozco a mucha gente.",
+    "pista": "expressing social connections",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "conozco"
+      ],
+      [
+        "a mucha gente"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "conocer-presente-1",
+    "verbo": "conocer",
+    "contexto": "tú, en este momento, la ciudad muy bien",
+    "respuesta": "En este momento, tú conoces la ciudad muy bien.",
+    "pista": "describing familiarity",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "conoces"
+      ],
+      [
+        "la ciudad muy bien"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "conocer-presente-2",
+    "verbo": "conocer",
+    "contexto": "ellos, cada vez que, el camino",
+    "respuesta": "Cada vez que, ellos conocen el camino.",
+    "pista": "narrating their knowledge",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "conocen"
+      ],
+      [
+        "el camino"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "conseguir-presente-0",
+    "verbo": "conseguir",
+    "contexto": "yo, siempre, buenos resultados",
+    "respuesta": "Siempre, yo consigo buenos resultados.",
+    "pista": "expressing achievement",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "consigo"
+      ],
+      [
+        "buenos resultados"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "conseguir-presente-1",
+    "verbo": "conseguir",
+    "contexto": "nosotros, en este momento, los boletos",
+    "respuesta": "Nosotros conseguimos los boletos en este momento.",
+    "pista": "describing a successful purchase",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "conseguimos"
+      ],
+      [
+        "los boletos"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "conseguir-presente-2",
+    "verbo": "conseguir",
+    "contexto": "tú, mientras, lo que quieres",
+    "respuesta": "Mientras, tú consigues lo que quieres.",
+    "pista": "talking about determination",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "consigues"
+      ],
+      [
+        "lo que quieres"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "considerar-presente-0",
+    "verbo": "considerar",
+    "contexto": "yo, cada vez que, todas las opciones",
+    "respuesta": "Cada vez que, yo considero todas las opciones.",
+    "pista": "expressing careful thought",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "considero"
+      ],
+      [
+        "todas las opciones"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "considerar-presente-1",
+    "verbo": "considerar",
+    "contexto": "nosotros, por lo general, la propuesta",
+    "respuesta": "Por lo general, nosotros consideramos la propuesta.",
+    "pista": "describing evaluation",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "consideramos"
+      ],
+      [
+        "la propuesta"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "considerar-presente-2",
+    "verbo": "considerar",
+    "contexto": "ella, por lo general, las consecuencias",
+    "respuesta": "Por lo general, ella considera las consecuencias.",
+    "pista": "narrating thoughtfulness",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "considera"
+      ],
+      [
+        "las consecuencias"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "construir-presente-0",
+    "verbo": "construir",
+    "contexto": "ellos, esta tarde, una casa nueva",
+    "respuesta": "Ellos construyen una casa nueva esta tarde.",
+    "pista": "describing a construction project",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "construyen"
+      ],
+      [
+        "una casa nueva"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "construir-presente-1",
+    "verbo": "construir",
+    "contexto": "yo, a veces, un mueble",
+    "respuesta": "Yo construyo un mueble a veces.",
+    "pista": "expressing hands-on work",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "construyo"
+      ],
+      [
+        "un mueble"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "construir-presente-2",
+    "verbo": "construir",
+    "contexto": "nosotros, a veces, un futuro mejor",
+    "respuesta": "A veces, nosotros construimos un futuro mejor.",
+    "pista": "expressing hope and effort",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "construimos"
+      ],
+      [
+        "un futuro mejor"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "contar-presente-0",
+    "verbo": "contar",
+    "contexto": "yo, esta noche, una historia",
+    "respuesta": "Esta noche, yo cuento una historia.",
+    "pista": "expressing storytelling",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "cuento"
+      ],
+      [
+        "una historia"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "contar-presente-1",
+    "verbo": "contar",
+    "contexto": "ella, en este momento, los secretos a su amiga",
+    "respuesta": "En este momento, ella cuenta los secretos a su amiga.",
+    "pista": "narrating a confidence",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "cuenta"
+      ],
+      [
+        "los secretos a su amiga"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "contar-presente-2",
+    "verbo": "contar",
+    "contexto": "tú, por lo general, el dinero",
+    "respuesta": "Por lo general, tú cuentas el dinero.",
+    "pista": "describing a practical action",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "cuentas"
+      ],
+      [
+        "el dinero"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "contestar-presente-0",
+    "verbo": "contestar",
+    "contexto": "yo, esta tarde, el teléfono",
+    "respuesta": "Yo contesto el teléfono esta tarde.",
+    "pista": "describing a response",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "contesto"
+      ],
+      [
+        "el telefono"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "contestar-presente-1",
+    "verbo": "contestar",
+    "contexto": "tú, en este momento, las preguntas",
+    "respuesta": "En este momento, tú contestas las preguntas.",
+    "pista": "talking about participation",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "contestas"
+      ],
+      [
+        "las preguntas"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "contestar-presente-2",
+    "verbo": "contestar",
+    "contexto": "él, esta tarde, los correos electrónicos",
+    "respuesta": "Esta tarde, él contesta los correos electrónicos.",
+    "pista": "narrating work habits",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "contesta"
+      ],
+      [
+        "los correos electronicos"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "continuar-presente-0",
+    "verbo": "continuar",
+    "contexto": "nosotros, ahora mismo, con el plan",
+    "respuesta": "Nosotros continuamos con el plan ahora mismo.",
+    "pista": "expressing persistence",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "continuamos"
+      ],
+      [
+        "con el plan"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "continuar-presente-1",
+    "verbo": "continuar",
+    "contexto": "yo, por lo general, mi camino",
+    "respuesta": "Yo continuo mi camino por lo general.",
+    "pista": "describing forward movement",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "continuo"
+      ],
+      [
+        "mi camino"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "continuar-presente-2",
+    "verbo": "continuar",
+    "contexto": "ella, en este momento, sus estudios",
+    "respuesta": "Ella continua sus estudios en este momento.",
+    "pista": "narrating her dedication",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "continua"
+      ],
+      [
+        "sus estudios"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "controlar-presente-0",
+    "verbo": "controlar",
+    "contexto": "yo, normalmente, mis emociones",
+    "respuesta": "Yo controlo mis emociones normalmente.",
+    "pista": "expressing self-discipline",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "controlo"
+      ],
+      [
+        "mis emociones"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "controlar-presente-1",
+    "verbo": "controlar",
+    "contexto": "él, mientras, la situación",
+    "respuesta": "Mientras, él controla la situación.",
+    "pista": "describing leadership",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "controla"
+      ],
+      [
+        "la situacion"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "controlar-presente-2",
+    "verbo": "controlar",
+    "contexto": "nosotros, por lo general, los gastos",
+    "respuesta": "Nosotros controlamos los gastos por lo general.",
+    "pista": "talking about budgeting",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "controlamos"
+      ],
+      [
+        "los gastos"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  }
+]

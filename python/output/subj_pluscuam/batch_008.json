@@ -1,0 +1,314 @@
+[
+  {
+    "id": "escapar-subj_pluscuam-0",
+    "verbo": "escapar",
+    "contexto": "Si el prisionero, de la carcel, habria habido una alarma",
+    "respuesta": "Si el prisionero hubiera escapado de la carcel, habria habido una alarma.",
+    "pista": "Pluperfect subjunctive for hypothetical prison escape.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["escapado"], ["el prisionero"], ["de la carcel"]]
+  },
+  {
+    "id": "escapar-subj_pluscuam-1",
+    "verbo": "escapar",
+    "contexto": "Era imposible que nosotros, del edificio, sin ser vistos",
+    "respuesta": "Era imposible que nosotros hubieramos escapado del edificio sin ser vistos.",
+    "pista": "Past impossibility of escaping unnoticed.",
+    "grupos": [["era imposible que"], ["hubieramos", "hubiesemos"], ["escapado"], ["nosotros"], ["del edificio"]]
+  },
+  {
+    "id": "escapar-subj_pluscuam-2",
+    "verbo": "escapar",
+    "contexto": "Como si tu, de un peligro mortal, por los pelos",
+    "respuesta": "Respirabas como si tu hubieras escapado de un peligro mortal por los pelos.",
+    "pista": "Como si + pluperfect subjunctive for narrow escape behavior.",
+    "grupos": [["como si"], ["hubieras", "hubieses"], ["escapado"], ["tu"], ["de un peligro mortal"]]
+  },
+  {
+    "id": "esconder-subj_pluscuam-0",
+    "verbo": "esconder",
+    "contexto": "Si yo, el tesoro, en otro lugar",
+    "respuesta": "Si yo hubiera escondido el tesoro en otro lugar, no lo habrian encontrado.",
+    "pista": "Pluperfect subjunctive for a poorly chosen hiding spot.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["escondido"], ["yo"], ["el tesoro"]]
+  },
+  {
+    "id": "esconder-subj_pluscuam-1",
+    "verbo": "esconder",
+    "contexto": "Dudaba que ella, las joyas, debajo de la cama",
+    "respuesta": "Dudaba que ella hubiera escondido las joyas debajo de la cama.",
+    "pista": "Doubt about a hiding location.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["escondido"], ["ella"], ["las joyas"]]
+  },
+  {
+    "id": "esconder-subj_pluscuam-2",
+    "verbo": "esconder",
+    "contexto": "No creia que ellos, la evidencia, tan bien",
+    "respuesta": "No creia que ellos hubieran escondido la evidencia tan bien.",
+    "pista": "Disbelief about effective evidence hiding.",
+    "grupos": [["no creia que"], ["hubieran", "hubiesen"], ["escondido"], ["ellos"], ["la evidencia"]]
+  },
+  {
+    "id": "escribir-subj_pluscuam-0",
+    "verbo": "escribir",
+    "contexto": "Si tu, esa novela, habrias sido famoso",
+    "respuesta": "Si tu hubieras escrito esa novela, habrias sido famoso.",
+    "pista": "Escribir has an irregular past participle: escrito. Pluperfect subjunctive for an unwritten book.",
+    "grupos": [["si"], ["hubieras", "hubieses"], ["escrito"], ["tu"], ["esa novela"]]
+  },
+  {
+    "id": "escribir-subj_pluscuam-1",
+    "verbo": "escribir",
+    "contexto": "Dudaba que el, la carta, sin ayuda",
+    "respuesta": "Dudaba que el hubiera escrito la carta sin ayuda.",
+    "pista": "Doubt about writing independently. Irregular participle: escrito.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["escrito"], ["el"], ["la carta"]]
+  },
+  {
+    "id": "escribir-subj_pluscuam-2",
+    "verbo": "escribir",
+    "contexto": "Ojala nosotros, nuestras memorias, antes de olvidar",
+    "respuesta": "Ojala nosotros hubieramos escrito nuestras memorias antes de olvidar.",
+    "pista": "Wishing you had written down memories. Irregular participle: escrito.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["escrito"], ["nosotros"], ["nuestras memorias"]]
+  },
+  {
+    "id": "escuchar-subj_pluscuam-0",
+    "verbo": "escuchar",
+    "contexto": "Si ella, los consejos, de su madre",
+    "respuesta": "Si ella hubiera escuchado los consejos de su madre, no tendria problemas.",
+    "pista": "Pluperfect subjunctive for ignoring advice.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["escuchado"], ["ella"], ["los consejos"]]
+  },
+  {
+    "id": "escuchar-subj_pluscuam-1",
+    "verbo": "escuchar",
+    "contexto": "No creia que tu, la alarma, desde tu habitacion",
+    "respuesta": "No creia que tu hubieras escuchado la alarma desde tu habitacion.",
+    "pista": "Disbelief about hearing an alarm from far away.",
+    "grupos": [["no creia que"], ["hubieras", "hubieses"], ["escuchado"], ["tu"], ["la alarma"]]
+  },
+  {
+    "id": "escuchar-subj_pluscuam-2",
+    "verbo": "escuchar",
+    "contexto": "Ojala nosotros, esa cancion, en vivo",
+    "respuesta": "Ojala nosotros hubieramos escuchado esa cancion en vivo.",
+    "pista": "Wishing you had heard that song live.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["escuchado"], ["nosotros"], ["esa cancion"]]
+  },
+  {
+    "id": "esperar-subj_pluscuam-0",
+    "verbo": "esperar",
+    "contexto": "Si yo, un poco mas, habria llegado el autobus",
+    "respuesta": "Si yo hubiera esperado un poco mas, habria llegado el autobus.",
+    "pista": "Pluperfect subjunctive for impatient departure.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["esperado"], ["yo"], ["un poco mas"]]
+  },
+  {
+    "id": "esperar-subj_pluscuam-1",
+    "verbo": "esperar",
+    "contexto": "Dudaba que ellos, toda la noche, en el hospital",
+    "respuesta": "Dudaba que ellos hubieran esperado toda la noche en el hospital.",
+    "pista": "Doubt about waiting all night at a hospital.",
+    "grupos": [["dudaba que"], ["hubieran", "hubiesen"], ["esperado"], ["ellos"], ["toda la noche"]]
+  },
+  {
+    "id": "esperar-subj_pluscuam-2",
+    "verbo": "esperar",
+    "contexto": "Como si tu, una eternidad, para este momento",
+    "respuesta": "Reaccionaste como si tu hubieras esperado una eternidad para este momento.",
+    "pista": "Como si + pluperfect subjunctive for intense anticipation.",
+    "grupos": [["como si"], ["hubieras", "hubieses"], ["esperado"], ["tu"], ["una eternidad"]]
+  },
+  {
+    "id": "estar-subj_pluscuam-0",
+    "verbo": "estar",
+    "contexto": "Si yo, alli, ese dia, habria ayudado",
+    "respuesta": "Si yo hubiera estado alli ese dia, habria ayudado.",
+    "pista": "Pluperfect subjunctive for not being present.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["estado"], ["yo"], ["alli"]]
+  },
+  {
+    "id": "estar-subj_pluscuam-1",
+    "verbo": "estar",
+    "contexto": "No creia que ella, enferma, toda la semana",
+    "respuesta": "No creia que ella hubiera estado enferma toda la semana.",
+    "pista": "Disbelief about week-long illness.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["estado"], ["ella"], ["enferma"]]
+  },
+  {
+    "id": "estar-subj_pluscuam-2",
+    "verbo": "estar",
+    "contexto": "Ojala nosotros, preparados, para la emergencia",
+    "respuesta": "Ojala nosotros hubieramos estado preparados para la emergencia.",
+    "pista": "Wishing you had been prepared for the emergency.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["estado"], ["nosotros"], ["preparados"]]
+  },
+  {
+    "id": "estudiar-subj_pluscuam-0",
+    "verbo": "estudiar",
+    "contexto": "Si tu, mas para el examen, habrias aprobado",
+    "respuesta": "Si tu hubieras estudiado mas para el examen, habrias aprobado.",
+    "pista": "Pluperfect subjunctive for insufficient study.",
+    "grupos": [["si"], ["hubieras", "hubieses"], ["estudiado"], ["tu"], ["mas para el examen"]]
+  },
+  {
+    "id": "estudiar-subj_pluscuam-1",
+    "verbo": "estudiar",
+    "contexto": "Era imposible que el, toda la materia, en una noche",
+    "respuesta": "Era imposible que el hubiera estudiado toda la materia en una noche.",
+    "pista": "Past impossibility of studying everything in one night.",
+    "grupos": [["era imposible que"], ["hubiera", "hubiese"], ["estudiado"], ["el"], ["toda la materia"]]
+  },
+  {
+    "id": "estudiar-subj_pluscuam-2",
+    "verbo": "estudiar",
+    "contexto": "Ojala nosotros, en el extranjero, de jovenes",
+    "respuesta": "Ojala nosotros hubieramos estudiado en el extranjero de jovenes.",
+    "pista": "Wishing you had studied abroad when young.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["estudiado"], ["nosotros"], ["en el extranjero"]]
+  },
+  {
+    "id": "evitar-subj_pluscuam-0",
+    "verbo": "evitar",
+    "contexto": "Si yo, ese camino, no habria tenido el accidente",
+    "respuesta": "Si yo hubiera evitado ese camino, no habria tenido el accidente.",
+    "pista": "Pluperfect subjunctive for not avoiding danger.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["evitado"], ["yo"], ["ese camino"]]
+  },
+  {
+    "id": "evitar-subj_pluscuam-1",
+    "verbo": "evitar",
+    "contexto": "Dudaba que ella, la confrontacion, con sus colegas",
+    "respuesta": "Dudaba que ella hubiera evitado la confrontacion con sus colegas.",
+    "pista": "Doubt about avoiding confrontation.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["evitado"], ["ella"], ["la confrontacion"]]
+  },
+  {
+    "id": "evitar-subj_pluscuam-2",
+    "verbo": "evitar",
+    "contexto": "Era imposible que nosotros, todos los problemas, del proyecto",
+    "respuesta": "Era imposible que nosotros hubieramos evitado todos los problemas del proyecto.",
+    "pista": "Past impossibility of avoiding all problems.",
+    "grupos": [["era imposible que"], ["hubieramos", "hubiesemos"], ["evitado"], ["nosotros"], ["todos los problemas"]]
+  },
+  {
+    "id": "existir-subj_pluscuam-0",
+    "verbo": "existir",
+    "contexto": "Si una solucion, antes, habriamos evitado el desastre",
+    "respuesta": "Si una solucion hubiera existido antes, habriamos evitado el desastre.",
+    "pista": "Pluperfect subjunctive for something that didn't exist in time.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["existido"], ["una solucion"], ["antes"]]
+  },
+  {
+    "id": "existir-subj_pluscuam-1",
+    "verbo": "existir",
+    "contexto": "Dudaba que esa tecnologia, en esa epoca, realmente",
+    "respuesta": "Dudaba que esa tecnologia hubiera existido en esa epoca realmente.",
+    "pista": "Doubt about the existence of technology in the past.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["existido"], ["esa tecnologia"], ["en esa epoca"]]
+  },
+  {
+    "id": "existir-subj_pluscuam-2",
+    "verbo": "existir",
+    "contexto": "No creia que un lugar tan hermoso, en este planeta",
+    "respuesta": "No creia que un lugar tan hermoso hubiera existido en este planeta.",
+    "pista": "Disbelief about the existence of a beautiful place.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["existido"], ["un lugar tan hermoso"], ["en este planeta"]]
+  },
+  {
+    "id": "explicar-subj_pluscuam-0",
+    "verbo": "explicar",
+    "contexto": "Si tu, la situacion, con claridad",
+    "respuesta": "Si tu hubieras explicado la situacion con claridad, te habrian entendido.",
+    "pista": "Pluperfect subjunctive for unclear past explanations.",
+    "grupos": [["si"], ["hubieras", "hubieses"], ["explicado"], ["tu"], ["la situacion"]]
+  },
+  {
+    "id": "explicar-subj_pluscuam-1",
+    "verbo": "explicar",
+    "contexto": "Dudaba que el profesor, el tema, de manera comprensible",
+    "respuesta": "Dudaba que el profesor hubiera explicado el tema de manera comprensible.",
+    "pista": "Doubt about clear teaching.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["explicado"], ["el profesor"], ["el tema"]]
+  },
+  {
+    "id": "explicar-subj_pluscuam-2",
+    "verbo": "explicar",
+    "contexto": "Ojala nosotros, nuestras intenciones, desde el principio",
+    "respuesta": "Ojala nosotros hubieramos explicado nuestras intenciones desde el principio.",
+    "pista": "Wishing you had explained your intentions from the start.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["explicado"], ["nosotros"], ["nuestras intenciones"]]
+  },
+  {
+    "id": "formar-subj_pluscuam-0",
+    "verbo": "formar",
+    "contexto": "Si ellos, un equipo, mas equilibrado",
+    "respuesta": "Si ellos hubieran formado un equipo mas equilibrado, habrian ganado.",
+    "pista": "Pluperfect subjunctive for poor team formation.",
+    "grupos": [["si"], ["hubieran", "hubiesen"], ["formado"], ["ellos"], ["un equipo"]]
+  },
+  {
+    "id": "formar-subj_pluscuam-1",
+    "verbo": "formar",
+    "contexto": "No creia que ella, parte del grupo, desde el inicio",
+    "respuesta": "No creia que ella hubiera formado parte del grupo desde el inicio.",
+    "pista": "Disbelief about group membership from the start.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["formado"], ["ella"], ["parte del grupo"]]
+  },
+  {
+    "id": "formar-subj_pluscuam-2",
+    "verbo": "formar",
+    "contexto": "Ojala nosotros, una alianza, antes de la batalla",
+    "respuesta": "Ojala nosotros hubieramos formado una alianza antes de la batalla.",
+    "pista": "Wishing you had formed an alliance earlier.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["formado"], ["nosotros"], ["una alianza"]]
+  },
+  {
+    "id": "funcionar-subj_pluscuam-0",
+    "verbo": "funcionar",
+    "contexto": "Si la maquina, correctamente, no habria accidentes",
+    "respuesta": "Si la maquina hubiera funcionado correctamente, no habria accidentes.",
+    "pista": "Pluperfect subjunctive for equipment malfunction.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["funcionado"], ["la maquina"], ["correctamente"]]
+  },
+  {
+    "id": "funcionar-subj_pluscuam-1",
+    "verbo": "funcionar",
+    "contexto": "Dudaba que el plan, sin su liderazgo, en la practica",
+    "respuesta": "Dudaba que el plan hubiera funcionado sin su liderazgo en la practica.",
+    "pista": "Doubt about a plan working without leadership.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["funcionado"], ["el plan"], ["sin su liderazgo"]]
+  },
+  {
+    "id": "funcionar-subj_pluscuam-2",
+    "verbo": "funcionar",
+    "contexto": "Era imposible que el sistema, sin electricidad, durante horas",
+    "respuesta": "Era imposible que el sistema hubiera funcionado sin electricidad durante horas.",
+    "pista": "Past impossibility of functioning without power.",
+    "grupos": [["era imposible que"], ["hubiera", "hubiese"], ["funcionado"], ["el sistema"], ["sin electricidad"]]
+  },
+  {
+    "id": "ganar-subj_pluscuam-0",
+    "verbo": "ganar",
+    "contexto": "Si nosotros, el partido, habriamos celebrado",
+    "respuesta": "Si nosotros hubieramos ganado el partido, habriamos celebrado.",
+    "pista": "Pluperfect subjunctive for a lost game.",
+    "grupos": [["si"], ["hubieramos", "hubiesemos"], ["ganado"], ["nosotros"], ["el partido"]]
+  },
+  {
+    "id": "ganar-subj_pluscuam-1",
+    "verbo": "ganar",
+    "contexto": "No creia que ella, la loteria, de verdad",
+    "respuesta": "No creia que ella hubiera ganado la loteria de verdad.",
+    "pista": "Disbelief about winning the lottery.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["ganado"], ["ella"], ["la loteria"]]
+  },
+  {
+    "id": "ganar-subj_pluscuam-2",
+    "verbo": "ganar",
+    "contexto": "Ojala tu, mas dinero, en tu trabajo anterior",
+    "respuesta": "Ojala tu hubieras ganado mas dinero en tu trabajo anterior.",
+    "pista": "Wishing you had earned more money.",
+    "grupos": [["ojala"], ["hubieras", "hubieses"], ["ganado"], ["tu"], ["mas dinero"]]
+  }
+]

@@ -1,0 +1,947 @@
+[
+  {
+    "id": "andar-presente-0",
+    "verbo": "andar",
+    "contexto": "yo, ahora mismo, por el parque",
+    "respuesta": "Ahora mismo, yo ando por el parque.",
+    "pista": "describing current movement",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "ando"
+      ],
+      [
+        "por el parque"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "andar-presente-1",
+    "verbo": "andar",
+    "contexto": "ellos, todos los días, por la calle",
+    "respuesta": "Todos los días, ellos andan por la calle.",
+    "pista": "narrating what they do",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "andan"
+      ],
+      [
+        "por la calle"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "andar-presente-2",
+    "verbo": "andar",
+    "contexto": "tú, a veces, muy rápido",
+    "respuesta": "A veces, tú andas muy rápido.",
+    "pista": "commenting on speed",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "andas"
+      ],
+      [
+        "muy rapido"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "aparecer-presente-0",
+    "verbo": "aparecer",
+    "contexto": "él, esta mañana, en la televisión",
+    "respuesta": "Esta mañana, él aparece en la televisión.",
+    "pista": "describing where he shows up",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "aparece"
+      ],
+      [
+        "en la television"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "aparecer-presente-1",
+    "verbo": "aparecer",
+    "contexto": "yo, a veces, en la lista",
+    "respuesta": "Yo aparezco en la lista a veces.",
+    "pista": "expressing current status",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "aparezco"
+      ],
+      [
+        "en la lista"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "aparecer-presente-2",
+    "verbo": "aparecer",
+    "contexto": "ellas, cada semana, en el escenario",
+    "respuesta": "Ellas aparecen en el escenario cada semana.",
+    "pista": "narrating an event",
+    "grupos": [
+      [
+        "ellas"
+      ],
+      [
+        "aparecen"
+      ],
+      [
+        "en el escenario"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "apartar-presente-0",
+    "verbo": "apartar",
+    "contexto": "yo, ahora mismo, los libros de la mesa",
+    "respuesta": "Yo aparto los libros de la mesa ahora mismo.",
+    "pista": "describing a current action",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "aparto"
+      ],
+      [
+        "los libros de la mesa"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "apartar-presente-1",
+    "verbo": "apartar",
+    "contexto": "tú, todos los días, la mirada",
+    "respuesta": "Todos los días, tú apartas la mirada.",
+    "pista": "narrating a present moment",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "apartas"
+      ],
+      [
+        "la mirada"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "apartar-presente-2",
+    "verbo": "apartar",
+    "contexto": "ella, normalmente, las sillas",
+    "respuesta": "Normalmente, ella aparta las sillas.",
+    "pista": "describing what she does",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "aparta"
+      ],
+      [
+        "las sillas"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "apostar-presente-0",
+    "verbo": "apostar",
+    "contexto": "yo, siempre, por el equipo local",
+    "respuesta": "Yo apuesto por el equipo local siempre.",
+    "pista": "expressing a bet",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "apuesto"
+      ],
+      [
+        "por el equipo local"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "apostar-presente-1",
+    "verbo": "apostar",
+    "contexto": "ellos, a veces, mucho dinero",
+    "respuesta": "Ellos apuestan mucho dinero a veces.",
+    "pista": "describing their action",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "apuestan"
+      ],
+      [
+        "mucho dinero"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "apostar-presente-2",
+    "verbo": "apostar",
+    "contexto": "tú, hoy, por tu favorito",
+    "respuesta": "Tú apuestas por tu favorito hoy.",
+    "pista": "talking about preferences",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "apuestas"
+      ],
+      [
+        "por tu favorito"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "apoyar-presente-0",
+    "verbo": "apoyar",
+    "contexto": "yo, esta mañana, a mi hermano",
+    "respuesta": "Esta mañana, yo apoyo a mi hermano.",
+    "pista": "expressing support",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "apoyo"
+      ],
+      [
+        "a mi hermano"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "apoyar-presente-1",
+    "verbo": "apoyar",
+    "contexto": "nosotros, mientras, el proyecto",
+    "respuesta": "Nosotros apoyamos el proyecto mientras.",
+    "pista": "describing team action",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "apoyamos"
+      ],
+      [
+        "el proyecto"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "apoyar-presente-2",
+    "verbo": "apoyar",
+    "contexto": "tú, mientras, a tus compañeros",
+    "respuesta": "Mientras, tú apoyas a tus compañeros.",
+    "pista": "talking about helping others",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "apoyas"
+      ],
+      [
+        "a tus companeros"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "aprender-presente-0",
+    "verbo": "aprender",
+    "contexto": "yo, actualmente, español",
+    "respuesta": "Actualmente, yo aprendo español.",
+    "pista": "expressing current learning",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "aprendo"
+      ],
+      [
+        "espanol"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "aprender-presente-1",
+    "verbo": "aprender",
+    "contexto": "tú, por lo general, algo nuevo",
+    "respuesta": "Tú aprendes algo nuevo por lo general.",
+    "pista": "describing habitual activity",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "aprendes"
+      ],
+      [
+        "algo nuevo"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "aprender-presente-2",
+    "verbo": "aprender",
+    "contexto": "ellos, por lo general, a cocinar",
+    "respuesta": "Por lo general, ellos aprenden a cocinar.",
+    "pista": "narrating what they do",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "aprenden"
+      ],
+      [
+        "a cocinar"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "arreglar-presente-0",
+    "verbo": "arreglar",
+    "contexto": "yo, hoy, el coche",
+    "respuesta": "Hoy, yo arreglo el coche.",
+    "pista": "describing a repair",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "arreglo"
+      ],
+      [
+        "el coche"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "arreglar-presente-1",
+    "verbo": "arreglar",
+    "contexto": "él, todos los días, la computadora",
+    "respuesta": "Todos los días, él arregla la computadora.",
+    "pista": "narrating his work",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "arregla"
+      ],
+      [
+        "la computadora"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "arreglar-presente-2",
+    "verbo": "arreglar",
+    "contexto": "nosotros, cada semana, la casa",
+    "respuesta": "Nosotros arreglamos la casa cada semana.",
+    "pista": "talking about home improvement",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "arreglamos"
+      ],
+      [
+        "la casa"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "asegurar-presente-0",
+    "verbo": "asegurar",
+    "contexto": "yo, ahora, la puerta",
+    "respuesta": "Yo aseguro la puerta ahora.",
+    "pista": "describing a safety action",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "aseguro"
+      ],
+      [
+        "la puerta"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "asegurar-presente-1",
+    "verbo": "asegurar",
+    "contexto": "ella, cada vez que, el éxito del evento",
+    "respuesta": "Ella asegura el éxito del evento cada vez que.",
+    "pista": "narrating her effort",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "asegura"
+      ],
+      [
+        "el exito del evento"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "asegurar-presente-2",
+    "verbo": "asegurar",
+    "contexto": "nosotros, esta tarde, los resultados",
+    "respuesta": "Esta tarde, nosotros aseguramos los resultados.",
+    "pista": "expressing team responsibility",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "aseguramos"
+      ],
+      [
+        "los resultados"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "asesinar-presente-0",
+    "verbo": "asesinar",
+    "contexto": "él, cada vez que, al personaje en la novela",
+    "respuesta": "Cada vez que, él asesina al personaje en la novela.",
+    "pista": "narrating a fictional plot",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "asesina"
+      ],
+      [
+        "al personaje en la novela"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "asesinar-presente-1",
+    "verbo": "asesinar",
+    "contexto": "ellos, hoy, al villano en la historia",
+    "respuesta": "Ellos asesinan al villano en la historia hoy.",
+    "pista": "describing a story",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "asesinan"
+      ],
+      [
+        "al villano en la historia"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "asesinar-presente-2",
+    "verbo": "asesinar",
+    "contexto": "ella, a veces, al rival en el videojuego",
+    "respuesta": "A veces, ella asesina al rival en el videojuego.",
+    "pista": "talking about gaming",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "asesina"
+      ],
+      [
+        "al rival en el videojuego"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "asustar-presente-0",
+    "verbo": "asustar",
+    "contexto": "tú, esta mañana, a los niños",
+    "respuesta": "Tú asustas a los niños esta mañana.",
+    "pista": "describing a playful action",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "asustas"
+      ],
+      [
+        "a los ninos"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "asustar-presente-1",
+    "verbo": "asustar",
+    "contexto": "él, mientras, a su hermana",
+    "respuesta": "Mientras, él asusta a su hermana.",
+    "pista": "narrating a prank",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "asusta"
+      ],
+      [
+        "a su hermana"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "asustar-presente-2",
+    "verbo": "asustar",
+    "contexto": "yo, esta noche, a mi gato sin querer",
+    "respuesta": "Yo asusto a mi gato sin querer esta noche.",
+    "pista": "expressing an accident",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "asusto"
+      ],
+      [
+        "a mi gato sin querer"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "atacar-presente-0",
+    "verbo": "atacar",
+    "contexto": "ellos, mientras, al enemigo",
+    "respuesta": "Mientras, ellos atacan al enemigo.",
+    "pista": "describing a conflict",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "atacan"
+      ],
+      [
+        "al enemigo"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "atacar-presente-1",
+    "verbo": "atacar",
+    "contexto": "él, normalmente, el problema con determinación",
+    "respuesta": "Él ataca el problema con determinación normalmente.",
+    "pista": "expressing determination",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "ataca"
+      ],
+      [
+        "el problema con determinacion"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "atacar-presente-2",
+    "verbo": "atacar",
+    "contexto": "nosotros, mientras, la tarea difícil",
+    "respuesta": "Nosotros atacamos la tarea difícil mientras.",
+    "pista": "tackling something challenging",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "atacamos"
+      ],
+      [
+        "la tarea dificil"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "atrapar-presente-0",
+    "verbo": "atrapar",
+    "contexto": "yo, ahora mismo, la pelota",
+    "respuesta": "Yo atrapo la pelota ahora mismo.",
+    "pista": "describing a catch",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "atrapo"
+      ],
+      [
+        "la pelota"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "atrapar-presente-1",
+    "verbo": "atrapar",
+    "contexto": "ella, hoy, al ladrón",
+    "respuesta": "Hoy, ella atrapa al ladrón.",
+    "pista": "narrating an action",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "atrapa"
+      ],
+      [
+        "al ladron"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "atrapar-presente-2",
+    "verbo": "atrapar",
+    "contexto": "tú, ahora, las mariposas",
+    "respuesta": "Ahora, tú atrapas las mariposas.",
+    "pista": "describing an activity",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "atrapas"
+      ],
+      [
+        "las mariposas"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "averiguar-presente-0",
+    "verbo": "averiguar",
+    "contexto": "yo, cada semana, la verdad",
+    "respuesta": "Cada semana, yo averiguo la verdad.",
+    "pista": "expressing investigation",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "averiguo"
+      ],
+      [
+        "la verdad"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "averiguar-presente-1",
+    "verbo": "averiguar",
+    "contexto": "nosotros, todos los días, los hechos",
+    "respuesta": "Todos los días, nosotros averiguamos los hechos.",
+    "pista": "describing research",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "averiguamos"
+      ],
+      [
+        "los hechos"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "averiguar-presente-2",
+    "verbo": "averiguar",
+    "contexto": "tú, ahora, la dirección",
+    "respuesta": "Ahora, tú averiguas la dirección.",
+    "pista": "talking about finding out",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "averiguas"
+      ],
+      [
+        "la direccion"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "ayudar-presente-0",
+    "verbo": "ayudar",
+    "contexto": "yo, esta noche, a mi vecino",
+    "respuesta": "Esta noche, yo ayudo a mi vecino.",
+    "pista": "expressing willingness to help",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "ayudo"
+      ],
+      [
+        "a mi vecino"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "ayudar-presente-1",
+    "verbo": "ayudar",
+    "contexto": "ella, por lo general, a los estudiantes",
+    "respuesta": "Por lo general, ella ayuda a los estudiantes.",
+    "pista": "describing her role",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "ayuda"
+      ],
+      [
+        "a los estudiantes"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "ayudar-presente-2",
+    "verbo": "ayudar",
+    "contexto": "nosotros, actualmente, a la comunidad",
+    "respuesta": "Nosotros ayudamos a la comunidad actualmente.",
+    "pista": "talking about community service",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "ayudamos"
+      ],
+      [
+        "a la comunidad"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "bailar-presente-0",
+    "verbo": "bailar",
+    "contexto": "yo, normalmente, salsa",
+    "respuesta": "Normalmente, yo bailo salsa.",
+    "pista": "expressing a hobby",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "bailo"
+      ],
+      [
+        "salsa"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "bailar-presente-1",
+    "verbo": "bailar",
+    "contexto": "tú, todos los días, muy bien",
+    "respuesta": "Tú bailas muy bien todos los días.",
+    "pista": "complimenting dance skills",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "bailas"
+      ],
+      [
+        "muy bien"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "bailar-presente-2",
+    "verbo": "bailar",
+    "contexto": "ellos, esta noche, en la fiesta",
+    "respuesta": "Ellos bailan en la fiesta esta noche.",
+    "pista": "narrating a party scene",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "bailan"
+      ],
+      [
+        "en la fiesta"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  }
+]

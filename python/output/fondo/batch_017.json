@@ -1,0 +1,50 @@
+[
+  {
+    "id": "venir-fondo-0",
+    "verbo": "venir",
+    "contexto": "la brisa, del mar, antes del amanecer",
+    "respuesta": "Antes del amanecer, la brisa venia del mar con olor a sal.",
+    "pista": "The imperfect describes an ongoing breeze as a natural background.",
+    "grupos": [["antes del amanecer"], ["la brisa"], ["venia"], ["del mar"], ["con olor a sal"]]
+  },
+  {
+    "id": "ver-fondo-0",
+    "verbo": "ver",
+    "contexto": "nosotros, las montanas, cuando llegamos",
+    "respuesta": "Cuando llegamos, nosotros veiamos las montanas cubiertas de nieve.",
+    "pista": "Ver is irregular in the imperfect: veia, veias, veia, veiamos, veiais, veian.",
+    "grupos": [["cuando llegamos"], ["nosotros"], ["veiamos"], ["las montanas"], ["cubiertas de nieve"]]
+  },
+  {
+    "id": "viajar-fondo-0",
+    "verbo": "viajar",
+    "contexto": "la familia, en tren, en aquel entonces",
+    "respuesta": "En aquel entonces, la familia viajaba en tren por toda la costa.",
+    "pista": "The imperfect describes habitual travel as a background routine.",
+    "grupos": [["en aquel entonces"], ["la familia"], ["viajaba"], ["en tren"], ["por toda la costa"]]
+  },
+  {
+    "id": "vivir-fondo-0",
+    "verbo": "vivir",
+    "contexto": "nosotros, en una casa pequena, cuando de pronto",
+    "respuesta": "Nosotros viviamos en una casa pequena cuando de pronto todo cambio para siempre.",
+    "pista": "The imperfect describes a living situation as background before a life change.",
+    "grupos": [["nosotros"], ["viviamos"], ["en una casa pequena"], ["cuando de pronto"], ["todo cambio para siempre"]]
+  },
+  {
+    "id": "volar-fondo-0",
+    "verbo": "volar",
+    "contexto": "las gaviotas, sobre el puerto, esa manana temprano",
+    "respuesta": "Esa manana temprano, las gaviotas volaban sobre el puerto en circulos.",
+    "pista": "The imperfect describes birds flying as a natural background scene.",
+    "grupos": [["esa manana temprano"], ["las gaviotas"], ["volaban"], ["sobre el puerto"], ["en circulos"]]
+  },
+  {
+    "id": "volver-fondo-0",
+    "verbo": "volver",
+    "contexto": "los pajaros, al nido, cuando salio el sol",
+    "respuesta": "Los pajaros volvian al nido cuando salio el sol detras de las nubes.",
+    "pista": "The imperfect describes birds returning as a peaceful background scene.",
+    "grupos": [["los pajaros"], ["volvian"], ["al nido"], ["cuando salio el sol"], ["detras de las nubes"]]
+  }
+]

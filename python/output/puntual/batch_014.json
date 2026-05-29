@@ -1,0 +1,210 @@
+[
+  {
+    "id": "referir-puntual-0",
+    "verbo": "referir",
+    "contexto": "el, durante el viaje, una anecdota divertida",
+    "respuesta": "El refirio una anecdota divertida durante el viaje.",
+    "pista": "completed action of relating a funny anecdote during the trip",
+    "grupos": [["el"], ["refirio"], ["una anecdota divertida"], ["durante el viaje"]]
+  },
+  {
+    "id": "referir-puntual-1",
+    "verbo": "referir",
+    "contexto": "ella, tras la reunion, los hechos tal como fueron",
+    "respuesta": "Ella refirio los hechos tal como fueron tras la reunion.",
+    "pista": "completed action of relating the facts as they were after the meeting",
+    "grupos": [["ella"], ["refirio"], ["los hechos tal como fueron"], ["tras la reunion"]]
+  },
+  {
+    "id": "regresar-puntual-0",
+    "verbo": "regresar",
+    "contexto": "nosotros, al anochecer, a casa",
+    "respuesta": "Nosotros regresamos a casa al anochecer.",
+    "pista": "completed action of returning home at nightfall",
+    "grupos": [["nosotros"], ["regresamos"], ["a casa"], ["al anochecer"]]
+  },
+  {
+    "id": "regresar-puntual-1",
+    "verbo": "regresar",
+    "contexto": "ella, hace tres dias, de su viaje",
+    "respuesta": "Ella regreso de su viaje hace tres dias.",
+    "pista": "completed action of returning from her trip three days ago",
+    "grupos": [["ella"], ["regreso"], ["de su viaje"], ["hace tres dias"]]
+  },
+  {
+    "id": "reir-puntual-0",
+    "verbo": "reir",
+    "contexto": "todos, esa misma noche, sin parar",
+    "respuesta": "Todos rieron sin parar esa misma noche.",
+    "pista": "completed action of everyone laughing nonstop that very night",
+    "grupos": [["todos"], ["rieron"], ["sin parar"], ["esa misma noche"]]
+  },
+  {
+    "id": "reir-puntual-1",
+    "verbo": "reir",
+    "contexto": "yo, de repente, a carcajadas",
+    "respuesta": "Yo rei a carcajadas de repente.",
+    "pista": "completed action of laughing out loud suddenly",
+    "grupos": [["yo"], ["rei"], ["a carcajadas"], ["de repente"]]
+  },
+  {
+    "id": "repetir-puntual-0",
+    "verbo": "repetir",
+    "contexto": "el profesor, en aquel momento, la pregunta",
+    "respuesta": "El profesor repitio la pregunta en aquel momento.",
+    "pista": "completed action of the teacher repeating the question at that moment",
+    "grupos": [["el profesor"], ["repitio"], ["la pregunta"], ["en aquel momento"]]
+  },
+  {
+    "id": "repetir-puntual-1",
+    "verbo": "repetir",
+    "contexto": "yo, justo en ese instante, las palabras",
+    "respuesta": "Yo repeti las palabras justo en ese instante.",
+    "pista": "completed action of repeating the words at that exact moment",
+    "grupos": [["yo"], ["repeti"], ["las palabras"], ["justo en ese instante"]]
+  },
+  {
+    "id": "representar-puntual-0",
+    "verbo": "representar",
+    "contexto": "ella, aquel verano, a su pais",
+    "respuesta": "Ella represento a su pais aquel verano.",
+    "pista": "completed action of representing her country that summer",
+    "grupos": [["ella"], ["represento"], ["a su pais"], ["aquel verano"]]
+  },
+  {
+    "id": "representar-puntual-1",
+    "verbo": "representar",
+    "contexto": "ellos, el martes pasado, la obra en el teatro",
+    "respuesta": "Ellos representaron la obra en el teatro el martes pasado.",
+    "pista": "completed action of performing the play at the theater last Tuesday",
+    "grupos": [["ellos"], ["representaron"], ["la obra en el teatro"], ["el martes pasado"]]
+  },
+  {
+    "id": "resolver-puntual-0",
+    "verbo": "resolver",
+    "contexto": "ella, al final del dia, el misterio",
+    "respuesta": "Ella resolvio el misterio al final del dia.",
+    "pista": "completed action of solving the mystery at the end of the day",
+    "grupos": [["ella"], ["resolvio"], ["el misterio"], ["al final del dia"]]
+  },
+  {
+    "id": "resolver-puntual-1",
+    "verbo": "resolver",
+    "contexto": "nosotros, tras la reunion, el conflicto",
+    "respuesta": "Nosotros resolvimos el conflicto tras la reunion.",
+    "pista": "completed action of resolving the conflict after the meeting",
+    "grupos": [["nosotros"], ["resolvimos"], ["el conflicto"], ["tras la reunion"]]
+  },
+  {
+    "id": "responder-puntual-0",
+    "verbo": "responder",
+    "contexto": "el, de repente, con firmeza",
+    "respuesta": "El respondio con firmeza de repente.",
+    "pista": "completed action of responding firmly suddenly",
+    "grupos": [["el"], ["respondio"], ["con firmeza"], ["de repente"]]
+  },
+  {
+    "id": "responder-puntual-1",
+    "verbo": "responder",
+    "contexto": "yo, nada mas llegar, al mensaje",
+    "respuesta": "Yo respondi al mensaje nada mas llegar.",
+    "pista": "completed action of replying to the message right upon arriving",
+    "grupos": [["yo"], ["respondi"], ["al mensaje"], ["nada mas llegar"]]
+  },
+  {
+    "id": "resultar-puntual-0",
+    "verbo": "resultar",
+    "contexto": "el plan, al final del dia, un exito total",
+    "respuesta": "El plan resulto un exito total al final del dia.",
+    "pista": "completed action of the plan turning out to be a total success at the end of the day",
+    "grupos": [["el plan"], ["resulto"], ["un exito total"], ["al final del dia"]]
+  },
+  {
+    "id": "resultar-puntual-1",
+    "verbo": "resultar",
+    "contexto": "la operacion, aquel verano, muy complicada",
+    "respuesta": "La operacion resulto muy complicada aquel verano.",
+    "pista": "completed action of the operation turning out to be very complicated that summer",
+    "grupos": [["la operacion"], ["resulto"], ["muy complicada"], ["aquel verano"]]
+  },
+  {
+    "id": "reunir-puntual-0",
+    "verbo": "reunir",
+    "contexto": "el director, el martes pasado, al equipo",
+    "respuesta": "El director reunio al equipo el martes pasado.",
+    "pista": "completed action of the director gathering the team last Tuesday",
+    "grupos": [["el director"], ["reunio"], ["al equipo"], ["el martes pasado"]]
+  },
+  {
+    "id": "reunir-puntual-1",
+    "verbo": "reunir",
+    "contexto": "nosotros, en aquel momento, toda la informacion",
+    "respuesta": "Nosotros reunimos toda la informacion en aquel momento.",
+    "pista": "completed action of gathering all the information at that moment",
+    "grupos": [["nosotros"], ["reunimos"], ["toda la informacion"], ["en aquel momento"]]
+  },
+  {
+    "id": "revisar-puntual-0",
+    "verbo": "revisar",
+    "contexto": "yo, hace una semana, todos los documentos",
+    "respuesta": "Yo revise todos los documentos hace una semana.",
+    "pista": "completed action of reviewing all the documents a week ago",
+    "grupos": [["yo"], ["revise"], ["todos los documentos"], ["hace una semana"]]
+  },
+  {
+    "id": "revisar-puntual-1",
+    "verbo": "revisar",
+    "contexto": "ella, al mediodia, el motor del coche",
+    "respuesta": "Ella reviso el motor del coche al mediodia.",
+    "pista": "completed action of checking the car engine at noon",
+    "grupos": [["ella"], ["reviso"], ["el motor del coche"], ["al mediodia"]]
+  },
+  {
+    "id": "robar-puntual-0",
+    "verbo": "robar",
+    "contexto": "el ladron, en la madrugada, las joyas",
+    "respuesta": "El ladron robo las joyas en la madrugada.",
+    "pista": "completed action of the thief stealing the jewels in the early morning",
+    "grupos": [["el ladron"], ["robo"], ["las joyas"], ["en la madrugada"]]
+  },
+  {
+    "id": "robar-puntual-1",
+    "verbo": "robar",
+    "contexto": "ellos, hace tres dias, el banco",
+    "respuesta": "Ellos robaron el banco hace tres dias.",
+    "pista": "completed action of robbing the bank three days ago",
+    "grupos": [["ellos"], ["robaron"], ["el banco"], ["hace tres dias"]]
+  },
+  {
+    "id": "romper-puntual-0",
+    "verbo": "romper",
+    "contexto": "el nino, de repente, el jarrón",
+    "respuesta": "El nino rompio el jarron de repente.",
+    "pista": "completed action of the child breaking the vase suddenly",
+    "grupos": [["el nino"], ["rompio"], ["el jarron"], ["de repente"]]
+  },
+  {
+    "id": "romper-puntual-1",
+    "verbo": "romper",
+    "contexto": "yo, justo en ese instante, el silencio",
+    "respuesta": "Yo rompi el silencio justo en ese instante.",
+    "pista": "completed action of breaking the silence at that exact moment",
+    "grupos": [["yo"], ["rompi"], ["el silencio"], ["justo en ese instante"]]
+  },
+  {
+    "id": "saber-puntual-0",
+    "verbo": "saber",
+    "contexto": "yo, esa misma noche, la verdad",
+    "respuesta": "Yo supe la verdad esa misma noche.",
+    "pista": "completed action of finding out the truth that very night",
+    "grupos": [["yo"], ["supe"], ["la verdad"], ["esa misma noche"]]
+  },
+  {
+    "id": "saber-puntual-1",
+    "verbo": "saber",
+    "contexto": "ella, en aquel momento, que hacer",
+    "respuesta": "Ella supo que hacer en aquel momento.",
+    "pista": "completed action of knowing what to do at that moment",
+    "grupos": [["ella"], ["supo"], ["que hacer"], ["en aquel momento"]]
+  }
+]

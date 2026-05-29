@@ -1,0 +1,242 @@
+[
+  {
+    "id": "bajar-puntual-0",
+    "verbo": "bajar",
+    "contexto": "el, al anochecer, las escaleras",
+    "respuesta": "El bajo las escaleras al anochecer.",
+    "pista": "completed action of going down the stairs at nightfall",
+    "grupos": [["el"], ["bajo"], ["las escaleras"], ["al anochecer"]]
+  },
+  {
+    "id": "bajar-puntual-1",
+    "verbo": "bajar",
+    "contexto": "nosotros, de repente, el volumen",
+    "respuesta": "Nosotros bajamos el volumen de repente.",
+    "pista": "completed action of turning down the volume suddenly",
+    "grupos": [["nosotros"], ["bajamos"], ["el volumen"], ["de repente"]]
+  },
+  {
+    "id": "bastar-puntual-0",
+    "verbo": "bastar",
+    "contexto": "una palabra, en aquel momento, para convencerlo",
+    "respuesta": "Una palabra basto para convencerlo en aquel momento.",
+    "pista": "completed action of one word being enough to convince him",
+    "grupos": [["una palabra"], ["basto"], ["para convencerlo"], ["en aquel momento"]]
+  },
+  {
+    "id": "bastar-puntual-1",
+    "verbo": "bastar",
+    "contexto": "eso, esa misma noche, para cambiar todo",
+    "respuesta": "Eso basto para cambiar todo esa misma noche.",
+    "pista": "completed action of that being enough to change everything that night",
+    "grupos": [["eso"], ["basto"], ["para cambiar todo"], ["esa misma noche"]]
+  },
+  {
+    "id": "beber-puntual-0",
+    "verbo": "beber",
+    "contexto": "yo, a las dos en punto, un cafe",
+    "respuesta": "Yo bebi un cafe a las dos en punto.",
+    "pista": "completed action of drinking a coffee at two o'clock",
+    "grupos": [["yo"], ["bebi"], ["un cafe"], ["a las dos en punto"]]
+  },
+  {
+    "id": "beber-puntual-1",
+    "verbo": "beber",
+    "contexto": "ellos, durante el viaje, mucha agua",
+    "respuesta": "Ellos bebieron mucha agua durante el viaje.",
+    "pista": "completed action of drinking a lot of water during the trip",
+    "grupos": [["ellos"], ["bebieron"], ["mucha agua"], ["durante el viaje"]]
+  },
+  {
+    "id": "besar-puntual-0",
+    "verbo": "besar",
+    "contexto": "ella, al mediodia, a su hijo",
+    "respuesta": "Ella beso a su hijo al mediodia.",
+    "pista": "completed action of kissing her son at noon",
+    "grupos": [["ella"], ["beso"], ["a su hijo"], ["al mediodia"]]
+  },
+  {
+    "id": "besar-puntual-1",
+    "verbo": "besar",
+    "contexto": "el, justo en ese instante, su mano",
+    "respuesta": "El beso su mano justo en ese instante.",
+    "pista": "completed action of kissing her hand at that exact moment",
+    "grupos": [["el"], ["beso"], ["su mano"], ["justo en ese instante"]]
+  },
+  {
+    "id": "buscar-puntual-0",
+    "verbo": "buscar",
+    "contexto": "yo, en la madrugada, las llaves",
+    "respuesta": "Yo busque las llaves en la madrugada.",
+    "pista": "completed action of searching for the keys in the early morning",
+    "grupos": [["yo"], ["busque"], ["las llaves"], ["en la madrugada"]]
+  },
+  {
+    "id": "buscar-puntual-1",
+    "verbo": "buscar",
+    "contexto": "ellos, hace tres dias, un nuevo apartamento",
+    "respuesta": "Ellos buscaron un nuevo apartamento hace tres dias.",
+    "pista": "completed action of looking for a new apartment three days ago",
+    "grupos": [["ellos"], ["buscaron"], ["un nuevo apartamento"], ["hace tres dias"]]
+  },
+  {
+    "id": "caer-puntual-0",
+    "verbo": "caer",
+    "contexto": "el vaso, de repente, al suelo",
+    "respuesta": "El vaso cayo al suelo de repente.",
+    "pista": "completed action of the glass falling to the floor suddenly",
+    "grupos": [["el vaso"], ["cayo"], ["al suelo"], ["de repente"]]
+  },
+  {
+    "id": "caer-puntual-1",
+    "verbo": "caer",
+    "contexto": "yo, durante la tormenta, en la calle",
+    "respuesta": "Yo cai en la calle durante la tormenta.",
+    "pista": "completed action of falling on the street during the storm",
+    "grupos": [["yo"], ["cai"], ["en la calle"], ["durante la tormenta"]]
+  },
+  {
+    "id": "callar-puntual-0",
+    "verbo": "callar",
+    "contexto": "todos, justo en ese instante, en la sala",
+    "respuesta": "Todos callaron en la sala justo en ese instante.",
+    "pista": "completed action of everyone going silent in the room at that instant",
+    "grupos": [["todos"], ["callaron"], ["en la sala"], ["justo en ese instante"]]
+  },
+  {
+    "id": "callar-puntual-1",
+    "verbo": "callar",
+    "contexto": "yo, nada mas llegar, al nino",
+    "respuesta": "Yo calle al nino nada mas llegar.",
+    "pista": "completed action of quieting the child right upon arriving",
+    "grupos": [["yo"], ["calle"], ["al nino"], ["nada mas llegar"]]
+  },
+  {
+    "id": "calmar-puntual-0",
+    "verbo": "calmar",
+    "contexto": "ella, tras la reunion, a su amiga",
+    "respuesta": "Ella calmo a su amiga tras la reunion.",
+    "pista": "completed action of calming her friend after the meeting",
+    "grupos": [["ella"], ["calmo"], ["a su amiga"], ["tras la reunion"]]
+  },
+  {
+    "id": "calmar-puntual-1",
+    "verbo": "calmar",
+    "contexto": "la musica, al anochecer, a todos",
+    "respuesta": "La musica calmo a todos al anochecer.",
+    "pista": "completed action of the music calming everyone at nightfall",
+    "grupos": [["la musica"], ["calmo"], ["a todos"], ["al anochecer"]]
+  },
+  {
+    "id": "cambiar-puntual-0",
+    "verbo": "cambiar",
+    "contexto": "el, hace una semana, de opinion",
+    "respuesta": "El cambio de opinion hace una semana.",
+    "pista": "completed action of changing his mind a week ago",
+    "grupos": [["el"], ["cambio"], ["de opinion"], ["hace una semana"]]
+  },
+  {
+    "id": "cambiar-puntual-1",
+    "verbo": "cambiar",
+    "contexto": "yo, el martes pasado, la cerradura",
+    "respuesta": "Yo cambie la cerradura el martes pasado.",
+    "pista": "completed action of changing the lock last Tuesday",
+    "grupos": [["yo"], ["cambie"], ["la cerradura"], ["el martes pasado"]]
+  },
+  {
+    "id": "caminar-puntual-0",
+    "verbo": "caminar",
+    "contexto": "nosotros, aquel verano, por la playa",
+    "respuesta": "Nosotros caminamos por la playa aquel verano.",
+    "pista": "completed action of walking along the beach that summer",
+    "grupos": [["nosotros"], ["caminamos"], ["por la playa"], ["aquel verano"]]
+  },
+  {
+    "id": "caminar-puntual-1",
+    "verbo": "caminar",
+    "contexto": "ella, al mediodia, hasta la estacion",
+    "respuesta": "Ella camino hasta la estacion al mediodia.",
+    "pista": "completed action of walking to the station at noon",
+    "grupos": [["ella"], ["camino"], ["hasta la estacion"], ["al mediodia"]]
+  },
+  {
+    "id": "cantar-puntual-0",
+    "verbo": "cantar",
+    "contexto": "tu, esa misma noche, una cancion hermosa",
+    "respuesta": "Tu cantaste una cancion hermosa esa misma noche.",
+    "pista": "completed action of singing a beautiful song that very night",
+    "grupos": [["tu"], ["cantaste"], ["una cancion hermosa"], ["esa misma noche"]]
+  },
+  {
+    "id": "cantar-puntual-1",
+    "verbo": "cantar",
+    "contexto": "el, en la madrugada, en el balcon",
+    "respuesta": "El canto en el balcon en la madrugada.",
+    "pista": "completed action of singing on the balcony in the early morning",
+    "grupos": [["el"], ["canto"], ["en el balcon"], ["en la madrugada"]]
+  },
+  {
+    "id": "casar-puntual-0",
+    "verbo": "casar",
+    "contexto": "ellos, aquel verano, en la iglesia del pueblo",
+    "respuesta": "Ellos casaron en la iglesia del pueblo aquel verano.",
+    "pista": "completed action of getting married in the village church that summer",
+    "grupos": [["ellos"], ["casaron"], ["en la iglesia del pueblo"], ["aquel verano"]]
+  },
+  {
+    "id": "casar-puntual-1",
+    "verbo": "casar",
+    "contexto": "el cura, al mediodia, a la pareja",
+    "respuesta": "El cura caso a la pareja al mediodia.",
+    "pista": "completed action of the priest marrying the couple at noon",
+    "grupos": [["el cura"], ["caso"], ["a la pareja"], ["al mediodia"]]
+  },
+  {
+    "id": "cerrar-puntual-0",
+    "verbo": "cerrar",
+    "contexto": "yo, al anochecer, todas las ventanas",
+    "respuesta": "Yo cerre todas las ventanas al anochecer.",
+    "pista": "completed action of closing all the windows at nightfall",
+    "grupos": [["yo"], ["cerre"], ["todas las ventanas"], ["al anochecer"]]
+  },
+  {
+    "id": "cerrar-puntual-1",
+    "verbo": "cerrar",
+    "contexto": "ella, de repente, la puerta",
+    "respuesta": "Ella cerro la puerta de repente.",
+    "pista": "completed action of closing the door suddenly",
+    "grupos": [["ella"], ["cerro"], ["la puerta"], ["de repente"]]
+  },
+  {
+    "id": "coger-puntual-0",
+    "verbo": "coger",
+    "contexto": "el, nada mas llegar, el paraguas",
+    "respuesta": "El cogio el paraguas nada mas llegar.",
+    "pista": "completed action of grabbing the umbrella right upon arriving",
+    "grupos": [["el"], ["cogio"], ["el paraguas"], ["nada mas llegar"]]
+  },
+  {
+    "id": "coger-puntual-1",
+    "verbo": "coger",
+    "contexto": "yo, a las dos en punto, el autobus",
+    "respuesta": "Yo cogi el autobus a las dos en punto.",
+    "pista": "completed action of catching the bus at two o'clock",
+    "grupos": [["yo"], ["cogi"], ["el autobus"], ["a las dos en punto"]]
+  },
+  {
+    "id": "comenzar-puntual-0",
+    "verbo": "comenzar",
+    "contexto": "la pelicula, a las dos en punto, sin retraso",
+    "respuesta": "La pelicula comenzo sin retraso a las dos en punto.",
+    "pista": "completed action of the movie starting without delay at two o'clock",
+    "grupos": [["la pelicula"], ["comenzo"], ["sin retraso"], ["a las dos en punto"]]
+  },
+  {
+    "id": "comenzar-puntual-1",
+    "verbo": "comenzar",
+    "contexto": "yo, el martes pasado, un nuevo trabajo",
+    "respuesta": "Yo comence un nuevo trabajo el martes pasado.",
+    "pista": "completed action of starting a new job last Tuesday",
+    "grupos": [["yo"], ["comence"], ["un nuevo trabajo"], ["el martes pasado"]]
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "obtener-puntual-0",
+    "verbo": "obtener",
+    "contexto": "ella, tras la reunion, los resultados",
+    "respuesta": "Ella obtuvo los resultados tras la reunion.",
+    "pista": "completed action of obtaining the results after the meeting",
+    "grupos": [["ella"], ["obtuvo"], ["los resultados"], ["tras la reunion"]]
+  },
+  {
+    "id": "obtener-puntual-1",
+    "verbo": "obtener",
+    "contexto": "yo, el martes pasado, el permiso",
+    "respuesta": "Yo obtuve el permiso el martes pasado.",
+    "pista": "completed action of obtaining the permit last Tuesday",
+    "grupos": [["yo"], ["obtuve"], ["el permiso"], ["el martes pasado"]]
+  },
+  {
+    "id": "ocupar-puntual-0",
+    "verbo": "ocupar",
+    "contexto": "ellos, aquel verano, la casa abandonada",
+    "respuesta": "Ellos ocuparon la casa abandonada aquel verano.",
+    "pista": "completed action of occupying the abandoned house that summer",
+    "grupos": [["ellos"], ["ocuparon"], ["la casa abandonada"], ["aquel verano"]]
+  },
+  {
+    "id": "ocupar-puntual-1",
+    "verbo": "ocupar",
+    "contexto": "la empresa, hace una semana, el edificio nuevo",
+    "respuesta": "La empresa ocupo el edificio nuevo hace una semana.",
+    "pista": "completed action of the company occupying the new building a week ago",
+    "grupos": [["la empresa"], ["ocupo"], ["el edificio nuevo"], ["hace una semana"]]
+  },
+  {
+    "id": "ocurrir-puntual-0",
+    "verbo": "ocurrir",
+    "contexto": "el accidente, de repente, en la esquina",
+    "respuesta": "El accidente ocurrio en la esquina de repente.",
+    "pista": "completed action of the accident happening at the corner suddenly",
+    "grupos": [["el accidente"], ["ocurrio"], ["en la esquina"], ["de repente"]]
+  },
+  {
+    "id": "ocurrir-puntual-1",
+    "verbo": "ocurrir",
+    "contexto": "algo extrano, en la madrugada, en el bosque",
+    "respuesta": "Algo extrano ocurrio en el bosque en la madrugada.",
+    "pista": "completed action of something strange happening in the forest in the early morning",
+    "grupos": [["algo extrano"], ["ocurrio"], ["en el bosque"], ["en la madrugada"]]
+  },
+  {
+    "id": "odiar-puntual-0",
+    "verbo": "odiar",
+    "contexto": "yo, en aquel momento, la injusticia",
+    "respuesta": "Yo odie la injusticia en aquel momento.",
+    "pista": "completed action of hating injustice at that moment",
+    "grupos": [["yo"], ["odie"], ["la injusticia"], ["en aquel momento"]]
+  },
+  {
+    "id": "odiar-puntual-1",
+    "verbo": "odiar",
+    "contexto": "ella, aquel verano, tener que mudarse",
+    "respuesta": "Ella odio tener que mudarse aquel verano.",
+    "pista": "completed action of hating having to move that summer",
+    "grupos": [["ella"], ["odio"], ["tener que mudarse"], ["aquel verano"]]
+  },
+  {
+    "id": "ofrecer-puntual-0",
+    "verbo": "ofrecer",
+    "contexto": "el, nada mas llegar, su ayuda",
+    "respuesta": "El ofrecio su ayuda nada mas llegar.",
+    "pista": "completed action of offering his help right upon arriving",
+    "grupos": [["el"], ["ofrecio"], ["su ayuda"], ["nada mas llegar"]]
+  },
+  {
+    "id": "ofrecer-puntual-1",
+    "verbo": "ofrecer",
+    "contexto": "la empresa, hace tres dias, un puesto mejor",
+    "respuesta": "La empresa ofrecio un puesto mejor hace tres dias.",
+    "pista": "completed action of the company offering a better position three days ago",
+    "grupos": [["la empresa"], ["ofrecio"], ["un puesto mejor"], ["hace tres dias"]]
+  },
+  {
+    "id": "oir-puntual-0",
+    "verbo": "oir",
+    "contexto": "yo, en la madrugada, un ruido extrano",
+    "respuesta": "Yo oi un ruido extrano en la madrugada.",
+    "pista": "completed action of hearing a strange noise in the early morning",
+    "grupos": [["yo"], ["oi"], ["un ruido extrano"], ["en la madrugada"]]
+  },
+  {
+    "id": "oir-puntual-1",
+    "verbo": "oir",
+    "contexto": "ellos, de repente, una explosion",
+    "respuesta": "Ellos oyeron una explosion de repente.",
+    "pista": "completed action of hearing an explosion suddenly",
+    "grupos": [["ellos"], ["oyeron"], ["una explosion"], ["de repente"]]
+  },
+  {
+    "id": "olvidar-puntual-0",
+    "verbo": "olvidar",
+    "contexto": "yo, al mediodia, las llaves en casa",
+    "respuesta": "Yo olvide las llaves en casa al mediodia.",
+    "pista": "completed action of forgetting the keys at home at noon",
+    "grupos": [["yo"], ["olvide"], ["las llaves en casa"], ["al mediodia"]]
+  },
+  {
+    "id": "olvidar-puntual-1",
+    "verbo": "olvidar",
+    "contexto": "ella, justo en ese instante, su nombre",
+    "respuesta": "Ella olvido su nombre justo en ese instante.",
+    "pista": "completed action of forgetting his name at that exact moment",
+    "grupos": [["ella"], ["olvido"], ["su nombre"], ["justo en ese instante"]]
+  },
+  {
+    "id": "pagar-puntual-0",
+    "verbo": "pagar",
+    "contexto": "yo, el martes pasado, la cuenta del restaurante",
+    "respuesta": "Yo pague la cuenta del restaurante el martes pasado.",
+    "pista": "completed action of paying the restaurant bill last Tuesday",
+    "grupos": [["yo"], ["pague"], ["la cuenta del restaurante"], ["el martes pasado"]]
+  },
+  {
+    "id": "pagar-puntual-1",
+    "verbo": "pagar",
+    "contexto": "ella, hace una semana, la deuda",
+    "respuesta": "Ella pago la deuda hace una semana.",
+    "pista": "completed action of paying the debt a week ago",
+    "grupos": [["ella"], ["pago"], ["la deuda"], ["hace una semana"]]
+  },
+  {
+    "id": "parar-puntual-0",
+    "verbo": "parar",
+    "contexto": "el autobus, a las dos en punto, en la esquina",
+    "respuesta": "El autobus paro en la esquina a las dos en punto.",
+    "pista": "completed action of the bus stopping at the corner at two o'clock",
+    "grupos": [["el autobus"], ["paro"], ["en la esquina"], ["a las dos en punto"]]
+  },
+  {
+    "id": "parar-puntual-1",
+    "verbo": "parar",
+    "contexto": "la lluvia, al anochecer, finalmente",
+    "respuesta": "La lluvia paro finalmente al anochecer.",
+    "pista": "completed action of the rain finally stopping at nightfall",
+    "grupos": [["la lluvia"], ["paro"], ["finalmente"], ["al anochecer"]]
+  },
+  {
+    "id": "parecer-puntual-0",
+    "verbo": "parecer",
+    "contexto": "todo, en aquel momento, imposible",
+    "respuesta": "Todo parecio imposible en aquel momento.",
+    "pista": "completed action of everything seeming impossible at that moment",
+    "grupos": [["todo"], ["parecio"], ["imposible"], ["en aquel momento"]]
+  },
+  {
+    "id": "parecer-puntual-1",
+    "verbo": "parecer",
+    "contexto": "la idea, esa misma noche, brillante",
+    "respuesta": "La idea parecio brillante esa misma noche.",
+    "pista": "completed action of the idea seeming brilliant that very night",
+    "grupos": [["la idea"], ["parecio"], ["brillante"], ["esa misma noche"]]
+  },
+  {
+    "id": "partir-puntual-0",
+    "verbo": "partir",
+    "contexto": "ellos, al anochecer, hacia el norte",
+    "respuesta": "Ellos partieron hacia el norte al anochecer.",
+    "pista": "completed action of departing toward the north at nightfall",
+    "grupos": [["ellos"], ["partieron"], ["hacia el norte"], ["al anochecer"]]
+  },
+  {
+    "id": "partir-puntual-1",
+    "verbo": "partir",
+    "contexto": "yo, en la madrugada, sin avisar",
+    "respuesta": "Yo parti sin avisar en la madrugada.",
+    "pista": "completed action of leaving without notice in the early morning",
+    "grupos": [["yo"], ["parti"], ["sin avisar"], ["en la madrugada"]]
+  },
+  {
+    "id": "pasar-puntual-0",
+    "verbo": "pasar",
+    "contexto": "algo terrible, durante la tormenta, en el pueblo",
+    "respuesta": "Algo terrible paso en el pueblo durante la tormenta.",
+    "pista": "completed action of something terrible happening in town during the storm",
+    "grupos": [["algo terrible"], ["paso"], ["en el pueblo"], ["durante la tormenta"]]
+  },
+  {
+    "id": "pasar-puntual-1",
+    "verbo": "pasar",
+    "contexto": "nosotros, aquel verano, las vacaciones en el campo",
+    "respuesta": "Nosotros pasamos las vacaciones en el campo aquel verano.",
+    "pista": "completed action of spending the vacation in the countryside that summer",
+    "grupos": [["nosotros"], ["pasamos"], ["las vacaciones en el campo"], ["aquel verano"]]
+  },
+  {
+    "id": "pedir-puntual-0",
+    "verbo": "pedir",
+    "contexto": "ella, al mediodia, un cafe con leche",
+    "respuesta": "Ella pidio un cafe con leche al mediodia.",
+    "pista": "completed action of ordering a coffee with milk at noon",
+    "grupos": [["ella"], ["pidio"], ["un cafe con leche"], ["al mediodia"]]
+  },
+  {
+    "id": "pedir-puntual-1",
+    "verbo": "pedir",
+    "contexto": "yo, tras la reunion, una explicacion",
+    "respuesta": "Yo pedi una explicacion tras la reunion.",
+    "pista": "completed action of asking for an explanation after the meeting",
+    "grupos": [["yo"], ["pedi"], ["una explicacion"], ["tras la reunion"]]
+  },
+  {
+    "id": "pegar-puntual-0",
+    "verbo": "pegar",
+    "contexto": "el, justo en ese instante, un grito",
+    "respuesta": "El pego un grito justo en ese instante.",
+    "pista": "completed action of letting out a scream at that exact moment",
+    "grupos": [["el"], ["pego"], ["un grito"], ["justo en ese instante"]]
+  },
+  {
+    "id": "pegar-puntual-1",
+    "verbo": "pegar",
+    "contexto": "yo, hace tres dias, el cartel en la pared",
+    "respuesta": "Yo pegue el cartel en la pared hace tres dias.",
+    "pista": "completed action of sticking the poster on the wall three days ago",
+    "grupos": [["yo"], ["pegue"], ["el cartel en la pared"], ["hace tres dias"]]
+  },
+  {
+    "id": "pelear-puntual-0",
+    "verbo": "pelear",
+    "contexto": "ellos, esa misma noche, por el ultimo trozo",
+    "respuesta": "Ellos pelearon por el ultimo trozo esa misma noche.",
+    "pista": "completed action of fighting over the last piece that very night",
+    "grupos": [["ellos"], ["pelearon"], ["por el ultimo trozo"], ["esa misma noche"]]
+  },
+  {
+    "id": "pelear-puntual-1",
+    "verbo": "pelear",
+    "contexto": "yo, de repente, con mi vecino",
+    "respuesta": "Yo pelee con mi vecino de repente.",
+    "pista": "completed action of fighting with my neighbor suddenly",
+    "grupos": [["yo"], ["pelee"], ["con mi vecino"], ["de repente"]]
+  }
+]

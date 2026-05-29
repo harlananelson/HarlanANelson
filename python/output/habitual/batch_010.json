@@ -1,0 +1,210 @@
+[
+  {
+    "id": "invitar-habitual-0",
+    "verbo": "invitar",
+    "contexto": "mis padres, los fines de semana, a los vecinos a cenar",
+    "respuesta": "Los fines de semana, mis padres invitaban a los vecinos a cenar.",
+    "pista": "Regular weekend hospitality - use imperfect",
+    "grupos": [["mis padres"], ["invitaban"], ["a los vecinos a cenar"], ["los fines de semana"]]
+  },
+  {
+    "id": "invitar-habitual-1",
+    "verbo": "invitar",
+    "contexto": "mi tia, cada verano, a toda la familia a su casa",
+    "respuesta": "Cada verano, mi tia invitaba a toda la familia a su casa.",
+    "pista": "Repeated summer tradition - use imperfect",
+    "grupos": [["mi tia"], ["invitaba"], ["a toda la familia a su casa"], ["cada verano"]]
+  },
+  {
+    "id": "ir-habitual-0",
+    "verbo": "ir",
+    "contexto": "nosotros, los domingos, a la iglesia del pueblo",
+    "respuesta": "Los domingos, nosotros ibamos a la iglesia del pueblo.",
+    "pista": "Regular Sunday outing - use imperfect (irregular: ir -> iba)",
+    "grupos": [["nosotros"], ["ibamos"], ["a la iglesia del pueblo"], ["los domingos"]]
+  },
+  {
+    "id": "ir-habitual-1",
+    "verbo": "ir",
+    "contexto": "yo, cada verano, a la playa con mis primos",
+    "respuesta": "Cada verano, yo iba a la playa con mis primos.",
+    "pista": "Repeated summer activity - use imperfect (irregular: ir -> iba)",
+    "grupos": [["yo"], ["iba"], ["a la playa con mis primos"], ["cada verano"]]
+  },
+  {
+    "id": "joder-habitual-0",
+    "verbo": "joder",
+    "contexto": "el ruido, por las tardes, a todos los vecinos del edificio",
+    "respuesta": "Por las tardes, el ruido jodia a todos los vecinos del edificio.",
+    "pista": "Daily afternoon annoyance - use imperfect",
+    "grupos": [["el ruido"], ["jodia"], ["a todos los vecinos del edificio"], ["por las tardes"]]
+  },
+  {
+    "id": "joder-habitual-1",
+    "verbo": "joder",
+    "contexto": "mi hermano, con frecuencia, a los companeros de clase",
+    "respuesta": "Mi hermano jodia a los companeros de clase con frecuencia.",
+    "pista": "Frequently repeated annoyance - use imperfect",
+    "grupos": [["mi hermano"], ["jodia"], ["a los companeros de clase"], ["con frecuencia"]]
+  },
+  {
+    "id": "jugar-habitual-0",
+    "verbo": "jugar",
+    "contexto": "nosotros, durante la infancia, al escondite en el parque",
+    "respuesta": "Durante la infancia, nosotros jugabamos al escondite en el parque.",
+    "pista": "Childhood habitual play - use imperfect",
+    "grupos": [["nosotros"], ["jugabamos"], ["al escondite en el parque"], ["durante la infancia"]]
+  },
+  {
+    "id": "jugar-habitual-1",
+    "verbo": "jugar",
+    "contexto": "yo, los fines de semana, al futbol con los amigos del barrio",
+    "respuesta": "Los fines de semana, yo jugaba al futbol con los amigos del barrio.",
+    "pista": "Regular weekend activity - use imperfect",
+    "grupos": [["yo"], ["jugaba"], ["al futbol con los amigos del barrio"], ["los fines de semana"]]
+  },
+  {
+    "id": "jurar-habitual-0",
+    "verbo": "jurar",
+    "contexto": "mi abuela, con frecuencia, que habia visto fantasmas en la casa",
+    "respuesta": "Mi abuela juraba que habia visto fantasmas en la casa con frecuencia.",
+    "pista": "Frequently repeated claim - use imperfect",
+    "grupos": [["mi abuela"], ["juraba"], ["que habia visto fantasmas en la casa"], ["con frecuencia"]]
+  },
+  {
+    "id": "jurar-habitual-1",
+    "verbo": "jurar",
+    "contexto": "el, en aquellos tiempos, que decia la verdad",
+    "respuesta": "En aquellos tiempos, el juraba que decia la verdad.",
+    "pista": "Habitual past assertion - use imperfect",
+    "grupos": [["el"], ["juraba"], ["que decia la verdad"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "leer-habitual-0",
+    "verbo": "leer",
+    "contexto": "yo, por las tardes, novelas de aventuras en el jardin",
+    "respuesta": "Por las tardes, yo leia novelas de aventuras en el jardin.",
+    "pista": "Daily afternoon reading - use imperfect",
+    "grupos": [["yo"], ["leia"], ["novelas de aventuras en el jardin"], ["por las tardes"]]
+  },
+  {
+    "id": "leer-habitual-1",
+    "verbo": "leer",
+    "contexto": "mi abuelo, los domingos, el periodico en la terraza",
+    "respuesta": "Los domingos, mi abuelo leia el periodico en la terraza.",
+    "pista": "Regular Sunday reading - use imperfect",
+    "grupos": [["mi abuelo"], ["leia"], ["el periodico en la terraza"], ["los domingos"]]
+  },
+  {
+    "id": "levantar-habitual-0",
+    "verbo": "levantar",
+    "contexto": "yo, en aquellos tiempos, pesas en el gimnasio",
+    "respuesta": "En aquellos tiempos, yo levantaba pesas en el gimnasio.",
+    "pista": "Habitual past exercise - use imperfect",
+    "grupos": [["yo"], ["levantaba"], ["pesas en el gimnasio"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "levantar-habitual-1",
+    "verbo": "levantar",
+    "contexto": "mi padre, cada verano, la persiana al amanecer",
+    "respuesta": "Cada verano, mi padre levantaba la persiana al amanecer.",
+    "pista": "Repeated summer morning routine - use imperfect",
+    "grupos": [["mi padre"], ["levantaba"], ["la persiana al amanecer"], ["cada verano"]]
+  },
+  {
+    "id": "llamar-habitual-0",
+    "verbo": "llamar",
+    "contexto": "mi madre, los domingos, a la abuela por telefono",
+    "respuesta": "Los domingos, mi madre llamaba a la abuela por telefono.",
+    "pista": "Regular Sunday phone call - use imperfect",
+    "grupos": [["mi madre"], ["llamaba"], ["a la abuela por telefono"], ["los domingos"]]
+  },
+  {
+    "id": "llamar-habitual-1",
+    "verbo": "llamar",
+    "contexto": "yo, semana tras semana, al medico para pedir cita",
+    "respuesta": "Semana tras semana, yo llamaba al medico para pedir cita.",
+    "pista": "Repeated weekly action - use imperfect",
+    "grupos": [["yo"], ["llamaba"], ["al medico para pedir cita"], ["semana tras semana"]]
+  },
+  {
+    "id": "llegar-habitual-0",
+    "verbo": "llegar",
+    "contexto": "yo, los martes y jueves, tarde al trabajo",
+    "respuesta": "Los martes y jueves, yo llegaba tarde al trabajo.",
+    "pista": "Regular pattern on specific days - use imperfect",
+    "grupos": [["yo"], ["llegaba"], ["tarde al trabajo"], ["los martes y jueves"]]
+  },
+  {
+    "id": "llegar-habitual-1",
+    "verbo": "llegar",
+    "contexto": "el autobus, con frecuencia, con retraso a la parada",
+    "respuesta": "El autobus llegaba con retraso a la parada con frecuencia.",
+    "pista": "Frequently repeated occurrence - use imperfect",
+    "grupos": [["el autobus"], ["llegaba"], ["con retraso a la parada"], ["con frecuencia"]]
+  },
+  {
+    "id": "llevar-habitual-0",
+    "verbo": "llevar",
+    "contexto": "mi madre, cada verano, sombreros grandes para el sol",
+    "respuesta": "Cada verano, mi madre llevaba sombreros grandes para el sol.",
+    "pista": "Repeated summer fashion - use imperfect",
+    "grupos": [["mi madre"], ["llevaba"], ["sombreros grandes para el sol"], ["cada verano"]]
+  },
+  {
+    "id": "llevar-habitual-1",
+    "verbo": "llevar",
+    "contexto": "yo, durante la infancia, una mochila roja al colegio",
+    "respuesta": "Durante la infancia, yo llevaba una mochila roja al colegio.",
+    "pista": "Childhood habitual item - use imperfect",
+    "grupos": [["yo"], ["llevaba"], ["una mochila roja al colegio"], ["durante la infancia"]]
+  },
+  {
+    "id": "llorar-habitual-0",
+    "verbo": "llorar",
+    "contexto": "el bebe, por las tardes, durante horas sin parar",
+    "respuesta": "Por las tardes, el bebe lloraba durante horas sin parar.",
+    "pista": "Daily afternoon pattern - use imperfect",
+    "grupos": [["el bebe"], ["lloraba"], ["durante horas sin parar"], ["por las tardes"]]
+  },
+  {
+    "id": "llorar-habitual-1",
+    "verbo": "llorar",
+    "contexto": "yo, durante la infancia, cuando veia peliculas tristes",
+    "respuesta": "Durante la infancia, yo lloraba cuando veia peliculas tristes.",
+    "pista": "Childhood habitual reaction - use imperfect",
+    "grupos": [["yo"], ["lloraba"], ["cuando veia peliculas tristes"], ["durante la infancia"]]
+  },
+  {
+    "id": "lograr-habitual-0",
+    "verbo": "lograr",
+    "contexto": "ella, semana tras semana, superar sus propios records",
+    "respuesta": "Semana tras semana, ella lograba superar sus propios records.",
+    "pista": "Repeated weekly achievement - use imperfect",
+    "grupos": [["ella"], ["lograba"], ["superar sus propios records"], ["semana tras semana"]]
+  },
+  {
+    "id": "lograr-habitual-1",
+    "verbo": "lograr",
+    "contexto": "nosotros, en mis anos de universidad, buenas notas con esfuerzo",
+    "respuesta": "En mis anos de universidad, nosotros lograbamos buenas notas con esfuerzo.",
+    "pista": "Habitual university achievement - use imperfect",
+    "grupos": [["nosotros"], ["lograbamos"], ["buenas notas con esfuerzo"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "luchar-habitual-0",
+    "verbo": "luchar",
+    "contexto": "los trabajadores, en aquellos tiempos, por mejores condiciones",
+    "respuesta": "En aquellos tiempos, los trabajadores luchaban por mejores condiciones.",
+    "pista": "Habitual past struggle - use imperfect",
+    "grupos": [["los trabajadores"], ["luchaban"], ["por mejores condiciones"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "luchar-habitual-1",
+    "verbo": "luchar",
+    "contexto": "yo, con frecuencia, contra el sueno durante las clases",
+    "respuesta": "Yo luchaba contra el sueno durante las clases con frecuencia.",
+    "pista": "Frequently repeated struggle - use imperfect",
+    "grupos": [["yo"], ["luchaba"], ["contra el sueno durante las clases"], ["con frecuencia"]]
+  }
+]

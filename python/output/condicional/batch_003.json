@@ -1,0 +1,947 @@
+[
+  {
+    "id": "comer-condicional-0",
+    "verbo": "comer",
+    "contexto": "yo, en tu lugar, más sano",
+    "respuesta": "yo comería más sano en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "comeria"
+      ],
+      [
+        "mas sano"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "comer-condicional-1",
+    "verbo": "comer",
+    "contexto": "ella, en esa situación, más sano",
+    "respuesta": "ella comería más sano en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "comeria"
+      ],
+      [
+        "mas sano"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "comer-condicional-2",
+    "verbo": "comer",
+    "contexto": "ellos, en un mundo ideal, más sano",
+    "respuesta": "ellos comerían más sano en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "comerian"
+      ],
+      [
+        "mas sano"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "cometer-condicional-0",
+    "verbo": "cometer",
+    "contexto": "tú, si pudieras, con entusiasmo",
+    "respuesta": "tú cometerías con entusiasmo si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "cometerias"
+      ],
+      [
+        "con entusiasmo"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "cometer-condicional-1",
+    "verbo": "cometer",
+    "contexto": "nosotros, si fuera posible, de buena gana",
+    "respuesta": "nosotros cometeríamos de buena gana si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "cometeriamos"
+      ],
+      [
+        "de buena gana"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "cometer-condicional-2",
+    "verbo": "cometer",
+    "contexto": "ustedes, de ser posible, mejor",
+    "respuesta": "ustedes cometerían mejor de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "cometerian"
+      ],
+      [
+        "mejor"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "compartir-condicional-0",
+    "verbo": "compartir",
+    "contexto": "él, con más tiempo, con los demás",
+    "respuesta": "él compartiría con los demás con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "compartiria"
+      ],
+      [
+        "con los demas"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "compartir-condicional-1",
+    "verbo": "compartir",
+    "contexto": "usted, con más dinero, con los demás",
+    "respuesta": "usted compartiría con los demás con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "compartiria"
+      ],
+      [
+        "con los demas"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "compartir-condicional-2",
+    "verbo": "compartir",
+    "contexto": "yo, con más experiencia, con los demás",
+    "respuesta": "yo compartiría con los demás con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "compartiria"
+      ],
+      [
+        "con los demas"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "comprar-condicional-0",
+    "verbo": "comprar",
+    "contexto": "yo, en tu lugar, una casa nueva",
+    "respuesta": "yo compraría una casa nueva en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "compraria"
+      ],
+      [
+        "una casa nueva"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "comprar-condicional-1",
+    "verbo": "comprar",
+    "contexto": "ella, en esa situación, una casa nueva",
+    "respuesta": "ella compraría una casa nueva en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "compraria"
+      ],
+      [
+        "una casa nueva"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "comprar-condicional-2",
+    "verbo": "comprar",
+    "contexto": "ellos, en un mundo ideal, una casa nueva",
+    "respuesta": "ellos comprarían una casa nueva en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "comprarian"
+      ],
+      [
+        "una casa nueva"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "comprender-condicional-0",
+    "verbo": "comprender",
+    "contexto": "tú, si pudieras, la lección",
+    "respuesta": "tú comprenderías la lección si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "comprenderias"
+      ],
+      [
+        "la leccion"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "comprender-condicional-1",
+    "verbo": "comprender",
+    "contexto": "nosotros, si fuera posible, la lección",
+    "respuesta": "nosotros comprenderíamos la lección si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "comprenderiamos"
+      ],
+      [
+        "la leccion"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "comprender-condicional-2",
+    "verbo": "comprender",
+    "contexto": "ustedes, de ser posible, la lección",
+    "respuesta": "ustedes comprenderían la lección de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "comprenderian"
+      ],
+      [
+        "la leccion"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "conducir-condicional-0",
+    "verbo": "conducir",
+    "contexto": "él, con más tiempo, hasta la ciudad",
+    "respuesta": "él conduciría hasta la ciudad con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "conduciria"
+      ],
+      [
+        "hasta la ciudad"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "conducir-condicional-1",
+    "verbo": "conducir",
+    "contexto": "usted, con más dinero, hasta la ciudad",
+    "respuesta": "usted conduciría hasta la ciudad con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "conduciria"
+      ],
+      [
+        "hasta la ciudad"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "conducir-condicional-2",
+    "verbo": "conducir",
+    "contexto": "yo, con más experiencia, hasta la ciudad",
+    "respuesta": "yo conduciría hasta la ciudad con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "conduciria"
+      ],
+      [
+        "hasta la ciudad"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "confiar-condicional-0",
+    "verbo": "confiar",
+    "contexto": "yo, en tu lugar, en ti",
+    "respuesta": "yo confiaría en ti en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "confiaria"
+      ],
+      [
+        "en ti"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "confiar-condicional-1",
+    "verbo": "confiar",
+    "contexto": "ella, en esa situación, en ti",
+    "respuesta": "ella confiaría en ti en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "confiaria"
+      ],
+      [
+        "en ti"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "confiar-condicional-2",
+    "verbo": "confiar",
+    "contexto": "ellos, en un mundo ideal, en ti",
+    "respuesta": "ellos confiarían en ti en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "confiarian"
+      ],
+      [
+        "en ti"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "conocer-condicional-0",
+    "verbo": "conocer",
+    "contexto": "tú, si pudieras, a más personas",
+    "respuesta": "tú conocerías a más personas si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "conocerias"
+      ],
+      [
+        "a mas personas"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "conocer-condicional-1",
+    "verbo": "conocer",
+    "contexto": "nosotros, si fuera posible, a más personas",
+    "respuesta": "nosotros conoceríamos a más personas si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "conoceriamos"
+      ],
+      [
+        "a mas personas"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "conocer-condicional-2",
+    "verbo": "conocer",
+    "contexto": "ustedes, de ser posible, a más personas",
+    "respuesta": "ustedes conocerían a más personas de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "conocerian"
+      ],
+      [
+        "a mas personas"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "conseguir-condicional-0",
+    "verbo": "conseguir",
+    "contexto": "él, con más tiempo, más apoyo",
+    "respuesta": "él conseguiría más apoyo con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "conseguiria"
+      ],
+      [
+        "mas apoyo"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "conseguir-condicional-1",
+    "verbo": "conseguir",
+    "contexto": "usted, con más dinero, más apoyo",
+    "respuesta": "usted conseguiría más apoyo con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "conseguiria"
+      ],
+      [
+        "mas apoyo"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "conseguir-condicional-2",
+    "verbo": "conseguir",
+    "contexto": "yo, con más experiencia, más apoyo",
+    "respuesta": "yo conseguiría más apoyo con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "conseguiria"
+      ],
+      [
+        "mas apoyo"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "considerar-condicional-0",
+    "verbo": "considerar",
+    "contexto": "yo, en tu lugar, todas las opciones",
+    "respuesta": "yo consideraría todas las opciones en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "consideraria"
+      ],
+      [
+        "todas las opciones"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "considerar-condicional-1",
+    "verbo": "considerar",
+    "contexto": "ella, en esa situación, todas las opciones",
+    "respuesta": "ella consideraría todas las opciones en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "consideraria"
+      ],
+      [
+        "todas las opciones"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "considerar-condicional-2",
+    "verbo": "considerar",
+    "contexto": "ellos, en un mundo ideal, todas las opciones",
+    "respuesta": "ellos considerarían todas las opciones en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "considerarian"
+      ],
+      [
+        "todas las opciones"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "construir-condicional-0",
+    "verbo": "construir",
+    "contexto": "tú, si pudieras, un futuro mejor",
+    "respuesta": "tú construirías un futuro mejor si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "construirias"
+      ],
+      [
+        "un futuro mejor"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "construir-condicional-1",
+    "verbo": "construir",
+    "contexto": "nosotros, si fuera posible, un futuro mejor",
+    "respuesta": "nosotros construiríamos un futuro mejor si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "construiriamos"
+      ],
+      [
+        "un futuro mejor"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "construir-condicional-2",
+    "verbo": "construir",
+    "contexto": "ustedes, de ser posible, un futuro mejor",
+    "respuesta": "ustedes construirían un futuro mejor de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "construirian"
+      ],
+      [
+        "un futuro mejor"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "contar-condicional-0",
+    "verbo": "contar",
+    "contexto": "él, con más tiempo, lo que pasó",
+    "respuesta": "él contaría lo que pasó con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "contaria"
+      ],
+      [
+        "lo que paso"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "contar-condicional-1",
+    "verbo": "contar",
+    "contexto": "usted, con más dinero, lo que pasó",
+    "respuesta": "usted contaría lo que pasó con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "contaria"
+      ],
+      [
+        "lo que paso"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "contar-condicional-2",
+    "verbo": "contar",
+    "contexto": "yo, con más experiencia, lo que pasó",
+    "respuesta": "yo contaría lo que pasó con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "contaria"
+      ],
+      [
+        "lo que paso"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "contestar-condicional-0",
+    "verbo": "contestar",
+    "contexto": "yo, en tu lugar, con sinceridad",
+    "respuesta": "yo contestaría con sinceridad en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "contestaria"
+      ],
+      [
+        "con sinceridad"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "contestar-condicional-1",
+    "verbo": "contestar",
+    "contexto": "ella, en esa situación, con sinceridad",
+    "respuesta": "ella contestaría con sinceridad en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "contestaria"
+      ],
+      [
+        "con sinceridad"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "contestar-condicional-2",
+    "verbo": "contestar",
+    "contexto": "ellos, en un mundo ideal, con sinceridad",
+    "respuesta": "ellos contestarían con sinceridad en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "contestarian"
+      ],
+      [
+        "con sinceridad"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "continuar-condicional-0",
+    "verbo": "continuar",
+    "contexto": "tú, si pudieras, el camino",
+    "respuesta": "tú continuarías el camino si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "continuarias"
+      ],
+      [
+        "el camino"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "continuar-condicional-1",
+    "verbo": "continuar",
+    "contexto": "nosotros, si fuera posible, el camino",
+    "respuesta": "nosotros continuaríamos el camino si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "continuariamos"
+      ],
+      [
+        "el camino"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "continuar-condicional-2",
+    "verbo": "continuar",
+    "contexto": "ustedes, de ser posible, el camino",
+    "respuesta": "ustedes continuarían el camino de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "continuarian"
+      ],
+      [
+        "el camino"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "controlar-condicional-0",
+    "verbo": "controlar",
+    "contexto": "él, con más tiempo, mejor las emociones",
+    "respuesta": "él controlaría mejor las emociones con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "controlaria"
+      ],
+      [
+        "mejor las emociones"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "controlar-condicional-1",
+    "verbo": "controlar",
+    "contexto": "usted, con más dinero, mejor las emociones",
+    "respuesta": "usted controlaría mejor las emociones con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "controlaria"
+      ],
+      [
+        "mejor las emociones"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "controlar-condicional-2",
+    "verbo": "controlar",
+    "contexto": "yo, con más experiencia, mejor las emociones",
+    "respuesta": "yo controlaría mejor las emociones con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "controlaria"
+      ],
+      [
+        "mejor las emociones"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  }
+]

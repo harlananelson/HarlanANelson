@@ -1,0 +1,242 @@
+[
+  {
+    "id": "marchar-puntual-0",
+    "verbo": "marchar",
+    "contexto": "el, al anochecer, sin despedirse",
+    "respuesta": "El marcho sin despedirse al anochecer.",
+    "pista": "completed action of leaving without saying goodbye at nightfall",
+    "grupos": [["el"], ["marcho"], ["sin despedirse"], ["al anochecer"]]
+  },
+  {
+    "id": "marchar-puntual-1",
+    "verbo": "marchar",
+    "contexto": "nosotros, de repente, del lugar",
+    "respuesta": "Nosotros marchamos del lugar de repente.",
+    "pista": "completed action of leaving the place suddenly",
+    "grupos": [["nosotros"], ["marchamos"], ["del lugar"], ["de repente"]]
+  },
+  {
+    "id": "matar-puntual-0",
+    "verbo": "matar",
+    "contexto": "el cazador, en la madrugada, al lobo",
+    "respuesta": "El cazador mato al lobo en la madrugada.",
+    "pista": "completed action of the hunter killing the wolf in the early morning",
+    "grupos": [["el cazador"], ["mato"], ["al lobo"], ["en la madrugada"]]
+  },
+  {
+    "id": "matar-puntual-1",
+    "verbo": "matar",
+    "contexto": "la helada, aquel verano, las plantas del jardin",
+    "respuesta": "La helada mato las plantas del jardin aquel verano.",
+    "pista": "completed action of the frost killing the garden plants that summer",
+    "grupos": [["la helada"], ["mato"], ["las plantas del jardin"], ["aquel verano"]]
+  },
+  {
+    "id": "mencionar-puntual-0",
+    "verbo": "mencionar",
+    "contexto": "ella, tras la reunion, un detalle importante",
+    "respuesta": "Ella menciono un detalle importante tras la reunion.",
+    "pista": "completed action of mentioning an important detail after the meeting",
+    "grupos": [["ella"], ["menciono"], ["un detalle importante"], ["tras la reunion"]]
+  },
+  {
+    "id": "mencionar-puntual-1",
+    "verbo": "mencionar",
+    "contexto": "yo, justo en ese instante, su nombre",
+    "respuesta": "Yo mencione su nombre justo en ese instante.",
+    "pista": "completed action of mentioning his name at that exact moment",
+    "grupos": [["yo"], ["mencione"], ["su nombre"], ["justo en ese instante"]]
+  },
+  {
+    "id": "mentir-puntual-0",
+    "verbo": "mentir",
+    "contexto": "el, en aquel momento, sobre todo",
+    "respuesta": "El mintio sobre todo en aquel momento.",
+    "pista": "completed action of lying about everything at that moment",
+    "grupos": [["el"], ["mintio"], ["sobre todo"], ["en aquel momento"]]
+  },
+  {
+    "id": "mentir-puntual-1",
+    "verbo": "mentir",
+    "contexto": "ella, esa misma noche, a sus padres",
+    "respuesta": "Ella mintio a sus padres esa misma noche.",
+    "pista": "completed action of lying to her parents that very night",
+    "grupos": [["ella"], ["mintio"], ["a sus padres"], ["esa misma noche"]]
+  },
+  {
+    "id": "merecer-puntual-0",
+    "verbo": "merecer",
+    "contexto": "el equipo, aquel verano, el premio",
+    "respuesta": "El equipo merecio el premio aquel verano.",
+    "pista": "completed action of the team deserving the prize that summer",
+    "grupos": [["el equipo"], ["merecio"], ["el premio"], ["aquel verano"]]
+  },
+  {
+    "id": "merecer-puntual-1",
+    "verbo": "merecer",
+    "contexto": "ella, al final del dia, un descanso",
+    "respuesta": "Ella merecio un descanso al final del dia.",
+    "pista": "completed action of deserving a rest at the end of the day",
+    "grupos": [["ella"], ["merecio"], ["un descanso"], ["al final del dia"]]
+  },
+  {
+    "id": "meter-puntual-0",
+    "verbo": "meter",
+    "contexto": "yo, nada mas llegar, la ropa en la maleta",
+    "respuesta": "Yo meti la ropa en la maleta nada mas llegar.",
+    "pista": "completed action of putting the clothes in the suitcase right upon arriving",
+    "grupos": [["yo"], ["meti"], ["la ropa en la maleta"], ["nada mas llegar"]]
+  },
+  {
+    "id": "meter-puntual-1",
+    "verbo": "meter",
+    "contexto": "ella, de repente, la mano en el bolsillo",
+    "respuesta": "Ella metio la mano en el bolsillo de repente.",
+    "pista": "completed action of putting her hand in her pocket suddenly",
+    "grupos": [["ella"], ["metio"], ["la mano en el bolsillo"], ["de repente"]]
+  },
+  {
+    "id": "mirar-puntual-0",
+    "verbo": "mirar",
+    "contexto": "el, al mediodia, por la ventana",
+    "respuesta": "El miro por la ventana al mediodia.",
+    "pista": "completed action of looking through the window at noon",
+    "grupos": [["el"], ["miro"], ["por la ventana"], ["al mediodia"]]
+  },
+  {
+    "id": "mirar-puntual-1",
+    "verbo": "mirar",
+    "contexto": "yo, justo en ese instante, a sus ojos",
+    "respuesta": "Yo mire a sus ojos justo en ese instante.",
+    "pista": "completed action of looking into her eyes at that exact moment",
+    "grupos": [["yo"], ["mire"], ["a sus ojos"], ["justo en ese instante"]]
+  },
+  {
+    "id": "molestar-puntual-0",
+    "verbo": "molestar",
+    "contexto": "el ruido, durante la tormenta, a los vecinos",
+    "respuesta": "El ruido molesto a los vecinos durante la tormenta.",
+    "pista": "completed action of the noise bothering the neighbors during the storm",
+    "grupos": [["el ruido"], ["molesto"], ["a los vecinos"], ["durante la tormenta"]]
+  },
+  {
+    "id": "molestar-puntual-1",
+    "verbo": "molestar",
+    "contexto": "su comentario, esa misma noche, a todos",
+    "respuesta": "Su comentario molesto a todos esa misma noche.",
+    "pista": "completed action of his comment bothering everyone that very night",
+    "grupos": [["su comentario"], ["molesto"], ["a todos"], ["esa misma noche"]]
+  },
+  {
+    "id": "morir-puntual-0",
+    "verbo": "morir",
+    "contexto": "el heroe, al anochecer, en la batalla",
+    "respuesta": "El heroe murio en la batalla al anochecer.",
+    "pista": "completed action of the hero dying in battle at nightfall",
+    "grupos": [["el heroe"], ["murio"], ["en la batalla"], ["al anochecer"]]
+  },
+  {
+    "id": "morir-puntual-1",
+    "verbo": "morir",
+    "contexto": "las flores, aquel verano, por la sequia",
+    "respuesta": "Las flores murieron por la sequia aquel verano.",
+    "pista": "completed action of the flowers dying from drought that summer",
+    "grupos": [["las flores"], ["murieron"], ["por la sequia"], ["aquel verano"]]
+  },
+  {
+    "id": "mostrar-puntual-0",
+    "verbo": "mostrar",
+    "contexto": "ella, tras la reunion, las fotos del viaje",
+    "respuesta": "Ella mostro las fotos del viaje tras la reunion.",
+    "pista": "completed action of showing the trip photos after the meeting",
+    "grupos": [["ella"], ["mostro"], ["las fotos del viaje"], ["tras la reunion"]]
+  },
+  {
+    "id": "mostrar-puntual-1",
+    "verbo": "mostrar",
+    "contexto": "el, en aquel momento, gran valor",
+    "respuesta": "El mostro gran valor en aquel momento.",
+    "pista": "completed action of showing great courage at that moment",
+    "grupos": [["el"], ["mostro"], ["gran valor"], ["en aquel momento"]]
+  },
+  {
+    "id": "mover-puntual-0",
+    "verbo": "mover",
+    "contexto": "nosotros, el martes pasado, los muebles",
+    "respuesta": "Nosotros movimos los muebles el martes pasado.",
+    "pista": "completed action of moving the furniture last Tuesday",
+    "grupos": [["nosotros"], ["movimos"], ["los muebles"], ["el martes pasado"]]
+  },
+  {
+    "id": "mover-puntual-1",
+    "verbo": "mover",
+    "contexto": "ella, de repente, la cabeza",
+    "respuesta": "Ella movio la cabeza de repente.",
+    "pista": "completed action of moving her head suddenly",
+    "grupos": [["ella"], ["movio"], ["la cabeza"], ["de repente"]]
+  },
+  {
+    "id": "nacer-puntual-0",
+    "verbo": "nacer",
+    "contexto": "el bebe, en la madrugada, sano y salvo",
+    "respuesta": "El bebe nacio sano y salvo en la madrugada.",
+    "pista": "completed action of the baby being born safe and sound in the early morning",
+    "grupos": [["el bebe"], ["nacio"], ["sano y salvo"], ["en la madrugada"]]
+  },
+  {
+    "id": "nacer-puntual-1",
+    "verbo": "nacer",
+    "contexto": "una nueva idea, justo en ese instante, en su mente",
+    "respuesta": "Una nueva idea nacio en su mente justo en ese instante.",
+    "pista": "completed action of a new idea being born in his mind at that instant",
+    "grupos": [["una nueva idea"], ["nacio"], ["en su mente"], ["justo en ese instante"]]
+  },
+  {
+    "id": "necesitar-puntual-0",
+    "verbo": "necesitar",
+    "contexto": "yo, en aquel momento, tu ayuda",
+    "respuesta": "Yo necesite tu ayuda en aquel momento.",
+    "pista": "completed action of needing your help at that moment",
+    "grupos": [["yo"], ["necesite"], ["tu ayuda"], ["en aquel momento"]]
+  },
+  {
+    "id": "necesitar-puntual-1",
+    "verbo": "necesitar",
+    "contexto": "ellos, durante el viaje, un mapa",
+    "respuesta": "Ellos necesitaron un mapa durante el viaje.",
+    "pista": "completed action of needing a map during the trip",
+    "grupos": [["ellos"], ["necesitaron"], ["un mapa"], ["durante el viaje"]]
+  },
+  {
+    "id": "negar-puntual-0",
+    "verbo": "negar",
+    "contexto": "el, al final del dia, las acusaciones",
+    "respuesta": "El nego las acusaciones al final del dia.",
+    "pista": "completed action of denying the accusations at the end of the day",
+    "grupos": [["el"], ["nego"], ["las acusaciones"], ["al final del dia"]]
+  },
+  {
+    "id": "negar-puntual-1",
+    "verbo": "negar",
+    "contexto": "yo, hace una semana, todo",
+    "respuesta": "Yo negue todo hace una semana.",
+    "pista": "completed action of denying everything a week ago",
+    "grupos": [["yo"], ["negue"], ["todo"], ["hace una semana"]]
+  },
+  {
+    "id": "observar-puntual-0",
+    "verbo": "observar",
+    "contexto": "ella, al anochecer, las estrellas",
+    "respuesta": "Ella observo las estrellas al anochecer.",
+    "pista": "completed action of observing the stars at nightfall",
+    "grupos": [["ella"], ["observo"], ["las estrellas"], ["al anochecer"]]
+  },
+  {
+    "id": "observar-puntual-1",
+    "verbo": "observar",
+    "contexto": "yo, durante la tormenta, el comportamiento del gato",
+    "respuesta": "Yo observe el comportamiento del gato durante la tormenta.",
+    "pista": "completed action of observing the cat's behavior during the storm",
+    "grupos": [["yo"], ["observe"], ["el comportamiento del gato"], ["durante la tormenta"]]
+  }
+]

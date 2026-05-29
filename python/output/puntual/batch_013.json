@@ -1,0 +1,210 @@
+[
+  {
+    "id": "probar-puntual-0",
+    "verbo": "probar",
+    "contexto": "yo, aquel verano, la comida local",
+    "respuesta": "Yo probe la comida local aquel verano.",
+    "pista": "completed action of trying the local food that summer",
+    "grupos": [["yo"], ["probe"], ["la comida local"], ["aquel verano"]]
+  },
+  {
+    "id": "probar-puntual-1",
+    "verbo": "probar",
+    "contexto": "ella, al mediodia, el pastel de chocolate",
+    "respuesta": "Ella probo el pastel de chocolate al mediodia.",
+    "pista": "completed action of trying the chocolate cake at noon",
+    "grupos": [["ella"], ["probo"], ["el pastel de chocolate"], ["al mediodia"]]
+  },
+  {
+    "id": "producir-puntual-0",
+    "verbo": "producir",
+    "contexto": "la fabrica, aquel verano, miles de unidades",
+    "respuesta": "La fabrica produjo miles de unidades aquel verano.",
+    "pista": "completed action of the factory producing thousands of units that summer",
+    "grupos": [["la fabrica"], ["produjo"], ["miles de unidades"], ["aquel verano"]]
+  },
+  {
+    "id": "producir-puntual-1",
+    "verbo": "producir",
+    "contexto": "yo, hace una semana, un cortometraje",
+    "respuesta": "Yo produje un cortometraje hace una semana.",
+    "pista": "completed action of producing a short film a week ago",
+    "grupos": [["yo"], ["produje"], ["un cortometraje"], ["hace una semana"]]
+  },
+  {
+    "id": "prometer-puntual-0",
+    "verbo": "prometer",
+    "contexto": "el, en aquel momento, cambiar",
+    "respuesta": "El prometio cambiar en aquel momento.",
+    "pista": "completed action of promising to change at that moment",
+    "grupos": [["el"], ["prometio"], ["cambiar"], ["en aquel momento"]]
+  },
+  {
+    "id": "prometer-puntual-1",
+    "verbo": "prometer",
+    "contexto": "yo, esa misma noche, volver pronto",
+    "respuesta": "Yo prometi volver pronto esa misma noche.",
+    "pista": "completed action of promising to return soon that very night",
+    "grupos": [["yo"], ["prometi"], ["volver pronto"], ["esa misma noche"]]
+  },
+  {
+    "id": "proteger-puntual-0",
+    "verbo": "proteger",
+    "contexto": "ella, durante la tormenta, a los ninos",
+    "respuesta": "Ella protegio a los ninos durante la tormenta.",
+    "pista": "completed action of protecting the children during the storm",
+    "grupos": [["ella"], ["protegio"], ["a los ninos"], ["durante la tormenta"]]
+  },
+  {
+    "id": "proteger-puntual-1",
+    "verbo": "proteger",
+    "contexto": "yo, justo en ese instante, a mi familia",
+    "respuesta": "Yo protegi a mi familia justo en ese instante.",
+    "pista": "completed action of protecting my family at that exact moment",
+    "grupos": [["yo"], ["protegi"], ["a mi familia"], ["justo en ese instante"]]
+  },
+  {
+    "id": "quedar-puntual-0",
+    "verbo": "quedar",
+    "contexto": "nosotros, el martes pasado, en el parque",
+    "respuesta": "Nosotros quedamos en el parque el martes pasado.",
+    "pista": "completed action of meeting at the park last Tuesday",
+    "grupos": [["nosotros"], ["quedamos"], ["en el parque"], ["el martes pasado"]]
+  },
+  {
+    "id": "quedar-puntual-1",
+    "verbo": "quedar",
+    "contexto": "ella, al final del dia, satisfecha",
+    "respuesta": "Ella quedo satisfecha al final del dia.",
+    "pista": "completed action of being satisfied at the end of the day",
+    "grupos": [["ella"], ["quedo"], ["satisfecha"], ["al final del dia"]]
+  },
+  {
+    "id": "querer-puntual-0",
+    "verbo": "querer",
+    "contexto": "yo, en aquel momento, salir corriendo",
+    "respuesta": "Yo quise salir corriendo en aquel momento.",
+    "pista": "completed action of wanting to run away at that moment",
+    "grupos": [["yo"], ["quise"], ["salir corriendo"], ["en aquel momento"]]
+  },
+  {
+    "id": "querer-puntual-1",
+    "verbo": "querer",
+    "contexto": "ella, de repente, cambiar de vida",
+    "respuesta": "Ella quiso cambiar de vida de repente.",
+    "pista": "completed action of wanting to change her life suddenly",
+    "grupos": [["ella"], ["quiso"], ["cambiar de vida"], ["de repente"]]
+  },
+  {
+    "id": "quitar-puntual-0",
+    "verbo": "quitar",
+    "contexto": "el, nada mas llegar, los zapatos",
+    "respuesta": "El quito los zapatos nada mas llegar.",
+    "pista": "completed action of taking off the shoes right upon arriving",
+    "grupos": [["el"], ["quito"], ["los zapatos"], ["nada mas llegar"]]
+  },
+  {
+    "id": "quitar-puntual-1",
+    "verbo": "quitar",
+    "contexto": "yo, al anochecer, la mesa",
+    "respuesta": "Yo quite la mesa al anochecer.",
+    "pista": "completed action of clearing the table at nightfall",
+    "grupos": [["yo"], ["quite"], ["la mesa"], ["al anochecer"]]
+  },
+  {
+    "id": "realizar-puntual-0",
+    "verbo": "realizar",
+    "contexto": "ellos, hace tres dias, una investigacion",
+    "respuesta": "Ellos realizaron una investigacion hace tres dias.",
+    "pista": "completed action of carrying out an investigation three days ago",
+    "grupos": [["ellos"], ["realizaron"], ["una investigacion"], ["hace tres dias"]]
+  },
+  {
+    "id": "realizar-puntual-1",
+    "verbo": "realizar",
+    "contexto": "yo, aquel verano, mi sueno",
+    "respuesta": "Yo realice mi sueno aquel verano.",
+    "pista": "completed action of fulfilling my dream that summer",
+    "grupos": [["yo"], ["realice"], ["mi sueno"], ["aquel verano"]]
+  },
+  {
+    "id": "recibir-puntual-0",
+    "verbo": "recibir",
+    "contexto": "ella, el martes pasado, una carta misteriosa",
+    "respuesta": "Ella recibio una carta misteriosa el martes pasado.",
+    "pista": "completed action of receiving a mysterious letter last Tuesday",
+    "grupos": [["ella"], ["recibio"], ["una carta misteriosa"], ["el martes pasado"]]
+  },
+  {
+    "id": "recibir-puntual-1",
+    "verbo": "recibir",
+    "contexto": "yo, al mediodia, la noticia",
+    "respuesta": "Yo recibi la noticia al mediodia.",
+    "pista": "completed action of receiving the news at noon",
+    "grupos": [["yo"], ["recibi"], ["la noticia"], ["al mediodia"]]
+  },
+  {
+    "id": "recoger-puntual-0",
+    "verbo": "recoger",
+    "contexto": "yo, a las dos en punto, a los ninos del colegio",
+    "respuesta": "Yo recogi a los ninos del colegio a las dos en punto.",
+    "pista": "completed action of picking up the children from school at two o'clock",
+    "grupos": [["yo"], ["recogi"], ["a los ninos del colegio"], ["a las dos en punto"]]
+  },
+  {
+    "id": "recoger-puntual-1",
+    "verbo": "recoger",
+    "contexto": "ella, tras la reunion, todos los papeles",
+    "respuesta": "Ella recogio todos los papeles tras la reunion.",
+    "pista": "completed action of picking up all the papers after the meeting",
+    "grupos": [["ella"], ["recogio"], ["todos los papeles"], ["tras la reunion"]]
+  },
+  {
+    "id": "reconocer-puntual-0",
+    "verbo": "reconocer",
+    "contexto": "yo, de repente, a mi viejo amigo",
+    "respuesta": "Yo reconoci a mi viejo amigo de repente.",
+    "pista": "completed action of recognizing my old friend suddenly",
+    "grupos": [["yo"], ["reconoci"], ["a mi viejo amigo"], ["de repente"]]
+  },
+  {
+    "id": "reconocer-puntual-1",
+    "verbo": "reconocer",
+    "contexto": "ella, en aquel momento, su error",
+    "respuesta": "Ella reconocio su error en aquel momento.",
+    "pista": "completed action of recognizing her mistake at that moment",
+    "grupos": [["ella"], ["reconocio"], ["su error"], ["en aquel momento"]]
+  },
+  {
+    "id": "recordar-puntual-0",
+    "verbo": "recordar",
+    "contexto": "yo, justo en ese instante, su cara",
+    "respuesta": "Yo recorde su cara justo en ese instante.",
+    "pista": "completed action of remembering her face at that exact moment",
+    "grupos": [["yo"], ["recorde"], ["su cara"], ["justo en ese instante"]]
+  },
+  {
+    "id": "recordar-puntual-1",
+    "verbo": "recordar",
+    "contexto": "ella, esa misma noche, los buenos tiempos",
+    "respuesta": "Ella recordo los buenos tiempos esa misma noche.",
+    "pista": "completed action of remembering the good times that very night",
+    "grupos": [["ella"], ["recordo"], ["los buenos tiempos"], ["esa misma noche"]]
+  },
+  {
+    "id": "recuperar-puntual-0",
+    "verbo": "recuperar",
+    "contexto": "el, hace una semana, su salud",
+    "respuesta": "El recupero su salud hace una semana.",
+    "pista": "completed action of recovering his health a week ago",
+    "grupos": [["el"], ["recupero"], ["su salud"], ["hace una semana"]]
+  },
+  {
+    "id": "recuperar-puntual-1",
+    "verbo": "recuperar",
+    "contexto": "nosotros, al final del dia, el tiempo perdido",
+    "respuesta": "Nosotros recuperamos el tiempo perdido al final del dia.",
+    "pista": "completed action of recovering the lost time at the end of the day",
+    "grupos": [["nosotros"], ["recuperamos"], ["el tiempo perdido"], ["al final del dia"]]
+  }
+]

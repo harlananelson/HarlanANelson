@@ -1,0 +1,210 @@
+[
+  {
+    "id": "cerrar-habitual-0",
+    "verbo": "cerrar",
+    "contexto": "la tienda, los domingos, a las dos de la tarde",
+    "respuesta": "Los domingos, la tienda cerraba a las dos de la tarde.",
+    "pista": "Regular Sunday schedule - use imperfect",
+    "grupos": [["la tienda"], ["cerraba"], ["a las dos de la tarde"], ["los domingos"]]
+  },
+  {
+    "id": "cerrar-habitual-1",
+    "verbo": "cerrar",
+    "contexto": "yo, por las tardes, las cortinas antes de la siesta",
+    "respuesta": "Por las tardes, yo cerraba las cortinas antes de la siesta.",
+    "pista": "Daily afternoon routine - use imperfect",
+    "grupos": [["yo"], ["cerraba"], ["las cortinas antes de la siesta"], ["por las tardes"]]
+  },
+  {
+    "id": "coger-habitual-0",
+    "verbo": "coger",
+    "contexto": "yo, los martes y jueves, el autobus de las ocho",
+    "respuesta": "Los martes y jueves, yo cogia el autobus de las ocho.",
+    "pista": "Regular schedule on specific days - use imperfect",
+    "grupos": [["yo"], ["cogia"], ["el autobus de las ocho"], ["los martes y jueves"]]
+  },
+  {
+    "id": "coger-habitual-1",
+    "verbo": "coger",
+    "contexto": "los ninos, cada verano, fresas del huerto",
+    "respuesta": "Cada verano, los ninos cogian fresas del huerto.",
+    "pista": "Repeated summer activity - use imperfect",
+    "grupos": [["los ninos"], ["cogian"], ["fresas del huerto"], ["cada verano"]]
+  },
+  {
+    "id": "comenzar-habitual-0",
+    "verbo": "comenzar",
+    "contexto": "las clases, en aquellos tiempos, a las nueve en punto",
+    "respuesta": "En aquellos tiempos, las clases comenzaban a las nueve en punto.",
+    "pista": "Habitual past schedule - use imperfect",
+    "grupos": [["las clases"], ["comenzaban"], ["a las nueve en punto"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "comenzar-habitual-1",
+    "verbo": "comenzar",
+    "contexto": "yo, los fines de semana, el dia con un paseo",
+    "respuesta": "Los fines de semana, yo comenzaba el dia con un paseo.",
+    "pista": "Regular weekend routine - use imperfect",
+    "grupos": [["yo"], ["comenzaba"], ["el dia con un paseo"], ["los fines de semana"]]
+  },
+  {
+    "id": "comer-habitual-0",
+    "verbo": "comer",
+    "contexto": "nosotros, los domingos, paella en casa de la abuela",
+    "respuesta": "Los domingos, nosotros comiamos paella en casa de la abuela.",
+    "pista": "Regular Sunday family meal - use imperfect",
+    "grupos": [["nosotros"], ["comiamos"], ["paella en casa de la abuela"], ["los domingos"]]
+  },
+  {
+    "id": "comer-habitual-1",
+    "verbo": "comer",
+    "contexto": "yo, cuando vivia en Madrid, tapas despues del trabajo",
+    "respuesta": "Cuando vivia en Madrid, yo comia tapas despues del trabajo.",
+    "pista": "Habitual action during time in Madrid - use imperfect",
+    "grupos": [["yo"], ["comia"], ["tapas despues del trabajo"], ["cuando vivia en madrid"]]
+  },
+  {
+    "id": "cometer-habitual-0",
+    "verbo": "cometer",
+    "contexto": "yo, durante la infancia, errores por no prestar atencion",
+    "respuesta": "Durante la infancia, yo cometia errores por no prestar atencion.",
+    "pista": "Repeated childhood pattern - use imperfect",
+    "grupos": [["yo"], ["cometia"], ["errores por no prestar atencion"], ["durante la infancia"]]
+  },
+  {
+    "id": "cometer-habitual-1",
+    "verbo": "cometer",
+    "contexto": "el equipo, con frecuencia, faltas en los partidos",
+    "respuesta": "El equipo cometia faltas en los partidos con frecuencia.",
+    "pista": "Frequently repeated action - use imperfect",
+    "grupos": [["el equipo"], ["cometia"], ["faltas en los partidos"], ["con frecuencia"]]
+  },
+  {
+    "id": "compartir-habitual-0",
+    "verbo": "compartir",
+    "contexto": "nosotros, en mis anos de universidad, apuntes con los companeros",
+    "respuesta": "En mis anos de universidad, nosotros compartiamos apuntes con los companeros.",
+    "pista": "Habitual university behavior - use imperfect",
+    "grupos": [["nosotros"], ["compartiamos"], ["apuntes con los companeros"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "compartir-habitual-1",
+    "verbo": "compartir",
+    "contexto": "mi hermana, por las tardes, sus galletas conmigo",
+    "respuesta": "Por las tardes, mi hermana compartia sus galletas conmigo.",
+    "pista": "Daily afternoon habit - use imperfect",
+    "grupos": [["mi hermana"], ["compartia"], ["sus galletas conmigo"], ["por las tardes"]]
+  },
+  {
+    "id": "comprar-habitual-0",
+    "verbo": "comprar",
+    "contexto": "mi madre, los fines de semana, frutas frescas en el mercado",
+    "respuesta": "Los fines de semana, mi madre compraba frutas frescas en el mercado.",
+    "pista": "Regular weekend shopping - use imperfect",
+    "grupos": [["mi madre"], ["compraba"], ["frutas frescas en el mercado"], ["los fines de semana"]]
+  },
+  {
+    "id": "comprar-habitual-1",
+    "verbo": "comprar",
+    "contexto": "yo, semana tras semana, revistas de deportes",
+    "respuesta": "Semana tras semana, yo compraba revistas de deportes.",
+    "pista": "Repeated weekly purchase - use imperfect",
+    "grupos": [["yo"], ["compraba"], ["revistas de deportes"], ["semana tras semana"]]
+  },
+  {
+    "id": "comprender-habitual-0",
+    "verbo": "comprender",
+    "contexto": "ella, en aquellos tiempos, mis problemas mejor que nadie",
+    "respuesta": "En aquellos tiempos, ella comprendia mis problemas mejor que nadie.",
+    "pista": "Habitual past understanding - use imperfect",
+    "grupos": [["ella"], ["comprendia"], ["mis problemas mejor que nadie"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "comprender-habitual-1",
+    "verbo": "comprender",
+    "contexto": "los alumnos, con frecuencia, la leccion sin dificultad",
+    "respuesta": "Los alumnos comprendian la leccion sin dificultad con frecuencia.",
+    "pista": "Frequently repeated understanding - use imperfect",
+    "grupos": [["los alumnos"], ["comprendian"], ["la leccion sin dificultad"], ["con frecuencia"]]
+  },
+  {
+    "id": "conducir-habitual-0",
+    "verbo": "conducir",
+    "contexto": "mi padre, los martes y jueves, el camion por la autopista",
+    "respuesta": "Los martes y jueves, mi padre conducia el camion por la autopista.",
+    "pista": "Regular schedule on specific days - use imperfect",
+    "grupos": [["mi padre"], ["conducia"], ["el camion por la autopista"], ["los martes y jueves"]]
+  },
+  {
+    "id": "conducir-habitual-1",
+    "verbo": "conducir",
+    "contexto": "yo, cuando trabajaba alli, dos horas cada manana",
+    "respuesta": "Cuando trabajaba alli, yo conducia dos horas cada manana.",
+    "pista": "Habitual commute - use imperfect",
+    "grupos": [["yo"], ["conducia"], ["dos horas cada manana"], ["cuando trabajaba alli"]]
+  },
+  {
+    "id": "confiar-habitual-0",
+    "verbo": "confiar",
+    "contexto": "yo, en aquellos tiempos, en mis amigos del colegio",
+    "respuesta": "En aquellos tiempos, yo confiaba en mis amigos del colegio.",
+    "pista": "Habitual past trust - use imperfect",
+    "grupos": [["yo"], ["confiaba"], ["en mis amigos del colegio"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "confiar-habitual-1",
+    "verbo": "confiar",
+    "contexto": "mis padres, semana tras semana, en el medico del pueblo",
+    "respuesta": "Semana tras semana, mis padres confiaban en el medico del pueblo.",
+    "pista": "Repeated weekly trust - use imperfect",
+    "grupos": [["mis padres"], ["confiaban"], ["en el medico del pueblo"], ["semana tras semana"]]
+  },
+  {
+    "id": "conocer-habitual-0",
+    "verbo": "conocer",
+    "contexto": "mi abuelo, en aquellos tiempos, a todos en el pueblo",
+    "respuesta": "En aquellos tiempos, mi abuelo conocia a todos en el pueblo.",
+    "pista": "Ongoing past state - use imperfect",
+    "grupos": [["mi abuelo"], ["conocia"], ["a todos en el pueblo"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "conocer-habitual-1",
+    "verbo": "conocer",
+    "contexto": "yo, cuando vivia en Madrid, los mejores restaurantes",
+    "respuesta": "Cuando vivia en Madrid, yo conocia los mejores restaurantes.",
+    "pista": "Ongoing state during time in Madrid - use imperfect",
+    "grupos": [["yo"], ["conocia"], ["los mejores restaurantes"], ["cuando vivia en madrid"]]
+  },
+  {
+    "id": "conseguir-habitual-0",
+    "verbo": "conseguir",
+    "contexto": "ella, con frecuencia, entradas para el teatro",
+    "respuesta": "Ella conseguia entradas para el teatro con frecuencia.",
+    "pista": "Frequently repeated achievement - use imperfect",
+    "grupos": [["ella"], ["conseguia"], ["entradas para el teatro"], ["con frecuencia"]]
+  },
+  {
+    "id": "conseguir-habitual-1",
+    "verbo": "conseguir",
+    "contexto": "nosotros, los fines de semana, buenas ofertas en el mercado",
+    "respuesta": "Los fines de semana, nosotros conseguiamos buenas ofertas en el mercado.",
+    "pista": "Regular weekend success - use imperfect",
+    "grupos": [["nosotros"], ["conseguiamos"], ["buenas ofertas en el mercado"], ["los fines de semana"]]
+  },
+  {
+    "id": "considerar-habitual-0",
+    "verbo": "considerar",
+    "contexto": "yo, en mis anos de universidad, cada opcion con cuidado",
+    "respuesta": "En mis anos de universidad, yo consideraba cada opcion con cuidado.",
+    "pista": "Habitual university behavior - use imperfect",
+    "grupos": [["yo"], ["consideraba"], ["cada opcion con cuidado"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "considerar-habitual-1",
+    "verbo": "considerar",
+    "contexto": "los profesores, antes del accidente, a Pedro un buen estudiante",
+    "respuesta": "Antes del accidente, los profesores consideraban a Pedro un buen estudiante.",
+    "pista": "Ongoing past opinion - use imperfect",
+    "grupos": [["los profesores"], ["consideraban"], ["a pedro un buen estudiante"], ["antes del accidente"]]
+  }
+]

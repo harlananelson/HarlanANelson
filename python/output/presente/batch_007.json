@@ -1,0 +1,947 @@
+[
+  {
+    "id": "enviar-presente-0",
+    "verbo": "enviar",
+    "contexto": "yo, esta noche, un mensaje",
+    "respuesta": "Yo envio un mensaje esta noche.",
+    "pista": "describing communication",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "envio"
+      ],
+      [
+        "un mensaje"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "enviar-presente-1",
+    "verbo": "enviar",
+    "contexto": "tú, mientras, un correo electrónico",
+    "respuesta": "Mientras, tú envias un correo electrónico.",
+    "pista": "talking about email",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "envias"
+      ],
+      [
+        "un correo electronico"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "enviar-presente-2",
+    "verbo": "enviar",
+    "contexto": "ella, esta noche, flores a su madre",
+    "respuesta": "Ella envia flores a su madre esta noche.",
+    "pista": "narrating a thoughtful gesture",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "envia"
+      ],
+      [
+        "flores a su madre"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "escapar-presente-0",
+    "verbo": "escapar",
+    "contexto": "yo, esta mañana, de la rutina",
+    "respuesta": "Esta mañana, yo escapo de la rutina.",
+    "pista": "expressing freedom",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "escapo"
+      ],
+      [
+        "de la rutina"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "escapar-presente-1",
+    "verbo": "escapar",
+    "contexto": "ellos, siempre, de la prisión",
+    "respuesta": "Siempre, ellos escapan de la prisión.",
+    "pista": "narrating an escape",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "escapan"
+      ],
+      [
+        "de la prision"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "escapar-presente-2",
+    "verbo": "escapar",
+    "contexto": "él, esta tarde, del peligro",
+    "respuesta": "Esta tarde, él escapa del peligro.",
+    "pista": "describing a narrow escape",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "escapa"
+      ],
+      [
+        "del peligro"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "esconder-presente-0",
+    "verbo": "esconder",
+    "contexto": "yo, cada semana, el regalo",
+    "respuesta": "Cada semana, yo escondo el regalo.",
+    "pista": "describing a surprise preparation",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "escondo"
+      ],
+      [
+        "el regalo"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "esconder-presente-1",
+    "verbo": "esconder",
+    "contexto": "tú, normalmente, tus emociones",
+    "respuesta": "Tú escondas tus emociones normalmente.",
+    "pista": "talking about emotional control",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "escondas"
+      ],
+      [
+        "tus emociones"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "esconder-presente-2",
+    "verbo": "esconder",
+    "contexto": "ella, hoy, las galletas de los niños",
+    "respuesta": "Hoy, ella esconda las galletas de los niños.",
+    "pista": "narrating a playful act",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "esconda"
+      ],
+      [
+        "las galletas de los ninos"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "escribir-presente-0",
+    "verbo": "escribir",
+    "contexto": "yo, cada semana, una carta",
+    "respuesta": "Yo escribo una carta cada semana.",
+    "pista": "describing a writing activity",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "escribo"
+      ],
+      [
+        "una carta"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "escribir-presente-1",
+    "verbo": "escribir",
+    "contexto": "tú, actualmente, un libro",
+    "respuesta": "Tú escribes un libro actualmente.",
+    "pista": "talking about authorship",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "escribes"
+      ],
+      [
+        "un libro"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "escribir-presente-2",
+    "verbo": "escribir",
+    "contexto": "nosotros, esta mañana, un informe",
+    "respuesta": "Esta mañana, nosotros escribimos un informe.",
+    "pista": "describing teamwork",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "escribimos"
+      ],
+      [
+        "un informe"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "escuchar-presente-0",
+    "verbo": "escuchar",
+    "contexto": "yo, esta tarde, música clásica",
+    "respuesta": "Yo escucho música clásica esta tarde.",
+    "pista": "describing a leisure activity",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "escucho"
+      ],
+      [
+        "musica clasica"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "escuchar-presente-1",
+    "verbo": "escuchar",
+    "contexto": "tú, hoy, con atención",
+    "respuesta": "Hoy, tú escuchas con atención.",
+    "pista": "giving advice about listening",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "escuchas"
+      ],
+      [
+        "con atencion"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "escuchar-presente-2",
+    "verbo": "escuchar",
+    "contexto": "nosotros, ahora mismo, las noticias",
+    "respuesta": "Ahora mismo, nosotros escuchamos las noticias.",
+    "pista": "describing a daily habit",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "escuchamos"
+      ],
+      [
+        "las noticias"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "esperar-presente-0",
+    "verbo": "esperar",
+    "contexto": "yo, cada semana, el autobús",
+    "respuesta": "Cada semana, yo espero el autobús.",
+    "pista": "describing waiting",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "espero"
+      ],
+      [
+        "el autobus"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "esperar-presente-1",
+    "verbo": "esperar",
+    "contexto": "nosotros, esta mañana, buenas noticias",
+    "respuesta": "Nosotros esperamos buenas noticias esta mañana.",
+    "pista": "expressing hope",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "esperamos"
+      ],
+      [
+        "buenas noticias"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "esperar-presente-2",
+    "verbo": "esperar",
+    "contexto": "tú, hoy, con paciencia",
+    "respuesta": "Hoy, tú esperas con paciencia.",
+    "pista": "giving advice about patience",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "esperas"
+      ],
+      [
+        "con paciencia"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "estar-presente-0",
+    "verbo": "estar",
+    "contexto": "yo, hoy, en casa",
+    "respuesta": "Yo estoy en casa hoy.",
+    "pista": "expressing location",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "estoy"
+      ],
+      [
+        "en casa"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "estar-presente-1",
+    "verbo": "estar",
+    "contexto": "tú, normalmente, muy contento",
+    "respuesta": "Normalmente, tú estás muy contento.",
+    "pista": "describing emotions",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "estas"
+      ],
+      [
+        "muy contento"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "estar-presente-2",
+    "verbo": "estar",
+    "contexto": "nosotros, a veces, listos para salir",
+    "respuesta": "Nosotros estamos listos para salir a veces.",
+    "pista": "expressing readiness",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "estamos"
+      ],
+      [
+        "listos para salir"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "estudiar-presente-0",
+    "verbo": "estudiar",
+    "contexto": "yo, actualmente, para el examen",
+    "respuesta": "Yo estudio para el examen actualmente.",
+    "pista": "describing preparation",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "estudio"
+      ],
+      [
+        "para el examen"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "estudiar-presente-1",
+    "verbo": "estudiar",
+    "contexto": "ella, esta noche, medicina",
+    "respuesta": "Ella estudia medicina esta noche.",
+    "pista": "narrating career path",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "estudia"
+      ],
+      [
+        "medicina"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "estudiar-presente-2",
+    "verbo": "estudiar",
+    "contexto": "nosotros, esta noche, juntos en la biblioteca",
+    "respuesta": "Esta noche, nosotros estudiamos juntos en la biblioteca.",
+    "pista": "describing study habits",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "estudiamos"
+      ],
+      [
+        "juntos en la biblioteca"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "evitar-presente-0",
+    "verbo": "evitar",
+    "contexto": "yo, normalmente, los problemas",
+    "respuesta": "Normalmente, yo evito los problemas.",
+    "pista": "expressing caution",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "evito"
+      ],
+      [
+        "los problemas"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "evitar-presente-1",
+    "verbo": "evitar",
+    "contexto": "tú, mientras, la comida chatarra",
+    "respuesta": "Mientras, tú evitas la comida chatarra.",
+    "pista": "giving health advice",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "evitas"
+      ],
+      [
+        "la comida chatarra"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "evitar-presente-2",
+    "verbo": "evitar",
+    "contexto": "nosotros, normalmente, los conflictos",
+    "respuesta": "Nosotros evitamos los conflictos normalmente.",
+    "pista": "describing team harmony",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "evitamos"
+      ],
+      [
+        "los conflictos"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "existir-presente-0",
+    "verbo": "existir",
+    "contexto": "eso, normalmente, en la realidad",
+    "respuesta": "Normalmente, eso existe en la realidad.",
+    "pista": "expressing existence",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "existe"
+      ],
+      [
+        "en la realidad"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "existir-presente-1",
+    "verbo": "existir",
+    "contexto": "ellos, esta tarde, en otro continente",
+    "respuesta": "Esta tarde, ellos existen en otro continente.",
+    "pista": "describing location of beings",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "existen"
+      ],
+      [
+        "en otro continente"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "existir-presente-2",
+    "verbo": "existir",
+    "contexto": "yo, esta mañana, para ayudar",
+    "respuesta": "Yo existo para ayudar esta mañana.",
+    "pista": "expressing purpose",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "existo"
+      ],
+      [
+        "para ayudar"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "explicar-presente-0",
+    "verbo": "explicar",
+    "contexto": "yo, actualmente, la lección",
+    "respuesta": "Yo explico la lección actualmente.",
+    "pista": "describing a teaching moment",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "explico"
+      ],
+      [
+        "la leccion"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "explicar-presente-1",
+    "verbo": "explicar",
+    "contexto": "ella, esta noche, el proceso",
+    "respuesta": "Esta noche, ella explica el proceso.",
+    "pista": "narrating instruction",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "explica"
+      ],
+      [
+        "el proceso"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "explicar-presente-2",
+    "verbo": "explicar",
+    "contexto": "tú, esta noche, las reglas del juego",
+    "respuesta": "Tú explicas las reglas del juego esta noche.",
+    "pista": "describing game rules",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "explicas"
+      ],
+      [
+        "las reglas del juego"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "formar-presente-0",
+    "verbo": "formar",
+    "contexto": "nosotros, siempre, un equipo nuevo",
+    "respuesta": "Nosotros formamos un equipo nuevo siempre.",
+    "pista": "describing team building",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "formamos"
+      ],
+      [
+        "un equipo nuevo"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "formar-presente-1",
+    "verbo": "formar",
+    "contexto": "yo, ahora, parte del grupo",
+    "respuesta": "Ahora, yo formo parte del grupo.",
+    "pista": "expressing belonging",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "formo"
+      ],
+      [
+        "parte del grupo"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "formar-presente-2",
+    "verbo": "formar",
+    "contexto": "ella, cada vez que, a los nuevos empleados",
+    "respuesta": "Cada vez que, ella forma a los nuevos empleados.",
+    "pista": "narrating training",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "forma"
+      ],
+      [
+        "a los nuevos empleados"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "funcionar-presente-0",
+    "verbo": "funcionar",
+    "contexto": "el coche, ahora mismo, perfectamente",
+    "respuesta": "Ahora mismo, el coche funciona perfectamente.",
+    "pista": "describing machine status",
+    "grupos": [
+      [
+        "el coche"
+      ],
+      [
+        "funciona"
+      ],
+      [
+        "perfectamente"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "funcionar-presente-1",
+    "verbo": "funcionar",
+    "contexto": "yo, normalmente, bien bajo presión",
+    "respuesta": "Yo funciono bien bajo presión normalmente.",
+    "pista": "expressing work style",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "funciono"
+      ],
+      [
+        "bien bajo presion"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "funcionar-presente-2",
+    "verbo": "funcionar",
+    "contexto": "ellos, por lo general, como equipo",
+    "respuesta": "Por lo general, ellos funcionan como equipo.",
+    "pista": "describing teamwork",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "funcionan"
+      ],
+      [
+        "como equipo"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "ganar-presente-0",
+    "verbo": "ganar",
+    "contexto": "yo, ahora, el partido",
+    "respuesta": "Yo gano el partido ahora.",
+    "pista": "expressing victory",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "gano"
+      ],
+      [
+        "el partido"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "ganar-presente-1",
+    "verbo": "ganar",
+    "contexto": "nosotros, cada semana, experiencia",
+    "respuesta": "Nosotros ganamos experiencia cada semana.",
+    "pista": "describing learning",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "ganamos"
+      ],
+      [
+        "experiencia"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "ganar-presente-2",
+    "verbo": "ganar",
+    "contexto": "tú, actualmente, un buen salario",
+    "respuesta": "Tú ganas un buen salario actualmente.",
+    "pista": "talking about compensation",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "ganas"
+      ],
+      [
+        "un buen salario"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "golpear-presente-0",
+    "verbo": "golpear",
+    "contexto": "yo, siempre, la mesa con frustración",
+    "respuesta": "Yo golpeo la mesa con frustración siempre.",
+    "pista": "expressing frustration",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "golpeo"
+      ],
+      [
+        "la mesa con frustracion"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "golpear-presente-1",
+    "verbo": "golpear",
+    "contexto": "él, mientras, la pelota con fuerza",
+    "respuesta": "Él golpea la pelota con fuerza mientras.",
+    "pista": "describing sports",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "golpea"
+      ],
+      [
+        "la pelota con fuerza"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "golpear-presente-2",
+    "verbo": "golpear",
+    "contexto": "tú, actualmente, la puerta para entrar",
+    "respuesta": "Actualmente, tú golpeas la puerta para entrar.",
+    "pista": "describing knocking",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "golpeas"
+      ],
+      [
+        "la puerta para entrar"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  }
+]

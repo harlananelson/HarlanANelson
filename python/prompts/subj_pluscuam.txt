@@ -1,0 +1,32 @@
+Generate Spanish pluperfect subjunctive speech drill exercises.
+
+TENSE: subj_pluscuam (pretérito pluscuamperfecto de subjuntivo)
+CONJUGATION RULES:
+- Structure: imperfect subjunctive of haber + past participle
+- hubiera/hubiese + hablado/comido/vivido
+- hubiera hablado, hubieras hablado, hubiera hablado, hubiéramos hablado, hubierais hablado, hubieran hablado
+- Irregular past participles: hecho, dicho, puesto, visto, escrito, abierto, vuelto, roto, muerto, cubierto, descubierto, resuelto
+
+TRIGGER PHRASES (use diverse mix):
+si hubiera..., ojalá hubiera..., como si hubiera..., no creía que hubiera..., dudaba que hubiera..., era imposible que hubiera..., antes de que hubiera..., si yo hubiera sabido, si nosotros hubiéramos tenido tiempo
+
+EXERCISE FORMAT:
+Each exercise must have these 6 fields:
+- id: "{verb}-subj_pluscuam-{number}" (number will be assigned later, use 0)
+- verbo: the infinitive
+- contexto: trigger phrase + subject + complement (comma-separated fragments)
+- respuesta: complete sentence with hubiera/hubiese + past participle
+- pista: a hint about pluperfect subjunctive usage (unrealized past, regret, etc.)
+- grupos: array of arrays, each inner array has the key idea unit
+
+CRITICAL RULES FOR grupos:
+1. Every element in grupos must appear verbatim in respuesta (after accent removal and lowercasing)
+2. grupos elements must NOT contain accented characters
+3. "hubiera" (or "hubieras", "hubieramos", etc.) should be one grupo with -se alternative: ["hubiera", "hubiese"]
+4. The past participle should be its own grupo
+5. The trigger phrase should be its own grupo
+6. Include alternative speech recognition forms where relevant
+
+Generate 3 exercises per verb. Use different trigger phrases and subjects across the 3 exercises.
+
+OUTPUT: Valid JSON array of exercise objects. Nothing else.

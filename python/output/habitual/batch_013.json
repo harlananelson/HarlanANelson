@@ -1,0 +1,210 @@
+[
+  {
+    "id": "parecer-habitual-0",
+    "verbo": "parecer",
+    "contexto": "todo, en aquellos tiempos, mas sencillo y tranquilo",
+    "respuesta": "En aquellos tiempos, todo parecia mas sencillo y tranquilo.",
+    "pista": "Habitual past impression - use imperfect",
+    "grupos": [["todo"], ["parecia"], ["mas sencillo y tranquilo"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "parecer-habitual-1",
+    "verbo": "parecer",
+    "contexto": "ella, durante la infancia, una princesa con su vestido blanco",
+    "respuesta": "Durante la infancia, ella parecia una princesa con su vestido blanco.",
+    "pista": "Childhood habitual appearance - use imperfect",
+    "grupos": [["ella"], ["parecia"], ["una princesa con su vestido blanco"], ["durante la infancia"]]
+  },
+  {
+    "id": "partir-habitual-0",
+    "verbo": "partir",
+    "contexto": "los barcos, cada verano, del puerto al amanecer",
+    "respuesta": "Cada verano, los barcos partian del puerto al amanecer.",
+    "pista": "Repeated summer departure - use imperfect",
+    "grupos": [["los barcos"], ["partian"], ["del puerto al amanecer"], ["cada verano"]]
+  },
+  {
+    "id": "partir-habitual-1",
+    "verbo": "partir",
+    "contexto": "mi padre, los domingos, el pan con las manos",
+    "respuesta": "Los domingos, mi padre partia el pan con las manos.",
+    "pista": "Regular Sunday tradition - use imperfect",
+    "grupos": [["mi padre"], ["partia"], ["el pan con las manos"], ["los domingos"]]
+  },
+  {
+    "id": "pasar-habitual-0",
+    "verbo": "pasar",
+    "contexto": "nosotros, cada verano, las vacaciones en el pueblo",
+    "respuesta": "Cada verano, nosotros pasabamos las vacaciones en el pueblo.",
+    "pista": "Repeated summer tradition - use imperfect",
+    "grupos": [["nosotros"], ["pasabamos"], ["las vacaciones en el pueblo"], ["cada verano"]]
+  },
+  {
+    "id": "pasar-habitual-1",
+    "verbo": "pasar",
+    "contexto": "el tiempo, en aquellos tiempos, muy despacio",
+    "respuesta": "En aquellos tiempos, el tiempo pasaba muy despacio.",
+    "pista": "Habitual past perception - use imperfect",
+    "grupos": [["el tiempo"], ["pasaba"], ["muy despacio"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "pedir-habitual-0",
+    "verbo": "pedir",
+    "contexto": "yo, los domingos, helado de fresa en la heladeria",
+    "respuesta": "Los domingos, yo pedia helado de fresa en la heladeria.",
+    "pista": "Regular Sunday order - use imperfect",
+    "grupos": [["yo"], ["pedia"], ["helado de fresa en la heladeria"], ["los domingos"]]
+  },
+  {
+    "id": "pedir-habitual-1",
+    "verbo": "pedir",
+    "contexto": "los ninos, con frecuencia, permiso para salir a jugar",
+    "respuesta": "Los ninos pedian permiso para salir a jugar con frecuencia.",
+    "pista": "Frequently repeated request - use imperfect",
+    "grupos": [["los ninos"], ["pedian"], ["permiso para salir a jugar"], ["con frecuencia"]]
+  },
+  {
+    "id": "pegar-habitual-0",
+    "verbo": "pegar",
+    "contexto": "el sol, cada verano, con mucha fuerza al mediodia",
+    "respuesta": "Cada verano, el sol pegaba con mucha fuerza al mediodia.",
+    "pista": "Repeated summer intensity - use imperfect",
+    "grupos": [["el sol"], ["pegaba"], ["con mucha fuerza al mediodia"], ["cada verano"]]
+  },
+  {
+    "id": "pegar-habitual-1",
+    "verbo": "pegar",
+    "contexto": "yo, durante la infancia, recortes en mi cuaderno",
+    "respuesta": "Durante la infancia, yo pegaba recortes en mi cuaderno.",
+    "pista": "Childhood habitual craft - use imperfect",
+    "grupos": [["yo"], ["pegaba"], ["recortes en mi cuaderno"], ["durante la infancia"]]
+  },
+  {
+    "id": "pelear-habitual-0",
+    "verbo": "pelear",
+    "contexto": "mis hermanos, durante la infancia, por los juguetes",
+    "respuesta": "Durante la infancia, mis hermanos peleaban por los juguetes.",
+    "pista": "Childhood habitual conflict - use imperfect",
+    "grupos": [["mis hermanos"], ["peleaban"], ["por los juguetes"], ["durante la infancia"]]
+  },
+  {
+    "id": "pelear-habitual-1",
+    "verbo": "pelear",
+    "contexto": "los gatos, por las tardes, en el tejado del vecino",
+    "respuesta": "Por las tardes, los gatos peleaban en el tejado del vecino.",
+    "pista": "Daily afternoon occurrence - use imperfect",
+    "grupos": [["los gatos"], ["peleaban"], ["en el tejado del vecino"], ["por las tardes"]]
+  },
+  {
+    "id": "pensar-habitual-0",
+    "verbo": "pensar",
+    "contexto": "yo, en mis ratos libres, en el sentido de la vida",
+    "respuesta": "En mis ratos libres, yo pensaba en el sentido de la vida.",
+    "pista": "Habitual free-time reflection - use imperfect",
+    "grupos": [["yo"], ["pensaba"], ["en el sentido de la vida"], ["en mis ratos libres"]]
+  },
+  {
+    "id": "pensar-habitual-1",
+    "verbo": "pensar",
+    "contexto": "ella, antes del accidente, que todo iba a salir bien",
+    "respuesta": "Antes del accidente, ella pensaba que todo iba a salir bien.",
+    "pista": "Ongoing past belief - use imperfect",
+    "grupos": [["ella"], ["pensaba"], ["que todo iba a salir bien"], ["antes del accidente"]]
+  },
+  {
+    "id": "perder-habitual-0",
+    "verbo": "perder",
+    "contexto": "yo, con frecuencia, el autobus por llegar tarde",
+    "respuesta": "Yo perdia el autobus por llegar tarde con frecuencia.",
+    "pista": "Frequently repeated misfortune - use imperfect",
+    "grupos": [["yo"], ["perdia"], ["el autobus por llegar tarde"], ["con frecuencia"]]
+  },
+  {
+    "id": "perder-habitual-1",
+    "verbo": "perder",
+    "contexto": "mi equipo, los fines de semana, los partidos importantes",
+    "respuesta": "Los fines de semana, mi equipo perdia los partidos importantes.",
+    "pista": "Regular weekend losses - use imperfect",
+    "grupos": [["mi equipo"], ["perdia"], ["los partidos importantes"], ["los fines de semana"]]
+  },
+  {
+    "id": "perdonar-habitual-0",
+    "verbo": "perdonar",
+    "contexto": "mi madre, en aquellos tiempos, todos nuestros errores",
+    "respuesta": "En aquellos tiempos, mi madre perdonaba todos nuestros errores.",
+    "pista": "Habitual past forgiveness - use imperfect",
+    "grupos": [["mi madre"], ["perdonaba"], ["todos nuestros errores"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "perdonar-habitual-1",
+    "verbo": "perdonar",
+    "contexto": "ella, con frecuencia, a sus amigos sin rencor",
+    "respuesta": "Ella perdonaba a sus amigos sin rencor con frecuencia.",
+    "pista": "Frequently repeated forgiveness - use imperfect",
+    "grupos": [["ella"], ["perdonaba"], ["a sus amigos sin rencor"], ["con frecuencia"]]
+  },
+  {
+    "id": "permanecer-habitual-0",
+    "verbo": "permanecer",
+    "contexto": "el perro, por las tardes, junto a la puerta esperando",
+    "respuesta": "Por las tardes, el perro permanecia junto a la puerta esperando.",
+    "pista": "Daily afternoon behavior - use imperfect",
+    "grupos": [["el perro"], ["permanecia"], ["junto a la puerta esperando"], ["por las tardes"]]
+  },
+  {
+    "id": "permanecer-habitual-1",
+    "verbo": "permanecer",
+    "contexto": "nosotros, los domingos, en casa descansando todo el dia",
+    "respuesta": "Los domingos, nosotros permaneciamos en casa descansando todo el dia.",
+    "pista": "Regular Sunday rest - use imperfect",
+    "grupos": [["nosotros"], ["permaneciamos"], ["en casa descansando todo el dia"], ["los domingos"]]
+  },
+  {
+    "id": "permitir-habitual-0",
+    "verbo": "permitir",
+    "contexto": "mis padres, los fines de semana, que nos acostaramos tarde",
+    "respuesta": "Los fines de semana, mis padres permitian que nos acostaramos tarde.",
+    "pista": "Regular weekend permission - use imperfect",
+    "grupos": [["mis padres"], ["permitian"], ["que nos acostaramos tarde"], ["los fines de semana"]]
+  },
+  {
+    "id": "permitir-habitual-1",
+    "verbo": "permitir",
+    "contexto": "el colegio, en aquellos tiempos, jugar en el patio hasta tarde",
+    "respuesta": "En aquellos tiempos, el colegio permitia jugar en el patio hasta tarde.",
+    "pista": "Habitual past allowance - use imperfect",
+    "grupos": [["el colegio"], ["permitia"], ["jugar en el patio hasta tarde"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "pertenecer-habitual-0",
+    "verbo": "pertenecer",
+    "contexto": "yo, en mis anos de universidad, al club de debate",
+    "respuesta": "En mis anos de universidad, yo pertenecia al club de debate.",
+    "pista": "Ongoing university membership - use imperfect",
+    "grupos": [["yo"], ["pertenecia"], ["al club de debate"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "pertenecer-habitual-1",
+    "verbo": "pertenecer",
+    "contexto": "esta tierra, en aquellos tiempos, a una familia noble",
+    "respuesta": "En aquellos tiempos, esta tierra pertenecia a una familia noble.",
+    "pista": "Habitual past ownership - use imperfect",
+    "grupos": [["esta tierra"], ["pertenecia"], ["a una familia noble"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "pesar-habitual-0",
+    "verbo": "pesar",
+    "contexto": "la mochila, durante la infancia, demasiado para mi espalda",
+    "respuesta": "Durante la infancia, la mochila pesaba demasiado para mi espalda.",
+    "pista": "Childhood habitual burden - use imperfect",
+    "grupos": [["la mochila"], ["pesaba"], ["demasiado para mi espalda"], ["durante la infancia"]]
+  },
+  {
+    "id": "pesar-habitual-1",
+    "verbo": "pesar",
+    "contexto": "las decisiones, en aquellos tiempos, mucho en mi conciencia",
+    "respuesta": "En aquellos tiempos, las decisiones pesaban mucho en mi conciencia.",
+    "pista": "Habitual past emotional burden - use imperfect",
+    "grupos": [["las decisiones"], ["pesaban"], ["mucho en mi conciencia"], ["en aquellos tiempos"]]
+  }
+]

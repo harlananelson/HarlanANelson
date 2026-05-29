@@ -1,0 +1,242 @@
+[
+  {
+    "id": "convertir-puntual-0",
+    "verbo": "convertir",
+    "contexto": "el, aquel verano, el garaje en estudio",
+    "respuesta": "El convirtio el garaje en estudio aquel verano.",
+    "pista": "completed action of converting the garage into a studio that summer",
+    "grupos": [["el"], ["convirtio"], ["el garaje en estudio"], ["aquel verano"]]
+  },
+  {
+    "id": "convertir-puntual-1",
+    "verbo": "convertir",
+    "contexto": "ellos, hace una semana, la idea en realidad",
+    "respuesta": "Ellos convirtieron la idea en realidad hace una semana.",
+    "pista": "completed action of turning the idea into reality a week ago",
+    "grupos": [["ellos"], ["convirtieron"], ["la idea en realidad"], ["hace una semana"]]
+  },
+  {
+    "id": "correr-puntual-0",
+    "verbo": "correr",
+    "contexto": "yo, en la madrugada, cinco kilometros",
+    "respuesta": "Yo corri cinco kilometros en la madrugada.",
+    "pista": "completed action of running five kilometers in the early morning",
+    "grupos": [["yo"], ["corri"], ["cinco kilometros"], ["en la madrugada"]]
+  },
+  {
+    "id": "correr-puntual-1",
+    "verbo": "correr",
+    "contexto": "ella, de repente, hacia la salida",
+    "respuesta": "Ella corrio hacia la salida de repente.",
+    "pista": "completed action of running toward the exit suddenly",
+    "grupos": [["ella"], ["corrio"], ["hacia la salida"], ["de repente"]]
+  },
+  {
+    "id": "cortar-puntual-0",
+    "verbo": "cortar",
+    "contexto": "tu, al mediodia, el pan",
+    "respuesta": "Tu cortaste el pan al mediodia.",
+    "pista": "completed action of cutting the bread at noon",
+    "grupos": [["tu"], ["cortaste"], ["el pan"], ["al mediodia"]]
+  },
+  {
+    "id": "cortar-puntual-1",
+    "verbo": "cortar",
+    "contexto": "el, justo en ese instante, la cuerda",
+    "respuesta": "El corto la cuerda justo en ese instante.",
+    "pista": "completed action of cutting the rope at that exact moment",
+    "grupos": [["el"], ["corto"], ["la cuerda"], ["justo en ese instante"]]
+  },
+  {
+    "id": "costar-puntual-0",
+    "verbo": "costar",
+    "contexto": "el viaje, aquel verano, mucho dinero",
+    "respuesta": "El viaje costo mucho dinero aquel verano.",
+    "pista": "completed action of the trip costing a lot of money that summer",
+    "grupos": [["el viaje"], ["costo"], ["mucho dinero"], ["aquel verano"]]
+  },
+  {
+    "id": "costar-puntual-1",
+    "verbo": "costar",
+    "contexto": "la reparacion, hace tres dias, una fortuna",
+    "respuesta": "La reparacion costo una fortuna hace tres dias.",
+    "pista": "completed action of the repair costing a fortune three days ago",
+    "grupos": [["la reparacion"], ["costo"], ["una fortuna"], ["hace tres dias"]]
+  },
+  {
+    "id": "crear-puntual-0",
+    "verbo": "crear",
+    "contexto": "ella, el martes pasado, una obra maestra",
+    "respuesta": "Ella creo una obra maestra el martes pasado.",
+    "pista": "completed action of creating a masterpiece last Tuesday",
+    "grupos": [["ella"], ["creo"], ["una obra maestra"], ["el martes pasado"]]
+  },
+  {
+    "id": "crear-puntual-1",
+    "verbo": "crear",
+    "contexto": "nosotros, durante el viaje, un plan perfecto",
+    "respuesta": "Nosotros creamos un plan perfecto durante el viaje.",
+    "pista": "completed action of creating a perfect plan during the trip",
+    "grupos": [["nosotros"], ["creamos"], ["un plan perfecto"], ["durante el viaje"]]
+  },
+  {
+    "id": "crecer-puntual-0",
+    "verbo": "crecer",
+    "contexto": "la planta, aquel verano, mucho",
+    "respuesta": "La planta crecio mucho aquel verano.",
+    "pista": "completed action of the plant growing a lot that summer",
+    "grupos": [["la planta"], ["crecio"], ["mucho"], ["aquel verano"]]
+  },
+  {
+    "id": "crecer-puntual-1",
+    "verbo": "crecer",
+    "contexto": "yo, en aquel momento, como persona",
+    "respuesta": "Yo creci como persona en aquel momento.",
+    "pista": "completed action of growing as a person at that moment",
+    "grupos": [["yo"], ["creci"], ["como persona"], ["en aquel momento"]]
+  },
+  {
+    "id": "creer-puntual-0",
+    "verbo": "creer",
+    "contexto": "el, de repente, en la magia",
+    "respuesta": "El creyo en la magia de repente.",
+    "pista": "completed action of believing in magic suddenly",
+    "grupos": [["el"], ["creyo"], ["en la magia"], ["de repente"]]
+  },
+  {
+    "id": "creer-puntual-1",
+    "verbo": "creer",
+    "contexto": "yo, justo en ese instante, sus palabras",
+    "respuesta": "Yo crei sus palabras justo en ese instante.",
+    "pista": "completed action of believing his words at that exact moment",
+    "grupos": [["yo"], ["crei"], ["sus palabras"], ["justo en ese instante"]]
+  },
+  {
+    "id": "cubrir-puntual-0",
+    "verbo": "cubrir",
+    "contexto": "ella, al anochecer, la mesa con un mantel",
+    "respuesta": "Ella cubrio la mesa con un mantel al anochecer.",
+    "pista": "completed action of covering the table with a cloth at nightfall",
+    "grupos": [["ella"], ["cubrio"], ["la mesa con un mantel"], ["al anochecer"]]
+  },
+  {
+    "id": "cubrir-puntual-1",
+    "verbo": "cubrir",
+    "contexto": "la nieve, durante la tormenta, todo el jardin",
+    "respuesta": "La nieve cubrio todo el jardin durante la tormenta.",
+    "pista": "completed action of the snow covering the entire garden during the storm",
+    "grupos": [["la nieve"], ["cubrio"], ["todo el jardin"], ["durante la tormenta"]]
+  },
+  {
+    "id": "cuidar-puntual-0",
+    "verbo": "cuidar",
+    "contexto": "yo, aquel verano, de mi abuela",
+    "respuesta": "Yo cuide de mi abuela aquel verano.",
+    "pista": "completed action of taking care of my grandmother that summer",
+    "grupos": [["yo"], ["cuide"], ["de mi abuela"], ["aquel verano"]]
+  },
+  {
+    "id": "cuidar-puntual-1",
+    "verbo": "cuidar",
+    "contexto": "ella, esa misma noche, a los ninos",
+    "respuesta": "Ella cuido a los ninos esa misma noche.",
+    "pista": "completed action of taking care of the children that very night",
+    "grupos": [["ella"], ["cuido"], ["a los ninos"], ["esa misma noche"]]
+  },
+  {
+    "id": "cumplir-puntual-0",
+    "verbo": "cumplir",
+    "contexto": "el, el martes pasado, su promesa",
+    "respuesta": "El cumplio su promesa el martes pasado.",
+    "pista": "completed action of keeping his promise last Tuesday",
+    "grupos": [["el"], ["cumplio"], ["su promesa"], ["el martes pasado"]]
+  },
+  {
+    "id": "cumplir-puntual-1",
+    "verbo": "cumplir",
+    "contexto": "nosotros, al final del dia, con el deber",
+    "respuesta": "Nosotros cumplimos con el deber al final del dia.",
+    "pista": "completed action of fulfilling the duty at the end of the day",
+    "grupos": [["nosotros"], ["cumplimos"], ["con el deber"], ["al final del dia"]]
+  },
+  {
+    "id": "dar-puntual-0",
+    "verbo": "dar",
+    "contexto": "yo, nada mas llegar, un abrazo a mi madre",
+    "respuesta": "Yo di un abrazo a mi madre nada mas llegar.",
+    "pista": "completed action of giving my mother a hug right upon arriving",
+    "grupos": [["yo"], ["di"], ["un abrazo a mi madre"], ["nada mas llegar"]]
+  },
+  {
+    "id": "dar-puntual-1",
+    "verbo": "dar",
+    "contexto": "ella, tras la reunion, las gracias a todos",
+    "respuesta": "Ella dio las gracias a todos tras la reunion.",
+    "pista": "completed action of thanking everyone after the meeting",
+    "grupos": [["ella"], ["dio"], ["las gracias a todos"], ["tras la reunion"]]
+  },
+  {
+    "id": "deber-puntual-0",
+    "verbo": "deber",
+    "contexto": "el, hace una semana, mucho dinero",
+    "respuesta": "El debio mucho dinero hace una semana.",
+    "pista": "completed action of owing a lot of money a week ago",
+    "grupos": [["el"], ["debio"], ["mucho dinero"], ["hace una semana"]]
+  },
+  {
+    "id": "deber-puntual-1",
+    "verbo": "deber",
+    "contexto": "nosotros, en aquel momento, tomar una decision",
+    "respuesta": "Nosotros debimos tomar una decision en aquel momento.",
+    "pista": "completed action of having to make a decision at that moment",
+    "grupos": [["nosotros"], ["debimos"], ["tomar una decision"], ["en aquel momento"]]
+  },
+  {
+    "id": "decidir-puntual-0",
+    "verbo": "decidir",
+    "contexto": "yo, al final del dia, mudarme",
+    "respuesta": "Yo decidi mudarme al final del dia.",
+    "pista": "completed action of deciding to move at the end of the day",
+    "grupos": [["yo"], ["decidi"], ["mudarme"], ["al final del dia"]]
+  },
+  {
+    "id": "decidir-puntual-1",
+    "verbo": "decidir",
+    "contexto": "ellos, esa misma noche, el destino del viaje",
+    "respuesta": "Ellos decidieron el destino del viaje esa misma noche.",
+    "pista": "completed action of deciding the trip destination that very night",
+    "grupos": [["ellos"], ["decidieron"], ["el destino del viaje"], ["esa misma noche"]]
+  },
+  {
+    "id": "decir-puntual-0",
+    "verbo": "decir",
+    "contexto": "ella, de repente, la verdad",
+    "respuesta": "Ella dijo la verdad de repente.",
+    "pista": "completed action of telling the truth suddenly",
+    "grupos": [["ella"], ["dijo"], ["la verdad"], ["de repente"]]
+  },
+  {
+    "id": "decir-puntual-1",
+    "verbo": "decir",
+    "contexto": "yo, en aquel momento, que no",
+    "respuesta": "Yo dije que no en aquel momento.",
+    "pista": "completed action of saying no at that moment",
+    "grupos": [["yo"], ["dije"], ["que no"], ["en aquel momento"]]
+  },
+  {
+    "id": "defender-puntual-0",
+    "verbo": "defender",
+    "contexto": "el, justo en ese instante, a su familia",
+    "respuesta": "El defendio a su familia justo en ese instante.",
+    "pista": "completed action of defending his family at that exact moment",
+    "grupos": [["el"], ["defendio"], ["a su familia"], ["justo en ese instante"]]
+  },
+  {
+    "id": "defender-puntual-1",
+    "verbo": "defender",
+    "contexto": "nosotros, durante la tormenta, nuestra posicion",
+    "respuesta": "Nosotros defendimos nuestra posicion durante la tormenta.",
+    "pista": "completed action of defending our position during the storm",
+    "grupos": [["nosotros"], ["defendimos"], ["nuestra posicion"], ["durante la tormenta"]]
+  }
+]

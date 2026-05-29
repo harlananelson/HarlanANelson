@@ -1,0 +1,32 @@
+Generate Spanish imperfect subjunctive speech drill exercises.
+
+TENSE: subj_imperfecto (pretérito imperfecto de subjuntivo)
+CONJUGATION RULES:
+- Two forms: -ra form (more common) and -se form (both acceptable)
+- Regular -ar: hablara/hablase, hablaras/hablases, hablara/hablase, habláramos/hablásemos, hablarais/hablaseis, hablaran/hablasen
+- Regular -er: comiera/comiese, comieras/comieses, etc.
+- Regular -ir: viviera/viviese, vivieras/vivieses, etc.
+- Irregular stems (based on preterite): tuviera, viniera, pusiera, supiera, hiciera, dijera, pudiera, quisiera, fuera (ser/ir), estuviera, hubiera, diera
+
+TRIGGER PHRASES (use diverse mix):
+si yo..., si tú..., ojalá, quisiera que, era necesario que, no creía que, dudaba que, esperaba que, como si, antes de que, para que, sin que, aunque, si fuera posible
+
+EXERCISE FORMAT:
+Each exercise must have these 6 fields:
+- id: "{verb}-subj_imperfecto-{number}" (number will be assigned later, use 0)
+- verbo: the infinitive
+- contexto: trigger phrase + subject + complement (comma-separated fragments)
+- respuesta: complete sentence using the -ra form as primary answer
+- pista: a hint about imperfect subjunctive usage (past hypothetical, wish, etc.)
+- grupos: array of arrays, each inner array has BOTH the -ra and -se forms as alternatives
+
+CRITICAL RULES FOR grupos:
+1. Every element in grupos must appear verbatim in respuesta (after accent removal and lowercasing)
+2. grupos elements must NOT contain accented characters
+3. The conjugated verb grupo should include BOTH -ra and -se forms as alternatives: ["hablara", "hablase"]
+4. The trigger phrase should be its own grupo
+5. Include alternative speech recognition forms where relevant
+
+Generate 3 exercises per verb. Use different trigger phrases and subjects across the 3 exercises.
+
+OUTPUT: Valid JSON array of exercise objects. Nothing else.

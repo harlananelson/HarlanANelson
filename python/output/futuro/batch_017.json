@@ -1,0 +1,317 @@
+[
+  {
+    "id": "ver-futuro-0",
+    "verbo": "ver",
+    "contexto": "yo, en unos minutos, la película",
+    "respuesta": "Yo veré la película en unos minutos.",
+    "pista": "El futuro simple puede expresar probabilidad en el presente",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "vere"
+      ],
+      [
+        "la pelicula"
+      ],
+      [
+        "en unos minutos"
+      ]
+    ]
+  },
+  {
+    "id": "ver-futuro-1",
+    "verbo": "ver",
+    "contexto": "nosotros, el lunes, el partido",
+    "respuesta": "Nosotros veremos el partido el lunes.",
+    "pista": "El futuro simple indica una acción posterior al momento de hablar",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "veremos"
+      ],
+      [
+        "el partido"
+      ],
+      [
+        "el lunes"
+      ]
+    ]
+  },
+  {
+    "id": "ver-futuro-2",
+    "verbo": "ver",
+    "contexto": "tú, mañana, los resultados",
+    "respuesta": "Tú verás los resultados mañana.",
+    "pista": "Usa el futuro para expresar acciones que ocurrirán",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "veras"
+      ],
+      [
+        "los resultados"
+      ],
+      [
+        "manana"
+      ]
+    ]
+  },
+  {
+    "id": "viajar-futuro-0",
+    "verbo": "viajar",
+    "contexto": "yo, la semana que viene, a Japón",
+    "respuesta": "Yo viajaré a Japón la semana que viene.",
+    "pista": "El futuro se usa para hacer promesas y predicciones",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "viajare"
+      ],
+      [
+        "a japon"
+      ],
+      [
+        "la semana que viene"
+      ]
+    ]
+  },
+  {
+    "id": "viajar-futuro-1",
+    "verbo": "viajar",
+    "contexto": "nosotros, la próxima vez, por Europa",
+    "respuesta": "Nosotros viajaremos por Europa la próxima vez.",
+    "pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "viajaremos"
+      ],
+      [
+        "por europa"
+      ],
+      [
+        "la proxima vez"
+      ]
+    ]
+  },
+  {
+    "id": "viajar-futuro-2",
+    "verbo": "viajar",
+    "contexto": "tú, dentro de una hora, en avión",
+    "respuesta": "Tú viajarás en avión dentro de una hora.",
+    "pista": "El futuro simple se forma con el infinitivo + terminación",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "viajaras"
+      ],
+      [
+        "en avion"
+      ],
+      [
+        "dentro de una hora"
+      ]
+    ]
+  },
+  {
+    "id": "vivir-futuro-0",
+    "verbo": "vivir",
+    "contexto": "yo, el próximo mes, en Madrid",
+    "respuesta": "Yo viviré en Madrid el próximo mes.",
+    "pista": "El futuro simple es uno de los tiempos más regulares del español",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "vivire"
+      ],
+      [
+        "en madrid"
+      ],
+      [
+        "el proximo mes"
+      ]
+    ]
+  },
+  {
+    "id": "vivir-futuro-1",
+    "verbo": "vivir",
+    "contexto": "nosotros, pronto, en una casa grande",
+    "respuesta": "Nosotros viviremos en una casa grande pronto.",
+    "pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "viviremos"
+      ],
+      [
+        "en una casa grande"
+      ],
+      [
+        "pronto"
+      ]
+    ]
+  },
+  {
+    "id": "vivir-futuro-2",
+    "verbo": "vivir",
+    "contexto": "tú, el lunes, cerca del centro",
+    "respuesta": "Tú vivirás cerca del centro el lunes.",
+    "pista": "El futuro se usa para hacer promesas y predicciones",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "viviras"
+      ],
+      [
+        "cerca del centro"
+      ],
+      [
+        "el lunes"
+      ]
+    ]
+  },
+  {
+    "id": "volar-futuro-0",
+    "verbo": "volar",
+    "contexto": "yo, esta noche, a Nueva York",
+    "respuesta": "Yo volaré a Nueva York esta noche.",
+    "pista": "El futuro simple se forma con el infinitivo + terminación",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "volare"
+      ],
+      [
+        "a nueva york"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "volar-futuro-1",
+    "verbo": "volar",
+    "contexto": "el avión, esta noche, sobre el océano",
+    "respuesta": "El avión volará sobre el océano esta noche.",
+    "pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+    "grupos": [
+      [
+        "el avion"
+      ],
+      [
+        "volara"
+      ],
+      [
+        "sobre el oceano"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "volar-futuro-2",
+    "verbo": "volar",
+    "contexto": "nosotros, el año que viene, en primera clase",
+    "respuesta": "Nosotros volaremos en primera clase el año que viene.",
+    "pista": "Usa el futuro para expresar acciones que ocurrirán",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "volaremos"
+      ],
+      [
+        "en primera clase"
+      ],
+      [
+        "el ano que viene"
+      ]
+    ]
+  },
+  {
+    "id": "volver-futuro-0",
+    "verbo": "volver",
+    "contexto": "yo, dentro de poco, a casa",
+    "respuesta": "Yo volveré a casa dentro de poco.",
+    "pista": "Usa el futuro para hablar de planes y proyectos",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "volvere"
+      ],
+      [
+        "a casa"
+      ],
+      [
+        "dentro de poco"
+      ]
+    ]
+  },
+  {
+    "id": "volver-futuro-1",
+    "verbo": "volver",
+    "contexto": "tú, la próxima vez, al trabajo",
+    "respuesta": "Tú volverás al trabajo la próxima vez.",
+    "pista": "Las terminaciones del futuro son iguales para las tres conjugaciones",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "volveras"
+      ],
+      [
+        "al trabajo"
+      ],
+      [
+        "la proxima vez"
+      ]
+    ]
+  },
+  {
+    "id": "volver-futuro-2",
+    "verbo": "volver",
+    "contexto": "nosotros, pasado mañana, a intentarlo",
+    "respuesta": "Nosotros volveremos a intentarlo pasado mañana.",
+    "pista": "Usa el futuro para hablar de planes y proyectos",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "volveremos"
+      ],
+      [
+        "a intentarlo"
+      ],
+      [
+        "pasado manana"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,947 @@
+[
+  {
+    "id": "comer-subjuntivo-0",
+    "verbo": "comer",
+    "contexto": "es necesario que, tú, comer (subjuntivo)",
+    "respuesta": "es necesario que tú comas antes del viernes.",
+    "pista": "La expresión impersonal 'es necesario que' exige el subjuntivo.",
+    "grupos": [
+      [
+        "es necesario que"
+      ],
+      [
+        "comas"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "antes del viernes"
+      ]
+    ]
+  },
+  {
+    "id": "comer-subjuntivo-1",
+    "verbo": "comer",
+    "contexto": "aunque, ella, comer (subjuntivo)",
+    "respuesta": "aunque ella coma mal.",
+    "pista": "'Aunque' con subjuntivo indica una situación hipotética o no confirmada.",
+    "grupos": [
+      [
+        "aunque"
+      ],
+      [
+        "coma"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "mal"
+      ]
+    ]
+  },
+  {
+    "id": "comer-subjuntivo-2",
+    "verbo": "comer",
+    "contexto": "antes de que, usted, comer (subjuntivo)",
+    "respuesta": "antes de que usted coma sin permiso.",
+    "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "coma"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "sin permiso"
+      ]
+    ]
+  },
+  {
+    "id": "cometer-subjuntivo-0",
+    "verbo": "cometer",
+    "contexto": "es importante que, él, cometer (subjuntivo)",
+    "respuesta": "es importante que él cometa de forma adecuada.",
+    "pista": "'Es importante que' expresa una valoración y necesita el subjuntivo.",
+    "grupos": [
+      [
+        "es importante que"
+      ],
+      [
+        "cometa"
+      ],
+      [
+        "el"
+      ],
+      [
+        "de forma adecuada"
+      ]
+    ]
+  },
+  {
+    "id": "cometer-subjuntivo-1",
+    "verbo": "cometer",
+    "contexto": "sin que, ellos, cometer (subjuntivo)",
+    "respuesta": "sin que ellos cometan antes.",
+    "pista": "'Sin que' expresa una acción que no ocurre y necesita el subjuntivo.",
+    "grupos": [
+      [
+        "sin que"
+      ],
+      [
+        "cometan"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "antes"
+      ]
+    ]
+  },
+  {
+    "id": "cometer-subjuntivo-2",
+    "verbo": "cometer",
+    "contexto": "ojalá, ustedes, cometer (subjuntivo)",
+    "respuesta": "ojalá ustedes cometan esta noche.",
+    "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "cometan"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "compartir-subjuntivo-0",
+    "verbo": "compartir",
+    "contexto": "dudo que, nosotros, compartir (subjuntivo)",
+    "respuesta": "dudo que nosotros compartamos tan rápido.",
+    "pista": "El verbo 'dudar' expresa incertidumbre y requiere el subjuntivo.",
+    "grupos": [
+      [
+        "dudo que"
+      ],
+      [
+        "compartamos"
+      ],
+      [
+        "nosotros"
+      ],
+      [
+        "tan rapido"
+      ]
+    ]
+  },
+  {
+    "id": "compartir-subjuntivo-1",
+    "verbo": "compartir",
+    "contexto": "ojalá, yo, compartir (subjuntivo)",
+    "respuesta": "ojalá yo comparta esta noche.",
+    "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "comparta"
+      ],
+      [
+        "yo"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "compartir-subjuntivo-2",
+    "verbo": "compartir",
+    "contexto": "antes de que, tú, compartir (subjuntivo)",
+    "respuesta": "antes de que tú compartas por la noche.",
+    "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "compartas"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "por la noche"
+      ]
+    ]
+  },
+  {
+    "id": "comprar-subjuntivo-0",
+    "verbo": "comprar",
+    "contexto": "no creo que, tú, comprar (subjuntivo)",
+    "respuesta": "no creo que tú compres solo.",
+    "pista": "'No creo que' expresa duda y necesita el subjuntivo.",
+    "grupos": [
+      [
+        "no creo que"
+      ],
+      [
+        "compres"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "solo"
+      ]
+    ]
+  },
+  {
+    "id": "comprar-subjuntivo-1",
+    "verbo": "comprar",
+    "contexto": "dudo que, ella, comprar (subjuntivo)",
+    "respuesta": "dudo que ella compre antes del lunes.",
+    "pista": "El verbo 'dudar' expresa incertidumbre y requiere el subjuntivo.",
+    "grupos": [
+      [
+        "dudo que"
+      ],
+      [
+        "compre"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "antes del lunes"
+      ]
+    ]
+  },
+  {
+    "id": "comprar-subjuntivo-2",
+    "verbo": "comprar",
+    "contexto": "ojalá, usted, comprar (subjuntivo)",
+    "respuesta": "ojalá usted compre hoy.",
+    "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "compre"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "comprender-subjuntivo-0",
+    "verbo": "comprender",
+    "contexto": "es posible que, él, comprender (subjuntivo)",
+    "respuesta": "es posible que él comprenda este mes.",
+    "pista": "'Es posible que' expresa posibilidad y requiere el subjuntivo.",
+    "grupos": [
+      [
+        "es posible que"
+      ],
+      [
+        "comprenda"
+      ],
+      [
+        "el"
+      ],
+      [
+        "este mes"
+      ]
+    ]
+  },
+  {
+    "id": "comprender-subjuntivo-1",
+    "verbo": "comprender",
+    "contexto": "para que, ellos, comprender (subjuntivo)",
+    "respuesta": "para que ellos comprendan mejor.",
+    "pista": "'Para que' introduce un propósito y siempre lleva subjuntivo.",
+    "grupos": [
+      [
+        "para que"
+      ],
+      [
+        "comprendan"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "mejor"
+      ]
+    ]
+  },
+  {
+    "id": "comprender-subjuntivo-2",
+    "verbo": "comprender",
+    "contexto": "antes de que, ustedes, comprender (subjuntivo)",
+    "respuesta": "antes de que ustedes comprendan otra vez.",
+    "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "comprendan"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "otra vez"
+      ]
+    ]
+  },
+  {
+    "id": "conducir-subjuntivo-0",
+    "verbo": "conducir",
+    "contexto": "para que, nosotros, conducir (subjuntivo)",
+    "respuesta": "para que nosotros conduzcamos mejor.",
+    "pista": "'Para que' introduce un propósito y siempre lleva subjuntivo.",
+    "grupos": [
+      [
+        "para que"
+      ],
+      [
+        "conduzcamos"
+      ],
+      [
+        "nosotros"
+      ],
+      [
+        "mejor"
+      ]
+    ]
+  },
+  {
+    "id": "conducir-subjuntivo-1",
+    "verbo": "conducir",
+    "contexto": "hasta que, yo, conducir (subjuntivo)",
+    "respuesta": "hasta que yo conduzca bien.",
+    "pista": "'Hasta que' con una acción futura requiere el subjuntivo.",
+    "grupos": [
+      [
+        "hasta que"
+      ],
+      [
+        "conduzca"
+      ],
+      [
+        "yo"
+      ],
+      [
+        "bien"
+      ]
+    ]
+  },
+  {
+    "id": "conducir-subjuntivo-2",
+    "verbo": "conducir",
+    "contexto": "ojalá, tú, conducir (subjuntivo)",
+    "respuesta": "ojalá tú conduzcas mañana.",
+    "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "conduzcas"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "manana"
+      ]
+    ]
+  },
+  {
+    "id": "confiar-subjuntivo-0",
+    "verbo": "confiar",
+    "contexto": "antes de que, tú, confiar (subjuntivo)",
+    "respuesta": "antes de que tú confíes otra vez.",
+    "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "confies"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "otra vez"
+      ]
+    ]
+  },
+  {
+    "id": "confiar-subjuntivo-1",
+    "verbo": "confiar",
+    "contexto": "espero que, ella, confiar (subjuntivo)",
+    "respuesta": "espero que ella confíe bien esta semana.",
+    "pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+    "grupos": [
+      [
+        "espero que"
+      ],
+      [
+        "confie"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "bien esta semana"
+      ]
+    ]
+  },
+  {
+    "id": "confiar-subjuntivo-2",
+    "verbo": "confiar",
+    "contexto": "aunque, usted, confiar (subjuntivo)",
+    "respuesta": "aunque usted confíe despacio.",
+    "pista": "'Aunque' con subjuntivo indica una situación hipotética o no confirmada.",
+    "grupos": [
+      [
+        "aunque"
+      ],
+      [
+        "confie"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "despacio"
+      ]
+    ]
+  },
+  {
+    "id": "conocer-subjuntivo-0",
+    "verbo": "conocer",
+    "contexto": "aunque, él, conocer (subjuntivo)",
+    "respuesta": "aunque él conozca tarde.",
+    "pista": "'Aunque' con subjuntivo indica una situación hipotética o no confirmada.",
+    "grupos": [
+      [
+        "aunque"
+      ],
+      [
+        "conozca"
+      ],
+      [
+        "el"
+      ],
+      [
+        "tarde"
+      ]
+    ]
+  },
+  {
+    "id": "conocer-subjuntivo-1",
+    "verbo": "conocer",
+    "contexto": "es necesario que, ellos, conocer (subjuntivo)",
+    "respuesta": "es necesario que ellos conozcan de inmediato.",
+    "pista": "La expresión impersonal 'es necesario que' exige el subjuntivo.",
+    "grupos": [
+      [
+        "es necesario que"
+      ],
+      [
+        "conozcan"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "de inmediato"
+      ]
+    ]
+  },
+  {
+    "id": "conocer-subjuntivo-2",
+    "verbo": "conocer",
+    "contexto": "ojalá, ustedes, conocer (subjuntivo)",
+    "respuesta": "ojalá ustedes conozcan este fin de semana.",
+    "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "conozcan"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "este fin de semana"
+      ]
+    ]
+  },
+  {
+    "id": "conseguir-subjuntivo-0",
+    "verbo": "conseguir",
+    "contexto": "hasta que, nosotros, conseguir (subjuntivo)",
+    "respuesta": "hasta que nosotros consigamos de verdad.",
+    "pista": "'Hasta que' con una acción futura requiere el subjuntivo.",
+    "grupos": [
+      [
+        "hasta que"
+      ],
+      [
+        "consigamos"
+      ],
+      [
+        "nosotros"
+      ],
+      [
+        "de verdad"
+      ]
+    ]
+  },
+  {
+    "id": "conseguir-subjuntivo-1",
+    "verbo": "conseguir",
+    "contexto": "no creo que, yo, conseguir (subjuntivo)",
+    "respuesta": "no creo que yo consiga hoy.",
+    "pista": "'No creo que' expresa duda y necesita el subjuntivo.",
+    "grupos": [
+      [
+        "no creo que"
+      ],
+      [
+        "consiga"
+      ],
+      [
+        "yo"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "conseguir-subjuntivo-2",
+    "verbo": "conseguir",
+    "contexto": "antes de que, tú, conseguir (subjuntivo)",
+    "respuesta": "antes de que tú consigas demasiado tarde.",
+    "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "consigas"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "demasiado tarde"
+      ]
+    ]
+  },
+  {
+    "id": "considerar-subjuntivo-0",
+    "verbo": "considerar",
+    "contexto": "a menos que, tú, considerar (subjuntivo)",
+    "respuesta": "a menos que tú consideres con cuidado.",
+    "pista": "'A menos que' introduce una condición y siempre lleva subjuntivo.",
+    "grupos": [
+      [
+        "a menos que"
+      ],
+      [
+        "consideres"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "con cuidado"
+      ]
+    ]
+  },
+  {
+    "id": "considerar-subjuntivo-1",
+    "verbo": "considerar",
+    "contexto": "antes de que, ella, considerar (subjuntivo)",
+    "respuesta": "antes de que ella considere demasiado tarde.",
+    "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "considere"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "demasiado tarde"
+      ]
+    ]
+  },
+  {
+    "id": "considerar-subjuntivo-2",
+    "verbo": "considerar",
+    "contexto": "ojalá, usted, considerar (subjuntivo)",
+    "respuesta": "ojalá usted considere pronto.",
+    "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "considere"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "pronto"
+      ]
+    ]
+  },
+  {
+    "id": "construir-subjuntivo-0",
+    "verbo": "construir",
+    "contexto": "sin que, él, construir (subjuntivo)",
+    "respuesta": "sin que él construya nada.",
+    "pista": "'Sin que' expresa una acción que no ocurre y necesita el subjuntivo.",
+    "grupos": [
+      [
+        "sin que"
+      ],
+      [
+        "construya"
+      ],
+      [
+        "el"
+      ],
+      [
+        "nada"
+      ]
+    ]
+  },
+  {
+    "id": "construir-subjuntivo-1",
+    "verbo": "construir",
+    "contexto": "a menos que, ellos, construir (subjuntivo)",
+    "respuesta": "a menos que ellos construyan ahora mismo.",
+    "pista": "'A menos que' introduce una condición y siempre lleva subjuntivo.",
+    "grupos": [
+      [
+        "a menos que"
+      ],
+      [
+        "construyan"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "construir-subjuntivo-2",
+    "verbo": "construir",
+    "contexto": "antes de que, ustedes, construir (subjuntivo)",
+    "respuesta": "antes de que ustedes construyan sin permiso.",
+    "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "construyan"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "sin permiso"
+      ]
+    ]
+  },
+  {
+    "id": "contar-subjuntivo-0",
+    "verbo": "contar",
+    "contexto": "espero que, nosotros, contar (subjuntivo)",
+    "respuesta": "espero que nosotros contemos sin problemas.",
+    "pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+    "grupos": [
+      [
+        "espero que"
+      ],
+      [
+        "contemos"
+      ],
+      [
+        "nosotros"
+      ],
+      [
+        "sin problemas"
+      ]
+    ]
+  },
+  {
+    "id": "contar-subjuntivo-1",
+    "verbo": "contar",
+    "contexto": "quiero que, yo, contar (subjuntivo)",
+    "respuesta": "quiero que yo cuente de manera diferente.",
+    "pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+    "grupos": [
+      [
+        "quiero que"
+      ],
+      [
+        "cuente"
+      ],
+      [
+        "yo"
+      ],
+      [
+        "de manera diferente"
+      ]
+    ]
+  },
+  {
+    "id": "contar-subjuntivo-2",
+    "verbo": "contar",
+    "contexto": "ojalá, tú, contar (subjuntivo)",
+    "respuesta": "ojalá tú cuentes esta noche.",
+    "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "cuentes"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "contestar-subjuntivo-0",
+    "verbo": "contestar",
+    "contexto": "quiero que, tú, contestar (subjuntivo)",
+    "respuesta": "quiero que tú contestes de manera diferente.",
+    "pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+    "grupos": [
+      [
+        "quiero que"
+      ],
+      [
+        "contestes"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "de manera diferente"
+      ]
+    ]
+  },
+  {
+    "id": "contestar-subjuntivo-1",
+    "verbo": "contestar",
+    "contexto": "es importante que, ella, contestar (subjuntivo)",
+    "respuesta": "es importante que ella conteste en equipo.",
+    "pista": "'Es importante que' expresa una valoración y necesita el subjuntivo.",
+    "grupos": [
+      [
+        "es importante que"
+      ],
+      [
+        "conteste"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "en equipo"
+      ]
+    ]
+  },
+  {
+    "id": "contestar-subjuntivo-2",
+    "verbo": "contestar",
+    "contexto": "antes de que, usted, contestar (subjuntivo)",
+    "respuesta": "antes de que usted conteste por la noche.",
+    "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "conteste"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "por la noche"
+      ]
+    ]
+  },
+  {
+    "id": "continuar-subjuntivo-0",
+    "verbo": "continuar",
+    "contexto": "ojalá, él, continuar (subjuntivo)",
+    "respuesta": "ojalá él continúe esta noche.",
+    "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "continue"
+      ],
+      [
+        "el"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "continuar-subjuntivo-1",
+    "verbo": "continuar",
+    "contexto": "es posible que, ellos, continuar (subjuntivo)",
+    "respuesta": "es posible que ellos continúen este mes.",
+    "pista": "'Es posible que' expresa posibilidad y requiere el subjuntivo.",
+    "grupos": [
+      [
+        "es posible que"
+      ],
+      [
+        "continuen"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "este mes"
+      ]
+    ]
+  },
+  {
+    "id": "continuar-subjuntivo-2",
+    "verbo": "continuar",
+    "contexto": "es necesario que, ustedes, continuar (subjuntivo)",
+    "respuesta": "es necesario que ustedes continúen antes del viernes.",
+    "pista": "La expresión impersonal 'es necesario que' exige el subjuntivo.",
+    "grupos": [
+      [
+        "es necesario que"
+      ],
+      [
+        "continuen"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "antes del viernes"
+      ]
+    ]
+  },
+  {
+    "id": "controlar-subjuntivo-0",
+    "verbo": "controlar",
+    "contexto": "es necesario que, nosotros, controlar (subjuntivo)",
+    "respuesta": "es necesario que nosotros controlemos cada día.",
+    "pista": "La expresión impersonal 'es necesario que' exige el subjuntivo.",
+    "grupos": [
+      [
+        "es necesario que"
+      ],
+      [
+        "controlemos"
+      ],
+      [
+        "nosotros"
+      ],
+      [
+        "cada dia"
+      ]
+    ]
+  },
+  {
+    "id": "controlar-subjuntivo-1",
+    "verbo": "controlar",
+    "contexto": "aunque, yo, controlar (subjuntivo)",
+    "respuesta": "aunque yo controle poco.",
+    "pista": "'Aunque' con subjuntivo indica una situación hipotética o no confirmada.",
+    "grupos": [
+      [
+        "aunque"
+      ],
+      [
+        "controle"
+      ],
+      [
+        "yo"
+      ],
+      [
+        "poco"
+      ]
+    ]
+  },
+  {
+    "id": "controlar-subjuntivo-2",
+    "verbo": "controlar",
+    "contexto": "antes de que, tú, controlar (subjuntivo)",
+    "respuesta": "antes de que tú controles otra vez.",
+    "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "controles"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "otra vez"
+      ]
+    ]
+  }
+]

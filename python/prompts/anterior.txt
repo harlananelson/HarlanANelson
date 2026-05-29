@@ -1,0 +1,30 @@
+Generate ADDITIONAL Spanish pluperfect (anterior) speech drill exercises to add variety to existing ones.
+
+TENSE: anterior (pretérito pluscuamperfecto — action completed before another past action)
+CONJUGATION RULES:
+- Structure: imperfect of haber + past participle
+- había hablado, habías hablado, había hablado, habíamos hablado, habíais hablado, habían hablado
+- Irregular past participles: hecho (hacer), dicho (decir), puesto (poner), visto (ver), escrito (escribir), abierto (abrir), vuelto (volver), roto (romper), muerto (morir), cubierto (cubrir), descubierto (descubrir), resuelto (resolver)
+
+NEW TIME PHRASES (different from existing — use diverse mix):
+antes de la fiesta, para cuando llegó, cuando por fin, antes de mudarse, hasta ese punto, para ese momento, mucho antes, en años anteriores, antes de conocerte, cuando lo descubrieron, para el lunes, antes del mediodía, cuando empezó la clase, antes de que amaneciera, para cuando terminó
+
+EXERCISE FORMAT:
+Each exercise must have these 6 fields:
+- id: "{verb}-anterior-{number}" (number will be assigned later, use 0)
+- verbo: the infinitive
+- contexto: subject + NEW time marker + complement (comma-separated fragments)
+- respuesta: complete sentence with había + past participle
+- pista: a hint about anterior/pluperfect usage (action before another past action)
+- grupos: array of arrays, each inner array has the key idea unit
+
+CRITICAL RULES FOR grupos:
+1. Every element in grupos must appear verbatim in respuesta (after accent removal and lowercasing)
+2. grupos elements must NOT contain accented characters
+3. "habia" (or "habias", "habiamos", etc.) should be one grupo
+4. The past participle should be its own grupo
+5. Include alternative speech recognition forms where relevant
+
+Generate 1 exercise per verb with NEW time phrases. Use different subjects.
+
+OUTPUT: Valid JSON array of exercise objects. Nothing else.

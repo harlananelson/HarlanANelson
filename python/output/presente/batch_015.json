@@ -1,0 +1,884 @@
+[
+  {
+    "id": "robar-presente-0",
+    "verbo": "robar",
+    "contexto": "él, a veces, la atención de todos",
+    "respuesta": "A veces, él roba la atención de todos.",
+    "pista": "describing charisma figuratively",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "roba"
+      ],
+      [
+        "la atencion de todos"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "robar-presente-1",
+    "verbo": "robar",
+    "contexto": "ellos, normalmente, ideas de otras empresas",
+    "respuesta": "Ellos roban ideas de otras empresas normalmente.",
+    "pista": "narrating intellectual theft",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "roban"
+      ],
+      [
+        "ideas de otras empresas"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "robar-presente-2",
+    "verbo": "robar",
+    "contexto": "ella, todos los días, corazones con su sonrisa",
+    "respuesta": "Todos los días, ella roba corazones con su sonrisa.",
+    "pista": "expressing charm figuratively",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "roba"
+      ],
+      [
+        "corazones con su sonrisa"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "romper-presente-0",
+    "verbo": "romper",
+    "contexto": "yo, en este momento, el silencio",
+    "respuesta": "En este momento, yo rompo el silencio.",
+    "pista": "expressing breaking quiet",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "rompo"
+      ],
+      [
+        "el silencio"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "romper-presente-1",
+    "verbo": "romper",
+    "contexto": "tú, mientras, las reglas",
+    "respuesta": "Tú rompes las reglas mientras.",
+    "pista": "describing rule-breaking",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "rompes"
+      ],
+      [
+        "las reglas"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "romper-presente-2",
+    "verbo": "romper",
+    "contexto": "ella, mientras, el récord mundial",
+    "respuesta": "Ella rompe el récord mundial mientras.",
+    "pista": "narrating an achievement",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "rompe"
+      ],
+      [
+        "el record mundial"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "saber-presente-0",
+    "verbo": "saber",
+    "contexto": "yo, esta tarde, la respuesta",
+    "respuesta": "Esta tarde, yo sé la respuesta.",
+    "pista": "expressing knowledge",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "se"
+      ],
+      [
+        "la respuesta"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "saber-presente-1",
+    "verbo": "saber",
+    "contexto": "tú, esta mañana, cocinar muy bien",
+    "respuesta": "Tú sabes cocinar muy bien esta mañana.",
+    "pista": "describing a skill",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "sabes"
+      ],
+      [
+        "cocinar muy bien"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "saber-presente-2",
+    "verbo": "saber",
+    "contexto": "nosotros, por lo general, la verdad",
+    "respuesta": "Por lo general, nosotros sabemos la verdad.",
+    "pista": "expressing shared knowledge",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "sabemos"
+      ],
+      [
+        "la verdad"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "sacar-presente-0",
+    "verbo": "sacar",
+    "contexto": "yo, todos los días, buenas notas",
+    "respuesta": "Todos los días, yo saco buenas notas.",
+    "pista": "expressing academic success",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "saco"
+      ],
+      [
+        "buenas notas"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "sacar-presente-1",
+    "verbo": "sacar",
+    "contexto": "tú, normalmente, al perro a pasear",
+    "respuesta": "Normalmente, tú sacas al perro a pasear.",
+    "pista": "describing a daily chore",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "sacas"
+      ],
+      [
+        "al perro a pasear"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "sacar-presente-2",
+    "verbo": "sacar",
+    "contexto": "ella, cada semana, dinero del cajero",
+    "respuesta": "Cada semana, ella saca dinero del cajero.",
+    "pista": "narrating a bank transaction",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "saca"
+      ],
+      [
+        "dinero del cajero"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "salir-presente-0",
+    "verbo": "salir",
+    "contexto": "yo, esta mañana, de casa temprano",
+    "respuesta": "Esta mañana, yo salgo de casa temprano.",
+    "pista": "describing a morning routine",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "salgo"
+      ],
+      [
+        "de casa temprano"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "salir-presente-1",
+    "verbo": "salir",
+    "contexto": "nosotros, siempre, a cenar los viernes",
+    "respuesta": "Siempre, nosotros salimos a cenar los viernes.",
+    "pista": "expressing a social habit",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "salimos"
+      ],
+      [
+        "a cenar los viernes"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "salir-presente-2",
+    "verbo": "salir",
+    "contexto": "tú, ahora mismo, con tus amigos",
+    "respuesta": "Ahora mismo, tú sales con tus amigos.",
+    "pista": "talking about socializing",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "sales"
+      ],
+      [
+        "con tus amigos"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "salvar-presente-0",
+    "verbo": "salvar",
+    "contexto": "él, mientras, vidas como médico",
+    "respuesta": "Él salva vidas como médico mientras.",
+    "pista": "describing a doctor's role",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "salva"
+      ],
+      [
+        "vidas como medico"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "salvar-presente-1",
+    "verbo": "salvar",
+    "contexto": "yo, siempre, a los animales en peligro",
+    "respuesta": "Yo salvo a los animales en peligro siempre.",
+    "pista": "expressing animal rescue",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "salvo"
+      ],
+      [
+        "a los animales en peligro"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "salvar-presente-2",
+    "verbo": "salvar",
+    "contexto": "nosotros, esta tarde, el bosque de la destrucción",
+    "respuesta": "Esta tarde, nosotros salvamos el bosque de la destrucción.",
+    "pista": "narrating conservation",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "salvamos"
+      ],
+      [
+        "el bosque de la destruccion"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "seguir-presente-0",
+    "verbo": "seguir",
+    "contexto": "yo, esta noche, mis sueños",
+    "respuesta": "Yo sigo mis sueños esta noche.",
+    "pista": "expressing perseverance",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "sigo"
+      ],
+      [
+        "mis suenos"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "seguir-presente-1",
+    "verbo": "seguir",
+    "contexto": "tú, cada vez que, las instrucciones",
+    "respuesta": "Cada vez que, tú sigues las instrucciones.",
+    "pista": "describing compliance",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "sigues"
+      ],
+      [
+        "las instrucciones"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "seguir-presente-2",
+    "verbo": "seguir",
+    "contexto": "nosotros, en este momento, adelante con el plan",
+    "respuesta": "Nosotros seguimos adelante con el plan en este momento.",
+    "pista": "expressing continuation",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "seguimos"
+      ],
+      [
+        "adelante con el plan"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "señalar-presente-0",
+    "verbo": "señalar",
+    "contexto": "yo, actualmente, el error en el documento",
+    "respuesta": "Yo señalo el error en el documento actualmente.",
+    "pista": "describing error identification",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "senalo"
+      ],
+      [
+        "el error en el documento"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "señalar-presente-1",
+    "verbo": "señalar",
+    "contexto": "ella, a veces, la dirección correcta",
+    "respuesta": "Ella señala la dirección correcta a veces.",
+    "pista": "narrating guidance",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "senala"
+      ],
+      [
+        "la direccion correcta"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "señalar-presente-2",
+    "verbo": "señalar",
+    "contexto": "nosotros, mientras, los puntos importantes",
+    "respuesta": "Mientras, nosotros señalamos los puntos importantes.",
+    "pista": "describing highlighting",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "senalamos"
+      ],
+      [
+        "los puntos importantes"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "sentar-presente-0",
+    "verbo": "sentar",
+    "contexto": "yo, a veces, a los invitados en la mesa",
+    "respuesta": "A veces, yo siento a los invitados en la mesa.",
+    "pista": "describing seating arrangement",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "siento"
+      ],
+      [
+        "a los invitados en la mesa"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "sentar-presente-1",
+    "verbo": "sentar",
+    "contexto": "ella, por lo general, al niño en la silla",
+    "respuesta": "Por lo general, ella sienta al niño en la silla.",
+    "pista": "narrating childcare",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "sienta"
+      ],
+      [
+        "al nino en la silla"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "sentar-presente-2",
+    "verbo": "sentar",
+    "contexto": "nosotros, normalmente, las bases del acuerdo",
+    "respuesta": "Nosotros sentamos las bases del acuerdo normalmente.",
+    "pista": "expressing foundation-setting",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "sentamos"
+      ],
+      [
+        "las bases del acuerdo"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "sentir-presente-0",
+    "verbo": "sentir",
+    "contexto": "yo, todos los días, mucha alegría",
+    "respuesta": "Todos los días, yo siento mucha alegría.",
+    "pista": "expressing happiness",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "siento"
+      ],
+      [
+        "mucha alegria"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "sentir-presente-1",
+    "verbo": "sentir",
+    "contexto": "tú, siempre, nostalgia por el pasado",
+    "respuesta": "Siempre, tú sientes nostalgia por el pasado.",
+    "pista": "describing longing",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "sientes"
+      ],
+      [
+        "nostalgia por el pasado"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "sentir-presente-2",
+    "verbo": "sentir",
+    "contexto": "nosotros, esta noche, la presión del trabajo",
+    "respuesta": "Esta noche, nosotros sentimos la presión del trabajo.",
+    "pista": "expressing work stress",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "sentimos"
+      ],
+      [
+        "la presion del trabajo"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "ser-presente-0",
+    "verbo": "ser",
+    "contexto": "yo, esta tarde, profesor de historia",
+    "respuesta": "Esta tarde, yo soy profesor de historia.",
+    "pista": "expressing identity",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "soy"
+      ],
+      [
+        "profesor de historia"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "ser-presente-1",
+    "verbo": "ser",
+    "contexto": "tú, por lo general, muy inteligente",
+    "respuesta": "Por lo general, tú eres muy inteligente.",
+    "pista": "describing a trait",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "eres"
+      ],
+      [
+        "muy inteligente"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "ser-presente-2",
+    "verbo": "ser",
+    "contexto": "nosotros, mientras, un equipo fuerte",
+    "respuesta": "Mientras, nosotros somos un equipo fuerte.",
+    "pista": "expressing team identity",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "somos"
+      ],
+      [
+        "un equipo fuerte"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "servir-presente-0",
+    "verbo": "servir",
+    "contexto": "yo, a veces, la comida a los invitados",
+    "respuesta": "Yo sirvo la comida a los invitados a veces.",
+    "pista": "describing hosting",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "sirvo"
+      ],
+      [
+        "la comida a los invitados"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "servir-presente-1",
+    "verbo": "servir",
+    "contexto": "ella, cada vez que, café a los clientes",
+    "respuesta": "Ella sirve café a los clientes cada vez que.",
+    "pista": "narrating service",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "sirve"
+      ],
+      [
+        "cafe a los clientes"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "servir-presente-2",
+    "verbo": "servir",
+    "contexto": "nosotros, ahora, a nuestra comunidad",
+    "respuesta": "Nosotros servimos a nuestra comunidad ahora.",
+    "pista": "expressing community service",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "servimos"
+      ],
+      [
+        "a nuestra comunidad"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "significar-presente-0",
+    "verbo": "significar",
+    "contexto": "eso, esta tarde, mucho para mí",
+    "respuesta": "Esta tarde, eso significa mucho para mí.",
+    "pista": "expressing importance",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "significa"
+      ],
+      [
+        "mucho para mi"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "significar-presente-1",
+    "verbo": "significar",
+    "contexto": "ella, en este momento, todo para su familia",
+    "respuesta": "En este momento, ella significa todo para su familia.",
+    "pista": "describing someone's importance",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "significa"
+      ],
+      [
+        "todo para su familia"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "significar-presente-2",
+    "verbo": "significar",
+    "contexto": "nosotros, esta noche, esperanza para los demás",
+    "respuesta": "Esta noche, nosotros significamos esperanza para los demás.",
+    "pista": "expressing symbolic meaning",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "significamos"
+      ],
+      [
+        "esperanza para los demas"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "soler-presente-0",
+    "verbo": "soler",
+    "contexto": "yo, por lo general, despertarme temprano",
+    "respuesta": "Yo suelo despertarme temprano por lo general.",
+    "pista": "describing a usual habit",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "suelo"
+      ],
+      [
+        "despertarme temprano"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "soler-presente-1",
+    "verbo": "soler",
+    "contexto": "ella, a veces, cocinar los domingos",
+    "respuesta": "A veces, ella suele cocinar los domingos.",
+    "pista": "narrating routine",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "suele"
+      ],
+      [
+        "cocinar los domingos"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "soler-presente-2",
+    "verbo": "soler",
+    "contexto": "nosotros, ahora, ir al cine los sábados",
+    "respuesta": "Nosotros solemos ir al cine los sábados ahora.",
+    "pista": "describing weekend habit",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "solemos"
+      ],
+      [
+        "ir al cine los sabados"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  }
+]

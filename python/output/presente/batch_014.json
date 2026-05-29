@@ -1,0 +1,884 @@
+[
+  {
+    "id": "recoger-presente-0",
+    "verbo": "recoger",
+    "contexto": "yo, hoy, a los niños de la escuela",
+    "respuesta": "Hoy, yo recojo a los niños de la escuela.",
+    "pista": "describing parental duty",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "recojo"
+      ],
+      [
+        "a los ninos de la escuela"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "recoger-presente-1",
+    "verbo": "recoger",
+    "contexto": "tú, todos los días, la basura del suelo",
+    "respuesta": "Todos los días, tú recoges la basura del suelo.",
+    "pista": "talking about cleanliness",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "recoges"
+      ],
+      [
+        "la basura del suelo"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "recoger-presente-2",
+    "verbo": "recoger",
+    "contexto": "nosotros, cada vez que, los resultados del análisis",
+    "respuesta": "Nosotros recogemos los resultados del análisis cada vez que.",
+    "pista": "describing data collection",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "recogemos"
+      ],
+      [
+        "los resultados del analisis"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "reconocer-presente-0",
+    "verbo": "reconocer",
+    "contexto": "yo, en este momento, mi error",
+    "respuesta": "En este momento, yo reconozco mi error.",
+    "pista": "expressing humility",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "reconozco"
+      ],
+      [
+        "mi error"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "reconocer-presente-1",
+    "verbo": "reconocer",
+    "contexto": "ella, esta tarde, su voz al teléfono",
+    "respuesta": "Esta tarde, ella reconoce su voz al teléfono.",
+    "pista": "narrating recognition",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "reconoce"
+      ],
+      [
+        "su voz al telefono"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "reconocer-presente-2",
+    "verbo": "reconocer",
+    "contexto": "nosotros, esta tarde, el esfuerzo de todos",
+    "respuesta": "Esta tarde, nosotros reconocemos el esfuerzo de todos.",
+    "pista": "expressing appreciation",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "reconocemos"
+      ],
+      [
+        "el esfuerzo de todos"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "recordar-presente-0",
+    "verbo": "recordar",
+    "contexto": "yo, cada semana, los buenos tiempos",
+    "respuesta": "Cada semana, yo recuerdo los buenos tiempos.",
+    "pista": "expressing nostalgia",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "recuerdo"
+      ],
+      [
+        "los buenos tiempos"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "recordar-presente-1",
+    "verbo": "recordar",
+    "contexto": "tú, esta mañana, la contraseña",
+    "respuesta": "Tú recuerdas la contraseña esta mañana.",
+    "pista": "talking about memory",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "recuerdas"
+      ],
+      [
+        "la contrasena"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "recordar-presente-2",
+    "verbo": "recordar",
+    "contexto": "ella, actualmente, su infancia con cariño",
+    "respuesta": "Ella recuerda su infancia con cariño actualmente.",
+    "pista": "narrating fond memories",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "recuerda"
+      ],
+      [
+        "su infancia con carino"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "recuperar-presente-0",
+    "verbo": "recuperar",
+    "contexto": "yo, normalmente, mi salud",
+    "respuesta": "Yo recupero mi salud normalmente.",
+    "pista": "expressing recovery",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "recupero"
+      ],
+      [
+        "mi salud"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "recuperar-presente-1",
+    "verbo": "recuperar",
+    "contexto": "nosotros, por lo general, el tiempo perdido",
+    "respuesta": "Nosotros recuperamos el tiempo perdido por lo general.",
+    "pista": "describing making up for lost time",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "recuperamos"
+      ],
+      [
+        "el tiempo perdido"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "recuperar-presente-2",
+    "verbo": "recuperar",
+    "contexto": "ella, esta mañana, su confianza poco a poco",
+    "respuesta": "Esta mañana, ella recupera su confianza poco a poco.",
+    "pista": "narrating emotional healing",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "recupera"
+      ],
+      [
+        "su confianza poco a poco"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "referir-presente-0",
+    "verbo": "referir",
+    "contexto": "yo, actualmente, al paciente al especialista",
+    "respuesta": "Yo refiero al paciente al especialista actualmente.",
+    "pista": "describing a medical referral",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "refiero"
+      ],
+      [
+        "al paciente al especialista"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "referir-presente-1",
+    "verbo": "referir",
+    "contexto": "ella, a veces, la historia con detalle",
+    "respuesta": "A veces, ella refiere la historia con detalle.",
+    "pista": "narrating detailed storytelling",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "refiere"
+      ],
+      [
+        "la historia con detalle"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "referir-presente-2",
+    "verbo": "referir",
+    "contexto": "nosotros, en este momento, el caso al departamento legal",
+    "respuesta": "En este momento, nosotros referimos el caso al departamento legal.",
+    "pista": "describing bureaucratic process",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "referimos"
+      ],
+      [
+        "el caso al departamento legal"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "regresar-presente-0",
+    "verbo": "regresar",
+    "contexto": "yo, esta noche, a casa después del trabajo",
+    "respuesta": "Yo regreso a casa después del trabajo esta noche.",
+    "pista": "describing commute",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "regreso"
+      ],
+      [
+        "a casa despues del trabajo"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "regresar-presente-1",
+    "verbo": "regresar",
+    "contexto": "nosotros, ahora, de las vacaciones",
+    "respuesta": "Nosotros regresamos de las vacaciones ahora.",
+    "pista": "narrating return from holiday",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "regresamos"
+      ],
+      [
+        "de las vacaciones"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "regresar-presente-2",
+    "verbo": "regresar",
+    "contexto": "tú, por lo general, a tu ciudad natal",
+    "respuesta": "Por lo general, tú regresas a tu ciudad natal.",
+    "pista": "talking about homecoming",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "regresas"
+      ],
+      [
+        "a tu ciudad natal"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "reír-presente-0",
+    "verbo": "reír",
+    "contexto": "yo, normalmente, con mis amigos",
+    "respuesta": "Normalmente, yo río con mis amigos.",
+    "pista": "expressing social joy",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "rio"
+      ],
+      [
+        "con mis amigos"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "reír-presente-1",
+    "verbo": "reír",
+    "contexto": "ella, cada semana, a carcajadas",
+    "respuesta": "Ella ríe a carcajadas cada semana.",
+    "pista": "narrating loud laughter",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "rie"
+      ],
+      [
+        "a carcajadas"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "reír-presente-2",
+    "verbo": "reír",
+    "contexto": "nosotros, actualmente, de los chistes",
+    "respuesta": "Actualmente, nosotros reímos de los chistes.",
+    "pista": "describing shared humor",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "reimos"
+      ],
+      [
+        "de los chistes"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "repetir-presente-0",
+    "verbo": "repetir",
+    "contexto": "yo, actualmente, la pregunta",
+    "respuesta": "Actualmente, yo repito la pregunta.",
+    "pista": "expressing repetition",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "repito"
+      ],
+      [
+        "la pregunta"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "repetir-presente-1",
+    "verbo": "repetir",
+    "contexto": "tú, esta noche, los mismos errores",
+    "respuesta": "Tú repites los mismos errores esta noche.",
+    "pista": "commenting on patterns",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "repites"
+      ],
+      [
+        "los mismos errores"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "repetir-presente-2",
+    "verbo": "repetir",
+    "contexto": "ella, todos los días, la lección varias veces",
+    "respuesta": "Todos los días, ella repite la lección varias veces.",
+    "pista": "narrating thorough teaching",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "repite"
+      ],
+      [
+        "la leccion varias veces"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "representar-presente-0",
+    "verbo": "representar",
+    "contexto": "yo, actualmente, a mi país",
+    "respuesta": "Yo represento a mi país actualmente.",
+    "pista": "expressing national pride",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "represento"
+      ],
+      [
+        "a mi pais"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "representar-presente-1",
+    "verbo": "representar",
+    "contexto": "ella, mientras, a los trabajadores",
+    "respuesta": "Mientras, ella representa a los trabajadores.",
+    "pista": "narrating union role",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "representa"
+      ],
+      [
+        "a los trabajadores"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "representar-presente-2",
+    "verbo": "representar",
+    "contexto": "nosotros, todos los días, una obra de teatro",
+    "respuesta": "Todos los días, nosotros representamos una obra de teatro.",
+    "pista": "describing a performance",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "representamos"
+      ],
+      [
+        "una obra de teatro"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "resolver-presente-0",
+    "verbo": "resolver",
+    "contexto": "yo, ahora, los problemas con calma",
+    "respuesta": "Yo resuelvo los problemas con calma ahora.",
+    "pista": "expressing problem-solving",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "resuelvo"
+      ],
+      [
+        "los problemas con calma"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "resolver-presente-1",
+    "verbo": "resolver",
+    "contexto": "nosotros, mientras, el conflicto",
+    "respuesta": "Mientras, nosotros resolvemos el conflicto.",
+    "pista": "describing mediation",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "resolvemos"
+      ],
+      [
+        "el conflicto"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "resolver-presente-2",
+    "verbo": "resolver",
+    "contexto": "tú, en este momento, la ecuación rápidamente",
+    "respuesta": "Tú resuelves la ecuación rápidamente en este momento.",
+    "pista": "narrating math skills",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "resuelves"
+      ],
+      [
+        "la ecuacion rapidamente"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "responder-presente-0",
+    "verbo": "responder",
+    "contexto": "yo, ahora mismo, a todas las preguntas",
+    "respuesta": "Yo respondo a todas las preguntas ahora mismo.",
+    "pista": "expressing thoroughness",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "respondo"
+      ],
+      [
+        "a todas las preguntas"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "responder-presente-1",
+    "verbo": "responder",
+    "contexto": "tú, siempre, con sinceridad",
+    "respuesta": "Siempre, tú respondes con sinceridad.",
+    "pista": "describing honest communication",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "respondes"
+      ],
+      [
+        "con sinceridad"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "responder-presente-2",
+    "verbo": "responder",
+    "contexto": "ella, a veces, al correo electrónico",
+    "respuesta": "Ella responde al correo electrónico a veces.",
+    "pista": "narrating prompt response",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "responde"
+      ],
+      [
+        "al correo electronico"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "resultar-presente-0",
+    "verbo": "resultar",
+    "contexto": "eso, hoy, muy difícil",
+    "respuesta": "Hoy, eso resulta muy difícil.",
+    "pista": "expressing difficulty",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "resulta"
+      ],
+      [
+        "muy dificil"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "resultar-presente-1",
+    "verbo": "resultar",
+    "contexto": "el plan, todos los días, exitoso",
+    "respuesta": "El plan resulta exitoso todos los días.",
+    "pista": "describing success",
+    "grupos": [
+      [
+        "el plan"
+      ],
+      [
+        "resulta"
+      ],
+      [
+        "exitoso"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "resultar-presente-2",
+    "verbo": "resultar",
+    "contexto": "la reunión, esta noche, muy productiva",
+    "respuesta": "Esta noche, la reunión resulta muy productiva.",
+    "pista": "narrating meeting outcome",
+    "grupos": [
+      [
+        "la reunion"
+      ],
+      [
+        "resulta"
+      ],
+      [
+        "muy productiva"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "reunir-presente-0",
+    "verbo": "reunir",
+    "contexto": "yo, en este momento, a toda la familia",
+    "respuesta": "En este momento, yo reúno a toda la familia.",
+    "pista": "describing family gathering",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "reuno"
+      ],
+      [
+        "a toda la familia"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "reunir-presente-1",
+    "verbo": "reunir",
+    "contexto": "nosotros, cada vez que, los fondos necesarios",
+    "respuesta": "Nosotros reunimos los fondos necesarios cada vez que.",
+    "pista": "expressing fundraising",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "reunimos"
+      ],
+      [
+        "los fondos necesarios"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "reunir-presente-2",
+    "verbo": "reunir",
+    "contexto": "ella, mientras, la información para el proyecto",
+    "respuesta": "Ella reúne la información para el proyecto mientras.",
+    "pista": "narrating research",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "reune"
+      ],
+      [
+        "la informacion para el proyecto"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "revisar-presente-0",
+    "verbo": "revisar",
+    "contexto": "yo, esta mañana, el documento antes de enviarlo",
+    "respuesta": "Esta mañana, yo reviso el documento antes de enviarlo.",
+    "pista": "describing quality control",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "reviso"
+      ],
+      [
+        "el documento antes de enviarlo"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "revisar-presente-1",
+    "verbo": "revisar",
+    "contexto": "tú, esta noche, las cuentas del mes",
+    "respuesta": "Tú revisas las cuentas del mes esta noche.",
+    "pista": "talking about finances",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "revisas"
+      ],
+      [
+        "las cuentas del mes"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "revisar-presente-2",
+    "verbo": "revisar",
+    "contexto": "nosotros, normalmente, el equipo regularmente",
+    "respuesta": "Nosotros revisamos el equipo regularmente normalmente.",
+    "pista": "describing maintenance",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "revisamos"
+      ],
+      [
+        "el equipo regularmente"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  }
+]

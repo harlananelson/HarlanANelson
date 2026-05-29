@@ -1,0 +1,884 @@
+[
+  {
+    "id": "invitar-presente-0",
+    "verbo": "invitar",
+    "contexto": "yo, por lo general, a mis amigos a cenar",
+    "respuesta": "Yo invito a mis amigos a cenar por lo general.",
+    "pista": "describing hospitality",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "invito"
+      ],
+      [
+        "a mis amigos a cenar"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "invitar-presente-1",
+    "verbo": "invitar",
+    "contexto": "tú, siempre, a tu familia a la fiesta",
+    "respuesta": "Tú invitas a tu familia a la fiesta siempre.",
+    "pista": "talking about social planning",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "invitas"
+      ],
+      [
+        "a tu familia a la fiesta"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "invitar-presente-2",
+    "verbo": "invitar",
+    "contexto": "ella, por lo general, a sus colegas al evento",
+    "respuesta": "Ella invita a sus colegas al evento por lo general.",
+    "pista": "narrating professional socializing",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "invita"
+      ],
+      [
+        "a sus colegas al evento"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "ir-presente-0",
+    "verbo": "ir",
+    "contexto": "yo, todos los días, al supermercado",
+    "respuesta": "Yo voy al supermercado todos los días.",
+    "pista": "describing an errand",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "voy"
+      ],
+      [
+        "al supermercado"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "ir-presente-1",
+    "verbo": "ir",
+    "contexto": "nosotros, esta noche, de vacaciones",
+    "respuesta": "Nosotros vamos de vacaciones esta noche.",
+    "pista": "talking about travel",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "vamos"
+      ],
+      [
+        "de vacaciones"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "ir-presente-2",
+    "verbo": "ir",
+    "contexto": "tú, actualmente, a la escuela",
+    "respuesta": "Tú vas a la escuela actualmente.",
+    "pista": "describing a daily routine",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "vas"
+      ],
+      [
+        "a la escuela"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "joder-presente-0",
+    "verbo": "joder",
+    "contexto": "eso, cada vez que, todo el plan",
+    "respuesta": "Cada vez que, eso jode todo el plan.",
+    "pista": "expressing frustration about ruined plans",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "jode"
+      ],
+      [
+        "todo el plan"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "joder-presente-1",
+    "verbo": "joder",
+    "contexto": "yo, cada semana, la situación sin querer",
+    "respuesta": "Cada semana, yo jodo la situación sin querer.",
+    "pista": "describing accidental mess-up",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "jodo"
+      ],
+      [
+        "la situacion sin querer"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "joder-presente-2",
+    "verbo": "joder",
+    "contexto": "ellos, por lo general, el proyecto",
+    "respuesta": "Ellos joden el proyecto por lo general.",
+    "pista": "narrating project disruption",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "joden"
+      ],
+      [
+        "el proyecto"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "jugar-presente-0",
+    "verbo": "jugar",
+    "contexto": "yo, ahora, al fútbol",
+    "respuesta": "Yo juego al fútbol ahora.",
+    "pista": "describing a sport",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "juego"
+      ],
+      [
+        "al futbol"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "jugar-presente-1",
+    "verbo": "jugar",
+    "contexto": "ellos, siempre, en el parque",
+    "respuesta": "Ellos juegan en el parque siempre.",
+    "pista": "narrating children playing",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "juegan"
+      ],
+      [
+        "en el parque"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "jugar-presente-2",
+    "verbo": "jugar",
+    "contexto": "tú, en este momento, videojuegos",
+    "respuesta": "En este momento, tú juegas videojuegos.",
+    "pista": "talking about gaming",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "juegas"
+      ],
+      [
+        "videojuegos"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "jurar-presente-0",
+    "verbo": "jurar",
+    "contexto": "yo, actualmente, decir la verdad",
+    "respuesta": "Actualmente, yo juro decir la verdad.",
+    "pista": "expressing a solemn promise",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "juro"
+      ],
+      [
+        "decir la verdad"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "jurar-presente-1",
+    "verbo": "jurar",
+    "contexto": "él, hoy, lealtad a su país",
+    "respuesta": "Él jura lealtad a su país hoy.",
+    "pista": "describing patriotism",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "jura"
+      ],
+      [
+        "lealtad a su pais"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "jurar-presente-2",
+    "verbo": "jurar",
+    "contexto": "nosotros, cada vez que, proteger a nuestra familia",
+    "respuesta": "Nosotros juramos proteger a nuestra familia cada vez que.",
+    "pista": "expressing dedication",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "juramos"
+      ],
+      [
+        "proteger a nuestra familia"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "leer-presente-0",
+    "verbo": "leer",
+    "contexto": "yo, hoy, un libro interesante",
+    "respuesta": "Yo leo un libro interesante hoy.",
+    "pista": "describing a reading habit",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "leo"
+      ],
+      [
+        "un libro interesante"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "leer-presente-1",
+    "verbo": "leer",
+    "contexto": "tú, ahora, el periódico",
+    "respuesta": "Ahora, tú lees el periódico.",
+    "pista": "talking about staying informed",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "lees"
+      ],
+      [
+        "el periodico"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "leer-presente-2",
+    "verbo": "leer",
+    "contexto": "ella, ahora mismo, cuentos a los niños",
+    "respuesta": "Ahora mismo, ella lee cuentos a los niños.",
+    "pista": "narrating bedtime stories",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "lee"
+      ],
+      [
+        "cuentos a los ninos"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "levantar-presente-0",
+    "verbo": "levantar",
+    "contexto": "yo, ahora, la mano en clase",
+    "respuesta": "Yo levanto la mano en clase ahora.",
+    "pista": "describing classroom behavior",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "levanto"
+      ],
+      [
+        "la mano en clase"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "levantar-presente-1",
+    "verbo": "levantar",
+    "contexto": "tú, en este momento, pesas en el gimnasio",
+    "respuesta": "Tú levantas pesas en el gimnasio en este momento.",
+    "pista": "talking about exercise",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "levantas"
+      ],
+      [
+        "pesas en el gimnasio"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "levantar-presente-2",
+    "verbo": "levantar",
+    "contexto": "nosotros, normalmente, la mesa después de comer",
+    "respuesta": "Nosotros levantamos la mesa después de comer normalmente.",
+    "pista": "describing cleanup",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "levantamos"
+      ],
+      [
+        "la mesa despues de comer"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "llamar-presente-0",
+    "verbo": "llamar",
+    "contexto": "yo, por lo general, a mi madre",
+    "respuesta": "Yo llamo a mi madre por lo general.",
+    "pista": "describing a phone call",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "llamo"
+      ],
+      [
+        "a mi madre"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "llamar-presente-1",
+    "verbo": "llamar",
+    "contexto": "tú, mientras, al doctor",
+    "respuesta": "Tú llamas al doctor mientras.",
+    "pista": "suggesting making an appointment",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "llamas"
+      ],
+      [
+        "al doctor"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "llamar-presente-2",
+    "verbo": "llamar",
+    "contexto": "ella, cada vez que, a sus amigos",
+    "respuesta": "Cada vez que, ella llama a sus amigos.",
+    "pista": "narrating social contact",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "llama"
+      ],
+      [
+        "a sus amigos"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "llegar-presente-0",
+    "verbo": "llegar",
+    "contexto": "yo, cada semana, a la oficina temprano",
+    "respuesta": "Cada semana, yo llego a la oficina temprano.",
+    "pista": "describing punctuality",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "llego"
+      ],
+      [
+        "a la oficina temprano"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "llegar-presente-1",
+    "verbo": "llegar",
+    "contexto": "nosotros, normalmente, al acuerdo",
+    "respuesta": "Nosotros llegamos al acuerdo normalmente.",
+    "pista": "expressing negotiation success",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "llegamos"
+      ],
+      [
+        "al acuerdo"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "llegar-presente-2",
+    "verbo": "llegar",
+    "contexto": "tú, mientras, tarde a clase",
+    "respuesta": "Mientras, tú llegas tarde a clase.",
+    "pista": "commenting on tardiness",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "llegas"
+      ],
+      [
+        "tarde a clase"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "llevar-presente-0",
+    "verbo": "llevar",
+    "contexto": "yo, ahora mismo, una chaqueta",
+    "respuesta": "Ahora mismo, yo llevo una chaqueta.",
+    "pista": "describing clothing choice",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "llevo"
+      ],
+      [
+        "una chaqueta"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "llevar-presente-1",
+    "verbo": "llevar",
+    "contexto": "ella, a veces, a los niños al colegio",
+    "respuesta": "A veces, ella lleva a los niños al colegio.",
+    "pista": "narrating parental duty",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "lleva"
+      ],
+      [
+        "a los ninos al colegio"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "llevar-presente-2",
+    "verbo": "llevar",
+    "contexto": "tú, ahora mismo, el equipaje",
+    "respuesta": "Tú llevas el equipaje ahora mismo.",
+    "pista": "describing travel tasks",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "llevas"
+      ],
+      [
+        "el equipaje"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "llorar-presente-0",
+    "verbo": "llorar",
+    "contexto": "ella, cada vez que, de felicidad",
+    "respuesta": "Cada vez que, ella llora de felicidad.",
+    "pista": "expressing happy tears",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "llora"
+      ],
+      [
+        "de felicidad"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "llorar-presente-1",
+    "verbo": "llorar",
+    "contexto": "yo, esta noche, cuando veo películas tristes",
+    "respuesta": "Esta noche, yo lloro cuando veo películas tristes.",
+    "pista": "describing emotional sensitivity",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "lloro"
+      ],
+      [
+        "cuando veo peliculas tristes"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "llorar-presente-2",
+    "verbo": "llorar",
+    "contexto": "ellos, esta noche, por la pérdida",
+    "respuesta": "Ellos lloran por la pérdida esta noche.",
+    "pista": "narrating grief",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "lloran"
+      ],
+      [
+        "por la perdida"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "lograr-presente-0",
+    "verbo": "lograr",
+    "contexto": "yo, ahora mismo, mis objetivos",
+    "respuesta": "Ahora mismo, yo logro mis objetivos.",
+    "pista": "expressing achievement",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "logro"
+      ],
+      [
+        "mis objetivos"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "lograr-presente-1",
+    "verbo": "lograr",
+    "contexto": "nosotros, todos los días, un gran éxito",
+    "respuesta": "Todos los días, nosotros logramos un gran éxito.",
+    "pista": "describing team success",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "logramos"
+      ],
+      [
+        "un gran exito"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "lograr-presente-2",
+    "verbo": "lograr",
+    "contexto": "tú, esta mañana, todo lo que deseas",
+    "respuesta": "Esta mañana, tú logras todo lo que deseas.",
+    "pista": "encouraging someone",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "logras"
+      ],
+      [
+        "todo lo que deseas"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "luchar-presente-0",
+    "verbo": "luchar",
+    "contexto": "yo, cada semana, por mis derechos",
+    "respuesta": "Yo lucho por mis derechos cada semana.",
+    "pista": "expressing advocacy",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "lucho"
+      ],
+      [
+        "por mis derechos"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "luchar-presente-1",
+    "verbo": "luchar",
+    "contexto": "ella, cada semana, contra la injusticia",
+    "respuesta": "Cada semana, ella lucha contra la injusticia.",
+    "pista": "narrating activism",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "lucha"
+      ],
+      [
+        "contra la injusticia"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "luchar-presente-2",
+    "verbo": "luchar",
+    "contexto": "nosotros, actualmente, por un mundo mejor",
+    "respuesta": "Actualmente, nosotros luchamos por un mundo mejor.",
+    "pista": "expressing shared ideals",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "luchamos"
+      ],
+      [
+        "por un mundo mejor"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "mandar-presente-0",
+    "verbo": "mandar",
+    "contexto": "yo, esta tarde, un paquete",
+    "respuesta": "Yo mando un paquete esta tarde.",
+    "pista": "describing sending",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "mando"
+      ],
+      [
+        "un paquete"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "mandar-presente-1",
+    "verbo": "mandar",
+    "contexto": "tú, actualmente, un mensaje de texto",
+    "respuesta": "Actualmente, tú mandas un mensaje de texto.",
+    "pista": "talking about texting",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "mandas"
+      ],
+      [
+        "un mensaje de texto"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "mandar-presente-2",
+    "verbo": "mandar",
+    "contexto": "ella, cada vez que, flores a su amiga",
+    "respuesta": "Ella manda flores a su amiga cada vez que.",
+    "pista": "narrating a kind gesture",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "manda"
+      ],
+      [
+        "flores a su amiga"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  }
+]

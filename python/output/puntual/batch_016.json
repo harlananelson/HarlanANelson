@@ -1,0 +1,162 @@
+[
+  {
+    "id": "sufrir-puntual-0",
+    "verbo": "sufrir",
+    "contexto": "el, aquel verano, una gran perdida",
+    "respuesta": "El sufrio una gran perdida aquel verano.",
+    "pista": "completed action of suffering a great loss that summer",
+    "grupos": [["el"], ["sufrio"], ["una gran perdida"], ["aquel verano"]]
+  },
+  {
+    "id": "sufrir-puntual-1",
+    "verbo": "sufrir",
+    "contexto": "nosotros, durante la tormenta, mucho frio",
+    "respuesta": "Nosotros sufrimos mucho frio durante la tormenta.",
+    "pista": "completed action of suffering great cold during the storm",
+    "grupos": [["nosotros"], ["sufrimos"], ["mucho frio"], ["durante la tormenta"]]
+  },
+  {
+    "id": "superar-puntual-0",
+    "verbo": "superar",
+    "contexto": "ella, al final del dia, todos los obstaculos",
+    "respuesta": "Ella supero todos los obstaculos al final del dia.",
+    "pista": "completed action of overcoming all obstacles at the end of the day",
+    "grupos": [["ella"], ["supero"], ["todos los obstaculos"], ["al final del dia"]]
+  },
+  {
+    "id": "superar-puntual-1",
+    "verbo": "superar",
+    "contexto": "el equipo, hace una semana, el record",
+    "respuesta": "El equipo supero el record hace una semana.",
+    "pista": "completed action of the team breaking the record a week ago",
+    "grupos": [["el equipo"], ["supero"], ["el record"], ["hace una semana"]]
+  },
+  {
+    "id": "suponer-puntual-0",
+    "verbo": "suponer",
+    "contexto": "yo, en aquel momento, lo peor",
+    "respuesta": "Yo supuse lo peor en aquel momento.",
+    "pista": "completed action of assuming the worst at that moment",
+    "grupos": [["yo"], ["supuse"], ["lo peor"], ["en aquel momento"]]
+  },
+  {
+    "id": "suponer-puntual-1",
+    "verbo": "suponer",
+    "contexto": "eso, aquel verano, un gran reto",
+    "respuesta": "Eso supuso un gran reto aquel verano.",
+    "pista": "completed action of that representing a great challenge that summer",
+    "grupos": [["eso"], ["supuso"], ["un gran reto"], ["aquel verano"]]
+  },
+  {
+    "id": "temer-puntual-0",
+    "verbo": "temer",
+    "contexto": "yo, justo en ese instante, lo peor",
+    "respuesta": "Yo temi lo peor justo en ese instante.",
+    "pista": "completed action of fearing the worst at that exact moment",
+    "grupos": [["yo"], ["temi"], ["lo peor"], ["justo en ese instante"]]
+  },
+  {
+    "id": "temer-puntual-1",
+    "verbo": "temer",
+    "contexto": "ellos, durante la tormenta, por sus vidas",
+    "respuesta": "Ellos temieron por sus vidas durante la tormenta.",
+    "pista": "completed action of fearing for their lives during the storm",
+    "grupos": [["ellos"], ["temieron"], ["por sus vidas"], ["durante la tormenta"]]
+  },
+  {
+    "id": "tener-puntual-0",
+    "verbo": "tener",
+    "contexto": "yo, aquel verano, una idea brillante",
+    "respuesta": "Yo tuve una idea brillante aquel verano.",
+    "pista": "completed action of having a brilliant idea that summer",
+    "grupos": [["yo"], ["tuve"], ["una idea brillante"], ["aquel verano"]]
+  },
+  {
+    "id": "tener-puntual-1",
+    "verbo": "tener",
+    "contexto": "ella, de repente, mucho miedo",
+    "respuesta": "Ella tuvo mucho miedo de repente.",
+    "pista": "completed action of being very afraid suddenly",
+    "grupos": [["ella"], ["tuvo"], ["mucho miedo"], ["de repente"]]
+  },
+  {
+    "id": "terminar-puntual-0",
+    "verbo": "terminar",
+    "contexto": "nosotros, al final del dia, el proyecto",
+    "respuesta": "Nosotros terminamos el proyecto al final del dia.",
+    "pista": "completed action of finishing the project at the end of the day",
+    "grupos": [["nosotros"], ["terminamos"], ["el proyecto"], ["al final del dia"]]
+  },
+  {
+    "id": "terminar-puntual-1",
+    "verbo": "terminar",
+    "contexto": "ella, esa misma noche, de estudiar",
+    "respuesta": "Ella termino de estudiar esa misma noche.",
+    "pista": "completed action of finishing studying that very night",
+    "grupos": [["ella"], ["termino"], ["de estudiar"], ["esa misma noche"]]
+  },
+  {
+    "id": "tirar-puntual-0",
+    "verbo": "tirar",
+    "contexto": "el, nada mas llegar, la basura",
+    "respuesta": "El tiro la basura nada mas llegar.",
+    "pista": "completed action of throwing away the trash right upon arriving",
+    "grupos": [["el"], ["tiro"], ["la basura"], ["nada mas llegar"]]
+  },
+  {
+    "id": "tirar-puntual-1",
+    "verbo": "tirar",
+    "contexto": "yo, de repente, la pelota al tejado",
+    "respuesta": "Yo tire la pelota al tejado de repente.",
+    "pista": "completed action of throwing the ball on the roof suddenly",
+    "grupos": [["yo"], ["tire"], ["la pelota al tejado"], ["de repente"]]
+  },
+  {
+    "id": "tocar-puntual-0",
+    "verbo": "tocar",
+    "contexto": "ella, aquel verano, el piano en el concierto",
+    "respuesta": "Ella toco el piano en el concierto aquel verano.",
+    "pista": "completed action of playing the piano at the concert that summer",
+    "grupos": [["ella"], ["toco"], ["el piano en el concierto"], ["aquel verano"]]
+  },
+  {
+    "id": "tocar-puntual-1",
+    "verbo": "tocar",
+    "contexto": "yo, al mediodia, la campana",
+    "respuesta": "Yo toque la campana al mediodia.",
+    "pista": "completed action of ringing the bell at noon",
+    "grupos": [["yo"], ["toque"], ["la campana"], ["al mediodia"]]
+  },
+  {
+    "id": "tomar-puntual-0",
+    "verbo": "tomar",
+    "contexto": "nosotros, tras la reunion, una decision importante",
+    "respuesta": "Nosotros tomamos una decision importante tras la reunion.",
+    "pista": "completed action of making an important decision after the meeting",
+    "grupos": [["nosotros"], ["tomamos"], ["una decision importante"], ["tras la reunion"]]
+  },
+  {
+    "id": "tomar-puntual-1",
+    "verbo": "tomar",
+    "contexto": "yo, en la madrugada, un vaso de agua",
+    "respuesta": "Yo tome un vaso de agua en la madrugada.",
+    "pista": "completed action of drinking a glass of water in the early morning",
+    "grupos": [["yo"], ["tome"], ["un vaso de agua"], ["en la madrugada"]]
+  },
+  {
+    "id": "trabajar-puntual-0",
+    "verbo": "trabajar",
+    "contexto": "el, aquel verano, en una granja",
+    "respuesta": "El trabajo en una granja aquel verano.",
+    "pista": "completed action of working on a farm that summer",
+    "grupos": [["el"], ["trabajo"], ["en una granja"], ["aquel verano"]]
+  },
+  {
+    "id": "trabajar-puntual-1",
+    "verbo": "trabajar",
+    "contexto": "nosotros, el martes pasado, hasta muy tarde",
+    "respuesta": "Nosotros trabajamos hasta muy tarde el martes pasado.",
+    "pista": "completed action of working very late last Tuesday",
+    "grupos": [["nosotros"], ["trabajamos"], ["hasta muy tarde"], ["el martes pasado"]]
+  }
+]

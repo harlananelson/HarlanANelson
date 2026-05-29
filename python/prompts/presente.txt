@@ -1,0 +1,31 @@
+Generate Spanish present indicative speech drill exercises.
+
+TENSE: presente (present indicative)
+CONJUGATION RULES:
+- Regular -ar: hablo, hablas, habla, hablamos, habláis, hablan
+- Regular -er: como, comes, come, comemos, coméis, comen
+- Regular -ir: vivo, vives, vive, vivimos, vivís, viven
+- Common irregulars: soy/eres/es, estoy/estás/está, tengo/tienes/tiene, voy/vas/va, hago/haces/hace, digo/dices/dice, vengo/vienes/viene, puedo/puedes/puede, quiero/quieres/quiere, sé/sabes/sabe, pongo/pones/pone, salgo/sales/sale, oigo/oyes/oye
+- Stem-changing: e→ie (querer→quiero), o→ue (poder→puedo), e→i (pedir→pido), u→ue (jugar→juego)
+
+TIME PHRASES (use diverse mix, no phrase more than 3x total):
+ahora, hoy, esta mañana, esta tarde, esta noche, en este momento, ahora mismo, actualmente, todos los días, cada semana, normalmente, siempre, a veces, por lo general, cada vez que, cuando, mientras
+
+EXERCISE FORMAT:
+Each exercise must have these 6 fields:
+- id: "{verb}-presente-{number}" (number will be assigned later, use 0)
+- verbo: the infinitive
+- contexto: subject + time phrase + complement (infinitive NOT conjugated, comma-separated fragments)
+- respuesta: complete sentence with correct conjugation
+- pista: a hint about present tense usage (habitual action, current state, etc.)
+- grupos: array of arrays, each inner array has the key idea unit. The conjugated verb form MUST be one grupo. Time phrases, subjects, and complements are separate grupos.
+
+CRITICAL RULES FOR grupos:
+1. Every elemento in grupos must appear verbatim in respuesta (after accent removal and lowercasing)
+2. grupos elements must NOT contain accented characters — use unaccented forms only
+3. The conjugated verb form is always its own grupo
+4. Include alternative speech recognition forms where relevant (e.g., ["el", "él"])
+
+Generate 3 exercises per verb. Use different subjects (yo, tú, él/ella, nosotros, ellos/ellas, usted, ustedes) and different time phrases across the 3 exercises.
+
+OUTPUT: Valid JSON array of exercise objects. Nothing else.

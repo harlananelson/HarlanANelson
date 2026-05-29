@@ -1,0 +1,992 @@
+[
+  {
+    "id": "abandonar-subj_imperfecto-0",
+    "verbo": "abandonar",
+    "contexto": "si, yo, la ciudad",
+    "respuesta": "si yo abandonara la ciudad",
+    "pista": "hypothetical si clause uses imperfect subjunctive",
+    "grupos": [
+      [
+        "si"
+      ],
+      [
+        "abandonara",
+        "abandonase"
+      ],
+      [
+        "yo"
+      ],
+      [
+        "la ciudad"
+      ]
+    ]
+  },
+  {
+    "id": "abandonar-subj_imperfecto-1",
+    "verbo": "abandonar",
+    "contexto": "ojala, tu, el proyecto",
+    "respuesta": "ojala tu abandonaras el proyecto",
+    "pista": "ojala expresses a wish and triggers subjunctive",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "abandonaras",
+        "abandonases"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "el proyecto"
+      ]
+    ]
+  },
+  {
+    "id": "abandonar-subj_imperfecto-2",
+    "verbo": "abandonar",
+    "contexto": "quisiera que, el, a sus amigos",
+    "respuesta": "quisiera que el abandonara a sus amigos",
+    "pista": "quisiera que expresses a desire triggering subjunctive",
+    "grupos": [
+      [
+        "quisiera que"
+      ],
+      [
+        "abandonara",
+        "abandonase"
+      ],
+      [
+        "el"
+      ],
+      [
+        "a sus amigos"
+      ]
+    ]
+  },
+  {
+    "id": "abrir-subj_imperfecto-0",
+    "verbo": "abrir",
+    "contexto": "era necesario que, ella, la puerta",
+    "respuesta": "era necesario que ella abriera la puerta",
+    "pista": "impersonal expressions of necessity trigger subjunctive",
+    "grupos": [
+      [
+        "era necesario que"
+      ],
+      [
+        "abriera",
+        "abriese"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "la puerta"
+      ]
+    ]
+  },
+  {
+    "id": "abrir-subj_imperfecto-1",
+    "verbo": "abrir",
+    "contexto": "no creia que, nosotros, el libro",
+    "respuesta": "no creia que nosotros abrieramos el libro",
+    "pista": "negated belief triggers subjunctive in the past",
+    "grupos": [
+      [
+        "no creia que"
+      ],
+      [
+        "abrieramos",
+        "abriesemos"
+      ],
+      [
+        "nosotros"
+      ],
+      [
+        "el libro"
+      ]
+    ]
+  },
+  {
+    "id": "abrir-subj_imperfecto-2",
+    "verbo": "abrir",
+    "contexto": "dudaba que, ellos, la ventana",
+    "respuesta": "dudaba que ellos abrieran la ventana",
+    "pista": "doubt in the past triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "dudaba que"
+      ],
+      [
+        "abrieran",
+        "abriesen"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "la ventana"
+      ]
+    ]
+  },
+  {
+    "id": "acabar-subj_imperfecto-0",
+    "verbo": "acabar",
+    "contexto": "esperaba que, ellas, el trabajo",
+    "respuesta": "esperaba que ellas acabaran el trabajo",
+    "pista": "esperaba que expresses past hope triggering subjunctive",
+    "grupos": [
+      [
+        "esperaba que"
+      ],
+      [
+        "acabaran",
+        "acabasen"
+      ],
+      [
+        "ellas"
+      ],
+      [
+        "el trabajo"
+      ]
+    ]
+  },
+  {
+    "id": "acabar-subj_imperfecto-1",
+    "verbo": "acabar",
+    "contexto": "como si, usted, la tarea",
+    "respuesta": "como si usted acabara la tarea",
+    "pista": "como si always requires imperfect subjunctive",
+    "grupos": [
+      [
+        "como si"
+      ],
+      [
+        "acabara",
+        "acabase"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "la tarea"
+      ]
+    ]
+  },
+  {
+    "id": "acabar-subj_imperfecto-2",
+    "verbo": "acabar",
+    "contexto": "antes de que, ustedes, con el problema",
+    "respuesta": "antes de que ustedes acabaran con el problema",
+    "pista": "antes de que always triggers subjunctive",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "acabaran",
+        "acabasen"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "con el problema"
+      ]
+    ]
+  },
+  {
+    "id": "aceptar-subj_imperfecto-0",
+    "verbo": "aceptar",
+    "contexto": "para que, maria, la oferta",
+    "respuesta": "para que maria aceptara la oferta",
+    "pista": "para que expresses purpose and triggers subjunctive",
+    "grupos": [
+      [
+        "para que"
+      ],
+      [
+        "aceptara",
+        "aceptase"
+      ],
+      [
+        "maria"
+      ],
+      [
+        "la oferta"
+      ]
+    ]
+  },
+  {
+    "id": "aceptar-subj_imperfecto-1",
+    "verbo": "aceptar",
+    "contexto": "aunque, carlos, la verdad",
+    "respuesta": "aunque carlos aceptara la verdad",
+    "pista": "aunque with uncertainty triggers subjunctive",
+    "grupos": [
+      [
+        "aunque"
+      ],
+      [
+        "aceptara",
+        "aceptase"
+      ],
+      [
+        "carlos"
+      ],
+      [
+        "la verdad"
+      ]
+    ]
+  },
+  {
+    "id": "aceptar-subj_imperfecto-2",
+    "verbo": "aceptar",
+    "contexto": "no pensaba que, los ninos, las condiciones",
+    "respuesta": "no pensaba que los ninos aceptaran las condiciones",
+    "pista": "negated thought triggers subjunctive in the past",
+    "grupos": [
+      [
+        "no pensaba que"
+      ],
+      [
+        "aceptaran",
+        "aceptasen"
+      ],
+      [
+        "los ninos"
+      ],
+      [
+        "las condiciones"
+      ]
+    ]
+  },
+  {
+    "id": "acercar-subj_imperfecto-0",
+    "verbo": "acercar",
+    "contexto": "me gustaria que, mi hermano, a la mesa",
+    "respuesta": "me gustaria que mi hermano acercara a la mesa",
+    "pista": "conditional desire triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "me gustaria que"
+      ],
+      [
+        "acercara",
+        "acercase"
+      ],
+      [
+        "mi hermano"
+      ],
+      [
+        "a la mesa"
+      ]
+    ]
+  },
+  {
+    "id": "acercar-subj_imperfecto-1",
+    "verbo": "acercar",
+    "contexto": "seria bueno que, mi madre, al fuego",
+    "respuesta": "seria bueno que mi madre acercara al fuego",
+    "pista": "impersonal conditional triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "seria bueno que"
+      ],
+      [
+        "acercara",
+        "acercase"
+      ],
+      [
+        "mi madre"
+      ],
+      [
+        "al fuego"
+      ]
+    ]
+  },
+  {
+    "id": "acercar-subj_imperfecto-2",
+    "verbo": "acercar",
+    "contexto": "no era cierto que, la gente, a la ventana",
+    "respuesta": "no era cierto que la gente acercara a la ventana",
+    "pista": "negating certainty in the past triggers subjunctive",
+    "grupos": [
+      [
+        "no era cierto que"
+      ],
+      [
+        "acercara",
+        "acercase"
+      ],
+      [
+        "la gente"
+      ],
+      [
+        "a la ventana"
+      ]
+    ]
+  },
+  {
+    "id": "acompanar-subj_imperfecto-0",
+    "verbo": "acompanar",
+    "contexto": "queria que, yo, a su madre",
+    "respuesta": "queria que yo acompanara a su madre",
+    "pista": "past desire triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "queria que"
+      ],
+      [
+        "acompanara",
+        "acompanase"
+      ],
+      [
+        "yo"
+      ],
+      [
+        "a su madre"
+      ]
+    ]
+  },
+  {
+    "id": "acompanar-subj_imperfecto-1",
+    "verbo": "acompanar",
+    "contexto": "le pedi que, tu, al medico",
+    "respuesta": "le pedi que tu acompanaras al medico",
+    "pista": "past request triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "le pedi que"
+      ],
+      [
+        "acompanaras",
+        "acompanases"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "al medico"
+      ]
+    ]
+  },
+  {
+    "id": "acompanar-subj_imperfecto-2",
+    "verbo": "acompanar",
+    "contexto": "sin que, el, a la fiesta",
+    "respuesta": "sin que el acompanara a la fiesta",
+    "pista": "sin que always triggers subjunctive",
+    "grupos": [
+      [
+        "sin que"
+      ],
+      [
+        "acompanara",
+        "acompanase"
+      ],
+      [
+        "el"
+      ],
+      [
+        "a la fiesta"
+      ]
+    ]
+  },
+  {
+    "id": "acordar-subj_imperfecto-0",
+    "verbo": "acordar",
+    "contexto": "era importante que, ella, la fecha",
+    "respuesta": "era importante que ella acordara la fecha",
+    "pista": "impersonal importance triggers subjunctive",
+    "grupos": [
+      [
+        "era importante que"
+      ],
+      [
+        "acordara",
+        "acordase"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "la fecha"
+      ]
+    ]
+  },
+  {
+    "id": "acordar-subj_imperfecto-1",
+    "verbo": "acordar",
+    "contexto": "no habia nadie que, nosotros, el precio",
+    "respuesta": "no habia nadie que nosotros acordaramos el precio",
+    "pista": "negative antecedent triggers subjunctive",
+    "grupos": [
+      [
+        "no habia nadie que"
+      ],
+      [
+        "acordaramos",
+        "acordasemos"
+      ],
+      [
+        "nosotros"
+      ],
+      [
+        "el precio"
+      ]
+    ]
+  },
+  {
+    "id": "acordar-subj_imperfecto-2",
+    "verbo": "acordar",
+    "contexto": "era posible que, ellos, los terminos",
+    "respuesta": "era posible que ellos acordaran los terminos",
+    "pista": "possibility in the past triggers subjunctive",
+    "grupos": [
+      [
+        "era posible que"
+      ],
+      [
+        "acordaran",
+        "acordasen"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "los terminos"
+      ]
+    ]
+  },
+  {
+    "id": "actuar-subj_imperfecto-0",
+    "verbo": "actuar",
+    "contexto": "necesitaba que, ellas, con calma",
+    "respuesta": "necesitaba que ellas actuaran con calma",
+    "pista": "past need triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "necesitaba que"
+      ],
+      [
+        "actuaran",
+        "actuasen"
+      ],
+      [
+        "ellas"
+      ],
+      [
+        "con calma"
+      ]
+    ]
+  },
+  {
+    "id": "actuar-subj_imperfecto-1",
+    "verbo": "actuar",
+    "contexto": "preferia que, usted, de manera diferente",
+    "respuesta": "preferia que usted actuara de manera diferente",
+    "pista": "past preference triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "preferia que"
+      ],
+      [
+        "actuara",
+        "actuase"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "de manera diferente"
+      ]
+    ]
+  },
+  {
+    "id": "actuar-subj_imperfecto-2",
+    "verbo": "actuar",
+    "contexto": "temia que, ustedes, en la obra",
+    "respuesta": "temia que ustedes actuaran en la obra",
+    "pista": "past fear triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "temia que"
+      ],
+      [
+        "actuaran",
+        "actuasen"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "en la obra"
+      ]
+    ]
+  },
+  {
+    "id": "admitir-subj_imperfecto-0",
+    "verbo": "admitir",
+    "contexto": "sugeria que, maria, la verdad",
+    "respuesta": "sugeria que maria admitiera la verdad",
+    "pista": "past suggestion triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "sugeria que"
+      ],
+      [
+        "admitiera",
+        "admitiese"
+      ],
+      [
+        "maria"
+      ],
+      [
+        "la verdad"
+      ]
+    ]
+  },
+  {
+    "id": "admitir-subj_imperfecto-1",
+    "verbo": "admitir",
+    "contexto": "era improbable que, carlos, el error",
+    "respuesta": "era improbable que carlos admitiera el error",
+    "pista": "improbability in the past triggers subjunctive",
+    "grupos": [
+      [
+        "era improbable que"
+      ],
+      [
+        "admitiera",
+        "admitiese"
+      ],
+      [
+        "carlos"
+      ],
+      [
+        "el error"
+      ]
+    ]
+  },
+  {
+    "id": "admitir-subj_imperfecto-2",
+    "verbo": "admitir",
+    "contexto": "en caso de que, los ninos, su culpa",
+    "respuesta": "en caso de que los ninos admitieran su culpa",
+    "pista": "en caso de que always triggers subjunctive",
+    "grupos": [
+      [
+        "en caso de que"
+      ],
+      [
+        "admitieran",
+        "admitiesen"
+      ],
+      [
+        "los ninos"
+      ],
+      [
+        "su culpa"
+      ]
+    ]
+  },
+  {
+    "id": "aforar-subj_imperfecto-0",
+    "verbo": "aforar",
+    "contexto": "a menos que, mi hermano, el lugar",
+    "respuesta": "a menos que mi hermano aforara el lugar",
+    "pista": "a menos que always triggers subjunctive",
+    "grupos": [
+      [
+        "a menos que"
+      ],
+      [
+        "aforara",
+        "aforase"
+      ],
+      [
+        "mi hermano"
+      ],
+      [
+        "el lugar"
+      ]
+    ]
+  },
+  {
+    "id": "aforar-subj_imperfecto-1",
+    "verbo": "aforar",
+    "contexto": "no era verdad que, mi madre, el teatro",
+    "respuesta": "no era verdad que mi madre aforara el teatro",
+    "pista": "denying truth in the past triggers subjunctive",
+    "grupos": [
+      [
+        "no era verdad que"
+      ],
+      [
+        "aforara",
+        "aforase"
+      ],
+      [
+        "mi madre"
+      ],
+      [
+        "el teatro"
+      ]
+    ]
+  },
+  {
+    "id": "aforar-subj_imperfecto-2",
+    "verbo": "aforar",
+    "contexto": "si tan solo, la gente, el estadio",
+    "respuesta": "si tan solo la gente aforara el estadio",
+    "pista": "si tan solo expresses a wish with imperfect subjunctive",
+    "grupos": [
+      [
+        "si tan solo"
+      ],
+      [
+        "aforara",
+        "aforase"
+      ],
+      [
+        "la gente"
+      ],
+      [
+        "el estadio"
+      ]
+    ]
+  },
+  {
+    "id": "agradecer-subj_imperfecto-0",
+    "verbo": "agradecer",
+    "contexto": "si, yo, tu ayuda",
+    "respuesta": "si yo agradeciera tu ayuda",
+    "pista": "hypothetical si clause uses imperfect subjunctive",
+    "grupos": [
+      [
+        "si"
+      ],
+      [
+        "agradeciera",
+        "agradeciese"
+      ],
+      [
+        "yo"
+      ],
+      [
+        "tu ayuda"
+      ]
+    ]
+  },
+  {
+    "id": "agradecer-subj_imperfecto-1",
+    "verbo": "agradecer",
+    "contexto": "ojala, tu, el favor",
+    "respuesta": "ojala tu agradecieras el favor",
+    "pista": "ojala expresses a wish and triggers subjunctive",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "agradecieras",
+        "agradecieses"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "el favor"
+      ]
+    ]
+  },
+  {
+    "id": "agradecer-subj_imperfecto-2",
+    "verbo": "agradecer",
+    "contexto": "quisiera que, el, la oportunidad",
+    "respuesta": "quisiera que el agradeciera la oportunidad",
+    "pista": "quisiera que expresses a desire triggering subjunctive",
+    "grupos": [
+      [
+        "quisiera que"
+      ],
+      [
+        "agradeciera",
+        "agradeciese"
+      ],
+      [
+        "el"
+      ],
+      [
+        "la oportunidad"
+      ]
+    ]
+  },
+  {
+    "id": "alcanzar-subj_imperfecto-0",
+    "verbo": "alcanzar",
+    "contexto": "era necesario que, ella, la meta",
+    "respuesta": "era necesario que ella alcanzara la meta",
+    "pista": "impersonal expressions of necessity trigger subjunctive",
+    "grupos": [
+      [
+        "era necesario que"
+      ],
+      [
+        "alcanzara",
+        "alcanzase"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "la meta"
+      ]
+    ]
+  },
+  {
+    "id": "alcanzar-subj_imperfecto-1",
+    "verbo": "alcanzar",
+    "contexto": "no creia que, nosotros, el exito",
+    "respuesta": "no creia que nosotros alcanzaramos el exito",
+    "pista": "negated belief triggers subjunctive in the past",
+    "grupos": [
+      [
+        "no creia que"
+      ],
+      [
+        "alcanzaramos",
+        "alcanzasemos"
+      ],
+      [
+        "nosotros"
+      ],
+      [
+        "el exito"
+      ]
+    ]
+  },
+  {
+    "id": "alcanzar-subj_imperfecto-2",
+    "verbo": "alcanzar",
+    "contexto": "dudaba que, ellos, la cima",
+    "respuesta": "dudaba que ellos alcanzaran la cima",
+    "pista": "doubt in the past triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "dudaba que"
+      ],
+      [
+        "alcanzaran",
+        "alcanzasen"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "la cima"
+      ]
+    ]
+  },
+  {
+    "id": "alegrar-subj_imperfecto-0",
+    "verbo": "alegrar",
+    "contexto": "esperaba que, ellas, a todos",
+    "respuesta": "esperaba que ellas alegraran a todos",
+    "pista": "esperaba que expresses past hope triggering subjunctive",
+    "grupos": [
+      [
+        "esperaba que"
+      ],
+      [
+        "alegraran",
+        "alegrasen"
+      ],
+      [
+        "ellas"
+      ],
+      [
+        "a todos"
+      ]
+    ]
+  },
+  {
+    "id": "alegrar-subj_imperfecto-1",
+    "verbo": "alegrar",
+    "contexto": "como si, usted, el ambiente",
+    "respuesta": "como si usted alegrara el ambiente",
+    "pista": "como si always requires imperfect subjunctive",
+    "grupos": [
+      [
+        "como si"
+      ],
+      [
+        "alegrara",
+        "alegrase"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "el ambiente"
+      ]
+    ]
+  },
+  {
+    "id": "alegrar-subj_imperfecto-2",
+    "verbo": "alegrar",
+    "contexto": "antes de que, ustedes, a su familia",
+    "respuesta": "antes de que ustedes alegraran a su familia",
+    "pista": "antes de que always triggers subjunctive",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "alegraran",
+        "alegrasen"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "a su familia"
+      ]
+    ]
+  },
+  {
+    "id": "alejar-subj_imperfecto-0",
+    "verbo": "alejar",
+    "contexto": "para que, maria, de la ciudad",
+    "respuesta": "para que maria alejara de la ciudad",
+    "pista": "para que expresses purpose and triggers subjunctive",
+    "grupos": [
+      [
+        "para que"
+      ],
+      [
+        "alejara",
+        "alejase"
+      ],
+      [
+        "maria"
+      ],
+      [
+        "de la ciudad"
+      ]
+    ]
+  },
+  {
+    "id": "alejar-subj_imperfecto-1",
+    "verbo": "alejar",
+    "contexto": "aunque, carlos, del peligro",
+    "respuesta": "aunque carlos alejara del peligro",
+    "pista": "aunque with uncertainty triggers subjunctive",
+    "grupos": [
+      [
+        "aunque"
+      ],
+      [
+        "alejara",
+        "alejase"
+      ],
+      [
+        "carlos"
+      ],
+      [
+        "del peligro"
+      ]
+    ]
+  },
+  {
+    "id": "alejar-subj_imperfecto-2",
+    "verbo": "alejar",
+    "contexto": "no pensaba que, los ninos, de alli",
+    "respuesta": "no pensaba que los ninos alejaran de alli",
+    "pista": "negated thought triggers subjunctive in the past",
+    "grupos": [
+      [
+        "no pensaba que"
+      ],
+      [
+        "alejaran",
+        "alejasen"
+      ],
+      [
+        "los ninos"
+      ],
+      [
+        "de alli"
+      ]
+    ]
+  },
+  {
+    "id": "amar-subj_imperfecto-0",
+    "verbo": "amar",
+    "contexto": "me gustaria que, mi hermano, a su familia",
+    "respuesta": "me gustaria que mi hermano amara a su familia",
+    "pista": "conditional desire triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "me gustaria que"
+      ],
+      [
+        "amara",
+        "amase"
+      ],
+      [
+        "mi hermano"
+      ],
+      [
+        "a su familia"
+      ]
+    ]
+  },
+  {
+    "id": "amar-subj_imperfecto-1",
+    "verbo": "amar",
+    "contexto": "seria bueno que, mi madre, la vida",
+    "respuesta": "seria bueno que mi madre amara la vida",
+    "pista": "impersonal conditional triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "seria bueno que"
+      ],
+      [
+        "amara",
+        "amase"
+      ],
+      [
+        "mi madre"
+      ],
+      [
+        "la vida"
+      ]
+    ]
+  },
+  {
+    "id": "amar-subj_imperfecto-2",
+    "verbo": "amar",
+    "contexto": "no era cierto que, la gente, con pasion",
+    "respuesta": "no era cierto que la gente amara con pasion",
+    "pista": "negating certainty in the past triggers subjunctive",
+    "grupos": [
+      [
+        "no era cierto que"
+      ],
+      [
+        "amara",
+        "amase"
+      ],
+      [
+        "la gente"
+      ],
+      [
+        "con pasion"
+      ]
+    ]
+  }
+]

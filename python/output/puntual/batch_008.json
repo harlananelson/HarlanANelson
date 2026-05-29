@@ -1,0 +1,242 @@
+[
+  {
+    "id": "gritar-puntual-0",
+    "verbo": "gritar",
+    "contexto": "ella, de repente, con todas sus fuerzas",
+    "respuesta": "Ella grito con todas sus fuerzas de repente.",
+    "pista": "completed action of screaming with all her might suddenly",
+    "grupos": [["ella"], ["grito"], ["con todas sus fuerzas"], ["de repente"]]
+  },
+  {
+    "id": "gritar-puntual-1",
+    "verbo": "gritar",
+    "contexto": "yo, en la madrugada, pidiendo ayuda",
+    "respuesta": "Yo grite pidiendo ayuda en la madrugada.",
+    "pista": "completed action of shouting for help in the early morning",
+    "grupos": [["yo"], ["grite"], ["pidiendo ayuda"], ["en la madrugada"]]
+  },
+  {
+    "id": "guardar-puntual-0",
+    "verbo": "guardar",
+    "contexto": "el, nada mas llegar, el dinero en la caja",
+    "respuesta": "El guardo el dinero en la caja nada mas llegar.",
+    "pista": "completed action of putting the money in the box right upon arriving",
+    "grupos": [["el"], ["guardo"], ["el dinero en la caja"], ["nada mas llegar"]]
+  },
+  {
+    "id": "guardar-puntual-1",
+    "verbo": "guardar",
+    "contexto": "yo, esa misma noche, el secreto",
+    "respuesta": "Yo guarde el secreto esa misma noche.",
+    "pista": "completed action of keeping the secret that very night",
+    "grupos": [["yo"], ["guarde"], ["el secreto"], ["esa misma noche"]]
+  },
+  {
+    "id": "gustar-puntual-0",
+    "verbo": "gustar",
+    "contexto": "la pelicula, aquel verano, a todos",
+    "respuesta": "La pelicula gusto a todos aquel verano.",
+    "pista": "completed action of the movie pleasing everyone that summer",
+    "grupos": [["la pelicula"], ["gusto"], ["a todos"], ["aquel verano"]]
+  },
+  {
+    "id": "gustar-puntual-1",
+    "verbo": "gustar",
+    "contexto": "la comida, al mediodia, mucho a los invitados",
+    "respuesta": "La comida gusto mucho a los invitados al mediodia.",
+    "pista": "completed action of the food pleasing the guests a lot at noon",
+    "grupos": [["la comida"], ["gusto"], ["mucho a los invitados"], ["al mediodia"]]
+  },
+  {
+    "id": "haber-puntual-0",
+    "verbo": "haber",
+    "contexto": "en la plaza, aquel verano, una gran fiesta",
+    "respuesta": "Hubo una gran fiesta en la plaza aquel verano.",
+    "pista": "completed action of there being a big party in the square that summer",
+    "grupos": [["en la plaza"], ["hubo"], ["una gran fiesta"], ["aquel verano"]]
+  },
+  {
+    "id": "haber-puntual-1",
+    "verbo": "haber",
+    "contexto": "en la ciudad, durante la tormenta, un apagon",
+    "respuesta": "Hubo un apagon en la ciudad durante la tormenta.",
+    "pista": "completed action of there being a blackout in the city during the storm",
+    "grupos": [["en la ciudad"], ["hubo"], ["un apagon"], ["durante la tormenta"]]
+  },
+  {
+    "id": "hablar-puntual-0",
+    "verbo": "hablar",
+    "contexto": "yo, tras la reunion, con el director",
+    "respuesta": "Yo hable con el director tras la reunion.",
+    "pista": "completed action of talking with the director after the meeting",
+    "grupos": [["yo"], ["hable"], ["con el director"], ["tras la reunion"]]
+  },
+  {
+    "id": "hablar-puntual-1",
+    "verbo": "hablar",
+    "contexto": "ella, al final del dia, en publico",
+    "respuesta": "Ella hablo en publico al final del dia.",
+    "pista": "completed action of speaking in public at the end of the day",
+    "grupos": [["ella"], ["hablo"], ["en publico"], ["al final del dia"]]
+  },
+  {
+    "id": "hacer-puntual-0",
+    "verbo": "hacer",
+    "contexto": "yo, el martes pasado, la cena para todos",
+    "respuesta": "Yo hice la cena para todos el martes pasado.",
+    "pista": "completed action of making dinner for everyone last Tuesday",
+    "grupos": [["yo"], ["hice"], ["la cena para todos"], ["el martes pasado"]]
+  },
+  {
+    "id": "hacer-puntual-1",
+    "verbo": "hacer",
+    "contexto": "ella, en aquel momento, lo correcto",
+    "respuesta": "Ella hizo lo correcto en aquel momento.",
+    "pista": "completed action of doing the right thing at that moment",
+    "grupos": [["ella"], ["hizo"], ["lo correcto"], ["en aquel momento"]]
+  },
+  {
+    "id": "hallar-puntual-0",
+    "verbo": "hallar",
+    "contexto": "los cientificos, hace una semana, la cura",
+    "respuesta": "Los cientificos hallaron la cura hace una semana.",
+    "pista": "completed action of the scientists finding the cure a week ago",
+    "grupos": [["los cientificos"], ["hallaron"], ["la cura"], ["hace una semana"]]
+  },
+  {
+    "id": "hallar-puntual-1",
+    "verbo": "hallar",
+    "contexto": "yo, durante el viaje, un lugar especial",
+    "respuesta": "Yo halle un lugar especial durante el viaje.",
+    "pista": "completed action of finding a special place during the trip",
+    "grupos": [["yo"], ["halle"], ["un lugar especial"], ["durante el viaje"]]
+  },
+  {
+    "id": "huir-puntual-0",
+    "verbo": "huir",
+    "contexto": "ellos, al anochecer, de la ciudad",
+    "respuesta": "Ellos huyeron de la ciudad al anochecer.",
+    "pista": "completed action of fleeing the city at nightfall",
+    "grupos": [["ellos"], ["huyeron"], ["de la ciudad"], ["al anochecer"]]
+  },
+  {
+    "id": "huir-puntual-1",
+    "verbo": "huir",
+    "contexto": "el ladron, justo en ese instante, por la ventana",
+    "respuesta": "El ladron huyo por la ventana justo en ese instante.",
+    "pista": "completed action of the thief fleeing through the window at that instant",
+    "grupos": [["el ladron"], ["huyo"], ["por la ventana"], ["justo en ese instante"]]
+  },
+  {
+    "id": "imaginar-puntual-0",
+    "verbo": "imaginar",
+    "contexto": "yo, en aquel momento, un mundo mejor",
+    "respuesta": "Yo imagine un mundo mejor en aquel momento.",
+    "pista": "completed action of imagining a better world at that moment",
+    "grupos": [["yo"], ["imagine"], ["un mundo mejor"], ["en aquel momento"]]
+  },
+  {
+    "id": "imaginar-puntual-1",
+    "verbo": "imaginar",
+    "contexto": "ella, esa misma noche, la peor situacion",
+    "respuesta": "Ella imagino la peor situacion esa misma noche.",
+    "pista": "completed action of imagining the worst situation that very night",
+    "grupos": [["ella"], ["imagino"], ["la peor situacion"], ["esa misma noche"]]
+  },
+  {
+    "id": "importar-puntual-0",
+    "verbo": "importar",
+    "contexto": "eso, en aquel momento, mucho a todos",
+    "respuesta": "Eso importo mucho a todos en aquel momento.",
+    "pista": "completed action of that mattering a lot to everyone at that moment",
+    "grupos": [["eso"], ["importo"], ["mucho a todos"], ["en aquel momento"]]
+  },
+  {
+    "id": "importar-puntual-1",
+    "verbo": "importar",
+    "contexto": "la decision, aquel verano, a toda la familia",
+    "respuesta": "La decision importo a toda la familia aquel verano.",
+    "pista": "completed action of the decision mattering to the whole family that summer",
+    "grupos": [["la decision"], ["importo"], ["a toda la familia"], ["aquel verano"]]
+  },
+  {
+    "id": "incluir-puntual-0",
+    "verbo": "incluir",
+    "contexto": "ella, el martes pasado, a todos en la lista",
+    "respuesta": "Ella incluyo a todos en la lista el martes pasado.",
+    "pista": "completed action of including everyone on the list last Tuesday",
+    "grupos": [["ella"], ["incluyo"], ["a todos en la lista"], ["el martes pasado"]]
+  },
+  {
+    "id": "incluir-puntual-1",
+    "verbo": "incluir",
+    "contexto": "nosotros, tras la reunion, las nuevas ideas",
+    "respuesta": "Nosotros incluimos las nuevas ideas tras la reunion.",
+    "pista": "completed action of including the new ideas after the meeting",
+    "grupos": [["nosotros"], ["incluimos"], ["las nuevas ideas"], ["tras la reunion"]]
+  },
+  {
+    "id": "informar-puntual-0",
+    "verbo": "informar",
+    "contexto": "el medico, al mediodia, a la familia",
+    "respuesta": "El medico informo a la familia al mediodia.",
+    "pista": "completed action of the doctor informing the family at noon",
+    "grupos": [["el medico"], ["informo"], ["a la familia"], ["al mediodia"]]
+  },
+  {
+    "id": "informar-puntual-1",
+    "verbo": "informar",
+    "contexto": "yo, nada mas llegar, a mi jefe",
+    "respuesta": "Yo informe a mi jefe nada mas llegar.",
+    "pista": "completed action of informing my boss right upon arriving",
+    "grupos": [["yo"], ["informe"], ["a mi jefe"], ["nada mas llegar"]]
+  },
+  {
+    "id": "intentar-puntual-0",
+    "verbo": "intentar",
+    "contexto": "el, hace tres dias, escalar la montana",
+    "respuesta": "El intento escalar la montana hace tres dias.",
+    "pista": "completed action of trying to climb the mountain three days ago",
+    "grupos": [["el"], ["intento"], ["escalar la montana"], ["hace tres dias"]]
+  },
+  {
+    "id": "intentar-puntual-1",
+    "verbo": "intentar",
+    "contexto": "yo, de repente, abrir la puerta",
+    "respuesta": "Yo intente abrir la puerta de repente.",
+    "pista": "completed action of trying to open the door suddenly",
+    "grupos": [["yo"], ["intente"], ["abrir la puerta"], ["de repente"]]
+  },
+  {
+    "id": "interesar-puntual-0",
+    "verbo": "interesar",
+    "contexto": "la propuesta, en aquel momento, al comite",
+    "respuesta": "La propuesta intereso al comite en aquel momento.",
+    "pista": "completed action of the proposal interesting the committee at that moment",
+    "grupos": [["la propuesta"], ["intereso"], ["al comite"], ["en aquel momento"]]
+  },
+  {
+    "id": "interesar-puntual-1",
+    "verbo": "interesar",
+    "contexto": "el tema, durante el viaje, a todos",
+    "respuesta": "El tema intereso a todos durante el viaje.",
+    "pista": "completed action of the topic interesting everyone during the trip",
+    "grupos": [["el tema"], ["intereso"], ["a todos"], ["durante el viaje"]]
+  },
+  {
+    "id": "invitar-puntual-0",
+    "verbo": "invitar",
+    "contexto": "ella, hace una semana, a toda la clase",
+    "respuesta": "Ella invito a toda la clase hace una semana.",
+    "pista": "completed action of inviting the whole class a week ago",
+    "grupos": [["ella"], ["invito"], ["a toda la clase"], ["hace una semana"]]
+  },
+  {
+    "id": "invitar-puntual-1",
+    "verbo": "invitar",
+    "contexto": "yo, el martes pasado, a cenar a mis amigos",
+    "respuesta": "Yo invite a cenar a mis amigos el martes pasado.",
+    "pista": "completed action of inviting my friends to dinner last Tuesday",
+    "grupos": [["yo"], ["invite"], ["a cenar a mis amigos"], ["el martes pasado"]]
+  }
+]

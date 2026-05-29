@@ -1,0 +1,242 @@
+[
+  {
+    "id": "abandonar-habitual-0",
+    "verbo": "abandonar",
+    "contexto": "mi abuelo, cada verano, su pueblo natal",
+    "respuesta": "Cada verano, mi abuelo abandonaba su pueblo natal.",
+    "pista": "Repeated action every summer - use imperfect",
+    "grupos": [["mi abuelo"], ["abandonaba"], ["su pueblo natal"], ["cada verano"]]
+  },
+  {
+    "id": "abandonar-habitual-1",
+    "verbo": "abandonar",
+    "contexto": "los estudiantes, con frecuencia, la clase antes de tiempo",
+    "respuesta": "Los estudiantes abandonaban la clase antes de tiempo con frecuencia.",
+    "pista": "Habitual action that happened frequently - use imperfect",
+    "grupos": [["los estudiantes"], ["abandonaban"], ["la clase antes de tiempo"], ["con frecuencia"]]
+  },
+  {
+    "id": "abrir-habitual-0",
+    "verbo": "abrir",
+    "contexto": "yo, por las tardes, las ventanas del salon",
+    "respuesta": "Por las tardes, yo abria las ventanas del salon.",
+    "pista": "Repeated afternoon routine - use imperfect",
+    "grupos": [["yo"], ["abria"], ["las ventanas del salon"], ["por las tardes"]]
+  },
+  {
+    "id": "abrir-habitual-1",
+    "verbo": "abrir",
+    "contexto": "la tienda, los domingos, a las diez de la manana",
+    "respuesta": "Los domingos, la tienda abria a las diez de la manana.",
+    "pista": "Regular Sunday schedule - use imperfect",
+    "grupos": [["la tienda"], ["abria"], ["a las diez de la manana"], ["los domingos"]]
+  },
+  {
+    "id": "acabar-habitual-0",
+    "verbo": "acabar",
+    "contexto": "nosotros, en aquellos tiempos, el trabajo muy tarde",
+    "respuesta": "En aquellos tiempos, nosotros acababamos el trabajo muy tarde.",
+    "pista": "Habitual past pattern - use imperfect",
+    "grupos": [["nosotros"], ["acababamos"], ["el trabajo muy tarde"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "acabar-habitual-1",
+    "verbo": "acabar",
+    "contexto": "tu, los fines de semana, los deberes el viernes",
+    "respuesta": "Los fines de semana, tu acababas los deberes el viernes.",
+    "pista": "Repeated weekend habit - use imperfect",
+    "grupos": [["tu"], ["acababas"], ["los deberes el viernes"], ["los fines de semana"]]
+  },
+  {
+    "id": "aceptar-habitual-0",
+    "verbo": "aceptar",
+    "contexto": "ella, semana tras semana, nuevos desafios",
+    "respuesta": "Semana tras semana, ella aceptaba nuevos desafios.",
+    "pista": "Repeated action week after week - use imperfect",
+    "grupos": [["ella"], ["aceptaba"], ["nuevos desafios"], ["semana tras semana"]]
+  },
+  {
+    "id": "aceptar-habitual-1",
+    "verbo": "aceptar",
+    "contexto": "mis padres, durante la infancia, mis excusas sin preguntar",
+    "respuesta": "Durante la infancia, mis padres aceptaban mis excusas sin preguntar.",
+    "pista": "Childhood habit - use imperfect",
+    "grupos": [["mis padres"], ["aceptaban"], ["mis excusas sin preguntar"], ["durante la infancia"]]
+  },
+  {
+    "id": "acercar-habitual-0",
+    "verbo": "acercar",
+    "contexto": "mi madre, cada verano, la silla al jardin",
+    "respuesta": "Cada verano, mi madre acercaba la silla al jardin.",
+    "pista": "Repeated summer action - use imperfect",
+    "grupos": [["mi madre"], ["acercaba"], ["la silla al jardin"], ["cada verano"]]
+  },
+  {
+    "id": "acercar-habitual-1",
+    "verbo": "acercar",
+    "contexto": "yo, por las tardes, mi escritorio a la ventana",
+    "respuesta": "Por las tardes, yo acercaba mi escritorio a la ventana.",
+    "pista": "Daily afternoon routine - use imperfect",
+    "grupos": [["yo"], ["acercaba"], ["mi escritorio a la ventana"], ["por las tardes"]]
+  },
+  {
+    "id": "acompanar-habitual-0",
+    "verbo": "acompanar",
+    "contexto": "mi hermano, los domingos, a mi abuela al mercado",
+    "respuesta": "Los domingos, mi hermano acompanaba a mi abuela al mercado.",
+    "pista": "Regular Sunday activity - use imperfect",
+    "grupos": [["mi hermano"], ["acompanaba"], ["a mi abuela al mercado"], ["los domingos"]]
+  },
+  {
+    "id": "acompanar-habitual-1",
+    "verbo": "acompanar",
+    "contexto": "yo, cuando vivia en Madrid, a mis amigos al cine",
+    "respuesta": "Cuando vivia en Madrid, yo acompanaba a mis amigos al cine.",
+    "pista": "Habitual action during time in Madrid - use imperfect",
+    "grupos": [["yo"], ["acompanaba"], ["a mis amigos al cine"], ["cuando vivia en madrid"]]
+  },
+  {
+    "id": "acordar-habitual-0",
+    "verbo": "acordar",
+    "contexto": "nosotros, en aquellos tiempos, las reglas del juego juntos",
+    "respuesta": "En aquellos tiempos, nosotros acordabamos las reglas del juego juntos.",
+    "pista": "Habitual group decision in the past - use imperfect",
+    "grupos": [["nosotros"], ["acordabamos"], ["las reglas del juego juntos"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "acordar-habitual-1",
+    "verbo": "acordar",
+    "contexto": "los vecinos, con frecuencia, los horarios de limpieza",
+    "respuesta": "Los vecinos acordaban los horarios de limpieza con frecuencia.",
+    "pista": "Frequently repeated action - use imperfect",
+    "grupos": [["los vecinos"], ["acordaban"], ["los horarios de limpieza"], ["con frecuencia"]]
+  },
+  {
+    "id": "actuar-habitual-0",
+    "verbo": "actuar",
+    "contexto": "mi prima, los fines de semana, en obras de teatro",
+    "respuesta": "Los fines de semana, mi prima actuaba en obras de teatro.",
+    "pista": "Regular weekend activity - use imperfect",
+    "grupos": [["mi prima"], ["actuaba"], ["en obras de teatro"], ["los fines de semana"]]
+  },
+  {
+    "id": "actuar-habitual-1",
+    "verbo": "actuar",
+    "contexto": "ellos, en mis anos de universidad, en el grupo de drama",
+    "respuesta": "En mis anos de universidad, ellos actuaban en el grupo de drama.",
+    "pista": "Habitual activity during university years - use imperfect",
+    "grupos": [["ellos"], ["actuaban"], ["en el grupo de drama"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "admitir-habitual-0",
+    "verbo": "admitir",
+    "contexto": "el profesor, semana tras semana, sus propios errores",
+    "respuesta": "Semana tras semana, el profesor admitia sus propios errores.",
+    "pista": "Repeated weekly pattern - use imperfect",
+    "grupos": [["el profesor"], ["admitia"], ["sus propios errores"], ["semana tras semana"]]
+  },
+  {
+    "id": "admitir-habitual-1",
+    "verbo": "admitir",
+    "contexto": "nosotros, durante la infancia, nuestras travesuras a mama",
+    "respuesta": "Durante la infancia, nosotros admitiamos nuestras travesuras a mama.",
+    "pista": "Childhood habit - use imperfect",
+    "grupos": [["nosotros"], ["admitiamos"], ["nuestras travesuras a mama"], ["durante la infancia"]]
+  },
+  {
+    "id": "aforar-habitual-0",
+    "verbo": "aforar",
+    "contexto": "el ingeniero, los martes y jueves, los tanques de agua",
+    "respuesta": "Los martes y jueves, el ingeniero aforaba los tanques de agua.",
+    "pista": "Regular schedule on specific days - use imperfect",
+    "grupos": [["el ingeniero"], ["aforaba"], ["los tanques de agua"], ["los martes y jueves"]]
+  },
+  {
+    "id": "aforar-habitual-1",
+    "verbo": "aforar",
+    "contexto": "ellos, cuando trabajaba alli, el caudal del rio",
+    "respuesta": "Cuando trabajaba alli, ellos aforaban el caudal del rio.",
+    "pista": "Habitual work task - use imperfect",
+    "grupos": [["ellos"], ["aforaban"], ["el caudal del rio"], ["cuando trabajaba alli"]]
+  },
+  {
+    "id": "agradecer-habitual-0",
+    "verbo": "agradecer",
+    "contexto": "yo, en aquellos tiempos, cada pequeno favor",
+    "respuesta": "En aquellos tiempos, yo agradecia cada pequeno favor.",
+    "pista": "Habitual gratitude in the past - use imperfect",
+    "grupos": [["yo"], ["agradecia"], ["cada pequeno favor"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "agradecer-habitual-1",
+    "verbo": "agradecer",
+    "contexto": "mis abuelos, los domingos, la visita de la familia",
+    "respuesta": "Los domingos, mis abuelos agradecian la visita de la familia.",
+    "pista": "Regular Sunday expression - use imperfect",
+    "grupos": [["mis abuelos"], ["agradecian"], ["la visita de la familia"], ["los domingos"]]
+  },
+  {
+    "id": "alcanzar-habitual-0",
+    "verbo": "alcanzar",
+    "contexto": "el autobus, con frecuencia, velocidades altas en la autopista",
+    "respuesta": "El autobus alcanzaba velocidades altas en la autopista con frecuencia.",
+    "pista": "Frequently repeated occurrence - use imperfect",
+    "grupos": [["el autobus"], ["alcanzaba"], ["velocidades altas en la autopista"], ["con frecuencia"]]
+  },
+  {
+    "id": "alcanzar-habitual-1",
+    "verbo": "alcanzar",
+    "contexto": "yo, en mis ratos libres, las metas que me proponia",
+    "respuesta": "En mis ratos libres, yo alcanzaba las metas que me proponia.",
+    "pista": "Habitual achievement during free time - use imperfect",
+    "grupos": [["yo"], ["alcanzaba"], ["las metas que me proponia"], ["en mis ratos libres"]]
+  },
+  {
+    "id": "alegrar-habitual-0",
+    "verbo": "alegrar",
+    "contexto": "la musica, cada verano, a todos los vecinos",
+    "respuesta": "Cada verano, la musica alegraba a todos los vecinos.",
+    "pista": "Repeated summer experience - use imperfect",
+    "grupos": [["la musica"], ["alegraba"], ["a todos los vecinos"], ["cada verano"]]
+  },
+  {
+    "id": "alegrar-habitual-1",
+    "verbo": "alegrar",
+    "contexto": "las fiestas, los fines de semana, a toda la familia",
+    "respuesta": "Los fines de semana, las fiestas alegraban a toda la familia.",
+    "pista": "Regular weekend joy - use imperfect",
+    "grupos": [["las fiestas"], ["alegraban"], ["a toda la familia"], ["los fines de semana"]]
+  },
+  {
+    "id": "alejar-habitual-0",
+    "verbo": "alejar",
+    "contexto": "mi padre, por las tardes, a los perros del jardin",
+    "respuesta": "Por las tardes, mi padre alejaba a los perros del jardin.",
+    "pista": "Daily afternoon routine - use imperfect",
+    "grupos": [["mi padre"], ["alejaba"], ["a los perros del jardin"], ["por las tardes"]]
+  },
+  {
+    "id": "alejar-habitual-1",
+    "verbo": "alejar",
+    "contexto": "ella, durante la infancia, los pensamientos tristes",
+    "respuesta": "Durante la infancia, ella alejaba los pensamientos tristes.",
+    "pista": "Childhood habitual behavior - use imperfect",
+    "grupos": [["ella"], ["alejaba"], ["los pensamientos tristes"], ["durante la infancia"]]
+  },
+  {
+    "id": "amar-habitual-0",
+    "verbo": "amar",
+    "contexto": "yo, en aquellos tiempos, la vida con toda el alma",
+    "respuesta": "En aquellos tiempos, yo amaba la vida con toda el alma.",
+    "pista": "Ongoing state in the past - use imperfect",
+    "grupos": [["yo"], ["amaba"], ["la vida con toda el alma"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "amar-habitual-1",
+    "verbo": "amar",
+    "contexto": "nosotros, cuando vivia en Madrid, las noches de verano",
+    "respuesta": "Cuando vivia en Madrid, nosotros amabamos las noches de verano.",
+    "pista": "Habitual feeling during time in Madrid - use imperfect",
+    "grupos": [["nosotros"], ["amabamos"], ["las noches de verano"], ["cuando vivia en madrid"]]
+  }
+]

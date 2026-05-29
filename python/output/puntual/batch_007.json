@@ -1,0 +1,242 @@
+[
+  {
+    "id": "enviar-puntual-0",
+    "verbo": "enviar",
+    "contexto": "yo, a las dos en punto, el paquete",
+    "respuesta": "Yo envie el paquete a las dos en punto.",
+    "pista": "completed action of sending the package at two o'clock",
+    "grupos": [["yo"], ["envie"], ["el paquete"], ["a las dos en punto"]]
+  },
+  {
+    "id": "enviar-puntual-1",
+    "verbo": "enviar",
+    "contexto": "ella, hace una semana, la carta",
+    "respuesta": "Ella envio la carta hace una semana.",
+    "pista": "completed action of sending the letter a week ago",
+    "grupos": [["ella"], ["envio"], ["la carta"], ["hace una semana"]]
+  },
+  {
+    "id": "escapar-puntual-0",
+    "verbo": "escapar",
+    "contexto": "el preso, en la madrugada, de la carcel",
+    "respuesta": "El preso escapo de la carcel en la madrugada.",
+    "pista": "completed action of the prisoner escaping from jail in the early morning",
+    "grupos": [["el preso"], ["escapo"], ["de la carcel"], ["en la madrugada"]]
+  },
+  {
+    "id": "escapar-puntual-1",
+    "verbo": "escapar",
+    "contexto": "nosotros, justo en ese instante, del edificio",
+    "respuesta": "Nosotros escapamos del edificio justo en ese instante.",
+    "pista": "completed action of escaping the building at that exact moment",
+    "grupos": [["nosotros"], ["escapamos"], ["del edificio"], ["justo en ese instante"]]
+  },
+  {
+    "id": "esconder-puntual-0",
+    "verbo": "esconder",
+    "contexto": "el, de repente, el regalo",
+    "respuesta": "El escondio el regalo de repente.",
+    "pista": "completed action of hiding the gift suddenly",
+    "grupos": [["el"], ["escondio"], ["el regalo"], ["de repente"]]
+  },
+  {
+    "id": "esconder-puntual-1",
+    "verbo": "esconder",
+    "contexto": "yo, durante la tormenta, las joyas",
+    "respuesta": "Yo escondi las joyas durante la tormenta.",
+    "pista": "completed action of hiding the jewels during the storm",
+    "grupos": [["yo"], ["escondi"], ["las joyas"], ["durante la tormenta"]]
+  },
+  {
+    "id": "escribir-puntual-0",
+    "verbo": "escribir",
+    "contexto": "ella, aquel verano, una novela",
+    "respuesta": "Ella escribio una novela aquel verano.",
+    "pista": "completed action of writing a novel that summer",
+    "grupos": [["ella"], ["escribio"], ["una novela"], ["aquel verano"]]
+  },
+  {
+    "id": "escribir-puntual-1",
+    "verbo": "escribir",
+    "contexto": "yo, esa misma noche, una carta de amor",
+    "respuesta": "Yo escribi una carta de amor esa misma noche.",
+    "pista": "completed action of writing a love letter that very night",
+    "grupos": [["yo"], ["escribi"], ["una carta de amor"], ["esa misma noche"]]
+  },
+  {
+    "id": "escuchar-puntual-0",
+    "verbo": "escuchar",
+    "contexto": "tu, al anochecer, una explosion",
+    "respuesta": "Tu escuchaste una explosion al anochecer.",
+    "pista": "completed action of hearing an explosion at nightfall",
+    "grupos": [["tu"], ["escuchaste"], ["una explosion"], ["al anochecer"]]
+  },
+  {
+    "id": "escuchar-puntual-1",
+    "verbo": "escuchar",
+    "contexto": "yo, nada mas llegar, la noticia",
+    "respuesta": "Yo escuche la noticia nada mas llegar.",
+    "pista": "completed action of hearing the news right upon arriving",
+    "grupos": [["yo"], ["escuche"], ["la noticia"], ["nada mas llegar"]]
+  },
+  {
+    "id": "esperar-puntual-0",
+    "verbo": "esperar",
+    "contexto": "nosotros, al mediodia, el autobus",
+    "respuesta": "Nosotros esperamos el autobus al mediodia.",
+    "pista": "completed action of waiting for the bus at noon",
+    "grupos": [["nosotros"], ["esperamos"], ["el autobus"], ["al mediodia"]]
+  },
+  {
+    "id": "esperar-puntual-1",
+    "verbo": "esperar",
+    "contexto": "ella, hace tres dias, dos horas en la fila",
+    "respuesta": "Ella espero dos horas en la fila hace tres dias.",
+    "pista": "completed action of waiting two hours in line three days ago",
+    "grupos": [["ella"], ["espero"], ["dos horas en la fila"], ["hace tres dias"]]
+  },
+  {
+    "id": "estar-puntual-0",
+    "verbo": "estar",
+    "contexto": "yo, aquel verano, en Madrid",
+    "respuesta": "Yo estuve en Madrid aquel verano.",
+    "pista": "completed action of being in Madrid that summer",
+    "grupos": [["yo"], ["estuve"], ["en Madrid"], ["aquel verano"]]
+  },
+  {
+    "id": "estar-puntual-1",
+    "verbo": "estar",
+    "contexto": "ellos, durante el viaje, muy contentos",
+    "respuesta": "Ellos estuvieron muy contentos durante el viaje.",
+    "pista": "completed action of being very happy during the trip",
+    "grupos": [["ellos"], ["estuvieron"], ["muy contentos"], ["durante el viaje"]]
+  },
+  {
+    "id": "estudiar-puntual-0",
+    "verbo": "estudiar",
+    "contexto": "tu, esa misma noche, para el examen",
+    "respuesta": "Tu estudiaste para el examen esa misma noche.",
+    "pista": "completed action of studying for the exam that very night",
+    "grupos": [["tu"], ["estudiaste"], ["para el examen"], ["esa misma noche"]]
+  },
+  {
+    "id": "estudiar-puntual-1",
+    "verbo": "estudiar",
+    "contexto": "yo, en la madrugada, toda la materia",
+    "respuesta": "Yo estudie toda la materia en la madrugada.",
+    "pista": "completed action of studying all the material in the early morning",
+    "grupos": [["yo"], ["estudie"], ["toda la materia"], ["en la madrugada"]]
+  },
+  {
+    "id": "evitar-puntual-0",
+    "verbo": "evitar",
+    "contexto": "ella, justo en ese instante, el accidente",
+    "respuesta": "Ella evito el accidente justo en ese instante.",
+    "pista": "completed action of avoiding the accident at that exact moment",
+    "grupos": [["ella"], ["evito"], ["el accidente"], ["justo en ese instante"]]
+  },
+  {
+    "id": "evitar-puntual-1",
+    "verbo": "evitar",
+    "contexto": "yo, en aquel momento, la discusion",
+    "respuesta": "Yo evite la discusion en aquel momento.",
+    "pista": "completed action of avoiding the argument at that moment",
+    "grupos": [["yo"], ["evite"], ["la discusion"], ["en aquel momento"]]
+  },
+  {
+    "id": "existir-puntual-0",
+    "verbo": "existir",
+    "contexto": "el problema, aquel verano, desde el principio",
+    "respuesta": "El problema existio desde el principio aquel verano.",
+    "pista": "completed action of the problem existing from the beginning that summer",
+    "grupos": [["el problema"], ["existio"], ["desde el principio"], ["aquel verano"]]
+  },
+  {
+    "id": "existir-puntual-1",
+    "verbo": "existir",
+    "contexto": "esa ley, hace una semana, todavia",
+    "respuesta": "Esa ley existio todavia hace una semana.",
+    "pista": "completed action of that law still existing a week ago",
+    "grupos": [["esa ley"], ["existio"], ["todavia"], ["hace una semana"]]
+  },
+  {
+    "id": "explicar-puntual-0",
+    "verbo": "explicar",
+    "contexto": "el profesor, al mediodia, la teoria",
+    "respuesta": "El profesor explico la teoria al mediodia.",
+    "pista": "completed action of the teacher explaining the theory at noon",
+    "grupos": [["el profesor"], ["explico"], ["la teoria"], ["al mediodia"]]
+  },
+  {
+    "id": "explicar-puntual-1",
+    "verbo": "explicar",
+    "contexto": "yo, tras la reunion, mi punto de vista",
+    "respuesta": "Yo explique mi punto de vista tras la reunion.",
+    "pista": "completed action of explaining my point of view after the meeting",
+    "grupos": [["yo"], ["explique"], ["mi punto de vista"], ["tras la reunion"]]
+  },
+  {
+    "id": "formar-puntual-0",
+    "verbo": "formar",
+    "contexto": "ellos, el martes pasado, un equipo nuevo",
+    "respuesta": "Ellos formaron un equipo nuevo el martes pasado.",
+    "pista": "completed action of forming a new team last Tuesday",
+    "grupos": [["ellos"], ["formaron"], ["un equipo nuevo"], ["el martes pasado"]]
+  },
+  {
+    "id": "formar-puntual-1",
+    "verbo": "formar",
+    "contexto": "nosotros, durante el viaje, una gran amistad",
+    "respuesta": "Nosotros formamos una gran amistad durante el viaje.",
+    "pista": "completed action of forming a great friendship during the trip",
+    "grupos": [["nosotros"], ["formamos"], ["una gran amistad"], ["durante el viaje"]]
+  },
+  {
+    "id": "funcionar-puntual-0",
+    "verbo": "funcionar",
+    "contexto": "la maquina, al final del dia, perfectamente",
+    "respuesta": "La maquina funciono perfectamente al final del dia.",
+    "pista": "completed action of the machine working perfectly at the end of the day",
+    "grupos": [["la maquina"], ["funciono"], ["perfectamente"], ["al final del dia"]]
+  },
+  {
+    "id": "funcionar-puntual-1",
+    "verbo": "funcionar",
+    "contexto": "el plan, de repente, como esperabamos",
+    "respuesta": "El plan funciono como esperabamos de repente.",
+    "pista": "completed action of the plan working as we expected suddenly",
+    "grupos": [["el plan"], ["funciono"], ["como esperabamos"], ["de repente"]]
+  },
+  {
+    "id": "ganar-puntual-0",
+    "verbo": "ganar",
+    "contexto": "nosotros, aquel verano, el campeonato",
+    "respuesta": "Nosotros ganamos el campeonato aquel verano.",
+    "pista": "completed action of winning the championship that summer",
+    "grupos": [["nosotros"], ["ganamos"], ["el campeonato"], ["aquel verano"]]
+  },
+  {
+    "id": "ganar-puntual-1",
+    "verbo": "ganar",
+    "contexto": "ella, al anochecer, la partida",
+    "respuesta": "Ella gano la partida al anochecer.",
+    "pista": "completed action of winning the game at nightfall",
+    "grupos": [["ella"], ["gano"], ["la partida"], ["al anochecer"]]
+  },
+  {
+    "id": "golpear-puntual-0",
+    "verbo": "golpear",
+    "contexto": "el, justo en ese instante, la mesa",
+    "respuesta": "El golpeo la mesa justo en ese instante.",
+    "pista": "completed action of hitting the table at that exact moment",
+    "grupos": [["el"], ["golpeo"], ["la mesa"], ["justo en ese instante"]]
+  },
+  {
+    "id": "golpear-puntual-1",
+    "verbo": "golpear",
+    "contexto": "la rama, durante la tormenta, la ventana",
+    "respuesta": "La rama golpeo la ventana durante la tormenta.",
+    "pista": "completed action of the branch hitting the window during the storm",
+    "grupos": [["la rama"], ["golpeo"], ["la ventana"], ["durante la tormenta"]]
+  }
+]

@@ -1,0 +1,210 @@
+[
+  {
+    "id": "poder-habitual-0",
+    "verbo": "poder",
+    "contexto": "yo, durante la infancia, correr durante horas sin cansarme",
+    "respuesta": "Durante la infancia, yo podia correr durante horas sin cansarme.",
+    "pista": "Childhood habitual ability - use imperfect",
+    "grupos": [["yo"], ["podia"], ["correr durante horas sin cansarme"], ["durante la infancia"]]
+  },
+  {
+    "id": "poder-habitual-1",
+    "verbo": "poder",
+    "contexto": "nosotros, en aquellos tiempos, pasear sin preocupaciones",
+    "respuesta": "En aquellos tiempos, nosotros podiamos pasear sin preocupaciones.",
+    "pista": "Habitual past ability - use imperfect",
+    "grupos": [["nosotros"], ["podiamos"], ["pasear sin preocupaciones"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "poner-habitual-0",
+    "verbo": "poner",
+    "contexto": "mi madre, los domingos, flores frescas en la mesa",
+    "respuesta": "Los domingos, mi madre ponia flores frescas en la mesa.",
+    "pista": "Regular Sunday tradition - use imperfect",
+    "grupos": [["mi madre"], ["ponia"], ["flores frescas en la mesa"], ["los domingos"]]
+  },
+  {
+    "id": "poner-habitual-1",
+    "verbo": "poner",
+    "contexto": "yo, por las tardes, musica suave para relajarme",
+    "respuesta": "Por las tardes, yo ponia musica suave para relajarme.",
+    "pista": "Daily afternoon habit - use imperfect",
+    "grupos": [["yo"], ["ponia"], ["musica suave para relajarme"], ["por las tardes"]]
+  },
+  {
+    "id": "preferir-habitual-0",
+    "verbo": "preferir",
+    "contexto": "yo, en aquellos tiempos, el campo a la ciudad",
+    "respuesta": "En aquellos tiempos, yo preferia el campo a la ciudad.",
+    "pista": "Habitual past preference - use imperfect",
+    "grupos": [["yo"], ["preferia"], ["el campo a la ciudad"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "preferir-habitual-1",
+    "verbo": "preferir",
+    "contexto": "mis hijos, durante la infancia, los dulces a la fruta",
+    "respuesta": "Durante la infancia, mis hijos preferian los dulces a la fruta.",
+    "pista": "Childhood habitual preference - use imperfect",
+    "grupos": [["mis hijos"], ["preferian"], ["los dulces a la fruta"], ["durante la infancia"]]
+  },
+  {
+    "id": "preguntar-habitual-0",
+    "verbo": "preguntar",
+    "contexto": "los ninos, con frecuencia, por que el cielo era azul",
+    "respuesta": "Los ninos preguntaban por que el cielo era azul con frecuencia.",
+    "pista": "Frequently repeated question - use imperfect",
+    "grupos": [["los ninos"], ["preguntaban"], ["por que el cielo era azul"], ["con frecuencia"]]
+  },
+  {
+    "id": "preguntar-habitual-1",
+    "verbo": "preguntar",
+    "contexto": "mi abuela, cada verano, por la salud de todos",
+    "respuesta": "Cada verano, mi abuela preguntaba por la salud de todos.",
+    "pista": "Repeated summer concern - use imperfect",
+    "grupos": [["mi abuela"], ["preguntaba"], ["por la salud de todos"], ["cada verano"]]
+  },
+  {
+    "id": "preocupar-habitual-0",
+    "verbo": "preocupar",
+    "contexto": "a mi madre, semana tras semana, nuestras notas del colegio",
+    "respuesta": "Semana tras semana, a mi madre le preocupaban nuestras notas del colegio.",
+    "pista": "Repeated weekly concern - use imperfect",
+    "grupos": [["a mi madre"], ["preocupaban"], ["nuestras notas del colegio"], ["semana tras semana"]]
+  },
+  {
+    "id": "preocupar-habitual-1",
+    "verbo": "preocupar",
+    "contexto": "a nosotros, en aquellos tiempos, el futuro del pais",
+    "respuesta": "En aquellos tiempos, a nosotros nos preocupaba el futuro del pais.",
+    "pista": "Habitual past worry - use imperfect",
+    "grupos": [["a nosotros"], ["preocupaba"], ["el futuro del pais"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "preparar-habitual-0",
+    "verbo": "preparar",
+    "contexto": "mi madre, los domingos, un asado para toda la familia",
+    "respuesta": "Los domingos, mi madre preparaba un asado para toda la familia.",
+    "pista": "Regular Sunday cooking - use imperfect",
+    "grupos": [["mi madre"], ["preparaba"], ["un asado para toda la familia"], ["los domingos"]]
+  },
+  {
+    "id": "preparar-habitual-1",
+    "verbo": "preparar",
+    "contexto": "yo, los martes y jueves, la cena antes de las siete",
+    "respuesta": "Los martes y jueves, yo preparaba la cena antes de las siete.",
+    "pista": "Regular scheduled cooking - use imperfect",
+    "grupos": [["yo"], ["preparaba"], ["la cena antes de las siete"], ["los martes y jueves"]]
+  },
+  {
+    "id": "presentar-habitual-0",
+    "verbo": "presentar",
+    "contexto": "el profesor, semana tras semana, temas nuevos a la clase",
+    "respuesta": "Semana tras semana, el profesor presentaba temas nuevos a la clase.",
+    "pista": "Repeated weekly presentation - use imperfect",
+    "grupos": [["el profesor"], ["presentaba"], ["temas nuevos a la clase"], ["semana tras semana"]]
+  },
+  {
+    "id": "presentar-habitual-1",
+    "verbo": "presentar",
+    "contexto": "yo, cuando trabajaba alli, informes cada lunes",
+    "respuesta": "Cuando trabajaba alli, yo presentaba informes cada lunes.",
+    "pista": "Habitual workplace task - use imperfect",
+    "grupos": [["yo"], ["presentaba"], ["informes cada lunes"], ["cuando trabajaba alli"]]
+  },
+  {
+    "id": "prestar-habitual-0",
+    "verbo": "prestar",
+    "contexto": "mi vecino, con frecuencia, herramientas a mi padre",
+    "respuesta": "Mi vecino prestaba herramientas a mi padre con frecuencia.",
+    "pista": "Frequently repeated generosity - use imperfect",
+    "grupos": [["mi vecino"], ["prestaba"], ["herramientas a mi padre"], ["con frecuencia"]]
+  },
+  {
+    "id": "prestar-habitual-1",
+    "verbo": "prestar",
+    "contexto": "yo, en mis anos de universidad, atencion a cada detalle",
+    "respuesta": "En mis anos de universidad, yo prestaba atencion a cada detalle.",
+    "pista": "Habitual university behavior - use imperfect",
+    "grupos": [["yo"], ["prestaba"], ["atencion a cada detalle"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "probar-habitual-0",
+    "verbo": "probar",
+    "contexto": "nosotros, cada verano, platos nuevos en los restaurantes locales",
+    "respuesta": "Cada verano, nosotros probabamos platos nuevos en los restaurantes locales.",
+    "pista": "Repeated summer adventure - use imperfect",
+    "grupos": [["nosotros"], ["probabamos"], ["platos nuevos en los restaurantes locales"], ["cada verano"]]
+  },
+  {
+    "id": "probar-habitual-1",
+    "verbo": "probar",
+    "contexto": "mi abuela, por las tardes, la sopa antes de servirla",
+    "respuesta": "Por las tardes, mi abuela probaba la sopa antes de servirla.",
+    "pista": "Daily afternoon cooking habit - use imperfect",
+    "grupos": [["mi abuela"], ["probaba"], ["la sopa antes de servirla"], ["por las tardes"]]
+  },
+  {
+    "id": "producir-habitual-0",
+    "verbo": "producir",
+    "contexto": "la fabrica, en aquellos tiempos, cientos de zapatos al dia",
+    "respuesta": "En aquellos tiempos, la fabrica producia cientos de zapatos al dia.",
+    "pista": "Habitual past production - use imperfect",
+    "grupos": [["la fabrica"], ["producia"], ["cientos de zapatos al dia"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "producir-habitual-1",
+    "verbo": "producir",
+    "contexto": "el huerto, cada verano, tomates enormes y sabrosos",
+    "respuesta": "Cada verano, el huerto producia tomates enormes y sabrosos.",
+    "pista": "Repeated summer production - use imperfect",
+    "grupos": [["el huerto"], ["producia"], ["tomates enormes y sabrosos"], ["cada verano"]]
+  },
+  {
+    "id": "prometer-habitual-0",
+    "verbo": "prometer",
+    "contexto": "mi padre, con frecuencia, llevarnos al cine el sabado",
+    "respuesta": "Mi padre prometia llevarnos al cine el sabado con frecuencia.",
+    "pista": "Frequently repeated promise - use imperfect",
+    "grupos": [["mi padre"], ["prometia"], ["llevarnos al cine el sabado"], ["con frecuencia"]]
+  },
+  {
+    "id": "prometer-habitual-1",
+    "verbo": "prometer",
+    "contexto": "ella, semana tras semana, que cambiaria de actitud",
+    "respuesta": "Semana tras semana, ella prometia que cambiaria de actitud.",
+    "pista": "Repeated weekly promise - use imperfect",
+    "grupos": [["ella"], ["prometia"], ["que cambiaria de actitud"], ["semana tras semana"]]
+  },
+  {
+    "id": "proteger-habitual-0",
+    "verbo": "proteger",
+    "contexto": "mi padre, durante la infancia, a toda la familia",
+    "respuesta": "Durante la infancia, mi padre protegia a toda la familia.",
+    "pista": "Ongoing childhood protection - use imperfect",
+    "grupos": [["mi padre"], ["protegia"], ["a toda la familia"], ["durante la infancia"]]
+  },
+  {
+    "id": "proteger-habitual-1",
+    "verbo": "proteger",
+    "contexto": "los arboles, cada verano, a los animales del calor",
+    "respuesta": "Cada verano, los arboles protegian a los animales del calor.",
+    "pista": "Repeated seasonal protection - use imperfect",
+    "grupos": [["los arboles"], ["protegian"], ["a los animales del calor"], ["cada verano"]]
+  },
+  {
+    "id": "quedar-habitual-0",
+    "verbo": "quedar",
+    "contexto": "nosotros, los fines de semana, en el bar de la esquina",
+    "respuesta": "Los fines de semana, nosotros quedabamos en el bar de la esquina.",
+    "pista": "Regular weekend meetup - use imperfect",
+    "grupos": [["nosotros"], ["quedabamos"], ["en el bar de la esquina"], ["los fines de semana"]]
+  },
+  {
+    "id": "quedar-habitual-1",
+    "verbo": "quedar",
+    "contexto": "yo, por las tardes, en casa leyendo un libro",
+    "respuesta": "Por las tardes, yo quedaba en casa leyendo un libro.",
+    "pista": "Daily afternoon routine - use imperfect",
+    "grupos": [["yo"], ["quedaba"], ["en casa leyendo un libro"], ["por las tardes"]]
+  }
+]

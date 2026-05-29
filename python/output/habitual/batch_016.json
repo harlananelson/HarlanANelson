@@ -1,0 +1,210 @@
+[
+  {
+    "id": "representar-habitual-0",
+    "verbo": "representar",
+    "contexto": "ella, en mis anos de universidad, papeles importantes en las obras",
+    "respuesta": "En mis anos de universidad, ella representaba papeles importantes en las obras.",
+    "pista": "Habitual university theater - use imperfect",
+    "grupos": [["ella"], ["representaba"], ["papeles importantes en las obras"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "representar-habitual-1",
+    "verbo": "representar",
+    "contexto": "el abogado, en aquellos tiempos, a los mas necesitados",
+    "respuesta": "En aquellos tiempos, el abogado representaba a los mas necesitados.",
+    "pista": "Habitual past advocacy - use imperfect",
+    "grupos": [["el abogado"], ["representaba"], ["a los mas necesitados"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "resolver-habitual-0",
+    "verbo": "resolver",
+    "contexto": "mi padre, con frecuencia, los problemas de los vecinos",
+    "respuesta": "Mi padre resolvia los problemas de los vecinos con frecuencia.",
+    "pista": "Frequently repeated help - use imperfect",
+    "grupos": [["mi padre"], ["resolvia"], ["los problemas de los vecinos"], ["con frecuencia"]]
+  },
+  {
+    "id": "resolver-habitual-1",
+    "verbo": "resolver",
+    "contexto": "nosotros, los fines de semana, crucigramas en el periodico",
+    "respuesta": "Los fines de semana, nosotros resolviamos crucigramas en el periodico.",
+    "pista": "Regular weekend activity - use imperfect",
+    "grupos": [["nosotros"], ["resolviamos"], ["crucigramas en el periodico"], ["los fines de semana"]]
+  },
+  {
+    "id": "responder-habitual-0",
+    "verbo": "responder",
+    "contexto": "ella, semana tras semana, a todas las cartas que recibia",
+    "respuesta": "Semana tras semana, ella respondia a todas las cartas que recibia.",
+    "pista": "Repeated weekly correspondence - use imperfect",
+    "grupos": [["ella"], ["respondia"], ["a todas las cartas que recibia"], ["semana tras semana"]]
+  },
+  {
+    "id": "responder-habitual-1",
+    "verbo": "responder",
+    "contexto": "los alumnos, en aquellos tiempos, con respeto al profesor",
+    "respuesta": "En aquellos tiempos, los alumnos respondian con respeto al profesor.",
+    "pista": "Habitual past classroom behavior - use imperfect",
+    "grupos": [["los alumnos"], ["respondian"], ["con respeto al profesor"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "resultar-habitual-0",
+    "verbo": "resultar",
+    "contexto": "las recetas de mi abuela, los domingos, siempre deliciosas",
+    "respuesta": "Los domingos, las recetas de mi abuela resultaban siempre deliciosas.",
+    "pista": "Regular Sunday outcome - use imperfect",
+    "grupos": [["las recetas de mi abuela"], ["resultaban"], ["siempre deliciosas"], ["los domingos"]]
+  },
+  {
+    "id": "resultar-habitual-1",
+    "verbo": "resultar",
+    "contexto": "los examenes, en aquellos tiempos, muy dificiles para todos",
+    "respuesta": "En aquellos tiempos, los examenes resultaban muy dificiles para todos.",
+    "pista": "Habitual past difficulty - use imperfect",
+    "grupos": [["los examenes"], ["resultaban"], ["muy dificiles para todos"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "reunir-habitual-0",
+    "verbo": "reunir",
+    "contexto": "la familia, los domingos, en casa de los abuelos",
+    "respuesta": "Los domingos, la familia reunia en casa de los abuelos.",
+    "pista": "Regular Sunday gathering - use imperfect",
+    "grupos": [["la familia"], ["reunia"], ["en casa de los abuelos"], ["los domingos"]]
+  },
+  {
+    "id": "reunir-habitual-1",
+    "verbo": "reunir",
+    "contexto": "el director, los martes y jueves, al equipo para planificar",
+    "respuesta": "Los martes y jueves, el director reunia al equipo para planificar.",
+    "pista": "Regular scheduled meeting - use imperfect",
+    "grupos": [["el director"], ["reunia"], ["al equipo para planificar"], ["los martes y jueves"]]
+  },
+  {
+    "id": "revisar-habitual-0",
+    "verbo": "revisar",
+    "contexto": "el mecanico, los fines de semana, los coches de los vecinos",
+    "respuesta": "Los fines de semana, el mecanico revisaba los coches de los vecinos.",
+    "pista": "Regular weekend work - use imperfect",
+    "grupos": [["el mecanico"], ["revisaba"], ["los coches de los vecinos"], ["los fines de semana"]]
+  },
+  {
+    "id": "revisar-habitual-1",
+    "verbo": "revisar",
+    "contexto": "yo, semana tras semana, mis apuntes antes del examen",
+    "respuesta": "Semana tras semana, yo revisaba mis apuntes antes del examen.",
+    "pista": "Repeated weekly study habit - use imperfect",
+    "grupos": [["yo"], ["revisaba"], ["mis apuntes antes del examen"], ["semana tras semana"]]
+  },
+  {
+    "id": "robar-habitual-0",
+    "verbo": "robar",
+    "contexto": "los piratas del cuento, en aquellos tiempos, tesoros de los barcos",
+    "respuesta": "En aquellos tiempos, los piratas del cuento robaban tesoros de los barcos.",
+    "pista": "Habitual fictional action - use imperfect",
+    "grupos": [["los piratas del cuento"], ["robaban"], ["tesoros de los barcos"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "robar-habitual-1",
+    "verbo": "robar",
+    "contexto": "el zorro, con frecuencia, gallinas del corral",
+    "respuesta": "El zorro robaba gallinas del corral con frecuencia.",
+    "pista": "Frequently repeated theft - use imperfect",
+    "grupos": [["el zorro"], ["robaba"], ["gallinas del corral"], ["con frecuencia"]]
+  },
+  {
+    "id": "romper-habitual-0",
+    "verbo": "romper",
+    "contexto": "las olas, cada verano, contra las rocas de la costa",
+    "respuesta": "Cada verano, las olas rompian contra las rocas de la costa.",
+    "pista": "Repeated seasonal occurrence - use imperfect",
+    "grupos": [["las olas"], ["rompian"], ["contra las rocas de la costa"], ["cada verano"]]
+  },
+  {
+    "id": "romper-habitual-1",
+    "verbo": "romper",
+    "contexto": "mi hermano, durante la infancia, los juguetes el mismo dia",
+    "respuesta": "Durante la infancia, mi hermano rompia los juguetes el mismo dia.",
+    "pista": "Childhood habitual destruction - use imperfect",
+    "grupos": [["mi hermano"], ["rompia"], ["los juguetes el mismo dia"], ["durante la infancia"]]
+  },
+  {
+    "id": "saber-habitual-0",
+    "verbo": "saber",
+    "contexto": "mi abuela, en aquellos tiempos, el remedio para cada enfermedad",
+    "respuesta": "En aquellos tiempos, mi abuela sabia el remedio para cada enfermedad.",
+    "pista": "Habitual past knowledge - use imperfect",
+    "grupos": [["mi abuela"], ["sabia"], ["el remedio para cada enfermedad"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "saber-habitual-1",
+    "verbo": "saber",
+    "contexto": "yo, durante la infancia, muy poco del mundo real",
+    "respuesta": "Durante la infancia, yo sabia muy poco del mundo real.",
+    "pista": "Ongoing childhood state - use imperfect",
+    "grupos": [["yo"], ["sabia"], ["muy poco del mundo real"], ["durante la infancia"]]
+  },
+  {
+    "id": "sacar-habitual-0",
+    "verbo": "sacar",
+    "contexto": "yo, los domingos, al perro a pasear por el parque",
+    "respuesta": "Los domingos, yo sacaba al perro a pasear por el parque.",
+    "pista": "Regular Sunday routine - use imperfect",
+    "grupos": [["yo"], ["sacaba"], ["al perro a pasear por el parque"], ["los domingos"]]
+  },
+  {
+    "id": "sacar-habitual-1",
+    "verbo": "sacar",
+    "contexto": "ella, en mis anos de universidad, las mejores notas de la clase",
+    "respuesta": "En mis anos de universidad, ella sacaba las mejores notas de la clase.",
+    "pista": "Habitual university achievement - use imperfect",
+    "grupos": [["ella"], ["sacaba"], ["las mejores notas de la clase"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "salir-habitual-0",
+    "verbo": "salir",
+    "contexto": "nosotros, los fines de semana, a cenar a un restaurante",
+    "respuesta": "Los fines de semana, nosotros saliamos a cenar a un restaurante.",
+    "pista": "Regular weekend outing - use imperfect",
+    "grupos": [["nosotros"], ["saliamos"], ["a cenar a un restaurante"], ["los fines de semana"]]
+  },
+  {
+    "id": "salir-habitual-1",
+    "verbo": "salir",
+    "contexto": "el sol, cada verano, muy temprano por la manana",
+    "respuesta": "Cada verano, el sol salia muy temprano por la manana.",
+    "pista": "Repeated seasonal occurrence - use imperfect",
+    "grupos": [["el sol"], ["salia"], ["muy temprano por la manana"], ["cada verano"]]
+  },
+  {
+    "id": "salvar-habitual-0",
+    "verbo": "salvar",
+    "contexto": "los bomberos, con frecuencia, a gatos atrapados en los arboles",
+    "respuesta": "Los bomberos salvaban a gatos atrapados en los arboles con frecuencia.",
+    "pista": "Frequently repeated rescue - use imperfect",
+    "grupos": [["los bomberos"], ["salvaban"], ["a gatos atrapados en los arboles"], ["con frecuencia"]]
+  },
+  {
+    "id": "salvar-habitual-1",
+    "verbo": "salvar",
+    "contexto": "el heroe de la pelicula, en aquellos tiempos, a los inocentes",
+    "respuesta": "En aquellos tiempos, el heroe de la pelicula salvaba a los inocentes.",
+    "pista": "Habitual fictional heroism - use imperfect",
+    "grupos": [["el heroe de la pelicula"], ["salvaba"], ["a los inocentes"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "seguir-habitual-0",
+    "verbo": "seguir",
+    "contexto": "yo, semana tras semana, la misma rutina de ejercicios",
+    "respuesta": "Semana tras semana, yo seguia la misma rutina de ejercicios.",
+    "pista": "Repeated weekly routine - use imperfect",
+    "grupos": [["yo"], ["seguia"], ["la misma rutina de ejercicios"], ["semana tras semana"]]
+  },
+  {
+    "id": "seguir-habitual-1",
+    "verbo": "seguir",
+    "contexto": "el perro, por las tardes, a mi padre por toda la casa",
+    "respuesta": "Por las tardes, el perro seguia a mi padre por toda la casa.",
+    "pista": "Daily afternoon behavior - use imperfect",
+    "grupos": [["el perro"], ["seguia"], ["a mi padre por toda la casa"], ["por las tardes"]]
+  }
+]

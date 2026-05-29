@@ -1,0 +1,242 @@
+[
+  {
+    "id": "disfrutar-puntual-0",
+    "verbo": "disfrutar",
+    "contexto": "nosotros, aquel verano, de la playa",
+    "respuesta": "Nosotros disfrutamos de la playa aquel verano.",
+    "pista": "completed action of enjoying the beach that summer",
+    "grupos": [["nosotros"], ["disfrutamos"], ["de la playa"], ["aquel verano"]]
+  },
+  {
+    "id": "disfrutar-puntual-1",
+    "verbo": "disfrutar",
+    "contexto": "ella, durante el viaje, de cada momento",
+    "respuesta": "Ella disfruto de cada momento durante el viaje.",
+    "pista": "completed action of enjoying every moment during the trip",
+    "grupos": [["ella"], ["disfruto"], ["de cada momento"], ["durante el viaje"]]
+  },
+  {
+    "id": "disparar-puntual-0",
+    "verbo": "disparar",
+    "contexto": "el soldado, al anochecer, al enemigo",
+    "respuesta": "El soldado disparo al enemigo al anochecer.",
+    "pista": "completed action of the soldier shooting at the enemy at nightfall",
+    "grupos": [["el soldado"], ["disparo"], ["al enemigo"], ["al anochecer"]]
+  },
+  {
+    "id": "disparar-puntual-1",
+    "verbo": "disparar",
+    "contexto": "ellos, justo en ese instante, una flecha",
+    "respuesta": "Ellos dispararon una flecha justo en ese instante.",
+    "pista": "completed action of shooting an arrow at that exact moment",
+    "grupos": [["ellos"], ["dispararon"], ["una flecha"], ["justo en ese instante"]]
+  },
+  {
+    "id": "dormir-puntual-0",
+    "verbo": "dormir",
+    "contexto": "yo, esa misma noche, diez horas",
+    "respuesta": "Yo dormi diez horas esa misma noche.",
+    "pista": "completed action of sleeping ten hours that very night",
+    "grupos": [["yo"], ["dormi"], ["diez horas"], ["esa misma noche"]]
+  },
+  {
+    "id": "dormir-puntual-1",
+    "verbo": "dormir",
+    "contexto": "el bebe, al mediodia, toda la tarde",
+    "respuesta": "El bebe durmio toda la tarde al mediodia.",
+    "pista": "completed action of the baby sleeping all afternoon at noon",
+    "grupos": [["el bebe"], ["durmio"], ["toda la tarde"], ["al mediodia"]]
+  },
+  {
+    "id": "echar-puntual-0",
+    "verbo": "echar",
+    "contexto": "yo, de repente, a correr",
+    "respuesta": "Yo eche a correr de repente.",
+    "pista": "completed action of starting to run suddenly",
+    "grupos": [["yo"], ["eche"], ["a correr"], ["de repente"]]
+  },
+  {
+    "id": "echar-puntual-1",
+    "verbo": "echar",
+    "contexto": "ella, nada mas llegar, agua en el vaso",
+    "respuesta": "Ella echo agua en el vaso nada mas llegar.",
+    "pista": "completed action of pouring water into the glass right upon arriving",
+    "grupos": [["ella"], ["echo"], ["agua en el vaso"], ["nada mas llegar"]]
+  },
+  {
+    "id": "elegir-puntual-0",
+    "verbo": "elegir",
+    "contexto": "tu, al final del dia, el vestido rojo",
+    "respuesta": "Tu elegiste el vestido rojo al final del dia.",
+    "pista": "completed action of choosing the red dress at the end of the day",
+    "grupos": [["tu"], ["elegiste"], ["el vestido rojo"], ["al final del dia"]]
+  },
+  {
+    "id": "elegir-puntual-1",
+    "verbo": "elegir",
+    "contexto": "ellos, tras la reunion, al nuevo lider",
+    "respuesta": "Ellos eligieron al nuevo lider tras la reunion.",
+    "pista": "completed action of choosing the new leader after the meeting",
+    "grupos": [["ellos"], ["eligieron"], ["al nuevo lider"], ["tras la reunion"]]
+  },
+  {
+    "id": "empezar-puntual-0",
+    "verbo": "empezar",
+    "contexto": "yo, el martes pasado, un nuevo curso",
+    "respuesta": "Yo empece un nuevo curso el martes pasado.",
+    "pista": "completed action of starting a new course last Tuesday",
+    "grupos": [["yo"], ["empece"], ["un nuevo curso"], ["el martes pasado"]]
+  },
+  {
+    "id": "empezar-puntual-1",
+    "verbo": "empezar",
+    "contexto": "la lluvia, de repente, con fuerza",
+    "respuesta": "La lluvia empezo con fuerza de repente.",
+    "pista": "completed action of the rain starting strongly suddenly",
+    "grupos": [["la lluvia"], ["empezo"], ["con fuerza"], ["de repente"]]
+  },
+  {
+    "id": "encantar-puntual-0",
+    "verbo": "encantar",
+    "contexto": "la musica, aquel verano, a todos",
+    "respuesta": "La musica encanto a todos aquel verano.",
+    "pista": "completed action of the music delighting everyone that summer",
+    "grupos": [["la musica"], ["encanto"], ["a todos"], ["aquel verano"]]
+  },
+  {
+    "id": "encantar-puntual-1",
+    "verbo": "encantar",
+    "contexto": "la cena, esa misma noche, a los invitados",
+    "respuesta": "La cena encanto a los invitados esa misma noche.",
+    "pista": "completed action of the dinner delighting the guests that very night",
+    "grupos": [["la cena"], ["encanto"], ["a los invitados"], ["esa misma noche"]]
+  },
+  {
+    "id": "encontrar-puntual-0",
+    "verbo": "encontrar",
+    "contexto": "yo, en la madrugada, las llaves perdidas",
+    "respuesta": "Yo encontre las llaves perdidas en la madrugada.",
+    "pista": "completed action of finding the lost keys in the early morning",
+    "grupos": [["yo"], ["encontre"], ["las llaves perdidas"], ["en la madrugada"]]
+  },
+  {
+    "id": "encontrar-puntual-1",
+    "verbo": "encontrar",
+    "contexto": "ella, durante el viaje, un hotel perfecto",
+    "respuesta": "Ella encontro un hotel perfecto durante el viaje.",
+    "pista": "completed action of finding a perfect hotel during the trip",
+    "grupos": [["ella"], ["encontro"], ["un hotel perfecto"], ["durante el viaje"]]
+  },
+  {
+    "id": "enfrentar-puntual-0",
+    "verbo": "enfrentar",
+    "contexto": "el, justo en ese instante, al enemigo",
+    "respuesta": "El enfrento al enemigo justo en ese instante.",
+    "pista": "completed action of confronting the enemy at that exact moment",
+    "grupos": [["el"], ["enfrento"], ["al enemigo"], ["justo en ese instante"]]
+  },
+  {
+    "id": "enfrentar-puntual-1",
+    "verbo": "enfrentar",
+    "contexto": "nosotros, en aquel momento, la realidad",
+    "respuesta": "Nosotros enfrentamos la realidad en aquel momento.",
+    "pista": "completed action of facing reality at that moment",
+    "grupos": [["nosotros"], ["enfrentamos"], ["la realidad"], ["en aquel momento"]]
+  },
+  {
+    "id": "enganar-puntual-0",
+    "verbo": "enganar",
+    "contexto": "el, durante el viaje, a su socio",
+    "respuesta": "El engano a su socio durante el viaje.",
+    "pista": "completed action of deceiving his partner during the trip",
+    "grupos": [["el"], ["engano"], ["a su socio"], ["durante el viaje"]]
+  },
+  {
+    "id": "enganar-puntual-1",
+    "verbo": "enganar",
+    "contexto": "ella, hace una semana, a todos",
+    "respuesta": "Ella engano a todos hace una semana.",
+    "pista": "completed action of deceiving everyone a week ago",
+    "grupos": [["ella"], ["engano"], ["a todos"], ["hace una semana"]]
+  },
+  {
+    "id": "ensenar-puntual-0",
+    "verbo": "ensenar",
+    "contexto": "la profesora, aquel verano, matematicas",
+    "respuesta": "La profesora enseno matematicas aquel verano.",
+    "pista": "completed action of the teacher teaching mathematics that summer",
+    "grupos": [["la profesora"], ["enseno"], ["matematicas"], ["aquel verano"]]
+  },
+  {
+    "id": "ensenar-puntual-1",
+    "verbo": "ensenar",
+    "contexto": "yo, al mediodia, la foto a mi amigo",
+    "respuesta": "Yo ensene la foto a mi amigo al mediodia.",
+    "pista": "completed action of showing the photo to my friend at noon",
+    "grupos": [["yo"], ["ensene"], ["la foto a mi amigo"], ["al mediodia"]]
+  },
+  {
+    "id": "entender-puntual-0",
+    "verbo": "entender",
+    "contexto": "yo, de repente, el problema",
+    "respuesta": "Yo entendi el problema de repente.",
+    "pista": "completed action of understanding the problem suddenly",
+    "grupos": [["yo"], ["entendi"], ["el problema"], ["de repente"]]
+  },
+  {
+    "id": "entender-puntual-1",
+    "verbo": "entender",
+    "contexto": "ella, al final del dia, la leccion",
+    "respuesta": "Ella entendio la leccion al final del dia.",
+    "pista": "completed action of understanding the lesson at the end of the day",
+    "grupos": [["ella"], ["entendio"], ["la leccion"], ["al final del dia"]]
+  },
+  {
+    "id": "enterar-puntual-0",
+    "verbo": "enterar",
+    "contexto": "yo, esa misma noche, de la noticia",
+    "respuesta": "Yo me entere de la noticia esa misma noche.",
+    "pista": "completed action of finding out the news that very night",
+    "grupos": [["yo"], ["me entere"], ["de la noticia"], ["esa misma noche"]]
+  },
+  {
+    "id": "enterar-puntual-1",
+    "verbo": "enterar",
+    "contexto": "ellos, hace tres dias, de la verdad",
+    "respuesta": "Ellos se enteraron de la verdad hace tres dias.",
+    "pista": "completed action of finding out the truth three days ago",
+    "grupos": [["ellos"], ["se enteraron"], ["de la verdad"], ["hace tres dias"]]
+  },
+  {
+    "id": "entrar-puntual-0",
+    "verbo": "entrar",
+    "contexto": "el, nada mas llegar, en la oficina",
+    "respuesta": "El entro en la oficina nada mas llegar.",
+    "pista": "completed action of entering the office right upon arriving",
+    "grupos": [["el"], ["entro"], ["en la oficina"], ["nada mas llegar"]]
+  },
+  {
+    "id": "entrar-puntual-1",
+    "verbo": "entrar",
+    "contexto": "nosotros, al anochecer, en el museo",
+    "respuesta": "Nosotros entramos en el museo al anochecer.",
+    "pista": "completed action of entering the museum at nightfall",
+    "grupos": [["nosotros"], ["entramos"], ["en el museo"], ["al anochecer"]]
+  },
+  {
+    "id": "entregar-puntual-0",
+    "verbo": "entregar",
+    "contexto": "yo, el martes pasado, el informe",
+    "respuesta": "Yo entregue el informe el martes pasado.",
+    "pista": "completed action of handing in the report last Tuesday",
+    "grupos": [["yo"], ["entregue"], ["el informe"], ["el martes pasado"]]
+  },
+  {
+    "id": "entregar-puntual-1",
+    "verbo": "entregar",
+    "contexto": "ella, tras la reunion, los documentos",
+    "respuesta": "Ella entrego los documentos tras la reunion.",
+    "pista": "completed action of handing over the documents after the meeting",
+    "grupos": [["ella"], ["entrego"], ["los documentos"], ["tras la reunion"]]
+  }
+]

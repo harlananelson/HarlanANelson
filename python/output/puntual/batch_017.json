@@ -1,0 +1,226 @@
+[
+  {
+    "id": "traer-puntual-0",
+    "verbo": "traer",
+    "contexto": "ella, nada mas llegar, flores para la mesa",
+    "respuesta": "Ella trajo flores para la mesa nada mas llegar.",
+    "pista": "completed action of bringing flowers for the table right upon arriving",
+    "grupos": [["ella"], ["trajo"], ["flores para la mesa"], ["nada mas llegar"]]
+  },
+  {
+    "id": "traer-puntual-1",
+    "verbo": "traer",
+    "contexto": "yo, el martes pasado, un regalo para mi madre",
+    "respuesta": "Yo traje un regalo para mi madre el martes pasado.",
+    "pista": "completed action of bringing a gift for my mother last Tuesday",
+    "grupos": [["yo"], ["traje"], ["un regalo para mi madre"], ["el martes pasado"]]
+  },
+  {
+    "id": "tranquilar-puntual-0",
+    "verbo": "tranquilar",
+    "contexto": "ella, justo en ese instante, al paciente",
+    "respuesta": "Ella tranquilo al paciente justo en ese instante.",
+    "pista": "completed action of calming the patient at that exact moment",
+    "grupos": [["ella"], ["tranquilo"], ["al paciente"], ["justo en ese instante"]]
+  },
+  {
+    "id": "tranquilar-puntual-1",
+    "verbo": "tranquilar",
+    "contexto": "yo, de repente, a los ninos asustados",
+    "respuesta": "Yo tranquile a los ninos asustados de repente.",
+    "pista": "completed action of calming the frightened children suddenly",
+    "grupos": [["yo"], ["tranquile"], ["a los ninos asustados"], ["de repente"]]
+  },
+  {
+    "id": "tratar-puntual-0",
+    "verbo": "tratar",
+    "contexto": "nosotros, durante el viaje, de resolver el conflicto",
+    "respuesta": "Nosotros tratamos de resolver el conflicto durante el viaje.",
+    "pista": "completed action of trying to resolve the conflict during the trip",
+    "grupos": [["nosotros"], ["tratamos"], ["de resolver el conflicto"], ["durante el viaje"]]
+  },
+  {
+    "id": "tratar-puntual-1",
+    "verbo": "tratar",
+    "contexto": "el medico, al mediodia, la herida",
+    "respuesta": "El medico trato la herida al mediodia.",
+    "pista": "completed action of the doctor treating the wound at noon",
+    "grupos": [["el medico"], ["trato"], ["la herida"], ["al mediodia"]]
+  },
+  {
+    "id": "unir-puntual-0",
+    "verbo": "unir",
+    "contexto": "la causa, aquel verano, a todos los vecinos",
+    "respuesta": "La causa unio a todos los vecinos aquel verano.",
+    "pista": "completed action of the cause uniting all the neighbors that summer",
+    "grupos": [["la causa"], ["unio"], ["a todos los vecinos"], ["aquel verano"]]
+  },
+  {
+    "id": "unir-puntual-1",
+    "verbo": "unir",
+    "contexto": "yo, en aquel momento, las dos piezas",
+    "respuesta": "Yo uni las dos piezas en aquel momento.",
+    "pista": "completed action of joining the two pieces at that moment",
+    "grupos": [["yo"], ["uni"], ["las dos piezas"], ["en aquel momento"]]
+  },
+  {
+    "id": "usar-puntual-0",
+    "verbo": "usar",
+    "contexto": "ella, hace una semana, un vestido nuevo",
+    "respuesta": "Ella uso un vestido nuevo hace una semana.",
+    "pista": "completed action of wearing a new dress a week ago",
+    "grupos": [["ella"], ["uso"], ["un vestido nuevo"], ["hace una semana"]]
+  },
+  {
+    "id": "usar-puntual-1",
+    "verbo": "usar",
+    "contexto": "yo, al final del dia, todas las herramientas",
+    "respuesta": "Yo use todas las herramientas al final del dia.",
+    "pista": "completed action of using all the tools at the end of the day",
+    "grupos": [["yo"], ["use"], ["todas las herramientas"], ["al final del dia"]]
+  },
+  {
+    "id": "utilizar-puntual-0",
+    "verbo": "utilizar",
+    "contexto": "ellos, tras la reunion, un nuevo metodo",
+    "respuesta": "Ellos utilizaron un nuevo metodo tras la reunion.",
+    "pista": "completed action of using a new method after the meeting",
+    "grupos": [["ellos"], ["utilizaron"], ["un nuevo metodo"], ["tras la reunion"]]
+  },
+  {
+    "id": "utilizar-puntual-1",
+    "verbo": "utilizar",
+    "contexto": "yo, hace tres dias, la computadora del trabajo",
+    "respuesta": "Yo utilice la computadora del trabajo hace tres dias.",
+    "pista": "completed action of using the work computer three days ago",
+    "grupos": [["yo"], ["utilice"], ["la computadora del trabajo"], ["hace tres dias"]]
+  },
+  {
+    "id": "valer-puntual-0",
+    "verbo": "valer",
+    "contexto": "el esfuerzo, al final del dia, la pena",
+    "respuesta": "El esfuerzo valio la pena al final del dia.",
+    "pista": "completed action of the effort being worth it at the end of the day",
+    "grupos": [["el esfuerzo"], ["valio"], ["la pena"], ["al final del dia"]]
+  },
+  {
+    "id": "valer-puntual-1",
+    "verbo": "valer",
+    "contexto": "la casa, aquel verano, mucho dinero",
+    "respuesta": "La casa valio mucho dinero aquel verano.",
+    "pista": "completed action of the house being worth a lot of money that summer",
+    "grupos": [["la casa"], ["valio"], ["mucho dinero"], ["aquel verano"]]
+  },
+  {
+    "id": "vender-puntual-0",
+    "verbo": "vender",
+    "contexto": "el, el martes pasado, su coche viejo",
+    "respuesta": "El vendio su coche viejo el martes pasado.",
+    "pista": "completed action of selling his old car last Tuesday",
+    "grupos": [["el"], ["vendio"], ["su coche viejo"], ["el martes pasado"]]
+  },
+  {
+    "id": "vender-puntual-1",
+    "verbo": "vender",
+    "contexto": "ellos, hace una semana, todas las entradas",
+    "respuesta": "Ellos vendieron todas las entradas hace una semana.",
+    "pista": "completed action of selling all the tickets a week ago",
+    "grupos": [["ellos"], ["vendieron"], ["todas las entradas"], ["hace una semana"]]
+  },
+  {
+    "id": "venir-puntual-0",
+    "verbo": "venir",
+    "contexto": "ella, nada mas llegar, a saludarme",
+    "respuesta": "Ella vino a saludarme nada mas llegar.",
+    "pista": "completed action of coming to greet me right upon arriving",
+    "grupos": [["ella"], ["vino"], ["a saludarme"], ["nada mas llegar"]]
+  },
+  {
+    "id": "venir-puntual-1",
+    "verbo": "venir",
+    "contexto": "ellos, aquel verano, de muy lejos",
+    "respuesta": "Ellos vinieron de muy lejos aquel verano.",
+    "pista": "completed action of coming from very far away that summer",
+    "grupos": [["ellos"], ["vinieron"], ["de muy lejos"], ["aquel verano"]]
+  },
+  {
+    "id": "ver-puntual-0",
+    "verbo": "ver",
+    "contexto": "yo, de repente, a un viejo amigo",
+    "respuesta": "Yo vi a un viejo amigo de repente.",
+    "pista": "completed action of seeing an old friend suddenly",
+    "grupos": [["yo"], ["vi"], ["a un viejo amigo"], ["de repente"]]
+  },
+  {
+    "id": "ver-puntual-1",
+    "verbo": "ver",
+    "contexto": "ella, al anochecer, la pelicula entera",
+    "respuesta": "Ella vio la pelicula entera al anochecer.",
+    "pista": "completed action of watching the entire movie at nightfall",
+    "grupos": [["ella"], ["vio"], ["la pelicula entera"], ["al anochecer"]]
+  },
+  {
+    "id": "viajar-puntual-0",
+    "verbo": "viajar",
+    "contexto": "nosotros, aquel verano, a Europa",
+    "respuesta": "Nosotros viajamos a Europa aquel verano.",
+    "pista": "completed action of traveling to Europe that summer",
+    "grupos": [["nosotros"], ["viajamos"], ["a Europa"], ["aquel verano"]]
+  },
+  {
+    "id": "viajar-puntual-1",
+    "verbo": "viajar",
+    "contexto": "yo, hace una semana, en tren",
+    "respuesta": "Yo viaje en tren hace una semana.",
+    "pista": "completed action of traveling by train a week ago",
+    "grupos": [["yo"], ["viaje"], ["en tren"], ["hace una semana"]]
+  },
+  {
+    "id": "vivir-puntual-0",
+    "verbo": "vivir",
+    "contexto": "ella, aquel verano, en Barcelona",
+    "respuesta": "Ella vivio en Barcelona aquel verano.",
+    "pista": "completed action of living in Barcelona that summer",
+    "grupos": [["ella"], ["vivio"], ["en Barcelona"], ["aquel verano"]]
+  },
+  {
+    "id": "vivir-puntual-1",
+    "verbo": "vivir",
+    "contexto": "nosotros, durante el viaje, una aventura increible",
+    "respuesta": "Nosotros vivimos una aventura increible durante el viaje.",
+    "pista": "completed action of living an incredible adventure during the trip",
+    "grupos": [["nosotros"], ["vivimos"], ["una aventura increible"], ["durante el viaje"]]
+  },
+  {
+    "id": "volar-puntual-0",
+    "verbo": "volar",
+    "contexto": "el pajaro, al mediodia, hacia el sur",
+    "respuesta": "El pajaro volo hacia el sur al mediodia.",
+    "pista": "completed action of the bird flying south at noon",
+    "grupos": [["el pajaro"], ["volo"], ["hacia el sur"], ["al mediodia"]]
+  },
+  {
+    "id": "volar-puntual-1",
+    "verbo": "volar",
+    "contexto": "yo, el martes pasado, a Paris",
+    "respuesta": "Yo vole a Paris el martes pasado.",
+    "pista": "completed action of flying to Paris last Tuesday",
+    "grupos": [["yo"], ["vole"], ["a Paris"], ["el martes pasado"]]
+  },
+  {
+    "id": "volver-puntual-0",
+    "verbo": "volver",
+    "contexto": "ella, al anochecer, a casa",
+    "respuesta": "Ella volvio a casa al anochecer.",
+    "pista": "completed action of returning home at nightfall",
+    "grupos": [["ella"], ["volvio"], ["a casa"], ["al anochecer"]]
+  },
+  {
+    "id": "volver-puntual-1",
+    "verbo": "volver",
+    "contexto": "yo, tras la reunion, a mi oficina",
+    "respuesta": "Yo volvi a mi oficina tras la reunion.",
+    "pista": "completed action of returning to my office after the meeting",
+    "grupos": [["yo"], ["volvi"], ["a mi oficina"], ["tras la reunion"]]
+  }
+]

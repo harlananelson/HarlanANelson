@@ -1,0 +1,947 @@
+[
+  {
+    "id": "bajar-presente-0",
+    "verbo": "bajar",
+    "contexto": "yo, a veces, las escaleras",
+    "respuesta": "A veces, yo bajo las escaleras.",
+    "pista": "describing movement",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "bajo"
+      ],
+      [
+        "las escaleras"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "bajar-presente-1",
+    "verbo": "bajar",
+    "contexto": "él, hoy, del autobús",
+    "respuesta": "Él baja del autobús hoy.",
+    "pista": "narrating arrival",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "baja"
+      ],
+      [
+        "del autobus"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "bajar-presente-2",
+    "verbo": "bajar",
+    "contexto": "nosotros, en este momento, los precios",
+    "respuesta": "Nosotros bajamos los precios en este momento.",
+    "pista": "expressing a business action",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "bajamos"
+      ],
+      [
+        "los precios"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "bastar-presente-0",
+    "verbo": "bastar",
+    "contexto": "eso, actualmente, para todos",
+    "respuesta": "Actualmente, eso basta para todos.",
+    "pista": "expressing sufficiency",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "basta"
+      ],
+      [
+        "para todos"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "bastar-presente-1",
+    "verbo": "bastar",
+    "contexto": "ella, normalmente, con su presencia",
+    "respuesta": "Normalmente, ella basta con su presencia.",
+    "pista": "describing enough",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "basta"
+      ],
+      [
+        "con su presencia"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "bastar-presente-2",
+    "verbo": "bastar",
+    "contexto": "ellos, ahora, con poco dinero",
+    "respuesta": "Ellos bastan con poco dinero ahora.",
+    "pista": "expressing adequacy",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "bastan"
+      ],
+      [
+        "con poco dinero"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "beber-presente-0",
+    "verbo": "beber",
+    "contexto": "yo, a veces, agua",
+    "respuesta": "A veces, yo bebo agua.",
+    "pista": "describing a healthy habit",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "bebo"
+      ],
+      [
+        "agua"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "beber-presente-1",
+    "verbo": "beber",
+    "contexto": "tú, esta noche, café",
+    "respuesta": "Esta noche, tú bebes café.",
+    "pista": "talking about morning routine",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "bebes"
+      ],
+      [
+        "cafe"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "beber-presente-2",
+    "verbo": "beber",
+    "contexto": "nosotros, todos los días, jugo de naranja",
+    "respuesta": "Todos los días, nosotros bebemos jugo de naranja.",
+    "pista": "describing breakfast habits",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "bebemos"
+      ],
+      [
+        "jugo de naranja"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "besar-presente-0",
+    "verbo": "besar",
+    "contexto": "ella, ahora mismo, a su hijo",
+    "respuesta": "Ella besa a su hijo ahora mismo.",
+    "pista": "expressing maternal affection",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "besa"
+      ],
+      [
+        "a su hijo"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "besar-presente-1",
+    "verbo": "besar",
+    "contexto": "yo, actualmente, a mi pareja",
+    "respuesta": "Actualmente, yo beso a mi pareja.",
+    "pista": "describing a loving gesture",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "beso"
+      ],
+      [
+        "a mi pareja"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "besar-presente-2",
+    "verbo": "besar",
+    "contexto": "ellos, ahora mismo, a sus abuelos",
+    "respuesta": "Ahora mismo, ellos besan a sus abuelos.",
+    "pista": "narrating family customs",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "besan"
+      ],
+      [
+        "a sus abuelos"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "buscar-presente-0",
+    "verbo": "buscar",
+    "contexto": "yo, ahora, mis llaves",
+    "respuesta": "Ahora, yo busco mis llaves.",
+    "pista": "describing a search",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "busco"
+      ],
+      [
+        "mis llaves"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "buscar-presente-1",
+    "verbo": "buscar",
+    "contexto": "tú, mientras, trabajo",
+    "respuesta": "Mientras, tú buscas trabajo.",
+    "pista": "talking about job hunting",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "buscas"
+      ],
+      [
+        "trabajo"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "buscar-presente-2",
+    "verbo": "buscar",
+    "contexto": "nosotros, esta mañana, una solución",
+    "respuesta": "Nosotros buscamos una solución esta mañana.",
+    "pista": "expressing problem-solving",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "buscamos"
+      ],
+      [
+        "una solucion"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "caer-presente-0",
+    "verbo": "caer",
+    "contexto": "yo, actualmente, al suelo",
+    "respuesta": "Yo caigo al suelo actualmente.",
+    "pista": "describing an accident",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "caigo"
+      ],
+      [
+        "al suelo"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "caer-presente-1",
+    "verbo": "caer",
+    "contexto": "ella, cada vez que, de la silla",
+    "respuesta": "Cada vez que, ella cae de la silla.",
+    "pista": "narrating a mishap",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "cae"
+      ],
+      [
+        "de la silla"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "caer-presente-2",
+    "verbo": "caer",
+    "contexto": "ellos, en este momento, en la trampa",
+    "respuesta": "Ellos caen en la trampa en este momento.",
+    "pista": "describing a situation",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "caen"
+      ],
+      [
+        "en la trampa"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "callar-presente-0",
+    "verbo": "callar",
+    "contexto": "yo, esta noche, cuando es necesario",
+    "respuesta": "Yo callo cuando es necesario esta noche.",
+    "pista": "expressing self-control",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "callo"
+      ],
+      [
+        "cuando es necesario"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "callar-presente-1",
+    "verbo": "callar",
+    "contexto": "tú, esta noche, en clase",
+    "respuesta": "Tú callas en clase esta noche.",
+    "pista": "describing behavior",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "callas"
+      ],
+      [
+        "en clase"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "callar-presente-2",
+    "verbo": "callar",
+    "contexto": "ellos, esta mañana, durante la película",
+    "respuesta": "Ellos callan durante la película esta mañana.",
+    "pista": "narrating etiquette",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "callan"
+      ],
+      [
+        "durante la pelicula"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "calmar-presente-0",
+    "verbo": "calmar",
+    "contexto": "yo, esta tarde, a mi hijo",
+    "respuesta": "Esta tarde, yo calmo a mi hijo.",
+    "pista": "expressing a soothing action",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "calmo"
+      ],
+      [
+        "a mi hijo"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "calmar-presente-1",
+    "verbo": "calmar",
+    "contexto": "ella, cada semana, los nervios",
+    "respuesta": "Cada semana, ella calma los nervios.",
+    "pista": "describing her method",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "calma"
+      ],
+      [
+        "los nervios"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "calmar-presente-2",
+    "verbo": "calmar",
+    "contexto": "tú, siempre, a tu perro",
+    "respuesta": "Siempre, tú calmas a tu perro.",
+    "pista": "giving advice about pets",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "calmas"
+      ],
+      [
+        "a tu perro"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "cambiar-presente-0",
+    "verbo": "cambiar",
+    "contexto": "yo, ahora, de opinión",
+    "respuesta": "Yo cambio de opinión ahora.",
+    "pista": "expressing a change",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "cambio"
+      ],
+      [
+        "de opinion"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "cambiar-presente-1",
+    "verbo": "cambiar",
+    "contexto": "nosotros, todos los días, el plan",
+    "respuesta": "Todos los días, nosotros cambiamos el plan.",
+    "pista": "describing team decision",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "cambiamos"
+      ],
+      [
+        "el plan"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "cambiar-presente-2",
+    "verbo": "cambiar",
+    "contexto": "él, hoy, de ropa",
+    "respuesta": "Hoy, él cambia de ropa.",
+    "pista": "narrating a daily action",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "cambia"
+      ],
+      [
+        "de ropa"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "caminar-presente-0",
+    "verbo": "caminar",
+    "contexto": "yo, por lo general, al trabajo",
+    "respuesta": "Por lo general, yo camino al trabajo.",
+    "pista": "describing a commute",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "camino"
+      ],
+      [
+        "al trabajo"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "caminar-presente-1",
+    "verbo": "caminar",
+    "contexto": "ellos, cada semana, por la playa",
+    "respuesta": "Cada semana, ellos caminan por la playa.",
+    "pista": "narrating a leisure activity",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "caminan"
+      ],
+      [
+        "por la playa"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "caminar-presente-2",
+    "verbo": "caminar",
+    "contexto": "tú, ahora mismo, muy rápido",
+    "respuesta": "Ahora mismo, tú caminas muy rápido.",
+    "pista": "commenting on pace",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "caminas"
+      ],
+      [
+        "muy rapido"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "cantar-presente-0",
+    "verbo": "cantar",
+    "contexto": "ella, cada semana, una canción bonita",
+    "respuesta": "Cada semana, ella canta una canción bonita.",
+    "pista": "describing a performance",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "canta"
+      ],
+      [
+        "una cancion bonita"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "cantar-presente-1",
+    "verbo": "cantar",
+    "contexto": "yo, normalmente, en la ducha",
+    "respuesta": "Yo canto en la ducha normalmente.",
+    "pista": "expressing a fun habit",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "canto"
+      ],
+      [
+        "en la ducha"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "cantar-presente-2",
+    "verbo": "cantar",
+    "contexto": "nosotros, normalmente, en el coro",
+    "respuesta": "Nosotros cantamos en el coro normalmente.",
+    "pista": "talking about group activity",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "cantamos"
+      ],
+      [
+        "en el coro"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "casar-presente-0",
+    "verbo": "casar",
+    "contexto": "ella, cada vez que, a las parejas en la iglesia",
+    "respuesta": "Cada vez que, ella casa a las parejas en la iglesia.",
+    "pista": "describing a priest's duty",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "casa"
+      ],
+      [
+        "a las parejas en la iglesia"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "casar-presente-1",
+    "verbo": "casar",
+    "contexto": "yo, siempre, los colores perfectamente",
+    "respuesta": "Yo caso los colores perfectamente siempre.",
+    "pista": "expressing color matching",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "caso"
+      ],
+      [
+        "los colores perfectamente"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "casar-presente-2",
+    "verbo": "casar",
+    "contexto": "ellos, esta tarde, a su hija",
+    "respuesta": "Ellos casan a su hija esta tarde.",
+    "pista": "narrating a family event",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "casan"
+      ],
+      [
+        "a su hija"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "cerrar-presente-0",
+    "verbo": "cerrar",
+    "contexto": "yo, esta mañana, la ventana",
+    "respuesta": "Yo cierro la ventana esta mañana.",
+    "pista": "describing an action",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "cierro"
+      ],
+      [
+        "la ventana"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "cerrar-presente-1",
+    "verbo": "cerrar",
+    "contexto": "tú, actualmente, la tienda",
+    "respuesta": "Actualmente, tú cierras la tienda.",
+    "pista": "talking about work duties",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "cierras"
+      ],
+      [
+        "la tienda"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "cerrar-presente-2",
+    "verbo": "cerrar",
+    "contexto": "ella, ahora, los ojos",
+    "respuesta": "Ahora, ella cierra los ojos.",
+    "pista": "narrating a peaceful moment",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "cierra"
+      ],
+      [
+        "los ojos"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "coger-presente-0",
+    "verbo": "coger",
+    "contexto": "yo, hoy, el autobús",
+    "respuesta": "Hoy, yo cojo el autobús.",
+    "pista": "describing transportation",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "cojo"
+      ],
+      [
+        "el autobus"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "coger-presente-1",
+    "verbo": "coger",
+    "contexto": "tú, todos los días, un taxi",
+    "respuesta": "Todos los días, tú coges un taxi.",
+    "pista": "suggesting a mode of travel",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "coges"
+      ],
+      [
+        "un taxi"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "coger-presente-2",
+    "verbo": "coger",
+    "contexto": "nosotros, cada vez que, las maletas",
+    "respuesta": "Cada vez que, nosotros cogemos las maletas.",
+    "pista": "describing trip preparation",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "cogemos"
+      ],
+      [
+        "las maletas"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "comenzar-presente-0",
+    "verbo": "comenzar",
+    "contexto": "nosotros, cada vez que, el proyecto",
+    "respuesta": "Nosotros comenzamos el proyecto cada vez que.",
+    "pista": "expressing a new start",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "comenzamos"
+      ],
+      [
+        "el proyecto"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "comenzar-presente-1",
+    "verbo": "comenzar",
+    "contexto": "yo, en este momento, a estudiar",
+    "respuesta": "Yo comienzo a estudiar en este momento.",
+    "pista": "describing the start of an activity",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "comienzo"
+      ],
+      [
+        "a estudiar"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "comenzar-presente-2",
+    "verbo": "comenzar",
+    "contexto": "él, por lo general, su nuevo trabajo",
+    "respuesta": "Él comienza su nuevo trabajo por lo general.",
+    "pista": "narrating a career change",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "comienza"
+      ],
+      [
+        "su nuevo trabajo"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,884 @@
+[
+  {
+    "id": "robar-condicional-0",
+    "verbo": "robar",
+    "contexto": "él, con más tiempo, un beso",
+    "respuesta": "él robaría un beso con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "robaria"
+      ],
+      [
+        "un beso"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "robar-condicional-1",
+    "verbo": "robar",
+    "contexto": "usted, con más dinero, un beso",
+    "respuesta": "usted robaría un beso con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "robaria"
+      ],
+      [
+        "un beso"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "robar-condicional-2",
+    "verbo": "robar",
+    "contexto": "yo, con más experiencia, un beso",
+    "respuesta": "yo robaría un beso con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "robaria"
+      ],
+      [
+        "un beso"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "romper-condicional-0",
+    "verbo": "romper",
+    "contexto": "yo, en tu lugar, las reglas",
+    "respuesta": "yo rompería las reglas en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "romperia"
+      ],
+      [
+        "las reglas"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "romper-condicional-1",
+    "verbo": "romper",
+    "contexto": "ella, en esa situación, las reglas",
+    "respuesta": "ella rompería las reglas en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "romperia"
+      ],
+      [
+        "las reglas"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "romper-condicional-2",
+    "verbo": "romper",
+    "contexto": "ellos, en un mundo ideal, las reglas",
+    "respuesta": "ellos romperían las reglas en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "romperian"
+      ],
+      [
+        "las reglas"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "saber-condicional-0",
+    "verbo": "saber",
+    "contexto": "tú, si pudieras, sin pensarlo",
+    "respuesta": "tú sabrías sin pensarlo si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "sabrias"
+      ],
+      [
+        "sin pensarlo"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "saber-condicional-1",
+    "verbo": "saber",
+    "contexto": "nosotros, si fuera posible, sin dudar",
+    "respuesta": "nosotros sabríamos sin dudar si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "sabriamos"
+      ],
+      [
+        "sin dudar"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "saber-condicional-2",
+    "verbo": "saber",
+    "contexto": "ustedes, de ser posible, sin demora",
+    "respuesta": "ustedes sabrían sin demora de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "sabrian"
+      ],
+      [
+        "sin demora"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "sacar-condicional-0",
+    "verbo": "sacar",
+    "contexto": "él, con más tiempo, conclusiones",
+    "respuesta": "él sacaría conclusiones con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "sacaria"
+      ],
+      [
+        "conclusiones"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "sacar-condicional-1",
+    "verbo": "sacar",
+    "contexto": "usted, con más dinero, conclusiones",
+    "respuesta": "usted sacaría conclusiones con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "sacaria"
+      ],
+      [
+        "conclusiones"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "sacar-condicional-2",
+    "verbo": "sacar",
+    "contexto": "yo, con más experiencia, conclusiones",
+    "respuesta": "yo sacaría conclusiones con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "sacaria"
+      ],
+      [
+        "conclusiones"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "salir-condicional-0",
+    "verbo": "salir",
+    "contexto": "yo, en tu lugar, a cenar",
+    "respuesta": "yo saldría a cenar en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "saldria"
+      ],
+      [
+        "a cenar"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "salir-condicional-1",
+    "verbo": "salir",
+    "contexto": "ella, en esa situación, a cenar",
+    "respuesta": "ella saldría a cenar en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "saldria"
+      ],
+      [
+        "a cenar"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "salir-condicional-2",
+    "verbo": "salir",
+    "contexto": "ellos, en un mundo ideal, a cenar",
+    "respuesta": "ellos saldrían a cenar en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "saldrian"
+      ],
+      [
+        "a cenar"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "salvar-condicional-0",
+    "verbo": "salvar",
+    "contexto": "tú, si pudieras, al mundo",
+    "respuesta": "tú salvarías al mundo si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "salvarias"
+      ],
+      [
+        "al mundo"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "salvar-condicional-1",
+    "verbo": "salvar",
+    "contexto": "nosotros, si fuera posible, al mundo",
+    "respuesta": "nosotros salvaríamos al mundo si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "salvariamos"
+      ],
+      [
+        "al mundo"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "salvar-condicional-2",
+    "verbo": "salvar",
+    "contexto": "ustedes, de ser posible, al mundo",
+    "respuesta": "ustedes salvarían al mundo de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "salvarian"
+      ],
+      [
+        "al mundo"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "seguir-condicional-0",
+    "verbo": "seguir",
+    "contexto": "él, con más tiempo, con la misión",
+    "respuesta": "él seguiría con la misión con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "seguiria"
+      ],
+      [
+        "con la mision"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "seguir-condicional-1",
+    "verbo": "seguir",
+    "contexto": "usted, con más dinero, con la misión",
+    "respuesta": "usted seguiría con la misión con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "seguiria"
+      ],
+      [
+        "con la mision"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "seguir-condicional-2",
+    "verbo": "seguir",
+    "contexto": "yo, con más experiencia, con la misión",
+    "respuesta": "yo seguiría con la misión con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "seguiria"
+      ],
+      [
+        "con la mision"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "señalar-condicional-0",
+    "verbo": "señalar",
+    "contexto": "yo, en tu lugar, el camino",
+    "respuesta": "yo señalaría el camino en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "senalaria"
+      ],
+      [
+        "el camino"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "señalar-condicional-1",
+    "verbo": "señalar",
+    "contexto": "ella, en esa situación, el camino",
+    "respuesta": "ella señalaría el camino en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "senalaria"
+      ],
+      [
+        "el camino"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "señalar-condicional-2",
+    "verbo": "señalar",
+    "contexto": "ellos, en un mundo ideal, el camino",
+    "respuesta": "ellos señalarían el camino en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "senalarian"
+      ],
+      [
+        "el camino"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "sentar-condicional-0",
+    "verbo": "sentar",
+    "contexto": "tú, si pudieras, las bases",
+    "respuesta": "tú sentarías las bases si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "sentarias"
+      ],
+      [
+        "las bases"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "sentar-condicional-1",
+    "verbo": "sentar",
+    "contexto": "nosotros, si fuera posible, las bases",
+    "respuesta": "nosotros sentaríamos las bases si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "sentariamos"
+      ],
+      [
+        "las bases"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "sentar-condicional-2",
+    "verbo": "sentar",
+    "contexto": "ustedes, de ser posible, las bases",
+    "respuesta": "ustedes sentarían las bases de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "sentarian"
+      ],
+      [
+        "las bases"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "sentir-condicional-0",
+    "verbo": "sentir",
+    "contexto": "él, con más tiempo, más gratitud",
+    "respuesta": "él sentiría más gratitud con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "sentiria"
+      ],
+      [
+        "mas gratitud"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "sentir-condicional-1",
+    "verbo": "sentir",
+    "contexto": "usted, con más dinero, más gratitud",
+    "respuesta": "usted sentiría más gratitud con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "sentiria"
+      ],
+      [
+        "mas gratitud"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "sentir-condicional-2",
+    "verbo": "sentir",
+    "contexto": "yo, con más experiencia, más gratitud",
+    "respuesta": "yo sentiría más gratitud con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "sentiria"
+      ],
+      [
+        "mas gratitud"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "ser-condicional-0",
+    "verbo": "ser",
+    "contexto": "yo, en tu lugar, más paciente",
+    "respuesta": "yo sería más paciente en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "seria"
+      ],
+      [
+        "mas paciente"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "ser-condicional-1",
+    "verbo": "ser",
+    "contexto": "ella, en esa situación, más paciente",
+    "respuesta": "ella sería más paciente en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "seria"
+      ],
+      [
+        "mas paciente"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "ser-condicional-2",
+    "verbo": "ser",
+    "contexto": "ellos, en un mundo ideal, más paciente",
+    "respuesta": "ellos serían más paciente en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "serian"
+      ],
+      [
+        "mas paciente"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "servir-condicional-0",
+    "verbo": "servir",
+    "contexto": "tú, si pudieras, la cena",
+    "respuesta": "tú servirías la cena si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "servirias"
+      ],
+      [
+        "la cena"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "servir-condicional-1",
+    "verbo": "servir",
+    "contexto": "nosotros, si fuera posible, la cena",
+    "respuesta": "nosotros serviríamos la cena si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "serviriamos"
+      ],
+      [
+        "la cena"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "servir-condicional-2",
+    "verbo": "servir",
+    "contexto": "ustedes, de ser posible, la cena",
+    "respuesta": "ustedes servirían la cena de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "servirian"
+      ],
+      [
+        "la cena"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "significar-condicional-0",
+    "verbo": "significar",
+    "contexto": "él, con más tiempo, algo especial",
+    "respuesta": "él significaría algo especial con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "significaria"
+      ],
+      [
+        "algo especial"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "significar-condicional-1",
+    "verbo": "significar",
+    "contexto": "usted, con más dinero, algo especial",
+    "respuesta": "usted significaría algo especial con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "significaria"
+      ],
+      [
+        "algo especial"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "significar-condicional-2",
+    "verbo": "significar",
+    "contexto": "yo, con más experiencia, algo especial",
+    "respuesta": "yo significaría algo especial con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "significaria"
+      ],
+      [
+        "algo especial"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "soler-condicional-0",
+    "verbo": "soler",
+    "contexto": "yo, en tu lugar, ir al parque",
+    "respuesta": "yo solería ir al parque en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "soleria"
+      ],
+      [
+        "ir al parque"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "soler-condicional-1",
+    "verbo": "soler",
+    "contexto": "ella, en esa situación, ir al parque",
+    "respuesta": "ella solería ir al parque en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "soleria"
+      ],
+      [
+        "ir al parque"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "soler-condicional-2",
+    "verbo": "soler",
+    "contexto": "ellos, en un mundo ideal, ir al parque",
+    "respuesta": "ellos solerían ir al parque en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "solerian"
+      ],
+      [
+        "ir al parque"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  }
+]

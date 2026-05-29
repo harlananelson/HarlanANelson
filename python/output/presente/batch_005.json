@@ -1,0 +1,947 @@
+[
+  {
+    "id": "dejar-presente-0",
+    "verbo": "dejar",
+    "contexto": "yo, ahora mismo, el café sobre la mesa",
+    "respuesta": "Ahora mismo, yo dejo el café sobre la mesa.",
+    "pista": "describing a simple action",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "dejo"
+      ],
+      [
+        "el cafe sobre la mesa"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "dejar-presente-1",
+    "verbo": "dejar",
+    "contexto": "tú, por lo general, todo en orden",
+    "respuesta": "Tú dejas todo en orden por lo general.",
+    "pista": "talking about tidiness",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "dejas"
+      ],
+      [
+        "todo en orden"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "dejar-presente-2",
+    "verbo": "dejar",
+    "contexto": "ella, a veces, de fumar",
+    "respuesta": "Ella deja de fumar a veces.",
+    "pista": "narrating quitting a habit",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "deja"
+      ],
+      [
+        "de fumar"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "demostrar-presente-0",
+    "verbo": "demostrar",
+    "contexto": "yo, cada semana, mi capacidad",
+    "respuesta": "Yo demuestro mi capacidad cada semana.",
+    "pista": "expressing proof of ability",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "demuestro"
+      ],
+      [
+        "mi capacidad"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "demostrar-presente-1",
+    "verbo": "demostrar",
+    "contexto": "él, ahora mismo, su talento",
+    "respuesta": "Él demuestra su talento ahora mismo.",
+    "pista": "narrating talent display",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "demuestra"
+      ],
+      [
+        "su talento"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "demostrar-presente-2",
+    "verbo": "demostrar",
+    "contexto": "nosotros, esta tarde, los resultados",
+    "respuesta": "Nosotros demostramos los resultados esta tarde.",
+    "pista": "presenting findings",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "demostramos"
+      ],
+      [
+        "los resultados"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "depender-presente-0",
+    "verbo": "depender",
+    "contexto": "eso, esta noche, de ti",
+    "respuesta": "Esta noche, eso depende de ti.",
+    "pista": "expressing reliance",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "depende"
+      ],
+      [
+        "de ti"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "depender-presente-1",
+    "verbo": "depender",
+    "contexto": "yo, esta mañana, de mi trabajo",
+    "respuesta": "Esta mañana, yo dependo de mi trabajo.",
+    "pista": "describing financial dependence",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "dependo"
+      ],
+      [
+        "de mi trabajo"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "depender-presente-2",
+    "verbo": "depender",
+    "contexto": "nosotros, en este momento, del clima",
+    "respuesta": "En este momento, nosotros dependemos del clima.",
+    "pista": "expressing conditional planning",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "dependemos"
+      ],
+      [
+        "del clima"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "desaparecer-presente-0",
+    "verbo": "desaparecer",
+    "contexto": "él, siempre, sin dejar rastro",
+    "respuesta": "Siempre, él desaparece sin dejar rastro.",
+    "pista": "narrating a mystery",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "desaparece"
+      ],
+      [
+        "sin dejar rastro"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "desaparecer-presente-1",
+    "verbo": "desaparecer",
+    "contexto": "yo, ahora mismo, de las redes sociales",
+    "respuesta": "Yo desaparezco de las redes sociales ahora mismo.",
+    "pista": "describing digital absence",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "desaparezco"
+      ],
+      [
+        "de las redes sociales"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "desaparecer-presente-2",
+    "verbo": "desaparecer",
+    "contexto": "ellos, todos los días, entre la multitud",
+    "respuesta": "Ellos desaparecen entre la multitud todos los días.",
+    "pista": "narrating a crowded scene",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "desaparecen"
+      ],
+      [
+        "entre la multitud"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "desarrollar-presente-0",
+    "verbo": "desarrollar",
+    "contexto": "nosotros, ahora, una aplicación nueva",
+    "respuesta": "Nosotros desarrollamos una aplicación nueva ahora.",
+    "pista": "describing tech work",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "desarrollamos"
+      ],
+      [
+        "una aplicacion nueva"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "desarrollar-presente-1",
+    "verbo": "desarrollar",
+    "contexto": "yo, en este momento, mis habilidades",
+    "respuesta": "En este momento, yo desarrollo mis habilidades.",
+    "pista": "expressing self-improvement",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "desarrollo"
+      ],
+      [
+        "mis habilidades"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "desarrollar-presente-2",
+    "verbo": "desarrollar",
+    "contexto": "ella, por lo general, un plan estratégico",
+    "respuesta": "Ella desarrolla un plan estratégico por lo general.",
+    "pista": "narrating professional work",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "desarrolla"
+      ],
+      [
+        "un plan estrategico"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "descubrir-presente-0",
+    "verbo": "descubrir",
+    "contexto": "yo, actualmente, algo nuevo",
+    "respuesta": "Yo descubro algo nuevo actualmente.",
+    "pista": "expressing discovery",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "descubro"
+      ],
+      [
+        "algo nuevo"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "descubrir-presente-1",
+    "verbo": "descubrir",
+    "contexto": "tú, esta noche, la verdad",
+    "respuesta": "Tú descubres la verdad esta noche.",
+    "pista": "describing revelation",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "descubres"
+      ],
+      [
+        "la verdad"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "descubrir-presente-2",
+    "verbo": "descubrir",
+    "contexto": "ellos, por lo general, un tesoro escondido",
+    "respuesta": "Ellos descubren un tesoro escondido por lo general.",
+    "pista": "narrating an adventure",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "descubren"
+      ],
+      [
+        "un tesoro escondido"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "desear-presente-0",
+    "verbo": "desear",
+    "contexto": "yo, todos los días, paz en el mundo",
+    "respuesta": "Todos los días, yo deseo paz en el mundo.",
+    "pista": "expressing a wish",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "deseo"
+      ],
+      [
+        "paz en el mundo"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "desear-presente-1",
+    "verbo": "desear",
+    "contexto": "ella, actualmente, viajar por Europa",
+    "respuesta": "Ella desea viajar por Europa actualmente.",
+    "pista": "describing her dreams",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "desea"
+      ],
+      [
+        "viajar por Europa"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "desear-presente-2",
+    "verbo": "desear",
+    "contexto": "nosotros, ahora mismo, un buen resultado",
+    "respuesta": "Ahora mismo, nosotros deseamos un buen resultado.",
+    "pista": "expressing hope",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "deseamos"
+      ],
+      [
+        "un buen resultado"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "despedir-presente-0",
+    "verbo": "despedir",
+    "contexto": "yo, en este momento, a mi amigo en el aeropuerto",
+    "respuesta": "Yo despido a mi amigo en el aeropuerto en este momento.",
+    "pista": "describing a farewell",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "despido"
+      ],
+      [
+        "a mi amigo en el aeropuerto"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "despedir-presente-1",
+    "verbo": "despedir",
+    "contexto": "ella, siempre, a los invitados",
+    "respuesta": "Ella despide a los invitados siempre.",
+    "pista": "narrating a goodbye",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "despide"
+      ],
+      [
+        "a los invitados"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "despedir-presente-2",
+    "verbo": "despedir",
+    "contexto": "nosotros, cada vez que, el año viejo",
+    "respuesta": "Cada vez que, nosotros despedimos el año viejo.",
+    "pista": "talking about New Year traditions",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "despedimos"
+      ],
+      [
+        "el ano viejo"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "despertar-presente-0",
+    "verbo": "despertar",
+    "contexto": "yo, cada vez que, a las seis de la mañana",
+    "respuesta": "Cada vez que, yo despierto a las seis de la mañana.",
+    "pista": "describing a morning routine",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "despierto"
+      ],
+      [
+        "a las seis de la manana"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "despertar-presente-1",
+    "verbo": "despertar",
+    "contexto": "tú, hoy, muy temprano",
+    "respuesta": "Tú despiertas muy temprano hoy.",
+    "pista": "commenting on wake-up time",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "despiertas"
+      ],
+      [
+        "muy temprano"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "despertar-presente-2",
+    "verbo": "despertar",
+    "contexto": "ella, esta mañana, al bebé sin querer",
+    "respuesta": "Ella despierta al bebé sin querer esta mañana.",
+    "pista": "narrating an accident",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "despierta"
+      ],
+      [
+        "al bebe sin querer"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "destruir-presente-0",
+    "verbo": "destruir",
+    "contexto": "ellos, esta mañana, el edificio viejo",
+    "respuesta": "Ellos destruyen el edificio viejo esta mañana.",
+    "pista": "describing demolition",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "destruyen"
+      ],
+      [
+        "el edificio viejo"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "destruir-presente-1",
+    "verbo": "destruir",
+    "contexto": "yo, en este momento, las pruebas",
+    "respuesta": "En este momento, yo destruyo las pruebas.",
+    "pista": "narrating evidence destruction",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "destruyo"
+      ],
+      [
+        "las pruebas"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "destruir-presente-2",
+    "verbo": "destruir",
+    "contexto": "ella, actualmente, todo a su paso",
+    "respuesta": "Ella destruye todo a su paso actualmente.",
+    "pista": "expressing figurative damage",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "destruye"
+      ],
+      [
+        "todo a su paso"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "detener-presente-0",
+    "verbo": "detener",
+    "contexto": "yo, a veces, el coche en el semáforo",
+    "respuesta": "Yo detengo el coche en el semáforo a veces.",
+    "pista": "describing driving",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "detengo"
+      ],
+      [
+        "el coche en el semaforo"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "detener-presente-1",
+    "verbo": "detener",
+    "contexto": "ella, esta noche, la pelea",
+    "respuesta": "Ella detiene la pelea esta noche.",
+    "pista": "narrating intervention",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "detiene"
+      ],
+      [
+        "la pelea"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "detener-presente-2",
+    "verbo": "detener",
+    "contexto": "ellos, esta tarde, al sospechoso",
+    "respuesta": "Esta tarde, ellos detienen al sospechoso.",
+    "pista": "describing law enforcement",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "detienen"
+      ],
+      [
+        "al sospechoso"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "devolver-presente-0",
+    "verbo": "devolver",
+    "contexto": "yo, actualmente, el libro a la biblioteca",
+    "respuesta": "Actualmente, yo devuelvo el libro a la biblioteca.",
+    "pista": "describing a return",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "devuelvo"
+      ],
+      [
+        "el libro a la biblioteca"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "devolver-presente-1",
+    "verbo": "devolver",
+    "contexto": "tú, mientras, el dinero",
+    "respuesta": "Tú devuelves el dinero mientras.",
+    "pista": "talking about repayment",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "devuelves"
+      ],
+      [
+        "el dinero"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "devolver-presente-2",
+    "verbo": "devolver",
+    "contexto": "nosotros, esta tarde, los productos defectuosos",
+    "respuesta": "Esta tarde, nosotros devolvemos los productos defectuosos.",
+    "pista": "describing consumer rights",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "devolvemos"
+      ],
+      [
+        "los productos defectuosos"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "dirigir-presente-0",
+    "verbo": "dirigir",
+    "contexto": "yo, a veces, la empresa",
+    "respuesta": "A veces, yo dirijo la empresa.",
+    "pista": "expressing leadership",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "dirijo"
+      ],
+      [
+        "la empresa"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "dirigir-presente-1",
+    "verbo": "dirigir",
+    "contexto": "ella, siempre, el equipo de ventas",
+    "respuesta": "Siempre, ella dirige el equipo de ventas.",
+    "pista": "narrating management",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "dirige"
+      ],
+      [
+        "el equipo de ventas"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "dirigir-presente-2",
+    "verbo": "dirigir",
+    "contexto": "él, esta mañana, la orquesta",
+    "respuesta": "Esta mañana, él dirige la orquesta.",
+    "pista": "describing a conductor's role",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "dirige"
+      ],
+      [
+        "la orquesta"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "disculpar-presente-0",
+    "verbo": "disculpar",
+    "contexto": "yo, cada semana, a mi amigo",
+    "respuesta": "Cada semana, yo disculpo a mi amigo.",
+    "pista": "expressing forgiveness",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "disculpo"
+      ],
+      [
+        "a mi amigo"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "disculpar-presente-1",
+    "verbo": "disculpar",
+    "contexto": "ella, hoy, el retraso",
+    "respuesta": "Hoy, ella disculpa el retraso.",
+    "pista": "apologizing for lateness",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "disculpa"
+      ],
+      [
+        "el retraso"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "disculpar-presente-2",
+    "verbo": "disculpar",
+    "contexto": "nosotros, cada semana, los errores del pasado",
+    "respuesta": "Cada semana, nosotros disculpamos los errores del pasado.",
+    "pista": "expressing understanding",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "disculpamos"
+      ],
+      [
+        "los errores del pasado"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "discutir-presente-0",
+    "verbo": "discutir",
+    "contexto": "nosotros, actualmente, el tema en la reunión",
+    "respuesta": "Nosotros discutamos el tema en la reunión actualmente.",
+    "pista": "describing a meeting",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "discutamos"
+      ],
+      [
+        "el tema en la reunion"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "discutir-presente-1",
+    "verbo": "discutir",
+    "contexto": "yo, a veces, con mi hermano",
+    "respuesta": "A veces, yo discuto con mi hermano.",
+    "pista": "expressing family dynamics",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "discuto"
+      ],
+      [
+        "con mi hermano"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "discutir-presente-2",
+    "verbo": "discutir",
+    "contexto": "ellos, cada semana, sobre política",
+    "respuesta": "Cada semana, ellos discutan sobre política.",
+    "pista": "narrating a debate",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "discutan"
+      ],
+      [
+        "sobre politica"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,947 @@
+[
+  {
+    "id": "enviar-futuro-0",
+    "verbo": "enviar",
+    "contexto": "yo, pasado mañana, un correo",
+    "respuesta": "Yo enviaré un correo pasado mañana.",
+    "pista": "El futuro simple puede expresar probabilidad en el presente",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "enviare"
+      ],
+      [
+        "un correo"
+      ],
+      [
+        "pasado manana"
+      ]
+    ]
+  },
+  {
+    "id": "enviar-futuro-1",
+    "verbo": "enviar",
+    "contexto": "tú, algún día, el paquete",
+    "respuesta": "Tú enviarás el paquete algún día.",
+    "pista": "Las terminaciones del futuro son iguales para las tres conjugaciones",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "enviaras"
+      ],
+      [
+        "el paquete"
+      ],
+      [
+        "algun dia"
+      ]
+    ]
+  },
+  {
+    "id": "enviar-futuro-2",
+    "verbo": "enviar",
+    "contexto": "la empresa, dentro de poco, la mercancía",
+    "respuesta": "La empresa enviará la mercancía dentro de poco.",
+    "pista": "Las terminaciones del futuro son iguales para las tres conjugaciones",
+    "grupos": [
+      [
+        "la empresa"
+      ],
+      [
+        "enviara"
+      ],
+      [
+        "la mercancia"
+      ],
+      [
+        "dentro de poco"
+      ]
+    ]
+  },
+  {
+    "id": "escapar-futuro-0",
+    "verbo": "escapar",
+    "contexto": "el prisionero, la próxima vez, de la cárcel",
+    "respuesta": "El prisionero escapará de la cárcel la próxima vez.",
+    "pista": "Usa el futuro para expresar acciones que ocurrirán",
+    "grupos": [
+      [
+        "el prisionero"
+      ],
+      [
+        "escapara"
+      ],
+      [
+        "de la carcel"
+      ],
+      [
+        "la proxima vez"
+      ]
+    ]
+  },
+  {
+    "id": "escapar-futuro-1",
+    "verbo": "escapar",
+    "contexto": "yo, la semana que viene, de la rutina",
+    "respuesta": "Yo escaparé de la rutina la semana que viene.",
+    "pista": "El futuro simple se forma con el infinitivo + terminación",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "escapare"
+      ],
+      [
+        "de la rutina"
+      ],
+      [
+        "la semana que viene"
+      ]
+    ]
+  },
+  {
+    "id": "escapar-futuro-2",
+    "verbo": "escapar",
+    "contexto": "nosotros, el año que viene, al campo",
+    "respuesta": "Nosotros escaparemos al campo el año que viene.",
+    "pista": "El futuro simple se forma con el infinitivo + terminación",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "escaparemos"
+      ],
+      [
+        "al campo"
+      ],
+      [
+        "el ano que viene"
+      ]
+    ]
+  },
+  {
+    "id": "esconder-futuro-0",
+    "verbo": "esconder",
+    "contexto": "yo, en unos minutos, el regalo",
+    "respuesta": "Yo esconderé el regalo en unos minutos.",
+    "pista": "El futuro expresa planes, predicciones o intenciones",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "escondere"
+      ],
+      [
+        "el regalo"
+      ],
+      [
+        "en unos minutos"
+      ]
+    ]
+  },
+  {
+    "id": "esconder-futuro-1",
+    "verbo": "esconder",
+    "contexto": "tú, mañana, las llaves",
+    "respuesta": "Tú esconderás las llaves mañana.",
+    "pista": "El futuro simple se forma con el infinitivo + terminación",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "esconderas"
+      ],
+      [
+        "las llaves"
+      ],
+      [
+        "manana"
+      ]
+    ]
+  },
+  {
+    "id": "esconder-futuro-2",
+    "verbo": "esconder",
+    "contexto": "el niño, esta noche, los juguetes",
+    "respuesta": "El niño esconderá los juguetes esta noche.",
+    "pista": "El futuro expresa planes, predicciones o intenciones",
+    "grupos": [
+      [
+        "el nino"
+      ],
+      [
+        "escondera"
+      ],
+      [
+        "los juguetes"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "escribir-futuro-0",
+    "verbo": "escribir",
+    "contexto": "yo, el próximo mes, una novela",
+    "respuesta": "Yo escribiré una novela el próximo mes.",
+    "pista": "El futuro simple se forma con el infinitivo + terminación",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "escribire"
+      ],
+      [
+        "una novela"
+      ],
+      [
+        "el proximo mes"
+      ]
+    ]
+  },
+  {
+    "id": "escribir-futuro-1",
+    "verbo": "escribir",
+    "contexto": "tú, el lunes, una carta",
+    "respuesta": "Tú escribirás una carta el lunes.",
+    "pista": "El futuro simple indica una acción posterior al momento de hablar",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "escribiras"
+      ],
+      [
+        "una carta"
+      ],
+      [
+        "el lunes"
+      ]
+    ]
+  },
+  {
+    "id": "escribir-futuro-2",
+    "verbo": "escribir",
+    "contexto": "el periodista, dentro de una hora, un artículo",
+    "respuesta": "El periodista escribirá un artículo dentro de una hora.",
+    "pista": "El futuro simple indica una acción posterior al momento de hablar",
+    "grupos": [
+      [
+        "el periodista"
+      ],
+      [
+        "escribira"
+      ],
+      [
+        "un articulo"
+      ],
+      [
+        "dentro de una hora"
+      ]
+    ]
+  },
+  {
+    "id": "escuchar-futuro-0",
+    "verbo": "escuchar",
+    "contexto": "yo, en el futuro, música clásica",
+    "respuesta": "Yo escucharé música clásica en el futuro.",
+    "pista": "Usa el futuro para expresar acciones que ocurrirán",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "escuchare"
+      ],
+      [
+        "musica clasica"
+      ],
+      [
+        "en el futuro"
+      ]
+    ]
+  },
+  {
+    "id": "escuchar-futuro-1",
+    "verbo": "escuchar",
+    "contexto": "tú, pasado mañana, las noticias",
+    "respuesta": "Tú escucharás las noticias pasado mañana.",
+    "pista": "El futuro expresa planes, predicciones o intenciones",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "escucharas"
+      ],
+      [
+        "las noticias"
+      ],
+      [
+        "pasado manana"
+      ]
+    ]
+  },
+  {
+    "id": "escuchar-futuro-2",
+    "verbo": "escuchar",
+    "contexto": "nosotros, algún día, al profesor",
+    "respuesta": "Nosotros escucharemos al profesor algún día.",
+    "pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "escucharemos"
+      ],
+      [
+        "al profesor"
+      ],
+      [
+        "algun dia"
+      ]
+    ]
+  },
+  {
+    "id": "esperar-futuro-0",
+    "verbo": "esperar",
+    "contexto": "yo, esta noche, buenas noticias",
+    "respuesta": "Yo esperaré buenas noticias esta noche.",
+    "pista": "El futuro simple indica una acción posterior al momento de hablar",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "esperare"
+      ],
+      [
+        "buenas noticias"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "esperar-futuro-1",
+    "verbo": "esperar",
+    "contexto": "nosotros, en unos minutos, en la estación",
+    "respuesta": "Nosotros esperaremos en la estación en unos minutos.",
+    "pista": "Usa el futuro para hablar de planes y proyectos",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "esperaremos"
+      ],
+      [
+        "en la estacion"
+      ],
+      [
+        "en unos minutos"
+      ]
+    ]
+  },
+  {
+    "id": "esperar-futuro-2",
+    "verbo": "esperar",
+    "contexto": "tú, mañana, con paciencia",
+    "respuesta": "Tú esperarás con paciencia mañana.",
+    "pista": "El futuro simple indica una acción posterior al momento de hablar",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "esperaras"
+      ],
+      [
+        "con paciencia"
+      ],
+      [
+        "manana"
+      ]
+    ]
+  },
+  {
+    "id": "estar-futuro-0",
+    "verbo": "estar",
+    "contexto": "yo, la próxima vez, en casa",
+    "respuesta": "Yo estaré en casa la próxima vez.",
+    "pista": "Usa el futuro para expresar acciones que ocurrirán",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "estare"
+      ],
+      [
+        "en casa"
+      ],
+      [
+        "la proxima vez"
+      ]
+    ]
+  },
+  {
+    "id": "estar-futuro-1",
+    "verbo": "estar",
+    "contexto": "tú, el próximo mes, ocupado",
+    "respuesta": "Tú estarás ocupado el próximo mes.",
+    "pista": "El futuro simple se forma con el infinitivo + terminación",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "estaras"
+      ],
+      [
+        "ocupado"
+      ],
+      [
+        "el proximo mes"
+      ]
+    ]
+  },
+  {
+    "id": "estar-futuro-2",
+    "verbo": "estar",
+    "contexto": "nosotros, mañana, de vacaciones",
+    "respuesta": "Nosotros estaremos de vacaciones mañana.",
+    "pista": "Usa el futuro para hablar de planes y proyectos",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "estaremos"
+      ],
+      [
+        "de vacaciones"
+      ],
+      [
+        "manana"
+      ]
+    ]
+  },
+  {
+    "id": "estudiar-futuro-0",
+    "verbo": "estudiar",
+    "contexto": "yo, el año que viene, medicina",
+    "respuesta": "Yo estudiaré medicina el año que viene.",
+    "pista": "Las terminaciones del futuro son iguales para las tres conjugaciones",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "estudiare"
+      ],
+      [
+        "medicina"
+      ],
+      [
+        "el ano que viene"
+      ]
+    ]
+  },
+  {
+    "id": "estudiar-futuro-1",
+    "verbo": "estudiar",
+    "contexto": "tú, dentro de poco, para el examen",
+    "respuesta": "Tú estudiarás para el examen dentro de poco.",
+    "pista": "Usa el futuro para expresar acciones que ocurrirán",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "estudiaras"
+      ],
+      [
+        "para el examen"
+      ],
+      [
+        "dentro de poco"
+      ]
+    ]
+  },
+  {
+    "id": "estudiar-futuro-2",
+    "verbo": "estudiar",
+    "contexto": "los estudiantes, el lunes, toda la noche",
+    "respuesta": "Los estudiantes estudiarán toda la noche el lunes.",
+    "pista": "El futuro expresa planes, predicciones o intenciones",
+    "grupos": [
+      [
+        "los estudiantes"
+      ],
+      [
+        "estudiaran"
+      ],
+      [
+        "toda la noche"
+      ],
+      [
+        "el lunes"
+      ]
+    ]
+  },
+  {
+    "id": "evitar-futuro-0",
+    "verbo": "evitar",
+    "contexto": "yo, pronto, los problemas",
+    "respuesta": "Yo evitaré los problemas pronto.",
+    "pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "evitare"
+      ],
+      [
+        "los problemas"
+      ],
+      [
+        "pronto"
+      ]
+    ]
+  },
+  {
+    "id": "evitar-futuro-1",
+    "verbo": "evitar",
+    "contexto": "nosotros, en el futuro, errores",
+    "respuesta": "Nosotros evitaremos errores en el futuro.",
+    "pista": "Usa el futuro para expresar acciones que ocurrirán",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "evitaremos"
+      ],
+      [
+        "errores"
+      ],
+      [
+        "en el futuro"
+      ]
+    ]
+  },
+  {
+    "id": "evitar-futuro-2",
+    "verbo": "evitar",
+    "contexto": "tú, algún día, el tráfico",
+    "respuesta": "Tú evitarás el tráfico algún día.",
+    "pista": "El futuro simple se forma con el infinitivo + terminación",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "evitaras"
+      ],
+      [
+        "el trafico"
+      ],
+      [
+        "algun dia"
+      ]
+    ]
+  },
+  {
+    "id": "existir-futuro-0",
+    "verbo": "existir",
+    "contexto": "el problema, pronto, siempre",
+    "respuesta": "El problema existirá siempre pronto.",
+    "pista": "El futuro simple es uno de los tiempos más regulares del español",
+    "grupos": [
+      [
+        "el problema"
+      ],
+      [
+        "existira"
+      ],
+      [
+        "siempre"
+      ],
+      [
+        "pronto"
+      ]
+    ]
+  },
+  {
+    "id": "existir-futuro-1",
+    "verbo": "existir",
+    "contexto": "la oportunidad, pasado mañana, para todos",
+    "respuesta": "La oportunidad existirá para todos pasado mañana.",
+    "pista": "El futuro simple puede expresar probabilidad en el presente",
+    "grupos": [
+      [
+        "la oportunidad"
+      ],
+      [
+        "existira"
+      ],
+      [
+        "para todos"
+      ],
+      [
+        "pasado manana"
+      ]
+    ]
+  },
+  {
+    "id": "existir-futuro-2",
+    "verbo": "existir",
+    "contexto": "las diferencias, la semana que viene, entre nosotros",
+    "respuesta": "Las diferencias existirán entre nosotros la semana que viene.",
+    "pista": "El futuro simple es uno de los tiempos más regulares del español",
+    "grupos": [
+      [
+        "las diferencias"
+      ],
+      [
+        "existiran"
+      ],
+      [
+        "entre nosotros"
+      ],
+      [
+        "la semana que viene"
+      ]
+    ]
+  },
+  {
+    "id": "explicar-futuro-0",
+    "verbo": "explicar",
+    "contexto": "yo, dentro de poco, el tema",
+    "respuesta": "Yo explicaré el tema dentro de poco.",
+    "pista": "El futuro simple se forma con el infinitivo + terminación",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "explicare"
+      ],
+      [
+        "el tema"
+      ],
+      [
+        "dentro de poco"
+      ]
+    ]
+  },
+  {
+    "id": "explicar-futuro-1",
+    "verbo": "explicar",
+    "contexto": "el profesor, en unos minutos, la fórmula",
+    "respuesta": "El profesor explicará la fórmula en unos minutos.",
+    "pista": "El futuro se usa para hacer promesas y predicciones",
+    "grupos": [
+      [
+        "el profesor"
+      ],
+      [
+        "explicara"
+      ],
+      [
+        "la formula"
+      ],
+      [
+        "en unos minutos"
+      ]
+    ]
+  },
+  {
+    "id": "explicar-futuro-2",
+    "verbo": "explicar",
+    "contexto": "tú, dentro de una hora, tu punto de vista",
+    "respuesta": "Tú explicarás tu punto de vista dentro de una hora.",
+    "pista": "Las terminaciones del futuro son iguales para las tres conjugaciones",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "explicaras"
+      ],
+      [
+        "tu punto de vista"
+      ],
+      [
+        "dentro de una hora"
+      ]
+    ]
+  },
+  {
+    "id": "formar-futuro-0",
+    "verbo": "formar",
+    "contexto": "yo, mañana, un equipo",
+    "respuesta": "Yo formaré un equipo mañana.",
+    "pista": "El futuro se usa para hacer promesas y predicciones",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "formare"
+      ],
+      [
+        "un equipo"
+      ],
+      [
+        "manana"
+      ]
+    ]
+  },
+  {
+    "id": "formar-futuro-1",
+    "verbo": "formar",
+    "contexto": "nosotros, la próxima vez, una alianza",
+    "respuesta": "Nosotros formaremos una alianza la próxima vez.",
+    "pista": "Las terminaciones del futuro son iguales para las tres conjugaciones",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "formaremos"
+      ],
+      [
+        "una alianza"
+      ],
+      [
+        "la proxima vez"
+      ]
+    ]
+  },
+  {
+    "id": "formar-futuro-2",
+    "verbo": "formar",
+    "contexto": "la universidad, la semana que viene, buenos profesionales",
+    "respuesta": "La universidad formará buenos profesionales la semana que viene.",
+    "pista": "El futuro simple es uno de los tiempos más regulares del español",
+    "grupos": [
+      [
+        "la universidad"
+      ],
+      [
+        "formara"
+      ],
+      [
+        "buenos profesionales"
+      ],
+      [
+        "la semana que viene"
+      ]
+    ]
+  },
+  {
+    "id": "funcionar-futuro-0",
+    "verbo": "funcionar",
+    "contexto": "la máquina, el año que viene, correctamente",
+    "respuesta": "La máquina funcionará correctamente el año que viene.",
+    "pista": "Usa el futuro para hablar de planes y proyectos",
+    "grupos": [
+      [
+        "la maquina"
+      ],
+      [
+        "funcionara"
+      ],
+      [
+        "correctamente"
+      ],
+      [
+        "el ano que viene"
+      ]
+    ]
+  },
+  {
+    "id": "funcionar-futuro-1",
+    "verbo": "funcionar",
+    "contexto": "el plan, el lunes, sin problemas",
+    "respuesta": "El plan funcionará sin problemas el lunes.",
+    "pista": "El futuro se usa para hacer promesas y predicciones",
+    "grupos": [
+      [
+        "el plan"
+      ],
+      [
+        "funcionara"
+      ],
+      [
+        "sin problemas"
+      ],
+      [
+        "el lunes"
+      ]
+    ]
+  },
+  {
+    "id": "funcionar-futuro-2",
+    "verbo": "funcionar",
+    "contexto": "el sistema, pronto, mejor",
+    "respuesta": "El sistema funcionará mejor pronto.",
+    "pista": "Las terminaciones del futuro son iguales para las tres conjugaciones",
+    "grupos": [
+      [
+        "el sistema"
+      ],
+      [
+        "funcionara"
+      ],
+      [
+        "mejor"
+      ],
+      [
+        "pronto"
+      ]
+    ]
+  },
+  {
+    "id": "ganar-futuro-0",
+    "verbo": "ganar",
+    "contexto": "yo, algún día, el partido",
+    "respuesta": "Yo ganaré el partido algún día.",
+    "pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "ganare"
+      ],
+      [
+        "el partido"
+      ],
+      [
+        "algun dia"
+      ]
+    ]
+  },
+  {
+    "id": "ganar-futuro-1",
+    "verbo": "ganar",
+    "contexto": "el equipo, dentro de una hora, el campeonato",
+    "respuesta": "El equipo ganará el campeonato dentro de una hora.",
+    "pista": "El futuro expresa planes, predicciones o intenciones",
+    "grupos": [
+      [
+        "el equipo"
+      ],
+      [
+        "ganara"
+      ],
+      [
+        "el campeonato"
+      ],
+      [
+        "dentro de una hora"
+      ]
+    ]
+  },
+  {
+    "id": "ganar-futuro-2",
+    "verbo": "ganar",
+    "contexto": "nosotros, esta noche, más dinero",
+    "respuesta": "Nosotros ganaremos más dinero esta noche.",
+    "pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "ganaremos"
+      ],
+      [
+        "mas dinero"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "golpear-futuro-0",
+    "verbo": "golpear",
+    "contexto": "la ola, pasado mañana, la costa",
+    "respuesta": "La ola golpeará la costa pasado mañana.",
+    "pista": "El futuro expresa planes, predicciones o intenciones",
+    "grupos": [
+      [
+        "la ola"
+      ],
+      [
+        "golpeara"
+      ],
+      [
+        "la costa"
+      ],
+      [
+        "pasado manana"
+      ]
+    ]
+  },
+  {
+    "id": "golpear-futuro-1",
+    "verbo": "golpear",
+    "contexto": "yo, dentro de poco, la pelota con fuerza",
+    "respuesta": "Yo golpearé la pelota con fuerza dentro de poco.",
+    "pista": "Usa el futuro para hablar de planes y proyectos",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "golpeare"
+      ],
+      [
+        "la pelota con fuerza"
+      ],
+      [
+        "dentro de poco"
+      ]
+    ]
+  },
+  {
+    "id": "golpear-futuro-2",
+    "verbo": "golpear",
+    "contexto": "tú, en unos minutos, la puerta",
+    "respuesta": "Tú golpearás la puerta en unos minutos.",
+    "pista": "Las terminaciones del futuro son iguales para las tres conjugaciones",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "golpearas"
+      ],
+      [
+        "la puerta"
+      ],
+      [
+        "en unos minutos"
+      ]
+    ]
+  }
+]

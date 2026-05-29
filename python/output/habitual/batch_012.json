@@ -1,0 +1,210 @@
+[
+  {
+    "id": "nacer-habitual-0",
+    "verbo": "nacer",
+    "contexto": "los corderos, cada verano, en los campos del pueblo",
+    "respuesta": "Cada verano, los corderos nacian en los campos del pueblo.",
+    "pista": "Repeated seasonal birth - use imperfect",
+    "grupos": [["los corderos"], ["nacian"], ["en los campos del pueblo"], ["cada verano"]]
+  },
+  {
+    "id": "nacer-habitual-1",
+    "verbo": "nacer",
+    "contexto": "nuevas ideas, en aquellos tiempos, en las tertulias del cafe",
+    "respuesta": "En aquellos tiempos, nuevas ideas nacian en las tertulias del cafe.",
+    "pista": "Habitual creative emergence - use imperfect",
+    "grupos": [["nuevas ideas"], ["nacian"], ["en las tertulias del cafe"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "necesitar-habitual-0",
+    "verbo": "necesitar",
+    "contexto": "yo, en mis anos de universidad, mas horas de sueno",
+    "respuesta": "En mis anos de universidad, yo necesitaba mas horas de sueno.",
+    "pista": "Ongoing university need - use imperfect",
+    "grupos": [["yo"], ["necesitaba"], ["mas horas de sueno"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "necesitar-habitual-1",
+    "verbo": "necesitar",
+    "contexto": "la empresa, cuando trabajaba alli, mas empleados",
+    "respuesta": "Cuando trabajaba alli, la empresa necesitaba mas empleados.",
+    "pista": "Ongoing past need - use imperfect",
+    "grupos": [["la empresa"], ["necesitaba"], ["mas empleados"], ["cuando trabajaba alli"]]
+  },
+  {
+    "id": "negar-habitual-0",
+    "verbo": "negar",
+    "contexto": "mi hermano, con frecuencia, haber roto el jarron",
+    "respuesta": "Mi hermano negaba haber roto el jarron con frecuencia.",
+    "pista": "Frequently repeated denial - use imperfect",
+    "grupos": [["mi hermano"], ["negaba"], ["haber roto el jarron"], ["con frecuencia"]]
+  },
+  {
+    "id": "negar-habitual-1",
+    "verbo": "negar",
+    "contexto": "el acusado, en aquellos tiempos, todas las acusaciones",
+    "respuesta": "En aquellos tiempos, el acusado negaba todas las acusaciones.",
+    "pista": "Habitual past denial - use imperfect",
+    "grupos": [["el acusado"], ["negaba"], ["todas las acusaciones"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "observar-habitual-0",
+    "verbo": "observar",
+    "contexto": "yo, por las tardes, los pajaros desde mi ventana",
+    "respuesta": "Por las tardes, yo observaba los pajaros desde mi ventana.",
+    "pista": "Daily afternoon observation - use imperfect",
+    "grupos": [["yo"], ["observaba"], ["los pajaros desde mi ventana"], ["por las tardes"]]
+  },
+  {
+    "id": "observar-habitual-1",
+    "verbo": "observar",
+    "contexto": "el cientifico, semana tras semana, los cambios en las celulas",
+    "respuesta": "Semana tras semana, el cientifico observaba los cambios en las celulas.",
+    "pista": "Repeated weekly observation - use imperfect",
+    "grupos": [["el cientifico"], ["observaba"], ["los cambios en las celulas"], ["semana tras semana"]]
+  },
+  {
+    "id": "obtener-habitual-0",
+    "verbo": "obtener",
+    "contexto": "nosotros, los fines de semana, fruta fresca del mercado",
+    "respuesta": "Los fines de semana, nosotros obteniamos fruta fresca del mercado.",
+    "pista": "Regular weekend procurement - use imperfect",
+    "grupos": [["nosotros"], ["obteniamos"], ["fruta fresca del mercado"], ["los fines de semana"]]
+  },
+  {
+    "id": "obtener-habitual-1",
+    "verbo": "obtener",
+    "contexto": "ella, en mis anos de universidad, las mejores notas de la clase",
+    "respuesta": "En mis anos de universidad, ella obtenia las mejores notas de la clase.",
+    "pista": "Habitual university achievement - use imperfect",
+    "grupos": [["ella"], ["obtenia"], ["las mejores notas de la clase"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "ocupar-habitual-0",
+    "verbo": "ocupar",
+    "contexto": "nosotros, cada verano, la misma casa en la playa",
+    "respuesta": "Cada verano, nosotros ocupabamos la misma casa en la playa.",
+    "pista": "Repeated summer tradition - use imperfect",
+    "grupos": [["nosotros"], ["ocupabamos"], ["la misma casa en la playa"], ["cada verano"]]
+  },
+  {
+    "id": "ocupar-habitual-1",
+    "verbo": "ocupar",
+    "contexto": "el trabajo, en aquellos tiempos, la mayor parte de mi dia",
+    "respuesta": "En aquellos tiempos, el trabajo ocupaba la mayor parte de mi dia.",
+    "pista": "Habitual past occupation of time - use imperfect",
+    "grupos": [["el trabajo"], ["ocupaba"], ["la mayor parte de mi dia"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "ocurrir-habitual-0",
+    "verbo": "ocurrir",
+    "contexto": "cosas extranas, con frecuencia, en aquella casa vieja",
+    "respuesta": "Cosas extranas ocurrian en aquella casa vieja con frecuencia.",
+    "pista": "Frequently repeated occurrence - use imperfect",
+    "grupos": [["cosas extranas"], ["ocurrian"], ["en aquella casa vieja"], ["con frecuencia"]]
+  },
+  {
+    "id": "ocurrir-habitual-1",
+    "verbo": "ocurrir",
+    "contexto": "a mi, durante la infancia, ideas locas para jugar",
+    "respuesta": "Durante la infancia, a mi se me ocurrian ideas locas para jugar.",
+    "pista": "Childhood habitual creativity - use imperfect",
+    "grupos": [["a mi"], ["ocurrian"], ["ideas locas para jugar"], ["durante la infancia"]]
+  },
+  {
+    "id": "odiar-habitual-0",
+    "verbo": "odiar",
+    "contexto": "yo, durante la infancia, las verduras cocidas",
+    "respuesta": "Durante la infancia, yo odiaba las verduras cocidas.",
+    "pista": "Childhood habitual dislike - use imperfect",
+    "grupos": [["yo"], ["odiaba"], ["las verduras cocidas"], ["durante la infancia"]]
+  },
+  {
+    "id": "odiar-habitual-1",
+    "verbo": "odiar",
+    "contexto": "mi hermana, en aquellos tiempos, levantarse temprano",
+    "respuesta": "En aquellos tiempos, mi hermana odiaba levantarse temprano.",
+    "pista": "Habitual past dislike - use imperfect",
+    "grupos": [["mi hermana"], ["odiaba"], ["levantarse temprano"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "ofrecer-habitual-0",
+    "verbo": "ofrecer",
+    "contexto": "mi abuela, los domingos, cafe y galletas a las visitas",
+    "respuesta": "Los domingos, mi abuela ofrecia cafe y galletas a las visitas.",
+    "pista": "Regular Sunday hospitality - use imperfect",
+    "grupos": [["mi abuela"], ["ofrecia"], ["cafe y galletas a las visitas"], ["los domingos"]]
+  },
+  {
+    "id": "ofrecer-habitual-1",
+    "verbo": "ofrecer",
+    "contexto": "la empresa, cuando trabajaba alli, cursos de formacion gratuitos",
+    "respuesta": "Cuando trabajaba alli, la empresa ofrecia cursos de formacion gratuitos.",
+    "pista": "Habitual workplace benefit - use imperfect",
+    "grupos": [["la empresa"], ["ofrecia"], ["cursos de formacion gratuitos"], ["cuando trabajaba alli"]]
+  },
+  {
+    "id": "oir-habitual-0",
+    "verbo": "oir",
+    "contexto": "yo, por las tardes, el canto de los pajaros en el jardin",
+    "respuesta": "Por las tardes, yo oia el canto de los pajaros en el jardin.",
+    "pista": "Daily afternoon experience - use imperfect",
+    "grupos": [["yo"], ["oia"], ["el canto de los pajaros en el jardin"], ["por las tardes"]]
+  },
+  {
+    "id": "oir-habitual-1",
+    "verbo": "oir",
+    "contexto": "nosotros, durante la infancia, historias de miedo antes de dormir",
+    "respuesta": "Durante la infancia, nosotros oiamos historias de miedo antes de dormir.",
+    "pista": "Childhood habitual listening - use imperfect",
+    "grupos": [["nosotros"], ["oiamos"], ["historias de miedo antes de dormir"], ["durante la infancia"]]
+  },
+  {
+    "id": "olvidar-habitual-0",
+    "verbo": "olvidar",
+    "contexto": "yo, con frecuencia, las llaves en la oficina",
+    "respuesta": "Yo olvidaba las llaves en la oficina con frecuencia.",
+    "pista": "Frequently repeated forgetfulness - use imperfect",
+    "grupos": [["yo"], ["olvidaba"], ["las llaves en la oficina"], ["con frecuencia"]]
+  },
+  {
+    "id": "olvidar-habitual-1",
+    "verbo": "olvidar",
+    "contexto": "mi padre, los domingos, cerrar la puerta del garaje",
+    "respuesta": "Los domingos, mi padre olvidaba cerrar la puerta del garaje.",
+    "pista": "Regular Sunday oversight - use imperfect",
+    "grupos": [["mi padre"], ["olvidaba"], ["cerrar la puerta del garaje"], ["los domingos"]]
+  },
+  {
+    "id": "pagar-habitual-0",
+    "verbo": "pagar",
+    "contexto": "mi abuelo, en aquellos tiempos, todo en efectivo",
+    "respuesta": "En aquellos tiempos, mi abuelo pagaba todo en efectivo.",
+    "pista": "Habitual past payment method - use imperfect",
+    "grupos": [["mi abuelo"], ["pagaba"], ["todo en efectivo"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "pagar-habitual-1",
+    "verbo": "pagar",
+    "contexto": "nosotros, los fines de semana, la cuenta entre todos",
+    "respuesta": "Los fines de semana, nosotros pagabamos la cuenta entre todos.",
+    "pista": "Regular weekend habit - use imperfect",
+    "grupos": [["nosotros"], ["pagabamos"], ["la cuenta entre todos"], ["los fines de semana"]]
+  },
+  {
+    "id": "parar-habitual-0",
+    "verbo": "parar",
+    "contexto": "el autobus, los martes y jueves, en la esquina de mi casa",
+    "respuesta": "Los martes y jueves, el autobus paraba en la esquina de mi casa.",
+    "pista": "Regular scheduled stop - use imperfect",
+    "grupos": [["el autobus"], ["paraba"], ["en la esquina de mi casa"], ["los martes y jueves"]]
+  },
+  {
+    "id": "parar-habitual-1",
+    "verbo": "parar",
+    "contexto": "la lluvia, en aquellos tiempos, al caer la noche",
+    "respuesta": "En aquellos tiempos, la lluvia paraba al caer la noche.",
+    "pista": "Habitual weather pattern - use imperfect",
+    "grupos": [["la lluvia"], ["paraba"], ["al caer la noche"], ["en aquellos tiempos"]]
+  }
+]

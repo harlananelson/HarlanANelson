@@ -1,0 +1,884 @@
+[
+  {
+    "id": "soltar-presente-0",
+    "verbo": "soltar",
+    "contexto": "yo, siempre, la cuerda",
+    "respuesta": "Siempre, yo suelto la cuerda.",
+    "pista": "describing letting go",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "suelto"
+      ],
+      [
+        "la cuerda"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "soltar-presente-1",
+    "verbo": "soltar",
+    "contexto": "tú, a veces, una carcajada",
+    "respuesta": "Tú sueltas una carcajada a veces.",
+    "pista": "describing spontaneous laughter",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "sueltas"
+      ],
+      [
+        "una carcajada"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "soltar-presente-2",
+    "verbo": "soltar",
+    "contexto": "ella, ahora mismo, al perro en el parque",
+    "respuesta": "Ahora mismo, ella suelta al perro en el parque.",
+    "pista": "narrating pet freedom",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "suelta"
+      ],
+      [
+        "al perro en el parque"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "sonar-presente-0",
+    "verbo": "sonar",
+    "contexto": "el teléfono, cada vez que, durante la reunión",
+    "respuesta": "Cada vez que, el teléfono suena durante la reunión.",
+    "pista": "describing an interruption",
+    "grupos": [
+      [
+        "el telefono"
+      ],
+      [
+        "suena"
+      ],
+      [
+        "durante la reunion"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "sonar-presente-1",
+    "verbo": "sonar",
+    "contexto": "la alarma, esta tarde, a las seis",
+    "respuesta": "Esta tarde, la alarma suena a las seis.",
+    "pista": "narrating wake-up time",
+    "grupos": [
+      [
+        "la alarma"
+      ],
+      [
+        "suena"
+      ],
+      [
+        "a las seis"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "sonar-presente-2",
+    "verbo": "sonar",
+    "contexto": "eso, todos los días, interesante",
+    "respuesta": "Eso suena interesante todos los días.",
+    "pista": "expressing curiosity",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "suena"
+      ],
+      [
+        "interesante"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "subir-presente-0",
+    "verbo": "subir",
+    "contexto": "yo, hoy, las escaleras",
+    "respuesta": "Yo subo las escaleras hoy.",
+    "pista": "describing physical activity",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "subo"
+      ],
+      [
+        "las escaleras"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "subir-presente-1",
+    "verbo": "subir",
+    "contexto": "tú, esta tarde, al autobús",
+    "respuesta": "Esta tarde, tú subes al autobús.",
+    "pista": "describing boarding",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "subes"
+      ],
+      [
+        "al autobus"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "subir-presente-2",
+    "verbo": "subir",
+    "contexto": "nosotros, ahora, la montaña",
+    "respuesta": "Nosotros subimos la montaña ahora.",
+    "pista": "narrating a hike",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "subimos"
+      ],
+      [
+        "la montana"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "suceder-presente-0",
+    "verbo": "suceder",
+    "contexto": "eso, normalmente, con frecuencia",
+    "respuesta": "Eso sucede con frecuencia normalmente.",
+    "pista": "expressing recurrence",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "sucede"
+      ],
+      [
+        "con frecuencia"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "suceder-presente-1",
+    "verbo": "suceder",
+    "contexto": "algo extraño, ahora, en la oficina",
+    "respuesta": "Algo extraño sucede en la oficina ahora.",
+    "pista": "narrating unusual events",
+    "grupos": [
+      [
+        "algo extrano"
+      ],
+      [
+        "sucede"
+      ],
+      [
+        "en la oficina"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "suceder-presente-2",
+    "verbo": "suceder",
+    "contexto": "los problemas, cada semana, cuando menos lo esperas",
+    "respuesta": "Cada semana, los problemas sucede cuando menos lo esperas.",
+    "pista": "describing unexpected issues",
+    "grupos": [
+      [
+        "los problemas"
+      ],
+      [
+        "sucede"
+      ],
+      [
+        "cuando menos lo esperas"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "sufrir-presente-0",
+    "verbo": "sufrir",
+    "contexto": "yo, normalmente, de alergias en primavera",
+    "respuesta": "Normalmente, yo sufro de alergias en primavera.",
+    "pista": "describing health issues",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "sufro"
+      ],
+      [
+        "de alergias en primavera"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "sufrir-presente-1",
+    "verbo": "sufrir",
+    "contexto": "ella, siempre, por la distancia",
+    "respuesta": "Ella sufre por la distancia siempre.",
+    "pista": "narrating emotional pain",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "sufre"
+      ],
+      [
+        "por la distancia"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "sufrir-presente-2",
+    "verbo": "sufrir",
+    "contexto": "nosotros, ahora mismo, las consecuencias de nuestras decisiones",
+    "respuesta": "Nosotros sufrimos las consecuencias de nuestras decisiones ahora mismo.",
+    "pista": "expressing accountability",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "sufrimos"
+      ],
+      [
+        "las consecuencias de nuestras decisiones"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "superar-presente-0",
+    "verbo": "superar",
+    "contexto": "yo, esta tarde, mis miedos",
+    "respuesta": "Yo supero mis miedos esta tarde.",
+    "pista": "expressing overcoming fear",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "supero"
+      ],
+      [
+        "mis miedos"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "superar-presente-1",
+    "verbo": "superar",
+    "contexto": "tú, esta mañana, todos los obstáculos",
+    "respuesta": "Esta mañana, tú superas todos los obstáculos.",
+    "pista": "encouraging perseverance",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "superas"
+      ],
+      [
+        "todos los obstaculos"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "superar-presente-2",
+    "verbo": "superar",
+    "contexto": "nosotros, actualmente, las expectativas",
+    "respuesta": "Nosotros superamos las expectativas actualmente.",
+    "pista": "expressing exceeding expectations",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "superamos"
+      ],
+      [
+        "las expectativas"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "suponer-presente-0",
+    "verbo": "suponer",
+    "contexto": "yo, ahora, que es verdad",
+    "respuesta": "Ahora, yo supongo que es verdad.",
+    "pista": "expressing assumption",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "supongo"
+      ],
+      [
+        "que es verdad"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "suponer-presente-1",
+    "verbo": "suponer",
+    "contexto": "eso, en este momento, un gran cambio",
+    "respuesta": "Eso supone un gran cambio en este momento.",
+    "pista": "describing implications",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "supone"
+      ],
+      [
+        "un gran cambio"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "suponer-presente-2",
+    "verbo": "suponer",
+    "contexto": "nosotros, ahora, que vendrá mañana",
+    "respuesta": "Nosotros suponemos que vendrá mañana ahora.",
+    "pista": "expressing expectation",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "suponemos"
+      ],
+      [
+        "que vendra manana"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "temer-presente-0",
+    "verbo": "temer",
+    "contexto": "yo, mientras, lo peor",
+    "respuesta": "Yo temo lo peor mientras.",
+    "pista": "expressing fear",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "temo"
+      ],
+      [
+        "lo peor"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "temer-presente-1",
+    "verbo": "temer",
+    "contexto": "ella, a veces, la oscuridad",
+    "respuesta": "Ella teme la oscuridad a veces.",
+    "pista": "narrating a phobia",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "teme"
+      ],
+      [
+        "la oscuridad"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "temer-presente-2",
+    "verbo": "temer",
+    "contexto": "nosotros, a veces, las consecuencias",
+    "respuesta": "Nosotros tememos las consecuencias a veces.",
+    "pista": "expressing worry about outcomes",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "tememos"
+      ],
+      [
+        "las consecuencias"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "tener-presente-0",
+    "verbo": "tener",
+    "contexto": "yo, esta tarde, dos hermanos",
+    "respuesta": "Esta tarde, yo tengo dos hermanos.",
+    "pista": "describing family",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "tengo"
+      ],
+      [
+        "dos hermanos"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "tener-presente-1",
+    "verbo": "tener",
+    "contexto": "tú, a veces, mucha suerte",
+    "respuesta": "Tú tienes mucha suerte a veces.",
+    "pista": "expressing fortune",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "tienes"
+      ],
+      [
+        "mucha suerte"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "tener-presente-2",
+    "verbo": "tener",
+    "contexto": "nosotros, hoy, una reunión importante",
+    "respuesta": "Nosotros tenemos una reunión importante hoy.",
+    "pista": "describing schedule",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "tenemos"
+      ],
+      [
+        "una reunion importante"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "terminar-presente-0",
+    "verbo": "terminar",
+    "contexto": "yo, todos los días, el libro esta semana",
+    "respuesta": "Todos los días, yo termino el libro esta semana.",
+    "pista": "expressing completion",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "termino"
+      ],
+      [
+        "el libro esta semana"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "terminar-presente-1",
+    "verbo": "terminar",
+    "contexto": "nosotros, por lo general, el proyecto a tiempo",
+    "respuesta": "Nosotros terminamos el proyecto a tiempo por lo general.",
+    "pista": "describing deadline success",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "terminamos"
+      ],
+      [
+        "el proyecto a tiempo"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "terminar-presente-2",
+    "verbo": "terminar",
+    "contexto": "tú, mientras, tus tareas",
+    "respuesta": "Tú terminas tus tareas mientras.",
+    "pista": "talking about responsibilities",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "terminas"
+      ],
+      [
+        "tus tareas"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "tirar-presente-0",
+    "verbo": "tirar",
+    "contexto": "yo, todos los días, la basura",
+    "respuesta": "Todos los días, yo tiro la basura.",
+    "pista": "describing a chore",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "tiro"
+      ],
+      [
+        "la basura"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "tirar-presente-1",
+    "verbo": "tirar",
+    "contexto": "tú, ahora, la pelota muy lejos",
+    "respuesta": "Tú tiras la pelota muy lejos ahora.",
+    "pista": "describing a throw",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "tiras"
+      ],
+      [
+        "la pelota muy lejos"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "tirar-presente-2",
+    "verbo": "tirar",
+    "contexto": "ella, ahora, los papeles viejos",
+    "respuesta": "Ahora, ella tira los papeles viejos.",
+    "pista": "narrating decluttering",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "tira"
+      ],
+      [
+        "los papeles viejos"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "tocar-presente-0",
+    "verbo": "tocar",
+    "contexto": "yo, ahora, la guitarra",
+    "respuesta": "Ahora, yo toco la guitarra.",
+    "pista": "describing a musical hobby",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "toco"
+      ],
+      [
+        "la guitarra"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "tocar-presente-1",
+    "verbo": "tocar",
+    "contexto": "ella, a veces, el piano con maestría",
+    "respuesta": "Ella toca el piano con maestría a veces.",
+    "pista": "narrating musical talent",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "toca"
+      ],
+      [
+        "el piano con maestria"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "tocar-presente-2",
+    "verbo": "tocar",
+    "contexto": "nosotros, cada vez que, en una banda",
+    "respuesta": "Nosotros tocamos en una banda cada vez que.",
+    "pista": "describing group music",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "tocamos"
+      ],
+      [
+        "en una banda"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "tomar-presente-0",
+    "verbo": "tomar",
+    "contexto": "yo, cada vez que, una decisión importante",
+    "respuesta": "Yo tomo una decisión importante cada vez que.",
+    "pista": "expressing decision-making",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "tomo"
+      ],
+      [
+        "una decision importante"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "tomar-presente-1",
+    "verbo": "tomar",
+    "contexto": "tú, esta tarde, el sol en la playa",
+    "respuesta": "Esta tarde, tú tomas el sol en la playa.",
+    "pista": "describing sunbathing",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "tomas"
+      ],
+      [
+        "el sol en la playa"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "tomar-presente-2",
+    "verbo": "tomar",
+    "contexto": "nosotros, esta tarde, café en la mañana",
+    "respuesta": "Esta tarde, nosotros tomamos café en la mañana.",
+    "pista": "describing morning routine",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "tomamos"
+      ],
+      [
+        "cafe en la manana"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "trabajar-presente-0",
+    "verbo": "trabajar",
+    "contexto": "yo, a veces, en una empresa grande",
+    "respuesta": "Yo trabajo en una empresa grande a veces.",
+    "pista": "describing employment",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "trabajo"
+      ],
+      [
+        "en una empresa grande"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "trabajar-presente-1",
+    "verbo": "trabajar",
+    "contexto": "ella, esta tarde, desde casa",
+    "respuesta": "Ella trabaja desde casa esta tarde.",
+    "pista": "narrating remote work",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "trabaja"
+      ],
+      [
+        "desde casa"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "trabajar-presente-2",
+    "verbo": "trabajar",
+    "contexto": "nosotros, en este momento, en equipo",
+    "respuesta": "Nosotros trabajamos en equipo en este momento.",
+    "pista": "expressing teamwork",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "trabajamos"
+      ],
+      [
+        "en equipo"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  }
+]

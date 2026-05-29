@@ -1,0 +1,884 @@
+[
+  {
+    "id": "preguntar-presente-0",
+    "verbo": "preguntar",
+    "contexto": "yo, ahora, la dirección",
+    "respuesta": "Ahora, yo pregunto la dirección.",
+    "pista": "describing asking for directions",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "pregunto"
+      ],
+      [
+        "la direccion"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "preguntar-presente-1",
+    "verbo": "preguntar",
+    "contexto": "tú, todos los días, por tu madre",
+    "respuesta": "Tú preguntas por tu madre todos los días.",
+    "pista": "expressing concern for family",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "preguntas"
+      ],
+      [
+        "por tu madre"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "preguntar-presente-2",
+    "verbo": "preguntar",
+    "contexto": "ella, hoy, sobre el horario",
+    "respuesta": "Hoy, ella pregunta sobre el horario.",
+    "pista": "narrating an inquiry",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "pregunta"
+      ],
+      [
+        "sobre el horario"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "preocupar-presente-0",
+    "verbo": "preocupar",
+    "contexto": "yo, hoy, a mis padres con mi comportamiento",
+    "respuesta": "Hoy, yo preocupo a mis padres con mi comportamiento.",
+    "pista": "expressing concern caused",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "preocupo"
+      ],
+      [
+        "a mis padres con mi comportamiento"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "preocupar-presente-1",
+    "verbo": "preocupar",
+    "contexto": "eso, en este momento, a todos en la oficina",
+    "respuesta": "Eso preocupa a todos en la oficina en este momento.",
+    "pista": "describing workplace worry",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "preocupa"
+      ],
+      [
+        "a todos en la oficina"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "preocupar-presente-2",
+    "verbo": "preocupar",
+    "contexto": "ella, en este momento, a su familia",
+    "respuesta": "Ella preocupa a su familia en este momento.",
+    "pista": "narrating family concern",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "preocupa"
+      ],
+      [
+        "a su familia"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "preparar-presente-0",
+    "verbo": "preparar",
+    "contexto": "yo, esta noche, el desayuno",
+    "respuesta": "Yo preparo el desayuno esta noche.",
+    "pista": "describing morning routine",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "preparo"
+      ],
+      [
+        "el desayuno"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "preparar-presente-1",
+    "verbo": "preparar",
+    "contexto": "nosotros, a veces, la presentación",
+    "respuesta": "A veces, nosotros preparamos la presentación.",
+    "pista": "expressing teamwork",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "preparamos"
+      ],
+      [
+        "la presentacion"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "preparar-presente-2",
+    "verbo": "preparar",
+    "contexto": "tú, cada vez que, la maleta para el viaje",
+    "respuesta": "Cada vez que, tú preparas la maleta para el viaje.",
+    "pista": "describing travel preparation",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "preparas"
+      ],
+      [
+        "la maleta para el viaje"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "presentar-presente-0",
+    "verbo": "presentar",
+    "contexto": "yo, esta mañana, el informe al jefe",
+    "respuesta": "Esta mañana, yo presento el informe al jefe.",
+    "pista": "describing a work delivery",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "presento"
+      ],
+      [
+        "el informe al jefe"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "presentar-presente-1",
+    "verbo": "presentar",
+    "contexto": "ella, normalmente, a su novio a la familia",
+    "respuesta": "Ella presenta a su novio a la familia normalmente.",
+    "pista": "narrating introductions",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "presenta"
+      ],
+      [
+        "a su novio a la familia"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "presentar-presente-2",
+    "verbo": "presentar",
+    "contexto": "nosotros, ahora mismo, nuestra propuesta",
+    "respuesta": "Nosotros presentamos nuestra propuesta ahora mismo.",
+    "pista": "expressing business pitch",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "presentamos"
+      ],
+      [
+        "nuestra propuesta"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "prestar-presente-0",
+    "verbo": "prestar",
+    "contexto": "yo, actualmente, dinero a mi amigo",
+    "respuesta": "Yo presto dinero a mi amigo actualmente.",
+    "pista": "describing lending",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "presto"
+      ],
+      [
+        "dinero a mi amigo"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "prestar-presente-1",
+    "verbo": "prestar",
+    "contexto": "tú, ahora mismo, atención a los detalles",
+    "respuesta": "Ahora mismo, tú prestas atención a los detalles.",
+    "pista": "expressing attentiveness",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "prestas"
+      ],
+      [
+        "atencion a los detalles"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "prestar-presente-2",
+    "verbo": "prestar",
+    "contexto": "ella, siempre, sus libros a los compañeros",
+    "respuesta": "Siempre, ella presta sus libros a los compañeros.",
+    "pista": "narrating generosity",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "presta"
+      ],
+      [
+        "sus libros a los companeros"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "probar-presente-0",
+    "verbo": "probar",
+    "contexto": "yo, en este momento, la comida antes de servirla",
+    "respuesta": "En este momento, yo pruebo la comida antes de servirla.",
+    "pista": "describing tasting",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "pruebo"
+      ],
+      [
+        "la comida antes de servirla"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "probar-presente-1",
+    "verbo": "probar",
+    "contexto": "tú, esta noche, algo nuevo",
+    "respuesta": "Tú pruebas algo nuevo esta noche.",
+    "pista": "encouraging experimentation",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "pruebas"
+      ],
+      [
+        "algo nuevo"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "probar-presente-2",
+    "verbo": "probar",
+    "contexto": "nosotros, todos los días, diferentes métodos",
+    "respuesta": "Nosotros probamos diferentes métodos todos los días.",
+    "pista": "describing problem-solving",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "probamos"
+      ],
+      [
+        "diferentes metodos"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "producir-presente-0",
+    "verbo": "producir",
+    "contexto": "yo, ahora, contenido para las redes sociales",
+    "respuesta": "Yo produzco contenido para las redes sociales ahora.",
+    "pista": "describing content creation",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "produzco"
+      ],
+      [
+        "contenido para las redes sociales"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "producir-presente-1",
+    "verbo": "producir",
+    "contexto": "nosotros, mientras, resultados excelentes",
+    "respuesta": "Mientras, nosotros producimos resultados excelentes.",
+    "pista": "expressing team output",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "producimos"
+      ],
+      [
+        "resultados excelentes"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "producir-presente-2",
+    "verbo": "producir",
+    "contexto": "ella, ahora, películas independientes",
+    "respuesta": "Ella produce películas independientes ahora.",
+    "pista": "narrating film production",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "produce"
+      ],
+      [
+        "peliculas independientes"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "prometer-presente-0",
+    "verbo": "prometer",
+    "contexto": "yo, mientras, llegar a tiempo",
+    "respuesta": "Mientras, yo prometo llegar a tiempo.",
+    "pista": "expressing a commitment",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "prometo"
+      ],
+      [
+        "llegar a tiempo"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "prometer-presente-1",
+    "verbo": "prometer",
+    "contexto": "tú, a veces, no decir nada",
+    "respuesta": "Tú prometas no decir nada a veces.",
+    "pista": "describing a promise",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "prometas"
+      ],
+      [
+        "no decir nada"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "prometer-presente-2",
+    "verbo": "prometer",
+    "contexto": "nosotros, esta noche, hacer nuestro mejor esfuerzo",
+    "respuesta": "Esta noche, nosotros prometamos hacer nuestro mejor esfuerzo.",
+    "pista": "expressing team dedication",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "prometamos"
+      ],
+      [
+        "hacer nuestro mejor esfuerzo"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "proteger-presente-0",
+    "verbo": "proteger",
+    "contexto": "yo, actualmente, a mi familia",
+    "respuesta": "Yo protejo a mi familia actualmente.",
+    "pista": "expressing protection",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "protejo"
+      ],
+      [
+        "a mi familia"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "proteger-presente-1",
+    "verbo": "proteger",
+    "contexto": "nosotros, esta mañana, el medio ambiente",
+    "respuesta": "Nosotros protegemos el medio ambiente esta mañana.",
+    "pista": "describing conservation",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "protegemos"
+      ],
+      [
+        "el medio ambiente"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "proteger-presente-2",
+    "verbo": "proteger",
+    "contexto": "ella, todos los días, a los animales",
+    "respuesta": "Todos los días, ella protege a los animales.",
+    "pista": "narrating animal welfare",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "protege"
+      ],
+      [
+        "a los animales"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "quedar-presente-0",
+    "verbo": "quedar",
+    "contexto": "yo, actualmente, con mis amigos los viernes",
+    "respuesta": "Yo quedo con mis amigos los viernes actualmente.",
+    "pista": "describing social plans",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "quedo"
+      ],
+      [
+        "con mis amigos los viernes"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "quedar-presente-1",
+    "verbo": "quedar",
+    "contexto": "nosotros, hoy, en el restaurante a las ocho",
+    "respuesta": "Hoy, nosotros quedamos en el restaurante a las ocho.",
+    "pista": "making plans",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "quedamos"
+      ],
+      [
+        "en el restaurante a las ocho"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "quedar-presente-2",
+    "verbo": "quedar",
+    "contexto": "tú, ahora mismo, en casa cuando llueve",
+    "respuesta": "Tú quedas en casa cuando llueve ahora mismo.",
+    "pista": "describing weather-based decisions",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "quedas"
+      ],
+      [
+        "en casa cuando llueve"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "querer-presente-0",
+    "verbo": "querer",
+    "contexto": "yo, cada vez que, aprender a bailar",
+    "respuesta": "Yo quiero aprender a bailar cada vez que.",
+    "pista": "expressing desire",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "quiero"
+      ],
+      [
+        "aprender a bailar"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "querer-presente-1",
+    "verbo": "querer",
+    "contexto": "tú, cada semana, viajar por el mundo",
+    "respuesta": "Tú quieres viajar por el mundo cada semana.",
+    "pista": "describing dreams",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "quieres"
+      ],
+      [
+        "viajar por el mundo"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "querer-presente-2",
+    "verbo": "querer",
+    "contexto": "nosotros, siempre, lo mejor para todos",
+    "respuesta": "Nosotros queremos lo mejor para todos siempre.",
+    "pista": "expressing good intentions",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "queremos"
+      ],
+      [
+        "lo mejor para todos"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "quitar-presente-0",
+    "verbo": "quitar",
+    "contexto": "yo, esta noche, la mancha de la camisa",
+    "respuesta": "Yo quito la mancha de la camisa esta noche.",
+    "pista": "describing cleaning",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "quito"
+      ],
+      [
+        "la mancha de la camisa"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "quitar-presente-1",
+    "verbo": "quitar",
+    "contexto": "tú, ahora, los zapatos al entrar",
+    "respuesta": "Tú quitas los zapatos al entrar ahora.",
+    "pista": "talking about customs",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "quitas"
+      ],
+      [
+        "los zapatos al entrar"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "quitar-presente-2",
+    "verbo": "quitar",
+    "contexto": "ella, esta mañana, las malas hierbas del jardín",
+    "respuesta": "Ella quita las malas hierbas del jardín esta mañana.",
+    "pista": "describing gardening",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "quita"
+      ],
+      [
+        "las malas hierbas del jardin"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "realizar-presente-0",
+    "verbo": "realizar",
+    "contexto": "yo, por lo general, un proyecto importante",
+    "respuesta": "Yo realizo un proyecto importante por lo general.",
+    "pista": "describing accomplishment",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "realizo"
+      ],
+      [
+        "un proyecto importante"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "realizar-presente-1",
+    "verbo": "realizar",
+    "contexto": "nosotros, hoy, cambios significativos",
+    "respuesta": "Hoy, nosotros realizamos cambios significativos.",
+    "pista": "expressing transformation",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "realizamos"
+      ],
+      [
+        "cambios significativos"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "realizar-presente-2",
+    "verbo": "realizar",
+    "contexto": "ella, esta tarde, su sueño de ser doctora",
+    "respuesta": "Ella realiza su sueño de ser doctora esta tarde.",
+    "pista": "narrating ambition fulfillment",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "realiza"
+      ],
+      [
+        "su sueno de ser doctora"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "recibir-presente-0",
+    "verbo": "recibir",
+    "contexto": "yo, todos los días, un paquete",
+    "respuesta": "Yo recibo un paquete todos los días.",
+    "pista": "describing delivery",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "recibo"
+      ],
+      [
+        "un paquete"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "recibir-presente-1",
+    "verbo": "recibir",
+    "contexto": "tú, por lo general, buenas noticias",
+    "respuesta": "Tú recibes buenas noticias por lo general.",
+    "pista": "expressing positive updates",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "recibes"
+      ],
+      [
+        "buenas noticias"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "recibir-presente-2",
+    "verbo": "recibir",
+    "contexto": "nosotros, esta tarde, a los invitados en la puerta",
+    "respuesta": "Esta tarde, nosotros recibimos a los invitados en la puerta.",
+    "pista": "describing hospitality",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "recibimos"
+      ],
+      [
+        "a los invitados en la puerta"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  }
+]

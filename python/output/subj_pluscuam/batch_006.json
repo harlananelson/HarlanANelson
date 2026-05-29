@@ -1,0 +1,314 @@
+[
+  {
+    "id": "despedir-subj_pluscuam-0",
+    "verbo": "despedir",
+    "contexto": "Si el jefe, al empleado, habria habido problemas legales",
+    "respuesta": "Si el jefe hubiera despedido al empleado, habria habido problemas legales.",
+    "pista": "Pluperfect subjunctive for hypothetical firing.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["despedido"], ["el jefe"], ["al empleado"]]
+  },
+  {
+    "id": "despedir-subj_pluscuam-1",
+    "verbo": "despedir",
+    "contexto": "Dudaba que ella, a su asistente, sin razon",
+    "respuesta": "Dudaba que ella hubiera despedido a su asistente sin razon.",
+    "pista": "Doubt about an unjustified firing.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["despedido"], ["ella"], ["a su asistente"]]
+  },
+  {
+    "id": "despedir-subj_pluscuam-2",
+    "verbo": "despedir",
+    "contexto": "Ojala nosotros, a ese empleado, antes de la crisis",
+    "respuesta": "Ojala nosotros hubieramos despedido a ese empleado antes de la crisis.",
+    "pista": "Wishing you had let someone go before things got worse.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["despedido"], ["nosotros"], ["a ese empleado"]]
+  },
+  {
+    "id": "despertar-subj_pluscuam-0",
+    "verbo": "despertar",
+    "contexto": "Si yo, mas temprano, habria llegado a tiempo",
+    "respuesta": "Si yo hubiera despertado mas temprano, habria llegado a tiempo.",
+    "pista": "Pluperfect subjunctive for oversleeping in the past.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["despertado"], ["yo"], ["mas temprano"]]
+  },
+  {
+    "id": "despertar-subj_pluscuam-1",
+    "verbo": "despertar",
+    "contexto": "No creia que el ruido, a los vecinos, a medianoche",
+    "respuesta": "No creia que el ruido hubiera despertado a los vecinos a medianoche.",
+    "pista": "Disbelief about noise waking neighbors.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["despertado"], ["el ruido"], ["a los vecinos"]]
+  },
+  {
+    "id": "despertar-subj_pluscuam-2",
+    "verbo": "despertar",
+    "contexto": "Como si tu, de un largo sueno, desorientado",
+    "respuesta": "Caminabas como si tu hubieras despertado de un largo sueno desorientado.",
+    "pista": "Como si + pluperfect subjunctive for confused behavior.",
+    "grupos": [["como si"], ["hubieras", "hubieses"], ["despertado"], ["tu"], ["de un largo sueno"]]
+  },
+  {
+    "id": "destruir-subj_pluscuam-0",
+    "verbo": "destruir",
+    "contexto": "Si el terremoto, la ciudad, habria sido catastrofico",
+    "respuesta": "Si el terremoto hubiera destruido la ciudad, habria sido catastrofico.",
+    "pista": "Pluperfect subjunctive for hypothetical destruction.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["destruido"], ["el terremoto"], ["la ciudad"]]
+  },
+  {
+    "id": "destruir-subj_pluscuam-1",
+    "verbo": "destruir",
+    "contexto": "Era imposible que ellos, todas las pruebas, sin ser vistos",
+    "respuesta": "Era imposible que ellos hubieran destruido todas las pruebas sin ser vistos.",
+    "pista": "Past impossibility of destroying evidence unnoticed.",
+    "grupos": [["era imposible que"], ["hubieran", "hubiesen"], ["destruido"], ["ellos"], ["todas las pruebas"]]
+  },
+  {
+    "id": "destruir-subj_pluscuam-2",
+    "verbo": "destruir",
+    "contexto": "Ojala nosotros, los documentos falsos, a tiempo",
+    "respuesta": "Ojala nosotros hubieramos destruido los documentos falsos a tiempo.",
+    "pista": "Wishing you had destroyed false documents in time.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["destruido"], ["nosotros"], ["los documentos falsos"]]
+  },
+  {
+    "id": "detener-subj_pluscuam-0",
+    "verbo": "detener",
+    "contexto": "Si la policia, al sospechoso, antes",
+    "respuesta": "Si la policia hubiera detenido al sospechoso antes, no habria escapado.",
+    "pista": "Pluperfect subjunctive for a missed arrest.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["detenido"], ["la policia"], ["al sospechoso"]]
+  },
+  {
+    "id": "detener-subj_pluscuam-1",
+    "verbo": "detener",
+    "contexto": "Dudaba que tu, el coche, a tiempo para evitar el choque",
+    "respuesta": "Dudaba que tu hubieras detenido el coche a tiempo para evitar el choque.",
+    "pista": "Doubt about stopping a car in time.",
+    "grupos": [["dudaba que"], ["hubieras", "hubieses"], ["detenido"], ["tu"], ["el coche"]]
+  },
+  {
+    "id": "detener-subj_pluscuam-2",
+    "verbo": "detener",
+    "contexto": "No creia que nosotros, la produccion, por ese motivo",
+    "respuesta": "No creia que nosotros hubieramos detenido la produccion por ese motivo.",
+    "pista": "Disbelief about halting production.",
+    "grupos": [["no creia que"], ["hubieramos", "hubiesemos"], ["detenido"], ["nosotros"], ["la produccion"]]
+  },
+  {
+    "id": "devolver-subj_pluscuam-0",
+    "verbo": "devolver",
+    "contexto": "Si yo, el libro, a la biblioteca",
+    "respuesta": "Si yo hubiera devuelto el libro a la biblioteca, no tendria una multa.",
+    "pista": "Devolver has an irregular past participle: devuelto. Pluperfect subjunctive for not returning something.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["devuelto"], ["yo"], ["el libro"]]
+  },
+  {
+    "id": "devolver-subj_pluscuam-1",
+    "verbo": "devolver",
+    "contexto": "Dudaba que ellos, el dinero, voluntariamente",
+    "respuesta": "Dudaba que ellos hubieran devuelto el dinero voluntariamente.",
+    "pista": "Doubt about voluntarily returning money. Irregular participle: devuelto.",
+    "grupos": [["dudaba que"], ["hubieran", "hubiesen"], ["devuelto"], ["ellos"], ["el dinero"]]
+  },
+  {
+    "id": "devolver-subj_pluscuam-2",
+    "verbo": "devolver",
+    "contexto": "Ojala tu, la llamada, ayer",
+    "respuesta": "Ojala tu hubieras devuelto la llamada ayer.",
+    "pista": "Wishing you had returned the call. Irregular participle: devuelto.",
+    "grupos": [["ojala"], ["hubieras", "hubieses"], ["devuelto"], ["tu"], ["la llamada"]]
+  },
+  {
+    "id": "dirigir-subj_pluscuam-0",
+    "verbo": "dirigir",
+    "contexto": "Si ella, la empresa, con mas experiencia",
+    "respuesta": "Si ella hubiera dirigido la empresa con mas experiencia, habria prosperado.",
+    "pista": "Pluperfect subjunctive for inexperienced past leadership.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["dirigido"], ["ella"], ["la empresa"]]
+  },
+  {
+    "id": "dirigir-subj_pluscuam-1",
+    "verbo": "dirigir",
+    "contexto": "No creia que el, la orquesta, sin partitura",
+    "respuesta": "No creia que el hubiera dirigido la orquesta sin partitura.",
+    "pista": "Disbelief about conducting without a score.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["dirigido"], ["el"], ["la orquesta"]]
+  },
+  {
+    "id": "dirigir-subj_pluscuam-2",
+    "verbo": "dirigir",
+    "contexto": "Como si nosotros, una pelicula, en Hollywood",
+    "respuesta": "Dabamos ordenes como si nosotros hubieramos dirigido una pelicula en Hollywood.",
+    "pista": "Como si + pluperfect subjunctive for exaggerated authority.",
+    "grupos": [["como si"], ["hubieramos", "hubiesemos"], ["dirigido"], ["nosotros"], ["una pelicula"]]
+  },
+  {
+    "id": "disculpar-subj_pluscuam-0",
+    "verbo": "disculpar",
+    "contexto": "Si tu, a tu hermano, por su error",
+    "respuesta": "Si tu hubieras disculpado a tu hermano por su error, estarian en paz.",
+    "pista": "Pluperfect subjunctive for not forgiving someone.",
+    "grupos": [["si"], ["hubieras", "hubieses"], ["disculpado"], ["tu"], ["a tu hermano"]]
+  },
+  {
+    "id": "disculpar-subj_pluscuam-1",
+    "verbo": "disculpar",
+    "contexto": "Dudaba que ella, su comportamiento, ante los demas",
+    "respuesta": "Dudaba que ella hubiera disculpado su comportamiento ante los demas.",
+    "pista": "Doubt about excusing behavior.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["disculpado"], ["ella"], ["su comportamiento"]]
+  },
+  {
+    "id": "disculpar-subj_pluscuam-2",
+    "verbo": "disculpar",
+    "contexto": "Ojala yo, a mis padres, antes de que fuera tarde",
+    "respuesta": "Ojala yo hubiera disculpado a mis padres antes de que fuera tarde.",
+    "pista": "Wishing you had forgiven your parents earlier.",
+    "grupos": [["ojala"], ["hubiera", "hubiese"], ["disculpado"], ["yo"], ["a mis padres"]]
+  },
+  {
+    "id": "discutir-subj_pluscuam-0",
+    "verbo": "discutir",
+    "contexto": "Si nosotros, el tema, con calma",
+    "respuesta": "Si nosotros hubieramos discutido el tema con calma, habriamos llegado a un acuerdo.",
+    "pista": "Pluperfect subjunctive for unproductive past arguments.",
+    "grupos": [["si"], ["hubieramos", "hubiesemos"], ["discutido"], ["nosotros"], ["el tema"]]
+  },
+  {
+    "id": "discutir-subj_pluscuam-1",
+    "verbo": "discutir",
+    "contexto": "Era imposible que ellos, durante horas, sin cansarse",
+    "respuesta": "Era imposible que ellos hubieran discutido durante horas sin cansarse.",
+    "pista": "Past impossibility of arguing for hours without tiring.",
+    "grupos": [["era imposible que"], ["hubieran", "hubiesen"], ["discutido"], ["ellos"], ["durante horas"]]
+  },
+  {
+    "id": "discutir-subj_pluscuam-2",
+    "verbo": "discutir",
+    "contexto": "No creia que tu, con el jefe, tan abiertamente",
+    "respuesta": "No creia que tu hubieras discutido con el jefe tan abiertamente.",
+    "pista": "Disbelief about openly arguing with the boss.",
+    "grupos": [["no creia que"], ["hubieras", "hubieses"], ["discutido"], ["tu"], ["con el jefe"]]
+  },
+  {
+    "id": "disfrutar-subj_pluscuam-0",
+    "verbo": "disfrutar",
+    "contexto": "Si yo, del viaje, mas",
+    "respuesta": "Si yo hubiera disfrutado del viaje mas, tendria mejores recuerdos.",
+    "pista": "Pluperfect subjunctive for not enjoying something enough.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["disfrutado"], ["yo"], ["del viaje"]]
+  },
+  {
+    "id": "disfrutar-subj_pluscuam-1",
+    "verbo": "disfrutar",
+    "contexto": "Dudaba que ella, de la fiesta, despues de la mala noticia",
+    "respuesta": "Dudaba que ella hubiera disfrutado de la fiesta despues de la mala noticia.",
+    "pista": "Doubt about enjoying a party after bad news.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["disfrutado"], ["ella"], ["de la fiesta"]]
+  },
+  {
+    "id": "disfrutar-subj_pluscuam-2",
+    "verbo": "disfrutar",
+    "contexto": "Ojala nosotros, mas de nuestra juventud, sin preocupaciones",
+    "respuesta": "Ojala nosotros hubieramos disfrutado mas de nuestra juventud sin preocupaciones.",
+    "pista": "Wishing you had enjoyed your youth more.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["disfrutado"], ["nosotros"], ["mas de nuestra juventud"]]
+  },
+  {
+    "id": "disparar-subj_pluscuam-0",
+    "verbo": "disparar",
+    "contexto": "Si el cazador, al ciervo, habria cenado",
+    "respuesta": "Si el cazador hubiera disparado al ciervo, habria cenado.",
+    "pista": "Pluperfect subjunctive for a missed shot in the past.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["disparado"], ["el cazador"], ["al ciervo"]]
+  },
+  {
+    "id": "disparar-subj_pluscuam-1",
+    "verbo": "disparar",
+    "contexto": "No creia que el, contra la policia, a sangre fria",
+    "respuesta": "No creia que el hubiera disparado contra la policia a sangre fria.",
+    "pista": "Disbelief about shooting at police.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["disparado"], ["el"], ["contra la policia"]]
+  },
+  {
+    "id": "disparar-subj_pluscuam-2",
+    "verbo": "disparar",
+    "contexto": "Era imposible que nosotros, sin balas, en el rifle",
+    "respuesta": "Era imposible que nosotros hubieramos disparado sin balas en el rifle.",
+    "pista": "Past impossibility of shooting without ammunition.",
+    "grupos": [["era imposible que"], ["hubieramos", "hubiesemos"], ["disparado"], ["nosotros"], ["sin balas"]]
+  },
+  {
+    "id": "dormir-subj_pluscuam-0",
+    "verbo": "dormir",
+    "contexto": "Si tu, mejor anoche, estarias descansado",
+    "respuesta": "Si tu hubieras dormido mejor anoche, estarias descansado.",
+    "pista": "Pluperfect subjunctive for poor sleep in the past.",
+    "grupos": [["si"], ["hubieras", "hubieses"], ["dormido"], ["tu"], ["mejor anoche"]]
+  },
+  {
+    "id": "dormir-subj_pluscuam-1",
+    "verbo": "dormir",
+    "contexto": "Dudaba que el bebe, toda la noche, sin llorar",
+    "respuesta": "Dudaba que el bebe hubiera dormido toda la noche sin llorar.",
+    "pista": "Doubt about a baby sleeping through the night.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["dormido"], ["el bebe"], ["toda la noche"]]
+  },
+  {
+    "id": "dormir-subj_pluscuam-2",
+    "verbo": "dormir",
+    "contexto": "Como si nosotros, en una cama de rosas, toda la vida",
+    "respuesta": "Viviamos como si nosotros hubieramos dormido en una cama de rosas toda la vida.",
+    "pista": "Como si + pluperfect subjunctive for comfortable living comparison.",
+    "grupos": [["como si"], ["hubieramos", "hubiesemos"], ["dormido"], ["nosotros"], ["en una cama de rosas"]]
+  },
+  {
+    "id": "echar-subj_pluscuam-0",
+    "verbo": "echar",
+    "contexto": "Si yo, la carta, al buzon, habria llegado",
+    "respuesta": "Si yo hubiera echado la carta al buzon, habria llegado.",
+    "pista": "Pluperfect subjunctive for not mailing something.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["echado"], ["yo"], ["la carta"]]
+  },
+  {
+    "id": "echar-subj_pluscuam-1",
+    "verbo": "echar",
+    "contexto": "No creia que ella, de menos, a su ex novio",
+    "respuesta": "No creia que ella hubiera echado de menos a su ex novio.",
+    "pista": "Disbelief about missing an ex.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["echado"], ["ella"], ["de menos"]]
+  },
+  {
+    "id": "echar-subj_pluscuam-2",
+    "verbo": "echar",
+    "contexto": "Ojala nosotros, sal, a la comida antes",
+    "respuesta": "Ojala nosotros hubieramos echado sal a la comida antes.",
+    "pista": "Wishing you had added salt to the food.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["echado"], ["nosotros"], ["sal"]]
+  },
+  {
+    "id": "elegir-subj_pluscuam-0",
+    "verbo": "elegir",
+    "contexto": "Si tu, otra carrera, serias mas feliz",
+    "respuesta": "Si tu hubieras elegido otra carrera, serias mas feliz.",
+    "pista": "Pluperfect subjunctive for an unrealized career choice.",
+    "grupos": [["si"], ["hubieras", "hubieses"], ["elegido"], ["tu"], ["otra carrera"]]
+  },
+  {
+    "id": "elegir-subj_pluscuam-1",
+    "verbo": "elegir",
+    "contexto": "Dudaba que ellos, al mejor candidato, para el puesto",
+    "respuesta": "Dudaba que ellos hubieran elegido al mejor candidato para el puesto.",
+    "pista": "Doubt about choosing the best candidate.",
+    "grupos": [["dudaba que"], ["hubieran", "hubiesen"], ["elegido"], ["ellos"], ["al mejor candidato"]]
+  },
+  {
+    "id": "elegir-subj_pluscuam-2",
+    "verbo": "elegir",
+    "contexto": "Ojala yo, con mas cuidado, mis palabras",
+    "respuesta": "Ojala yo hubiera elegido con mas cuidado mis palabras.",
+    "pista": "Wishing you had chosen your words more carefully.",
+    "grupos": [["ojala"], ["hubiera", "hubiese"], ["elegido"], ["yo"], ["con mas cuidado"]]
+  }
+]

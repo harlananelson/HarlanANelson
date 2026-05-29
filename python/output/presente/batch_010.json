@@ -1,0 +1,884 @@
+[
+  {
+    "id": "manejar-presente-0",
+    "verbo": "manejar",
+    "contexto": "yo, cada vez que, la situación con calma",
+    "respuesta": "Cada vez que, yo manejo la situación con calma.",
+    "pista": "expressing composure",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "manejo"
+      ],
+      [
+        "la situacion con calma"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "manejar-presente-1",
+    "verbo": "manejar",
+    "contexto": "él, ahora, el coche nuevo",
+    "respuesta": "Él maneja el coche nuevo ahora.",
+    "pista": "describing driving",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "maneja"
+      ],
+      [
+        "el coche nuevo"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "manejar-presente-2",
+    "verbo": "manejar",
+    "contexto": "nosotros, mientras, el presupuesto",
+    "respuesta": "Nosotros manejamos el presupuesto mientras.",
+    "pista": "talking about management",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "manejamos"
+      ],
+      [
+        "el presupuesto"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "mantener-presente-0",
+    "verbo": "mantener",
+    "contexto": "yo, normalmente, la calma",
+    "respuesta": "Yo mantengo la calma normalmente.",
+    "pista": "expressing composure",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "mantengo"
+      ],
+      [
+        "la calma"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "mantener-presente-1",
+    "verbo": "mantener",
+    "contexto": "nosotros, siempre, el orden",
+    "respuesta": "Nosotros mantenemos el orden siempre.",
+    "pista": "describing organization",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "mantenemos"
+      ],
+      [
+        "el orden"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "mantener-presente-2",
+    "verbo": "mantener",
+    "contexto": "tú, por lo general, tu promesa",
+    "respuesta": "Por lo general, tú mantienes tu promesa.",
+    "pista": "talking about reliability",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "mantienes"
+      ],
+      [
+        "tu promesa"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "marchar-presente-0",
+    "verbo": "marchar",
+    "contexto": "ellos, mientras, por la calle principal",
+    "respuesta": "Ellos marchan por la calle principal mientras.",
+    "pista": "describing a march",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "marchan"
+      ],
+      [
+        "por la calle principal"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "marchar-presente-1",
+    "verbo": "marchar",
+    "contexto": "yo, hoy, hacia mi destino",
+    "respuesta": "Yo marcho hacia mi destino hoy.",
+    "pista": "expressing determination",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "marcho"
+      ],
+      [
+        "hacia mi destino"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "marchar-presente-2",
+    "verbo": "marchar",
+    "contexto": "nosotros, cada semana, juntos en la protesta",
+    "respuesta": "Nosotros marchamos juntos en la protesta cada semana.",
+    "pista": "narrating activism",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "marchamos"
+      ],
+      [
+        "juntos en la protesta"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "matar-presente-0",
+    "verbo": "matar",
+    "contexto": "él, mientras, el tiempo leyendo",
+    "respuesta": "Él mata el tiempo leyendo mientras.",
+    "pista": "describing leisure",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "mata"
+      ],
+      [
+        "el tiempo leyendo"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "matar-presente-1",
+    "verbo": "matar",
+    "contexto": "yo, ahora, las horas en el trabajo",
+    "respuesta": "Yo mato las horas en el trabajo ahora.",
+    "pista": "expressing boredom",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "mato"
+      ],
+      [
+        "las horas en el trabajo"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "matar-presente-2",
+    "verbo": "matar",
+    "contexto": "ella, esta tarde, mosquitos en verano",
+    "respuesta": "Esta tarde, ella mata mosquitos en verano.",
+    "pista": "describing a common annoyance",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "mata"
+      ],
+      [
+        "mosquitos en verano"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "mencionar-presente-0",
+    "verbo": "mencionar",
+    "contexto": "yo, cada vez que, el tema en la reunión",
+    "respuesta": "Yo menciono el tema en la reunión cada vez que.",
+    "pista": "describing communication",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "menciono"
+      ],
+      [
+        "el tema en la reunion"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "mencionar-presente-1",
+    "verbo": "mencionar",
+    "contexto": "tú, por lo general, un dato importante",
+    "respuesta": "Tú mencionas un dato importante por lo general.",
+    "pista": "talking about sharing info",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "mencionas"
+      ],
+      [
+        "un dato importante"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "mencionar-presente-2",
+    "verbo": "mencionar",
+    "contexto": "ella, a veces, a su amigo en la conversación",
+    "respuesta": "A veces, ella menciona a su amigo en la conversación.",
+    "pista": "narrating a discussion",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "menciona"
+      ],
+      [
+        "a su amigo en la conversacion"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "mentir-presente-0",
+    "verbo": "mentir",
+    "contexto": "él, cada semana, a sus padres",
+    "respuesta": "Él miente a sus padres cada semana.",
+    "pista": "describing dishonesty",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "miente"
+      ],
+      [
+        "a sus padres"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "mentir-presente-1",
+    "verbo": "mentir",
+    "contexto": "yo, esta tarde, nunca a mis amigos",
+    "respuesta": "Esta tarde, yo miento nunca a mis amigos.",
+    "pista": "expressing honesty",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "miento"
+      ],
+      [
+        "nunca a mis amigos"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "mentir-presente-2",
+    "verbo": "mentir",
+    "contexto": "ellos, cada semana, sobre su edad",
+    "respuesta": "Cada semana, ellos mienten sobre su edad.",
+    "pista": "narrating a common deception",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "mienten"
+      ],
+      [
+        "sobre su edad"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "merecer-presente-0",
+    "verbo": "merecer",
+    "contexto": "tú, normalmente, un descanso",
+    "respuesta": "Normalmente, tú mereces un descanso.",
+    "pista": "expressing deserving rest",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "mereces"
+      ],
+      [
+        "un descanso"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "merecer-presente-1",
+    "verbo": "merecer",
+    "contexto": "ella, esta noche, el premio",
+    "respuesta": "Ella merece el premio esta noche.",
+    "pista": "narrating recognition",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "merece"
+      ],
+      [
+        "el premio"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "merecer-presente-2",
+    "verbo": "merecer",
+    "contexto": "nosotros, ahora, una oportunidad",
+    "respuesta": "Nosotros merecemos una oportunidad ahora.",
+    "pista": "expressing worthiness",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "merecemos"
+      ],
+      [
+        "una oportunidad"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "meter-presente-0",
+    "verbo": "meter",
+    "contexto": "yo, siempre, la ropa en la maleta",
+    "respuesta": "Siempre, yo meto la ropa en la maleta.",
+    "pista": "describing packing",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "meto"
+      ],
+      [
+        "la ropa en la maleta"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "meter-presente-1",
+    "verbo": "meter",
+    "contexto": "tú, cada vez que, las manos en los bolsillos",
+    "respuesta": "Tú metes las manos en los bolsillos cada vez que.",
+    "pista": "narrating a gesture",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "metes"
+      ],
+      [
+        "las manos en los bolsillos"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "meter-presente-2",
+    "verbo": "meter",
+    "contexto": "ella, siempre, los libros en la mochila",
+    "respuesta": "Siempre, ella mete los libros en la mochila.",
+    "pista": "describing preparation",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "mete"
+      ],
+      [
+        "los libros en la mochila"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "mirar-presente-0",
+    "verbo": "mirar",
+    "contexto": "yo, esta mañana, por la ventana",
+    "respuesta": "Yo miro por la ventana esta mañana.",
+    "pista": "describing observation",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "miro"
+      ],
+      [
+        "por la ventana"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "mirar-presente-1",
+    "verbo": "mirar",
+    "contexto": "tú, todos los días, las estrellas",
+    "respuesta": "Tú miras las estrellas todos los días.",
+    "pista": "talking about stargazing",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "miras"
+      ],
+      [
+        "las estrellas"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "mirar-presente-2",
+    "verbo": "mirar",
+    "contexto": "nosotros, por lo general, la televisión",
+    "respuesta": "Nosotros miramos la televisión por lo general.",
+    "pista": "describing a leisure activity",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "miramos"
+      ],
+      [
+        "la television"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "molestar-presente-0",
+    "verbo": "molestar",
+    "contexto": "yo, cada vez que, a mi hermano",
+    "respuesta": "Yo molesto a mi hermano cada vez que.",
+    "pista": "describing sibling dynamics",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "molesto"
+      ],
+      [
+        "a mi hermano"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "molestar-presente-1",
+    "verbo": "molestar",
+    "contexto": "tú, mientras, a los vecinos con la música",
+    "respuesta": "Tú molestas a los vecinos con la música mientras.",
+    "pista": "talking about noise",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "molestas"
+      ],
+      [
+        "a los vecinos con la musica"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "molestar-presente-2",
+    "verbo": "molestar",
+    "contexto": "ellos, siempre, a los demás pasajeros",
+    "respuesta": "Ellos molestan a los demás pasajeros siempre.",
+    "pista": "narrating public annoyance",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "molestan"
+      ],
+      [
+        "a los demas pasajeros"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "morir-presente-0",
+    "verbo": "morir",
+    "contexto": "las plantas, a veces, sin agua",
+    "respuesta": "Las plantas muere sin agua a veces.",
+    "pista": "describing neglect consequences",
+    "grupos": [
+      [
+        "las plantas"
+      ],
+      [
+        "muere"
+      ],
+      [
+        "sin agua"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "morir-presente-1",
+    "verbo": "morir",
+    "contexto": "yo, mientras, de hambre",
+    "respuesta": "Mientras, yo muero de hambre.",
+    "pista": "expressing extreme hunger figuratively",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "muero"
+      ],
+      [
+        "de hambre"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "morir-presente-2",
+    "verbo": "morir",
+    "contexto": "él, siempre, de risa con esa broma",
+    "respuesta": "Siempre, él muere de risa con esa broma.",
+    "pista": "describing laughter",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "muere"
+      ],
+      [
+        "de risa con esa broma"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "mostrar-presente-0",
+    "verbo": "mostrar",
+    "contexto": "yo, por lo general, mis fotos del viaje",
+    "respuesta": "Yo muestro mis fotos del viaje por lo general.",
+    "pista": "describing sharing memories",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "muestro"
+      ],
+      [
+        "mis fotos del viaje"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "mostrar-presente-1",
+    "verbo": "mostrar",
+    "contexto": "ella, mientras, su nuevo diseño",
+    "respuesta": "Ella muestra su nuevo diseño mientras.",
+    "pista": "narrating a presentation",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "muestra"
+      ],
+      [
+        "su nuevo diseno"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "mostrar-presente-2",
+    "verbo": "mostrar",
+    "contexto": "nosotros, hoy, los resultados del estudio",
+    "respuesta": "Nosotros mostramos los resultados del estudio hoy.",
+    "pista": "presenting findings",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "mostramos"
+      ],
+      [
+        "los resultados del estudio"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "mover-presente-0",
+    "verbo": "mover",
+    "contexto": "yo, ahora, los muebles",
+    "respuesta": "Ahora, yo muevo los muebles.",
+    "pista": "describing rearrangement",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "muevo"
+      ],
+      [
+        "los muebles"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "mover-presente-1",
+    "verbo": "mover",
+    "contexto": "nosotros, ahora mismo, el coche del estacionamiento",
+    "respuesta": "Nosotros movemos el coche del estacionamiento ahora mismo.",
+    "pista": "describing parking",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "movemos"
+      ],
+      [
+        "el coche del estacionamiento"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "mover-presente-2",
+    "verbo": "mover",
+    "contexto": "tú, cada semana, las piezas del ajedrez",
+    "respuesta": "Tú mueves las piezas del ajedrez cada semana.",
+    "pista": "describing a game",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "mueves"
+      ],
+      [
+        "las piezas del ajedrez"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "nacer-presente-0",
+    "verbo": "nacer",
+    "contexto": "yo, hoy, en una ciudad pequeña",
+    "respuesta": "Hoy, yo naco en una ciudad pequeña.",
+    "pista": "expressing origin",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "naco"
+      ],
+      [
+        "en una ciudad pequena"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "nacer-presente-1",
+    "verbo": "nacer",
+    "contexto": "los bebés, actualmente, en el hospital",
+    "respuesta": "Los bebés nace en el hospital actualmente.",
+    "pista": "describing childbirth",
+    "grupos": [
+      [
+        "los bebes"
+      ],
+      [
+        "nace"
+      ],
+      [
+        "en el hospital"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "nacer-presente-2",
+    "verbo": "nacer",
+    "contexto": "ella, cada vez que, en primavera",
+    "respuesta": "Cada vez que, ella nace en primavera.",
+    "pista": "narrating a birth season",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "nace"
+      ],
+      [
+        "en primavera"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  }
+]

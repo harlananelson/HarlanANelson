@@ -1,0 +1,362 @@
+[
+  {
+    "id": "abandonar-subj_pluscuam-0",
+    "verbo": "abandonar",
+    "contexto": "Si yo hubiera, el proyecto, a tiempo",
+    "respuesta": "Si yo hubiera abandonado el proyecto a tiempo, todo habria sido diferente.",
+    "pista": "Pluperfect subjunctive expresses an unrealized past action - something that didn't happen.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["abandonado"], ["yo"], ["el proyecto"]]
+  },
+  {
+    "id": "abandonar-subj_pluscuam-1",
+    "verbo": "abandonar",
+    "contexto": "Dudaba que ellos, la ciudad, antes del amanecer",
+    "respuesta": "Dudaba que ellos hubieran abandonado la ciudad antes del amanecer.",
+    "pista": "Use pluperfect subjunctive after expressions of doubt about past events.",
+    "grupos": [["dudaba que"], ["hubieran", "hubiesen"], ["abandonado"], ["ellos"], ["la ciudad"]]
+  },
+  {
+    "id": "abandonar-subj_pluscuam-2",
+    "verbo": "abandonar",
+    "contexto": "Ojala tu, esa idea, antes",
+    "respuesta": "Ojala tu hubieras abandonado esa idea antes.",
+    "pista": "Ojala + pluperfect subjunctive expresses a wish about something that didn't happen in the past.",
+    "grupos": [["ojala"], ["hubieras", "hubieses"], ["abandonado"], ["tu"], ["esa idea"]]
+  },
+  {
+    "id": "abrir-subj_pluscuam-0",
+    "verbo": "abrir",
+    "contexto": "Si ella hubiera, la puerta, antes de salir",
+    "respuesta": "Si ella hubiera abierto la puerta antes de salir, habriamos escapado.",
+    "pista": "Abrir has an irregular past participle: abierto.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["abierto"], ["ella"], ["la puerta"]]
+  },
+  {
+    "id": "abrir-subj_pluscuam-1",
+    "verbo": "abrir",
+    "contexto": "No creia que nosotros, la tienda, tan temprano",
+    "respuesta": "No creia que nosotros hubieramos abierto la tienda tan temprano.",
+    "pista": "Pluperfect subjunctive after expressions of disbelief about a past event.",
+    "grupos": [["no creia que"], ["hubieramos", "hubiesemos"], ["abierto"], ["nosotros"], ["la tienda"]]
+  },
+  {
+    "id": "abrir-subj_pluscuam-2",
+    "verbo": "abrir",
+    "contexto": "Como si tu, el regalo, sin permiso",
+    "respuesta": "Actuaba como si tu hubieras abierto el regalo sin permiso.",
+    "pista": "Como si + pluperfect subjunctive describes a past action that may not have occurred.",
+    "grupos": [["como si"], ["hubieras", "hubieses"], ["abierto"], ["tu"], ["el regalo"]]
+  },
+  {
+    "id": "acabar-subj_pluscuam-0",
+    "verbo": "acabar",
+    "contexto": "Si yo hubiera, el trabajo, a tiempo",
+    "respuesta": "Si yo hubiera acabado el trabajo a tiempo, no tendria problemas.",
+    "pista": "Pluperfect subjunctive in si clauses expresses contrary-to-fact past conditions.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["acabado"], ["yo"], ["el trabajo"]]
+  },
+  {
+    "id": "acabar-subj_pluscuam-1",
+    "verbo": "acabar",
+    "contexto": "Era imposible que ellos, la tarea, tan rapido",
+    "respuesta": "Era imposible que ellos hubieran acabado la tarea tan rapido.",
+    "pista": "Era imposible que triggers the subjunctive for past impossibilities.",
+    "grupos": [["era imposible que"], ["hubieran", "hubiesen"], ["acabado"], ["ellos"], ["la tarea"]]
+  },
+  {
+    "id": "acabar-subj_pluscuam-2",
+    "verbo": "acabar",
+    "contexto": "Ojala tu, la carrera, el ano pasado",
+    "respuesta": "Ojala tu hubieras acabado la carrera el ano pasado.",
+    "pista": "Ojala + pluperfect subjunctive expresses regret about an unrealized past event.",
+    "grupos": [["ojala"], ["hubieras", "hubieses"], ["acabado"], ["tu"], ["la carrera"]]
+  },
+  {
+    "id": "aceptar-subj_pluscuam-0",
+    "verbo": "aceptar",
+    "contexto": "Si nosotros, la oferta, habriamos sido ricos",
+    "respuesta": "Si nosotros hubieramos aceptado la oferta, habriamos sido ricos.",
+    "pista": "Si + pluperfect subjunctive sets up a hypothetical past that didn't happen.",
+    "grupos": [["si"], ["hubieramos", "hubiesemos"], ["aceptado"], ["nosotros"], ["la oferta"]]
+  },
+  {
+    "id": "aceptar-subj_pluscuam-1",
+    "verbo": "aceptar",
+    "contexto": "Dudaba que ella, mi disculpa, sinceramente",
+    "respuesta": "Dudaba que ella hubiera aceptado mi disculpa sinceramente.",
+    "pista": "Doubt about a past action requires the pluperfect subjunctive.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["aceptado"], ["ella"], ["mi disculpa"]]
+  },
+  {
+    "id": "aceptar-subj_pluscuam-2",
+    "verbo": "aceptar",
+    "contexto": "Como si yo, las condiciones, sin protestar",
+    "respuesta": "Me trataba como si yo hubiera aceptado las condiciones sin protestar.",
+    "pista": "Como si + pluperfect subjunctive for hypothetical past comparisons.",
+    "grupos": [["como si"], ["hubiera", "hubiese"], ["aceptado"], ["yo"], ["las condiciones"]]
+  },
+  {
+    "id": "acercar-subj_pluscuam-0",
+    "verbo": "acercar",
+    "contexto": "Si tu, la silla, a la mesa",
+    "respuesta": "Si tu hubieras acercado la silla a la mesa, habrias estado mas comodo.",
+    "pista": "Pluperfect subjunctive for unrealized past actions in conditional sentences.",
+    "grupos": [["si"], ["hubieras", "hubieses"], ["acercado"], ["tu"], ["la silla"]]
+  },
+  {
+    "id": "acercar-subj_pluscuam-1",
+    "verbo": "acercar",
+    "contexto": "No creia que el, el coche, tanto al borde",
+    "respuesta": "No creia que el hubiera acercado el coche tanto al borde.",
+    "pista": "Disbelief about a completed past action uses pluperfect subjunctive.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["acercado"], ["el"], ["el coche"]]
+  },
+  {
+    "id": "acercar-subj_pluscuam-2",
+    "verbo": "acercar",
+    "contexto": "Ojala nosotros, las dos familias, antes",
+    "respuesta": "Ojala nosotros hubieramos acercado las dos familias antes.",
+    "pista": "Ojala expresses a wish that something had happened differently in the past.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["acercado"], ["nosotros"], ["las dos familias"]]
+  },
+  {
+    "id": "acompanar-subj_pluscuam-0",
+    "verbo": "acompanar",
+    "contexto": "Si yo, a mi madre, al medico",
+    "respuesta": "Si yo hubiera acompanado a mi madre al medico, me sentiria mejor.",
+    "pista": "Expresses regret about not accompanying someone in the past.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["acompanado"], ["yo"], ["a mi madre"]]
+  },
+  {
+    "id": "acompanar-subj_pluscuam-1",
+    "verbo": "acompanar",
+    "contexto": "Dudaba que ellos, al nino, a la escuela",
+    "respuesta": "Dudaba que ellos hubieran acompanado al nino a la escuela.",
+    "pista": "Doubt triggers subjunctive when referring to past events.",
+    "grupos": [["dudaba que"], ["hubieran", "hubiesen"], ["acompanado"], ["ellos"], ["al nino"]]
+  },
+  {
+    "id": "acompanar-subj_pluscuam-2",
+    "verbo": "acompanar",
+    "contexto": "Era imposible que tu, a todos, en el viaje",
+    "respuesta": "Era imposible que tu hubieras acompanado a todos en el viaje.",
+    "pista": "Past impossibility requires pluperfect subjunctive.",
+    "grupos": [["era imposible que"], ["hubieras", "hubieses"], ["acompanado"], ["tu"], ["a todos"]]
+  },
+  {
+    "id": "acordar-subj_pluscuam-0",
+    "verbo": "acordar",
+    "contexto": "Si nosotros, los terminos, antes",
+    "respuesta": "Si nosotros hubieramos acordado los terminos antes, no habria conflicto.",
+    "pista": "Pluperfect subjunctive for hypothetical past agreements that didn't happen.",
+    "grupos": [["si"], ["hubieramos", "hubiesemos"], ["acordado"], ["nosotros"], ["los terminos"]]
+  },
+  {
+    "id": "acordar-subj_pluscuam-1",
+    "verbo": "acordar",
+    "contexto": "No creia que ellos, un precio, tan bajo",
+    "respuesta": "No creia que ellos hubieran acordado un precio tan bajo.",
+    "pista": "Disbelief about past events triggers the pluperfect subjunctive.",
+    "grupos": [["no creia que"], ["hubieran", "hubiesen"], ["acordado"], ["ellos"], ["un precio"]]
+  },
+  {
+    "id": "acordar-subj_pluscuam-2",
+    "verbo": "acordar",
+    "contexto": "Ojala yo, esa reunion, con tiempo",
+    "respuesta": "Ojala yo hubiera acordado esa reunion con tiempo.",
+    "pista": "Ojala + pluperfect subjunctive for wishing past events had been different.",
+    "grupos": [["ojala"], ["hubiera", "hubiese"], ["acordado"], ["yo"], ["esa reunion"]]
+  },
+  {
+    "id": "actuar-subj_pluscuam-0",
+    "verbo": "actuar",
+    "contexto": "Si ella, con mas prudencia, todo seria distinto",
+    "respuesta": "Si ella hubiera actuado con mas prudencia, todo seria distinto.",
+    "pista": "Pluperfect subjunctive expresses how things could have been different.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["actuado"], ["ella"], ["con mas prudencia"]]
+  },
+  {
+    "id": "actuar-subj_pluscuam-1",
+    "verbo": "actuar",
+    "contexto": "Dudaba que tu, de buena fe, en el negocio",
+    "respuesta": "Dudaba que tu hubieras actuado de buena fe en el negocio.",
+    "pista": "Expressing doubt about someone's past behavior uses pluperfect subjunctive.",
+    "grupos": [["dudaba que"], ["hubieras", "hubieses"], ["actuado"], ["tu"], ["de buena fe"]]
+  },
+  {
+    "id": "actuar-subj_pluscuam-2",
+    "verbo": "actuar",
+    "contexto": "Como si nosotros, sin pensar, en las consecuencias",
+    "respuesta": "Nos juzgaban como si nosotros hubieramos actuado sin pensar en las consecuencias.",
+    "pista": "Como si + pluperfect subjunctive for hypothetical past comparisons.",
+    "grupos": [["como si"], ["hubieramos", "hubiesemos"], ["actuado"], ["nosotros"], ["sin pensar"]]
+  },
+  {
+    "id": "admitir-subj_pluscuam-0",
+    "verbo": "admitir",
+    "contexto": "Si el, su error, todo se habria resuelto",
+    "respuesta": "Si el hubiera admitido su error, todo se habria resuelto.",
+    "pista": "Pluperfect subjunctive for unrealized past conditions.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["admitido"], ["el"], ["su error"]]
+  },
+  {
+    "id": "admitir-subj_pluscuam-1",
+    "verbo": "admitir",
+    "contexto": "Era imposible que ellos, la derrota, tan facilmente",
+    "respuesta": "Era imposible que ellos hubieran admitido la derrota tan facilmente.",
+    "pista": "Past impossibility expressed with pluperfect subjunctive.",
+    "grupos": [["era imposible que"], ["hubieran", "hubiesen"], ["admitido"], ["ellos"], ["la derrota"]]
+  },
+  {
+    "id": "admitir-subj_pluscuam-2",
+    "verbo": "admitir",
+    "contexto": "Ojala yo, la verdad, desde el principio",
+    "respuesta": "Ojala yo hubiera admitido la verdad desde el principio.",
+    "pista": "Ojala + pluperfect subjunctive expresses regret about not having done something.",
+    "grupos": [["ojala"], ["hubiera", "hubiese"], ["admitido"], ["yo"], ["la verdad"]]
+  },
+  {
+    "id": "aforar-subj_pluscuam-0",
+    "verbo": "aforar",
+    "contexto": "Si nosotros, el deposito, correctamente",
+    "respuesta": "Si nosotros hubieramos aforado el deposito correctamente, no habria faltado agua.",
+    "pista": "Aforar means to gauge or measure capacity. Pluperfect subjunctive for unrealized past.",
+    "grupos": [["si"], ["hubieramos", "hubiesemos"], ["aforado"], ["nosotros"], ["el deposito"]]
+  },
+  {
+    "id": "aforar-subj_pluscuam-1",
+    "verbo": "aforar",
+    "contexto": "Dudaba que ellos, el tanque, antes de llenarlo",
+    "respuesta": "Dudaba que ellos hubieran aforado el tanque antes de llenarlo.",
+    "pista": "Doubt about a past measurement uses pluperfect subjunctive.",
+    "grupos": [["dudaba que"], ["hubieran", "hubiesen"], ["aforado"], ["ellos"], ["el tanque"]]
+  },
+  {
+    "id": "aforar-subj_pluscuam-2",
+    "verbo": "aforar",
+    "contexto": "Era imposible que tu, el rio, en tan poco tiempo",
+    "respuesta": "Era imposible que tu hubieras aforado el rio en tan poco tiempo.",
+    "pista": "Past impossibility requires the pluperfect subjunctive.",
+    "grupos": [["era imposible que"], ["hubieras", "hubieses"], ["aforado"], ["tu"], ["el rio"]]
+  },
+  {
+    "id": "agradecer-subj_pluscuam-0",
+    "verbo": "agradecer",
+    "contexto": "Si yo, su ayuda, habria sido mas educado",
+    "respuesta": "Si yo hubiera agradecido su ayuda, habria sido mas educado.",
+    "pista": "Regret about not having thanked someone in the past.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["agradecido"], ["yo"], ["su ayuda"]]
+  },
+  {
+    "id": "agradecer-subj_pluscuam-1",
+    "verbo": "agradecer",
+    "contexto": "No creia que ella, el favor, tan sinceramente",
+    "respuesta": "No creia que ella hubiera agradecido el favor tan sinceramente.",
+    "pista": "Disbelief about past gratitude uses pluperfect subjunctive.",
+    "grupos": [["no creia que"], ["hubiera", "hubiese"], ["agradecido"], ["ella"], ["el favor"]]
+  },
+  {
+    "id": "agradecer-subj_pluscuam-2",
+    "verbo": "agradecer",
+    "contexto": "Ojala nosotros, a los voluntarios, mejor",
+    "respuesta": "Ojala nosotros hubieramos agradecido a los voluntarios mejor.",
+    "pista": "Wishing you had shown more gratitude in the past.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["agradecido"], ["nosotros"], ["a los voluntarios"]]
+  },
+  {
+    "id": "alcanzar-subj_pluscuam-0",
+    "verbo": "alcanzar",
+    "contexto": "Si tu, la meta, habrias celebrado",
+    "respuesta": "Si tu hubieras alcanzado la meta, habrias celebrado.",
+    "pista": "Pluperfect subjunctive for unrealized past achievements.",
+    "grupos": [["si"], ["hubieras", "hubieses"], ["alcanzado"], ["tu"], ["la meta"]]
+  },
+  {
+    "id": "alcanzar-subj_pluscuam-1",
+    "verbo": "alcanzar",
+    "contexto": "Dudaba que ellos, el acuerdo, sin ayuda",
+    "respuesta": "Dudaba que ellos hubieran alcanzado el acuerdo sin ayuda.",
+    "pista": "Doubt about past accomplishments uses pluperfect subjunctive.",
+    "grupos": [["dudaba que"], ["hubieran", "hubiesen"], ["alcanzado"], ["ellos"], ["el acuerdo"]]
+  },
+  {
+    "id": "alcanzar-subj_pluscuam-2",
+    "verbo": "alcanzar",
+    "contexto": "Era imposible que yo, el tren, a esa hora",
+    "respuesta": "Era imposible que yo hubiera alcanzado el tren a esa hora.",
+    "pista": "Past impossibility expressed with pluperfect subjunctive.",
+    "grupos": [["era imposible que"], ["hubiera", "hubiese"], ["alcanzado"], ["yo"], ["el tren"]]
+  },
+  {
+    "id": "alegrar-subj_pluscuam-0",
+    "verbo": "alegrar",
+    "contexto": "Si la noticia, a mi madre, habria sonreido",
+    "respuesta": "Si la noticia hubiera alegrado a mi madre, habria sonreido.",
+    "pista": "Pluperfect subjunctive in conditional clauses about past emotions.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["alegrado"], ["la noticia"], ["a mi madre"]]
+  },
+  {
+    "id": "alegrar-subj_pluscuam-1",
+    "verbo": "alegrar",
+    "contexto": "No creia que tu, a los ninos, con ese regalo",
+    "respuesta": "No creia que tu hubieras alegrado a los ninos con ese regalo.",
+    "pista": "Disbelief about causing joy in the past.",
+    "grupos": [["no creia que"], ["hubieras", "hubieses"], ["alegrado"], ["tu"], ["a los ninos"]]
+  },
+  {
+    "id": "alegrar-subj_pluscuam-2",
+    "verbo": "alegrar",
+    "contexto": "Ojala nosotros, la fiesta, con musica",
+    "respuesta": "Ojala nosotros hubieramos alegrado la fiesta con musica.",
+    "pista": "Wishing you had made the party happier in the past.",
+    "grupos": [["ojala"], ["hubieramos", "hubiesemos"], ["alegrado"], ["nosotros"], ["la fiesta"]]
+  },
+  {
+    "id": "alejar-subj_pluscuam-0",
+    "verbo": "alejar",
+    "contexto": "Si yo, el peligro, de mi familia",
+    "respuesta": "Si yo hubiera alejado el peligro de mi familia, estariamos tranquilos.",
+    "pista": "Pluperfect subjunctive for an unrealized protective action in the past.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["alejado"], ["yo"], ["el peligro"]]
+  },
+  {
+    "id": "alejar-subj_pluscuam-1",
+    "verbo": "alejar",
+    "contexto": "Dudaba que ella, a los curiosos, de la escena",
+    "respuesta": "Dudaba que ella hubiera alejado a los curiosos de la escena.",
+    "pista": "Doubt about a past action of distancing uses pluperfect subjunctive.",
+    "grupos": [["dudaba que"], ["hubiera", "hubiese"], ["alejado"], ["ella"], ["a los curiosos"]]
+  },
+  {
+    "id": "alejar-subj_pluscuam-2",
+    "verbo": "alejar",
+    "contexto": "Como si tu, las malas influencias, de tu vida",
+    "respuesta": "Vivias como si tu hubieras alejado las malas influencias de tu vida.",
+    "pista": "Como si + pluperfect subjunctive for hypothetical past comparisons.",
+    "grupos": [["como si"], ["hubieras", "hubieses"], ["alejado"], ["tu"], ["las malas influencias"]]
+  },
+  {
+    "id": "amar-subj_pluscuam-0",
+    "verbo": "amar",
+    "contexto": "Si ella, a alguien, de verdad",
+    "respuesta": "Si ella hubiera amado a alguien de verdad, habria sido feliz.",
+    "pista": "Pluperfect subjunctive for hypothetical past love that didn't happen.",
+    "grupos": [["si"], ["hubiera", "hubiese"], ["amado"], ["ella"], ["a alguien"]]
+  },
+  {
+    "id": "amar-subj_pluscuam-1",
+    "verbo": "amar",
+    "contexto": "No creia que tu, a esa persona, tanto",
+    "respuesta": "No creia que tu hubieras amado a esa persona tanto.",
+    "pista": "Disbelief about the depth of past love uses pluperfect subjunctive.",
+    "grupos": [["no creia que"], ["hubieras", "hubieses"], ["amado"], ["tu"], ["a esa persona"]]
+  },
+  {
+    "id": "amar-subj_pluscuam-2",
+    "verbo": "amar",
+    "contexto": "Ojala yo, con mas intensidad, en mi juventud",
+    "respuesta": "Ojala yo hubiera amado con mas intensidad en mi juventud.",
+    "pista": "Wishing you had loved more intensely in the past.",
+    "grupos": [["ojala"], ["hubiera", "hubiese"], ["amado"], ["yo"], ["con mas intensidad"]]
+  }
+]

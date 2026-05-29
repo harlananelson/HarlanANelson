@@ -1,0 +1,242 @@
+[
+  {
+    "id": "comer-puntual-0",
+    "verbo": "comer",
+    "contexto": "nosotros, al mediodia, en el restaurante",
+    "respuesta": "Nosotros comimos en el restaurante al mediodia.",
+    "pista": "completed action of eating at the restaurant at noon",
+    "grupos": [["nosotros"], ["comimos"], ["en el restaurante"], ["al mediodia"]]
+  },
+  {
+    "id": "comer-puntual-1",
+    "verbo": "comer",
+    "contexto": "yo, hace tres dias, paella por primera vez",
+    "respuesta": "Yo comi paella por primera vez hace tres dias.",
+    "pista": "completed action of eating paella for the first time three days ago",
+    "grupos": [["yo"], ["comi"], ["paella por primera vez"], ["hace tres dias"]]
+  },
+  {
+    "id": "cometer-puntual-0",
+    "verbo": "cometer",
+    "contexto": "el, en aquel momento, un grave error",
+    "respuesta": "El cometio un grave error en aquel momento.",
+    "pista": "completed action of making a serious mistake at that moment",
+    "grupos": [["el"], ["cometio"], ["un grave error"], ["en aquel momento"]]
+  },
+  {
+    "id": "cometer-puntual-1",
+    "verbo": "cometer",
+    "contexto": "ellos, aquel verano, muchas faltas",
+    "respuesta": "Ellos cometieron muchas faltas aquel verano.",
+    "pista": "completed action of making many mistakes that summer",
+    "grupos": [["ellos"], ["cometieron"], ["muchas faltas"], ["aquel verano"]]
+  },
+  {
+    "id": "compartir-puntual-0",
+    "verbo": "compartir",
+    "contexto": "nosotros, durante el viaje, historias increibles",
+    "respuesta": "Nosotros compartimos historias increibles durante el viaje.",
+    "pista": "completed action of sharing incredible stories during the trip",
+    "grupos": [["nosotros"], ["compartimos"], ["historias increibles"], ["durante el viaje"]]
+  },
+  {
+    "id": "compartir-puntual-1",
+    "verbo": "compartir",
+    "contexto": "ella, esa misma noche, su secreto",
+    "respuesta": "Ella compartio su secreto esa misma noche.",
+    "pista": "completed action of sharing her secret that very night",
+    "grupos": [["ella"], ["compartio"], ["su secreto"], ["esa misma noche"]]
+  },
+  {
+    "id": "comprar-puntual-0",
+    "verbo": "comprar",
+    "contexto": "yo, el martes pasado, un coche nuevo",
+    "respuesta": "Yo compre un coche nuevo el martes pasado.",
+    "pista": "completed action of buying a new car last Tuesday",
+    "grupos": [["yo"], ["compre"], ["un coche nuevo"], ["el martes pasado"]]
+  },
+  {
+    "id": "comprar-puntual-1",
+    "verbo": "comprar",
+    "contexto": "ella, al mediodia, flores para la casa",
+    "respuesta": "Ella compro flores para la casa al mediodia.",
+    "pista": "completed action of buying flowers for the house at noon",
+    "grupos": [["ella"], ["compro"], ["flores para la casa"], ["al mediodia"]]
+  },
+  {
+    "id": "comprender-puntual-0",
+    "verbo": "comprender",
+    "contexto": "tu, de repente, la situacion",
+    "respuesta": "Tu comprendiste la situacion de repente.",
+    "pista": "completed action of understanding the situation suddenly",
+    "grupos": [["tu"], ["comprendiste"], ["la situacion"], ["de repente"]]
+  },
+  {
+    "id": "comprender-puntual-1",
+    "verbo": "comprender",
+    "contexto": "yo, al final del dia, todo",
+    "respuesta": "Yo comprendi todo al final del dia.",
+    "pista": "completed action of understanding everything at the end of the day",
+    "grupos": [["yo"], ["comprendi"], ["todo"], ["al final del dia"]]
+  },
+  {
+    "id": "conducir-puntual-0",
+    "verbo": "conducir",
+    "contexto": "yo, en la madrugada, hasta la playa",
+    "respuesta": "Yo conduje hasta la playa en la madrugada.",
+    "pista": "completed action of driving to the beach in the early morning",
+    "grupos": [["yo"], ["conduje"], ["hasta la playa"], ["en la madrugada"]]
+  },
+  {
+    "id": "conducir-puntual-1",
+    "verbo": "conducir",
+    "contexto": "el, durante la tormenta, con cuidado",
+    "respuesta": "El condujo con cuidado durante la tormenta.",
+    "pista": "completed action of driving carefully during the storm",
+    "grupos": [["el"], ["condujo"], ["con cuidado"], ["durante la tormenta"]]
+  },
+  {
+    "id": "confiar-puntual-0",
+    "verbo": "confiar",
+    "contexto": "ella, en aquel momento, en su instinto",
+    "respuesta": "Ella confio en su instinto en aquel momento.",
+    "pista": "completed action of trusting her instinct at that moment",
+    "grupos": [["ella"], ["confio"], ["en su instinto"], ["en aquel momento"]]
+  },
+  {
+    "id": "confiar-puntual-1",
+    "verbo": "confiar",
+    "contexto": "yo, justo en ese instante, en mi equipo",
+    "respuesta": "Yo confie en mi equipo justo en ese instante.",
+    "pista": "completed action of trusting my team at that exact moment",
+    "grupos": [["yo"], ["confie"], ["en mi equipo"], ["justo en ese instante"]]
+  },
+  {
+    "id": "conocer-puntual-0",
+    "verbo": "conocer",
+    "contexto": "yo, aquel verano, a mi mejor amigo",
+    "respuesta": "Yo conoci a mi mejor amigo aquel verano.",
+    "pista": "completed action of meeting my best friend that summer",
+    "grupos": [["yo"], ["conoci"], ["a mi mejor amigo"], ["aquel verano"]]
+  },
+  {
+    "id": "conocer-puntual-1",
+    "verbo": "conocer",
+    "contexto": "ellos, durante el viaje, la verdad",
+    "respuesta": "Ellos conocieron la verdad durante el viaje.",
+    "pista": "completed action of learning the truth during the trip",
+    "grupos": [["ellos"], ["conocieron"], ["la verdad"], ["durante el viaje"]]
+  },
+  {
+    "id": "conseguir-puntual-0",
+    "verbo": "conseguir",
+    "contexto": "ella, tras la reunion, el puesto",
+    "respuesta": "Ella consiguio el puesto tras la reunion.",
+    "pista": "completed action of getting the position after the meeting",
+    "grupos": [["ella"], ["consiguio"], ["el puesto"], ["tras la reunion"]]
+  },
+  {
+    "id": "conseguir-puntual-1",
+    "verbo": "conseguir",
+    "contexto": "nosotros, al final del dia, las entradas",
+    "respuesta": "Nosotros conseguimos las entradas al final del dia.",
+    "pista": "completed action of getting the tickets at the end of the day",
+    "grupos": [["nosotros"], ["conseguimos"], ["las entradas"], ["al final del dia"]]
+  },
+  {
+    "id": "considerar-puntual-0",
+    "verbo": "considerar",
+    "contexto": "el, hace una semana, todas las opciones",
+    "respuesta": "El considero todas las opciones hace una semana.",
+    "pista": "completed action of considering all the options a week ago",
+    "grupos": [["el"], ["considero"], ["todas las opciones"], ["hace una semana"]]
+  },
+  {
+    "id": "considerar-puntual-1",
+    "verbo": "considerar",
+    "contexto": "yo, en aquel momento, su propuesta",
+    "respuesta": "Yo considere su propuesta en aquel momento.",
+    "pista": "completed action of considering her proposal at that moment",
+    "grupos": [["yo"], ["considere"], ["su propuesta"], ["en aquel momento"]]
+  },
+  {
+    "id": "construir-puntual-0",
+    "verbo": "construir",
+    "contexto": "ellos, aquel verano, una casa en el campo",
+    "respuesta": "Ellos construyeron una casa en el campo aquel verano.",
+    "pista": "completed action of building a house in the countryside that summer",
+    "grupos": [["ellos"], ["construyeron"], ["una casa en el campo"], ["aquel verano"]]
+  },
+  {
+    "id": "construir-puntual-1",
+    "verbo": "construir",
+    "contexto": "yo, hace tres dias, una estanteria",
+    "respuesta": "Yo construi una estanteria hace tres dias.",
+    "pista": "completed action of building a shelf three days ago",
+    "grupos": [["yo"], ["construi"], ["una estanteria"], ["hace tres dias"]]
+  },
+  {
+    "id": "contar-puntual-0",
+    "verbo": "contar",
+    "contexto": "ella, esa misma noche, una historia fascinante",
+    "respuesta": "Ella conto una historia fascinante esa misma noche.",
+    "pista": "completed action of telling a fascinating story that very night",
+    "grupos": [["ella"], ["conto"], ["una historia fascinante"], ["esa misma noche"]]
+  },
+  {
+    "id": "contar-puntual-1",
+    "verbo": "contar",
+    "contexto": "tu, al anochecer, el dinero",
+    "respuesta": "Tu contaste el dinero al anochecer.",
+    "pista": "completed action of counting the money at nightfall",
+    "grupos": [["tu"], ["contaste"], ["el dinero"], ["al anochecer"]]
+  },
+  {
+    "id": "contestar-puntual-0",
+    "verbo": "contestar",
+    "contexto": "yo, nada mas llegar, el telefono",
+    "respuesta": "Yo conteste el telefono nada mas llegar.",
+    "pista": "completed action of answering the phone right upon arriving",
+    "grupos": [["yo"], ["conteste"], ["el telefono"], ["nada mas llegar"]]
+  },
+  {
+    "id": "contestar-puntual-1",
+    "verbo": "contestar",
+    "contexto": "el, de repente, con mucha seguridad",
+    "respuesta": "El contesto con mucha seguridad de repente.",
+    "pista": "completed action of answering with great confidence suddenly",
+    "grupos": [["el"], ["contesto"], ["con mucha seguridad"], ["de repente"]]
+  },
+  {
+    "id": "continuar-puntual-0",
+    "verbo": "continuar",
+    "contexto": "ella, tras la reunion, con el trabajo",
+    "respuesta": "Ella continuo con el trabajo tras la reunion.",
+    "pista": "completed action of continuing with the work after the meeting",
+    "grupos": [["ella"], ["continuo"], ["con el trabajo"], ["tras la reunion"]]
+  },
+  {
+    "id": "continuar-puntual-1",
+    "verbo": "continuar",
+    "contexto": "nosotros, durante la tormenta, el viaje",
+    "respuesta": "Nosotros continuamos el viaje durante la tormenta.",
+    "pista": "completed action of continuing the trip during the storm",
+    "grupos": [["nosotros"], ["continuamos"], ["el viaje"], ["durante la tormenta"]]
+  },
+  {
+    "id": "controlar-puntual-0",
+    "verbo": "controlar",
+    "contexto": "el, justo en ese instante, la situacion",
+    "respuesta": "El controlo la situacion justo en ese instante.",
+    "pista": "completed action of controlling the situation at that exact moment",
+    "grupos": [["el"], ["controlo"], ["la situacion"], ["justo en ese instante"]]
+  },
+  {
+    "id": "controlar-puntual-1",
+    "verbo": "controlar",
+    "contexto": "yo, en aquel momento, mis emociones",
+    "respuesta": "Yo controle mis emociones en aquel momento.",
+    "pista": "completed action of controlling my emotions at that moment",
+    "grupos": [["yo"], ["controle"], ["mis emociones"], ["en aquel momento"]]
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "enviar-fondo-0",
+    "verbo": "enviar",
+    "contexto": "la oficina, paquetes, a esa hora",
+    "respuesta": "A esa hora, la oficina enviaba paquetes a todas partes del pais.",
+    "pista": "The imperfect describes a routine shipping process as background.",
+    "grupos": [["a esa hora"], ["la oficina"], ["enviaba"], ["paquetes"], ["a todas partes del pais"]]
+  },
+  {
+    "id": "escapar-fondo-0",
+    "verbo": "escapar",
+    "contexto": "el humo, por la chimenea, cuando llegamos",
+    "respuesta": "Cuando llegamos, el humo escapaba por la chimenea hacia el cielo.",
+    "pista": "The imperfect describes smoke rising as an ongoing background scene.",
+    "grupos": [["cuando llegamos"], ["el humo"], ["escapaba"], ["por la chimenea"], ["hacia el cielo"]]
+  },
+  {
+    "id": "esconder-fondo-0",
+    "verbo": "esconder",
+    "contexto": "los ninos, los regalos, mientras tanto",
+    "respuesta": "Mientras tanto, los ninos escondian los regalos debajo de la cama.",
+    "pista": "The imperfect shows a playful hiding action as background.",
+    "grupos": [["mientras tanto"], ["los ninos"], ["escondian"], ["los regalos"], ["debajo de la cama"]]
+  },
+  {
+    "id": "escribir-fondo-0",
+    "verbo": "escribir",
+    "contexto": "el poeta, versos, durante la cena",
+    "respuesta": "Durante la cena, el poeta escribia versos en una servilleta de papel.",
+    "pista": "The imperfect describes ongoing creative writing as background.",
+    "grupos": [["durante la cena"], ["el poeta"], ["escribia"], ["versos"], ["en una servilleta de papel"]]
+  },
+  {
+    "id": "escuchar-fondo-0",
+    "verbo": "escuchar",
+    "contexto": "nosotros, la radio, cuando sono el telefono",
+    "respuesta": "Nosotros escuchabamos la radio cuando sono el telefono en la cocina.",
+    "pista": "The imperfect shows listening in progress interrupted by a phone call.",
+    "grupos": [["nosotros"], ["escuchabamos"], ["la radio"], ["cuando sono el telefono"], ["en la cocina"]]
+  },
+  {
+    "id": "esperar-fondo-0",
+    "verbo": "esperar",
+    "contexto": "la multitud, con paciencia, en ese preciso momento",
+    "respuesta": "En ese preciso momento, la multitud esperaba con paciencia frente al estadio.",
+    "pista": "The imperfect describes an ongoing state of waiting as background.",
+    "grupos": [["en ese preciso momento"], ["la multitud"], ["esperaba"], ["con paciencia"], ["frente al estadio"]]
+  },
+  {
+    "id": "estar-fondo-0",
+    "verbo": "estar",
+    "contexto": "el cielo, nublado, esa manana temprano",
+    "respuesta": "Esa manana temprano, el cielo estaba nublado y gris sobre la ciudad.",
+    "pista": "Estar is regular in the imperfect. It describes an ongoing state.",
+    "grupos": [["esa manana temprano"], ["el cielo"], ["estaba"], ["nublado"], ["y gris sobre la ciudad"]]
+  },
+  {
+    "id": "estudiar-fondo-0",
+    "verbo": "estudiar",
+    "contexto": "mi hermana, para el examen, antes del amanecer",
+    "respuesta": "Antes del amanecer, mi hermana estudiaba para el examen en la biblioteca.",
+    "pista": "The imperfect shows an ongoing study session as background.",
+    "grupos": [["antes del amanecer"], ["mi hermana"], ["estudiaba"], ["para el examen"], ["en la biblioteca"]]
+  },
+  {
+    "id": "evitar-fondo-0",
+    "verbo": "evitar",
+    "contexto": "todos, el tema, durante la cena",
+    "respuesta": "Durante la cena, todos evitaban el tema de la separacion familiar.",
+    "pista": "The imperfect describes an ongoing avoidance as a social background.",
+    "grupos": [["durante la cena"], ["todos"], ["evitaban"], ["el tema"], ["de la separacion familiar"]]
+  },
+  {
+    "id": "existir-fondo-0",
+    "verbo": "existir",
+    "contexto": "un castillo, en la colina, en aquel entonces",
+    "respuesta": "En aquel entonces, existia un castillo en la colina rodeado de arboles.",
+    "pista": "The imperfect describes an existence state as a scene-setting background.",
+    "grupos": [["en aquel entonces"], ["existia"], ["un castillo"], ["en la colina"], ["rodeado de arboles"]]
+  },
+  {
+    "id": "explicar-fondo-0",
+    "verbo": "explicar",
+    "contexto": "el guia, la historia, cuando de pronto",
+    "respuesta": "El guia explicaba la historia del lugar cuando de pronto temblo la tierra.",
+    "pista": "The imperfect shows an explanation in progress before a sudden event.",
+    "grupos": [["el guia"], ["explicaba"], ["la historia"], ["cuando de pronto"], ["temblo la tierra"]]
+  },
+  {
+    "id": "formar-fondo-0",
+    "verbo": "formar",
+    "contexto": "las nubes, figuras, cuando salio el sol",
+    "respuesta": "Las nubes formaban figuras en el cielo cuando salio el sol brillante.",
+    "pista": "The imperfect describes cloud formations as an ongoing background scene.",
+    "grupos": [["las nubes"], ["formaban"], ["figuras"], ["cuando salio el sol"], ["en el cielo"]]
+  },
+  {
+    "id": "funcionar-fondo-0",
+    "verbo": "funcionar",
+    "contexto": "la fabrica, dia y noche, en aquel entonces",
+    "respuesta": "En aquel entonces, la fabrica funcionaba dia y noche sin descanso.",
+    "pista": "The imperfect describes continuous operation as background.",
+    "grupos": [["en aquel entonces"], ["la fabrica"], ["funcionaba"], ["dia y noche"], ["sin descanso"]]
+  },
+  {
+    "id": "ganar-fondo-0",
+    "verbo": "ganar",
+    "contexto": "mi padre, poco dinero, mientras tanto",
+    "respuesta": "Mientras tanto, mi padre ganaba poco dinero trabajando en el campo.",
+    "pista": "The imperfect describes an ongoing earning state as background.",
+    "grupos": [["mientras tanto"], ["mi padre"], ["ganaba"], ["poco dinero"], ["trabajando en el campo"]]
+  },
+  {
+    "id": "golpear-fondo-0",
+    "verbo": "golpear",
+    "contexto": "las olas, la costa, a esa hora",
+    "respuesta": "A esa hora, las olas golpeaban la costa con fuerza imparable.",
+    "pista": "The imperfect describes repetitive wave action as a natural background.",
+    "grupos": [["a esa hora"], ["las olas"], ["golpeaban"], ["la costa"], ["con fuerza imparable"]]
+  }
+]

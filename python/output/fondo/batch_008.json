@@ -1,0 +1,122 @@
+[
+  {
+    "id": "gritar-fondo-0",
+    "verbo": "gritar",
+    "contexto": "los vendedores, en el mercado, esa manana temprano",
+    "respuesta": "Esa manana temprano, los vendedores gritaban en el mercado sus ofertas.",
+    "pista": "The imperfect shows ongoing market noise as a lively background.",
+    "grupos": [["esa manana temprano"], ["los vendedores"], ["gritaban"], ["en el mercado"], ["sus ofertas"]]
+  },
+  {
+    "id": "guardar-fondo-0",
+    "verbo": "guardar",
+    "contexto": "ella, las fotos, en ese preciso momento",
+    "respuesta": "En ese preciso momento, ella guardaba las fotos en una caja de madera.",
+    "pista": "The imperfect shows an ongoing action of preserving memories.",
+    "grupos": [["en ese preciso momento"], ["ella"], ["guardaba"], ["las fotos"], ["en una caja de madera"]]
+  },
+  {
+    "id": "gustar-fondo-0",
+    "verbo": "gustar",
+    "contexto": "a mi, la musica clasica, en aquel entonces",
+    "respuesta": "En aquel entonces, a mi me gustaba la musica clasica por las tardes.",
+    "pista": "Gustar in imperfect describes an ongoing preference in the past.",
+    "grupos": [["en aquel entonces"], ["a mi"], ["gustaba"], ["la musica clasica"], ["por las tardes"]]
+  },
+  {
+    "id": "haber-fondo-0",
+    "verbo": "haber",
+    "contexto": "muchas estrellas, en el cielo, antes del amanecer",
+    "respuesta": "Antes del amanecer, habia muchas estrellas en el cielo despejado.",
+    "pista": "Habia is the imperfect of haber. It describes an existing background state.",
+    "grupos": [["antes del amanecer"], ["habia"], ["muchas estrellas"], ["en el cielo"], ["despejado"]]
+  },
+  {
+    "id": "hablar-fondo-0",
+    "verbo": "hablar",
+    "contexto": "los ancianos, de la guerra, durante la cena",
+    "respuesta": "Durante la cena, los ancianos hablaban de la guerra con voz temblorosa.",
+    "pista": "The imperfect shows an ongoing conversation as background.",
+    "grupos": [["durante la cena"], ["los ancianos"], ["hablaban"], ["de la guerra"], ["con voz temblorosa"]]
+  },
+  {
+    "id": "hacer-fondo-0",
+    "verbo": "hacer",
+    "contexto": "mucho frio, en la montana, cuando llegamos",
+    "respuesta": "Cuando llegamos, hacia mucho frio en la montana y nevaba sin parar.",
+    "pista": "Hacer is regular in imperfect (hacia). Used for weather as background.",
+    "grupos": [["cuando llegamos"], ["hacia"], ["mucho frio"], ["en la montana"], ["y nevaba sin parar"]]
+  },
+  {
+    "id": "hallar-fondo-0",
+    "verbo": "hallar",
+    "contexto": "los arqueologos, restos antiguos, mientras tanto",
+    "respuesta": "Mientras tanto, los arqueologos hallaban restos antiguos en cada excavacion.",
+    "pista": "The imperfect describes ongoing discoveries as background.",
+    "grupos": [["mientras tanto"], ["los arqueologos"], ["hallaban"], ["restos antiguos"], ["en cada excavacion"]]
+  },
+  {
+    "id": "huir-fondo-0",
+    "verbo": "huir",
+    "contexto": "los animales, del incendio, cuando de pronto",
+    "respuesta": "Los animales huian del incendio cuando de pronto cambio la direccion del viento.",
+    "pista": "The imperfect shows a flight in progress before a sudden change.",
+    "grupos": [["los animales"], ["huian"], ["del incendio"], ["cuando de pronto"], ["cambio la direccion del viento"]]
+  },
+  {
+    "id": "imaginar-fondo-0",
+    "verbo": "imaginar",
+    "contexto": "yo, un mundo mejor, en aquel entonces",
+    "respuesta": "En aquel entonces, yo imaginaba un mundo mejor para las generaciones futuras.",
+    "pista": "The imperfect expresses an ongoing imagination as background.",
+    "grupos": [["en aquel entonces"], ["yo"], ["imaginaba"], ["un mundo mejor"], ["para las generaciones futuras"]]
+  },
+  {
+    "id": "importar-fondo-0",
+    "verbo": "importar",
+    "contexto": "a nadie, el resultado, en ese preciso momento",
+    "respuesta": "En ese preciso momento, a nadie le importaba el resultado del partido.",
+    "pista": "Importar works like gustar. The imperfect shows a lack of concern.",
+    "grupos": [["en ese preciso momento"], ["a nadie"], ["importaba"], ["el resultado"], ["del partido"]]
+  },
+  {
+    "id": "incluir-fondo-0",
+    "verbo": "incluir",
+    "contexto": "el programa, actividades variadas, durante el concierto",
+    "respuesta": "Durante el concierto, el programa incluia actividades variadas para toda la familia.",
+    "pista": "The imperfect describes an ongoing program feature as background.",
+    "grupos": [["durante el concierto"], ["el programa"], ["incluia"], ["actividades variadas"], ["para toda la familia"]]
+  },
+  {
+    "id": "informar-fondo-0",
+    "verbo": "informar",
+    "contexto": "la radio, sobre la tormenta, a esa hora",
+    "respuesta": "A esa hora, la radio informaba sobre la tormenta que se acercaba.",
+    "pista": "The imperfect shows ongoing news reporting as background.",
+    "grupos": [["a esa hora"], ["la radio"], ["informaba"], ["sobre la tormenta"], ["que se acercaba"]]
+  },
+  {
+    "id": "intentar-fondo-0",
+    "verbo": "intentar",
+    "contexto": "los bomberos, apagar el fuego, cuando salio el sol",
+    "respuesta": "Los bomberos intentaban apagar el fuego cuando salio el sol sobre la ciudad.",
+    "pista": "The imperfect shows an ongoing effort as background.",
+    "grupos": [["los bomberos"], ["intentaban"], ["apagar el fuego"], ["cuando salio el sol"], ["sobre la ciudad"]]
+  },
+  {
+    "id": "interesar-fondo-0",
+    "verbo": "interesar",
+    "contexto": "a los jovenes, la ciencia, en aquel entonces",
+    "respuesta": "En aquel entonces, a los jovenes les interesaba la ciencia con pasion.",
+    "pista": "Interesar works like gustar. The imperfect shows ongoing interest.",
+    "grupos": [["en aquel entonces"], ["a los jovenes"], ["interesaba"], ["la ciencia"], ["con pasion"]]
+  },
+  {
+    "id": "invitar-fondo-0",
+    "verbo": "invitar",
+    "contexto": "los vecinos, a todos, esa manana temprano",
+    "respuesta": "Esa manana temprano, los vecinos invitaban a todos a la fiesta del pueblo.",
+    "pista": "The imperfect shows an ongoing invitation process as background.",
+    "grupos": [["esa manana temprano"], ["los vecinos"], ["invitaban"], ["a todos"], ["a la fiesta del pueblo"]]
+  }
+]

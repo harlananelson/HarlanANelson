@@ -1,0 +1,210 @@
+[
+  {
+    "id": "escribir-habitual-0",
+    "verbo": "escribir",
+    "contexto": "yo, por las tardes, poemas en mi cuaderno",
+    "respuesta": "Por las tardes, yo escribia poemas en mi cuaderno.",
+    "pista": "Daily afternoon creative habit - use imperfect",
+    "grupos": [["yo"], ["escribia"], ["poemas en mi cuaderno"], ["por las tardes"]]
+  },
+  {
+    "id": "escribir-habitual-1",
+    "verbo": "escribir",
+    "contexto": "mi abuelo, los domingos, cartas a sus viejos amigos",
+    "respuesta": "Los domingos, mi abuelo escribia cartas a sus viejos amigos.",
+    "pista": "Regular Sunday writing - use imperfect",
+    "grupos": [["mi abuelo"], ["escribia"], ["cartas a sus viejos amigos"], ["los domingos"]]
+  },
+  {
+    "id": "escuchar-habitual-0",
+    "verbo": "escuchar",
+    "contexto": "nosotros, en aquellos tiempos, musica clasica en la radio",
+    "respuesta": "En aquellos tiempos, nosotros escuchabamos musica clasica en la radio.",
+    "pista": "Habitual past listening - use imperfect",
+    "grupos": [["nosotros"], ["escuchabamos"], ["musica clasica en la radio"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "escuchar-habitual-1",
+    "verbo": "escuchar",
+    "contexto": "yo, cada verano, el sonido del mar desde mi ventana",
+    "respuesta": "Cada verano, yo escuchaba el sonido del mar desde mi ventana.",
+    "pista": "Repeated summer experience - use imperfect",
+    "grupos": [["yo"], ["escuchaba"], ["el sonido del mar desde mi ventana"], ["cada verano"]]
+  },
+  {
+    "id": "esperar-habitual-0",
+    "verbo": "esperar",
+    "contexto": "yo, los martes y jueves, el autobus en la esquina",
+    "respuesta": "Los martes y jueves, yo esperaba el autobus en la esquina.",
+    "pista": "Regular scheduled waiting - use imperfect",
+    "grupos": [["yo"], ["esperaba"], ["el autobus en la esquina"], ["los martes y jueves"]]
+  },
+  {
+    "id": "esperar-habitual-1",
+    "verbo": "esperar",
+    "contexto": "nosotros, con frecuencia, buenas noticias del medico",
+    "respuesta": "Nosotros esperabamos buenas noticias del medico con frecuencia.",
+    "pista": "Frequently repeated hope - use imperfect",
+    "grupos": [["nosotros"], ["esperabamos"], ["buenas noticias del medico"], ["con frecuencia"]]
+  },
+  {
+    "id": "estar-habitual-0",
+    "verbo": "estar",
+    "contexto": "yo, durante la infancia, contento con poco",
+    "respuesta": "Durante la infancia, yo estaba contento con poco.",
+    "pista": "Ongoing childhood state - use imperfect",
+    "grupos": [["yo"], ["estaba"], ["contento con poco"], ["durante la infancia"]]
+  },
+  {
+    "id": "estar-habitual-1",
+    "verbo": "estar",
+    "contexto": "la casa, en aquellos tiempos, llena de risas y musica",
+    "respuesta": "En aquellos tiempos, la casa estaba llena de risas y musica.",
+    "pista": "Habitual past state - use imperfect",
+    "grupos": [["la casa"], ["estaba"], ["llena de risas y musica"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "estudiar-habitual-0",
+    "verbo": "estudiar",
+    "contexto": "yo, en mis anos de universidad, hasta las tres de la manana",
+    "respuesta": "En mis anos de universidad, yo estudiaba hasta las tres de la manana.",
+    "pista": "Habitual university study pattern - use imperfect",
+    "grupos": [["yo"], ["estudiaba"], ["hasta las tres de la manana"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "estudiar-habitual-1",
+    "verbo": "estudiar",
+    "contexto": "nosotros, los fines de semana, en la biblioteca del barrio",
+    "respuesta": "Los fines de semana, nosotros estudiabamos en la biblioteca del barrio.",
+    "pista": "Regular weekend study - use imperfect",
+    "grupos": [["nosotros"], ["estudiabamos"], ["en la biblioteca del barrio"], ["los fines de semana"]]
+  },
+  {
+    "id": "evitar-habitual-0",
+    "verbo": "evitar",
+    "contexto": "yo, con frecuencia, las calles oscuras del centro",
+    "respuesta": "Yo evitaba las calles oscuras del centro con frecuencia.",
+    "pista": "Frequently repeated avoidance - use imperfect",
+    "grupos": [["yo"], ["evitaba"], ["las calles oscuras del centro"], ["con frecuencia"]]
+  },
+  {
+    "id": "evitar-habitual-1",
+    "verbo": "evitar",
+    "contexto": "ella, cuando vivia en Madrid, el metro en hora punta",
+    "respuesta": "Cuando vivia en Madrid, ella evitaba el metro en hora punta.",
+    "pista": "Habitual avoidance during time in Madrid - use imperfect",
+    "grupos": [["ella"], ["evitaba"], ["el metro en hora punta"], ["cuando vivia en madrid"]]
+  },
+  {
+    "id": "existir-habitual-0",
+    "verbo": "existir",
+    "contexto": "en aquellos tiempos, muchas tiendas pequenas en el barrio",
+    "respuesta": "En aquellos tiempos, existian muchas tiendas pequenas en el barrio.",
+    "pista": "Habitual past existence - use imperfect",
+    "grupos": [["muchas tiendas pequenas"], ["existian"], ["en el barrio"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "existir-habitual-1",
+    "verbo": "existir",
+    "contexto": "durante la infancia, un bosque magico cerca de mi casa",
+    "respuesta": "Durante la infancia, existia un bosque magico cerca de mi casa.",
+    "pista": "Ongoing childhood perception - use imperfect",
+    "grupos": [["un bosque magico"], ["existia"], ["cerca de mi casa"], ["durante la infancia"]]
+  },
+  {
+    "id": "explicar-habitual-0",
+    "verbo": "explicar",
+    "contexto": "el profesor, los martes y jueves, las lecciones con paciencia",
+    "respuesta": "Los martes y jueves, el profesor explicaba las lecciones con paciencia.",
+    "pista": "Regular scheduled teaching - use imperfect",
+    "grupos": [["el profesor"], ["explicaba"], ["las lecciones con paciencia"], ["los martes y jueves"]]
+  },
+  {
+    "id": "explicar-habitual-1",
+    "verbo": "explicar",
+    "contexto": "mi padre, por las tardes, como funcionaban las cosas",
+    "respuesta": "Por las tardes, mi padre explicaba como funcionaban las cosas.",
+    "pista": "Daily evening teaching - use imperfect",
+    "grupos": [["mi padre"], ["explicaba"], ["como funcionaban las cosas"], ["por las tardes"]]
+  },
+  {
+    "id": "formar-habitual-0",
+    "verbo": "formar",
+    "contexto": "los soldados, en aquellos tiempos, filas perfectas cada manana",
+    "respuesta": "En aquellos tiempos, los soldados formaban filas perfectas cada manana.",
+    "pista": "Habitual daily military routine - use imperfect",
+    "grupos": [["los soldados"], ["formaban"], ["filas perfectas cada manana"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "formar-habitual-1",
+    "verbo": "formar",
+    "contexto": "nosotros, los fines de semana, equipos para jugar al futbol",
+    "respuesta": "Los fines de semana, nosotros formabamos equipos para jugar al futbol.",
+    "pista": "Regular weekend activity - use imperfect",
+    "grupos": [["nosotros"], ["formabamos"], ["equipos para jugar al futbol"], ["los fines de semana"]]
+  },
+  {
+    "id": "funcionar-habitual-0",
+    "verbo": "funcionar",
+    "contexto": "el reloj viejo, en aquellos tiempos, sin ningun problema",
+    "respuesta": "En aquellos tiempos, el reloj viejo funcionaba sin ningun problema.",
+    "pista": "Habitual past operation - use imperfect",
+    "grupos": [["el reloj viejo"], ["funcionaba"], ["sin ningun problema"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "funcionar-habitual-1",
+    "verbo": "funcionar",
+    "contexto": "los trenes, antes del accidente, con puntualidad",
+    "respuesta": "Antes del accidente, los trenes funcionaban con puntualidad.",
+    "pista": "Habitual past performance - use imperfect",
+    "grupos": [["los trenes"], ["funcionaban"], ["con puntualidad"], ["antes del accidente"]]
+  },
+  {
+    "id": "ganar-habitual-0",
+    "verbo": "ganar",
+    "contexto": "mi equipo, los fines de semana, los partidos de futbol",
+    "respuesta": "Los fines de semana, mi equipo ganaba los partidos de futbol.",
+    "pista": "Regular weekend victories - use imperfect",
+    "grupos": [["mi equipo"], ["ganaba"], ["los partidos de futbol"], ["los fines de semana"]]
+  },
+  {
+    "id": "ganar-habitual-1",
+    "verbo": "ganar",
+    "contexto": "yo, cuando trabajaba alli, un buen salario",
+    "respuesta": "Cuando trabajaba alli, yo ganaba un buen salario.",
+    "pista": "Ongoing past earning - use imperfect",
+    "grupos": [["yo"], ["ganaba"], ["un buen salario"], ["cuando trabajaba alli"]]
+  },
+  {
+    "id": "golpear-habitual-0",
+    "verbo": "golpear",
+    "contexto": "la lluvia, cada verano, las ventanas con fuerza",
+    "respuesta": "Cada verano, la lluvia golpeaba las ventanas con fuerza.",
+    "pista": "Repeated seasonal occurrence - use imperfect",
+    "grupos": [["la lluvia"], ["golpeaba"], ["las ventanas con fuerza"], ["cada verano"]]
+  },
+  {
+    "id": "golpear-habitual-1",
+    "verbo": "golpear",
+    "contexto": "el viento, por las tardes, la puerta del granero",
+    "respuesta": "Por las tardes, el viento golpeaba la puerta del granero.",
+    "pista": "Daily recurring event - use imperfect",
+    "grupos": [["el viento"], ["golpeaba"], ["la puerta del granero"], ["por las tardes"]]
+  },
+  {
+    "id": "gritar-habitual-0",
+    "verbo": "gritar",
+    "contexto": "los ninos, durante la infancia, en el patio del colegio",
+    "respuesta": "Durante la infancia, los ninos gritaban en el patio del colegio.",
+    "pista": "Childhood habitual behavior - use imperfect",
+    "grupos": [["los ninos"], ["gritaban"], ["en el patio del colegio"], ["durante la infancia"]]
+  },
+  {
+    "id": "gritar-habitual-1",
+    "verbo": "gritar",
+    "contexto": "el entrenador, con frecuencia, instrucciones desde la banda",
+    "respuesta": "El entrenador gritaba instrucciones desde la banda con frecuencia.",
+    "pista": "Frequently repeated action - use imperfect",
+    "grupos": [["el entrenador"], ["gritaba"], ["instrucciones desde la banda"], ["con frecuencia"]]
+  }
+]

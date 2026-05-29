@@ -1,0 +1,226 @@
+[
+  {
+    "id": "andar-habitual-0",
+    "verbo": "andar",
+    "contexto": "yo, por las tardes, por el parque del barrio",
+    "respuesta": "Por las tardes, yo andaba por el parque del barrio.",
+    "pista": "Daily afternoon habit - use imperfect",
+    "grupos": [["yo"], ["andaba"], ["por el parque del barrio"], ["por las tardes"]]
+  },
+  {
+    "id": "andar-habitual-1",
+    "verbo": "andar",
+    "contexto": "mis abuelos, los domingos, por la playa al amanecer",
+    "respuesta": "Los domingos, mis abuelos andaban por la playa al amanecer.",
+    "pista": "Regular Sunday routine - use imperfect",
+    "grupos": [["mis abuelos"], ["andaban"], ["por la playa al amanecer"], ["los domingos"]]
+  },
+  {
+    "id": "aparecer-habitual-0",
+    "verbo": "aparecer",
+    "contexto": "el gato, cada verano, en el jardin de la vecina",
+    "respuesta": "Cada verano, el gato aparecia en el jardin de la vecina.",
+    "pista": "Repeated seasonal occurrence - use imperfect",
+    "grupos": [["el gato"], ["aparecia"], ["en el jardin de la vecina"], ["cada verano"]]
+  },
+  {
+    "id": "aparecer-habitual-1",
+    "verbo": "aparecer",
+    "contexto": "nuevas flores, semana tras semana, en el campo",
+    "respuesta": "Semana tras semana, nuevas flores aparecian en el campo.",
+    "pista": "Repeated weekly occurrence - use imperfect",
+    "grupos": [["nuevas flores"], ["aparecian"], ["en el campo"], ["semana tras semana"]]
+  },
+  {
+    "id": "apartar-habitual-0",
+    "verbo": "apartar",
+    "contexto": "mi madre, con frecuencia, los platos de la mesa",
+    "respuesta": "Mi madre apartaba los platos de la mesa con frecuencia.",
+    "pista": "Frequently repeated action - use imperfect",
+    "grupos": [["mi madre"], ["apartaba"], ["los platos de la mesa"], ["con frecuencia"]]
+  },
+  {
+    "id": "apartar-habitual-1",
+    "verbo": "apartar",
+    "contexto": "yo, durante la infancia, la mirada cuando tenia miedo",
+    "respuesta": "Durante la infancia, yo apartaba la mirada cuando tenia miedo.",
+    "pista": "Childhood habitual behavior - use imperfect",
+    "grupos": [["yo"], ["apartaba"], ["la mirada cuando tenia miedo"], ["durante la infancia"]]
+  },
+  {
+    "id": "apostar-habitual-0",
+    "verbo": "apostar",
+    "contexto": "mi tio, los fines de semana, en las carreras de caballos",
+    "respuesta": "Los fines de semana, mi tio apostaba en las carreras de caballos.",
+    "pista": "Regular weekend activity - use imperfect",
+    "grupos": [["mi tio"], ["apostaba"], ["en las carreras de caballos"], ["los fines de semana"]]
+  },
+  {
+    "id": "apostar-habitual-1",
+    "verbo": "apostar",
+    "contexto": "nosotros, en aquellos tiempos, por nuestro equipo favorito",
+    "respuesta": "En aquellos tiempos, nosotros apostabamos por nuestro equipo favorito.",
+    "pista": "Habitual past activity - use imperfect",
+    "grupos": [["nosotros"], ["apostabamos"], ["por nuestro equipo favorito"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "apoyar-habitual-0",
+    "verbo": "apoyar",
+    "contexto": "mis padres, semana tras semana, mis decisiones",
+    "respuesta": "Semana tras semana, mis padres apoyaban mis decisiones.",
+    "pista": "Repeated weekly support - use imperfect",
+    "grupos": [["mis padres"], ["apoyaban"], ["mis decisiones"], ["semana tras semana"]]
+  },
+  {
+    "id": "apoyar-habitual-1",
+    "verbo": "apoyar",
+    "contexto": "yo, cuando vivia en Madrid, a los artistas locales",
+    "respuesta": "Cuando vivia en Madrid, yo apoyaba a los artistas locales.",
+    "pista": "Habitual action during time in Madrid - use imperfect",
+    "grupos": [["yo"], ["apoyaba"], ["a los artistas locales"], ["cuando vivia en madrid"]]
+  },
+  {
+    "id": "aprender-habitual-0",
+    "verbo": "aprender",
+    "contexto": "yo, en mis anos de universidad, algo nuevo cada dia",
+    "respuesta": "En mis anos de universidad, yo aprendia algo nuevo cada dia.",
+    "pista": "Habitual learning during university - use imperfect",
+    "grupos": [["yo"], ["aprendia"], ["algo nuevo cada dia"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "aprender-habitual-1",
+    "verbo": "aprender",
+    "contexto": "los ninos, durante la infancia, canciones populares",
+    "respuesta": "Durante la infancia, los ninos aprendian canciones populares.",
+    "pista": "Childhood learning habit - use imperfect",
+    "grupos": [["los ninos"], ["aprendian"], ["canciones populares"], ["durante la infancia"]]
+  },
+  {
+    "id": "arreglar-habitual-0",
+    "verbo": "arreglar",
+    "contexto": "mi padre, los fines de semana, el coche viejo",
+    "respuesta": "Los fines de semana, mi padre arreglaba el coche viejo.",
+    "pista": "Regular weekend activity - use imperfect",
+    "grupos": [["mi padre"], ["arreglaba"], ["el coche viejo"], ["los fines de semana"]]
+  },
+  {
+    "id": "arreglar-habitual-1",
+    "verbo": "arreglar",
+    "contexto": "ella, por las tardes, las flores del jardin",
+    "respuesta": "Por las tardes, ella arreglaba las flores del jardin.",
+    "pista": "Daily afternoon routine - use imperfect",
+    "grupos": [["ella"], ["arreglaba"], ["las flores del jardin"], ["por las tardes"]]
+  },
+  {
+    "id": "asegurar-habitual-0",
+    "verbo": "asegurar",
+    "contexto": "el guardia, cada verano, las puertas del edificio",
+    "respuesta": "Cada verano, el guardia aseguraba las puertas del edificio.",
+    "pista": "Repeated seasonal duty - use imperfect",
+    "grupos": [["el guardia"], ["aseguraba"], ["las puertas del edificio"], ["cada verano"]]
+  },
+  {
+    "id": "asegurar-habitual-1",
+    "verbo": "asegurar",
+    "contexto": "nosotros, antes del accidente, que todo estaba en orden",
+    "respuesta": "Antes del accidente, nosotros asegurabamos que todo estaba en orden.",
+    "pista": "Habitual action before a past event - use imperfect",
+    "grupos": [["nosotros"], ["asegurabamos"], ["que todo estaba en orden"], ["antes del accidente"]]
+  },
+  {
+    "id": "asesinar-habitual-0",
+    "verbo": "asesinar",
+    "contexto": "el villano de la novela, con frecuencia, a sus enemigos en secreto",
+    "respuesta": "El villano de la novela asesinaba a sus enemigos en secreto con frecuencia.",
+    "pista": "Repeated fictional action - use imperfect",
+    "grupos": [["el villano de la novela"], ["asesinaba"], ["a sus enemigos en secreto"], ["con frecuencia"]]
+  },
+  {
+    "id": "asesinar-habitual-1",
+    "verbo": "asesinar",
+    "contexto": "el personaje, en aquellos tiempos, a quien lo traicionaba",
+    "respuesta": "En aquellos tiempos, el personaje asesinaba a quien lo traicionaba.",
+    "pista": "Habitual fictional pattern - use imperfect",
+    "grupos": [["el personaje"], ["asesinaba"], ["a quien lo traicionaba"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "asustar-habitual-0",
+    "verbo": "asustar",
+    "contexto": "los truenos, durante la infancia, a mi hermana pequena",
+    "respuesta": "Durante la infancia, los truenos asustaban a mi hermana pequena.",
+    "pista": "Habitual childhood fear - use imperfect",
+    "grupos": [["los truenos"], ["asustaban"], ["a mi hermana pequena"], ["durante la infancia"]]
+  },
+  {
+    "id": "asustar-habitual-1",
+    "verbo": "asustar",
+    "contexto": "mi hermano, los domingos, a los gatos del vecino",
+    "respuesta": "Los domingos, mi hermano asustaba a los gatos del vecino.",
+    "pista": "Regular Sunday mischief - use imperfect",
+    "grupos": [["mi hermano"], ["asustaba"], ["a los gatos del vecino"], ["los domingos"]]
+  },
+  {
+    "id": "atacar-habitual-0",
+    "verbo": "atacar",
+    "contexto": "los mosquitos, cada verano, a los turistas en la playa",
+    "respuesta": "Cada verano, los mosquitos atacaban a los turistas en la playa.",
+    "pista": "Repeated seasonal occurrence - use imperfect",
+    "grupos": [["los mosquitos"], ["atacaban"], ["a los turistas en la playa"], ["cada verano"]]
+  },
+  {
+    "id": "atacar-habitual-1",
+    "verbo": "atacar",
+    "contexto": "el perro, con frecuencia, al cartero del barrio",
+    "respuesta": "El perro atacaba al cartero del barrio con frecuencia.",
+    "pista": "Frequently repeated action - use imperfect",
+    "grupos": [["el perro"], ["atacaba"], ["al cartero del barrio"], ["con frecuencia"]]
+  },
+  {
+    "id": "atrapar-habitual-0",
+    "verbo": "atrapar",
+    "contexto": "el gato, por las tardes, ratones en el granero",
+    "respuesta": "Por las tardes, el gato atrapaba ratones en el granero.",
+    "pista": "Daily afternoon habit - use imperfect",
+    "grupos": [["el gato"], ["atrapaba"], ["ratones en el granero"], ["por las tardes"]]
+  },
+  {
+    "id": "atrapar-habitual-1",
+    "verbo": "atrapar",
+    "contexto": "nosotros, los fines de semana, mariposas en el campo",
+    "respuesta": "Los fines de semana, nosotros atrapabamos mariposas en el campo.",
+    "pista": "Regular weekend activity - use imperfect",
+    "grupos": [["nosotros"], ["atrapabamos"], ["mariposas en el campo"], ["los fines de semana"]]
+  },
+  {
+    "id": "averiguar-habitual-0",
+    "verbo": "averiguar",
+    "contexto": "el detective, semana tras semana, nuevas pistas del caso",
+    "respuesta": "Semana tras semana, el detective averiguaba nuevas pistas del caso.",
+    "pista": "Repeated weekly investigation - use imperfect",
+    "grupos": [["el detective"], ["averiguaba"], ["nuevas pistas del caso"], ["semana tras semana"]]
+  },
+  {
+    "id": "averiguar-habitual-1",
+    "verbo": "averiguar",
+    "contexto": "yo, en mis ratos libres, datos curiosos sobre la historia",
+    "respuesta": "En mis ratos libres, yo averiguaba datos curiosos sobre la historia.",
+    "pista": "Habitual free-time activity - use imperfect",
+    "grupos": [["yo"], ["averiguaba"], ["datos curiosos sobre la historia"], ["en mis ratos libres"]]
+  },
+  {
+    "id": "ayudar-habitual-0",
+    "verbo": "ayudar",
+    "contexto": "mi abuela, los domingos, a cocinar el almuerzo",
+    "respuesta": "Los domingos, mi abuela ayudaba a cocinar el almuerzo.",
+    "pista": "Regular Sunday routine - use imperfect",
+    "grupos": [["mi abuela"], ["ayudaba"], ["a cocinar el almuerzo"], ["los domingos"]]
+  },
+  {
+    "id": "ayudar-habitual-1",
+    "verbo": "ayudar",
+    "contexto": "nosotros, durante la infancia, a los vecinos con las compras",
+    "respuesta": "Durante la infancia, nosotros ayudabamos a los vecinos con las compras.",
+    "pista": "Childhood habit of helping - use imperfect",
+    "grupos": [["nosotros"], ["ayudabamos"], ["a los vecinos con las compras"], ["durante la infancia"]]
+  }
+]

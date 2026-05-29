@@ -1,0 +1,114 @@
+[
+  {
+    "id": "marchar-fondo-0",
+    "verbo": "marchar",
+    "contexto": "los soldados, por el valle, esa manana temprano",
+    "respuesta": "Esa manana temprano, los soldados marchaban por el valle en silencio.",
+    "pista": "The imperfect describes troops marching as a background scene.",
+    "grupos": [["esa manana temprano"], ["los soldados"], ["marchaban"], ["por el valle"], ["en silencio"]]
+  },
+  {
+    "id": "matar-fondo-0",
+    "verbo": "matar",
+    "contexto": "la sequia, las cosechas, en aquel entonces",
+    "respuesta": "En aquel entonces, la sequia mataba las cosechas ano tras ano.",
+    "pista": "The imperfect describes a recurring devastating event as background.",
+    "grupos": [["en aquel entonces"], ["la sequia"], ["mataba"], ["las cosechas"], ["ano tras ano"]]
+  },
+  {
+    "id": "mencionar-fondo-0",
+    "verbo": "mencionar",
+    "contexto": "nadie, el accidente, durante la cena",
+    "respuesta": "Durante la cena, nadie mencionaba el accidente por respeto a la familia.",
+    "pista": "The imperfect describes a deliberate silence as background.",
+    "grupos": [["durante la cena"], ["nadie"], ["mencionaba"], ["el accidente"], ["por respeto a la familia"]]
+  },
+  {
+    "id": "mentir-fondo-0",
+    "verbo": "mentir",
+    "contexto": "el testigo, ante el juez, en ese preciso momento",
+    "respuesta": "En ese preciso momento, el testigo mentia ante el juez sin remordimiento.",
+    "pista": "The imperfect describes ongoing deception as background.",
+    "grupos": [["en ese preciso momento"], ["el testigo"], ["mentia"], ["ante el juez"], ["sin remordimiento"]]
+  },
+  {
+    "id": "merecer-fondo-0",
+    "verbo": "merecer",
+    "contexto": "ella, algo mejor, mientras tanto",
+    "respuesta": "Mientras tanto, ella merecia algo mejor de lo que la vida le daba.",
+    "pista": "The imperfect expresses an ongoing state of deserving as background.",
+    "grupos": [["mientras tanto"], ["ella"], ["merecia"], ["algo mejor"], ["de lo que la vida le daba"]]
+  },
+  {
+    "id": "meter-fondo-0",
+    "verbo": "meter",
+    "contexto": "la madre, la ropa, en el armario, a esa hora",
+    "respuesta": "A esa hora, la madre metia la ropa en el armario con cuidado.",
+    "pista": "The imperfect shows an ongoing domestic task as background.",
+    "grupos": [["a esa hora"], ["la madre"], ["metia"], ["la ropa"], ["en el armario con cuidado"]]
+  },
+  {
+    "id": "mirar-fondo-0",
+    "verbo": "mirar",
+    "contexto": "todos, el horizonte, cuando de pronto",
+    "respuesta": "Todos miraban el horizonte cuando de pronto aparecio un barco enorme.",
+    "pista": "The imperfect shows a group gazing as background before a sudden sight.",
+    "grupos": [["todos"], ["miraban"], ["el horizonte"], ["cuando de pronto"], ["aparecio un barco enorme"]]
+  },
+  {
+    "id": "molestar-fondo-0",
+    "verbo": "molestar",
+    "contexto": "el calor, a los trabajadores, antes del amanecer",
+    "respuesta": "Antes del amanecer, el calor ya molestaba a los trabajadores en el campo.",
+    "pista": "The imperfect describes an ongoing source of discomfort as background.",
+    "grupos": [["antes del amanecer"], ["el calor"], ["molestaba"], ["a los trabajadores"], ["en el campo"]]
+  },
+  {
+    "id": "morir-fondo-0",
+    "verbo": "morir",
+    "contexto": "las plantas, por la sequia, en aquel entonces",
+    "respuesta": "En aquel entonces, las plantas morian por la sequia cada verano.",
+    "pista": "The imperfect describes a recurring sad pattern as background.",
+    "grupos": [["en aquel entonces"], ["las plantas"], ["morian"], ["por la sequia"], ["cada verano"]]
+  },
+  {
+    "id": "mostrar-fondo-0",
+    "verbo": "mostrar",
+    "contexto": "el mapa, caminos olvidados, cuando llegamos",
+    "respuesta": "Cuando llegamos, el mapa mostraba caminos olvidados entre las montanas.",
+    "pista": "The imperfect describes what the map displayed as a scene detail.",
+    "grupos": [["cuando llegamos"], ["el mapa"], ["mostraba"], ["caminos olvidados"], ["entre las montanas"]]
+  },
+  {
+    "id": "mover-fondo-0",
+    "verbo": "mover",
+    "contexto": "el viento, las cortinas, esa manana temprano",
+    "respuesta": "Esa manana temprano, el viento movia las cortinas con suavidad.",
+    "pista": "The imperfect shows gentle wind movement as a background detail.",
+    "grupos": [["esa manana temprano"], ["el viento"], ["movia"], ["las cortinas"], ["con suavidad"]]
+  },
+  {
+    "id": "nacer-fondo-0",
+    "verbo": "nacer",
+    "contexto": "flores silvestres, en los prados, cuando salio el sol",
+    "respuesta": "Flores silvestres nacian en los prados cuando salio el sol de primavera.",
+    "pista": "The imperfect describes ongoing sprouting as a natural background.",
+    "grupos": [["flores silvestres"], ["nacian"], ["en los prados"], ["cuando salio el sol"], ["de primavera"]]
+  },
+  {
+    "id": "necesitar-fondo-0",
+    "verbo": "necesitar",
+    "contexto": "el pueblo, agua limpia, en aquel entonces",
+    "respuesta": "En aquel entonces, el pueblo necesitaba agua limpia desesperadamente.",
+    "pista": "The imperfect describes an ongoing need as a critical background state.",
+    "grupos": [["en aquel entonces"], ["el pueblo"], ["necesitaba"], ["agua limpia"], ["desesperadamente"]]
+  },
+  {
+    "id": "negar-fondo-0",
+    "verbo": "negar",
+    "contexto": "el acusado, todo, durante la cena",
+    "respuesta": "Durante la cena, el acusado negaba todo lo que le preguntaban.",
+    "pista": "The imperfect describes persistent denial as a background state.",
+    "grupos": [["durante la cena"], ["el acusado"], ["negaba"], ["todo"], ["lo que le preguntaban"]]
+  }
+]

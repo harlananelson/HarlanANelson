@@ -1,0 +1,884 @@
+[
+  {
+    "id": "manejar-condicional-0",
+    "verbo": "manejar",
+    "contexto": "tú, si pudieras, la situación",
+    "respuesta": "tú manejarías la situación si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "manejarias"
+      ],
+      [
+        "la situacion"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "manejar-condicional-1",
+    "verbo": "manejar",
+    "contexto": "nosotros, si fuera posible, la situación",
+    "respuesta": "nosotros manejaríamos la situación si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "manejariamos"
+      ],
+      [
+        "la situacion"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "manejar-condicional-2",
+    "verbo": "manejar",
+    "contexto": "ustedes, de ser posible, la situación",
+    "respuesta": "ustedes manejarían la situación de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "manejarian"
+      ],
+      [
+        "la situacion"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "mantener-condicional-0",
+    "verbo": "mantener",
+    "contexto": "él, con más tiempo, sin prisa",
+    "respuesta": "él mantendría sin prisa con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "mantendria"
+      ],
+      [
+        "sin prisa"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "mantener-condicional-1",
+    "verbo": "mantener",
+    "contexto": "usted, con más dinero, con más libertad",
+    "respuesta": "usted mantendría con más libertad con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "mantendria"
+      ],
+      [
+        "con mas libertad"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "mantener-condicional-2",
+    "verbo": "mantener",
+    "contexto": "yo, con más experiencia, algo diferente",
+    "respuesta": "yo mantendría algo diferente con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "mantendria"
+      ],
+      [
+        "algo diferente"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "marchar-condicional-0",
+    "verbo": "marchar",
+    "contexto": "yo, en tu lugar, hacia el sur",
+    "respuesta": "yo marcharía hacia el sur en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "marcharia"
+      ],
+      [
+        "hacia el sur"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "marchar-condicional-1",
+    "verbo": "marchar",
+    "contexto": "ella, en esa situación, hacia el sur",
+    "respuesta": "ella marcharía hacia el sur en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "marcharia"
+      ],
+      [
+        "hacia el sur"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "marchar-condicional-2",
+    "verbo": "marchar",
+    "contexto": "ellos, en un mundo ideal, hacia el sur",
+    "respuesta": "ellos marcharían hacia el sur en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "marcharian"
+      ],
+      [
+        "hacia el sur"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "matar-condicional-0",
+    "verbo": "matar",
+    "contexto": "tú, si pudieras, el aburrimiento",
+    "respuesta": "tú matarías el aburrimiento si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "matarias"
+      ],
+      [
+        "el aburrimiento"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "matar-condicional-1",
+    "verbo": "matar",
+    "contexto": "nosotros, si fuera posible, el aburrimiento",
+    "respuesta": "nosotros mataríamos el aburrimiento si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "matariamos"
+      ],
+      [
+        "el aburrimiento"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "matar-condicional-2",
+    "verbo": "matar",
+    "contexto": "ustedes, de ser posible, el aburrimiento",
+    "respuesta": "ustedes matarían el aburrimiento de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "matarian"
+      ],
+      [
+        "el aburrimiento"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "mencionar-condicional-0",
+    "verbo": "mencionar",
+    "contexto": "él, con más tiempo, su nombre",
+    "respuesta": "él mencionaría su nombre con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "mencionaria"
+      ],
+      [
+        "su nombre"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "mencionar-condicional-1",
+    "verbo": "mencionar",
+    "contexto": "usted, con más dinero, su nombre",
+    "respuesta": "usted mencionaría su nombre con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "mencionaria"
+      ],
+      [
+        "su nombre"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "mencionar-condicional-2",
+    "verbo": "mencionar",
+    "contexto": "yo, con más experiencia, su nombre",
+    "respuesta": "yo mencionaría su nombre con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "mencionaria"
+      ],
+      [
+        "su nombre"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "mentir-condicional-0",
+    "verbo": "mentir",
+    "contexto": "yo, en tu lugar, menos",
+    "respuesta": "yo mentiría menos en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "mentiria"
+      ],
+      [
+        "menos"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "mentir-condicional-1",
+    "verbo": "mentir",
+    "contexto": "ella, en esa situación, menos",
+    "respuesta": "ella mentiría menos en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "mentiria"
+      ],
+      [
+        "menos"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "mentir-condicional-2",
+    "verbo": "mentir",
+    "contexto": "ellos, en un mundo ideal, menos",
+    "respuesta": "ellos mentirían menos en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "mentirian"
+      ],
+      [
+        "menos"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "merecer-condicional-0",
+    "verbo": "merecer",
+    "contexto": "tú, si pudieras, una oportunidad",
+    "respuesta": "tú merecerías una oportunidad si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "merecerias"
+      ],
+      [
+        "una oportunidad"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "merecer-condicional-1",
+    "verbo": "merecer",
+    "contexto": "nosotros, si fuera posible, una oportunidad",
+    "respuesta": "nosotros mereceríamos una oportunidad si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "mereceriamos"
+      ],
+      [
+        "una oportunidad"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "merecer-condicional-2",
+    "verbo": "merecer",
+    "contexto": "ustedes, de ser posible, una oportunidad",
+    "respuesta": "ustedes merecerían una oportunidad de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "merecerian"
+      ],
+      [
+        "una oportunidad"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "meter-condicional-0",
+    "verbo": "meter",
+    "contexto": "él, con más tiempo, un gol",
+    "respuesta": "él metería un gol con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "meteria"
+      ],
+      [
+        "un gol"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "meter-condicional-1",
+    "verbo": "meter",
+    "contexto": "usted, con más dinero, un gol",
+    "respuesta": "usted metería un gol con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "meteria"
+      ],
+      [
+        "un gol"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "meter-condicional-2",
+    "verbo": "meter",
+    "contexto": "yo, con más experiencia, un gol",
+    "respuesta": "yo metería un gol con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "meteria"
+      ],
+      [
+        "un gol"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "mirar-condicional-0",
+    "verbo": "mirar",
+    "contexto": "yo, en tu lugar, con más atención",
+    "respuesta": "yo miraría con más atención en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "miraria"
+      ],
+      [
+        "con mas atencion"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "mirar-condicional-1",
+    "verbo": "mirar",
+    "contexto": "ella, en esa situación, con más atención",
+    "respuesta": "ella miraría con más atención en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "miraria"
+      ],
+      [
+        "con mas atencion"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "mirar-condicional-2",
+    "verbo": "mirar",
+    "contexto": "ellos, en un mundo ideal, con más atención",
+    "respuesta": "ellos mirarían con más atención en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "mirarian"
+      ],
+      [
+        "con mas atencion"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "molestar-condicional-0",
+    "verbo": "molestar",
+    "contexto": "tú, si pudieras, menos",
+    "respuesta": "tú molestarías menos si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "molestarias"
+      ],
+      [
+        "menos"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "molestar-condicional-1",
+    "verbo": "molestar",
+    "contexto": "nosotros, si fuera posible, menos",
+    "respuesta": "nosotros molestaríamos menos si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "molestariamos"
+      ],
+      [
+        "menos"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "molestar-condicional-2",
+    "verbo": "molestar",
+    "contexto": "ustedes, de ser posible, menos",
+    "respuesta": "ustedes molestarían menos de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "molestarian"
+      ],
+      [
+        "menos"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "morir-condicional-0",
+    "verbo": "morir",
+    "contexto": "él, con más tiempo, de risa",
+    "respuesta": "él moriría de risa con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "moriria"
+      ],
+      [
+        "de risa"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "morir-condicional-1",
+    "verbo": "morir",
+    "contexto": "usted, con más dinero, de risa",
+    "respuesta": "usted moriría de risa con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "moriria"
+      ],
+      [
+        "de risa"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "morir-condicional-2",
+    "verbo": "morir",
+    "contexto": "yo, con más experiencia, de risa",
+    "respuesta": "yo moriría de risa con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "moriria"
+      ],
+      [
+        "de risa"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "mostrar-condicional-0",
+    "verbo": "mostrar",
+    "contexto": "yo, en tu lugar, el camino",
+    "respuesta": "yo mostraría el camino en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "mostraria"
+      ],
+      [
+        "el camino"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "mostrar-condicional-1",
+    "verbo": "mostrar",
+    "contexto": "ella, en esa situación, el camino",
+    "respuesta": "ella mostraría el camino en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "mostraria"
+      ],
+      [
+        "el camino"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "mostrar-condicional-2",
+    "verbo": "mostrar",
+    "contexto": "ellos, en un mundo ideal, el camino",
+    "respuesta": "ellos mostrarían el camino en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "mostrarian"
+      ],
+      [
+        "el camino"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "mover-condicional-0",
+    "verbo": "mover",
+    "contexto": "tú, si pudieras, la ficha",
+    "respuesta": "tú moverías la ficha si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "moverias"
+      ],
+      [
+        "la ficha"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "mover-condicional-1",
+    "verbo": "mover",
+    "contexto": "nosotros, si fuera posible, la ficha",
+    "respuesta": "nosotros moveríamos la ficha si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "moveriamos"
+      ],
+      [
+        "la ficha"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "mover-condicional-2",
+    "verbo": "mover",
+    "contexto": "ustedes, de ser posible, la ficha",
+    "respuesta": "ustedes moverían la ficha de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "moverian"
+      ],
+      [
+        "la ficha"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "nacer-condicional-0",
+    "verbo": "nacer",
+    "contexto": "él, con más tiempo, de nuevo",
+    "respuesta": "él nacería de nuevo con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "naceria"
+      ],
+      [
+        "de nuevo"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "nacer-condicional-1",
+    "verbo": "nacer",
+    "contexto": "usted, con más dinero, de nuevo",
+    "respuesta": "usted nacería de nuevo con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "naceria"
+      ],
+      [
+        "de nuevo"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "nacer-condicional-2",
+    "verbo": "nacer",
+    "contexto": "yo, con más experiencia, de nuevo",
+    "respuesta": "yo nacería de nuevo con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "naceria"
+      ],
+      [
+        "de nuevo"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  }
+]

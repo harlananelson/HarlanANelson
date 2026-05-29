@@ -1,0 +1,210 @@
+[
+  {
+    "id": "guardar-habitual-0",
+    "verbo": "guardar",
+    "contexto": "mi abuela, con frecuencia, recuerdos en una caja de madera",
+    "respuesta": "Mi abuela guardaba recuerdos en una caja de madera con frecuencia.",
+    "pista": "Frequently repeated habit - use imperfect",
+    "grupos": [["mi abuela"], ["guardaba"], ["recuerdos en una caja de madera"], ["con frecuencia"]]
+  },
+  {
+    "id": "guardar-habitual-1",
+    "verbo": "guardar",
+    "contexto": "yo, los domingos, las herramientas en el garaje",
+    "respuesta": "Los domingos, yo guardaba las herramientas en el garaje.",
+    "pista": "Regular Sunday routine - use imperfect",
+    "grupos": [["yo"], ["guardaba"], ["las herramientas en el garaje"], ["los domingos"]]
+  },
+  {
+    "id": "gustar-habitual-0",
+    "verbo": "gustar",
+    "contexto": "a mi, durante la infancia, los helados de chocolate",
+    "respuesta": "Durante la infancia, a mi me gustaban los helados de chocolate.",
+    "pista": "Childhood habitual preference - use imperfect",
+    "grupos": [["a mi"], ["gustaban"], ["los helados de chocolate"], ["durante la infancia"]]
+  },
+  {
+    "id": "gustar-habitual-1",
+    "verbo": "gustar",
+    "contexto": "a nosotros, cuando vivia en Madrid, pasear por el Retiro",
+    "respuesta": "Cuando vivia en Madrid, a nosotros nos gustaba pasear por el Retiro.",
+    "pista": "Habitual pleasure during time in Madrid - use imperfect",
+    "grupos": [["a nosotros"], ["gustaba"], ["pasear por el retiro"], ["cuando vivia en madrid"]]
+  },
+  {
+    "id": "haber-habitual-0",
+    "verbo": "haber",
+    "contexto": "en aquellos tiempos, muchos arboles en la plaza del pueblo",
+    "respuesta": "En aquellos tiempos, habia muchos arboles en la plaza del pueblo.",
+    "pista": "Habitual past existence - use imperfect",
+    "grupos": [["muchos arboles"], ["habia"], ["en la plaza del pueblo"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "haber-habitual-1",
+    "verbo": "haber",
+    "contexto": "los domingos, fiestas en el barrio con musica y comida",
+    "respuesta": "Los domingos, habia fiestas en el barrio con musica y comida.",
+    "pista": "Regular Sunday occurrence - use imperfect",
+    "grupos": [["fiestas"], ["habia"], ["en el barrio con musica y comida"], ["los domingos"]]
+  },
+  {
+    "id": "hablar-habitual-0",
+    "verbo": "hablar",
+    "contexto": "mi abuelo, por las tardes, de la guerra con los vecinos",
+    "respuesta": "Por las tardes, mi abuelo hablaba de la guerra con los vecinos.",
+    "pista": "Daily afternoon storytelling - use imperfect",
+    "grupos": [["mi abuelo"], ["hablaba"], ["de la guerra con los vecinos"], ["por las tardes"]]
+  },
+  {
+    "id": "hablar-habitual-1",
+    "verbo": "hablar",
+    "contexto": "nosotros, en mis anos de universidad, de nuestros suenos",
+    "respuesta": "En mis anos de universidad, nosotros hablabamos de nuestros suenos.",
+    "pista": "Habitual university conversations - use imperfect",
+    "grupos": [["nosotros"], ["hablabamos"], ["de nuestros suenos"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "hacer-habitual-0",
+    "verbo": "hacer",
+    "contexto": "mi madre, los domingos, una tortilla espanola enorme",
+    "respuesta": "Los domingos, mi madre hacia una tortilla espanola enorme.",
+    "pista": "Regular Sunday cooking - use imperfect",
+    "grupos": [["mi madre"], ["hacia"], ["una tortilla espanola enorme"], ["los domingos"]]
+  },
+  {
+    "id": "hacer-habitual-1",
+    "verbo": "hacer",
+    "contexto": "nosotros, cada verano, excursiones a la montana",
+    "respuesta": "Cada verano, nosotros haciamos excursiones a la montana.",
+    "pista": "Repeated summer activity - use imperfect",
+    "grupos": [["nosotros"], ["haciamos"], ["excursiones a la montana"], ["cada verano"]]
+  },
+  {
+    "id": "hallar-habitual-0",
+    "verbo": "hallar",
+    "contexto": "los exploradores, con frecuencia, restos antiguos en la cueva",
+    "respuesta": "Los exploradores hallaban restos antiguos en la cueva con frecuencia.",
+    "pista": "Frequently repeated discovery - use imperfect",
+    "grupos": [["los exploradores"], ["hallaban"], ["restos antiguos en la cueva"], ["con frecuencia"]]
+  },
+  {
+    "id": "hallar-habitual-1",
+    "verbo": "hallar",
+    "contexto": "yo, en mis ratos libres, paz en la naturaleza",
+    "respuesta": "En mis ratos libres, yo hallaba paz en la naturaleza.",
+    "pista": "Habitual free-time finding - use imperfect",
+    "grupos": [["yo"], ["hallaba"], ["paz en la naturaleza"], ["en mis ratos libres"]]
+  },
+  {
+    "id": "huir-habitual-0",
+    "verbo": "huir",
+    "contexto": "los conejos, por las tardes, al escuchar pasos",
+    "respuesta": "Por las tardes, los conejos huian al escuchar pasos.",
+    "pista": "Daily recurring behavior - use imperfect",
+    "grupos": [["los conejos"], ["huian"], ["al escuchar pasos"], ["por las tardes"]]
+  },
+  {
+    "id": "huir-habitual-1",
+    "verbo": "huir",
+    "contexto": "yo, durante la infancia, de los perros grandes del barrio",
+    "respuesta": "Durante la infancia, yo huia de los perros grandes del barrio.",
+    "pista": "Childhood habitual fear - use imperfect",
+    "grupos": [["yo"], ["huia"], ["de los perros grandes del barrio"], ["durante la infancia"]]
+  },
+  {
+    "id": "imaginar-habitual-0",
+    "verbo": "imaginar",
+    "contexto": "yo, durante la infancia, mundos fantasticos antes de dormir",
+    "respuesta": "Durante la infancia, yo imaginaba mundos fantasticos antes de dormir.",
+    "pista": "Childhood habitual imagination - use imperfect",
+    "grupos": [["yo"], ["imaginaba"], ["mundos fantasticos antes de dormir"], ["durante la infancia"]]
+  },
+  {
+    "id": "imaginar-habitual-1",
+    "verbo": "imaginar",
+    "contexto": "nosotros, en aquellos tiempos, un futuro mejor",
+    "respuesta": "En aquellos tiempos, nosotros imaginabamos un futuro mejor.",
+    "pista": "Habitual past dreaming - use imperfect",
+    "grupos": [["nosotros"], ["imaginabamos"], ["un futuro mejor"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "importar-habitual-0",
+    "verbo": "importar",
+    "contexto": "a mi padre, en aquellos tiempos, la opinion de los demas",
+    "respuesta": "En aquellos tiempos, a mi padre le importaba la opinion de los demas.",
+    "pista": "Habitual past concern - use imperfect",
+    "grupos": [["a mi padre"], ["importaba"], ["la opinion de los demas"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "importar-habitual-1",
+    "verbo": "importar",
+    "contexto": "a nosotros, durante la infancia, solamente jugar y divertirnos",
+    "respuesta": "Durante la infancia, a nosotros nos importaba solamente jugar y divertirnos.",
+    "pista": "Childhood habitual priority - use imperfect",
+    "grupos": [["a nosotros"], ["importaba"], ["solamente jugar y divertirnos"], ["durante la infancia"]]
+  },
+  {
+    "id": "incluir-habitual-0",
+    "verbo": "incluir",
+    "contexto": "el menu, los domingos, un postre especial",
+    "respuesta": "Los domingos, el menu incluia un postre especial.",
+    "pista": "Regular Sunday feature - use imperfect",
+    "grupos": [["el menu"], ["incluia"], ["un postre especial"], ["los domingos"]]
+  },
+  {
+    "id": "incluir-habitual-1",
+    "verbo": "incluir",
+    "contexto": "la profesora, semana tras semana, actividades divertidas en la clase",
+    "respuesta": "Semana tras semana, la profesora incluia actividades divertidas en la clase.",
+    "pista": "Repeated weekly inclusion - use imperfect",
+    "grupos": [["la profesora"], ["incluia"], ["actividades divertidas en la clase"], ["semana tras semana"]]
+  },
+  {
+    "id": "informar-habitual-0",
+    "verbo": "informar",
+    "contexto": "el periodico, por las tardes, de los eventos locales",
+    "respuesta": "Por las tardes, el periodico informaba de los eventos locales.",
+    "pista": "Daily afternoon reporting - use imperfect",
+    "grupos": [["el periodico"], ["informaba"], ["de los eventos locales"], ["por las tardes"]]
+  },
+  {
+    "id": "informar-habitual-1",
+    "verbo": "informar",
+    "contexto": "yo, cuando trabajaba alli, al jefe de los avances",
+    "respuesta": "Cuando trabajaba alli, yo informaba al jefe de los avances.",
+    "pista": "Habitual workplace reporting - use imperfect",
+    "grupos": [["yo"], ["informaba"], ["al jefe de los avances"], ["cuando trabajaba alli"]]
+  },
+  {
+    "id": "intentar-habitual-0",
+    "verbo": "intentar",
+    "contexto": "yo, semana tras semana, mejorar mi espanol",
+    "respuesta": "Semana tras semana, yo intentaba mejorar mi espanol.",
+    "pista": "Repeated weekly effort - use imperfect",
+    "grupos": [["yo"], ["intentaba"], ["mejorar mi espanol"], ["semana tras semana"]]
+  },
+  {
+    "id": "intentar-habitual-1",
+    "verbo": "intentar",
+    "contexto": "ella, con frecuencia, cocinar recetas nuevas",
+    "respuesta": "Ella intentaba cocinar recetas nuevas con frecuencia.",
+    "pista": "Frequently repeated attempt - use imperfect",
+    "grupos": [["ella"], ["intentaba"], ["cocinar recetas nuevas"], ["con frecuencia"]]
+  },
+  {
+    "id": "interesar-habitual-0",
+    "verbo": "interesar",
+    "contexto": "a mi, en mis anos de universidad, la filosofia y el arte",
+    "respuesta": "En mis anos de universidad, a mi me interesaba la filosofia y el arte.",
+    "pista": "Habitual university interest - use imperfect",
+    "grupos": [["a mi"], ["interesaba"], ["la filosofia y el arte"], ["en mis anos de universidad"]]
+  },
+  {
+    "id": "interesar-habitual-1",
+    "verbo": "interesar",
+    "contexto": "a los ninos, durante la infancia, los cuentos de aventuras",
+    "respuesta": "Durante la infancia, a los ninos les interesaban los cuentos de aventuras.",
+    "pista": "Childhood habitual interest - use imperfect",
+    "grupos": [["a los ninos"], ["interesaban"], ["los cuentos de aventuras"], ["durante la infancia"]]
+  }
+]

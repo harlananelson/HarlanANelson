@@ -1,0 +1,242 @@
+[
+  {
+    "id": "ir-puntual-0",
+    "verbo": "ir",
+    "contexto": "yo, aquel verano, a la playa",
+    "respuesta": "Yo fui a la playa aquel verano.",
+    "pista": "completed action of going to the beach that summer",
+    "grupos": [["yo"], ["fui"], ["a la playa"], ["aquel verano"]]
+  },
+  {
+    "id": "ir-puntual-1",
+    "verbo": "ir",
+    "contexto": "ellos, al mediodia, al mercado",
+    "respuesta": "Ellos fueron al mercado al mediodia.",
+    "pista": "completed action of going to the market at noon",
+    "grupos": [["ellos"], ["fueron"], ["al mercado"], ["al mediodia"]]
+  },
+  {
+    "id": "joder-puntual-0",
+    "verbo": "joder",
+    "contexto": "el ruido, esa misma noche, toda la velada",
+    "respuesta": "El ruido jodio toda la velada esa misma noche.",
+    "pista": "completed action of the noise ruining the whole evening that night",
+    "grupos": [["el ruido"], ["jodio"], ["toda la velada"], ["esa misma noche"]]
+  },
+  {
+    "id": "joder-puntual-1",
+    "verbo": "joder",
+    "contexto": "la lluvia, de repente, los planes",
+    "respuesta": "La lluvia jodio los planes de repente.",
+    "pista": "completed action of the rain ruining the plans suddenly",
+    "grupos": [["la lluvia"], ["jodio"], ["los planes"], ["de repente"]]
+  },
+  {
+    "id": "jugar-puntual-0",
+    "verbo": "jugar",
+    "contexto": "nosotros, aquel verano, al futbol en la playa",
+    "respuesta": "Nosotros jugamos al futbol en la playa aquel verano.",
+    "pista": "completed action of playing soccer on the beach that summer",
+    "grupos": [["nosotros"], ["jugamos"], ["al futbol en la playa"], ["aquel verano"]]
+  },
+  {
+    "id": "jugar-puntual-1",
+    "verbo": "jugar",
+    "contexto": "los ninos, al mediodia, en el parque",
+    "respuesta": "Los ninos jugaron en el parque al mediodia.",
+    "pista": "completed action of the children playing in the park at noon",
+    "grupos": [["los ninos"], ["jugaron"], ["en el parque"], ["al mediodia"]]
+  },
+  {
+    "id": "jurar-puntual-0",
+    "verbo": "jurar",
+    "contexto": "el, en aquel momento, decir la verdad",
+    "respuesta": "El juro decir la verdad en aquel momento.",
+    "pista": "completed action of swearing to tell the truth at that moment",
+    "grupos": [["el"], ["juro"], ["decir la verdad"], ["en aquel momento"]]
+  },
+  {
+    "id": "jurar-puntual-1",
+    "verbo": "jurar",
+    "contexto": "yo, justo en ese instante, lealtad eterna",
+    "respuesta": "Yo jure lealtad eterna justo en ese instante.",
+    "pista": "completed action of swearing eternal loyalty at that exact moment",
+    "grupos": [["yo"], ["jure"], ["lealtad eterna"], ["justo en ese instante"]]
+  },
+  {
+    "id": "leer-puntual-0",
+    "verbo": "leer",
+    "contexto": "ella, esa misma noche, el libro completo",
+    "respuesta": "Ella leyo el libro completo esa misma noche.",
+    "pista": "completed action of reading the entire book that very night",
+    "grupos": [["ella"], ["leyo"], ["el libro completo"], ["esa misma noche"]]
+  },
+  {
+    "id": "leer-puntual-1",
+    "verbo": "leer",
+    "contexto": "yo, en la madrugada, la carta",
+    "respuesta": "Yo lei la carta en la madrugada.",
+    "pista": "completed action of reading the letter in the early morning",
+    "grupos": [["yo"], ["lei"], ["la carta"], ["en la madrugada"]]
+  },
+  {
+    "id": "levantar-puntual-0",
+    "verbo": "levantar",
+    "contexto": "el, nada mas llegar, la mano",
+    "respuesta": "El levanto la mano nada mas llegar.",
+    "pista": "completed action of raising his hand right upon arriving",
+    "grupos": [["el"], ["levanto"], ["la mano"], ["nada mas llegar"]]
+  },
+  {
+    "id": "levantar-puntual-1",
+    "verbo": "levantar",
+    "contexto": "yo, al anochecer, la mesa caida",
+    "respuesta": "Yo levante la mesa caida al anochecer.",
+    "pista": "completed action of lifting the fallen table at nightfall",
+    "grupos": [["yo"], ["levante"], ["la mesa caida"], ["al anochecer"]]
+  },
+  {
+    "id": "llamar-puntual-0",
+    "verbo": "llamar",
+    "contexto": "ella, a las dos en punto, al medico",
+    "respuesta": "Ella llamo al medico a las dos en punto.",
+    "pista": "completed action of calling the doctor at two o'clock",
+    "grupos": [["ella"], ["llamo"], ["al medico"], ["a las dos en punto"]]
+  },
+  {
+    "id": "llamar-puntual-1",
+    "verbo": "llamar",
+    "contexto": "yo, hace tres dias, a mi hermano",
+    "respuesta": "Yo llame a mi hermano hace tres dias.",
+    "pista": "completed action of calling my brother three days ago",
+    "grupos": [["yo"], ["llame"], ["a mi hermano"], ["hace tres dias"]]
+  },
+  {
+    "id": "llegar-puntual-0",
+    "verbo": "llegar",
+    "contexto": "nosotros, al anochecer, al hotel",
+    "respuesta": "Nosotros llegamos al hotel al anochecer.",
+    "pista": "completed action of arriving at the hotel at nightfall",
+    "grupos": [["nosotros"], ["llegamos"], ["al hotel"], ["al anochecer"]]
+  },
+  {
+    "id": "llegar-puntual-1",
+    "verbo": "llegar",
+    "contexto": "yo, el martes pasado, tarde al trabajo",
+    "respuesta": "Yo llegue tarde al trabajo el martes pasado.",
+    "pista": "completed action of arriving late to work last Tuesday",
+    "grupos": [["yo"], ["llegue"], ["tarde al trabajo"], ["el martes pasado"]]
+  },
+  {
+    "id": "llevar-puntual-0",
+    "verbo": "llevar",
+    "contexto": "el, durante el viaje, la maleta pesada",
+    "respuesta": "El llevo la maleta pesada durante el viaje.",
+    "pista": "completed action of carrying the heavy suitcase during the trip",
+    "grupos": [["el"], ["llevo"], ["la maleta pesada"], ["durante el viaje"]]
+  },
+  {
+    "id": "llevar-puntual-1",
+    "verbo": "llevar",
+    "contexto": "yo, tras la reunion, los papeles a la oficina",
+    "respuesta": "Yo lleve los papeles a la oficina tras la reunion.",
+    "pista": "completed action of taking the papers to the office after the meeting",
+    "grupos": [["yo"], ["lleve"], ["los papeles a la oficina"], ["tras la reunion"]]
+  },
+  {
+    "id": "llorar-puntual-0",
+    "verbo": "llorar",
+    "contexto": "ella, esa misma noche, de felicidad",
+    "respuesta": "Ella lloro de felicidad esa misma noche.",
+    "pista": "completed action of crying with happiness that very night",
+    "grupos": [["ella"], ["lloro"], ["de felicidad"], ["esa misma noche"]]
+  },
+  {
+    "id": "llorar-puntual-1",
+    "verbo": "llorar",
+    "contexto": "el nino, de repente, sin parar",
+    "respuesta": "El nino lloro sin parar de repente.",
+    "pista": "completed action of the child crying nonstop suddenly",
+    "grupos": [["el nino"], ["lloro"], ["sin parar"], ["de repente"]]
+  },
+  {
+    "id": "lograr-puntual-0",
+    "verbo": "lograr",
+    "contexto": "ella, al final del dia, su objetivo",
+    "respuesta": "Ella logro su objetivo al final del dia.",
+    "pista": "completed action of achieving her goal at the end of the day",
+    "grupos": [["ella"], ["logro"], ["su objetivo"], ["al final del dia"]]
+  },
+  {
+    "id": "lograr-puntual-1",
+    "verbo": "lograr",
+    "contexto": "nosotros, aquel verano, lo imposible",
+    "respuesta": "Nosotros logramos lo imposible aquel verano.",
+    "pista": "completed action of achieving the impossible that summer",
+    "grupos": [["nosotros"], ["logramos"], ["lo imposible"], ["aquel verano"]]
+  },
+  {
+    "id": "luchar-puntual-0",
+    "verbo": "luchar",
+    "contexto": "ellos, durante la tormenta, por sobrevivir",
+    "respuesta": "Ellos lucharon por sobrevivir durante la tormenta.",
+    "pista": "completed action of fighting to survive during the storm",
+    "grupos": [["ellos"], ["lucharon"], ["por sobrevivir"], ["durante la tormenta"]]
+  },
+  {
+    "id": "luchar-puntual-1",
+    "verbo": "luchar",
+    "contexto": "yo, en aquel momento, con todas mis fuerzas",
+    "respuesta": "Yo luche con todas mis fuerzas en aquel momento.",
+    "pista": "completed action of fighting with all my strength at that moment",
+    "grupos": [["yo"], ["luche"], ["con todas mis fuerzas"], ["en aquel momento"]]
+  },
+  {
+    "id": "mandar-puntual-0",
+    "verbo": "mandar",
+    "contexto": "ella, hace una semana, el paquete por correo",
+    "respuesta": "Ella mando el paquete por correo hace una semana.",
+    "pista": "completed action of sending the package by mail a week ago",
+    "grupos": [["ella"], ["mando"], ["el paquete por correo"], ["hace una semana"]]
+  },
+  {
+    "id": "mandar-puntual-1",
+    "verbo": "mandar",
+    "contexto": "el jefe, el martes pasado, un mensaje urgente",
+    "respuesta": "El jefe mando un mensaje urgente el martes pasado.",
+    "pista": "completed action of the boss sending an urgent message last Tuesday",
+    "grupos": [["el jefe"], ["mando"], ["un mensaje urgente"], ["el martes pasado"]]
+  },
+  {
+    "id": "manejar-puntual-0",
+    "verbo": "manejar",
+    "contexto": "yo, en la madrugada, por la autopista",
+    "respuesta": "Yo maneje por la autopista en la madrugada.",
+    "pista": "completed action of driving on the highway in the early morning",
+    "grupos": [["yo"], ["maneje"], ["por la autopista"], ["en la madrugada"]]
+  },
+  {
+    "id": "manejar-puntual-1",
+    "verbo": "manejar",
+    "contexto": "ella, justo en ese instante, la situacion con calma",
+    "respuesta": "Ella manejo la situacion con calma justo en ese instante.",
+    "pista": "completed action of handling the situation calmly at that exact moment",
+    "grupos": [["ella"], ["manejo"], ["la situacion con calma"], ["justo en ese instante"]]
+  },
+  {
+    "id": "mantener-puntual-0",
+    "verbo": "mantener",
+    "contexto": "el, durante el viaje, la calma",
+    "respuesta": "El mantuvo la calma durante el viaje.",
+    "pista": "completed action of maintaining calm during the trip",
+    "grupos": [["el"], ["mantuvo"], ["la calma"], ["durante el viaje"]]
+  },
+  {
+    "id": "mantener-puntual-1",
+    "verbo": "mantener",
+    "contexto": "yo, en aquel momento, mi posicion",
+    "respuesta": "Yo mantuve mi posicion en aquel momento.",
+    "pista": "completed action of maintaining my position at that moment",
+    "grupos": [["yo"], ["mantuve"], ["mi posicion"], ["en aquel momento"]]
+  }
+]

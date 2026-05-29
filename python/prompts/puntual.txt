@@ -1,0 +1,31 @@
+Generate ADDITIONAL Spanish preterite (punctual) speech drill exercises to add variety to existing ones.
+
+TENSE: puntual (pretérito indefinido — completed past action at a specific moment)
+CONJUGATION RULES:
+- Regular -ar: hablé, hablaste, habló, hablamos, hablasteis, hablaron
+- Regular -er: comí, comiste, comió, comimos, comisteis, comieron
+- Regular -ir: viví, viviste, vivió, vivimos, vivisteis, vivieron
+- Irregular: fui/fue (ser,ir), hice/hizo (hacer), dije/dijo (decir), tuve/tuvo (tener), estuve/estuvo (estar), pude/pudo (poder), puse/puso (poner), supe/supo (saber), vine/vino (venir), quise/quiso (querer), traje/trajo (traer), di/dio (dar), vi/vio (ver), hubo (haber)
+- Spelling changes: -car→-qué, -gar→-gué, -zar→-cé
+
+NEW TIME PHRASES (different from existing — use diverse mix, no phrase more than 3x total):
+a las dos en punto, el martes pasado, hace tres días, justo en ese instante, aquel verano, durante la tormenta, en la madrugada, al mediodía, nada más llegar, de repente, en cuanto lo supo, al anochecer, tras la reunión, esa misma noche, durante el viaje
+
+EXERCISE FORMAT:
+Each exercise must have these 6 fields:
+- id: "{verb}-puntual-{number}" (number will be assigned later, use 0)
+- verbo: the infinitive
+- contexto: subject + NEW time phrase + complement (comma-separated fragments)
+- respuesta: complete sentence with correct preterite conjugation
+- pista: a hint about completed past action
+- grupos: array of arrays, each inner array has the key idea unit
+
+CRITICAL RULES FOR grupos:
+1. Every element in grupos must appear verbatim in respuesta (after accent removal and lowercasing)
+2. grupos elements must NOT contain accented characters
+3. The conjugated verb form is always its own grupo
+4. Include alternative speech recognition forms where relevant
+
+Generate 2 exercises per verb with NEW time phrases not used in existing exercises. Use different subjects.
+
+OUTPUT: Valid JSON array of exercise objects. Nothing else.

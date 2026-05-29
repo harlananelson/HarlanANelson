@@ -1,0 +1,992 @@
+[
+  {
+    "id": "marchar-subj_imperfecto-0",
+    "verbo": "marchar",
+    "contexto": "si, yo, a otra ciudad",
+    "respuesta": "si yo marchara a otra ciudad",
+    "pista": "hypothetical si clause uses imperfect subjunctive",
+    "grupos": [
+      [
+        "si"
+      ],
+      [
+        "marchara",
+        "marchase"
+      ],
+      [
+        "yo"
+      ],
+      [
+        "a otra ciudad"
+      ]
+    ]
+  },
+  {
+    "id": "marchar-subj_imperfecto-1",
+    "verbo": "marchar",
+    "contexto": "ojala, tu, con el ejercito",
+    "respuesta": "ojala tu marcharas con el ejercito",
+    "pista": "ojala expresses a wish and triggers subjunctive",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "marcharas",
+        "marchases"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "con el ejercito"
+      ]
+    ]
+  },
+  {
+    "id": "marchar-subj_imperfecto-2",
+    "verbo": "marchar",
+    "contexto": "quisiera que, el, lejos",
+    "respuesta": "quisiera que el marchara lejos",
+    "pista": "quisiera que expresses a desire triggering subjunctive",
+    "grupos": [
+      [
+        "quisiera que"
+      ],
+      [
+        "marchara",
+        "marchase"
+      ],
+      [
+        "el"
+      ],
+      [
+        "lejos"
+      ]
+    ]
+  },
+  {
+    "id": "matar-subj_imperfecto-0",
+    "verbo": "matar",
+    "contexto": "era necesario que, ella, al enemigo",
+    "respuesta": "era necesario que ella matara al enemigo",
+    "pista": "impersonal expressions of necessity trigger subjunctive",
+    "grupos": [
+      [
+        "era necesario que"
+      ],
+      [
+        "matara",
+        "matase"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "al enemigo"
+      ]
+    ]
+  },
+  {
+    "id": "matar-subj_imperfecto-1",
+    "verbo": "matar",
+    "contexto": "no creia que, nosotros, el tiempo",
+    "respuesta": "no creia que nosotros mataramos el tiempo",
+    "pista": "negated belief triggers subjunctive in the past",
+    "grupos": [
+      [
+        "no creia que"
+      ],
+      [
+        "mataramos",
+        "matasemos"
+      ],
+      [
+        "nosotros"
+      ],
+      [
+        "el tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "matar-subj_imperfecto-2",
+    "verbo": "matar",
+    "contexto": "dudaba que, ellos, la esperanza",
+    "respuesta": "dudaba que ellos mataran la esperanza",
+    "pista": "doubt in the past triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "dudaba que"
+      ],
+      [
+        "mataran",
+        "matasen"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "la esperanza"
+      ]
+    ]
+  },
+  {
+    "id": "mencionar-subj_imperfecto-0",
+    "verbo": "mencionar",
+    "contexto": "esperaba que, ellas, el tema",
+    "respuesta": "esperaba que ellas mencionaran el tema",
+    "pista": "esperaba que expresses past hope triggering subjunctive",
+    "grupos": [
+      [
+        "esperaba que"
+      ],
+      [
+        "mencionaran",
+        "mencionasen"
+      ],
+      [
+        "ellas"
+      ],
+      [
+        "el tema"
+      ]
+    ]
+  },
+  {
+    "id": "mencionar-subj_imperfecto-1",
+    "verbo": "mencionar",
+    "contexto": "como si, usted, su nombre",
+    "respuesta": "como si usted mencionara su nombre",
+    "pista": "como si always requires imperfect subjunctive",
+    "grupos": [
+      [
+        "como si"
+      ],
+      [
+        "mencionara",
+        "mencionase"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "su nombre"
+      ]
+    ]
+  },
+  {
+    "id": "mencionar-subj_imperfecto-2",
+    "verbo": "mencionar",
+    "contexto": "antes de que, ustedes, el problema",
+    "respuesta": "antes de que ustedes mencionaran el problema",
+    "pista": "antes de que always triggers subjunctive",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "mencionaran",
+        "mencionasen"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "el problema"
+      ]
+    ]
+  },
+  {
+    "id": "mentir-subj_imperfecto-0",
+    "verbo": "mentir",
+    "contexto": "para que, maria, sobre el tema",
+    "respuesta": "para que maria mintiera sobre el tema",
+    "pista": "para que expresses purpose and triggers subjunctive",
+    "grupos": [
+      [
+        "para que"
+      ],
+      [
+        "mintiera",
+        "mintiese"
+      ],
+      [
+        "maria"
+      ],
+      [
+        "sobre el tema"
+      ]
+    ]
+  },
+  {
+    "id": "mentir-subj_imperfecto-1",
+    "verbo": "mentir",
+    "contexto": "aunque, carlos, a sus padres",
+    "respuesta": "aunque carlos mintiera a sus padres",
+    "pista": "aunque with uncertainty triggers subjunctive",
+    "grupos": [
+      [
+        "aunque"
+      ],
+      [
+        "mintiera",
+        "mintiese"
+      ],
+      [
+        "carlos"
+      ],
+      [
+        "a sus padres"
+      ]
+    ]
+  },
+  {
+    "id": "mentir-subj_imperfecto-2",
+    "verbo": "mentir",
+    "contexto": "no pensaba que, los ninos, en el juicio",
+    "respuesta": "no pensaba que los ninos mintieran en el juicio",
+    "pista": "negated thought triggers subjunctive in the past",
+    "grupos": [
+      [
+        "no pensaba que"
+      ],
+      [
+        "mintieran",
+        "mintiesen"
+      ],
+      [
+        "los ninos"
+      ],
+      [
+        "en el juicio"
+      ]
+    ]
+  },
+  {
+    "id": "merecer-subj_imperfecto-0",
+    "verbo": "merecer",
+    "contexto": "me gustaria que, mi hermano, una oportunidad",
+    "respuesta": "me gustaria que mi hermano mereciera una oportunidad",
+    "pista": "conditional desire triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "me gustaria que"
+      ],
+      [
+        "mereciera",
+        "mereciese"
+      ],
+      [
+        "mi hermano"
+      ],
+      [
+        "una oportunidad"
+      ]
+    ]
+  },
+  {
+    "id": "merecer-subj_imperfecto-1",
+    "verbo": "merecer",
+    "contexto": "seria bueno que, mi madre, el premio",
+    "respuesta": "seria bueno que mi madre mereciera el premio",
+    "pista": "impersonal conditional triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "seria bueno que"
+      ],
+      [
+        "mereciera",
+        "mereciese"
+      ],
+      [
+        "mi madre"
+      ],
+      [
+        "el premio"
+      ]
+    ]
+  },
+  {
+    "id": "merecer-subj_imperfecto-2",
+    "verbo": "merecer",
+    "contexto": "no era cierto que, la gente, mas respeto",
+    "respuesta": "no era cierto que la gente mereciera mas respeto",
+    "pista": "negating certainty in the past triggers subjunctive",
+    "grupos": [
+      [
+        "no era cierto que"
+      ],
+      [
+        "mereciera",
+        "mereciese"
+      ],
+      [
+        "la gente"
+      ],
+      [
+        "mas respeto"
+      ]
+    ]
+  },
+  {
+    "id": "meter-subj_imperfecto-0",
+    "verbo": "meter",
+    "contexto": "queria que, yo, la mano",
+    "respuesta": "queria que yo metiera la mano",
+    "pista": "past desire triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "queria que"
+      ],
+      [
+        "metiera",
+        "metiese"
+      ],
+      [
+        "yo"
+      ],
+      [
+        "la mano"
+      ]
+    ]
+  },
+  {
+    "id": "meter-subj_imperfecto-1",
+    "verbo": "meter",
+    "contexto": "le pedi que, tu, en problemas",
+    "respuesta": "le pedi que tu metieras en problemas",
+    "pista": "past request triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "le pedi que"
+      ],
+      [
+        "metieras",
+        "metieses"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "en problemas"
+      ]
+    ]
+  },
+  {
+    "id": "meter-subj_imperfecto-2",
+    "verbo": "meter",
+    "contexto": "sin que, el, la llave",
+    "respuesta": "sin que el metiera la llave",
+    "pista": "sin que always triggers subjunctive",
+    "grupos": [
+      [
+        "sin que"
+      ],
+      [
+        "metiera",
+        "metiese"
+      ],
+      [
+        "el"
+      ],
+      [
+        "la llave"
+      ]
+    ]
+  },
+  {
+    "id": "mirar-subj_imperfecto-0",
+    "verbo": "mirar",
+    "contexto": "era importante que, ella, por la ventana",
+    "respuesta": "era importante que ella mirara por la ventana",
+    "pista": "impersonal importance triggers subjunctive",
+    "grupos": [
+      [
+        "era importante que"
+      ],
+      [
+        "mirara",
+        "mirase"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "por la ventana"
+      ]
+    ]
+  },
+  {
+    "id": "mirar-subj_imperfecto-1",
+    "verbo": "mirar",
+    "contexto": "no habia nadie que, nosotros, con atencion",
+    "respuesta": "no habia nadie que nosotros miraramos con atencion",
+    "pista": "negative antecedent triggers subjunctive",
+    "grupos": [
+      [
+        "no habia nadie que"
+      ],
+      [
+        "miraramos",
+        "mirasemos"
+      ],
+      [
+        "nosotros"
+      ],
+      [
+        "con atencion"
+      ]
+    ]
+  },
+  {
+    "id": "mirar-subj_imperfecto-2",
+    "verbo": "mirar",
+    "contexto": "era posible que, ellos, hacia el cielo",
+    "respuesta": "era posible que ellos miraran hacia el cielo",
+    "pista": "possibility in the past triggers subjunctive",
+    "grupos": [
+      [
+        "era posible que"
+      ],
+      [
+        "miraran",
+        "mirasen"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "hacia el cielo"
+      ]
+    ]
+  },
+  {
+    "id": "molestar-subj_imperfecto-0",
+    "verbo": "molestar",
+    "contexto": "necesitaba que, ellas, a nadie",
+    "respuesta": "necesitaba que ellas molestaran a nadie",
+    "pista": "past need triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "necesitaba que"
+      ],
+      [
+        "molestaran",
+        "molestasen"
+      ],
+      [
+        "ellas"
+      ],
+      [
+        "a nadie"
+      ]
+    ]
+  },
+  {
+    "id": "molestar-subj_imperfecto-1",
+    "verbo": "molestar",
+    "contexto": "preferia que, usted, a los vecinos",
+    "respuesta": "preferia que usted molestara a los vecinos",
+    "pista": "past preference triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "preferia que"
+      ],
+      [
+        "molestara",
+        "molestase"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "a los vecinos"
+      ]
+    ]
+  },
+  {
+    "id": "molestar-subj_imperfecto-2",
+    "verbo": "molestar",
+    "contexto": "temia que, ustedes, con el ruido",
+    "respuesta": "temia que ustedes molestaran con el ruido",
+    "pista": "past fear triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "temia que"
+      ],
+      [
+        "molestaran",
+        "molestasen"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "con el ruido"
+      ]
+    ]
+  },
+  {
+    "id": "morir-subj_imperfecto-0",
+    "verbo": "morir",
+    "contexto": "sugeria que, maria, en paz",
+    "respuesta": "sugeria que maria muriera en paz",
+    "pista": "past suggestion triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "sugeria que"
+      ],
+      [
+        "muriera",
+        "muriese"
+      ],
+      [
+        "maria"
+      ],
+      [
+        "en paz"
+      ]
+    ]
+  },
+  {
+    "id": "morir-subj_imperfecto-1",
+    "verbo": "morir",
+    "contexto": "era improbable que, carlos, por la causa",
+    "respuesta": "era improbable que carlos muriera por la causa",
+    "pista": "improbability in the past triggers subjunctive",
+    "grupos": [
+      [
+        "era improbable que"
+      ],
+      [
+        "muriera",
+        "muriese"
+      ],
+      [
+        "carlos"
+      ],
+      [
+        "por la causa"
+      ]
+    ]
+  },
+  {
+    "id": "morir-subj_imperfecto-2",
+    "verbo": "morir",
+    "contexto": "en caso de que, los ninos, de viejo",
+    "respuesta": "en caso de que los ninos murieran de viejo",
+    "pista": "en caso de que always triggers subjunctive",
+    "grupos": [
+      [
+        "en caso de que"
+      ],
+      [
+        "murieran",
+        "muriesen"
+      ],
+      [
+        "los ninos"
+      ],
+      [
+        "de viejo"
+      ]
+    ]
+  },
+  {
+    "id": "mostrar-subj_imperfecto-0",
+    "verbo": "mostrar",
+    "contexto": "a menos que, mi hermano, el camino",
+    "respuesta": "a menos que mi hermano mostrara el camino",
+    "pista": "a menos que always triggers subjunctive",
+    "grupos": [
+      [
+        "a menos que"
+      ],
+      [
+        "mostrara",
+        "mostrase"
+      ],
+      [
+        "mi hermano"
+      ],
+      [
+        "el camino"
+      ]
+    ]
+  },
+  {
+    "id": "mostrar-subj_imperfecto-1",
+    "verbo": "mostrar",
+    "contexto": "no era verdad que, mi madre, sus sentimientos",
+    "respuesta": "no era verdad que mi madre mostrara sus sentimientos",
+    "pista": "denying truth in the past triggers subjunctive",
+    "grupos": [
+      [
+        "no era verdad que"
+      ],
+      [
+        "mostrara",
+        "mostrase"
+      ],
+      [
+        "mi madre"
+      ],
+      [
+        "sus sentimientos"
+      ]
+    ]
+  },
+  {
+    "id": "mostrar-subj_imperfecto-2",
+    "verbo": "mostrar",
+    "contexto": "si tan solo, la gente, la verdad",
+    "respuesta": "si tan solo la gente mostrara la verdad",
+    "pista": "si tan solo expresses a wish with imperfect subjunctive",
+    "grupos": [
+      [
+        "si tan solo"
+      ],
+      [
+        "mostrara",
+        "mostrase"
+      ],
+      [
+        "la gente"
+      ],
+      [
+        "la verdad"
+      ]
+    ]
+  },
+  {
+    "id": "mover-subj_imperfecto-0",
+    "verbo": "mover",
+    "contexto": "si, yo, la mesa",
+    "respuesta": "si yo moviera la mesa",
+    "pista": "hypothetical si clause uses imperfect subjunctive",
+    "grupos": [
+      [
+        "si"
+      ],
+      [
+        "moviera",
+        "moviese"
+      ],
+      [
+        "yo"
+      ],
+      [
+        "la mesa"
+      ]
+    ]
+  },
+  {
+    "id": "mover-subj_imperfecto-1",
+    "verbo": "mover",
+    "contexto": "ojala, tu, los muebles",
+    "respuesta": "ojala tu movieras los muebles",
+    "pista": "ojala expresses a wish and triggers subjunctive",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "movieras",
+        "movieses"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "los muebles"
+      ]
+    ]
+  },
+  {
+    "id": "mover-subj_imperfecto-2",
+    "verbo": "mover",
+    "contexto": "quisiera que, el, de lugar",
+    "respuesta": "quisiera que el moviera de lugar",
+    "pista": "quisiera que expresses a desire triggering subjunctive",
+    "grupos": [
+      [
+        "quisiera que"
+      ],
+      [
+        "moviera",
+        "moviese"
+      ],
+      [
+        "el"
+      ],
+      [
+        "de lugar"
+      ]
+    ]
+  },
+  {
+    "id": "nacer-subj_imperfecto-0",
+    "verbo": "nacer",
+    "contexto": "era necesario que, ella, en otro pais",
+    "respuesta": "era necesario que ella naciera en otro pais",
+    "pista": "impersonal expressions of necessity trigger subjunctive",
+    "grupos": [
+      [
+        "era necesario que"
+      ],
+      [
+        "naciera",
+        "naciese"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "en otro pais"
+      ]
+    ]
+  },
+  {
+    "id": "nacer-subj_imperfecto-1",
+    "verbo": "nacer",
+    "contexto": "no creia que, nosotros, con talento",
+    "respuesta": "no creia que nosotros nacieramos con talento",
+    "pista": "negated belief triggers subjunctive in the past",
+    "grupos": [
+      [
+        "no creia que"
+      ],
+      [
+        "nacieramos",
+        "naciesemos"
+      ],
+      [
+        "nosotros"
+      ],
+      [
+        "con talento"
+      ]
+    ]
+  },
+  {
+    "id": "nacer-subj_imperfecto-2",
+    "verbo": "nacer",
+    "contexto": "dudaba que, ellos, en primavera",
+    "respuesta": "dudaba que ellos nacieran en primavera",
+    "pista": "doubt in the past triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "dudaba que"
+      ],
+      [
+        "nacieran",
+        "naciesen"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "en primavera"
+      ]
+    ]
+  },
+  {
+    "id": "necesitar-subj_imperfecto-0",
+    "verbo": "necesitar",
+    "contexto": "esperaba que, ellas, ayuda",
+    "respuesta": "esperaba que ellas necesitaran ayuda",
+    "pista": "esperaba que expresses past hope triggering subjunctive",
+    "grupos": [
+      [
+        "esperaba que"
+      ],
+      [
+        "necesitaran",
+        "necesitasen"
+      ],
+      [
+        "ellas"
+      ],
+      [
+        "ayuda"
+      ]
+    ]
+  },
+  {
+    "id": "necesitar-subj_imperfecto-1",
+    "verbo": "necesitar",
+    "contexto": "como si, usted, mas tiempo",
+    "respuesta": "como si usted necesitara mas tiempo",
+    "pista": "como si always requires imperfect subjunctive",
+    "grupos": [
+      [
+        "como si"
+      ],
+      [
+        "necesitara",
+        "necesitase"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "necesitar-subj_imperfecto-2",
+    "verbo": "necesitar",
+    "contexto": "antes de que, ustedes, un descanso",
+    "respuesta": "antes de que ustedes necesitaran un descanso",
+    "pista": "antes de que always triggers subjunctive",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "necesitaran",
+        "necesitasen"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "un descanso"
+      ]
+    ]
+  },
+  {
+    "id": "negar-subj_imperfecto-0",
+    "verbo": "negar",
+    "contexto": "para que, maria, la acusacion",
+    "respuesta": "para que maria negara la acusacion",
+    "pista": "para que expresses purpose and triggers subjunctive",
+    "grupos": [
+      [
+        "para que"
+      ],
+      [
+        "negara",
+        "negase"
+      ],
+      [
+        "maria"
+      ],
+      [
+        "la acusacion"
+      ]
+    ]
+  },
+  {
+    "id": "negar-subj_imperfecto-1",
+    "verbo": "negar",
+    "contexto": "aunque, carlos, su participacion",
+    "respuesta": "aunque carlos negara su participacion",
+    "pista": "aunque with uncertainty triggers subjunctive",
+    "grupos": [
+      [
+        "aunque"
+      ],
+      [
+        "negara",
+        "negase"
+      ],
+      [
+        "carlos"
+      ],
+      [
+        "su participacion"
+      ]
+    ]
+  },
+  {
+    "id": "negar-subj_imperfecto-2",
+    "verbo": "negar",
+    "contexto": "no pensaba que, los ninos, los hechos",
+    "respuesta": "no pensaba que los ninos negaran los hechos",
+    "pista": "negated thought triggers subjunctive in the past",
+    "grupos": [
+      [
+        "no pensaba que"
+      ],
+      [
+        "negaran",
+        "negasen"
+      ],
+      [
+        "los ninos"
+      ],
+      [
+        "los hechos"
+      ]
+    ]
+  },
+  {
+    "id": "observar-subj_imperfecto-0",
+    "verbo": "observar",
+    "contexto": "me gustaria que, mi hermano, con cuidado",
+    "respuesta": "me gustaria que mi hermano observara con cuidado",
+    "pista": "conditional desire triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "me gustaria que"
+      ],
+      [
+        "observara",
+        "observase"
+      ],
+      [
+        "mi hermano"
+      ],
+      [
+        "con cuidado"
+      ]
+    ]
+  },
+  {
+    "id": "observar-subj_imperfecto-1",
+    "verbo": "observar",
+    "contexto": "seria bueno que, mi madre, las estrellas",
+    "respuesta": "seria bueno que mi madre observara las estrellas",
+    "pista": "impersonal conditional triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "seria bueno que"
+      ],
+      [
+        "observara",
+        "observase"
+      ],
+      [
+        "mi madre"
+      ],
+      [
+        "las estrellas"
+      ]
+    ]
+  },
+  {
+    "id": "observar-subj_imperfecto-2",
+    "verbo": "observar",
+    "contexto": "no era cierto que, la gente, el comportamiento",
+    "respuesta": "no era cierto que la gente observara el comportamiento",
+    "pista": "negating certainty in the past triggers subjunctive",
+    "grupos": [
+      [
+        "no era cierto que"
+      ],
+      [
+        "observara",
+        "observase"
+      ],
+      [
+        "la gente"
+      ],
+      [
+        "el comportamiento"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+Generate Spanish conditional tense speech drill exercises.
+
+TENSE: condicional (conditional)
+CONJUGATION RULES:
+- Regular: infinitive + ía, ías, ía, íamos, íais, ían
+  hablar → hablaría, hablarías, hablaría, hablaríamos, hablaríais, hablarían
+  comer → comería, comerías, comería, comeríamos, comeríais, comerían
+  vivir → viviría, vivirías, viviría, viviríamos, viviríais, vivirían
+- Irregular stems (same as future):
+  tener→tendr-, venir→vendr-, poner→pondr-, salir→saldr-, poder→podr-, saber→sabr-, haber→habr-, querer→querr-, hacer→har-, decir→dir-, valer→valdr-
+
+CONTEXT PHRASES (use diverse mix, no phrase more than 3x total):
+en tu lugar, si pudiera, si tuviera tiempo, con más dinero, en esa situación, si fuera posible, en ese caso, idealmente, sin problemas, con gusto, en un mundo ideal, si me lo pidieran, de ser posible, si no lloviera, con más experiencia
+
+EXERCISE FORMAT:
+Each exercise must have these 6 fields:
+- id: "{verb}-condicional-{number}" (number will be assigned later, use 0)
+- verbo: the infinitive
+- contexto: subject + conditional context + complement (comma-separated fragments)
+- respuesta: complete sentence with correct conditional conjugation
+- pista: a hint about conditional usage (hypothetical, polite request, advice, etc.)
+- grupos: array of arrays, each inner array has the key idea unit
+
+CRITICAL RULES FOR grupos:
+1. Every element in grupos must appear verbatim in respuesta (after accent removal and lowercasing)
+2. grupos elements must NOT contain accented characters — use unaccented forms only (e.g., "hablaria" not "hablaría")
+3. The conjugated verb form is always its own grupo
+4. Include alternative speech recognition forms where relevant
+
+Generate 3 exercises per verb. Use different subjects and conditional contexts across the 3 exercises.
+
+OUTPUT: Valid JSON array of exercise objects. Nothing else.

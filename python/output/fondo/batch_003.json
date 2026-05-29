@@ -1,0 +1,122 @@
+[
+  {
+    "id": "comer-fondo-0",
+    "verbo": "comer",
+    "contexto": "la familia, junta, cuando sono el telefono",
+    "respuesta": "La familia comia junta cuando sono el telefono en la sala.",
+    "pista": "The imperfect shows a meal in progress interrupted by a phone call.",
+    "grupos": [["la familia"], ["comia"], ["junta"], ["cuando sono el telefono"], ["en la sala"]]
+  },
+  {
+    "id": "cometer-fondo-0",
+    "verbo": "cometer",
+    "contexto": "el gobierno, errores graves, en aquel entonces",
+    "respuesta": "En aquel entonces, el gobierno cometia errores graves constantemente.",
+    "pista": "The imperfect describes repeated background occurrences in the past.",
+    "grupos": [["en aquel entonces"], ["el gobierno"], ["cometia"], ["errores graves"], ["constantemente"]]
+  },
+  {
+    "id": "compartir-fondo-0",
+    "verbo": "compartir",
+    "contexto": "los vecinos, la comida, durante la cena",
+    "respuesta": "Durante la cena, los vecinos compartian la comida con generosidad.",
+    "pista": "The imperfect describes an ongoing act of sharing as background.",
+    "grupos": [["durante la cena"], ["los vecinos"], ["compartian"], ["la comida"], ["con generosidad"]]
+  },
+  {
+    "id": "comprar-fondo-0",
+    "verbo": "comprar",
+    "contexto": "mi madre, fruta fresca, esa manana temprano",
+    "respuesta": "Esa manana temprano, mi madre compraba fruta fresca en el mercado.",
+    "pista": "The imperfect paints a scene of a routine morning activity.",
+    "grupos": [["esa manana temprano"], ["mi madre"], ["compraba"], ["fruta fresca"], ["en el mercado"]]
+  },
+  {
+    "id": "comprender-fondo-0",
+    "verbo": "comprender",
+    "contexto": "nadie, la situacion, en ese preciso momento",
+    "respuesta": "En ese preciso momento, nadie comprendia la situacion con claridad.",
+    "pista": "The imperfect describes a state of confusion as background.",
+    "grupos": [["en ese preciso momento"], ["nadie"], ["comprendia"], ["la situacion"], ["con claridad"]]
+  },
+  {
+    "id": "conducir-fondo-0",
+    "verbo": "conducir",
+    "contexto": "mi hermano, el camion, antes del amanecer",
+    "respuesta": "Antes del amanecer, mi hermano conducia el camion por la carretera oscura.",
+    "pista": "The imperfect shows an ongoing driving action as a scene.",
+    "grupos": [["antes del amanecer"], ["mi hermano"], ["conducia"], ["el camion"], ["por la carretera oscura"]]
+  },
+  {
+    "id": "confiar-fondo-0",
+    "verbo": "confiar",
+    "contexto": "yo, en mis amigos, en aquel entonces",
+    "respuesta": "En aquel entonces, yo confiaba en mis amigos sin reservas.",
+    "pista": "The imperfect expresses an ongoing state of trust in the past.",
+    "grupos": [["en aquel entonces"], ["yo"], ["confiaba"], ["en mis amigos"], ["sin reservas"]]
+  },
+  {
+    "id": "conocer-fondo-0",
+    "verbo": "conocer",
+    "contexto": "ella, la ciudad, mientras tanto",
+    "respuesta": "Mientras tanto, ella conocia la ciudad mejor que cualquier guia.",
+    "pista": "The imperfect describes an ongoing state of knowledge as background.",
+    "grupos": [["mientras tanto"], ["ella"], ["conocia"], ["la ciudad"], ["mejor que cualquier guia"]]
+  },
+  {
+    "id": "conseguir-fondo-0",
+    "verbo": "conseguir",
+    "contexto": "los pescadores, poca pesca, a esa hora",
+    "respuesta": "A esa hora, los pescadores conseguian poca pesca en el rio.",
+    "pista": "The imperfect describes an ongoing struggle as background.",
+    "grupos": [["a esa hora"], ["los pescadores"], ["conseguian"], ["poca pesca"], ["en el rio"]]
+  },
+  {
+    "id": "considerar-fondo-0",
+    "verbo": "considerar",
+    "contexto": "el juez, las pruebas, en ese preciso momento",
+    "respuesta": "En ese preciso momento, el juez consideraba las pruebas con atencion.",
+    "pista": "The imperfect captures an ongoing deliberation as background.",
+    "grupos": [["en ese preciso momento"], ["el juez"], ["consideraba"], ["las pruebas"], ["con atencion"]]
+  },
+  {
+    "id": "construir-fondo-0",
+    "verbo": "construir",
+    "contexto": "los obreros, el puente, cuando de pronto",
+    "respuesta": "Los obreros construian el puente cuando de pronto comenzo a llover.",
+    "pista": "The imperfect shows construction in progress before a sudden change.",
+    "grupos": [["los obreros"], ["construian"], ["el puente"], ["cuando de pronto"], ["comenzo a llover"]]
+  },
+  {
+    "id": "contar-fondo-0",
+    "verbo": "contar",
+    "contexto": "el abuelo, historias, mientras dormian",
+    "respuesta": "Mientras dormian los mas pequenos, el abuelo contaba historias junto al fuego.",
+    "pista": "The imperfect describes storytelling as an ongoing background activity.",
+    "grupos": [["mientras dormian"], ["el abuelo"], ["contaba"], ["historias"], ["junto al fuego"]]
+  },
+  {
+    "id": "contestar-fondo-0",
+    "verbo": "contestar",
+    "contexto": "la secretaria, el telefono, esa manana temprano",
+    "respuesta": "Esa manana temprano, la secretaria contestaba el telefono sin descanso.",
+    "pista": "The imperfect shows a repeated action happening throughout the morning.",
+    "grupos": [["esa manana temprano"], ["la secretaria"], ["contestaba"], ["el telefono"], ["sin descanso"]]
+  },
+  {
+    "id": "continuar-fondo-0",
+    "verbo": "continuar",
+    "contexto": "la lluvia, cayendo, cuando llegamos",
+    "respuesta": "Cuando llegamos, la lluvia continuaba cayendo sobre la ciudad entera.",
+    "pista": "The imperfect describes persistence of weather as background.",
+    "grupos": [["cuando llegamos"], ["la lluvia"], ["continuaba"], ["cayendo"], ["sobre la ciudad entera"]]
+  },
+  {
+    "id": "controlar-fondo-0",
+    "verbo": "controlar",
+    "contexto": "la policia, las calles, durante el concierto",
+    "respuesta": "Durante el concierto, la policia controlaba las calles del centro.",
+    "pista": "The imperfect describes ongoing surveillance as background.",
+    "grupos": [["durante el concierto"], ["la policia"], ["controlaba"], ["las calles"], ["del centro"]]
+  }
+]

@@ -1,0 +1,194 @@
+[
+  {
+    "id": "querer-habitual-0",
+    "verbo": "querer",
+    "contexto": "yo, durante la infancia, ser astronauta de mayor",
+    "respuesta": "Durante la infancia, yo queria ser astronauta de mayor.",
+    "pista": "Childhood habitual wish - use imperfect",
+    "grupos": [["yo"], ["queria"], ["ser astronauta de mayor"], ["durante la infancia"]]
+  },
+  {
+    "id": "querer-habitual-1",
+    "verbo": "querer",
+    "contexto": "nosotros, en aquellos tiempos, cambiar el mundo",
+    "respuesta": "En aquellos tiempos, nosotros queriamos cambiar el mundo.",
+    "pista": "Habitual past desire - use imperfect",
+    "grupos": [["nosotros"], ["queriamos"], ["cambiar el mundo"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "quitar-habitual-0",
+    "verbo": "quitar",
+    "contexto": "yo, cada verano, las malas hierbas del jardin",
+    "respuesta": "Cada verano, yo quitaba las malas hierbas del jardin.",
+    "pista": "Repeated summer chore - use imperfect",
+    "grupos": [["yo"], ["quitaba"], ["las malas hierbas del jardin"], ["cada verano"]]
+  },
+  {
+    "id": "quitar-habitual-1",
+    "verbo": "quitar",
+    "contexto": "mi madre, por las tardes, el polvo de los muebles",
+    "respuesta": "Por las tardes, mi madre quitaba el polvo de los muebles.",
+    "pista": "Daily afternoon cleaning - use imperfect",
+    "grupos": [["mi madre"], ["quitaba"], ["el polvo de los muebles"], ["por las tardes"]]
+  },
+  {
+    "id": "realizar-habitual-0",
+    "verbo": "realizar",
+    "contexto": "el equipo, semana tras semana, pruebas en el laboratorio",
+    "respuesta": "Semana tras semana, el equipo realizaba pruebas en el laboratorio.",
+    "pista": "Repeated weekly task - use imperfect",
+    "grupos": [["el equipo"], ["realizaba"], ["pruebas en el laboratorio"], ["semana tras semana"]]
+  },
+  {
+    "id": "realizar-habitual-1",
+    "verbo": "realizar",
+    "contexto": "nosotros, cuando trabajaba alli, encuestas a los clientes",
+    "respuesta": "Cuando trabajaba alli, nosotros realizabamos encuestas a los clientes.",
+    "pista": "Habitual workplace activity - use imperfect",
+    "grupos": [["nosotros"], ["realizabamos"], ["encuestas a los clientes"], ["cuando trabajaba alli"]]
+  },
+  {
+    "id": "recibir-habitual-0",
+    "verbo": "recibir",
+    "contexto": "yo, los domingos, cartas de mi amigo por correspondencia",
+    "respuesta": "Los domingos, yo recibia cartas de mi amigo por correspondencia.",
+    "pista": "Regular Sunday mail - use imperfect",
+    "grupos": [["yo"], ["recibia"], ["cartas de mi amigo por correspondencia"], ["los domingos"]]
+  },
+  {
+    "id": "recibir-habitual-1",
+    "verbo": "recibir",
+    "contexto": "nosotros, cada verano, visitas de los primos del campo",
+    "respuesta": "Cada verano, nosotros recibiamos visitas de los primos del campo.",
+    "pista": "Repeated summer visits - use imperfect",
+    "grupos": [["nosotros"], ["recibiamos"], ["visitas de los primos del campo"], ["cada verano"]]
+  },
+  {
+    "id": "recoger-habitual-0",
+    "verbo": "recoger",
+    "contexto": "mi padre, por las tardes, a los ninos del colegio",
+    "respuesta": "Por las tardes, mi padre recogia a los ninos del colegio.",
+    "pista": "Daily afternoon routine - use imperfect",
+    "grupos": [["mi padre"], ["recogia"], ["a los ninos del colegio"], ["por las tardes"]]
+  },
+  {
+    "id": "recoger-habitual-1",
+    "verbo": "recoger",
+    "contexto": "nosotros, los fines de semana, conchas en la playa",
+    "respuesta": "Los fines de semana, nosotros recogiamos conchas en la playa.",
+    "pista": "Regular weekend activity - use imperfect",
+    "grupos": [["nosotros"], ["recogiamos"], ["conchas en la playa"], ["los fines de semana"]]
+  },
+  {
+    "id": "reconocer-habitual-0",
+    "verbo": "reconocer",
+    "contexto": "yo, en aquellos tiempos, a todos los vecinos del barrio",
+    "respuesta": "En aquellos tiempos, yo reconocia a todos los vecinos del barrio.",
+    "pista": "Habitual past familiarity - use imperfect",
+    "grupos": [["yo"], ["reconocia"], ["a todos los vecinos del barrio"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "reconocer-habitual-1",
+    "verbo": "reconocer",
+    "contexto": "el profesor, con frecuencia, el esfuerzo de sus alumnos",
+    "respuesta": "El profesor reconocia el esfuerzo de sus alumnos con frecuencia.",
+    "pista": "Frequently repeated recognition - use imperfect",
+    "grupos": [["el profesor"], ["reconocia"], ["el esfuerzo de sus alumnos"], ["con frecuencia"]]
+  },
+  {
+    "id": "recordar-habitual-0",
+    "verbo": "recordar",
+    "contexto": "mi abuela, por las tardes, historias de su pueblo natal",
+    "respuesta": "Por las tardes, mi abuela recordaba historias de su pueblo natal.",
+    "pista": "Daily afternoon reminiscing - use imperfect",
+    "grupos": [["mi abuela"], ["recordaba"], ["historias de su pueblo natal"], ["por las tardes"]]
+  },
+  {
+    "id": "recordar-habitual-1",
+    "verbo": "recordar",
+    "contexto": "yo, en mis ratos libres, los veranos de mi juventud",
+    "respuesta": "En mis ratos libres, yo recordaba los veranos de mi juventud.",
+    "pista": "Habitual free-time nostalgia - use imperfect",
+    "grupos": [["yo"], ["recordaba"], ["los veranos de mi juventud"], ["en mis ratos libres"]]
+  },
+  {
+    "id": "recuperar-habitual-0",
+    "verbo": "recuperar",
+    "contexto": "el bosque, cada verano, su color verde intenso",
+    "respuesta": "Cada verano, el bosque recuperaba su color verde intenso.",
+    "pista": "Repeated seasonal recovery - use imperfect",
+    "grupos": [["el bosque"], ["recuperaba"], ["su color verde intenso"], ["cada verano"]]
+  },
+  {
+    "id": "recuperar-habitual-1",
+    "verbo": "recuperar",
+    "contexto": "yo, los fines de semana, las fuerzas despues de la semana",
+    "respuesta": "Los fines de semana, yo recuperaba las fuerzas despues de la semana.",
+    "pista": "Regular weekend recovery - use imperfect",
+    "grupos": [["yo"], ["recuperaba"], ["las fuerzas despues de la semana"], ["los fines de semana"]]
+  },
+  {
+    "id": "referir-habitual-0",
+    "verbo": "referir",
+    "contexto": "el profesor, en aquellos tiempos, a los clasicos de la literatura",
+    "respuesta": "En aquellos tiempos, el profesor referia a los clasicos de la literatura.",
+    "pista": "Habitual classroom reference - use imperfect",
+    "grupos": [["el profesor"], ["referia"], ["a los clasicos de la literatura"], ["en aquellos tiempos"]]
+  },
+  {
+    "id": "referir-habitual-1",
+    "verbo": "referir",
+    "contexto": "mi abuelo, con frecuencia, anecdotas de la guerra",
+    "respuesta": "Mi abuelo referia anecdotas de la guerra con frecuencia.",
+    "pista": "Frequently repeated storytelling - use imperfect",
+    "grupos": [["mi abuelo"], ["referia"], ["anecdotas de la guerra"], ["con frecuencia"]]
+  },
+  {
+    "id": "regresar-habitual-0",
+    "verbo": "regresar",
+    "contexto": "yo, por las tardes, a casa cansado del trabajo",
+    "respuesta": "Por las tardes, yo regresaba a casa cansado del trabajo.",
+    "pista": "Daily afternoon return - use imperfect",
+    "grupos": [["yo"], ["regresaba"], ["a casa cansado del trabajo"], ["por las tardes"]]
+  },
+  {
+    "id": "regresar-habitual-1",
+    "verbo": "regresar",
+    "contexto": "las golondrinas, cada verano, al tejado de la casa",
+    "respuesta": "Cada verano, las golondrinas regresaban al tejado de la casa.",
+    "pista": "Repeated seasonal return - use imperfect",
+    "grupos": [["las golondrinas"], ["regresaban"], ["al tejado de la casa"], ["cada verano"]]
+  },
+  {
+    "id": "reir-habitual-0",
+    "verbo": "reir",
+    "contexto": "nosotros, durante la infancia, con los chistes de mi tio",
+    "respuesta": "Durante la infancia, nosotros reiamos con los chistes de mi tio.",
+    "pista": "Childhood habitual laughter - use imperfect",
+    "grupos": [["nosotros"], ["reiamos"], ["con los chistes de mi tio"], ["durante la infancia"]]
+  },
+  {
+    "id": "reir-habitual-1",
+    "verbo": "reir",
+    "contexto": "ella, los fines de semana, hasta llorar con sus amigas",
+    "respuesta": "Los fines de semana, ella reia hasta llorar con sus amigas.",
+    "pista": "Regular weekend joy - use imperfect",
+    "grupos": [["ella"], ["reia"], ["hasta llorar con sus amigas"], ["los fines de semana"]]
+  },
+  {
+    "id": "repetir-habitual-0",
+    "verbo": "repetir",
+    "contexto": "el profesor, con frecuencia, las instrucciones a los alumnos",
+    "respuesta": "El profesor repetia las instrucciones a los alumnos con frecuencia.",
+    "pista": "Frequently repeated action - use imperfect",
+    "grupos": [["el profesor"], ["repetia"], ["las instrucciones a los alumnos"], ["con frecuencia"]]
+  },
+  {
+    "id": "repetir-habitual-1",
+    "verbo": "repetir",
+    "contexto": "mi abuela, en aquellos tiempos, los mismos consejos a todos",
+    "respuesta": "En aquellos tiempos, mi abuela repetia los mismos consejos a todos.",
+    "pista": "Habitual past repetition - use imperfect",
+    "grupos": [["mi abuela"], ["repetia"], ["los mismos consejos a todos"], ["en aquellos tiempos"]]
+  }
+]

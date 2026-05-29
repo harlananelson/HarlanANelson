@@ -1,0 +1,947 @@
+[
+  {
+    "id": "convertir-presente-0",
+    "verbo": "convertir",
+    "contexto": "yo, esta mañana, el agua en hielo",
+    "respuesta": "Yo convierto el agua en hielo esta mañana.",
+    "pista": "describing a transformation",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "convierto"
+      ],
+      [
+        "el agua en hielo"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "convertir-presente-1",
+    "verbo": "convertir",
+    "contexto": "ella, ahora, sus sueños en realidad",
+    "respuesta": "Ella convierte sus sueños en realidad ahora.",
+    "pista": "expressing ambition",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "convierte"
+      ],
+      [
+        "sus suenos en realidad"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "convertir-presente-2",
+    "verbo": "convertir",
+    "contexto": "nosotros, en este momento, la idea en un proyecto",
+    "respuesta": "Nosotros convertimos la idea en un proyecto en este momento.",
+    "pista": "describing innovation",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "convertimos"
+      ],
+      [
+        "la idea en un proyecto"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "correr-presente-0",
+    "verbo": "correr",
+    "contexto": "yo, ahora mismo, en el parque",
+    "respuesta": "Ahora mismo, yo corro en el parque.",
+    "pista": "describing exercise",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "corro"
+      ],
+      [
+        "en el parque"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "correr-presente-1",
+    "verbo": "correr",
+    "contexto": "tú, ahora mismo, muy rápido",
+    "respuesta": "Ahora mismo, tú corres muy rápido.",
+    "pista": "commenting on speed",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "corres"
+      ],
+      [
+        "muy rapido"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "correr-presente-2",
+    "verbo": "correr",
+    "contexto": "ellos, esta tarde, una maratón",
+    "respuesta": "Ellos corren una maratón esta tarde.",
+    "pista": "narrating an athletic event",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "corren"
+      ],
+      [
+        "una maraton"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "cortar-presente-0",
+    "verbo": "cortar",
+    "contexto": "yo, ahora, el pan",
+    "respuesta": "Ahora, yo corto el pan.",
+    "pista": "describing food preparation",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "corto"
+      ],
+      [
+        "el pan"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "cortar-presente-1",
+    "verbo": "cortar",
+    "contexto": "ella, en este momento, las flores",
+    "respuesta": "En este momento, ella corta las flores.",
+    "pista": "narrating a garden activity",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "corta"
+      ],
+      [
+        "las flores"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "cortar-presente-2",
+    "verbo": "cortar",
+    "contexto": "tú, mientras, el papel",
+    "respuesta": "Tú cortas el papel mientras.",
+    "pista": "describing a craft",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "cortas"
+      ],
+      [
+        "el papel"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "costar-presente-0",
+    "verbo": "costar",
+    "contexto": "eso, cada semana, mucho dinero",
+    "respuesta": "Cada semana, eso cuesta mucho dinero.",
+    "pista": "expressing price",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "cuesta"
+      ],
+      [
+        "mucho dinero"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "costar-presente-1",
+    "verbo": "costar",
+    "contexto": "los zapatos, siempre, cien dólares",
+    "respuesta": "Los zapatos cuesta cien dólares siempre.",
+    "pista": "describing a cost",
+    "grupos": [
+      [
+        "los zapatos"
+      ],
+      [
+        "cuesta"
+      ],
+      [
+        "cien dolares"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "costar-presente-2",
+    "verbo": "costar",
+    "contexto": "el viaje, actualmente, una fortuna",
+    "respuesta": "El viaje cuesta una fortuna actualmente.",
+    "pista": "talking about expenses",
+    "grupos": [
+      [
+        "el viaje"
+      ],
+      [
+        "cuesta"
+      ],
+      [
+        "una fortuna"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "crear-presente-0",
+    "verbo": "crear",
+    "contexto": "yo, en este momento, una obra de arte",
+    "respuesta": "Yo creo una obra de arte en este momento.",
+    "pista": "expressing creativity",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "creo"
+      ],
+      [
+        "una obra de arte"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "crear-presente-1",
+    "verbo": "crear",
+    "contexto": "nosotros, todos los días, un plan",
+    "respuesta": "Todos los días, nosotros creamos un plan.",
+    "pista": "describing planning",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "creamos"
+      ],
+      [
+        "un plan"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "crear-presente-2",
+    "verbo": "crear",
+    "contexto": "ella, ahora mismo, música hermosa",
+    "respuesta": "Ella crea música hermosa ahora mismo.",
+    "pista": "narrating artistic talent",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "crea"
+      ],
+      [
+        "musica hermosa"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "crecer-presente-0",
+    "verbo": "crecer",
+    "contexto": "yo, normalmente, como persona",
+    "respuesta": "Normalmente, yo crezco como persona.",
+    "pista": "expressing personal growth",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "crezco"
+      ],
+      [
+        "como persona"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "crecer-presente-1",
+    "verbo": "crecer",
+    "contexto": "los niños, cada semana, muy rápido",
+    "respuesta": "Los niños crece muy rápido cada semana.",
+    "pista": "describing child development",
+    "grupos": [
+      [
+        "los ninos"
+      ],
+      [
+        "crece"
+      ],
+      [
+        "muy rapido"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "crecer-presente-2",
+    "verbo": "crecer",
+    "contexto": "ella, ahora mismo, en su carrera",
+    "respuesta": "Ahora mismo, ella crece en su carrera.",
+    "pista": "narrating professional progress",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "crece"
+      ],
+      [
+        "en su carrera"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "creer-presente-0",
+    "verbo": "creer",
+    "contexto": "yo, esta noche, en ti",
+    "respuesta": "Esta noche, yo creo en ti.",
+    "pista": "expressing faith",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "creo"
+      ],
+      [
+        "en ti"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "creer-presente-1",
+    "verbo": "creer",
+    "contexto": "nosotros, ahora mismo, en la justicia",
+    "respuesta": "Nosotros creemos en la justicia ahora mismo.",
+    "pista": "describing shared values",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "creemos"
+      ],
+      [
+        "en la justicia"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "creer-presente-2",
+    "verbo": "creer",
+    "contexto": "tú, actualmente, en los milagros",
+    "respuesta": "Tú crees en los milagros actualmente.",
+    "pista": "talking about beliefs",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "crees"
+      ],
+      [
+        "en los milagros"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "cubrir-presente-0",
+    "verbo": "cubrir",
+    "contexto": "yo, siempre, la mesa con un mantel",
+    "respuesta": "Yo cubro la mesa con un mantel siempre.",
+    "pista": "describing a setup",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "cubro"
+      ],
+      [
+        "la mesa con un mantel"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "cubrir-presente-1",
+    "verbo": "cubrir",
+    "contexto": "ella, a veces, al bebé con una manta",
+    "respuesta": "A veces, ella cubre al bebé con una manta.",
+    "pista": "narrating care",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "cubre"
+      ],
+      [
+        "al bebe con una manta"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "cubrir-presente-2",
+    "verbo": "cubrir",
+    "contexto": "nosotros, normalmente, los gastos del viaje",
+    "respuesta": "Nosotros cubrimos los gastos del viaje normalmente.",
+    "pista": "talking about finances",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "cubrimos"
+      ],
+      [
+        "los gastos del viaje"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "cuidar-presente-0",
+    "verbo": "cuidar",
+    "contexto": "yo, todos los días, a mi abuela",
+    "respuesta": "Yo cuido a mi abuela todos los días.",
+    "pista": "expressing care for family",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "cuido"
+      ],
+      [
+        "a mi abuela"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "cuidar-presente-1",
+    "verbo": "cuidar",
+    "contexto": "tú, hoy, tu salud",
+    "respuesta": "Hoy, tú cuidas tu salud.",
+    "pista": "giving health advice",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "cuidas"
+      ],
+      [
+        "tu salud"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "cuidar-presente-2",
+    "verbo": "cuidar",
+    "contexto": "nosotros, normalmente, el medio ambiente",
+    "respuesta": "Normalmente, nosotros cuidamos el medio ambiente.",
+    "pista": "expressing environmental concern",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "cuidamos"
+      ],
+      [
+        "el medio ambiente"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "cumplir-presente-0",
+    "verbo": "cumplir",
+    "contexto": "yo, a veces, mis promesas",
+    "respuesta": "A veces, yo cumplo mis promesas.",
+    "pista": "expressing reliability",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "cumplo"
+      ],
+      [
+        "mis promesas"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "cumplir-presente-1",
+    "verbo": "cumplir",
+    "contexto": "ella, ahora, con sus obligaciones",
+    "respuesta": "Ahora, ella cumpla con sus obligaciones.",
+    "pista": "narrating responsibility",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "cumpla"
+      ],
+      [
+        "con sus obligaciones"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "cumplir-presente-2",
+    "verbo": "cumplir",
+    "contexto": "nosotros, mientras, los requisitos",
+    "respuesta": "Mientras, nosotros cumplamos los requisitos.",
+    "pista": "describing compliance",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "cumplamos"
+      ],
+      [
+        "los requisitos"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "dar-presente-0",
+    "verbo": "dar",
+    "contexto": "yo, actualmente, un consejo",
+    "respuesta": "Actualmente, yo doy un consejo.",
+    "pista": "expressing advice-giving",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "doy"
+      ],
+      [
+        "un consejo"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "dar-presente-1",
+    "verbo": "dar",
+    "contexto": "ella, siempre, un regalo a su madre",
+    "respuesta": "Ella da un regalo a su madre siempre.",
+    "pista": "describing a generous act",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "da"
+      ],
+      [
+        "un regalo a su madre"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "dar-presente-2",
+    "verbo": "dar",
+    "contexto": "nosotros, actualmente, las gracias",
+    "respuesta": "Actualmente, nosotros damos las gracias.",
+    "pista": "expressing gratitude",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "damos"
+      ],
+      [
+        "las gracias"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "deber-presente-0",
+    "verbo": "deber",
+    "contexto": "yo, esta mañana, dinero al banco",
+    "respuesta": "Esta mañana, yo debo dinero al banco.",
+    "pista": "expressing a financial obligation",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "debo"
+      ],
+      [
+        "dinero al banco"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "deber-presente-1",
+    "verbo": "deber",
+    "contexto": "tú, cada vez que, mucho a tus padres",
+    "respuesta": "Cada vez que, tú debes mucho a tus padres.",
+    "pista": "describing gratitude owed",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "debes"
+      ],
+      [
+        "mucho a tus padres"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "deber-presente-2",
+    "verbo": "deber",
+    "contexto": "nosotros, a veces, terminar el proyecto",
+    "respuesta": "A veces, nosotros debemos terminar el proyecto.",
+    "pista": "expressing obligation",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "debemos"
+      ],
+      [
+        "terminar el proyecto"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "decidir-presente-0",
+    "verbo": "decidir",
+    "contexto": "yo, esta mañana, mi futuro",
+    "respuesta": "Yo decido mi futuro esta mañana.",
+    "pista": "expressing a life choice",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "decido"
+      ],
+      [
+        "mi futuro"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "decidir-presente-1",
+    "verbo": "decidir",
+    "contexto": "nosotros, ahora, juntos",
+    "respuesta": "Ahora, nosotros decidimos juntos.",
+    "pista": "describing collective decision",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "decidimos"
+      ],
+      [
+        "juntos"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "decidir-presente-2",
+    "verbo": "decidir",
+    "contexto": "tú, cada vez que, rápidamente",
+    "respuesta": "Cada vez que, tú decides rápidamente.",
+    "pista": "commenting on decision speed",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "decides"
+      ],
+      [
+        "rapidamente"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "decir-presente-0",
+    "verbo": "decir",
+    "contexto": "yo, actualmente, la verdad",
+    "respuesta": "Yo digo la verdad actualmente.",
+    "pista": "expressing honesty",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "digo"
+      ],
+      [
+        "la verdad"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "decir-presente-1",
+    "verbo": "decir",
+    "contexto": "tú, normalmente, cosas interesantes",
+    "respuesta": "Tú dices cosas interesantes normalmente.",
+    "pista": "describing someone's speech",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "dices"
+      ],
+      [
+        "cosas interesantes"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "decir-presente-2",
+    "verbo": "decir",
+    "contexto": "ellos, mientras, muchas mentiras",
+    "respuesta": "Ellos dicen muchas mentiras mientras.",
+    "pista": "narrating dishonesty",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "dicen"
+      ],
+      [
+        "muchas mentiras"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "defender-presente-0",
+    "verbo": "defender",
+    "contexto": "yo, cada semana, mis derechos",
+    "respuesta": "Yo defiendo mis derechos cada semana.",
+    "pista": "expressing self-advocacy",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "defiendo"
+      ],
+      [
+        "mis derechos"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "defender-presente-1",
+    "verbo": "defender",
+    "contexto": "ella, por lo general, a su familia",
+    "respuesta": "Ella defiende a su familia por lo general.",
+    "pista": "narrating protection",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "defiende"
+      ],
+      [
+        "a su familia"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "defender-presente-2",
+    "verbo": "defender",
+    "contexto": "nosotros, cada vez que, nuestra posición",
+    "respuesta": "Nosotros defendemos nuestra posición cada vez que.",
+    "pista": "expressing team stance",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "defendemos"
+      ],
+      [
+        "nuestra posicion"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  }
+]

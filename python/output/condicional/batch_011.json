@@ -1,0 +1,884 @@
+[
+  {
+    "id": "necesitar-condicional-0",
+    "verbo": "necesitar",
+    "contexto": "yo, en tu lugar, más tiempo",
+    "respuesta": "yo necesitaría más tiempo en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "necesitaria"
+      ],
+      [
+        "mas tiempo"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "necesitar-condicional-1",
+    "verbo": "necesitar",
+    "contexto": "ella, en esa situación, más tiempo",
+    "respuesta": "ella necesitaría más tiempo en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "necesitaria"
+      ],
+      [
+        "mas tiempo"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "necesitar-condicional-2",
+    "verbo": "necesitar",
+    "contexto": "ellos, en un mundo ideal, más tiempo",
+    "respuesta": "ellos necesitarían más tiempo en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "necesitarian"
+      ],
+      [
+        "mas tiempo"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "negar-condicional-0",
+    "verbo": "negar",
+    "contexto": "tú, si pudieras, la entrada",
+    "respuesta": "tú negarías la entrada si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "negarias"
+      ],
+      [
+        "la entrada"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "negar-condicional-1",
+    "verbo": "negar",
+    "contexto": "nosotros, si fuera posible, la entrada",
+    "respuesta": "nosotros negaríamos la entrada si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "negariamos"
+      ],
+      [
+        "la entrada"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "negar-condicional-2",
+    "verbo": "negar",
+    "contexto": "ustedes, de ser posible, la entrada",
+    "respuesta": "ustedes negarían la entrada de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "negarian"
+      ],
+      [
+        "la entrada"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "observar-condicional-0",
+    "verbo": "observar",
+    "contexto": "él, con más tiempo, la naturaleza",
+    "respuesta": "él observaría la naturaleza con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "observaria"
+      ],
+      [
+        "la naturaleza"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "observar-condicional-1",
+    "verbo": "observar",
+    "contexto": "usted, con más dinero, la naturaleza",
+    "respuesta": "usted observaría la naturaleza con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "observaria"
+      ],
+      [
+        "la naturaleza"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "observar-condicional-2",
+    "verbo": "observar",
+    "contexto": "yo, con más experiencia, la naturaleza",
+    "respuesta": "yo observaría la naturaleza con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "observaria"
+      ],
+      [
+        "la naturaleza"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "obtener-condicional-0",
+    "verbo": "obtener",
+    "contexto": "yo, en tu lugar, de otra manera",
+    "respuesta": "yo obtendría de otra manera en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "obtendria"
+      ],
+      [
+        "de otra manera"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "obtener-condicional-1",
+    "verbo": "obtener",
+    "contexto": "ella, en esa situación, lo necesario",
+    "respuesta": "ella obtendría lo necesario en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "obtendria"
+      ],
+      [
+        "lo necesario"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "obtener-condicional-2",
+    "verbo": "obtener",
+    "contexto": "ellos, en un mundo ideal, sin preocupaciones",
+    "respuesta": "ellos obtendrían sin preocupaciones en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "obtendrian"
+      ],
+      [
+        "sin preocupaciones"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "ocupar-condicional-0",
+    "verbo": "ocupar",
+    "contexto": "tú, si pudieras, más espacio",
+    "respuesta": "tú ocuparías más espacio si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "ocuparias"
+      ],
+      [
+        "mas espacio"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "ocupar-condicional-1",
+    "verbo": "ocupar",
+    "contexto": "nosotros, si fuera posible, más espacio",
+    "respuesta": "nosotros ocuparíamos más espacio si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "ocupariamos"
+      ],
+      [
+        "mas espacio"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "ocupar-condicional-2",
+    "verbo": "ocupar",
+    "contexto": "ustedes, de ser posible, más espacio",
+    "respuesta": "ustedes ocuparían más espacio de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "ocuparian"
+      ],
+      [
+        "mas espacio"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "ocurrir-condicional-0",
+    "verbo": "ocurrir",
+    "contexto": "él, con más tiempo, algo diferente",
+    "respuesta": "él ocurriría algo diferente con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "ocurriria"
+      ],
+      [
+        "algo diferente"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "ocurrir-condicional-1",
+    "verbo": "ocurrir",
+    "contexto": "usted, con más dinero, algo diferente",
+    "respuesta": "usted ocurriría algo diferente con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "ocurriria"
+      ],
+      [
+        "algo diferente"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "ocurrir-condicional-2",
+    "verbo": "ocurrir",
+    "contexto": "yo, con más experiencia, algo diferente",
+    "respuesta": "yo ocurriría algo diferente con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "ocurriria"
+      ],
+      [
+        "algo diferente"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "odiar-condicional-0",
+    "verbo": "odiar",
+    "contexto": "yo, en tu lugar, menos cosas",
+    "respuesta": "yo odiaría menos cosas en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "odiaria"
+      ],
+      [
+        "menos cosas"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "odiar-condicional-1",
+    "verbo": "odiar",
+    "contexto": "ella, en esa situación, menos cosas",
+    "respuesta": "ella odiaría menos cosas en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "odiaria"
+      ],
+      [
+        "menos cosas"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "odiar-condicional-2",
+    "verbo": "odiar",
+    "contexto": "ellos, en un mundo ideal, menos cosas",
+    "respuesta": "ellos odiarían menos cosas en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "odiarian"
+      ],
+      [
+        "menos cosas"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "ofrecer-condicional-0",
+    "verbo": "ofrecer",
+    "contexto": "tú, si pudieras, algo mejor",
+    "respuesta": "tú ofrecerías algo mejor si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "ofrecerias"
+      ],
+      [
+        "algo mejor"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "ofrecer-condicional-1",
+    "verbo": "ofrecer",
+    "contexto": "nosotros, si fuera posible, algo mejor",
+    "respuesta": "nosotros ofreceríamos algo mejor si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "ofreceriamos"
+      ],
+      [
+        "algo mejor"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "ofrecer-condicional-2",
+    "verbo": "ofrecer",
+    "contexto": "ustedes, de ser posible, algo mejor",
+    "respuesta": "ustedes ofrecerían algo mejor de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "ofrecerian"
+      ],
+      [
+        "algo mejor"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "oír-condicional-0",
+    "verbo": "oír",
+    "contexto": "él, con más tiempo, algo nuevo",
+    "respuesta": "él oíría algo nuevo con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "oiria"
+      ],
+      [
+        "algo nuevo"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "oír-condicional-1",
+    "verbo": "oír",
+    "contexto": "usted, con más dinero, con más comodidad",
+    "respuesta": "usted oíría con más comodidad con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "oiria"
+      ],
+      [
+        "con mas comodidad"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "oír-condicional-2",
+    "verbo": "oír",
+    "contexto": "yo, con más experiencia, sin tantas dudas",
+    "respuesta": "yo oíría sin tantas dudas con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "oiria"
+      ],
+      [
+        "sin tantas dudas"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "olvidar-condicional-0",
+    "verbo": "olvidar",
+    "contexto": "yo, en tu lugar, los problemas",
+    "respuesta": "yo olvidaría los problemas en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "olvidaria"
+      ],
+      [
+        "los problemas"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "olvidar-condicional-1",
+    "verbo": "olvidar",
+    "contexto": "ella, en esa situación, los problemas",
+    "respuesta": "ella olvidaría los problemas en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "olvidaria"
+      ],
+      [
+        "los problemas"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "olvidar-condicional-2",
+    "verbo": "olvidar",
+    "contexto": "ellos, en un mundo ideal, los problemas",
+    "respuesta": "ellos olvidarían los problemas en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "olvidarian"
+      ],
+      [
+        "los problemas"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "pagar-condicional-0",
+    "verbo": "pagar",
+    "contexto": "tú, si pudieras, la cuenta",
+    "respuesta": "tú pagarías la cuenta si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "pagarias"
+      ],
+      [
+        "la cuenta"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "pagar-condicional-1",
+    "verbo": "pagar",
+    "contexto": "nosotros, si fuera posible, la cuenta",
+    "respuesta": "nosotros pagaríamos la cuenta si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "pagariamos"
+      ],
+      [
+        "la cuenta"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "pagar-condicional-2",
+    "verbo": "pagar",
+    "contexto": "ustedes, de ser posible, la cuenta",
+    "respuesta": "ustedes pagarían la cuenta de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "pagarian"
+      ],
+      [
+        "la cuenta"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  },
+  {
+    "id": "parar-condicional-0",
+    "verbo": "parar",
+    "contexto": "él, con más tiempo, de preocuparme",
+    "respuesta": "él pararía de preocuparme con más tiempo.",
+    "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "pararia"
+      ],
+      [
+        "de preocuparme"
+      ],
+      [
+        "con mas tiempo"
+      ]
+    ]
+  },
+  {
+    "id": "parar-condicional-1",
+    "verbo": "parar",
+    "contexto": "usted, con más dinero, de preocuparme",
+    "respuesta": "usted pararía de preocuparme con más dinero.",
+    "pista": "Habla de lo que haría alguien con más recursos.",
+    "grupos": [
+      [
+        "usted"
+      ],
+      [
+        "pararia"
+      ],
+      [
+        "de preocuparme"
+      ],
+      [
+        "con mas dinero"
+      ]
+    ]
+  },
+  {
+    "id": "parar-condicional-2",
+    "verbo": "parar",
+    "contexto": "yo, con más experiencia, de preocuparme",
+    "respuesta": "yo pararía de preocuparme con más experiencia.",
+    "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "pararia"
+      ],
+      [
+        "de preocuparme"
+      ],
+      [
+        "con mas experiencia"
+      ]
+    ]
+  },
+  {
+    "id": "parecer-condicional-0",
+    "verbo": "parecer",
+    "contexto": "yo, en tu lugar, más joven",
+    "respuesta": "yo parecería más joven en tu lugar.",
+    "pista": "Expresa lo que harías en la situación de otra persona.",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "pareceria"
+      ],
+      [
+        "mas joven"
+      ],
+      [
+        "en tu lugar"
+      ]
+    ]
+  },
+  {
+    "id": "parecer-condicional-1",
+    "verbo": "parecer",
+    "contexto": "ella, en esa situación, más joven",
+    "respuesta": "ella parecería más joven en esa situación.",
+    "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "pareceria"
+      ],
+      [
+        "mas joven"
+      ],
+      [
+        "en esa situacion"
+      ]
+    ]
+  },
+  {
+    "id": "parecer-condicional-2",
+    "verbo": "parecer",
+    "contexto": "ellos, en un mundo ideal, más joven",
+    "respuesta": "ellos parecerían más joven en un mundo ideal.",
+    "pista": "Describe una situación ideal e imaginaria.",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "parecerian"
+      ],
+      [
+        "mas joven"
+      ],
+      [
+        "en un mundo ideal"
+      ]
+    ]
+  },
+  {
+    "id": "partir-condicional-0",
+    "verbo": "partir",
+    "contexto": "tú, si pudieras, hacia el norte",
+    "respuesta": "tú partirías hacia el norte si pudieras.",
+    "pista": "Expresa una acción hipotética que depende de una condición.",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "partirias"
+      ],
+      [
+        "hacia el norte"
+      ],
+      [
+        "si pudieras"
+      ]
+    ]
+  },
+  {
+    "id": "partir-condicional-1",
+    "verbo": "partir",
+    "contexto": "nosotros, si fuera posible, hacia el norte",
+    "respuesta": "nosotros partiríamos hacia el norte si fuera posible.",
+    "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "partiriamos"
+      ],
+      [
+        "hacia el norte"
+      ],
+      [
+        "si fuera posible"
+      ]
+    ]
+  },
+  {
+    "id": "partir-condicional-2",
+    "verbo": "partir",
+    "contexto": "ustedes, de ser posible, hacia el norte",
+    "respuesta": "ustedes partirían hacia el norte de ser posible.",
+    "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+    "grupos": [
+      [
+        "ustedes"
+      ],
+      [
+        "partirian"
+      ],
+      [
+        "hacia el norte"
+      ],
+      [
+        "de ser posible"
+      ]
+    ]
+  }
+]

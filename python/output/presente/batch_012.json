@@ -1,0 +1,884 @@
+[
+  {
+    "id": "pasar-presente-0",
+    "verbo": "pasar",
+    "contexto": "yo, ahora mismo, por tu casa",
+    "respuesta": "Ahora mismo, yo paso por tu casa.",
+    "pista": "describing a visit",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "paso"
+      ],
+      [
+        "por tu casa"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "pasar-presente-1",
+    "verbo": "pasar",
+    "contexto": "tú, mientras, mucho tiempo en el teléfono",
+    "respuesta": "Mientras, tú pasas mucho tiempo en el teléfono.",
+    "pista": "commenting on phone usage",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "pasas"
+      ],
+      [
+        "mucho tiempo en el telefono"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "pasar-presente-2",
+    "verbo": "pasar",
+    "contexto": "nosotros, siempre, las vacaciones en la playa",
+    "respuesta": "Nosotros pasamos las vacaciones en la playa siempre.",
+    "pista": "describing holiday plans",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "pasamos"
+      ],
+      [
+        "las vacaciones en la playa"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "pedir-presente-0",
+    "verbo": "pedir",
+    "contexto": "yo, ahora mismo, un café",
+    "respuesta": "Ahora mismo, yo pido un café.",
+    "pista": "describing an order",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "pido"
+      ],
+      [
+        "un cafe"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "pedir-presente-1",
+    "verbo": "pedir",
+    "contexto": "tú, ahora, ayuda cuando la necesitas",
+    "respuesta": "Tú pides ayuda cuando la necesitas ahora.",
+    "pista": "giving advice about asking",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "pides"
+      ],
+      [
+        "ayuda cuando la necesitas"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "pedir-presente-2",
+    "verbo": "pedir",
+    "contexto": "nosotros, por lo general, una pizza para cenar",
+    "respuesta": "Nosotros pedimos una pizza para cenar por lo general.",
+    "pista": "describing a dinner order",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "pedimos"
+      ],
+      [
+        "una pizza para cenar"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "pegar-presente-0",
+    "verbo": "pegar",
+    "contexto": "yo, normalmente, el cartel en la pared",
+    "respuesta": "Yo pego el cartel en la pared normalmente.",
+    "pista": "describing attachment",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "pego"
+      ],
+      [
+        "el cartel en la pared"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "pegar-presente-1",
+    "verbo": "pegar",
+    "contexto": "ella, siempre, los sellos en el sobre",
+    "respuesta": "Ella pega los sellos en el sobre siempre.",
+    "pista": "narrating mail preparation",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "pega"
+      ],
+      [
+        "los sellos en el sobre"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "pegar-presente-2",
+    "verbo": "pegar",
+    "contexto": "tú, hoy, las piezas con pegamento",
+    "respuesta": "Hoy, tú pegas las piezas con pegamento.",
+    "pista": "describing crafting",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "pegas"
+      ],
+      [
+        "las piezas con pegamento"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "pelear-presente-0",
+    "verbo": "pelear",
+    "contexto": "ellos, esta noche, por el primer lugar",
+    "respuesta": "Esta noche, ellos pelean por el primer lugar.",
+    "pista": "describing competition",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "pelean"
+      ],
+      [
+        "por el primer lugar"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "pelear-presente-1",
+    "verbo": "pelear",
+    "contexto": "yo, ahora, por mis derechos",
+    "respuesta": "Yo peleo por mis derechos ahora.",
+    "pista": "expressing advocacy",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "peleo"
+      ],
+      [
+        "por mis derechos"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "pelear-presente-2",
+    "verbo": "pelear",
+    "contexto": "nosotros, cada semana, contra la corrupción",
+    "respuesta": "Nosotros peleamos contra la corrupción cada semana.",
+    "pista": "narrating a cause",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "peleamos"
+      ],
+      [
+        "contra la corrupcion"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "pensar-presente-0",
+    "verbo": "pensar",
+    "contexto": "yo, en este momento, en mi familia",
+    "respuesta": "Yo pienso en mi familia en este momento.",
+    "pista": "expressing thoughts",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "pienso"
+      ],
+      [
+        "en mi familia"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "pensar-presente-1",
+    "verbo": "pensar",
+    "contexto": "tú, ahora mismo, demasiado",
+    "respuesta": "Tú piensas demasiado ahora mismo.",
+    "pista": "commenting on overthinking",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "piensas"
+      ],
+      [
+        "demasiado"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "pensar-presente-2",
+    "verbo": "pensar",
+    "contexto": "nosotros, hoy, en el futuro",
+    "respuesta": "Hoy, nosotros pensamos en el futuro.",
+    "pista": "describing planning",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "pensamos"
+      ],
+      [
+        "en el futuro"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "perder-presente-0",
+    "verbo": "perder",
+    "contexto": "yo, por lo general, las llaves con frecuencia",
+    "respuesta": "Por lo general, yo pierdo las llaves con frecuencia.",
+    "pista": "expressing a recurring problem",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "pierdo"
+      ],
+      [
+        "las llaves con frecuencia"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "perder-presente-1",
+    "verbo": "perder",
+    "contexto": "tú, ahora mismo, la paciencia",
+    "respuesta": "Ahora mismo, tú pierdes la paciencia.",
+    "pista": "describing frustration",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "pierdes"
+      ],
+      [
+        "la paciencia"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "perder-presente-2",
+    "verbo": "perder",
+    "contexto": "nosotros, ahora mismo, el tiempo con discusiones",
+    "respuesta": "Nosotros perdemos el tiempo con discusiones ahora mismo.",
+    "pista": "expressing wasted time",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "perdemos"
+      ],
+      [
+        "el tiempo con discusiones"
+      ],
+      [
+        "ahora mismo"
+      ]
+    ]
+  },
+  {
+    "id": "perdonar-presente-0",
+    "verbo": "perdonar",
+    "contexto": "yo, en este momento, a mi amigo",
+    "respuesta": "En este momento, yo perdono a mi amigo.",
+    "pista": "expressing forgiveness",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "perdono"
+      ],
+      [
+        "a mi amigo"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "perdonar-presente-1",
+    "verbo": "perdonar",
+    "contexto": "ella, esta noche, los errores de los demás",
+    "respuesta": "Ella perdona los errores de los demás esta noche.",
+    "pista": "narrating compassion",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "perdona"
+      ],
+      [
+        "los errores de los demas"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "perdonar-presente-2",
+    "verbo": "perdonar",
+    "contexto": "nosotros, normalmente, con facilidad",
+    "respuesta": "Nosotros perdonamos con facilidad normalmente.",
+    "pista": "describing a character trait",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "perdonamos"
+      ],
+      [
+        "con facilidad"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "permanecer-presente-0",
+    "verbo": "permanecer",
+    "contexto": "yo, mientras, en silencio",
+    "respuesta": "Yo permanezco en silencio mientras.",
+    "pista": "expressing restraint",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "permanezco"
+      ],
+      [
+        "en silencio"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "permanecer-presente-1",
+    "verbo": "permanecer",
+    "contexto": "ella, ahora, en su puesto",
+    "respuesta": "Ahora, ella permanece en su puesto.",
+    "pista": "narrating dedication",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "permanece"
+      ],
+      [
+        "en su puesto"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "permanecer-presente-2",
+    "verbo": "permanecer",
+    "contexto": "nosotros, hoy, unidos",
+    "respuesta": "Hoy, nosotros permanecemos unidos.",
+    "pista": "expressing solidarity",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "permanecemos"
+      ],
+      [
+        "unidos"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "permitir-presente-0",
+    "verbo": "permitir",
+    "contexto": "yo, siempre, la entrada a todos",
+    "respuesta": "Yo permito la entrada a todos siempre.",
+    "pista": "expressing openness",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "permito"
+      ],
+      [
+        "la entrada a todos"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "permitir-presente-1",
+    "verbo": "permitir",
+    "contexto": "ella, a veces, las visitas los domingos",
+    "respuesta": "A veces, ella permite las visitas los domingos.",
+    "pista": "describing a policy",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "permite"
+      ],
+      [
+        "las visitas los domingos"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "permitir-presente-2",
+    "verbo": "permitir",
+    "contexto": "nosotros, cada semana, los cambios necesarios",
+    "respuesta": "Nosotros permitimos los cambios necesarios cada semana.",
+    "pista": "expressing flexibility",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "permitimos"
+      ],
+      [
+        "los cambios necesarios"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "pertenecer-presente-0",
+    "verbo": "pertenecer",
+    "contexto": "yo, normalmente, a este grupo",
+    "respuesta": "Yo pertenezco a este grupo normalmente.",
+    "pista": "expressing membership",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "pertenezco"
+      ],
+      [
+        "a este grupo"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "pertenecer-presente-1",
+    "verbo": "pertenecer",
+    "contexto": "eso, en este momento, a mi abuelo",
+    "respuesta": "Eso pertenece a mi abuelo en este momento.",
+    "pista": "describing ownership",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "pertenece"
+      ],
+      [
+        "a mi abuelo"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "pertenecer-presente-2",
+    "verbo": "pertenecer",
+    "contexto": "nosotros, por lo general, a la misma organización",
+    "respuesta": "Por lo general, nosotros pertenecemos a la misma organización.",
+    "pista": "expressing shared affiliation",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "pertenecemos"
+      ],
+      [
+        "a la misma organizacion"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "pesar-presente-0",
+    "verbo": "pesar",
+    "contexto": "yo, mientras, los ingredientes antes de cocinar",
+    "respuesta": "Yo peso los ingredientes antes de cocinar mientras.",
+    "pista": "describing measurement",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "peso"
+      ],
+      [
+        "los ingredientes antes de cocinar"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "pesar-presente-1",
+    "verbo": "pesar",
+    "contexto": "ella, en este momento, las frutas en la balanza",
+    "respuesta": "En este momento, ella pesa las frutas en la balanza.",
+    "pista": "narrating market shopping",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "pesa"
+      ],
+      [
+        "las frutas en la balanza"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "pesar-presente-2",
+    "verbo": "pesar",
+    "contexto": "tú, esta mañana, el equipaje antes de viajar",
+    "respuesta": "Tú pesas el equipaje antes de viajar esta mañana.",
+    "pista": "describing travel preparation",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "pesas"
+      ],
+      [
+        "el equipaje antes de viajar"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "poder-presente-0",
+    "verbo": "poder",
+    "contexto": "yo, esta tarde, resolver el problema",
+    "respuesta": "Esta tarde, yo puedo resolver el problema.",
+    "pista": "expressing ability",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "puedo"
+      ],
+      [
+        "resolver el problema"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "poder-presente-1",
+    "verbo": "poder",
+    "contexto": "tú, en este momento, hablar español",
+    "respuesta": "Tú puedes hablar español en este momento.",
+    "pista": "describing language skills",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "puedes"
+      ],
+      [
+        "hablar espanol"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "poder-presente-2",
+    "verbo": "poder",
+    "contexto": "nosotros, hoy, terminar a tiempo",
+    "respuesta": "Nosotros podemos terminar a tiempo hoy.",
+    "pista": "expressing team capability",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "podemos"
+      ],
+      [
+        "terminar a tiempo"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "poner-presente-0",
+    "verbo": "poner",
+    "contexto": "yo, todos los días, la mesa para la cena",
+    "respuesta": "Yo pongo la mesa para la cena todos los días.",
+    "pista": "describing dinner preparation",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "pongo"
+      ],
+      [
+        "la mesa para la cena"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "poner-presente-1",
+    "verbo": "poner",
+    "contexto": "tú, por lo general, atención en clase",
+    "respuesta": "Por lo general, tú pones atención en clase.",
+    "pista": "giving advice about focus",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "pones"
+      ],
+      [
+        "atencion en clase"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "poner-presente-2",
+    "verbo": "poner",
+    "contexto": "ella, cada semana, música para relajarse",
+    "respuesta": "Ella pone música para relajarse cada semana.",
+    "pista": "narrating a relaxation method",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "pone"
+      ],
+      [
+        "musica para relajarse"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "preferir-presente-0",
+    "verbo": "preferir",
+    "contexto": "yo, ahora, el café al té",
+    "respuesta": "Yo prefiero el café al té ahora.",
+    "pista": "expressing preference",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "prefiero"
+      ],
+      [
+        "el cafe al te"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "preferir-presente-1",
+    "verbo": "preferir",
+    "contexto": "nosotros, siempre, caminar en vez de conducir",
+    "respuesta": "Nosotros preferimos caminar en vez de conducir siempre.",
+    "pista": "describing lifestyle choice",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "preferimos"
+      ],
+      [
+        "caminar en vez de conducir"
+      ],
+      [
+        "siempre"
+      ]
+    ]
+  },
+  {
+    "id": "preferir-presente-2",
+    "verbo": "preferir",
+    "contexto": "tú, cada vez que, la comida casera",
+    "respuesta": "Tú prefieres la comida casera cada vez que.",
+    "pista": "talking about food preferences",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "prefieres"
+      ],
+      [
+        "la comida casera"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  }
+]

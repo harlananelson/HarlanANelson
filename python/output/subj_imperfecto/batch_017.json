@@ -1,0 +1,662 @@
+[
+  {
+    "id": "usar-subj_imperfecto-0",
+    "verbo": "usar",
+    "contexto": "si, yo, la tecnologia",
+    "respuesta": "si yo usara la tecnologia",
+    "pista": "hypothetical si clause uses imperfect subjunctive",
+    "grupos": [
+      [
+        "si"
+      ],
+      [
+        "usara",
+        "usase"
+      ],
+      [
+        "yo"
+      ],
+      [
+        "la tecnologia"
+      ]
+    ]
+  },
+  {
+    "id": "usar-subj_imperfecto-1",
+    "verbo": "usar",
+    "contexto": "ojala, tu, otro metodo",
+    "respuesta": "ojala tu usaras otro metodo",
+    "pista": "ojala expresses a wish and triggers subjunctive",
+    "grupos": [
+      [
+        "ojala"
+      ],
+      [
+        "usaras",
+        "usases"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "otro metodo"
+      ]
+    ]
+  },
+  {
+    "id": "usar-subj_imperfecto-2",
+    "verbo": "usar",
+    "contexto": "quisiera que, el, con cuidado",
+    "respuesta": "quisiera que el usara con cuidado",
+    "pista": "quisiera que expresses a desire triggering subjunctive",
+    "grupos": [
+      [
+        "quisiera que"
+      ],
+      [
+        "usara",
+        "usase"
+      ],
+      [
+        "el"
+      ],
+      [
+        "con cuidado"
+      ]
+    ]
+  },
+  {
+    "id": "utilizar-subj_imperfecto-0",
+    "verbo": "utilizar",
+    "contexto": "era necesario que, ella, los recursos",
+    "respuesta": "era necesario que ella utilizara los recursos",
+    "pista": "impersonal expressions of necessity trigger subjunctive",
+    "grupos": [
+      [
+        "era necesario que"
+      ],
+      [
+        "utilizara",
+        "utilizase"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "los recursos"
+      ]
+    ]
+  },
+  {
+    "id": "utilizar-subj_imperfecto-1",
+    "verbo": "utilizar",
+    "contexto": "no creia que, nosotros, otra estrategia",
+    "respuesta": "no creia que nosotros utilizaramos otra estrategia",
+    "pista": "negated belief triggers subjunctive in the past",
+    "grupos": [
+      [
+        "no creia que"
+      ],
+      [
+        "utilizaramos",
+        "utilizasemos"
+      ],
+      [
+        "nosotros"
+      ],
+      [
+        "otra estrategia"
+      ]
+    ]
+  },
+  {
+    "id": "utilizar-subj_imperfecto-2",
+    "verbo": "utilizar",
+    "contexto": "dudaba que, ellos, la herramienta",
+    "respuesta": "dudaba que ellos utilizaran la herramienta",
+    "pista": "doubt in the past triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "dudaba que"
+      ],
+      [
+        "utilizaran",
+        "utilizasen"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "la herramienta"
+      ]
+    ]
+  },
+  {
+    "id": "valer-subj_imperfecto-0",
+    "verbo": "valer",
+    "contexto": "esperaba que, ellas, la pena",
+    "respuesta": "esperaba que ellas valieran la pena",
+    "pista": "esperaba que expresses past hope triggering subjunctive",
+    "grupos": [
+      [
+        "esperaba que"
+      ],
+      [
+        "valieran",
+        "valiesen"
+      ],
+      [
+        "ellas"
+      ],
+      [
+        "la pena"
+      ]
+    ]
+  },
+  {
+    "id": "valer-subj_imperfecto-1",
+    "verbo": "valer",
+    "contexto": "como si, usted, mucho dinero",
+    "respuesta": "como si usted valiera mucho dinero",
+    "pista": "como si always requires imperfect subjunctive",
+    "grupos": [
+      [
+        "como si"
+      ],
+      [
+        "valiera",
+        "valiese"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "mucho dinero"
+      ]
+    ]
+  },
+  {
+    "id": "valer-subj_imperfecto-2",
+    "verbo": "valer",
+    "contexto": "antes de que, ustedes, para algo",
+    "respuesta": "antes de que ustedes valieran para algo",
+    "pista": "antes de que always triggers subjunctive",
+    "grupos": [
+      [
+        "antes de que"
+      ],
+      [
+        "valieran",
+        "valiesen"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "para algo"
+      ]
+    ]
+  },
+  {
+    "id": "vender-subj_imperfecto-0",
+    "verbo": "vender",
+    "contexto": "para que, maria, la casa",
+    "respuesta": "para que maria vendiera la casa",
+    "pista": "para que expresses purpose and triggers subjunctive",
+    "grupos": [
+      [
+        "para que"
+      ],
+      [
+        "vendiera",
+        "vendiese"
+      ],
+      [
+        "maria"
+      ],
+      [
+        "la casa"
+      ]
+    ]
+  },
+  {
+    "id": "vender-subj_imperfecto-1",
+    "verbo": "vender",
+    "contexto": "aunque, carlos, el coche",
+    "respuesta": "aunque carlos vendiera el coche",
+    "pista": "aunque with uncertainty triggers subjunctive",
+    "grupos": [
+      [
+        "aunque"
+      ],
+      [
+        "vendiera",
+        "vendiese"
+      ],
+      [
+        "carlos"
+      ],
+      [
+        "el coche"
+      ]
+    ]
+  },
+  {
+    "id": "vender-subj_imperfecto-2",
+    "verbo": "vender",
+    "contexto": "no pensaba que, los ninos, los productos",
+    "respuesta": "no pensaba que los ninos vendieran los productos",
+    "pista": "negated thought triggers subjunctive in the past",
+    "grupos": [
+      [
+        "no pensaba que"
+      ],
+      [
+        "vendieran",
+        "vendiesen"
+      ],
+      [
+        "los ninos"
+      ],
+      [
+        "los productos"
+      ]
+    ]
+  },
+  {
+    "id": "venir-subj_imperfecto-0",
+    "verbo": "venir",
+    "contexto": "me gustaria que, mi hermano, a la fiesta",
+    "respuesta": "me gustaria que mi hermano viniera a la fiesta",
+    "pista": "conditional desire triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "me gustaria que"
+      ],
+      [
+        "viniera",
+        "viniese"
+      ],
+      [
+        "mi hermano"
+      ],
+      [
+        "a la fiesta"
+      ]
+    ]
+  },
+  {
+    "id": "venir-subj_imperfecto-1",
+    "verbo": "venir",
+    "contexto": "seria bueno que, mi madre, con nosotros",
+    "respuesta": "seria bueno que mi madre viniera con nosotros",
+    "pista": "impersonal conditional triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "seria bueno que"
+      ],
+      [
+        "viniera",
+        "viniese"
+      ],
+      [
+        "mi madre"
+      ],
+      [
+        "con nosotros"
+      ]
+    ]
+  },
+  {
+    "id": "venir-subj_imperfecto-2",
+    "verbo": "venir",
+    "contexto": "no era cierto que, la gente, temprano",
+    "respuesta": "no era cierto que la gente viniera temprano",
+    "pista": "negating certainty in the past triggers subjunctive",
+    "grupos": [
+      [
+        "no era cierto que"
+      ],
+      [
+        "viniera",
+        "viniese"
+      ],
+      [
+        "la gente"
+      ],
+      [
+        "temprano"
+      ]
+    ]
+  },
+  {
+    "id": "ver-subj_imperfecto-0",
+    "verbo": "ver",
+    "contexto": "queria que, yo, la pelicula",
+    "respuesta": "queria que yo viera la pelicula",
+    "pista": "past desire triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "queria que"
+      ],
+      [
+        "viera",
+        "viese"
+      ],
+      [
+        "yo"
+      ],
+      [
+        "la pelicula"
+      ]
+    ]
+  },
+  {
+    "id": "ver-subj_imperfecto-1",
+    "verbo": "ver",
+    "contexto": "le pedi que, tu, el resultado",
+    "respuesta": "le pedi que tu vieras el resultado",
+    "pista": "past request triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "le pedi que"
+      ],
+      [
+        "vieras",
+        "vieses"
+      ],
+      [
+        "tu"
+      ],
+      [
+        "el resultado"
+      ]
+    ]
+  },
+  {
+    "id": "ver-subj_imperfecto-2",
+    "verbo": "ver",
+    "contexto": "sin que, el, la verdad",
+    "respuesta": "sin que el viera la verdad",
+    "pista": "sin que always triggers subjunctive",
+    "grupos": [
+      [
+        "sin que"
+      ],
+      [
+        "viera",
+        "viese"
+      ],
+      [
+        "el"
+      ],
+      [
+        "la verdad"
+      ]
+    ]
+  },
+  {
+    "id": "viajar-subj_imperfecto-0",
+    "verbo": "viajar",
+    "contexto": "era importante que, ella, por el mundo",
+    "respuesta": "era importante que ella viajara por el mundo",
+    "pista": "impersonal importance triggers subjunctive",
+    "grupos": [
+      [
+        "era importante que"
+      ],
+      [
+        "viajara",
+        "viajase"
+      ],
+      [
+        "ella"
+      ],
+      [
+        "por el mundo"
+      ]
+    ]
+  },
+  {
+    "id": "viajar-subj_imperfecto-1",
+    "verbo": "viajar",
+    "contexto": "no habia nadie que, nosotros, a europa",
+    "respuesta": "no habia nadie que nosotros viajaramos a europa",
+    "pista": "negative antecedent triggers subjunctive",
+    "grupos": [
+      [
+        "no habia nadie que"
+      ],
+      [
+        "viajaramos",
+        "viajasemos"
+      ],
+      [
+        "nosotros"
+      ],
+      [
+        "a europa"
+      ]
+    ]
+  },
+  {
+    "id": "viajar-subj_imperfecto-2",
+    "verbo": "viajar",
+    "contexto": "era posible que, ellos, con la familia",
+    "respuesta": "era posible que ellos viajaran con la familia",
+    "pista": "possibility in the past triggers subjunctive",
+    "grupos": [
+      [
+        "era posible que"
+      ],
+      [
+        "viajaran",
+        "viajasen"
+      ],
+      [
+        "ellos"
+      ],
+      [
+        "con la familia"
+      ]
+    ]
+  },
+  {
+    "id": "vivir-subj_imperfecto-0",
+    "verbo": "vivir",
+    "contexto": "necesitaba que, ellas, en paz",
+    "respuesta": "necesitaba que ellas vivieran en paz",
+    "pista": "past need triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "necesitaba que"
+      ],
+      [
+        "vivieran",
+        "viviesen"
+      ],
+      [
+        "ellas"
+      ],
+      [
+        "en paz"
+      ]
+    ]
+  },
+  {
+    "id": "vivir-subj_imperfecto-1",
+    "verbo": "vivir",
+    "contexto": "preferia que, usted, en otra ciudad",
+    "respuesta": "preferia que usted viviera en otra ciudad",
+    "pista": "past preference triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "preferia que"
+      ],
+      [
+        "viviera",
+        "viviese"
+      ],
+      [
+        "usted"
+      ],
+      [
+        "en otra ciudad"
+      ]
+    ]
+  },
+  {
+    "id": "vivir-subj_imperfecto-2",
+    "verbo": "vivir",
+    "contexto": "temia que, ustedes, con alegria",
+    "respuesta": "temia que ustedes vivieran con alegria",
+    "pista": "past fear triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "temia que"
+      ],
+      [
+        "vivieran",
+        "viviesen"
+      ],
+      [
+        "ustedes"
+      ],
+      [
+        "con alegria"
+      ]
+    ]
+  },
+  {
+    "id": "volar-subj_imperfecto-0",
+    "verbo": "volar",
+    "contexto": "sugeria que, maria, sobre las nubes",
+    "respuesta": "sugeria que maria volara sobre las nubes",
+    "pista": "past suggestion triggers imperfect subjunctive",
+    "grupos": [
+      [
+        "sugeria que"
+      ],
+      [
+        "volara",
+        "volase"
+      ],
+      [
+        "maria"
+      ],
+      [
+        "sobre las nubes"
+      ]
+    ]
+  },
+  {
+    "id": "volar-subj_imperfecto-1",
+    "verbo": "volar",
+    "contexto": "era improbable que, carlos, a otro pais",
+    "respuesta": "era improbable que carlos volara a otro pais",
+    "pista": "improbability in the past triggers subjunctive",
+    "grupos": [
+      [
+        "era improbable que"
+      ],
+      [
+        "volara",
+        "volase"
+      ],
+      [
+        "carlos"
+      ],
+      [
+        "a otro pais"
+      ]
+    ]
+  },
+  {
+    "id": "volar-subj_imperfecto-2",
+    "verbo": "volar",
+    "contexto": "en caso de que, los ninos, con libertad",
+    "respuesta": "en caso de que los ninos volaran con libertad",
+    "pista": "en caso de que always triggers subjunctive",
+    "grupos": [
+      [
+        "en caso de que"
+      ],
+      [
+        "volaran",
+        "volasen"
+      ],
+      [
+        "los ninos"
+      ],
+      [
+        "con libertad"
+      ]
+    ]
+  },
+  {
+    "id": "volver-subj_imperfecto-0",
+    "verbo": "volver",
+    "contexto": "a menos que, mi hermano, a casa",
+    "respuesta": "a menos que mi hermano volviera a casa",
+    "pista": "a menos que always triggers subjunctive",
+    "grupos": [
+      [
+        "a menos que"
+      ],
+      [
+        "volviera",
+        "volviese"
+      ],
+      [
+        "mi hermano"
+      ],
+      [
+        "a casa"
+      ]
+    ]
+  },
+  {
+    "id": "volver-subj_imperfecto-1",
+    "verbo": "volver",
+    "contexto": "no era verdad que, mi madre, a intentarlo",
+    "respuesta": "no era verdad que mi madre volviera a intentarlo",
+    "pista": "denying truth in the past triggers subjunctive",
+    "grupos": [
+      [
+        "no era verdad que"
+      ],
+      [
+        "volviera",
+        "volviese"
+      ],
+      [
+        "mi madre"
+      ],
+      [
+        "a intentarlo"
+      ]
+    ]
+  },
+  {
+    "id": "volver-subj_imperfecto-2",
+    "verbo": "volver",
+    "contexto": "si tan solo, la gente, a empezar",
+    "respuesta": "si tan solo la gente volviera a empezar",
+    "pista": "si tan solo expresses a wish with imperfect subjunctive",
+    "grupos": [
+      [
+        "si tan solo"
+      ],
+      [
+        "volviera",
+        "volviese"
+      ],
+      [
+        "la gente"
+      ],
+      [
+        "a empezar"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "sacar-puntual-0",
+    "verbo": "sacar",
+    "contexto": "yo, nada mas llegar, las fotos de la maleta",
+    "respuesta": "Yo saque las fotos de la maleta nada mas llegar.",
+    "pista": "completed action of taking the photos out of the suitcase right upon arriving",
+    "grupos": [["yo"], ["saque"], ["las fotos de la maleta"], ["nada mas llegar"]]
+  },
+  {
+    "id": "sacar-puntual-1",
+    "verbo": "sacar",
+    "contexto": "ella, al mediodia, al perro a pasear",
+    "respuesta": "Ella saco al perro a pasear al mediodia.",
+    "pista": "completed action of taking the dog for a walk at noon",
+    "grupos": [["ella"], ["saco"], ["al perro a pasear"], ["al mediodia"]]
+  },
+  {
+    "id": "salir-puntual-0",
+    "verbo": "salir",
+    "contexto": "nosotros, al anochecer, del cine",
+    "respuesta": "Nosotros salimos del cine al anochecer.",
+    "pista": "completed action of leaving the cinema at nightfall",
+    "grupos": [["nosotros"], ["salimos"], ["del cine"], ["al anochecer"]]
+  },
+  {
+    "id": "salir-puntual-1",
+    "verbo": "salir",
+    "contexto": "yo, en la madrugada, de casa",
+    "respuesta": "Yo sali de casa en la madrugada.",
+    "pista": "completed action of leaving home in the early morning",
+    "grupos": [["yo"], ["sali"], ["de casa"], ["en la madrugada"]]
+  },
+  {
+    "id": "salvar-puntual-0",
+    "verbo": "salvar",
+    "contexto": "el bombero, justo en ese instante, al nino",
+    "respuesta": "El bombero salvo al nino justo en ese instante.",
+    "pista": "completed action of the firefighter saving the child at that exact moment",
+    "grupos": [["el bombero"], ["salvo"], ["al nino"], ["justo en ese instante"]]
+  },
+  {
+    "id": "salvar-puntual-1",
+    "verbo": "salvar",
+    "contexto": "ella, durante la tormenta, a su mascota",
+    "respuesta": "Ella salvo a su mascota durante la tormenta.",
+    "pista": "completed action of saving her pet during the storm",
+    "grupos": [["ella"], ["salvo"], ["a su mascota"], ["durante la tormenta"]]
+  },
+  {
+    "id": "seguir-puntual-0",
+    "verbo": "seguir",
+    "contexto": "yo, aquel verano, sus consejos",
+    "respuesta": "Yo segui sus consejos aquel verano.",
+    "pista": "completed action of following her advice that summer",
+    "grupos": [["yo"], ["segui"], ["sus consejos"], ["aquel verano"]]
+  },
+  {
+    "id": "seguir-puntual-1",
+    "verbo": "seguir",
+    "contexto": "ellos, durante el viaje, el camino correcto",
+    "respuesta": "Ellos siguieron el camino correcto durante el viaje.",
+    "pista": "completed action of following the correct path during the trip",
+    "grupos": [["ellos"], ["siguieron"], ["el camino correcto"], ["durante el viaje"]]
+  },
+  {
+    "id": "senalar-puntual-0",
+    "verbo": "senalar",
+    "contexto": "el, de repente, al culpable",
+    "respuesta": "El senalo al culpable de repente.",
+    "pista": "completed action of pointing at the guilty one suddenly",
+    "grupos": [["el"], ["senalo"], ["al culpable"], ["de repente"]]
+  },
+  {
+    "id": "senalar-puntual-1",
+    "verbo": "senalar",
+    "contexto": "yo, tras la reunion, los errores del informe",
+    "respuesta": "Yo senale los errores del informe tras la reunion.",
+    "pista": "completed action of pointing out the report errors after the meeting",
+    "grupos": [["yo"], ["senale"], ["los errores del informe"], ["tras la reunion"]]
+  },
+  {
+    "id": "sentar-puntual-0",
+    "verbo": "sentar",
+    "contexto": "ella, nada mas llegar, al bebe en la silla",
+    "respuesta": "Ella sento al bebe en la silla nada mas llegar.",
+    "pista": "completed action of sitting the baby in the chair right upon arriving",
+    "grupos": [["ella"], ["sento"], ["al bebe en la silla"], ["nada mas llegar"]]
+  },
+  {
+    "id": "sentar-puntual-1",
+    "verbo": "sentar",
+    "contexto": "yo, al mediodia, a la mesa",
+    "respuesta": "Yo me sente a la mesa al mediodia.",
+    "pista": "completed action of sitting at the table at noon",
+    "grupos": [["yo"], ["me sente"], ["a la mesa"], ["al mediodia"]]
+  },
+  {
+    "id": "sentir-puntual-0",
+    "verbo": "sentir",
+    "contexto": "yo, en aquel momento, una gran tristeza",
+    "respuesta": "Yo senti una gran tristeza en aquel momento.",
+    "pista": "completed action of feeling great sadness at that moment",
+    "grupos": [["yo"], ["senti"], ["una gran tristeza"], ["en aquel momento"]]
+  },
+  {
+    "id": "sentir-puntual-1",
+    "verbo": "sentir",
+    "contexto": "ella, justo en ese instante, un escalofrio",
+    "respuesta": "Ella sintio un escalofrio justo en ese instante.",
+    "pista": "completed action of feeling a chill at that exact moment",
+    "grupos": [["ella"], ["sintio"], ["un escalofrio"], ["justo en ese instante"]]
+  },
+  {
+    "id": "ser-puntual-0",
+    "verbo": "ser",
+    "contexto": "la fiesta, aquel verano, increible",
+    "respuesta": "La fiesta fue increible aquel verano.",
+    "pista": "completed action of the party being incredible that summer",
+    "grupos": [["la fiesta"], ["fue"], ["increible"], ["aquel verano"]]
+  },
+  {
+    "id": "ser-puntual-1",
+    "verbo": "ser",
+    "contexto": "yo, el martes pasado, el primero en llegar",
+    "respuesta": "Yo fui el primero en llegar el martes pasado.",
+    "pista": "completed action of being the first to arrive last Tuesday",
+    "grupos": [["yo"], ["fui"], ["el primero en llegar"], ["el martes pasado"]]
+  },
+  {
+    "id": "servir-puntual-0",
+    "verbo": "servir",
+    "contexto": "ella, al mediodia, la comida a los invitados",
+    "respuesta": "Ella sirvio la comida a los invitados al mediodia.",
+    "pista": "completed action of serving the food to the guests at noon",
+    "grupos": [["ella"], ["sirvio"], ["la comida a los invitados"], ["al mediodia"]]
+  },
+  {
+    "id": "servir-puntual-1",
+    "verbo": "servir",
+    "contexto": "eso, en aquel momento, de leccion",
+    "respuesta": "Eso sirvio de leccion en aquel momento.",
+    "pista": "completed action of that serving as a lesson at that moment",
+    "grupos": [["eso"], ["sirvio"], ["de leccion"], ["en aquel momento"]]
+  },
+  {
+    "id": "significar-puntual-0",
+    "verbo": "significar",
+    "contexto": "esa decision, aquel verano, un gran cambio",
+    "respuesta": "Esa decision significo un gran cambio aquel verano.",
+    "pista": "completed action of that decision meaning a big change that summer",
+    "grupos": [["esa decision"], ["significo"], ["un gran cambio"], ["aquel verano"]]
+  },
+  {
+    "id": "significar-puntual-1",
+    "verbo": "significar",
+    "contexto": "sus palabras, en aquel momento, mucho para mi",
+    "respuesta": "Sus palabras significaron mucho para mi en aquel momento.",
+    "pista": "completed action of her words meaning a lot to me at that moment",
+    "grupos": [["sus palabras"], ["significaron"], ["mucho para mi"], ["en aquel momento"]]
+  },
+  {
+    "id": "soler-puntual-0",
+    "verbo": "soler",
+    "contexto": "yo, aquel verano, pasear por la tarde",
+    "respuesta": "Yo soli pasear por la tarde aquel verano.",
+    "pista": "completed habitual action of usually walking in the afternoon that summer",
+    "grupos": [["yo"], ["soli"], ["pasear por la tarde"], ["aquel verano"]]
+  },
+  {
+    "id": "soler-puntual-1",
+    "verbo": "soler",
+    "contexto": "ella, durante el viaje, leer antes de dormir",
+    "respuesta": "Ella solio leer antes de dormir durante el viaje.",
+    "pista": "completed habitual action of usually reading before sleeping during the trip",
+    "grupos": [["ella"], ["solio"], ["leer antes de dormir"], ["durante el viaje"]]
+  },
+  {
+    "id": "soltar-puntual-0",
+    "verbo": "soltar",
+    "contexto": "el, de repente, la cuerda",
+    "respuesta": "El solto la cuerda de repente.",
+    "pista": "completed action of letting go of the rope suddenly",
+    "grupos": [["el"], ["solto"], ["la cuerda"], ["de repente"]]
+  },
+  {
+    "id": "soltar-puntual-1",
+    "verbo": "soltar",
+    "contexto": "yo, justo en ese instante, una carcajada",
+    "respuesta": "Yo solte una carcajada justo en ese instante.",
+    "pista": "completed action of letting out a burst of laughter at that instant",
+    "grupos": [["yo"], ["solte"], ["una carcajada"], ["justo en ese instante"]]
+  },
+  {
+    "id": "sonar-puntual-0",
+    "verbo": "sonar",
+    "contexto": "el telefono, en la madrugada, tres veces",
+    "respuesta": "El telefono sono tres veces en la madrugada.",
+    "pista": "completed action of the phone ringing three times in the early morning",
+    "grupos": [["el telefono"], ["sono"], ["tres veces"], ["en la madrugada"]]
+  },
+  {
+    "id": "sonar-puntual-1",
+    "verbo": "sonar",
+    "contexto": "la alarma, a las dos en punto, sin parar",
+    "respuesta": "La alarma sono sin parar a las dos en punto.",
+    "pista": "completed action of the alarm ringing nonstop at two o'clock",
+    "grupos": [["la alarma"], ["sono"], ["sin parar"], ["a las dos en punto"]]
+  },
+  {
+    "id": "subir-puntual-0",
+    "verbo": "subir",
+    "contexto": "nosotros, al mediodia, a la montana",
+    "respuesta": "Nosotros subimos a la montana al mediodia.",
+    "pista": "completed action of climbing the mountain at noon",
+    "grupos": [["nosotros"], ["subimos"], ["a la montana"], ["al mediodia"]]
+  },
+  {
+    "id": "subir-puntual-1",
+    "verbo": "subir",
+    "contexto": "yo, hace tres dias, las escaleras corriendo",
+    "respuesta": "Yo subi las escaleras corriendo hace tres dias.",
+    "pista": "completed action of running up the stairs three days ago",
+    "grupos": [["yo"], ["subi"], ["las escaleras corriendo"], ["hace tres dias"]]
+  },
+  {
+    "id": "suceder-puntual-0",
+    "verbo": "suceder",
+    "contexto": "algo magico, esa misma noche, en el jardin",
+    "respuesta": "Algo magico sucedio en el jardin esa misma noche.",
+    "pista": "completed action of something magical happening in the garden that night",
+    "grupos": [["algo magico"], ["sucedio"], ["en el jardin"], ["esa misma noche"]]
+  },
+  {
+    "id": "suceder-puntual-1",
+    "verbo": "suceder",
+    "contexto": "el accidente, al anochecer, en la autopista",
+    "respuesta": "El accidente sucedio en la autopista al anochecer.",
+    "pista": "completed action of the accident happening on the highway at nightfall",
+    "grupos": [["el accidente"], ["sucedio"], ["en la autopista"], ["al anochecer"]]
+  }
+]

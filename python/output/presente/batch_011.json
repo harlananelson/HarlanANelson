@@ -1,0 +1,884 @@
+[
+  {
+    "id": "necesitar-presente-0",
+    "verbo": "necesitar",
+    "contexto": "yo, normalmente, más tiempo",
+    "respuesta": "Yo necesito más tiempo normalmente.",
+    "pista": "expressing a need",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "necesito"
+      ],
+      [
+        "mas tiempo"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "necesitar-presente-1",
+    "verbo": "necesitar",
+    "contexto": "nosotros, cada vez que, ayuda",
+    "respuesta": "Nosotros necesitamos ayuda cada vez que.",
+    "pista": "requesting assistance",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "necesitamos"
+      ],
+      [
+        "ayuda"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "necesitar-presente-2",
+    "verbo": "necesitar",
+    "contexto": "tú, normalmente, descansar",
+    "respuesta": "Normalmente, tú necesitas descansar.",
+    "pista": "giving advice",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "necesitas"
+      ],
+      [
+        "descansar"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "negar-presente-0",
+    "verbo": "negar",
+    "contexto": "él, esta mañana, las acusaciones",
+    "respuesta": "Esta mañana, él niega las acusaciones.",
+    "pista": "describing denial",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "niega"
+      ],
+      [
+        "las acusaciones"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "negar-presente-1",
+    "verbo": "negar",
+    "contexto": "yo, esta noche, la entrada a los menores",
+    "respuesta": "Yo niego la entrada a los menores esta noche.",
+    "pista": "expressing a rule",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "niego"
+      ],
+      [
+        "la entrada a los menores"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "negar-presente-2",
+    "verbo": "negar",
+    "contexto": "ellos, hoy, su participación",
+    "respuesta": "Hoy, ellos niegan su participación.",
+    "pista": "narrating evasion",
+    "grupos": [
+      [
+        "ellos"
+      ],
+      [
+        "niegan"
+      ],
+      [
+        "su participacion"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "observar-presente-0",
+    "verbo": "observar",
+    "contexto": "yo, cada vez que, las aves en el parque",
+    "respuesta": "Cada vez que, yo observo las aves en el parque.",
+    "pista": "describing birdwatching",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "observo"
+      ],
+      [
+        "las aves en el parque"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "observar-presente-1",
+    "verbo": "observar",
+    "contexto": "ella, en este momento, los detalles del cuadro",
+    "respuesta": "Ella observa los detalles del cuadro en este momento.",
+    "pista": "narrating art appreciation",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "observa"
+      ],
+      [
+        "los detalles del cuadro"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "observar-presente-2",
+    "verbo": "observar",
+    "contexto": "nosotros, normalmente, el comportamiento de los animales",
+    "respuesta": "Nosotros observamos el comportamiento de los animales normalmente.",
+    "pista": "describing study",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "observamos"
+      ],
+      [
+        "el comportamiento de los animales"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "obtener-presente-0",
+    "verbo": "obtener",
+    "contexto": "yo, cada semana, buenas calificaciones",
+    "respuesta": "Cada semana, yo obtengo buenas calificaciones.",
+    "pista": "expressing academic success",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "obtengo"
+      ],
+      [
+        "buenas calificaciones"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "obtener-presente-1",
+    "verbo": "obtener",
+    "contexto": "nosotros, por lo general, los permisos necesarios",
+    "respuesta": "Por lo general, nosotros obtenemos los permisos necesarios.",
+    "pista": "describing bureaucracy",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "obtenemos"
+      ],
+      [
+        "los permisos necesarios"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "obtener-presente-2",
+    "verbo": "obtener",
+    "contexto": "tú, por lo general, información valiosa",
+    "respuesta": "Tú obtienes información valiosa por lo general.",
+    "pista": "talking about research",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "obtienes"
+      ],
+      [
+        "informacion valiosa"
+      ],
+      [
+        "por lo general"
+      ]
+    ]
+  },
+  {
+    "id": "ocupar-presente-0",
+    "verbo": "ocupar",
+    "contexto": "yo, cada vez que, el primer lugar",
+    "respuesta": "Yo ocupo el primer lugar cada vez que.",
+    "pista": "expressing ranking",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "ocupo"
+      ],
+      [
+        "el primer lugar"
+      ],
+      [
+        "cada vez que"
+      ]
+    ]
+  },
+  {
+    "id": "ocupar-presente-1",
+    "verbo": "ocupar",
+    "contexto": "nosotros, ahora, toda la oficina",
+    "respuesta": "Nosotros ocupamos toda la oficina ahora.",
+    "pista": "describing space usage",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "ocupamos"
+      ],
+      [
+        "toda la oficina"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "ocupar-presente-2",
+    "verbo": "ocupar",
+    "contexto": "ella, esta tarde, un puesto importante",
+    "respuesta": "Ella ocupa un puesto importante esta tarde.",
+    "pista": "narrating career position",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "ocupa"
+      ],
+      [
+        "un puesto importante"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "ocurrir-presente-0",
+    "verbo": "ocurrir",
+    "contexto": "eso, mientras, con frecuencia",
+    "respuesta": "Eso ocurre con frecuencia mientras.",
+    "pista": "expressing frequency",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "ocurre"
+      ],
+      [
+        "con frecuencia"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "ocurrir-presente-1",
+    "verbo": "ocurrir",
+    "contexto": "los accidentes, hoy, en esa esquina",
+    "respuesta": "Los accidentes ocurre en esa esquina hoy.",
+    "pista": "describing a danger zone",
+    "grupos": [
+      [
+        "los accidentes"
+      ],
+      [
+        "ocurre"
+      ],
+      [
+        "en esa esquina"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "ocurrir-presente-2",
+    "verbo": "ocurrir",
+    "contexto": "algo extraño, todos los días, en esta casa",
+    "respuesta": "Algo extraño ocurre en esta casa todos los días.",
+    "pista": "narrating a mystery",
+    "grupos": [
+      [
+        "algo extrano"
+      ],
+      [
+        "ocurre"
+      ],
+      [
+        "en esta casa"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "odiar-presente-0",
+    "verbo": "odiar",
+    "contexto": "yo, ahora, la injusticia",
+    "respuesta": "Yo odio la injusticia ahora.",
+    "pista": "expressing strong dislike",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "odio"
+      ],
+      [
+        "la injusticia"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "odiar-presente-1",
+    "verbo": "odiar",
+    "contexto": "ella, esta mañana, las mentiras",
+    "respuesta": "Esta mañana, ella odia las mentiras.",
+    "pista": "describing her values",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "odia"
+      ],
+      [
+        "las mentiras"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "odiar-presente-2",
+    "verbo": "odiar",
+    "contexto": "nosotros, mientras, la violencia",
+    "respuesta": "Nosotros odiamos la violencia mientras.",
+    "pista": "expressing shared values",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "odiamos"
+      ],
+      [
+        "la violencia"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "ofrecer-presente-0",
+    "verbo": "ofrecer",
+    "contexto": "yo, hoy, mi ayuda",
+    "respuesta": "Hoy, yo ofrezco mi ayuda.",
+    "pista": "expressing willingness",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "ofrezco"
+      ],
+      [
+        "mi ayuda"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "ofrecer-presente-1",
+    "verbo": "ofrecer",
+    "contexto": "ella, normalmente, una disculpa",
+    "respuesta": "Normalmente, ella ofrece una disculpa.",
+    "pista": "narrating an apology",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "ofrece"
+      ],
+      [
+        "una disculpa"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "ofrecer-presente-2",
+    "verbo": "ofrecer",
+    "contexto": "nosotros, ahora, nuestros servicios",
+    "respuesta": "Nosotros ofrecemos nuestros servicios ahora.",
+    "pista": "describing business",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "ofrecemos"
+      ],
+      [
+        "nuestros servicios"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "oír-presente-0",
+    "verbo": "oír",
+    "contexto": "yo, esta tarde, un ruido extraño",
+    "respuesta": "Esta tarde, yo oigo un ruido extraño.",
+    "pista": "describing perception",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "oigo"
+      ],
+      [
+        "un ruido extrano"
+      ],
+      [
+        "esta tarde"
+      ]
+    ]
+  },
+  {
+    "id": "oír-presente-1",
+    "verbo": "oír",
+    "contexto": "tú, a veces, la música desde aquí",
+    "respuesta": "A veces, tú oyes la música desde aquí.",
+    "pista": "expressing auditory experience",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "oyes"
+      ],
+      [
+        "la musica desde aqui"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "oír-presente-2",
+    "verbo": "oír",
+    "contexto": "nosotros, ahora, las campanas de la iglesia",
+    "respuesta": "Ahora, nosotros oímos las campanas de la iglesia.",
+    "pista": "narrating a sound",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "oimos"
+      ],
+      [
+        "las campanas de la iglesia"
+      ],
+      [
+        "ahora"
+      ]
+    ]
+  },
+  {
+    "id": "olvidar-presente-0",
+    "verbo": "olvidar",
+    "contexto": "yo, cada semana, las llaves en casa",
+    "respuesta": "Cada semana, yo olvido las llaves en casa.",
+    "pista": "describing forgetfulness",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "olvido"
+      ],
+      [
+        "las llaves en casa"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "olvidar-presente-1",
+    "verbo": "olvidar",
+    "contexto": "tú, en este momento, la cita con el dentista",
+    "respuesta": "En este momento, tú olvidas la cita con el dentista.",
+    "pista": "talking about missed appointments",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "olvidas"
+      ],
+      [
+        "la cita con el dentista"
+      ],
+      [
+        "en este momento"
+      ]
+    ]
+  },
+  {
+    "id": "olvidar-presente-2",
+    "verbo": "olvidar",
+    "contexto": "ella, a veces, su contraseña",
+    "respuesta": "A veces, ella olvida su contraseña.",
+    "pista": "narrating a common problem",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "olvida"
+      ],
+      [
+        "su contrasena"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "pagar-presente-0",
+    "verbo": "pagar",
+    "contexto": "yo, esta noche, la cuenta",
+    "respuesta": "Esta noche, yo pago la cuenta.",
+    "pista": "describing a payment",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "pago"
+      ],
+      [
+        "la cuenta"
+      ],
+      [
+        "esta noche"
+      ]
+    ]
+  },
+  {
+    "id": "pagar-presente-1",
+    "verbo": "pagar",
+    "contexto": "nosotros, mientras, el alquiler",
+    "respuesta": "Nosotros pagamos el alquiler mientras.",
+    "pista": "talking about housing costs",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "pagamos"
+      ],
+      [
+        "el alquiler"
+      ],
+      [
+        "mientras"
+      ]
+    ]
+  },
+  {
+    "id": "pagar-presente-2",
+    "verbo": "pagar",
+    "contexto": "tú, a veces, con tarjeta de crédito",
+    "respuesta": "A veces, tú pagas con tarjeta de crédito.",
+    "pista": "describing payment method",
+    "grupos": [
+      [
+        "tu"
+      ],
+      [
+        "pagas"
+      ],
+      [
+        "con tarjeta de credito"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "parar-presente-0",
+    "verbo": "parar",
+    "contexto": "yo, normalmente, el coche en la esquina",
+    "respuesta": "Normalmente, yo paro el coche en la esquina.",
+    "pista": "describing stopping",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "paro"
+      ],
+      [
+        "el coche en la esquina"
+      ],
+      [
+        "normalmente"
+      ]
+    ]
+  },
+  {
+    "id": "parar-presente-1",
+    "verbo": "parar",
+    "contexto": "él, esta mañana, de hablar un momento",
+    "respuesta": "Él para de hablar un momento esta mañana.",
+    "pista": "expressing a pause",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "para"
+      ],
+      [
+        "de hablar un momento"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "parar-presente-2",
+    "verbo": "parar",
+    "contexto": "nosotros, a veces, el trabajo a las cinco",
+    "respuesta": "A veces, nosotros paramos el trabajo a las cinco.",
+    "pista": "describing work schedule",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "paramos"
+      ],
+      [
+        "el trabajo a las cinco"
+      ],
+      [
+        "a veces"
+      ]
+    ]
+  },
+  {
+    "id": "parecer-presente-0",
+    "verbo": "parecer",
+    "contexto": "eso, cada semana, una buena idea",
+    "respuesta": "Cada semana, eso parece una buena idea.",
+    "pista": "expressing opinion",
+    "grupos": [
+      [
+        "eso"
+      ],
+      [
+        "parece"
+      ],
+      [
+        "una buena idea"
+      ],
+      [
+        "cada semana"
+      ]
+    ]
+  },
+  {
+    "id": "parecer-presente-1",
+    "verbo": "parecer",
+    "contexto": "él, esta mañana, muy cansado",
+    "respuesta": "Esta mañana, él parece muy cansado.",
+    "pista": "describing appearance",
+    "grupos": [
+      [
+        "el"
+      ],
+      [
+        "parece"
+      ],
+      [
+        "muy cansado"
+      ],
+      [
+        "esta manana"
+      ]
+    ]
+  },
+  {
+    "id": "parecer-presente-2",
+    "verbo": "parecer",
+    "contexto": "yo, hoy, más joven de lo que soy",
+    "respuesta": "Yo parezco más joven de lo que soy hoy.",
+    "pista": "expressing youthful appearance",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "parezco"
+      ],
+      [
+        "mas joven de lo que soy"
+      ],
+      [
+        "hoy"
+      ]
+    ]
+  },
+  {
+    "id": "partir-presente-0",
+    "verbo": "partir",
+    "contexto": "yo, todos los días, el pastel en ocho pedazos",
+    "respuesta": "Todos los días, yo parto el pastel en ocho pedazos.",
+    "pista": "describing cutting",
+    "grupos": [
+      [
+        "yo"
+      ],
+      [
+        "parto"
+      ],
+      [
+        "el pastel en ocho pedazos"
+      ],
+      [
+        "todos los dias"
+      ]
+    ]
+  },
+  {
+    "id": "partir-presente-1",
+    "verbo": "partir",
+    "contexto": "nosotros, actualmente, hacia la montaña",
+    "respuesta": "Nosotros partimos hacia la montaña actualmente.",
+    "pista": "expressing departure",
+    "grupos": [
+      [
+        "nosotros"
+      ],
+      [
+        "partimos"
+      ],
+      [
+        "hacia la montana"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  },
+  {
+    "id": "partir-presente-2",
+    "verbo": "partir",
+    "contexto": "ella, actualmente, la fruta para todos",
+    "respuesta": "Actualmente, ella parte la fruta para todos.",
+    "pista": "describing sharing food",
+    "grupos": [
+      [
+        "ella"
+      ],
+      [
+        "parte"
+      ],
+      [
+        "la fruta para todos"
+      ],
+      [
+        "actualmente"
+      ]
+    ]
+  }
+]
