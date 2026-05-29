@@ -1,0 +1,48 @@
+---
+title: "pico-dag"
+description: "PICO-driven clinical research accelerator: enter a research question, walk the UMLS concept graph, generate code lists and a data pull specification."
+node-type: project
+status: alpha
+skills: [r, shiny, clinical-informatics, umls]
+categories: [healthcare-analytics, research-tools]
+date: 2026-04-18
+github: "https://github.com/harlananelson/pico-dag"
+---
+
+# pico-dag
+
+## Try it live
+
+[**picodag.globalpatientsafety.com**](https://picodag.globalpatientsafety.com){.btn .btn-primary .btn-lg role="button"}
+
+## Summary
+
+pico-dag accelerates the front end of clinical research projects. A researcher types a Population / Intervention / Comparator / Outcome question in plain English; the app walks the UMLS concept graph from those seed terms and surfaces the related treatments, comorbidities, monitoring labs, and procedures as a navigable graph and filterable tables. From there, one click generates a code-list ZIP (CSVs mapping concepts to ICD-10, SNOMED, RxNorm codes) and a Quarto data-pull specification ready to hand to a data engineer.
+
+The goal is to compress the "research question → defined cohort → data request" step from weeks to an afternoon, while keeping the clinical reasoning visible and auditable. Nothing about the tool replaces the investigator's judgment; it surfaces the UMLS relationships that are normally hunted for manually and makes the extraction specification concrete.
+
+## How it works
+
+1. **PICO input** — short text boxes for Population, Intervention, Comparator, Outcome, plus time and execution target (HDL / Databricks / IU Health EDW)
+2. **UMLS search** — fuzzy match against the UMLS concept dictionary, returns candidate CUIs with semantic types
+3. **Graph walk** — starting from the selected CUI, traverse relationships: `may_be_treated_by`, `component_of` (for monitoring labs), `clinically_associated_with` (comorbidities), `focus_of` (procedures)
+4. **Visualization** — the resulting concept graph is rendered with visNetwork; tables below give the same information filterable
+5. **Export** — code lists (CSV per category, zipped) and a Quarto `.qmd` data-pull specification with study metadata, inclusion/exclusion criteria, and concept tables
+
+## Stack
+
+- **R + Shiny** (bslib theme, visNetwork, DT) for the UI
+- **httr2** against UMLS REST API for concept and relationship lookup
+- **DuckDB** planned for caching UMLS responses across sessions
+- **Nix flake** pinning the R environment for reproducibility
+- **Shiny Server** on a Hetzner VPS behind nginx + Let's Encrypt
+
+## Why This Exists
+
+Clinical researchers spend disproportionate time before data lands: translating a question into clinical concepts, finding the right ICD-10/SNOMED codes, mapping to the data warehouse's vocabulary, and writing a specification the data team can execute. Most of that work is re-trodden ground — the UMLS already captures most of the domain knowledge. pico-dag is the thin client that makes the UMLS usable for study design without every researcher needing to learn its API.
+
+## Status
+
+Alpha. The UMLS walk, visualization, and export work end-to-end. Ongoing work: caching UMLS responses in DuckDB, rate-limit / retry polish, and a saved-session feature so researchers can iterate on a study design without re-walking the graph.
+
+[GitHub repository](https://github.com/harlananelson/pico-dag)
