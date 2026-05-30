@@ -24,7 +24,16 @@
 
   var WHISPER_MODEL = 'onnx-community/whisper-base';
   var STORE = 'spanishDrillRec.v1';
-  var state = { engine: 'browser', openaiKey: '', cloudModel: 'gpt-4o-transcribe' };
+  // Safari's Web Speech API is unreliable (especially right after audio playback),
+  // so default Safari / WebKit users to the on-device Whisper engine, which captures
+  // audio directly. A saved preference (read below) still wins over this default.
+  function pareceSafari(){
+    var ua = navigator.userAgent || '';
+    var esSafari = /^((?!chrome|android|crios|fxios|edg).)*safari/i.test(ua);
+    var sinWebSpeech = !(window.SpeechRecognition || window.webkitSpeechRecognition);
+    return esSafari || sinWebSpeech;
+  }
+  var state = { engine: pareceSafari() ? 'whisper' : 'browser', openaiKey: '', cloudModel: 'gpt-4o-transcribe' };
   try {
     var saved = JSON.parse(localStorage.getItem(STORE) || '{}');
     if (saved.engine) { state.engine = saved.engine; }
@@ -39,7 +48,10 @@
   function setBox(id, text) { try { var el = $(id); if (el) { el.textContent = text; } } catch (e) {} }
   function showBad(msg) { try { $('feedbackBox').innerHTML = '<span class="bad">' + msg + '</span>'; } catch (e) {} }
 
-  function deliver(text) {
+  // deliver(text)        — finalize with a transcript (empty => "no voice").
+  // deliver('', errorMsg) — finalize after an error; keep the error message
+  //                         visible instead of clobbering it with the generic one.
+  function deliver(text, errorMsg) {
     text = (text || '').trim();
     altActive = false;
     setBox('transcripcionBox', text || 'No se detectó voz.');
@@ -53,6 +65,8 @@
     if (active && text) {
       ultimaTranscripcion = text;
       revisar(text);
+    } else if (active && errorMsg) {
+      showBad(errorMsg);
     } else if (active) {
       showBad('No se detectó una respuesta por voz.');
       try { $('feedbackBox').innerHTML += ' Pulsa de nuevo para intentarlo.'; } catch (e) {}
@@ -68,7 +82,7 @@
   function startCapture() {
     altActive = true;
     if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-      showBad('Este navegador no puede acceder al micrófono.'); deliver(''); return;
+      deliver('', 'Este navegador no puede acceder al micrófono.'); return;
     }
     navigator.mediaDevices.getUserMedia({
       audio: { channelCount: 1, echoCancellation: true, noiseSuppression: true, autoGainControl: true }
@@ -90,8 +104,7 @@
       vState = 'idle'; frames = []; speechMs = 0; silenceMs = 0; totalMs = 0;
       if (ac.resume) { ac.resume(); }
     }).catch(function (err) {
-      showBad('No se pudo acceder al micrófono: ' + ((err && err.message) || err));
-      deliver('');
+      deliver('', 'No se pudo acceder al micrófono: ' + ((err && err.message) || err));
     });
   }
 
@@ -146,8 +159,7 @@
       else if (state.engine === 'elevenlabs') { elevenlabsTranscribe(a16); }
       else { whisperTranscribe(a16); }
     }).catch(function () {
-      showBad('Falló el procesamiento del audio.');
-      deliver('');
+      deliver('', 'Falló el procesamiento del audio.');
     });
   }
 
@@ -212,7 +224,7 @@
   }
   function whisperTranscribe(a16) {
     var w = ensureWhisper();
-    if (!w) { showBad('No se pudo iniciar el motor de voz en el dispositivo.'); deliver(''); return; }
+    if (!w) { deliver('', 'No se pudo iniciar el motor de voz en el dispositivo.'); return; }
     w.curId = ++whisperJob;
     w.postMessage({
       type: 'transcribe', id: w.curId, audio: a16,
@@ -237,7 +249,7 @@
     if (m.type === 'transcript') {
       if (!altActive || m.id !== whisper.curId) { return; }
       if (m.ok) { deliver(m.text); }
-      else { showBad('Falló la transcripción: ' + m.error); deliver(''); }
+      else { deliver('', 'Falló la transcripción: ' + m.error); }
     }
   }
 
@@ -252,8 +264,7 @@
 
     function handleText(t) { if (altActive) { deliver(typeof t === 'string' ? t : ''); } }
     function handleErr(err) {
-      showBad('Falló la transcripción de ElevenLabs: ' + ((err && err.message) || err));
-      deliver('');
+      if (altActive) { deliver('', 'Falló la transcripción de ElevenLabs: ' + ((err && err.message) || err)); }
     }
 
     if (userKey) {
@@ -269,8 +280,7 @@
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ audio_base64: bufToBase64(wav), language: 'es' })
       }).then(parseElevenLabs).then(handleText).catch(function (err) {
-        showBad('La transcripción de ElevenLabs necesita tu clave (botón “Voz”) o el proxy del servidor: ' + ((err && err.message) || err));
-        deliver('');
+        if (altActive) { deliver('', 'ElevenLabs (servidor): ' + ((err && err.message) || err)); }
       });
     }
   }
@@ -291,8 +301,8 @@
   function cloudTranscribe(a16) {
     var key = (state.openaiKey || '').trim();
     if (!key) {
-      showBad('La transcripción en la nube necesita una clave de OpenAI — introdúcela en los ajustes de Reconocimiento.');
-      deliver(''); return;
+      deliver('', 'La transcripción en la nube necesita una clave de OpenAI — introdúcela en los ajustes de Reconocimiento.');
+      return;
     }
     var form = new FormData();
     form.append('file', new Blob([encodeWav(a16, 16000)], { type: 'audio/wav' }), 'answer.wav');
@@ -314,8 +324,7 @@
     }).then(function (t) {
       if (altActive) { deliver(t); }
     }).catch(function (err) {
-      showBad('Falló la transcripción en la nube: ' + ((err && err.message) || err));
-      deliver('');
+      deliver('', 'Falló la transcripción en la nube: ' + ((err && err.message) || err));
     });
   }
 
@@ -326,7 +335,7 @@
     start: function () {
       if (state.engine === 'browser') {
         if (browserRecog) { browserRecog.start(); }
-        else { showBad('El reconocimiento del navegador no está disponible. Elige el motor Whisper.'); deliver(''); }
+        else { deliver('', 'El reconocimiento del navegador no está disponible. Elige el motor Whisper.'); }
       } else {
         startCapture();
       }

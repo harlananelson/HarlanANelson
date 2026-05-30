@@ -201246,7 +201246,14 @@ function cancelarAudio(){
   audioGen++;
   audioQueue.length = 0;
   isPlaying = false;
-  if (currentAudio) { currentAudio.pause(); currentAudio = null; }
+  if (currentAudio) {
+    // Fully release the element, not just pause it. On Safari a paused <audio>
+    // can keep the shared audio session in playback mode, which blocks the Web
+    // Speech recognizer from reclaiming the mic after "Oír contexto".
+    currentAudio.pause();
+    try { currentAudio.src = ''; currentAudio.load(); } catch (e) { /* ignore */ }
+    currentAudio = null;
+  }
   if ('speechSynthesis' in window) speechSynthesis.cancel();
 }
 
@@ -201403,16 +201410,17 @@ function decirRespuesta(){
     }
     return;
   }
-  // Stop any TTS still playing or queued (e.g. right after "Oír contexto"):
-  // otherwise the speaker output bleeds into the mic and the audio device may
-  // not be released yet, so the answer never registers.
+  // Stop any TTS still playing or queued (e.g. right after "Oír contexto") so the
+  // speaker output can't bleed into the mic; the audioGen guard in playNext()
+  // also drops any TTS fetch that resolves after this point.
   cancelarAudio();
   modoAutomatico = false;
   modoDecir = true;
   $('feedbackBox').textContent = 'Di tu respuesta ahora. La aplicación la revisará al terminar.';
-  $('vozPill').textContent = 'Micrófono: preparando';
-  // Brief settle delay lets the audio output fully release before the mic opens.
-  setTimeout(() => { if (modoDecir && !escuchando) iniciarEscucha(); }, 300);
+  // Open the mic synchronously, within the click gesture: Safari/iOS only allows
+  // SpeechRecognition.start()/getUserMedia inside a user gesture, so deferring it
+  // (e.g. via setTimeout) can stop the mic from ever starting.
+  iniciarEscucha();
 }
 
 function textoEjercicio(){ return `${actual.verbo}. ${actual.contexto}. ${actual.pista}`; }
