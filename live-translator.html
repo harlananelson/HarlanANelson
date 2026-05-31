@@ -441,7 +441,7 @@
     let cfg = { provider: 'anthropic', model: '', apiKey: '' };
     const queue = [];
     let active = 0;
-    const MAX_ACTIVE = 2;
+    const MAX_ACTIVE = 5;   // up to 5 translation requests in flight at once
 
     self.onmessage = function (e) {
       const m = e.data || {};
