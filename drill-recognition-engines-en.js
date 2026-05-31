@@ -1,16 +1,18 @@
-/* Swahili drill — pluggable speech-recognition engines.
+/* English drill — pluggable speech-recognition engines.
  *
- * Loaded as a classic <script> AFTER the drill's main inline script, so it can
- * see the drill globals ($, reconocimiento, revisar, escuchando, modoDecir,
- * modoAutomatico, ultimaTranscripcion).
+ * English-localized sibling of drill-recognition-engines-es.js. Loaded as a
+ * classic <script> AFTER the drill's main inline script, so it can see the drill
+ * globals ($, reconocimiento, revisar, escuchando, modoDecir, modoAutomatico,
+ * ultimaTranscripcion).
  *
  * It adds a "Recognition" selector and replaces the global `reconocimiento`
  * with a shim that dispatches by chosen engine:
- *   browser  - the built-in Web Speech API (default; Swahili needs Chrome)
- *   whisper  - on-device Whisper via Transformers.js (any browser, incl. iPad)
- *   cloud    - OpenAI gpt-4o-transcribe (bring your own key)
- * For whisper/cloud it records one utterance, detects the end by silence,
- * transcribes it, and feeds the text into the drill's existing revisar() flow.
+ *   browser     - the built-in Web Speech API (needs Chrome/Edge)
+ *   whisper     - on-device Whisper via Transformers.js (any browser, incl. iPad)
+ *   elevenlabs  - ElevenLabs Scribe STT, reusing the key you already use for TTS
+ *   cloud       - OpenAI gpt-4o-transcribe (bring your own key)
+ * The shared on-device worker (drill-whisper-worker.js) is language-parameterized,
+ * so we pass language:'english'.
  */
 (function () {
   'use strict';
@@ -18,10 +20,10 @@
   if (typeof revisar !== 'function' || typeof $ !== 'function') { return; }  // not the drill page
 
   var WHISPER_MODEL = 'onnx-community/whisper-base';
-  var STORE = 'swahiliDrillRec.v1';
-  // Safari's Web Speech API is unreliable (and Swahili recognition is unsupported
-  // there), so default Safari / WebKit users to the on-device Whisper engine.
-  // A saved preference (read below) still wins over this default.
+  var STORE = 'englishDrillRec.v1';
+  // Safari's Web Speech API is unreliable (especially right after audio playback),
+  // so default Safari / WebKit users to the on-device Whisper engine, which captures
+  // audio directly. A saved preference (read below) still wins over this default.
   function pareceSafari(){
     var ua = navigator.userAgent || '';
     var esSafari = /^((?!chrome|android|crios|fxios|edg).)*safari/i.test(ua);
@@ -62,7 +64,7 @@
     } else if (active && errorMsg) {
       showBad(errorMsg);
     } else if (active) {
-      showBad('No voice response was detected.') ;
+      showBad('No voice response was detected.');
       try { $('feedbackBox').innerHTML += ' Press again to try.'; } catch (e) {}
     }
   }
@@ -201,51 +203,6 @@
     return btoa(bin);
   }
 
-  // ── ElevenLabs Scribe STT ───────────────────────────────────────────────────
-  // Reuses the ElevenLabs key the drill already stores for TTS (el_api_key in the
-  // "Voice" settings). With no user key it falls back to /.netlify/functions/stt,
-  // mirroring the TTS path. The ElevenLabs key must have the speech_to_text
-  // permission enabled, or this returns a 401.
-  function elevenlabsTranscribe(a16) {
-    var wav = encodeWav(a16, 16000);
-    var userKey = '';
-    try { userKey = (localStorage.getItem('el_api_key') || '').trim(); } catch (e) {}
-
-    function handleText(t) { if (altActive) { deliver(typeof t === 'string' ? t : ''); } }
-    function handleErr(err) {
-      if (altActive) { deliver('', 'ElevenLabs transcription failed: ' + ((err && err.message) || err)); }
-    }
-
-    if (userKey) {
-      var form = new FormData();
-      form.append('model_id', 'scribe_v1');
-      form.append('language_code', 'sw');
-      form.append('file', new Blob([wav], { type: 'audio/wav' }), 'answer.wav');
-      fetch('https://api.elevenlabs.io/v1/speech-to-text', {
-        method: 'POST', headers: { 'xi-api-key': userKey }, body: form
-      }).then(parseElevenLabs).then(handleText).catch(handleErr);
-    } else {
-      fetch('/.netlify/functions/stt', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ audio_base64: bufToBase64(wav), language: 'sw' })
-      }).then(parseElevenLabs).then(handleText).catch(function (err) {
-        if (altActive) { deliver('', 'ElevenLabs (server): ' + ((err && err.message) || err)); }
-      });
-    }
-  }
-  function parseElevenLabs(res) {
-    return res.text().then(function (body) {
-      if (!res.ok) {
-        var d = body;
-        try { var j = JSON.parse(body); if (j && j.detail) { d = (j.detail.message || JSON.stringify(j.detail)); } } catch (e) {}
-        throw new Error(res.status + (d ? ' - ' + String(d).slice(0, 200) : ''));
-      }
-      var data;
-      try { data = JSON.parse(body); } catch (e) { throw new Error('Unreadable response from transcription API'); }
-      return (data && typeof data.text === 'string') ? data.text : '';
-    });
-  }
-
   // ── on-device Whisper ──────────────────────────────────────────────────────
   var whisper = null, whisperJob = 0;
   function ensureWhisper() {
@@ -267,7 +224,7 @@
     w.curId = ++whisperJob;
     w.postMessage({
       type: 'transcribe', id: w.curId, audio: a16,
-      model: WHISPER_MODEL, device: 'wasm', language: 'swahili'
+      model: WHISPER_MODEL, device: 'wasm', language: 'english'
     }, [a16.buffer]);
   }
   function onWhisperMsg(e) {
@@ -292,6 +249,51 @@
     }
   }
 
+  // ── ElevenLabs Scribe STT ───────────────────────────────────────────────────
+  // Reuses the ElevenLabs key the drill already stores for TTS (el_api_key in the
+  // "Voice" settings). With no user key it falls back to /.netlify/functions/stt,
+  // mirroring the TTS path. Note: the ElevenLabs key must have the speech_to_text
+  // permission enabled, or this returns a 401.
+  function elevenlabsTranscribe(a16) {
+    var wav = encodeWav(a16, 16000);
+    var userKey = '';
+    try { userKey = (localStorage.getItem('el_api_key') || '').trim(); } catch (e) {}
+
+    function handleText(t) { if (altActive) { deliver(typeof t === 'string' ? t : ''); } }
+    function handleErr(err) {
+      if (altActive) { deliver('', 'ElevenLabs transcription failed: ' + ((err && err.message) || err)); }
+    }
+
+    if (userKey) {
+      var form = new FormData();
+      form.append('model_id', 'scribe_v1');
+      form.append('language_code', 'en');
+      form.append('file', new Blob([wav], { type: 'audio/wav' }), 'answer.wav');
+      fetch('https://api.elevenlabs.io/v1/speech-to-text', {
+        method: 'POST', headers: { 'xi-api-key': userKey }, body: form
+      }).then(parseElevenLabs).then(handleText).catch(handleErr);
+    } else {
+      fetch('/.netlify/functions/stt', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ audio_base64: bufToBase64(wav), language: 'en' })
+      }).then(parseElevenLabs).then(handleText).catch(function (err) {
+        if (altActive) { deliver('', 'ElevenLabs (server): ' + ((err && err.message) || err)); }
+      });
+    }
+  }
+  function parseElevenLabs(res) {
+    return res.text().then(function (body) {
+      if (!res.ok) {
+        var d = body;
+        try { var j = JSON.parse(body); if (j && j.detail) { d = (j.detail.message || JSON.stringify(j.detail)); } } catch (e) {}
+        throw new Error(res.status + (d ? ' - ' + String(d).slice(0, 200) : ''));
+      }
+      var data;
+      try { data = JSON.parse(body); } catch (e) { throw new Error('Unreadable response from transcription API'); }
+      return (data && typeof data.text === 'string') ? data.text : '';
+    });
+  }
+
   // ── cloud transcription (OpenAI gpt-4o-transcribe) ─────────────────────────
   function cloudTranscribe(a16) {
     var key = (state.openaiKey || '').trim();
@@ -302,7 +304,7 @@
     var form = new FormData();
     form.append('file', new Blob([encodeWav(a16, 16000)], { type: 'audio/wav' }), 'answer.wav');
     form.append('model', (state.cloudModel || 'gpt-4o-transcribe').trim());
-    form.append('language', 'sw');
+    form.append('language', 'en');
     fetch('https://api.openai.com/v1/audio/transcriptions', {
       method: 'POST', headers: { 'authorization': 'Bearer ' + key }, body: form
     }).then(function (res) {
@@ -325,7 +327,7 @@
 
   // ── the recognizer shim (drop-in for the Web Speech object) ────────────────
   var shim = {
-    lang: 'sw-KE', continuous: false, interimResults: true, maxAlternatives: 1,
+    lang: 'en-US', continuous: false, interimResults: true, maxAlternatives: 1,
     onresult: null, onend: null, onerror: null, onstart: null,
     start: function () {
       if (state.engine === 'browser') {
@@ -346,7 +348,7 @@
   };
   reconocimiento = shim;
 
-  // ── the "Recognition" selector UI ──────────────────────────────────────────
+  // ── the "Recognition" selector UI ────────────────────────────────────────────
   function buildUI() {
     var anchor = $('decirBtn');
     if (!anchor || !anchor.parentNode) { return; }
@@ -359,7 +361,7 @@
 
     var sel = document.createElement('select');
     sel.style.cssText = 'padding:.35rem .5rem;border-radius:.5rem;';
-    [['browser', 'Browser  (use Chrome for Swahili)'],
+    [['browser', 'Browser  (use Chrome/Edge)'],
      ['whisper', 'On-device Whisper  (any browser)'],
      ['elevenlabs', 'ElevenLabs Scribe  (uses your Voice key)'],
      ['cloud', 'Cloud  (OpenAI gpt-4o-transcribe)']].forEach(function (o) {

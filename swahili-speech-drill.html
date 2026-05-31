@@ -8833,6 +8833,8 @@ let escuchando = false;
 let modoAutomatico = false;
 let modoDecir = false;
 let filtroTiempos = new Set(); // empty = all tenses
+let srs = {}; // id -> {box:1..5, due:ms, reps, lapses} — spaced-repetition schedule
+const PROGRESS_STORE = 'swahiliDrillProgress.v1';
 
 const TENSE_NAMES = {
   na:  'Present (-na-)',
@@ -8854,6 +8856,53 @@ function filteredExercises(){
   if (filtroTiempos.size === 0) return exercises;
   return exercises.filter(a => filtroTiempos.has(extraerTiempo(a.id)));
 }
+
+// ==================== SPACED REPETITION (Leitner) ====================
+// Box intervals in minutes (index by box 1..5): a just-lapsed item repeats within
+// the session; higher boxes push the next review further out.
+const SRS_INTERVALOS_MIN = [0, 1, 10, 60 * 24, 60 * 24 * 3, 60 * 24 * 7];
+function srsIntervalo(box){ return SRS_INTERVALOS_MIN[Math.max(1, Math.min(5, box))]; }
+function programar(id, correcto){
+  const prev = srs[id] || { box: 0, reps: 0, lapses: 0 };
+  const box = correcto ? Math.min((prev.box || 0) + 1, 5) : 1;
+  srs[id] = {
+    box,
+    due: Date.now() + srsIntervalo(box) * 60000,
+    reps: (prev.reps || 0) + 1,
+    lapses: (prev.lapses || 0) + (correcto ? 0 : 1)
+  };
+}
+function itemsVencidos(){
+  const t = Date.now();
+  return filteredExercises().filter(a => srs[a.id] && srs[a.id].due <= t);
+}
+function itemsProgramados(){
+  return filteredExercises().filter(a => srs[a.id] && srs[a.id].box < 5);
+}
+function recomputarCola(){
+  colaRepaso = itemsVencidos().sort((a, b) => srs[a.id].due - srs[b.id].due);
+}
+
+// ==================== PROGRESS PERSISTENCE ====================
+function saveProgress(){
+  try {
+    localStorage.setItem(PROGRESS_STORE, JSON.stringify({
+      conteo, debiles, srs, registro: registro.slice(-100)
+    }));
+  } catch (e) { /* storage full or unavailable — non-fatal */ }
+}
+function loadProgress(){
+  try {
+    const raw = localStorage.getItem(PROGRESS_STORE);
+    if (!raw) return;
+    const d = JSON.parse(raw);
+    if (d.conteo) conteo = d.conteo;
+    if (d.debiles) debiles = d.debiles;
+    if (d.srs) srs = d.srs;
+    if (Array.isArray(d.registro)) registro = d.registro;
+  } catch (e) { /* corrupt store — start fresh */ }
+}
+
 const $ = id => document.getElementById(id);
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 let reconocimiento = null;
@@ -8977,7 +9026,11 @@ function textoPlano(t){
 }
 
 function incluyeAlguna(texto, opciones){
-  return opciones.some(op => texto.includes(textoPlano(op)));
+  // Word-boundary match: pad both sides with spaces so a single-word key no
+  // longer matches inside a longer word, while multi-word phrases still match
+  // as a contiguous run of words.
+  const t = ' ' + texto + ' ';
+  return opciones.some(op => t.includes(' ' + textoPlano(op) + ' '));
 }
 
 function feedbackPorTiempo(tense, item, u){
@@ -9028,13 +9081,18 @@ function elegir(){
     $('feedbackBox').textContent = 'No exercises match the selected filters.';
     return;
   }
-  const repasoFiltrado = colaRepaso.filter(r => filtroTiempos.size === 0 || filtroTiempos.has(extraerTiempo(r.id)));
-  const usarRepaso = repasoFiltrado.length && Math.random() < 0.45;
-  if (usarRepaso) {
-    actual = repasoFiltrado[0];
-    colaRepaso = colaRepaso.filter(r => r.id !== actual.id);
+  recomputarCola(); // colaRepaso = items whose review time has arrived (most overdue first)
+  const nuevos = pool.filter(a => !srs[a.id]);
+  let usarRepaso = false;
+  if (colaRepaso.length && (nuevos.length === 0 || Math.random() < 0.5)) {
+    actual = colaRepaso[0];
+    usarRepaso = true;
+  } else if (nuevos.length) {
+    actual = nuevos[Math.floor(Math.random() * nuevos.length)];
   } else {
-    actual = pool[Math.floor(Math.random()*pool.length)];
+    const programados = pool.filter(a => srs[a.id]).sort((a, b) => srs[a.id].due - srs[b.id].due);
+    actual = programados[0] || pool[Math.floor(Math.random() * pool.length)];
+    usarRepaso = !!programados[0];
   }
   const tense = extraerTiempo(actual.id);
   $('estadoPill').textContent = usarRepaso ? 'Status: review' : 'Status: new';
@@ -9057,11 +9115,20 @@ let elSlow = localStorage.getItem('el_slow') === 'true';
 let audioQueue = [];
 let isPlaying = false;
 let currentAudio = null;
+let audioGen = 0; // bumped on every cancel; lets in-flight fetches detect they are stale
 
 function cancelarAudio(){
+  audioGen++;
   audioQueue.length = 0;
   isPlaying = false;
-  if (currentAudio) { currentAudio.pause(); currentAudio = null; }
+  if (currentAudio) {
+    // Fully release the element, not just pause it. On Safari a paused <audio>
+    // can keep the shared audio session in playback mode, blocking the Web Speech
+    // recognizer from reclaiming the mic after listening to a prompt.
+    currentAudio.pause();
+    try { currentAudio.src = ''; currentAudio.load(); } catch (e) { /* ignore */ }
+    currentAudio = null;
+  }
   if ('speechSynthesis' in window) speechSynthesis.cancel();
 }
 
@@ -9080,6 +9147,7 @@ function playNext(){
   if (audioQueue.length === 0) { isPlaying = false; return; }
   isPlaying = true;
   const current = audioQueue.shift();
+  const gen = audioGen; // capture; if cancelarAudio() runs before the fetch resolves, this goes stale
   const useUserKey = !!elApiKey;
   const speed = elSlow ? 0.75 : 0.95;
   const url = useUserKey
@@ -9098,6 +9166,9 @@ function playNext(){
   fetch(url, { method: 'POST', headers, body })
   .then(res => { if (!res.ok) throw new Error('ElevenLabs ' + res.status); return res.blob(); })
   .then(blob => {
+    // Playback was cancelled (e.g. user pressed "Say answer") while this fetch
+    // was in flight — drop it so it can't play into an open microphone.
+    if (gen !== audioGen) { return; }
     const url = URL.createObjectURL(blob);
     const audio = new Audio(url);
     currentAudio = audio;
@@ -9105,6 +9176,7 @@ function playNext(){
     audio.play().catch(err => { console.error(err); currentAudio = null; if (current.callback) current.callback(); playNext(); });
   })
   .catch(err => {
+    if (gen !== audioGen) { return; } // cancelled mid-flight; stay silent
     console.error('ElevenLabs TTS failed:', err);
     hablarNativo(current.text, current.callback);
     playNext();
@@ -9206,6 +9278,11 @@ function decirRespuesta(){
     detenerReconocimiento();
     return;
   }
+  // Stop any TTS still playing or queued (e.g. right after "Listen to context")
+  // so the speaker output can't bleed into the mic; the audioGen guard in
+  // playNext() also drops a TTS fetch that resolves after this point. Open the
+  // mic synchronously inside the click — Safari/iOS only allow it within a gesture.
+  cancelarAudio();
   modoAutomatico = false;
   modoDecir = true;
   $('feedbackBox').textContent = 'Say your answer now. The app will check it when you finish.';
@@ -9226,10 +9303,11 @@ function secuenciaVoz(){
 }
 
 function actualizar(){
+  recomputarCola();
   $('correctCount').textContent = conteo.correctas;
   $('wrongCount').textContent = conteo.incorrectas;
-  $('reviewCount').textContent = colaRepaso.length;
-  $('colaPill').textContent = `Review: ${colaRepaso.length}`;
+  $('reviewCount').textContent = itemsProgramados().length; // scheduled, not yet mastered
+  $('colaPill').textContent = `Review: ${colaRepaso.length}`; // due right now
 }
 
 function pintarRegistro(){
@@ -9272,14 +9350,16 @@ function notaTiempo(item){
 }
 
 function registrarDebilidad(item){
+  // The review queue is derived from the SRS schedule now (see programar/
+  // recomputarCola); here we only track how often each verb trips the learner up.
   debiles[item.id] = (debiles[item.id] || 0) + 1;
-  if (!colaRepaso.find(x => x.id === item.id)) colaRepaso.push(item);
 }
 
 function revisar(usuario){
   const res = analizar(usuario, actual);
   const repaso = $('estadoPill').textContent.includes('review');
   registro.push({item:actual, usuario, correcto:res.correcto, notas:res.notas, repaso, ts:new Date().toISOString(), aciertos:res.aciertos, total:res.total});
+  programar(actual.id, res.correcto); // update the spaced-repetition schedule
   if (res.correcto) {
     conteo.correctas += 1;
     $('feedbackBox').innerHTML = `<span class="ok">Correct.</span> ${actual.respuesta}${notaTiempo(actual)}<div style="margin-top:.5rem;font-size:var(--text-sm);color:var(--color-text-muted);">Press "Next" to continue.</div>`;
@@ -9292,6 +9372,7 @@ function revisar(usuario){
   }
   actualizar();
   pintarRegistro();
+  saveProgress(); // persist score, schedule, and history across reloads
   if (!res.correcto) {
     setTimeout(() => {
       $('feedbackBox').innerHTML += ' Try again with the same exercise.';
@@ -9338,6 +9419,7 @@ $('slowToggle').addEventListener('click', () => {
 
 window.addEventListener('beforeunload', () => {
   if (typeof detenerReconocimiento === 'function') detenerReconocimiento();
+  saveProgress();
 });
 
 // Tense filter pill handlers
@@ -9368,6 +9450,7 @@ document.querySelectorAll('#tenseFilter .tense-pill').forEach(pill => {
   });
 });
 
+loadProgress(); // restore score, schedule, and history from a previous session
 elegir();
 actualizar();
 $('vozPill').textContent = elEnabled ? 'Voice: ElevenLabs' : 'Voice: browser';
