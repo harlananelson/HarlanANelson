@@ -3,122 +3,116 @@
 Edit the CELLS list below and re-run `python build_notebook.py` to regenerate the
 notebook — this is the maintainable source, so we never hand-edit .ipynb JSON.
 
-The notebook fine-tunes OpenAI Whisper for SPANISH transcription of one speaker
-(a pastor) from his YouTube sermons, for on-device ASR on an iPad Air 5 (M1, 8GB)
-via WhisperKit. English is produced by a separate cloud translation step
-(internet is available), so only the Spanish ASR is fine-tuned here.
+Fine-tunes Whisper for Pr. Jean Petit's Spanish sermons (Iglesia de Fe) so
+real-time Spanish->English runs on an iPad Air 5 (M1, 8GB) via WhisperKit:
+download audio from YouTube, re-transcribe with faster-whisper large-v3 on the
+GPU (much better labels than the YouTube auto-captions), distill into a small
+Whisper. English is produced by a separate cloud translation step.
 """
 import json
 
 # Each cell is (kind, source) where kind is "md" or "code".
 CELLS = [
-("md", r"""# Fine-tune Whisper for Spanish sermon transcription
+("md", r"""# Fine-tune Whisper for Pr. Jean Petit's Spanish sermons
 
-**Goal:** better real-time Spanish→English of a specific pastor's live sermons on an **iPad Air 5 (Apple M1, 8 GB)**.
+**Goal:** better real-time Spanish→English of Pr. Jean Petit / Iglesia de Fe sermons on an **iPad Air 5 (Apple M1, 8 GB)**.
 
-**Pipeline (this notebook does step 1 only):**
-1. **Spanish audio → Spanish text** — fine-tuned Whisper, runs *on the iPad* via WhisperKit. ← *this notebook*
-2. **Spanish text → English** — a cloud LLM (internet is available; your Live Translator already does this).
+**Pipeline (this notebook does the ASR fine-tune):**
+1. **Spanish audio → Spanish text** — fine-tuned Whisper, on the iPad via WhisperKit. ← *this notebook*
+2. **Spanish text → English** — a cloud LLM (internet available; your Live Translator already does this).
 
-We fine-tune **Spanish transcription** (not translation) because that's where speaker-specific tuning pays off — his accent, cadence, proper names, and theological vocabulary — and the training data is easy: *Spanish audio + Spanish text*.
+**Data:** the sermon YouTube URLs are listed below (one channel, *Pr. Jean Petit* — the biblestudy repo is private, so we don't clone it). We download each sermon's audio and **re-transcribe it with faster-whisper large-v3 on the GPU** — the existing YouTube auto-captions are the weakest labels, and large-v3 gives full, well-segmented sentences. Then we distill those labels into a small Whisper. Teacher→student adapted to *his voice*; the ceiling is large-v3's accuracy on this speaker.
 
-**Run this on a GPU** (Colab/Kaggle/HF), **not** on the iPad. The iPad only runs the *converted* model later.
+**Run on a GPU** (Colab/Kaggle/HF), not the iPad. ~13 h of audio at large-v3 takes a while even on a GPU — batched inference (below) keeps it reasonable."""),
 
-**Prereqs:** a GPU runtime; optionally a Hugging Face token (to push the model); the URLs of several of the pastor's sermons. Aim for **~5–10 hours** of his audio for a solid result."""),
-
-("code", r"""%pip install -q "transformers>=4.44" "datasets>=2.20" "accelerate>=0.33" "peft>=0.12" evaluate jiwer soundfile librosa webvtt-py yt-dlp"""),
+("code", r"""%pip install -q "transformers>=4.44" "datasets>=2.20" "accelerate>=0.33" "peft>=0.12" evaluate jiwer soundfile librosa yt-dlp faster-whisper"""),
 
 ("md", r"""## Configuration
 
-Put the pastor's sermon URLs here. Keep **one whole sermon** aside as the held-out evaluation set (never train on it)."""),
+Pr. Jean Petit's sermons (jean-petit talks + Iglesia de Fe services), one channel. Two sermons in the repo had no source URL and are omitted. Hold one out for evaluation."""),
 
-("code", r"""# --- EDIT THIS ---
-SERMON_URLS = [
-    # "https://www.youtube.com/watch?v=XXXXXXXXXXX",
-    # "https://www.youtube.com/watch?v=YYYYYYYYYYY",
+("code", r"""# --- EDIT THIS ---  (Pr. Jean Petit / Iglesia de Fe — one YouTube channel)
+SERMONS = [
+    # (name,                  YouTube URL)
+    ("estilo-vida-alejando",  "https://www.youtube.com/watch?v=1BIa-AWgG7Y"),
+    ("no-saltes-solo",        "https://www.youtube.com/watch?v=QKr-XXnYktA"),   # <- held out for eval
+    ("servicio-2026-05-24",   "https://www.youtube.com/live/-tTKmdUaqGI"),
+    ("servicio-2026-05-31",   "https://www.youtube.com/watch?v=WRbaoILFH-Q"),
+    ("servicio-2026-06-08",   "https://www.youtube.com/watch?v=emcQv9S0cFA"),
+    ("servicio-2026-06-09",   "https://www.youtube.com/watch?v=FxSXSvp2M0M"),
+    ("servicio-2026-06-16",   "https://www.youtube.com/watch?v=ftc7SkA7DFc"),
+    ("servicio-2026-06-23",   "https://www.youtube.com/watch?v=yBZFAQRGKcU"),
 ]
-HELD_OUT_URL = ""   # one sermon URL kept ENTIRELY for evaluation (not in SERMON_URLS)
+HELD_OUT      = "no-saltes-solo"        # kept ENTIRELY for evaluation
 
-BASE_MODEL  = "openai/whisper-small"   # small converts well to CoreML and runs real-time on M1.
-                                       # Options: openai/whisper-medium, openai/whisper-large-v3-turbo
-LANGUAGE    = "spanish"
-TASK        = "transcribe"             # NOT "translate" — we keep Spanish; English is done in the cloud.
-MAX_SEG_SEC = 28                       # Whisper's window is 30s; keep segments under it.
-SAMPLE_RATE = 16000
-WORKDIR     = "sermon_data"
-OUTPUT_DIR  = "whisper-small-sermon-es"
+BASE_MODEL    = "openai/whisper-small"  # student: converts to CoreML; real-time on M1
+TEACHER_MODEL = "large-v3"              # faster-whisper teacher (GPU); far better labels than auto-captions
+LANGUAGE      = "spanish"
+TASK          = "transcribe"            # keep Spanish; English is cloud-side
+MAX_SEG_SEC   = 28
+MIN_SEG_SEC   = 1.0
+SAMPLE_RATE   = 16000
+BATCH_SIZE    = 16                      # batched large-v3 inference on the GPU
+AUDIO_DIR     = "audio_cache"
+OUTPUT_DIR    = "whisper-small-jeanpetit-es"
 
 import os
-os.makedirs(WORKDIR, exist_ok=True)
-assert SERMON_URLS, "Add at least one sermon URL to SERMON_URLS."
-print(f"{len(SERMON_URLS)} training sermon(s); held-out: {HELD_OUT_URL or 'NONE — set one!'}")"""),
+os.makedirs(AUDIO_DIR, exist_ok=True)
+sermons = [{"name": n, "url": u, "split": "eval" if n == HELD_OUT else "train"} for n, u in SERMONS]
+print(f"{sum(s['split']=='train' for s in sermons)} train, {sum(s['split']=='eval' for s in sermons)} eval sermons")"""),
 
-("md", r"""## Step 1 — Download audio + Spanish subtitles (yt-dlp)
+("md", r"""## Step 1 — Download audio (16 kHz mono) for each sermon
 
-We grab 16 kHz mono audio and the **Spanish** subtitle track. Human/official subs are best; auto-generated subs are a usable fallback **but should be spot-corrected** — fine-tuning on wrong text teaches wrong text. If a sermon has no subs at all, you'll need to transcribe it once with a large Whisper and correct it before training."""),
+Colab has `ffmpeg` preinstalled, so `yt-dlp -x` can extract WAV directly. Cached, so re-runs skip."""),
 
 ("code", r"""import subprocess
 
-def fetch(url, idx, folder=WORKDIR):
-    base = f"{folder}/sermon_{idx:02d}"
-    # audio -> 16k mono wav
-    subprocess.run([
-        "yt-dlp", "-x", "--audio-format", "wav",
-        "--postprocessor-args", f"-ar {SAMPLE_RATE} -ac 1",
-        "-o", base + ".%(ext)s", url], check=True)
-    # spanish subtitles (human first; auto as fallback), as vtt
-    subprocess.run([
-        "yt-dlp", "--skip-download",
-        "--write-subs", "--write-auto-subs", "--sub-langs", "es.*",
-        "--convert-subs", "vtt", "-o", base + ".%(ext)s", url], check=False)
-    return base
+def fetch_audio(url, name):
+    out = os.path.join(AUDIO_DIR, name + ".wav")
+    if os.path.exists(out):
+        return out
+    subprocess.run(["yt-dlp", "-f", "bestaudio", "-x", "--audio-format", "wav",
+                    "--postprocessor-args", f"-ar {SAMPLE_RATE} -ac 1",
+                    "-o", os.path.join(AUDIO_DIR, name + ".%(ext)s"), url], check=True)
+    return out
 
-train_bases = [fetch(u, i) for i, u in enumerate(SERMON_URLS)]
-heldout_base = fetch(HELD_OUT_URL, 99) if HELD_OUT_URL else None
-print("downloaded:", train_bases, heldout_base)"""),
+for s in sermons:
+    s["wav"] = fetch_audio(s["url"], s["name"])
+    print("audio:", s["wav"])"""),
 
-("md", r"""## Step 2 — Slice audio into ≤28 s segments aligned to subtitle cues
+("md", r"""## Step 2 — Make labels: transcribe each sermon with large-v3 (batched, GPU)
 
-We read the VTT, merge consecutive cues up to `MAX_SEG_SEC`, and cut the matching audio. Each segment becomes one `(audio, sentence)` training example."""),
+`BatchedInferencePipeline` runs large-v3 several windows at a time — much faster than sequential on a GPU. VAD filtering skips music/silence (helps the casa-de-fe services). Each returned segment becomes one `(audio_clip, spanish_text)` training pair."""),
 
-("code", r"""import glob, re, webvtt, soundfile as sf, librosa, numpy as np
+("code", r"""import torch, librosa, numpy as np
+from faster_whisper import WhisperModel, BatchedInferencePipeline
 
-def clean(t):
-    t = re.sub(r"<[^>]+>", " ", t)          # strip vtt inline tags
-    t = re.sub(r"\s+", " ", t).strip()
-    return t
+on_gpu = torch.cuda.is_available()
+teacher = WhisperModel(TEACHER_MODEL,
+                       device="cuda" if on_gpu else "cpu",
+                       compute_type="float16" if on_gpu else "int8")
+pipe = BatchedInferencePipeline(model=teacher)
+print("teacher on", "GPU" if on_gpu else "CPU (slow — use a GPU runtime)")
 
-def vtt_for(base):
-    cands = sorted(glob.glob(base + "*.vtt"))
-    return cands[0] if cands else None
-
-def segments_from(base):
-    vtt = vtt_for(base)
-    wav = base + ".wav"
-    if not vtt or not os.path.exists(wav):
-        print("  skip (missing subs or audio):", base); return []
-    audio, sr = librosa.load(wav, sr=SAMPLE_RATE, mono=True)
-    cues = [(c.start_in_seconds, c.end_in_seconds, clean(c.text)) for c in webvtt.read(vtt) if clean(c.text)]
-    rows, cur_s, cur_e, cur_t = [], None, None, []
-    def flush():
-        if cur_t:
-            a = audio[int(cur_s*sr):int(cur_e*sr)]
-            if len(a) > 0.5*sr:
-                rows.append({"audio": a.astype(np.float32), "sentence": " ".join(cur_t)})
-    for s, e, t in cues:
-        if cur_s is None:
-            cur_s, cur_e, cur_t = s, e, [t]
-        elif e - cur_s <= MAX_SEG_SEC:
-            cur_e, cur_t = e, cur_t + [t]
-        else:
-            flush(); cur_s, cur_e, cur_t = s, e, [t]
-    flush()
-    print(f"  {base}: {len(rows)} segments")
+def label_sermon(s):
+    audio, _ = librosa.load(s["wav"], sr=SAMPLE_RATE, mono=True)
+    segments, _ = pipe.transcribe(s["wav"], language="es", batch_size=BATCH_SIZE, vad_filter=True)
+    rows = []
+    for seg in segments:
+        txt = (seg.text or "").strip()
+        dur = seg.end - seg.start
+        if not txt or dur < MIN_SEG_SEC or dur > MAX_SEG_SEC:
+            continue
+        clip = audio[int(seg.start*SAMPLE_RATE):int(seg.end*SAMPLE_RATE)]
+        if len(clip) >= MIN_SEG_SEC*SAMPLE_RATE:
+            rows.append({"audio": clip.astype(np.float32), "sentence": txt, "split": s["split"]})
+    print(f"  {s['name']}: {len(rows)} segments")
     return rows
 
-train_rows = [r for b in train_bases for r in segments_from(b)]
-eval_rows  = segments_from(heldout_base) if heldout_base else []
-print(f"train segments: {len(train_rows)} | eval segments: {len(eval_rows)}")"""),
+all_rows = [r for s in sermons for r in label_sermon(s)]
+train_rows = [r for r in all_rows if r["split"] == "train"]
+eval_rows  = [r for r in all_rows if r["split"] == "eval"]
+print(f"segments — train: {len(train_rows)}  eval: {len(eval_rows)}")"""),
 
 ("md", r"""## Step 3 — Build Hugging Face datasets"""),
 
@@ -134,10 +128,9 @@ train_ds = to_ds(train_rows)
 eval_ds  = to_ds(eval_rows) if eval_rows else None
 train_ds"""),
 
-("md", r"""## Step 4 — Processor, feature extraction, collator, metric"""),
+("md", r"""## Step 4 — Processor, feature extraction, collator, WER metric"""),
 
-("code", r"""import torch
-from dataclasses import dataclass
+("code", r"""from dataclasses import dataclass
 from typing import Any, Dict, List, Union
 from transformers import WhisperProcessor
 
@@ -182,9 +175,7 @@ def compute_metrics(pred):
     return {"wer": 100 * wer_metric.compute(
         predictions=[norm(p) for p in pred_str], references=[norm(l) for l in label_str])}"""),
 
-("md", r"""## Step 5 — Load the model and attach LoRA, then train
-
-LoRA keeps fine-tuning feasible on a single GPU and produces a tiny adapter. For maximum quality with enough GPU you can skip PEFT and train all weights."""),
+("md", r"""## Step 5 — Load the model, attach LoRA, train"""),
 
 ("code", r"""from transformers import WhisperForConditionalGeneration
 from peft import LoraConfig, get_peft_model
@@ -206,7 +197,7 @@ args = Seq2SeqTrainingArguments(
     output_dir=OUTPUT_DIR,
     per_device_train_batch_size=8,
     gradient_accumulation_steps=2,
-    learning_rate=1e-3,            # LoRA likes a higher LR; use ~1e-5 for full fine-tune
+    learning_rate=1e-3,            # LoRA likes a higher LR; ~1e-5 for a full fine-tune
     warmup_steps=50,
     num_train_epochs=3,
     fp16=torch.cuda.is_available(),
@@ -228,48 +219,46 @@ trainer = Seq2SeqTrainer(
 )
 trainer.train()"""),
 
-("md", r"""## Step 6 — Evaluate WER on the held-out sermon"""),
+("md", r"""## Step 6 — Evaluate WER on the held-out sermon
 
-("code", r"""if eval_ds is not None:
-    print(trainer.evaluate())
-else:
-    print("No held-out sermon set — set HELD_OUT_URL and re-run to measure WER.")"""),
+Note: this measures WER against the **large-v3 labels**, i.e. how well the small model matches the teacher — not ground truth. For a true number, evaluate against a hand-checked transcript."""),
 
-("md", r"""## Step 7 — Save (merge the LoRA adapter) and optionally push to the Hub"""),
+("code", r"""print(trainer.evaluate() if eval_ds is not None else "No eval set — set HELD_OUT to a sermon name.")"""),
 
-("code", r"""merged = model.merge_and_unload()       # fold LoRA into base weights -> standard Whisper checkpoint
+("md", r"""## Step 7 — Save (merge LoRA) and push to the Hub
+
+You have a Hugging Face account — uncomment to push (`huggingface-cli login` first, or use a token)."""),
+
+("code", r"""merged = model.merge_and_unload()       # fold LoRA into base -> standard Whisper checkpoint
 merged.save_pretrained(OUTPUT_DIR)
 processor.save_pretrained(OUTPUT_DIR)
 print("saved to", OUTPUT_DIR)
 
 # from huggingface_hub import login; login()
-# merged.push_to_hub("your-username/whisper-small-sermon-es")
-# processor.push_to_hub("your-username/whisper-small-sermon-es")"""),
+# merged.push_to_hub("harlananelson/whisper-small-jeanpetit-es")
+# processor.push_to_hub("harlananelson/whisper-small-jeanpetit-es")"""),
 
-("md", r"""## Step 8 — Convert to CoreML for WhisperKit (do this on a Mac)
-
-WhisperKit runs Whisper on the iPad's Neural Engine. Convert the fine-tuned checkpoint with Argmax's tools (run on macOS):
+("md", r"""## Step 8 — Convert to CoreML for WhisperKit (run on a Mac)
 
 ```bash
 pip install whisperkittools
-# point it at the merged checkpoint from Step 7 (local path or your HF repo id)
 whisperkit-generate-model --model-version OUTPUT_DIR_OR_HF_REPO \
     --output-dir ./CompressedModels --quantize
 ```
 
-Then bundle the resulting `.mlmodelc` in a small WhisperKit app (Swift) and load it on the iPad Air 5. Start with the `small` model; if it's too slow, try `whisper-large-v3-turbo` as the base and re-convert. Docs: <https://github.com/argmaxinc/WhisperKit>"""),
+Bundle the `.mlmodelc` in a WhisperKit app on the iPad Air 5. Start with `small`; if accuracy needs a bump and it stays real-time, re-run with `BASE_MODEL = "openai/whisper-large-v3-turbo"`. Docs: <https://github.com/argmaxinc/WhisperKit>"""),
 
-("md", r"""## Step 9 — The English side (cloud)
+("md", r"""## Step 9 — The English side, and notes
 
-On the iPad, fine-tuned Whisper emits **Spanish** text in real time. Send each finished sentence to a cloud LLM for the **English** translation — exactly what your **Live Translator** (`live-translator.html`) already does (Anthropic/OpenAI, context-aware, 5 concurrent). So the device only runs ASR; the network handles translation.
+On the iPad the fine-tuned Whisper emits **Spanish** in real time; send each finished sentence to a cloud LLM for **English** — exactly what your `live-translator.html` already does.
 
-**End to end:** iPad mic → fine-tuned Whisper (Spanish, on-device, WhisperKit) → cloud LLM → English caption.
+**End to end:** iPad mic → fine-tuned Whisper (Spanish, on-device) → cloud LLM → English caption.
 
-### Caveats
-- **Data quality:** correct auto-generated subtitles before training; bad references teach bad output.
-- **Amount:** ~5–10 h of his audio gives a meaningful WER drop; more helps for names/terms.
-- **Rights:** fine for personal/ministry use; mind the source's terms if you redistribute.
-- **8 GB iPad:** keep ASR to `small`/`turbo`; translation is cloud, so RAM isn't the bottleneck here."""),
+### Notes
+- **Labels:** large-v3 transcription beats the YouTube auto-captions (full sentences, clean segments), but it still mishears rare names (e.g. *Betsabé*, *sabuesos*). Hand-correct a subset if you need gold references.
+- **casa-de-fe services contain non-sermon audio** (worship, announcements, multiple voices). VAD drops silence/music but not other speakers — for the cleanest single-speaker result, train on the `jean-petit` talks alone (drop the `servicio-*` rows from `SERMONS`).
+- **Speed:** ~13 h of audio at large-v3 is the slow part; batched inference helps. To go faster, set `TEACHER_MODEL = "large-v3-turbo"` (slightly lower quality).
+- **8 GB iPad:** keep ASR to `small`/`turbo`; translation is cloud, so RAM isn't the bottleneck."""),
 ]
 
 
