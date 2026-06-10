@@ -193,6 +193,10 @@
           <label for="vocab">Vocabulary hints (optional) &mdash; proper names, places, and archaic or regional words the speaker uses, so the transcriber expects them</label>
           <textarea id="vocab" rows="3" autocomplete="off" spellcheck="false" placeholder="Names and unusual terms the speaker uses, e.g. regional vocabulary and theological words."></textarea>
         </div>
+        <div class="field">
+          <label for="fileRoot">Export filename root &mdash; the downloaded file is named <em>root</em>-YYYYMMDD-HHMM.md</label>
+          <input type="text" id="fileRoot" autocomplete="off" spellcheck="false" placeholder="transcript" />
+        </div>
       </div>
       <div class="field">
         <label for="sens">Mic sensitivity &mdash; move right if it misses quiet speech, left if background noise triggers it</label>
@@ -636,7 +640,7 @@
       whisperModel: $('whisperModel'), whisperCustom: $('whisperCustom'), webgpu: $('webgpu'),
       preloadBtn: $('preloadBtn'), sens: $('sens'), modelStatus: $('modelStatus'),
       engine: $('engine'), localOpts: $('localOpts'), cloudOpts: $('cloudOpts'),
-      cloudModel: $('cloudModel'), cloudModelCustom: $('cloudModelCustom'), vocab: $('vocab'), openaiKey: $('openaiKey'),
+      cloudModel: $('cloudModel'), cloudModelCustom: $('cloudModelCustom'), vocab: $('vocab'), fileRoot: $('fileRoot'), openaiKey: $('openaiKey'),
       startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), downloadBtn: $('downloadBtn'), diarizeBtn: $('diarizeBtn'), fsBtn: $('fsBtn'),
       fontDown: $('fontDown'), fontUp: $('fontUp'), statusDot: $('statusDot'), statusText: $('statusText'),
       levelFill: $('levelFill'), transcript: $('transcript'), rows: $('rows'), startHint: $('startHint'),
@@ -664,6 +668,7 @@
       transcribeEngine: 'local',
       cloudModel: 'gpt-4o-transcribe',
       vocab: '',
+      fileRoot: 'transcript',
       logEndpoint: '',
       direction: 'es-en',
       theme: 'light', scale: 1, view: 'both'
@@ -709,6 +714,7 @@
           transcribeEngine: s.transcribeEngine === 'cloud' ? 'cloud' : 'local',
           cloudModel: s.cloudModel || DEFAULTS.cloudModel,
           vocab: typeof s.vocab === 'string' ? s.vocab : '',
+          fileRoot: typeof s.fileRoot === 'string' ? s.fileRoot : DEFAULTS.fileRoot,
           logEndpoint: s.logEndpoint || '',
           direction: ['es-en', 'en-es', 'auto'].indexOf(s.direction) >= 0 ? s.direction : 'es-en',
           theme: s.theme === 'dark' ? 'dark' : 'light',
@@ -1478,7 +1484,11 @@
       var blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
       var url = URL.createObjectURL(blob);
       var t0 = segments[0].t ? new Date(segments[0].t) : new Date();
-      var fname = 'transcript-' + t0.getFullYear() + pad2(t0.getMonth() + 1) + pad2(t0.getDate())
+      var root = (state.fileRoot || '').trim()
+        .replace(/\.md$/i, '')
+        .replace(/[^\wÀ-ɏ.-]+/g, '-')
+        .replace(/^-+|-+$/g, '') || 'transcript';
+      var fname = root + '-' + t0.getFullYear() + pad2(t0.getMonth() + 1) + pad2(t0.getDate())
         + '-' + pad2(t0.getHours()) + pad2(t0.getMinutes()) + '.md';
       var a = document.createElement('a');
       a.href = url; a.download = fname; a.style.display = 'none';
@@ -1672,6 +1682,7 @@
       els.engine.value = state.transcribeEngine;
       fillModelSelect(els.cloudModel, els.cloudModelCustom, CLOUD_SUGGESTIONS, state.cloudModel);
       els.vocab.value = state.vocab || '';
+      els.fileRoot.value = state.fileRoot || '';
       applyEngine();
       applyView();
       applyScale();
@@ -1737,6 +1748,10 @@
       });
       els.vocab.addEventListener('input', function () {
         state.vocab = els.vocab.value;
+        saveState();
+      });
+      els.fileRoot.addEventListener('input', function () {
+        state.fileRoot = els.fileRoot.value;
         saveState();
       });
       els.openaiKey.addEventListener('input', function () {
