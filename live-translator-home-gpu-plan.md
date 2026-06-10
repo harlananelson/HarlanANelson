@@ -85,6 +85,26 @@ Notes:
   persisted; sanitized; default `transcript` so existing `biblestudy`
   `parse_app_export.py` workflows keep working).
 
+## Step 4 in progress (paused 2026-06-10 ~6:30pm, resume after usage reset)
+
+Server (steps 1-3) is DONE and pushed (biblestudy `defe-transcripts`,
+`server/`). App integration mapped, not yet edited:
+
+- Add `<option value="homegpu">` to `#engine` (line ~167) + a `homegpuOpts`
+  div with `homeGpuUrl` input (state default '', persist like `vocab`).
+- **Fix first**: the `fileRoot` field (lines ~196-199) sits INSIDE `cloudOpts`
+  so it's hidden unless engine=cloud — move it after cloudOpts' closing div.
+- `applyEngine()` (~line 1029): 3-way toggle (localOpts/cloudOpts/homegpuOpts).
+- `start()` (~1281) / `updateControls()` (~1322): homegpu needs NO API keys —
+  gate on homeGpuUrl instead; open WebSocket, then `startCapture()`.
+- `onAudio()` (~1215): when homegpu, send each frame downsampled to 16 kHz
+  Float32 over the WS (linear-interp downsampler; skip client VAD machinery,
+  keep `setLevel`); server does VAD/reflow/translation.
+- WS `es` event -> new segment (es done, enState 'translating', dir es-en,
+  map server id -> seg); `en` event -> fill seg.en, state done, paintRow.
+  Diarization won't cover homegpu segments (no client audio copy) — fine v1.
+- stop(): send {"type":"stop"}, close WS after drain.
+
 ## Open decisions
 
 - Translation direction(s): ES→EN confirmed; EN→ES later? (UI + prompt only.)
