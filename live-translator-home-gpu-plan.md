@@ -85,7 +85,7 @@ Notes:
   persisted; sanitized; default `transcript` so existing `biblestudy`
   `parse_app_export.py` workflows keep working).
 
-## Step 4 in progress (paused 2026-06-10 ~6:30pm, resume after usage reset)
+## Step 4 DONE (2026-06-10 evening) — notes kept for reference
 
 Server (steps 1-3) is DONE and pushed (biblestudy `defe-transcripts`,
 `server/`). App integration mapped, not yet edited:

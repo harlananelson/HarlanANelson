@@ -165,6 +165,7 @@
           <select id="engine">
             <option value="local">On-device Whisper (private, no upload)</option>
             <option value="cloud">Cloud &mdash; OpenAI gpt-4o-transcribe (most accurate)</option>
+            <option value="homegpu">Home GPU &mdash; your own server over Tailscale (Whisper large-v3 + local LLM)</option>
           </select>
         </div>
       </div>
@@ -193,10 +194,17 @@
           <label for="vocab">Vocabulary hints (optional) &mdash; proper names, places, and archaic or regional words the speaker uses, so the transcriber expects them</label>
           <textarea id="vocab" rows="3" autocomplete="off" spellcheck="false" placeholder="Names and unusual terms the speaker uses, e.g. regional vocabulary and theological words."></textarea>
         </div>
+      </div>
+      <div id="homegpuOpts">
         <div class="field">
-          <label for="fileRoot">Export filename root &mdash; the downloaded file is named <em>root</em>-YYYYMMDD-HHMM.md</label>
-          <input type="text" id="fileRoot" autocomplete="off" spellcheck="false" placeholder="transcript" />
+          <label for="homeGpuUrl">Home GPU server URL &mdash; your streaming server, exposed with <code>tailscale serve</code></label>
+          <input type="text" id="homeGpuUrl" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="wss://machine.tailnet.ts.net:8443/ws" />
         </div>
+        <p class="note">Audio streams to your own machine over your tailnet; transcription (Whisper large-v3) and translation (local LLM) run there. No API keys needed. The device must be connected to Tailscale.</p>
+      </div>
+      <div class="field">
+        <label for="fileRoot">Export filename root &mdash; the downloaded file is named <em>root</em>-YYYYMMDD-HHMM.md</label>
+        <input type="text" id="fileRoot" autocomplete="off" spellcheck="false" placeholder="transcript" />
       </div>
       <div class="field">
         <label for="sens">Mic sensitivity &mdash; move right if it misses quiet speech, left if background noise triggers it</label>
@@ -640,6 +648,7 @@
       whisperModel: $('whisperModel'), whisperCustom: $('whisperCustom'), webgpu: $('webgpu'),
       preloadBtn: $('preloadBtn'), sens: $('sens'), modelStatus: $('modelStatus'),
       engine: $('engine'), localOpts: $('localOpts'), cloudOpts: $('cloudOpts'),
+      homegpuOpts: $('homegpuOpts'), homeGpuUrl: $('homeGpuUrl'),
       cloudModel: $('cloudModel'), cloudModelCustom: $('cloudModelCustom'), vocab: $('vocab'), fileRoot: $('fileRoot'), openaiKey: $('openaiKey'),
       startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), downloadBtn: $('downloadBtn'), diarizeBtn: $('diarizeBtn'), fsBtn: $('fsBtn'),
       fontDown: $('fontDown'), fontUp: $('fontUp'), statusDot: $('statusDot'), statusText: $('statusText'),
@@ -669,6 +678,7 @@
       cloudModel: 'gpt-4o-transcribe',
       vocab: '',
       fileRoot: 'transcript',
+      homeGpuUrl: '',
       logEndpoint: '',
       direction: 'es-en',
       theme: 'light', scale: 1, view: 'both'
@@ -711,10 +721,11 @@
           whisperModel: s.whisperModel || DEFAULTS.whisperModel,
           useWebGPU: !!s.useWebGPU,
           sensitivity: typeof s.sensitivity === 'number' ? s.sensitivity : DEFAULTS.sensitivity,
-          transcribeEngine: s.transcribeEngine === 'cloud' ? 'cloud' : 'local',
+          transcribeEngine: ['cloud', 'homegpu'].indexOf(s.transcribeEngine) >= 0 ? s.transcribeEngine : 'local',
           cloudModel: s.cloudModel || DEFAULTS.cloudModel,
           vocab: typeof s.vocab === 'string' ? s.vocab : '',
           fileRoot: typeof s.fileRoot === 'string' ? s.fileRoot : DEFAULTS.fileRoot,
+          homeGpuUrl: typeof s.homeGpuUrl === 'string' ? s.homeGpuUrl : '',
           logEndpoint: s.logEndpoint || '',
           direction: ['es-en', 'en-es', 'auto'].indexOf(s.direction) >= 0 ? s.direction : 'es-en',
           theme: s.theme === 'dark' ? 'dark' : 'light',
@@ -1027,14 +1038,115 @@
     }
 
     function applyEngine() {
-      var cloud = state.transcribeEngine === 'cloud';
-      els.localOpts.style.display = cloud ? 'none' : '';
-      els.cloudOpts.style.display = cloud ? '' : 'none';
-      if (cloud) {
+      var eng = state.transcribeEngine;
+      els.localOpts.style.display = eng === 'local' ? '' : 'none';
+      els.cloudOpts.style.display = eng === 'cloud' ? '' : 'none';
+      els.homegpuOpts.style.display = eng === 'homegpu' ? '' : 'none';
+      if (eng === 'cloud') {
         setModelStatus('Cloud transcription (' + (state.cloudModel || 'gpt-4o-transcribe') + ') — no model download needed.', '');
-      } else if ((els.modelStatus.textContent || '').indexOf('Cloud transcription') === 0) {
+      } else if (eng === 'homegpu') {
+        setModelStatus('Home GPU engine — transcription and translation run on your own server. No model download, no API keys.', '');
+      } else if (/^(Cloud transcription|Home GPU)/.test(els.modelStatus.textContent || '')) {
         setModelStatus('', '');
       }
+    }
+
+    // ---- Home GPU engine: stream PCM to your own server over Tailscale ----
+    // The server (biblestudy/server/stream_server.py) does VAD, Whisper
+    // large-v3 ASR, sentence reflow, and local-LLM translation, and sends
+    // back {"type":"es"|"en", "id":..., "text":...} events.
+    var hgWs = null;
+    var hgMap = {};   // server sentence id -> segment
+
+    function downsampleTo16k(frame, rate) {
+      if (rate === 16000) { return frame; }
+      var ratio = rate / 16000;
+      var n = Math.floor(frame.length / ratio);
+      var out = new Float32Array(n);
+      for (var i = 0; i < n; i++) {
+        var idx = i * ratio;
+        var i0 = Math.floor(idx);
+        var frac = idx - i0;
+        var s1 = frame[i0];
+        var s2 = frame[Math.min(i0 + 1, frame.length - 1)];
+        out[i] = s1 + (s2 - s1) * frac;
+      }
+      return out;
+    }
+
+    function hgHandleEvent(ev) {
+      if (ev.type === 'es') {
+        var seg = { id: nextId++, es: ev.text, esState: 'done', en: '', enState: 'translating', error: '', t: Date.now(), heard: ev.text, dir: 'es-en' };
+        segments.push(seg);
+        hgMap[ev.id] = seg;
+        removePlaceholder();
+        addRow(seg);
+        paintRow(seg);
+        maybeScroll();
+        updateStatus();
+      } else if (ev.type === 'en') {
+        var seg2 = hgMap[ev.id];
+        if (!seg2) { return; }
+        seg2.en = ev.text;
+        seg2.enState = 'done';
+        paintRow(seg2);
+        maybeScroll();
+      }
+    }
+
+    function hgConnect() {
+      return new Promise(function (resolve) {
+        var url = (state.homeGpuUrl || '').trim();
+        try { hgWs = new WebSocket(url); } catch (e) {
+          setStatus('err', 'Bad Home GPU server URL: ' + ((e && e.message) || e));
+          resolve(false); return;
+        }
+        hgWs.binaryType = 'arraybuffer';
+        var settled = false;
+        var timer = setTimeout(function () {
+          if (settled) { return; }
+          settled = true;
+          try { hgWs.close(); } catch (e) {}
+          setStatus('err', 'Home GPU server did not respond — is it running, and is tailscale serve active?');
+          resolve(false);
+        }, 10000);
+        hgWs.onmessage = function (m) {
+          var ev;
+          try { ev = JSON.parse(m.data); } catch (e) { return; }
+          if (ev.type === 'ready') {
+            if (!settled) {
+              settled = true; clearTimeout(timer);
+              pushLog('', 'Home GPU connected — asr=' + ev.asr + ' llm=' + ev.llm);
+              resolve(true);
+            }
+            return;
+          }
+          hgHandleEvent(ev);
+        };
+        hgWs.onerror = function () {
+          if (settled) { return; }
+          settled = true; clearTimeout(timer);
+          setStatus('err', 'Could not connect to the Home GPU server. Check the URL and that this device is on Tailscale.');
+          resolve(false);
+        };
+        hgWs.onclose = function () {
+          if (!settled) { settled = true; clearTimeout(timer); resolve(false); }
+          else if (listening && state.transcribeEngine === 'homegpu') {
+            pushLog('error', 'Home GPU connection closed');
+            setStatus('err', 'Home GPU connection lost — press Stop, then Start to reconnect.');
+          }
+          hgWs = null;
+        };
+      });
+    }
+
+    function hgDisconnect() {
+      if (!hgWs) { return; }
+      var ws = hgWs;
+      try { ws.send(JSON.stringify({ type: 'stop' })); } catch (e) {}
+      // keep the socket open briefly so the server can flush its last
+      // transcriptions and translations before closing from its side
+      setTimeout(function () { try { ws.close(); } catch (e) {} }, 8000);
     }
 
     // ---- merge buffer: utterance -> transcription -> translation ----
@@ -1222,6 +1334,13 @@
       var rms = Math.sqrt(sum / n);
       var frameMs = (n / srcRate) * 1000;
       setLevel(rms);
+      if (state.transcribeEngine === 'homegpu') {
+        // continuous streaming: the server does its own VAD and chunking
+        if (hgWs && hgWs.readyState === 1) {
+          hgWs.send(downsampleTo16k(frame, srcRate).buffer);
+        }
+        return;
+      }
       var threshold = micThreshold();
       if (rms >= threshold) {
         if (!vad.speaking) {
@@ -1279,10 +1398,17 @@
 
     // ---- start / stop ----
     function start() {
-      if (!hasKey()) { setStatus('err', 'Enter your translation API key first.'); return; }
-      if (state.transcribeEngine === 'cloud' && !(state.apiKeys.openai || '').trim()) {
-        setStatus('err', 'Cloud transcription needs an OpenAI API key — see the transcription settings.');
-        return;
+      if (state.transcribeEngine === 'homegpu') {
+        if (!(state.homeGpuUrl || '').trim()) {
+          setStatus('err', 'Enter your Home GPU server URL (wss://…/ws) in the transcription settings.');
+          return;
+        }
+      } else {
+        if (!hasKey()) { setStatus('err', 'Enter your translation API key first.'); return; }
+        if (state.transcribeEngine === 'cloud' && !(state.apiKeys.openai || '').trim()) {
+          setStatus('err', 'Cloud transcription needs an OpenAI API key — see the transcription settings.');
+          return;
+        }
       }
       if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
         setStatus('err', 'This browser cannot access the microphone.');
@@ -1291,6 +1417,18 @@
       listening = true;
       updateControls();
       pushConfig();
+      if (state.transcribeEngine === 'homegpu') {
+        pushLog('', 'Start pressed — Home GPU engine, server=' + state.homeGpuUrl);
+        setStatus('idle', 'Connecting to Home GPU server…');
+        hgConnect().then(function (ok) {
+          if (!ok) { listening = false; updateControls(); return; }
+          startCapture().then(function (capOk) {
+            if (!capOk) { listening = false; hgDisconnect(); updateControls(); return; }
+            setStatus('live', 'Listening — streaming to your Home GPU server.');
+          });
+        });
+        return;
+      }
       pushLog('', 'Start pressed — model="' + state.whisperModel + '" device=' + whisperDevice());
       if (state.transcribeEngine === 'local' && whisper) {
         whisper.postMessage({ type: 'load', model: state.whisperModel, device: whisperDevice() });
@@ -1303,6 +1441,7 @@
 
     function stop() {
       listening = false;
+      if (state.transcribeEngine === 'homegpu') { hgDisconnect(); }
       stopCapture();
       setStatus('idle', 'Stopped.');
       updateControls();
@@ -1320,8 +1459,11 @@
       els.statusText.textContent = base + (n ? '   ·   ' + n + ' line' + (n === 1 ? '' : 's') : '');
     }
     function updateControls() {
-      var cloudKeyOK = state.transcribeEngine !== 'cloud' || !!(state.apiKeys.openai || '').trim();
-      var canStart = hasKey() && cloudKeyOK && navigator.mediaDevices && navigator.mediaDevices.getUserMedia;
+      var eng = state.transcribeEngine;
+      var cloudKeyOK = eng !== 'cloud' || !!(state.apiKeys.openai || '').trim();
+      var homeGpuOK = eng !== 'homegpu' || !!(state.homeGpuUrl || '').trim();
+      var keysOK = eng === 'homegpu' ? homeGpuOK : (hasKey() && cloudKeyOK);
+      var canStart = keysOK && navigator.mediaDevices && navigator.mediaDevices.getUserMedia;
       els.startBtn.disabled = !canStart && !listening;
       els.startBtn.textContent = listening ? '■ Stop' : '● Start listening';
       els.startBtn.classList.toggle('recording', listening);
@@ -1330,7 +1472,9 @@
       var hint = '';
       if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
         hint = 'This browser cannot access the microphone.';
-      } else if (!hasKey()) {
+      } else if (eng === 'homegpu' && !homeGpuOK) {
+        hint = 'Enter your Home GPU server URL (wss://…/ws) in the transcription settings.';
+      } else if (eng !== 'homegpu' && !hasKey()) {
         hint = 'Enter your translation API key above to enable listening.';
       } else if (!cloudKeyOK) {
         hint = 'Cloud transcription needs an OpenAI key — set the Translation provider to OpenAI and paste your key.';
@@ -1683,6 +1827,7 @@
       fillModelSelect(els.cloudModel, els.cloudModelCustom, CLOUD_SUGGESTIONS, state.cloudModel);
       els.vocab.value = state.vocab || '';
       els.fileRoot.value = state.fileRoot || '';
+      els.homeGpuUrl.value = state.homeGpuUrl || '';
       applyEngine();
       applyView();
       applyScale();
@@ -1737,7 +1882,7 @@
         saveState();
       });
       els.engine.addEventListener('change', function () {
-        state.transcribeEngine = els.engine.value === 'cloud' ? 'cloud' : 'local';
+        state.transcribeEngine = ['cloud', 'homegpu'].indexOf(els.engine.value) >= 0 ? els.engine.value : 'local';
         applyEngine();
         saveState();
         updateControls();
@@ -1753,6 +1898,10 @@
       els.fileRoot.addEventListener('input', function () {
         state.fileRoot = els.fileRoot.value;
         saveState();
+      });
+      els.homeGpuUrl.addEventListener('input', function () {
+        state.homeGpuUrl = els.homeGpuUrl.value.trim();
+        saveState(); updateControls();
       });
       els.openaiKey.addEventListener('input', function () {
         state.apiKeys.openai = els.openaiKey.value.trim();
