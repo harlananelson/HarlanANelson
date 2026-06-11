@@ -1075,7 +1075,11 @@
     }
 
     function hgHandleEvent(ev) {
-      if (ev.type === 'es') {
+      if (ev.type === 'interim') {
+        // in-progress Spanish from the server, ahead of sentence commit
+        setInterim('🎙 ' + ev.text);
+      } else if (ev.type === 'es') {
+        setInterim('');
         var seg = { id: nextId++, es: ev.text, esState: 'done', en: '', enState: 'translating', error: '', t: Date.now(), heard: ev.text, dir: 'es-en' };
         segments.push(seg);
         hgMap[ev.id] = seg;
