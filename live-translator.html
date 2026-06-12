@@ -1078,6 +1078,22 @@
       if (ev.type === 'interim') {
         // in-progress Spanish from the server, ahead of sentence commit
         setInterim('🎙 ' + ev.text);
+      } else if (ev.type === 'passage') {
+        // scripture passage detected in the speech - show it as its own row
+        var pseg = {
+          id: nextId++,
+          es: '📖 ' + ev.ref_es + (ev.es ? ' — ' + ev.es : ''),
+          en: '📖 ' + ev.ref_en + (ev.en ? ' — ' + ev.en : ''),
+          esState: 'done', enState: 'done', error: '', t: Date.now(),
+          heard: '', dir: 'es-en', passage: true
+        };
+        segments.push(pseg);
+        removePlaceholder();
+        addRow(pseg);
+        paintRow(pseg);
+        maybeScroll();
+        updateStatus();
+        pushLog('', 'passage: ' + ev.ref_en);
       } else if (ev.type === 'es') {
         setInterim('');
         var seg = { id: nextId++, es: ev.text, esState: 'done', en: '', enState: 'translating', error: '', t: Date.now(), heard: ev.text, dir: 'es-en' };
