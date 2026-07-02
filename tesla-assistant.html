@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Car Assistant</title>
+<style>
+  /* Tesla console: Chromium ~109, touch only, viewed at arm's length.
+     Big targets, big type, dark theme, zero external assets. */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: #111; color: #eee;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 20px; display: flex; flex-direction: column;
+  }
+  header {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 18px; background: #1b1b1b; flex-wrap: wrap;
+  }
+  header h1 { font-size: 22px; font-weight: 600; margin-right: auto; }
+  .dot { width: 14px; height: 14px; border-radius: 50%; background: #666; display: inline-block; }
+  .dot.ok { background: #2ecc71; }
+  .dot.bad { background: #e74c3c; }
+  button {
+    background: #2b6cb0; color: #fff; border: 0; border-radius: 12px;
+    font-size: 20px; padding: 14px 22px; cursor: pointer; touch-action: manipulation;
+  }
+  button.secondary { background: #333; }
+  button:disabled { opacity: .45; }
+  #status { padding: 6px 18px; font-size: 16px; color: #999; min-height: 28px; }
+  #status.err { color: #ff8b7d; }
+  #transcript {
+    flex: 1; overflow-y: auto; padding: 14px 18px; display: flex;
+    flex-direction: column; gap: 12px;
+  }
+  .msg { max-width: 82%; padding: 14px 18px; border-radius: 16px; line-height: 1.45; white-space: pre-wrap; }
+  .msg.user { align-self: flex-end; background: #2b6cb0; }
+  .msg.assistant { align-self: flex-start; background: #262626; }
+  .msg.error { align-self: center; background: #4a1f1c; color: #ffb4a8; font-size: 17px; }
+  #composer { display: flex; gap: 10px; padding: 12px 18px 18px; background: #1b1b1b; }
+  #composer input {
+    flex: 1; font-size: 22px; padding: 14px 16px; border-radius: 12px;
+    border: 1px solid #444; background: #222; color: #eee;
+  }
+  /* Phone mic mode */
+  #micPane { flex: 1; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 24px; padding: 20px; }
+  #talkBtn {
+    width: 240px; height: 240px; border-radius: 50%; font-size: 26px;
+    background: #2b6cb0; user-select: none; -webkit-user-select: none;
+  }
+  #talkBtn.rec { background: #c0392b; }
+  #micText { font-size: 18px; color: #bbb; text-align: center; max-width: 480px; }
+  /* Settings */
+  #settings {
+    display: none; padding: 18px; background: #1b1b1b; border-top: 1px solid #333;
+  }
+  #settings label { display: block; font-size: 16px; color: #aaa; margin: 12px 0 4px; }
+  #settings input { width: 100%; font-size: 19px; padding: 12px; border-radius: 10px; border: 1px solid #444; background: #222; color: #eee; }
+  #settings .row { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+  .hint { font-size: 15px; color: #888; margin-top: 10px; line-height: 1.4; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Car Assistant</h1>
+  <span id="connDot" class="dot"></span>
+  <button id="soundBtn" class="secondary">🔇 Sound off</button>
+  <button id="micModeBtn" class="secondary" style="display:none">🎤 Phone mic</button>
+  <button id="settingsBtn" class="secondary">⚙ Settings</button>
+</header>
+
+<div id="status">Loading…</div>
+
+<div id="settings">
+  <label>Bridge URL (Tailscale Funnel address, https://…)</label>
+  <input id="cfgBridge" placeholder="https://your-machine.your-tailnet.ts.net" autocapitalize="off">
+  <label>Token</label>
+  <input id="cfgToken" placeholder="bearer token from bin/setup-token" autocapitalize="off">
+  <label>Session (same word on car and phone)</label>
+  <input id="cfgSession" value="car" autocapitalize="off">
+  <div class="row">
+    <button id="saveBtn">Save</button>
+    <button id="testBtn" class="secondary">Test connection</button>
+  </div>
+  <p class="hint">Tip: you can pre-fill this by opening the page as
+    …/tesla-assistant.html?bridge=URL&amp;token=TOKEN — handy the first time,
+    since typing on the console is slow. Settings persist in this browser.</p>
+</div>
+
+<div id="transcript"></div>
+
+<div id="micPane">
+  <button id="talkBtn">Hold to talk</button>
+  <div id="micText">Hold the button, speak, release. Your question and the answer
+    appear on the car screen (and here). Keep this page open on your phone.</div>
+</div>
+
+<div id="composer">
+  <input id="msgInput" placeholder="Type a question…" autocomplete="off">
+  <button id="sendBtn">Send</button>
+</div>
+
+<script>
+"use strict";
+/* Written for the Tesla in-car browser: Chromium ~109 feature level, no dev
+   console (all errors go to the on-page status line), no microphone access
+   (voice input happens on the phone via ?mode=mic), audio playback must be
+   unlocked by a user tap, transport is plain fetch polling over HTTPS. */
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+
+  // ---- config (URL params override, then persist in localStorage) ----
+  var params = new URLSearchParams(location.search);
+  function cfgGet(k, dflt) {
+    var v = params.get(k);
+    if (v) { try { localStorage.setItem("tb_" + k, v); } catch (e) {} return v; }
+    try { return localStorage.getItem("tb_" + k) || dflt; } catch (e) { return dflt; }
+  }
+  var cfg = {
+    bridge: (cfgGet("bridge", "") || "").replace(/\/+$/, ""),
+    token: cfgGet("token", ""),
+    session: cfgGet("session", "car") || "car",
+    mode: params.get("mode") || ""   // "" = console, "mic" = phone microphone
+  };
+
+  var soundOn = false;
+  var lastEventId = 0;
+  var lastSpokenId = 0;   // don't re-speak history on page load
+  var firstPoll = true;
+  var audioEl = new Audio();
+
+  function setStatus(text, isErr) {
+    var s = $("status");
+    s.textContent = text || "";
+    s.className = isErr ? "err" : "";
+  }
+  function setConn(ok) { $("connDot").className = "dot " + (ok ? "ok" : "bad"); }
+
+  function api(path, opts) {
+    opts = opts || {};
+    if (!cfg.bridge) return Promise.reject(new Error("No Bridge URL set — open Settings"));
+    opts.headers = opts.headers || {};
+    opts.headers["Authorization"] = "Bearer " + cfg.token;
+    return fetch(cfg.bridge + path, opts).then(function (r) {
+      if (!r.ok) {
+        return r.text().then(function (t) {
+          throw new Error("HTTP " + r.status + " " + t.slice(0, 200));
+        });
+      }
+      return r;
+    });
+  }
+
+  // ---- transcript rendering ----
+  function addMsg(role, text) {
+    var d = document.createElement("div");
+    d.className = "msg " + role;
+    d.textContent = text;
+    var t = $("transcript");
+    t.appendChild(d);
+    while (t.children.length > 60) t.removeChild(t.firstChild);
+    t.scrollTop = t.scrollHeight;
+  }
+
+  // ---- spoken replies (server TTS -> <audio>; tap on the sound button
+  //      doubles as the autoplay-unlock gesture) ----
+  function speak(text) {
+    if (!soundOn) return;
+    api("/api/tts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: text })
+    }).then(function (r) { return r.blob(); }).then(function (blob) {
+      audioEl.src = URL.createObjectURL(blob);
+      return audioEl.play();
+    }).catch(function (e) {
+      // fall back to the browser's own voice if server TTS is unavailable
+      try {
+        var u = new SpeechSynthesisUtterance(text);
+        speechSynthesis.speak(u);
+      } catch (e2) { setStatus("Speech failed: " + e.message, true); }
+    });
+  }
+
+  // ---- polling (console mode keeps the car screen in sync with the phone) ----
+  function poll() {
+    api("/api/events?session=" + encodeURIComponent(cfg.session) + "&since=" + lastEventId)
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        setConn(true);
+        data.events.forEach(function (ev) {
+          lastEventId = Math.max(lastEventId, ev.id);
+          addMsg(ev.role, ev.text);
+          if (ev.role === "assistant" && !firstPoll && ev.id > lastSpokenId) {
+            lastSpokenId = ev.id;
+            speak(ev.text);
+          }
+        });
+        if (firstPoll) {
+          firstPoll = false;
+          lastSpokenId = lastEventId;
+          setStatus("Connected — AI backend: " + (data.backend || "?"));
+        }
+      })
+      .catch(function (e) { setConn(false); setStatus(e.message, true); });
+  }
+
+  // ---- typed input (works everywhere, the only console-native input) ----
+  function sendTyped() {
+    var input = $("msgInput");
+    var text = input.value.trim();
+    if (!text) return;
+    input.value = "";
+    setStatus("Thinking…");
+    $("sendBtn").disabled = true;
+    api("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ session: cfg.session, message: text })
+    }).then(function () { setStatus(""); })
+      .catch(function (e) { setStatus(e.message, true); })
+      .then(function () { $("sendBtn").disabled = false; });
+    // the message + reply arrive through polling, so car and phone both see them
+  }
+
+  // ---- phone microphone mode (?mode=mic) ----
+  var recorder = null, chunks = [];
+  function micSupported() {
+    return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia &&
+              window.MediaRecorder);
+  }
+  function startRec() {
+    navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+      chunks = [];
+      var mime = "";
+      ["audio/webm;codecs=opus", "audio/webm", "audio/mp4"].some(function (m) {
+        if (MediaRecorder.isTypeSupported(m)) { mime = m; return true; }
+        return false;
+      });
+      recorder = new MediaRecorder(stream, mime ? { mimeType: mime } : undefined);
+      recorder.ondataavailable = function (e) { if (e.data.size) chunks.push(e.data); };
+      recorder.onstop = function () {
+        stream.getTracks().forEach(function (t) { t.stop(); });
+        uploadClip(new Blob(chunks, { type: recorder.mimeType || "audio/webm" }));
+      };
+      recorder.start();
+      $("talkBtn").className = "rec";
+      $("talkBtn").textContent = "Listening…";
+    }).catch(function (e) { setStatus("Mic error: " + e.message, true); });
+  }
+  function stopRec() {
+    $("talkBtn").className = "";
+    $("talkBtn").textContent = "Hold to talk";
+    if (recorder && recorder.state === "recording") recorder.stop();
+  }
+  function uploadClip(blob) {
+    setStatus("Transcribing…");
+    var ext = (blob.type.indexOf("mp4") >= 0) ? "m4a" : "webm";
+    var fd = new FormData();
+    fd.append("audio", blob, "clip." + ext);
+    fd.append("session", cfg.session);
+    fd.append("chat", "1");
+    api("/api/transcribe", { method: "POST", body: fd })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        setStatus(data.text ? "" : "Heard nothing — try again.", !data.text);
+      })
+      .catch(function (e) { setStatus(e.message, true); });
+  }
+
+  // ---- settings ----
+  function openSettings(show) {
+    $("settings").style.display = show ? "block" : "none";
+    $("cfgBridge").value = cfg.bridge;
+    $("cfgToken").value = cfg.token;
+    $("cfgSession").value = cfg.session;
+  }
+  $("settingsBtn").onclick = function () {
+    openSettings($("settings").style.display !== "block");
+  };
+  $("saveBtn").onclick = function () {
+    cfg.bridge = $("cfgBridge").value.trim().replace(/\/+$/, "");
+    cfg.token = $("cfgToken").value.trim();
+    cfg.session = $("cfgSession").value.trim() || "car";
+    try {
+      localStorage.setItem("tb_bridge", cfg.bridge);
+      localStorage.setItem("tb_token", cfg.token);
+      localStorage.setItem("tb_session", cfg.session);
+    } catch (e) {}
+    openSettings(false);
+    setStatus("Saved.");
+    firstPoll = true; lastEventId = 0;
+    $("transcript").innerHTML = "";
+  };
+  $("testBtn").onclick = function () {
+    cfg.bridge = $("cfgBridge").value.trim().replace(/\/+$/, "");
+    fetch(cfg.bridge + "/api/ping").then(function (r) { return r.json(); })
+      .then(function (d) { setStatus("Bridge reachable — backend: " + d.backend); setConn(true); })
+      .catch(function (e) { setStatus("Cannot reach bridge: " + e.message, true); setConn(false); });
+  };
+
+  // ---- sound toggle (also the audio-unlock tap for autoplay policy) ----
+  $("soundBtn").onclick = function () {
+    soundOn = !soundOn;
+    $("soundBtn").textContent = soundOn ? "🔊 Sound on" : "🔇 Sound off";
+    if (soundOn) {
+      // play a moment of silence inside the tap gesture to unlock <audio>
+      try {
+        audioEl.src = "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAAAAA=";
+        audioEl.play().catch(function () {});
+      } catch (e) {}
+    }
+  };
+
+  // ---- wire up ----
+  $("sendBtn").onclick = sendTyped;
+  $("msgInput").addEventListener("keydown", function (e) {
+    if (e.key === "Enter") sendTyped();
+  });
+
+  if (cfg.mode === "mic") {
+    // phone: giant push-to-talk, no composer
+    $("composer").style.display = "none";
+    $("micPane").style.display = "flex";
+    if (!micSupported()) {
+      $("micText").textContent = "This browser has no microphone access. " +
+        "Open this page on a phone (Safari/Chrome) instead.";
+      $("talkBtn").disabled = true;
+    } else {
+      var tb = $("talkBtn");
+      tb.addEventListener("touchstart", function (e) { e.preventDefault(); startRec(); });
+      tb.addEventListener("touchend", function (e) { e.preventDefault(); stopRec(); });
+      tb.addEventListener("mousedown", startRec);
+      tb.addEventListener("mouseup", stopRec);
+    }
+  } else if (micSupported()) {
+    // some future console update may allow the mic; offer the mode if so
+    $("micModeBtn").style.display = "inline-block";
+    $("micModeBtn").onclick = function () {
+      location.search = location.search ? location.search + "&mode=mic" : "?mode=mic";
+    };
+  }
+
+  if (!cfg.bridge || !cfg.token) {
+    openSettings(true);
+    setStatus("First-time setup: enter the Bridge URL and token.", true);
+  } else {
+    setStatus("Connecting…");
+  }
+  poll();
+  setInterval(poll, 2500);
+})();
+</script>
+</body>
+</html>
