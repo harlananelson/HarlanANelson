@@ -39,11 +39,33 @@
   .msg.user { align-self: flex-end; background: #2b6cb0; }
   .msg.assistant { align-self: flex-start; background: #262626; }
   .msg.error { align-self: center; background: #4a1f1c; color: #ffb4a8; font-size: 17px; }
+  .msg .tag { display: block; font-size: 13px; color: #7fb3e8; margin-bottom: 4px; }
   #composer { display: flex; gap: 10px; padding: 12px 18px 18px; background: #1b1b1b; }
   #composer input {
     flex: 1; font-size: 22px; padding: 14px 16px; border-radius: 12px;
     border: 1px solid #444; background: #222; color: #eee;
   }
+  select {
+    font-size: 19px; padding: 12px; border-radius: 12px;
+    border: 1px solid #444; background: #222; color: #eee;
+  }
+  /* Agents panel (tmux sessions on the workstation) */
+  #agents { display: none; flex: 1; flex-direction: column; overflow: hidden; }
+  #agentList { display: flex; gap: 8px; padding: 10px 18px; overflow-x: auto; flex-wrap: wrap; }
+  #agentList button { font-size: 17px; padding: 10px 14px; background: #333; }
+  #agentList button.sel { background: #2b6cb0; }
+  #agentOut {
+    flex: 1; overflow: auto; margin: 0 18px; padding: 12px;
+    background: #000; border: 1px solid #333; border-radius: 10px;
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    font-size: 14px; line-height: 1.35; white-space: pre; color: #cde;
+  }
+  #agentBar { display: flex; gap: 10px; padding: 12px 18px; background: #1b1b1b; }
+  #agentBar input {
+    flex: 1; font-size: 19px; padding: 12px 14px; border-radius: 12px;
+    border: 1px solid #444; background: #222; color: #eee;
+  }
+  #agentSendBtn.confirm { background: #c0392b; }
   /* Phone mic mode */
   #micPane { flex: 1; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 24px; padding: 20px; }
   #talkBtn {
@@ -67,6 +89,7 @@
   <h1>Car Assistant</h1>
   <span id="connDot" class="dot"></span>
   <button id="soundBtn" class="secondary">🔇 Sound off</button>
+  <button id="agentsBtn" class="secondary">🤖 Agents</button>
   <button id="micModeBtn" class="secondary" style="display:none">🎤 Phone mic</button>
   <button id="settingsBtn" class="secondary">⚙ Settings</button>
 </header>
@@ -91,6 +114,16 @@
 
 <div id="transcript"></div>
 
+<div id="agents">
+  <div id="agentList"></div>
+  <pre id="agentOut">Pick a session above — its recent output shows here.</pre>
+  <div id="agentBar">
+    <button id="agentRefreshBtn" class="secondary">↻</button>
+    <input id="agentInput" placeholder="Directive to send to the selected session…" autocomplete="off">
+    <button id="agentSendBtn">Send</button>
+  </div>
+</div>
+
 <div id="micPane">
   <button id="talkBtn">Hold to talk</button>
   <div id="micText">Hold the button, speak, release. Your question and the answer
@@ -98,6 +131,7 @@
 </div>
 
 <div id="composer">
+  <select id="backendSel" title="AI backend"></select>
   <input id="msgInput" placeholder="Type a question…" autocomplete="off">
   <button id="sendBtn">Send</button>
 </div>
@@ -122,6 +156,7 @@
     bridge: (cfgGet("bridge", "") || "").replace(/\/+$/, ""),
     token: cfgGet("token", ""),
     session: cfgGet("session", "car") || "car",
+    backend: cfgGet("backend", "") || "",   // "" = server default
     mode: params.get("mode") || ""   // "" = console, "mic" = phone microphone
   };
 
@@ -154,14 +189,38 @@
   }
 
   // ---- transcript rendering ----
-  function addMsg(role, text) {
+  function addMsg(role, text, tag) {
     var d = document.createElement("div");
     d.className = "msg " + role;
-    d.textContent = text;
+    if (tag && role === "assistant") {
+      var s = document.createElement("span");
+      s.className = "tag";
+      s.textContent = tag;
+      d.appendChild(s);
+    }
+    d.appendChild(document.createTextNode(text));
     var t = $("transcript");
     t.appendChild(d);
     while (t.children.length > 60) t.removeChild(t.firstChild);
     t.scrollTop = t.scrollHeight;
+  }
+
+  // ---- backend picker (which AI answers: server default / ollama / claude / grok) ----
+  function fillBackends(list) {
+    var sel = $("backendSel");
+    if (sel.options.length || !list || !list.length) return;
+    var opts = [""].concat(list);
+    opts.forEach(function (b) {
+      var o = document.createElement("option");
+      o.value = b;
+      o.textContent = b || "auto";
+      sel.appendChild(o);
+    });
+    sel.value = cfg.backend && list.indexOf(cfg.backend) >= 0 ? cfg.backend : "";
+    sel.onchange = function () {
+      cfg.backend = sel.value;
+      try { localStorage.setItem("tb_backend", cfg.backend); } catch (e) {}
+    };
   }
 
   // ---- spoken replies (server TTS -> <audio>; tap on the sound button
@@ -190,9 +249,10 @@
       .then(function (r) { return r.json(); })
       .then(function (data) {
         setConn(true);
+        fillBackends(data.backends);
         data.events.forEach(function (ev) {
           lastEventId = Math.max(lastEventId, ev.id);
-          addMsg(ev.role, ev.text);
+          addMsg(ev.role, ev.text, ev.backend);
           if (ev.role === "assistant" && !firstPoll && ev.id > lastSpokenId) {
             lastSpokenId = ev.id;
             speak(ev.text);
@@ -218,7 +278,7 @@
     api("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ session: cfg.session, message: text })
+      body: JSON.stringify({ session: cfg.session, message: text, backend: cfg.backend })
     }).then(function () { setStatus(""); })
       .catch(function (e) { setStatus(e.message, true); })
       .then(function () { $("sendBtn").disabled = false; });
@@ -262,6 +322,7 @@
     fd.append("audio", blob, "clip." + ext);
     fd.append("session", cfg.session);
     fd.append("chat", "1");
+    fd.append("backend", cfg.backend);
     api("/api/transcribe", { method: "POST", body: fd })
       .then(function (r) { return r.json(); })
       .then(function (data) {
@@ -269,6 +330,95 @@
       })
       .catch(function (e) { setStatus(e.message, true); });
   }
+
+  // ---- agents panel (tmux sessions on the workstation) ----
+  var agentsOpen = false, agentSel = "", agentSendable = false, agentConfirm = false;
+  var agentTimer = null;
+
+  function agentsView(show) {
+    agentsOpen = show;
+    $("agents").style.display = show ? "flex" : "none";
+    $("transcript").style.display = show ? "none" : "flex";
+    $("composer").style.display = (show || cfg.mode === "mic") ? "none" : "flex";
+    if (cfg.mode === "mic") $("micPane").style.display = show ? "none" : "flex";
+    $("agentsBtn").textContent = show ? "💬 Chat" : "🤖 Agents";
+    if (show) { loadAgents(); agentTimer = setInterval(refreshAgentOut, 5000); }
+    else if (agentTimer) { clearInterval(agentTimer); agentTimer = null; }
+  }
+
+  function loadAgents() {
+    api("/api/tmux/sessions").then(function (r) { return r.json(); })
+      .then(function (data) {
+        var list = $("agentList");
+        list.innerHTML = "";
+        data.sessions.forEach(function (s) {
+          var b = document.createElement("button");
+          b.textContent = (s.sendable ? "✏️ " : "👁 ") + s.name;
+          b.className = s.name === agentSel ? "sel" : "";
+          b.onclick = function () {
+            agentSel = s.name;
+            agentSendable = s.sendable;
+            resetAgentSend();
+            loadAgents();
+            refreshAgentOut();
+          };
+          list.appendChild(b);
+        });
+        if (!data.sessions.length) $("agentOut").textContent = "No tmux sessions on the host.";
+      })
+      .catch(function (e) { setStatus(e.message, true); });
+  }
+
+  function refreshAgentOut() {
+    if (!agentSel) return;
+    api("/api/tmux/capture?name=" + encodeURIComponent(agentSel) + "&lines=60")
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var out = $("agentOut");
+        var stick = out.scrollTop + out.clientHeight >= out.scrollHeight - 40;
+        out.textContent = data.text || "(empty pane)";
+        if (stick) out.scrollTop = out.scrollHeight;
+      })
+      .catch(function (e) { setStatus(e.message, true); });
+  }
+
+  function resetAgentSend() {
+    agentConfirm = false;
+    var b = $("agentSendBtn");
+    b.className = "";
+    b.textContent = "Send";
+    b.disabled = !agentSendable;
+    $("agentInput").placeholder = agentSendable
+      ? "Directive to send to " + (agentSel || "the selected session") + "…"
+      : (agentSel ? agentSel + " is read-only (not in tmux-allow)" : "Pick a session above…");
+  }
+
+  function agentSend() {
+    var text = $("agentInput").value.trim();
+    if (!agentSel || !text) return;
+    if (!agentConfirm) {   // two-tap confirm: typing into a shell is remote execution
+      agentConfirm = true;
+      var b = $("agentSendBtn");
+      b.className = "confirm";
+      b.textContent = "Tap to confirm → " + agentSel;
+      return;
+    }
+    api("/api/tmux/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: agentSel, text: text, session: cfg.session })
+    }).then(function () {
+      $("agentInput").value = "";
+      resetAgentSend();
+      setStatus("Sent to " + agentSel + ".");
+      setTimeout(refreshAgentOut, 800);
+    }).catch(function (e) { resetAgentSend(); setStatus(e.message, true); });
+  }
+
+  $("agentsBtn").onclick = function () { agentsView(!agentsOpen); };
+  $("agentRefreshBtn").onclick = function () { loadAgents(); refreshAgentOut(); };
+  $("agentSendBtn").onclick = agentSend;
+  $("agentInput").addEventListener("input", function () { if (agentConfirm) resetAgentSend(); });
 
   // ---- settings ----
   function openSettings(show) {
