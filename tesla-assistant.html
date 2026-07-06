@@ -445,8 +445,32 @@
   $("settingsBtn").onclick = function () {
     openSettings($("settings").style.display !== "block");
   };
+  // Normalize a pasted Bridge URL. Phones "help" in ways .trim() can't undo:
+  // Smart Punctuation swaps hyphens for en/em-dashes and copy/paste drags in
+  // zero-width chars — either makes fetch throw an opaque "did not match the
+  // expected pattern" error. Fix the common ones and require a sane https URL.
+  function cleanBridge(raw) {
+    var v = (raw || "")
+      .replace(/[\u2010-\u2015\u2212]/g, "-")     // en/em/figure dash, minus -> hyphen
+      .replace(/[\u200B-\u200D\uFEFF]/g, "")      // zero-width space / BOM
+      .replace(/\s+/g, "")                        // any leftover whitespace
+      .replace(/\/+$/, "");                       // trailing slash(es)
+    if (v && !/^https?:\/\//i.test(v)) v = "https://" + v;
+    return v;
+  }
+  function bridgeLooksValid(v) {
+    return /^https:\/\/[\w.-]+\.[\w.-]+/.test(v);
+  }
   $("saveBtn").onclick = function () {
-    cfg.bridge = $("cfgBridge").value.trim().replace(/\/+$/, "");
+    var b = cleanBridge($("cfgBridge").value);
+    if (b && !bridgeLooksValid(b)) {
+      setStatus("That Bridge URL looks malformed — check for stray characters " +
+        "or dashes changed to “–”. It should be like https://name.tailnet.ts.net", true);
+      $("cfgBridge").value = b;   // show the cleaned value so the problem is visible
+      return;
+    }
+    cfg.bridge = b;
+    $("cfgBridge").value = b;
     cfg.token = $("cfgToken").value.trim();
     cfg.session = $("cfgSession").value.trim() || "car";
     try {
@@ -460,7 +484,14 @@
     $("transcript").innerHTML = "";
   };
   $("testBtn").onclick = function () {
-    cfg.bridge = $("cfgBridge").value.trim().replace(/\/+$/, "");
+    cfg.bridge = cleanBridge($("cfgBridge").value);
+    $("cfgBridge").value = cfg.bridge;
+    if (!bridgeLooksValid(cfg.bridge)) {
+      setStatus("That Bridge URL looks malformed — check for stray characters " +
+        "or dashes changed to “–”. It should be like https://name.tailnet.ts.net", true);
+      setConn(false);
+      return;
+    }
     fetch(cfg.bridge + "/api/ping").then(function (r) { return r.json(); })
       .then(function (d) { setStatus("Bridge reachable — backend: " + d.backend); setConn(true); })
       .catch(function (e) { setStatus("Cannot reach bridge: " + e.message, true); setConn(false); });
