@@ -305,7 +305,8 @@
         stream.getTracks().forEach(function (t) { t.stop(); });
         uploadClip(new Blob(chunks, { type: recorder.mimeType || "audio/webm" }));
       };
-      recorder.start();
+      recorder.start(250);   // flush a chunk every 250ms so brief taps still
+                             // produce a valid, non-empty clip (no headerless webm)
       $("talkBtn").className = "rec";
       $("talkBtn").textContent = "Listening…";
     }).catch(function (e) {
@@ -331,6 +332,12 @@
     if (recorder && recorder.state === "recording") recorder.stop();
   }
   function uploadClip(blob) {
+    // A too-short/empty recording is a headerless clip ffmpeg can't decode —
+    // don't send it (it would come back as a server error). Ask for a real hold.
+    if (!blob || blob.size < 1200) {
+      setStatus("Didn't catch that — hold the button, speak, then release.", true);
+      return;
+    }
     setStatus("Transcribing…");
     var ext = (blob.type.indexOf("mp4") >= 0) ? "m4a" : "webm";
     var fd = new FormData();
