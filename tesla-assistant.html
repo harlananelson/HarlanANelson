@@ -308,7 +308,22 @@
       recorder.start();
       $("talkBtn").className = "rec";
       $("talkBtn").textContent = "Listening…";
-    }).catch(function (e) { setStatus("Mic error: " + e.message, true); });
+    }).catch(function (e) {
+      // The Tesla console reports mic hardware but never grants getUserMedia
+      // (no permission UI) — so this rejects with NotAllowedError there. Give
+      // the phone-only guidance instead of a cryptic "Permission denied".
+      var denied = e && (e.name === "NotAllowedError" ||
+        /denied|permission|not ?allowed/i.test(e.message || ""));
+      if (denied) {
+        $("talkBtn").className = "";
+        $("talkBtn").textContent = "Hold to talk";
+        setStatus("This browser won't grant microphone access. The Tesla console " +
+          "has no mic — open this page on your phone (add ?mode=mic) and hold to " +
+          "talk there; the question and answer still appear and speak on the car.", true);
+      } else {
+        setStatus("Mic error: " + e.message, true);
+      }
+    });
   }
   function stopRec() {
     $("talkBtn").className = "";
