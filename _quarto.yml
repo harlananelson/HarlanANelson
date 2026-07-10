@@ -15,9 +15,11 @@ project:
     - "english-speech-drill.html"
     - "live-translator.html"
     - "swahili-speech-drill.html"
+    - "japanese-speech-drill.html"
     - "drill-recognition-engines.js"
     - "drill-recognition-engines-es.js"
     - "drill-recognition-engines-en.js"
+    - "drill-recognition-engines-ja.js"
     - "drill-whisper-worker.js"
     - "live-translator-diarize.js"
     - "tesla-assistant.html"
@@ -48,6 +50,8 @@ website:
         text: English Drill
       - href: swahili-speech-drill.html
         text: Swahili Drill
+      - href: japanese-speech-drill.html
+        text: Japanese Drill
       - href: live-translator.html
         text: Live Translator
     right:

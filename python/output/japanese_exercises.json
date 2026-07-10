@@ -1,0 +1,5090 @@
+[
+  {
+    "id": "taberu-masu-0",
+    "verbo": "たべる",
+    "contexto": "eat: ringoo taberu → Polite present (–masu)",
+    "respuesta": "りんごをたべます",
+    "pista": "Polite present/future: stem + ます. Say: ringoo tabemasu.",
+    "grupos": [
+      [
+        "りんご",
+        "りんごを"
+      ],
+      [
+        "たべます",
+        "食べます"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-masu-1",
+    "verbo": "たべる",
+    "contexto": "eat: pano taberu → Polite present (–masu)",
+    "respuesta": "パンをたべます",
+    "pista": "Polite present/future: stem + ます. Say: pano tabemasu.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "たべます",
+        "食べます"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-masu-2",
+    "verbo": "たべる",
+    "contexto": "eat: keekio taberu → Polite present (–masu)",
+    "respuesta": "ケーキをたべます",
+    "pista": "Polite present/future: stem + ます. Say: keekio tabemasu.",
+    "grupos": [
+      [
+        "ケーキ",
+        "ケーキを"
+      ],
+      [
+        "たべます",
+        "食べます"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-masen-3",
+    "verbo": "たべる",
+    "contexto": "eat: pano taberu → Polite negative (–masen)",
+    "respuesta": "パンをたべません",
+    "pista": "Polite negative: stem + ません. Say: pano tabemasen.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "たべません",
+        "食べません"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-masen-4",
+    "verbo": "たべる",
+    "contexto": "eat: ringoo taberu → Polite negative (–masen)",
+    "respuesta": "りんごをたべません",
+    "pista": "Polite negative: stem + ません. Say: ringoo tabemasen.",
+    "grupos": [
+      [
+        "りんご",
+        "りんごを"
+      ],
+      [
+        "たべません",
+        "食べません"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-masen-5",
+    "verbo": "たべる",
+    "contexto": "eat: keekio taberu → Polite negative (–masen)",
+    "respuesta": "ケーキをたべません",
+    "pista": "Polite negative: stem + ません. Say: keekio tabemasen.",
+    "grupos": [
+      [
+        "ケーキ",
+        "ケーキを"
+      ],
+      [
+        "たべません",
+        "食べません"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-mashita-6",
+    "verbo": "たべる",
+    "contexto": "eat: pano taberu → Polite past (–mashita)",
+    "respuesta": "パンをたべました",
+    "pista": "Polite past: stem + ました. Say: pano tabemashita.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "たべました",
+        "食べました"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-mashita-7",
+    "verbo": "たべる",
+    "contexto": "eat: ringoo taberu → Polite past (–mashita)",
+    "respuesta": "りんごをたべました",
+    "pista": "Polite past: stem + ました. Say: ringoo tabemashita.",
+    "grupos": [
+      [
+        "りんご",
+        "りんごを"
+      ],
+      [
+        "たべました",
+        "食べました"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-mashita-8",
+    "verbo": "たべる",
+    "contexto": "eat: keekio taberu → Polite past (–mashita)",
+    "respuesta": "ケーキをたべました",
+    "pista": "Polite past: stem + ました. Say: keekio tabemashita.",
+    "grupos": [
+      [
+        "ケーキ",
+        "ケーキを"
+      ],
+      [
+        "たべました",
+        "食べました"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-masen_deshita-9",
+    "verbo": "たべる",
+    "contexto": "eat: pano taberu → Polite past neg. (–masendeshita)",
+    "respuesta": "パンをたべませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: pano tabemasendeshita.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "たべませんでした",
+        "食べませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-masen_deshita-10",
+    "verbo": "たべる",
+    "contexto": "eat: keekio taberu → Polite past neg. (–masendeshita)",
+    "respuesta": "ケーキをたべませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: keekio tabemasendeshita.",
+    "grupos": [
+      [
+        "ケーキ",
+        "ケーキを"
+      ],
+      [
+        "たべませんでした",
+        "食べませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-masen_deshita-11",
+    "verbo": "たべる",
+    "contexto": "eat: ringoo taberu → Polite past neg. (–masendeshita)",
+    "respuesta": "りんごをたべませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: ringoo tabemasendeshita.",
+    "grupos": [
+      [
+        "りんご",
+        "りんごを"
+      ],
+      [
+        "たべませんでした",
+        "食べませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-te-12",
+    "verbo": "たべる",
+    "contexto": "eat: keekio taberu → Te-form (–te)",
+    "respuesta": "ケーキをたべて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: keekio tabete.",
+    "grupos": [
+      [
+        "ケーキ",
+        "ケーキを"
+      ],
+      [
+        "たべて",
+        "食べて"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-te-13",
+    "verbo": "たべる",
+    "contexto": "eat: pano taberu → Te-form (–te)",
+    "respuesta": "パンをたべて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: pano tabete.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "たべて",
+        "食べて"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-te-14",
+    "verbo": "たべる",
+    "contexto": "eat: ringoo taberu → Te-form (–te)",
+    "respuesta": "りんごをたべて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: ringoo tabete.",
+    "grupos": [
+      [
+        "りんご",
+        "りんごを"
+      ],
+      [
+        "たべて",
+        "食べて"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-plain-15",
+    "verbo": "たべる",
+    "contexto": "eat: keekio taberu → Plain / dictionary",
+    "respuesta": "ケーキをたべる",
+    "pista": "Plain (dictionary) form — casual present/future. Say: keekio taberu.",
+    "grupos": [
+      [
+        "ケーキ",
+        "ケーキを"
+      ],
+      [
+        "たべる",
+        "食べる"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-plain-16",
+    "verbo": "たべる",
+    "contexto": "eat: pano taberu → Plain / dictionary",
+    "respuesta": "パンをたべる",
+    "pista": "Plain (dictionary) form — casual present/future. Say: pano taberu.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "たべる",
+        "食べる"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-plain-17",
+    "verbo": "たべる",
+    "contexto": "eat: ringoo taberu → Plain / dictionary",
+    "respuesta": "りんごをたべる",
+    "pista": "Plain (dictionary) form — casual present/future. Say: ringoo taberu.",
+    "grupos": [
+      [
+        "りんご",
+        "りんごを"
+      ],
+      [
+        "たべる",
+        "食べる"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-nai-18",
+    "verbo": "たべる",
+    "contexto": "eat: keekio taberu → Plain negative (–nai)",
+    "respuesta": "ケーキをたべない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: keekio tabenai.",
+    "grupos": [
+      [
+        "ケーキ",
+        "ケーキを"
+      ],
+      [
+        "たべない",
+        "食べない"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-nai-19",
+    "verbo": "たべる",
+    "contexto": "eat: pano taberu → Plain negative (–nai)",
+    "respuesta": "パンをたべない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: pano tabenai.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "たべない",
+        "食べない"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-nai-20",
+    "verbo": "たべる",
+    "contexto": "eat: ringoo taberu → Plain negative (–nai)",
+    "respuesta": "りんごをたべない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: ringoo tabenai.",
+    "grupos": [
+      [
+        "りんご",
+        "りんごを"
+      ],
+      [
+        "たべない",
+        "食べない"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-ta-21",
+    "verbo": "たべる",
+    "contexto": "eat: keekio taberu → Plain past (–ta)",
+    "respuesta": "ケーキをたべた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: keekio tabeta.",
+    "grupos": [
+      [
+        "ケーキ",
+        "ケーキを"
+      ],
+      [
+        "たべた",
+        "食べた"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-ta-22",
+    "verbo": "たべる",
+    "contexto": "eat: ringoo taberu → Plain past (–ta)",
+    "respuesta": "りんごをたべた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: ringoo tabeta.",
+    "grupos": [
+      [
+        "りんご",
+        "りんごを"
+      ],
+      [
+        "たべた",
+        "食べた"
+      ]
+    ]
+  },
+  {
+    "id": "taberu-ta-23",
+    "verbo": "たべる",
+    "contexto": "eat: pano taberu → Plain past (–ta)",
+    "respuesta": "パンをたべた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: pano tabeta.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "たべた",
+        "食べた"
+      ]
+    ]
+  },
+  {
+    "id": "miru-masu-24",
+    "verbo": "みる",
+    "contexto": "see / watch: eigao miru → Polite present (–masu)",
+    "respuesta": "えいがをみます",
+    "pista": "Polite present/future: stem + ます. Say: eigao mimasu.",
+    "grupos": [
+      [
+        "えいが",
+        "えいがを"
+      ],
+      [
+        "みます",
+        "見ます"
+      ]
+    ]
+  },
+  {
+    "id": "miru-masu-25",
+    "verbo": "みる",
+    "contexto": "see / watch: terebio miru → Polite present (–masu)",
+    "respuesta": "テレビをみます",
+    "pista": "Polite present/future: stem + ます. Say: terebio mimasu.",
+    "grupos": [
+      [
+        "テレビ",
+        "テレビを"
+      ],
+      [
+        "みます",
+        "見ます"
+      ]
+    ]
+  },
+  {
+    "id": "miru-masu-26",
+    "verbo": "みる",
+    "contexto": "see / watch: meeruo miru → Polite present (–masu)",
+    "respuesta": "メールをみます",
+    "pista": "Polite present/future: stem + ます. Say: meeruo mimasu.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "みます",
+        "見ます"
+      ]
+    ]
+  },
+  {
+    "id": "miru-masen-27",
+    "verbo": "みる",
+    "contexto": "see / watch: eigao miru → Polite negative (–masen)",
+    "respuesta": "えいがをみません",
+    "pista": "Polite negative: stem + ません. Say: eigao mimasen.",
+    "grupos": [
+      [
+        "えいが",
+        "えいがを"
+      ],
+      [
+        "みません",
+        "見ません"
+      ]
+    ]
+  },
+  {
+    "id": "miru-masen-28",
+    "verbo": "みる",
+    "contexto": "see / watch: meeruo miru → Polite negative (–masen)",
+    "respuesta": "メールをみません",
+    "pista": "Polite negative: stem + ません. Say: meeruo mimasen.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "みません",
+        "見ません"
+      ]
+    ]
+  },
+  {
+    "id": "miru-masen-29",
+    "verbo": "みる",
+    "contexto": "see / watch: terebio miru → Polite negative (–masen)",
+    "respuesta": "テレビをみません",
+    "pista": "Polite negative: stem + ません. Say: terebio mimasen.",
+    "grupos": [
+      [
+        "テレビ",
+        "テレビを"
+      ],
+      [
+        "みません",
+        "見ません"
+      ]
+    ]
+  },
+  {
+    "id": "miru-mashita-30",
+    "verbo": "みる",
+    "contexto": "see / watch: meeruo miru → Polite past (–mashita)",
+    "respuesta": "メールをみました",
+    "pista": "Polite past: stem + ました. Say: meeruo mimashita.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "みました",
+        "見ました"
+      ]
+    ]
+  },
+  {
+    "id": "miru-mashita-31",
+    "verbo": "みる",
+    "contexto": "see / watch: terebio miru → Polite past (–mashita)",
+    "respuesta": "テレビをみました",
+    "pista": "Polite past: stem + ました. Say: terebio mimashita.",
+    "grupos": [
+      [
+        "テレビ",
+        "テレビを"
+      ],
+      [
+        "みました",
+        "見ました"
+      ]
+    ]
+  },
+  {
+    "id": "miru-mashita-32",
+    "verbo": "みる",
+    "contexto": "see / watch: eigao miru → Polite past (–mashita)",
+    "respuesta": "えいがをみました",
+    "pista": "Polite past: stem + ました. Say: eigao mimashita.",
+    "grupos": [
+      [
+        "えいが",
+        "えいがを"
+      ],
+      [
+        "みました",
+        "見ました"
+      ]
+    ]
+  },
+  {
+    "id": "miru-masen_deshita-33",
+    "verbo": "みる",
+    "contexto": "see / watch: terebio miru → Polite past neg. (–masendeshita)",
+    "respuesta": "テレビをみませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: terebio mimasendeshita.",
+    "grupos": [
+      [
+        "テレビ",
+        "テレビを"
+      ],
+      [
+        "みませんでした",
+        "見ませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "miru-masen_deshita-34",
+    "verbo": "みる",
+    "contexto": "see / watch: eigao miru → Polite past neg. (–masendeshita)",
+    "respuesta": "えいがをみませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: eigao mimasendeshita.",
+    "grupos": [
+      [
+        "えいが",
+        "えいがを"
+      ],
+      [
+        "みませんでした",
+        "見ませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "miru-masen_deshita-35",
+    "verbo": "みる",
+    "contexto": "see / watch: meeruo miru → Polite past neg. (–masendeshita)",
+    "respuesta": "メールをみませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: meeruo mimasendeshita.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "みませんでした",
+        "見ませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "miru-te-36",
+    "verbo": "みる",
+    "contexto": "see / watch: eigao miru → Te-form (–te)",
+    "respuesta": "えいがをみて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: eigao mite.",
+    "grupos": [
+      [
+        "えいが",
+        "えいがを"
+      ],
+      [
+        "みて",
+        "見て"
+      ]
+    ]
+  },
+  {
+    "id": "miru-te-37",
+    "verbo": "みる",
+    "contexto": "see / watch: terebio miru → Te-form (–te)",
+    "respuesta": "テレビをみて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: terebio mite.",
+    "grupos": [
+      [
+        "テレビ",
+        "テレビを"
+      ],
+      [
+        "みて",
+        "見て"
+      ]
+    ]
+  },
+  {
+    "id": "miru-te-38",
+    "verbo": "みる",
+    "contexto": "see / watch: meeruo miru → Te-form (–te)",
+    "respuesta": "メールをみて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: meeruo mite.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "みて",
+        "見て"
+      ]
+    ]
+  },
+  {
+    "id": "miru-plain-39",
+    "verbo": "みる",
+    "contexto": "see / watch: eigao miru → Plain / dictionary",
+    "respuesta": "えいがをみる",
+    "pista": "Plain (dictionary) form — casual present/future. Say: eigao miru.",
+    "grupos": [
+      [
+        "えいが",
+        "えいがを"
+      ],
+      [
+        "みる",
+        "見る"
+      ]
+    ]
+  },
+  {
+    "id": "miru-plain-40",
+    "verbo": "みる",
+    "contexto": "see / watch: meeruo miru → Plain / dictionary",
+    "respuesta": "メールをみる",
+    "pista": "Plain (dictionary) form — casual present/future. Say: meeruo miru.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "みる",
+        "見る"
+      ]
+    ]
+  },
+  {
+    "id": "miru-plain-41",
+    "verbo": "みる",
+    "contexto": "see / watch: terebio miru → Plain / dictionary",
+    "respuesta": "テレビをみる",
+    "pista": "Plain (dictionary) form — casual present/future. Say: terebio miru.",
+    "grupos": [
+      [
+        "テレビ",
+        "テレビを"
+      ],
+      [
+        "みる",
+        "見る"
+      ]
+    ]
+  },
+  {
+    "id": "miru-nai-42",
+    "verbo": "みる",
+    "contexto": "see / watch: meeruo miru → Plain negative (–nai)",
+    "respuesta": "メールをみない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: meeruo minai.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "みない",
+        "見ない"
+      ]
+    ]
+  },
+  {
+    "id": "miru-nai-43",
+    "verbo": "みる",
+    "contexto": "see / watch: terebio miru → Plain negative (–nai)",
+    "respuesta": "テレビをみない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: terebio minai.",
+    "grupos": [
+      [
+        "テレビ",
+        "テレビを"
+      ],
+      [
+        "みない",
+        "見ない"
+      ]
+    ]
+  },
+  {
+    "id": "miru-nai-44",
+    "verbo": "みる",
+    "contexto": "see / watch: eigao miru → Plain negative (–nai)",
+    "respuesta": "えいがをみない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: eigao minai.",
+    "grupos": [
+      [
+        "えいが",
+        "えいがを"
+      ],
+      [
+        "みない",
+        "見ない"
+      ]
+    ]
+  },
+  {
+    "id": "miru-ta-45",
+    "verbo": "みる",
+    "contexto": "see / watch: eigao miru → Plain past (–ta)",
+    "respuesta": "えいがをみた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: eigao mita.",
+    "grupos": [
+      [
+        "えいが",
+        "えいがを"
+      ],
+      [
+        "みた",
+        "見た"
+      ]
+    ]
+  },
+  {
+    "id": "miru-ta-46",
+    "verbo": "みる",
+    "contexto": "see / watch: meeruo miru → Plain past (–ta)",
+    "respuesta": "メールをみた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: meeruo mita.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "みた",
+        "見た"
+      ]
+    ]
+  },
+  {
+    "id": "miru-ta-47",
+    "verbo": "みる",
+    "contexto": "see / watch: terebio miru → Plain past (–ta)",
+    "respuesta": "テレビをみた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: terebio mita.",
+    "grupos": [
+      [
+        "テレビ",
+        "テレビを"
+      ],
+      [
+        "みた",
+        "見た"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-masu-48",
+    "verbo": "おしえる",
+    "contexto": "teach: suugakuo oshieru → Polite present (–masu)",
+    "respuesta": "すうがくをおしえます",
+    "pista": "Polite present/future: stem + ます. Say: suugakuo oshiemasu.",
+    "grupos": [
+      [
+        "すうがく",
+        "すうがくを"
+      ],
+      [
+        "おしえます",
+        "教えます"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-masu-49",
+    "verbo": "おしえる",
+    "contexto": "teach: eigoo oshieru → Polite present (–masu)",
+    "respuesta": "えいごをおしえます",
+    "pista": "Polite present/future: stem + ます. Say: eigoo oshiemasu.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "おしえます",
+        "教えます"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-masu-50",
+    "verbo": "おしえる",
+    "contexto": "teach: nihongoo oshieru → Polite present (–masu)",
+    "respuesta": "にほんごをおしえます",
+    "pista": "Polite present/future: stem + ます. Say: nihongoo oshiemasu.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "おしえます",
+        "教えます"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-masen-51",
+    "verbo": "おしえる",
+    "contexto": "teach: nihongoo oshieru → Polite negative (–masen)",
+    "respuesta": "にほんごをおしえません",
+    "pista": "Polite negative: stem + ません. Say: nihongoo oshiemasen.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "おしえません",
+        "教えません"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-masen-52",
+    "verbo": "おしえる",
+    "contexto": "teach: eigoo oshieru → Polite negative (–masen)",
+    "respuesta": "えいごをおしえません",
+    "pista": "Polite negative: stem + ません. Say: eigoo oshiemasen.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "おしえません",
+        "教えません"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-masen-53",
+    "verbo": "おしえる",
+    "contexto": "teach: suugakuo oshieru → Polite negative (–masen)",
+    "respuesta": "すうがくをおしえません",
+    "pista": "Polite negative: stem + ません. Say: suugakuo oshiemasen.",
+    "grupos": [
+      [
+        "すうがく",
+        "すうがくを"
+      ],
+      [
+        "おしえません",
+        "教えません"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-mashita-54",
+    "verbo": "おしえる",
+    "contexto": "teach: suugakuo oshieru → Polite past (–mashita)",
+    "respuesta": "すうがくをおしえました",
+    "pista": "Polite past: stem + ました. Say: suugakuo oshiemashita.",
+    "grupos": [
+      [
+        "すうがく",
+        "すうがくを"
+      ],
+      [
+        "おしえました",
+        "教えました"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-mashita-55",
+    "verbo": "おしえる",
+    "contexto": "teach: eigoo oshieru → Polite past (–mashita)",
+    "respuesta": "えいごをおしえました",
+    "pista": "Polite past: stem + ました. Say: eigoo oshiemashita.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "おしえました",
+        "教えました"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-mashita-56",
+    "verbo": "おしえる",
+    "contexto": "teach: nihongoo oshieru → Polite past (–mashita)",
+    "respuesta": "にほんごをおしえました",
+    "pista": "Polite past: stem + ました. Say: nihongoo oshiemashita.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "おしえました",
+        "教えました"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-masen_deshita-57",
+    "verbo": "おしえる",
+    "contexto": "teach: suugakuo oshieru → Polite past neg. (–masendeshita)",
+    "respuesta": "すうがくをおしえませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: suugakuo oshiemasendeshita.",
+    "grupos": [
+      [
+        "すうがく",
+        "すうがくを"
+      ],
+      [
+        "おしえませんでした",
+        "教えませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-masen_deshita-58",
+    "verbo": "おしえる",
+    "contexto": "teach: eigoo oshieru → Polite past neg. (–masendeshita)",
+    "respuesta": "えいごをおしえませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: eigoo oshiemasendeshita.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "おしえませんでした",
+        "教えませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-masen_deshita-59",
+    "verbo": "おしえる",
+    "contexto": "teach: nihongoo oshieru → Polite past neg. (–masendeshita)",
+    "respuesta": "にほんごをおしえませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: nihongoo oshiemasendeshita.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "おしえませんでした",
+        "教えませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-te-60",
+    "verbo": "おしえる",
+    "contexto": "teach: eigoo oshieru → Te-form (–te)",
+    "respuesta": "えいごをおしえて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: eigoo oshiete.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "おしえて",
+        "教えて"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-te-61",
+    "verbo": "おしえる",
+    "contexto": "teach: nihongoo oshieru → Te-form (–te)",
+    "respuesta": "にほんごをおしえて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: nihongoo oshiete.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "おしえて",
+        "教えて"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-te-62",
+    "verbo": "おしえる",
+    "contexto": "teach: suugakuo oshieru → Te-form (–te)",
+    "respuesta": "すうがくをおしえて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: suugakuo oshiete.",
+    "grupos": [
+      [
+        "すうがく",
+        "すうがくを"
+      ],
+      [
+        "おしえて",
+        "教えて"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-plain-63",
+    "verbo": "おしえる",
+    "contexto": "teach: suugakuo oshieru → Plain / dictionary",
+    "respuesta": "すうがくをおしえる",
+    "pista": "Plain (dictionary) form — casual present/future. Say: suugakuo oshieru.",
+    "grupos": [
+      [
+        "すうがく",
+        "すうがくを"
+      ],
+      [
+        "おしえる",
+        "教える"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-plain-64",
+    "verbo": "おしえる",
+    "contexto": "teach: eigoo oshieru → Plain / dictionary",
+    "respuesta": "えいごをおしえる",
+    "pista": "Plain (dictionary) form — casual present/future. Say: eigoo oshieru.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "おしえる",
+        "教える"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-plain-65",
+    "verbo": "おしえる",
+    "contexto": "teach: nihongoo oshieru → Plain / dictionary",
+    "respuesta": "にほんごをおしえる",
+    "pista": "Plain (dictionary) form — casual present/future. Say: nihongoo oshieru.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "おしえる",
+        "教える"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-nai-66",
+    "verbo": "おしえる",
+    "contexto": "teach: nihongoo oshieru → Plain negative (–nai)",
+    "respuesta": "にほんごをおしえない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: nihongoo oshienai.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "おしえない",
+        "教えない"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-nai-67",
+    "verbo": "おしえる",
+    "contexto": "teach: suugakuo oshieru → Plain negative (–nai)",
+    "respuesta": "すうがくをおしえない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: suugakuo oshienai.",
+    "grupos": [
+      [
+        "すうがく",
+        "すうがくを"
+      ],
+      [
+        "おしえない",
+        "教えない"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-nai-68",
+    "verbo": "おしえる",
+    "contexto": "teach: eigoo oshieru → Plain negative (–nai)",
+    "respuesta": "えいごをおしえない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: eigoo oshienai.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "おしえない",
+        "教えない"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-ta-69",
+    "verbo": "おしえる",
+    "contexto": "teach: nihongoo oshieru → Plain past (–ta)",
+    "respuesta": "にほんごをおしえた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: nihongoo oshieta.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "おしえた",
+        "教えた"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-ta-70",
+    "verbo": "おしえる",
+    "contexto": "teach: suugakuo oshieru → Plain past (–ta)",
+    "respuesta": "すうがくをおしえた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: suugakuo oshieta.",
+    "grupos": [
+      [
+        "すうがく",
+        "すうがくを"
+      ],
+      [
+        "おしえた",
+        "教えた"
+      ]
+    ]
+  },
+  {
+    "id": "oshieru-ta-71",
+    "verbo": "おしえる",
+    "contexto": "teach: eigoo oshieru → Plain past (–ta)",
+    "respuesta": "えいごをおしえた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: eigoo oshieta.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "おしえた",
+        "教えた"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-masu-72",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (ima) → Polite present (–masu)",
+    "respuesta": "いまおきます",
+    "pista": "Polite present/future: stem + ます. Say: ima okimasu.",
+    "grupos": [
+      [
+        "おきます",
+        "起きます"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-masu-73",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (kyou) → Polite present (–masu)",
+    "respuesta": "きょうおきます",
+    "pista": "Polite present/future: stem + ます. Say: kyou okimasu.",
+    "grupos": [
+      [
+        "おきます",
+        "起きます"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-masen-74",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (ashita) → Polite negative (–masen)",
+    "respuesta": "あしたおきません",
+    "pista": "Polite negative: stem + ません. Say: ashita okimasen.",
+    "grupos": [
+      [
+        "おきません",
+        "起きません"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-masen-75",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (ima) → Polite negative (–masen)",
+    "respuesta": "いまおきません",
+    "pista": "Polite negative: stem + ません. Say: ima okimasen.",
+    "grupos": [
+      [
+        "おきません",
+        "起きません"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-mashita-76",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (ashita) → Polite past (–mashita)",
+    "respuesta": "あしたおきました",
+    "pista": "Polite past: stem + ました. Say: ashita okimashita.",
+    "grupos": [
+      [
+        "おきました",
+        "起きました"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-mashita-77",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (ima) → Polite past (–mashita)",
+    "respuesta": "いまおきました",
+    "pista": "Polite past: stem + ました. Say: ima okimashita.",
+    "grupos": [
+      [
+        "おきました",
+        "起きました"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-masen_deshita-78",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (kinou) → Polite past neg. (–masendeshita)",
+    "respuesta": "きのうおきませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: kinou okimasendeshita.",
+    "grupos": [
+      [
+        "おきませんでした",
+        "起きませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-masen_deshita-79",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (ima) → Polite past neg. (–masendeshita)",
+    "respuesta": "いまおきませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: ima okimasendeshita.",
+    "grupos": [
+      [
+        "おきませんでした",
+        "起きませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-te-80",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (kyou) → Te-form (–te)",
+    "respuesta": "きょうおきて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: kyou okite.",
+    "grupos": [
+      [
+        "おきて",
+        "起きて"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-te-81",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (ima) → Te-form (–te)",
+    "respuesta": "いまおきて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: ima okite.",
+    "grupos": [
+      [
+        "おきて",
+        "起きて"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-plain-82",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (kinou) → Plain / dictionary",
+    "respuesta": "きのうおきる",
+    "pista": "Plain (dictionary) form — casual present/future. Say: kinou okiru.",
+    "grupos": [
+      [
+        "おきる",
+        "起きる"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-plain-83",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (kyou) → Plain / dictionary",
+    "respuesta": "きょうおきる",
+    "pista": "Plain (dictionary) form — casual present/future. Say: kyou okiru.",
+    "grupos": [
+      [
+        "おきる",
+        "起きる"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-nai-84",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (kinou) → Plain negative (–nai)",
+    "respuesta": "きのうおきない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: kinou okinai.",
+    "grupos": [
+      [
+        "おきない",
+        "起きない"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-nai-85",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (ashita) → Plain negative (–nai)",
+    "respuesta": "あしたおきない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: ashita okinai.",
+    "grupos": [
+      [
+        "おきない",
+        "起きない"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-ta-86",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (mainichi) → Plain past (–ta)",
+    "respuesta": "まいにちおきた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: mainichi okita.",
+    "grupos": [
+      [
+        "おきた",
+        "起きた"
+      ]
+    ]
+  },
+  {
+    "id": "okiru-ta-87",
+    "verbo": "おきる",
+    "contexto": "wake up / get up (ashita) → Plain past (–ta)",
+    "respuesta": "あしたおきた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: ashita okita.",
+    "grupos": [
+      [
+        "おきた",
+        "起きた"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-masu-88",
+    "verbo": "のむ",
+    "contexto": "drink: koohiio nomu → Polite present (–masu)",
+    "respuesta": "コーヒーをのみます",
+    "pista": "Polite present/future: stem + ます. Say: koohiio nomimasu.",
+    "grupos": [
+      [
+        "コーヒー",
+        "コーヒーを"
+      ],
+      [
+        "のみます",
+        "飲みます"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-masu-89",
+    "verbo": "のむ",
+    "contexto": "drink: ochao nomu → Polite present (–masu)",
+    "respuesta": "おちゃをのみます",
+    "pista": "Polite present/future: stem + ます. Say: ochao nomimasu.",
+    "grupos": [
+      [
+        "おちゃ",
+        "おちゃを"
+      ],
+      [
+        "のみます",
+        "飲みます"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-masu-90",
+    "verbo": "のむ",
+    "contexto": "drink: mizuo nomu → Polite present (–masu)",
+    "respuesta": "みずをのみます",
+    "pista": "Polite present/future: stem + ます. Say: mizuo nomimasu.",
+    "grupos": [
+      [
+        "みず",
+        "みずを"
+      ],
+      [
+        "のみます",
+        "飲みます"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-masen-91",
+    "verbo": "のむ",
+    "contexto": "drink: ochao nomu → Polite negative (–masen)",
+    "respuesta": "おちゃをのみません",
+    "pista": "Polite negative: stem + ません. Say: ochao nomimasen.",
+    "grupos": [
+      [
+        "おちゃ",
+        "おちゃを"
+      ],
+      [
+        "のみません",
+        "飲みません"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-masen-92",
+    "verbo": "のむ",
+    "contexto": "drink: koohiio nomu → Polite negative (–masen)",
+    "respuesta": "コーヒーをのみません",
+    "pista": "Polite negative: stem + ません. Say: koohiio nomimasen.",
+    "grupos": [
+      [
+        "コーヒー",
+        "コーヒーを"
+      ],
+      [
+        "のみません",
+        "飲みません"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-masen-93",
+    "verbo": "のむ",
+    "contexto": "drink: mizuo nomu → Polite negative (–masen)",
+    "respuesta": "みずをのみません",
+    "pista": "Polite negative: stem + ません. Say: mizuo nomimasen.",
+    "grupos": [
+      [
+        "みず",
+        "みずを"
+      ],
+      [
+        "のみません",
+        "飲みません"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-mashita-94",
+    "verbo": "のむ",
+    "contexto": "drink: ochao nomu → Polite past (–mashita)",
+    "respuesta": "おちゃをのみました",
+    "pista": "Polite past: stem + ました. Say: ochao nomimashita.",
+    "grupos": [
+      [
+        "おちゃ",
+        "おちゃを"
+      ],
+      [
+        "のみました",
+        "飲みました"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-mashita-95",
+    "verbo": "のむ",
+    "contexto": "drink: koohiio nomu → Polite past (–mashita)",
+    "respuesta": "コーヒーをのみました",
+    "pista": "Polite past: stem + ました. Say: koohiio nomimashita.",
+    "grupos": [
+      [
+        "コーヒー",
+        "コーヒーを"
+      ],
+      [
+        "のみました",
+        "飲みました"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-mashita-96",
+    "verbo": "のむ",
+    "contexto": "drink: mizuo nomu → Polite past (–mashita)",
+    "respuesta": "みずをのみました",
+    "pista": "Polite past: stem + ました. Say: mizuo nomimashita.",
+    "grupos": [
+      [
+        "みず",
+        "みずを"
+      ],
+      [
+        "のみました",
+        "飲みました"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-masen_deshita-97",
+    "verbo": "のむ",
+    "contexto": "drink: koohiio nomu → Polite past neg. (–masendeshita)",
+    "respuesta": "コーヒーをのみませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: koohiio nomimasendeshita.",
+    "grupos": [
+      [
+        "コーヒー",
+        "コーヒーを"
+      ],
+      [
+        "のみませんでした",
+        "飲みませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-masen_deshita-98",
+    "verbo": "のむ",
+    "contexto": "drink: ochao nomu → Polite past neg. (–masendeshita)",
+    "respuesta": "おちゃをのみませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: ochao nomimasendeshita.",
+    "grupos": [
+      [
+        "おちゃ",
+        "おちゃを"
+      ],
+      [
+        "のみませんでした",
+        "飲みませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-masen_deshita-99",
+    "verbo": "のむ",
+    "contexto": "drink: mizuo nomu → Polite past neg. (–masendeshita)",
+    "respuesta": "みずをのみませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: mizuo nomimasendeshita.",
+    "grupos": [
+      [
+        "みず",
+        "みずを"
+      ],
+      [
+        "のみませんでした",
+        "飲みませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-te-100",
+    "verbo": "のむ",
+    "contexto": "drink: mizuo nomu → Te-form (–te)",
+    "respuesta": "みずをのんで",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: mizuo nonde.",
+    "grupos": [
+      [
+        "みず",
+        "みずを"
+      ],
+      [
+        "のんで",
+        "飲んで"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-te-101",
+    "verbo": "のむ",
+    "contexto": "drink: koohiio nomu → Te-form (–te)",
+    "respuesta": "コーヒーをのんで",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: koohiio nonde.",
+    "grupos": [
+      [
+        "コーヒー",
+        "コーヒーを"
+      ],
+      [
+        "のんで",
+        "飲んで"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-te-102",
+    "verbo": "のむ",
+    "contexto": "drink: ochao nomu → Te-form (–te)",
+    "respuesta": "おちゃをのんで",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: ochao nonde.",
+    "grupos": [
+      [
+        "おちゃ",
+        "おちゃを"
+      ],
+      [
+        "のんで",
+        "飲んで"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-plain-103",
+    "verbo": "のむ",
+    "contexto": "drink: koohiio nomu → Plain / dictionary",
+    "respuesta": "コーヒーをのむ",
+    "pista": "Plain (dictionary) form — casual present/future. Say: koohiio nomu.",
+    "grupos": [
+      [
+        "コーヒー",
+        "コーヒーを"
+      ],
+      [
+        "のむ",
+        "飲む"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-plain-104",
+    "verbo": "のむ",
+    "contexto": "drink: ochao nomu → Plain / dictionary",
+    "respuesta": "おちゃをのむ",
+    "pista": "Plain (dictionary) form — casual present/future. Say: ochao nomu.",
+    "grupos": [
+      [
+        "おちゃ",
+        "おちゃを"
+      ],
+      [
+        "のむ",
+        "飲む"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-plain-105",
+    "verbo": "のむ",
+    "contexto": "drink: mizuo nomu → Plain / dictionary",
+    "respuesta": "みずをのむ",
+    "pista": "Plain (dictionary) form — casual present/future. Say: mizuo nomu.",
+    "grupos": [
+      [
+        "みず",
+        "みずを"
+      ],
+      [
+        "のむ",
+        "飲む"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-nai-106",
+    "verbo": "のむ",
+    "contexto": "drink: koohiio nomu → Plain negative (–nai)",
+    "respuesta": "コーヒーをのまない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: koohiio nomanai.",
+    "grupos": [
+      [
+        "コーヒー",
+        "コーヒーを"
+      ],
+      [
+        "のまない",
+        "飲まない"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-nai-107",
+    "verbo": "のむ",
+    "contexto": "drink: ochao nomu → Plain negative (–nai)",
+    "respuesta": "おちゃをのまない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: ochao nomanai.",
+    "grupos": [
+      [
+        "おちゃ",
+        "おちゃを"
+      ],
+      [
+        "のまない",
+        "飲まない"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-nai-108",
+    "verbo": "のむ",
+    "contexto": "drink: mizuo nomu → Plain negative (–nai)",
+    "respuesta": "みずをのまない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: mizuo nomanai.",
+    "grupos": [
+      [
+        "みず",
+        "みずを"
+      ],
+      [
+        "のまない",
+        "飲まない"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-ta-109",
+    "verbo": "のむ",
+    "contexto": "drink: ochao nomu → Plain past (–ta)",
+    "respuesta": "おちゃをのんだ",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: ochao nonda.",
+    "grupos": [
+      [
+        "おちゃ",
+        "おちゃを"
+      ],
+      [
+        "のんだ",
+        "飲んだ"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-ta-110",
+    "verbo": "のむ",
+    "contexto": "drink: koohiio nomu → Plain past (–ta)",
+    "respuesta": "コーヒーをのんだ",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: koohiio nonda.",
+    "grupos": [
+      [
+        "コーヒー",
+        "コーヒーを"
+      ],
+      [
+        "のんだ",
+        "飲んだ"
+      ]
+    ]
+  },
+  {
+    "id": "nomu-ta-111",
+    "verbo": "のむ",
+    "contexto": "drink: mizuo nomu → Plain past (–ta)",
+    "respuesta": "みずをのんだ",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: mizuo nonda.",
+    "grupos": [
+      [
+        "みず",
+        "みずを"
+      ],
+      [
+        "のんだ",
+        "飲んだ"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-masu-112",
+    "verbo": "かく",
+    "contexto": "write: meeruo kaku → Polite present (–masu)",
+    "respuesta": "メールをかきます",
+    "pista": "Polite present/future: stem + ます. Say: meeruo kakimasu.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "かきます",
+        "書きます"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-masu-113",
+    "verbo": "かく",
+    "contexto": "write: namaeo kaku → Polite present (–masu)",
+    "respuesta": "なまえをかきます",
+    "pista": "Polite present/future: stem + ます. Say: namaeo kakimasu.",
+    "grupos": [
+      [
+        "なまえ",
+        "なまえを"
+      ],
+      [
+        "かきます",
+        "書きます"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-masu-114",
+    "verbo": "かく",
+    "contexto": "write: tegamio kaku → Polite present (–masu)",
+    "respuesta": "てがみをかきます",
+    "pista": "Polite present/future: stem + ます. Say: tegamio kakimasu.",
+    "grupos": [
+      [
+        "てがみ",
+        "てがみを"
+      ],
+      [
+        "かきます",
+        "書きます"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-masen-115",
+    "verbo": "かく",
+    "contexto": "write: meeruo kaku → Polite negative (–masen)",
+    "respuesta": "メールをかきません",
+    "pista": "Polite negative: stem + ません. Say: meeruo kakimasen.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "かきません",
+        "書きません"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-masen-116",
+    "verbo": "かく",
+    "contexto": "write: tegamio kaku → Polite negative (–masen)",
+    "respuesta": "てがみをかきません",
+    "pista": "Polite negative: stem + ません. Say: tegamio kakimasen.",
+    "grupos": [
+      [
+        "てがみ",
+        "てがみを"
+      ],
+      [
+        "かきません",
+        "書きません"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-masen-117",
+    "verbo": "かく",
+    "contexto": "write: namaeo kaku → Polite negative (–masen)",
+    "respuesta": "なまえをかきません",
+    "pista": "Polite negative: stem + ません. Say: namaeo kakimasen.",
+    "grupos": [
+      [
+        "なまえ",
+        "なまえを"
+      ],
+      [
+        "かきません",
+        "書きません"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-mashita-118",
+    "verbo": "かく",
+    "contexto": "write: namaeo kaku → Polite past (–mashita)",
+    "respuesta": "なまえをかきました",
+    "pista": "Polite past: stem + ました. Say: namaeo kakimashita.",
+    "grupos": [
+      [
+        "なまえ",
+        "なまえを"
+      ],
+      [
+        "かきました",
+        "書きました"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-mashita-119",
+    "verbo": "かく",
+    "contexto": "write: meeruo kaku → Polite past (–mashita)",
+    "respuesta": "メールをかきました",
+    "pista": "Polite past: stem + ました. Say: meeruo kakimashita.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "かきました",
+        "書きました"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-mashita-120",
+    "verbo": "かく",
+    "contexto": "write: tegamio kaku → Polite past (–mashita)",
+    "respuesta": "てがみをかきました",
+    "pista": "Polite past: stem + ました. Say: tegamio kakimashita.",
+    "grupos": [
+      [
+        "てがみ",
+        "てがみを"
+      ],
+      [
+        "かきました",
+        "書きました"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-masen_deshita-121",
+    "verbo": "かく",
+    "contexto": "write: tegamio kaku → Polite past neg. (–masendeshita)",
+    "respuesta": "てがみをかきませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: tegamio kakimasendeshita.",
+    "grupos": [
+      [
+        "てがみ",
+        "てがみを"
+      ],
+      [
+        "かきませんでした",
+        "書きませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-masen_deshita-122",
+    "verbo": "かく",
+    "contexto": "write: namaeo kaku → Polite past neg. (–masendeshita)",
+    "respuesta": "なまえをかきませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: namaeo kakimasendeshita.",
+    "grupos": [
+      [
+        "なまえ",
+        "なまえを"
+      ],
+      [
+        "かきませんでした",
+        "書きませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-masen_deshita-123",
+    "verbo": "かく",
+    "contexto": "write: meeruo kaku → Polite past neg. (–masendeshita)",
+    "respuesta": "メールをかきませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: meeruo kakimasendeshita.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "かきませんでした",
+        "書きませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-te-124",
+    "verbo": "かく",
+    "contexto": "write: meeruo kaku → Te-form (–te)",
+    "respuesta": "メールをかいて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: meeruo kaite.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "かいて",
+        "書いて"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-te-125",
+    "verbo": "かく",
+    "contexto": "write: tegamio kaku → Te-form (–te)",
+    "respuesta": "てがみをかいて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: tegamio kaite.",
+    "grupos": [
+      [
+        "てがみ",
+        "てがみを"
+      ],
+      [
+        "かいて",
+        "書いて"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-te-126",
+    "verbo": "かく",
+    "contexto": "write: namaeo kaku → Te-form (–te)",
+    "respuesta": "なまえをかいて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: namaeo kaite.",
+    "grupos": [
+      [
+        "なまえ",
+        "なまえを"
+      ],
+      [
+        "かいて",
+        "書いて"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-plain-127",
+    "verbo": "かく",
+    "contexto": "write: tegamio kaku → Plain / dictionary",
+    "respuesta": "てがみをかく",
+    "pista": "Plain (dictionary) form — casual present/future. Say: tegamio kaku.",
+    "grupos": [
+      [
+        "てがみ",
+        "てがみを"
+      ],
+      [
+        "かく",
+        "書く"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-plain-128",
+    "verbo": "かく",
+    "contexto": "write: meeruo kaku → Plain / dictionary",
+    "respuesta": "メールをかく",
+    "pista": "Plain (dictionary) form — casual present/future. Say: meeruo kaku.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "かく",
+        "書く"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-plain-129",
+    "verbo": "かく",
+    "contexto": "write: namaeo kaku → Plain / dictionary",
+    "respuesta": "なまえをかく",
+    "pista": "Plain (dictionary) form — casual present/future. Say: namaeo kaku.",
+    "grupos": [
+      [
+        "なまえ",
+        "なまえを"
+      ],
+      [
+        "かく",
+        "書く"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-nai-130",
+    "verbo": "かく",
+    "contexto": "write: meeruo kaku → Plain negative (–nai)",
+    "respuesta": "メールをかかない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: meeruo kakanai.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "かかない",
+        "書かない"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-nai-131",
+    "verbo": "かく",
+    "contexto": "write: namaeo kaku → Plain negative (–nai)",
+    "respuesta": "なまえをかかない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: namaeo kakanai.",
+    "grupos": [
+      [
+        "なまえ",
+        "なまえを"
+      ],
+      [
+        "かかない",
+        "書かない"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-nai-132",
+    "verbo": "かく",
+    "contexto": "write: tegamio kaku → Plain negative (–nai)",
+    "respuesta": "てがみをかかない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: tegamio kakanai.",
+    "grupos": [
+      [
+        "てがみ",
+        "てがみを"
+      ],
+      [
+        "かかない",
+        "書かない"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-ta-133",
+    "verbo": "かく",
+    "contexto": "write: meeruo kaku → Plain past (–ta)",
+    "respuesta": "メールをかいた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: meeruo kaita.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "かいた",
+        "書いた"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-ta-134",
+    "verbo": "かく",
+    "contexto": "write: tegamio kaku → Plain past (–ta)",
+    "respuesta": "てがみをかいた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: tegamio kaita.",
+    "grupos": [
+      [
+        "てがみ",
+        "てがみを"
+      ],
+      [
+        "かいた",
+        "書いた"
+      ]
+    ]
+  },
+  {
+    "id": "kaku-ta-135",
+    "verbo": "かく",
+    "contexto": "write: namaeo kaku → Plain past (–ta)",
+    "respuesta": "なまえをかいた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: namaeo kaita.",
+    "grupos": [
+      [
+        "なまえ",
+        "なまえを"
+      ],
+      [
+        "かいた",
+        "書いた"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-masu-136",
+    "verbo": "はなす",
+    "contexto": "speak / talk: nihongoo hanasu → Polite present (–masu)",
+    "respuesta": "にほんごをはなします",
+    "pista": "Polite present/future: stem + ます. Say: nihongoo hanashimasu.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "はなします",
+        "話します"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-masu-137",
+    "verbo": "はなす",
+    "contexto": "speak / talk: eigoo hanasu → Polite present (–masu)",
+    "respuesta": "えいごをはなします",
+    "pista": "Polite present/future: stem + ます. Say: eigoo hanashimasu.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "はなします",
+        "話します"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-masu-138",
+    "verbo": "はなす",
+    "contexto": "speak / talk: nihongoo hanasu → Polite present (–masu)",
+    "respuesta": "にほんごをはなします",
+    "pista": "Polite present/future: stem + ます. Say: nihongoo hanashimasu.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "はなします",
+        "話します"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-masen-139",
+    "verbo": "はなす",
+    "contexto": "speak / talk: nihongoo hanasu → Polite negative (–masen)",
+    "respuesta": "にほんごをはなしません",
+    "pista": "Polite negative: stem + ません. Say: nihongoo hanashimasen.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "はなしません",
+        "話しません"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-masen-140",
+    "verbo": "はなす",
+    "contexto": "speak / talk: eigoo hanasu → Polite negative (–masen)",
+    "respuesta": "えいごをはなしません",
+    "pista": "Polite negative: stem + ません. Say: eigoo hanashimasen.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "はなしません",
+        "話しません"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-masen-141",
+    "verbo": "はなす",
+    "contexto": "speak / talk: eigoo hanasu → Polite negative (–masen)",
+    "respuesta": "えいごをはなしません",
+    "pista": "Polite negative: stem + ません. Say: eigoo hanashimasen.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "はなしません",
+        "話しません"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-mashita-142",
+    "verbo": "はなす",
+    "contexto": "speak / talk: nihongoo hanasu → Polite past (–mashita)",
+    "respuesta": "にほんごをはなしました",
+    "pista": "Polite past: stem + ました. Say: nihongoo hanashimashita.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "はなしました",
+        "話しました"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-mashita-143",
+    "verbo": "はなす",
+    "contexto": "speak / talk: eigoo hanasu → Polite past (–mashita)",
+    "respuesta": "えいごをはなしました",
+    "pista": "Polite past: stem + ました. Say: eigoo hanashimashita.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "はなしました",
+        "話しました"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-mashita-144",
+    "verbo": "はなす",
+    "contexto": "speak / talk: eigoo hanasu → Polite past (–mashita)",
+    "respuesta": "えいごをはなしました",
+    "pista": "Polite past: stem + ました. Say: eigoo hanashimashita.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "はなしました",
+        "話しました"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-masen_deshita-145",
+    "verbo": "はなす",
+    "contexto": "speak / talk: nihongoo hanasu → Polite past neg. (–masendeshita)",
+    "respuesta": "にほんごをはなしませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: nihongoo hanashimasendeshita.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "はなしませんでした",
+        "話しませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-masen_deshita-146",
+    "verbo": "はなす",
+    "contexto": "speak / talk: eigoo hanasu → Polite past neg. (–masendeshita)",
+    "respuesta": "えいごをはなしませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: eigoo hanashimasendeshita.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "はなしませんでした",
+        "話しませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-masen_deshita-147",
+    "verbo": "はなす",
+    "contexto": "speak / talk: nihongoo hanasu → Polite past neg. (–masendeshita)",
+    "respuesta": "にほんごをはなしませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: nihongoo hanashimasendeshita.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "はなしませんでした",
+        "話しませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-te-148",
+    "verbo": "はなす",
+    "contexto": "speak / talk: nihongoo hanasu → Te-form (–te)",
+    "respuesta": "にほんごをはなして",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: nihongoo hanashite.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "はなして",
+        "話して"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-te-149",
+    "verbo": "はなす",
+    "contexto": "speak / talk: eigoo hanasu → Te-form (–te)",
+    "respuesta": "えいごをはなして",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: eigoo hanashite.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "はなして",
+        "話して"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-te-150",
+    "verbo": "はなす",
+    "contexto": "speak / talk: eigoo hanasu → Te-form (–te)",
+    "respuesta": "えいごをはなして",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: eigoo hanashite.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "はなして",
+        "話して"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-plain-151",
+    "verbo": "はなす",
+    "contexto": "speak / talk: nihongoo hanasu → Plain / dictionary",
+    "respuesta": "にほんごをはなす",
+    "pista": "Plain (dictionary) form — casual present/future. Say: nihongoo hanasu.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "はなす",
+        "話す"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-plain-152",
+    "verbo": "はなす",
+    "contexto": "speak / talk: eigoo hanasu → Plain / dictionary",
+    "respuesta": "えいごをはなす",
+    "pista": "Plain (dictionary) form — casual present/future. Say: eigoo hanasu.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "はなす",
+        "話す"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-plain-153",
+    "verbo": "はなす",
+    "contexto": "speak / talk: eigoo hanasu → Plain / dictionary",
+    "respuesta": "えいごをはなす",
+    "pista": "Plain (dictionary) form — casual present/future. Say: eigoo hanasu.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "はなす",
+        "話す"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-nai-154",
+    "verbo": "はなす",
+    "contexto": "speak / talk: nihongoo hanasu → Plain negative (–nai)",
+    "respuesta": "にほんごをはなさない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: nihongoo hanasanai.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "はなさない",
+        "話さない"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-nai-155",
+    "verbo": "はなす",
+    "contexto": "speak / talk: eigoo hanasu → Plain negative (–nai)",
+    "respuesta": "えいごをはなさない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: eigoo hanasanai.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "はなさない",
+        "話さない"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-nai-156",
+    "verbo": "はなす",
+    "contexto": "speak / talk: nihongoo hanasu → Plain negative (–nai)",
+    "respuesta": "にほんごをはなさない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: nihongoo hanasanai.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "はなさない",
+        "話さない"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-ta-157",
+    "verbo": "はなす",
+    "contexto": "speak / talk: eigoo hanasu → Plain past (–ta)",
+    "respuesta": "えいごをはなした",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: eigoo hanashita.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "はなした",
+        "話した"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-ta-158",
+    "verbo": "はなす",
+    "contexto": "speak / talk: nihongoo hanasu → Plain past (–ta)",
+    "respuesta": "にほんごをはなした",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: nihongoo hanashita.",
+    "grupos": [
+      [
+        "にほんご",
+        "にほんごを"
+      ],
+      [
+        "はなした",
+        "話した"
+      ]
+    ]
+  },
+  {
+    "id": "hanasu-ta-159",
+    "verbo": "はなす",
+    "contexto": "speak / talk: eigoo hanasu → Plain past (–ta)",
+    "respuesta": "えいごをはなした",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: eigoo hanashita.",
+    "grupos": [
+      [
+        "えいご",
+        "えいごを"
+      ],
+      [
+        "はなした",
+        "話した"
+      ]
+    ]
+  },
+  {
+    "id": "kau-masu-160",
+    "verbo": "かう",
+    "contexto": "buy: pano kau → Polite present (–masu)",
+    "respuesta": "パンをかいます",
+    "pista": "Polite present/future: stem + ます. Say: pano kaimasu.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "かいます",
+        "買います"
+      ]
+    ]
+  },
+  {
+    "id": "kau-masu-161",
+    "verbo": "かう",
+    "contexto": "buy: purezentoo kau → Polite present (–masu)",
+    "respuesta": "プレゼントをかいます",
+    "pista": "Polite present/future: stem + ます. Say: purezentoo kaimasu.",
+    "grupos": [
+      [
+        "プレゼント",
+        "プレゼントを"
+      ],
+      [
+        "かいます",
+        "買います"
+      ]
+    ]
+  },
+  {
+    "id": "kau-masu-162",
+    "verbo": "かう",
+    "contexto": "buy: hono kau → Polite present (–masu)",
+    "respuesta": "ほんをかいます",
+    "pista": "Polite present/future: stem + ます. Say: hono kaimasu.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "かいます",
+        "買います"
+      ]
+    ]
+  },
+  {
+    "id": "kau-masen-163",
+    "verbo": "かう",
+    "contexto": "buy: purezentoo kau → Polite negative (–masen)",
+    "respuesta": "プレゼントをかいません",
+    "pista": "Polite negative: stem + ません. Say: purezentoo kaimasen.",
+    "grupos": [
+      [
+        "プレゼント",
+        "プレゼントを"
+      ],
+      [
+        "かいません",
+        "買いません"
+      ]
+    ]
+  },
+  {
+    "id": "kau-masen-164",
+    "verbo": "かう",
+    "contexto": "buy: hono kau → Polite negative (–masen)",
+    "respuesta": "ほんをかいません",
+    "pista": "Polite negative: stem + ません. Say: hono kaimasen.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "かいません",
+        "買いません"
+      ]
+    ]
+  },
+  {
+    "id": "kau-masen-165",
+    "verbo": "かう",
+    "contexto": "buy: pano kau → Polite negative (–masen)",
+    "respuesta": "パンをかいません",
+    "pista": "Polite negative: stem + ません. Say: pano kaimasen.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "かいません",
+        "買いません"
+      ]
+    ]
+  },
+  {
+    "id": "kau-mashita-166",
+    "verbo": "かう",
+    "contexto": "buy: pano kau → Polite past (–mashita)",
+    "respuesta": "パンをかいました",
+    "pista": "Polite past: stem + ました. Say: pano kaimashita.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "かいました",
+        "買いました"
+      ]
+    ]
+  },
+  {
+    "id": "kau-mashita-167",
+    "verbo": "かう",
+    "contexto": "buy: purezentoo kau → Polite past (–mashita)",
+    "respuesta": "プレゼントをかいました",
+    "pista": "Polite past: stem + ました. Say: purezentoo kaimashita.",
+    "grupos": [
+      [
+        "プレゼント",
+        "プレゼントを"
+      ],
+      [
+        "かいました",
+        "買いました"
+      ]
+    ]
+  },
+  {
+    "id": "kau-mashita-168",
+    "verbo": "かう",
+    "contexto": "buy: hono kau → Polite past (–mashita)",
+    "respuesta": "ほんをかいました",
+    "pista": "Polite past: stem + ました. Say: hono kaimashita.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "かいました",
+        "買いました"
+      ]
+    ]
+  },
+  {
+    "id": "kau-masen_deshita-169",
+    "verbo": "かう",
+    "contexto": "buy: hono kau → Polite past neg. (–masendeshita)",
+    "respuesta": "ほんをかいませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: hono kaimasendeshita.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "かいませんでした",
+        "買いませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "kau-masen_deshita-170",
+    "verbo": "かう",
+    "contexto": "buy: pano kau → Polite past neg. (–masendeshita)",
+    "respuesta": "パンをかいませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: pano kaimasendeshita.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "かいませんでした",
+        "買いませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "kau-masen_deshita-171",
+    "verbo": "かう",
+    "contexto": "buy: purezentoo kau → Polite past neg. (–masendeshita)",
+    "respuesta": "プレゼントをかいませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: purezentoo kaimasendeshita.",
+    "grupos": [
+      [
+        "プレゼント",
+        "プレゼントを"
+      ],
+      [
+        "かいませんでした",
+        "買いませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "kau-te-172",
+    "verbo": "かう",
+    "contexto": "buy: hono kau → Te-form (–te)",
+    "respuesta": "ほんをかって",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: hono katte.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "かって",
+        "買って"
+      ]
+    ]
+  },
+  {
+    "id": "kau-te-173",
+    "verbo": "かう",
+    "contexto": "buy: pano kau → Te-form (–te)",
+    "respuesta": "パンをかって",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: pano katte.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "かって",
+        "買って"
+      ]
+    ]
+  },
+  {
+    "id": "kau-te-174",
+    "verbo": "かう",
+    "contexto": "buy: purezentoo kau → Te-form (–te)",
+    "respuesta": "プレゼントをかって",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: purezentoo katte.",
+    "grupos": [
+      [
+        "プレゼント",
+        "プレゼントを"
+      ],
+      [
+        "かって",
+        "買って"
+      ]
+    ]
+  },
+  {
+    "id": "kau-plain-175",
+    "verbo": "かう",
+    "contexto": "buy: hono kau → Plain / dictionary",
+    "respuesta": "ほんをかう",
+    "pista": "Plain (dictionary) form — casual present/future. Say: hono kau.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "かう",
+        "買う"
+      ]
+    ]
+  },
+  {
+    "id": "kau-plain-176",
+    "verbo": "かう",
+    "contexto": "buy: purezentoo kau → Plain / dictionary",
+    "respuesta": "プレゼントをかう",
+    "pista": "Plain (dictionary) form — casual present/future. Say: purezentoo kau.",
+    "grupos": [
+      [
+        "プレゼント",
+        "プレゼントを"
+      ],
+      [
+        "かう",
+        "買う"
+      ]
+    ]
+  },
+  {
+    "id": "kau-plain-177",
+    "verbo": "かう",
+    "contexto": "buy: pano kau → Plain / dictionary",
+    "respuesta": "パンをかう",
+    "pista": "Plain (dictionary) form — casual present/future. Say: pano kau.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "かう",
+        "買う"
+      ]
+    ]
+  },
+  {
+    "id": "kau-nai-178",
+    "verbo": "かう",
+    "contexto": "buy: pano kau → Plain negative (–nai)",
+    "respuesta": "パンをかわない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: pano kawanai.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "かわない",
+        "買わない"
+      ]
+    ]
+  },
+  {
+    "id": "kau-nai-179",
+    "verbo": "かう",
+    "contexto": "buy: purezentoo kau → Plain negative (–nai)",
+    "respuesta": "プレゼントをかわない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: purezentoo kawanai.",
+    "grupos": [
+      [
+        "プレゼント",
+        "プレゼントを"
+      ],
+      [
+        "かわない",
+        "買わない"
+      ]
+    ]
+  },
+  {
+    "id": "kau-nai-180",
+    "verbo": "かう",
+    "contexto": "buy: hono kau → Plain negative (–nai)",
+    "respuesta": "ほんをかわない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: hono kawanai.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "かわない",
+        "買わない"
+      ]
+    ]
+  },
+  {
+    "id": "kau-ta-181",
+    "verbo": "かう",
+    "contexto": "buy: purezentoo kau → Plain past (–ta)",
+    "respuesta": "プレゼントをかった",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: purezentoo katta.",
+    "grupos": [
+      [
+        "プレゼント",
+        "プレゼントを"
+      ],
+      [
+        "かった",
+        "買った"
+      ]
+    ]
+  },
+  {
+    "id": "kau-ta-182",
+    "verbo": "かう",
+    "contexto": "buy: pano kau → Plain past (–ta)",
+    "respuesta": "パンをかった",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: pano katta.",
+    "grupos": [
+      [
+        "パン",
+        "パンを"
+      ],
+      [
+        "かった",
+        "買った"
+      ]
+    ]
+  },
+  {
+    "id": "kau-ta-183",
+    "verbo": "かう",
+    "contexto": "buy: hono kau → Plain past (–ta)",
+    "respuesta": "ほんをかった",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: hono katta.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "かった",
+        "買った"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-masu-184",
+    "verbo": "よむ",
+    "contexto": "read: hono yomu → Polite present (–masu)",
+    "respuesta": "ほんをよみます",
+    "pista": "Polite present/future: stem + ます. Say: hono yomimasu.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "よみます",
+        "読みます"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-masu-185",
+    "verbo": "よむ",
+    "contexto": "read: shinbuno yomu → Polite present (–masu)",
+    "respuesta": "しんぶんをよみます",
+    "pista": "Polite present/future: stem + ます. Say: shinbuno yomimasu.",
+    "grupos": [
+      [
+        "しんぶん",
+        "しんぶんを"
+      ],
+      [
+        "よみます",
+        "読みます"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-masu-186",
+    "verbo": "よむ",
+    "contexto": "read: meeruo yomu → Polite present (–masu)",
+    "respuesta": "メールをよみます",
+    "pista": "Polite present/future: stem + ます. Say: meeruo yomimasu.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "よみます",
+        "読みます"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-masen-187",
+    "verbo": "よむ",
+    "contexto": "read: hono yomu → Polite negative (–masen)",
+    "respuesta": "ほんをよみません",
+    "pista": "Polite negative: stem + ません. Say: hono yomimasen.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "よみません",
+        "読みません"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-masen-188",
+    "verbo": "よむ",
+    "contexto": "read: meeruo yomu → Polite negative (–masen)",
+    "respuesta": "メールをよみません",
+    "pista": "Polite negative: stem + ません. Say: meeruo yomimasen.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "よみません",
+        "読みません"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-masen-189",
+    "verbo": "よむ",
+    "contexto": "read: shinbuno yomu → Polite negative (–masen)",
+    "respuesta": "しんぶんをよみません",
+    "pista": "Polite negative: stem + ません. Say: shinbuno yomimasen.",
+    "grupos": [
+      [
+        "しんぶん",
+        "しんぶんを"
+      ],
+      [
+        "よみません",
+        "読みません"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-mashita-190",
+    "verbo": "よむ",
+    "contexto": "read: meeruo yomu → Polite past (–mashita)",
+    "respuesta": "メールをよみました",
+    "pista": "Polite past: stem + ました. Say: meeruo yomimashita.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "よみました",
+        "読みました"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-mashita-191",
+    "verbo": "よむ",
+    "contexto": "read: shinbuno yomu → Polite past (–mashita)",
+    "respuesta": "しんぶんをよみました",
+    "pista": "Polite past: stem + ました. Say: shinbuno yomimashita.",
+    "grupos": [
+      [
+        "しんぶん",
+        "しんぶんを"
+      ],
+      [
+        "よみました",
+        "読みました"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-mashita-192",
+    "verbo": "よむ",
+    "contexto": "read: hono yomu → Polite past (–mashita)",
+    "respuesta": "ほんをよみました",
+    "pista": "Polite past: stem + ました. Say: hono yomimashita.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "よみました",
+        "読みました"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-masen_deshita-193",
+    "verbo": "よむ",
+    "contexto": "read: hono yomu → Polite past neg. (–masendeshita)",
+    "respuesta": "ほんをよみませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: hono yomimasendeshita.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "よみませんでした",
+        "読みませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-masen_deshita-194",
+    "verbo": "よむ",
+    "contexto": "read: shinbuno yomu → Polite past neg. (–masendeshita)",
+    "respuesta": "しんぶんをよみませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: shinbuno yomimasendeshita.",
+    "grupos": [
+      [
+        "しんぶん",
+        "しんぶんを"
+      ],
+      [
+        "よみませんでした",
+        "読みませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-masen_deshita-195",
+    "verbo": "よむ",
+    "contexto": "read: meeruo yomu → Polite past neg. (–masendeshita)",
+    "respuesta": "メールをよみませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: meeruo yomimasendeshita.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "よみませんでした",
+        "読みませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-te-196",
+    "verbo": "よむ",
+    "contexto": "read: shinbuno yomu → Te-form (–te)",
+    "respuesta": "しんぶんをよんで",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: shinbuno yonde.",
+    "grupos": [
+      [
+        "しんぶん",
+        "しんぶんを"
+      ],
+      [
+        "よんで",
+        "読んで"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-te-197",
+    "verbo": "よむ",
+    "contexto": "read: meeruo yomu → Te-form (–te)",
+    "respuesta": "メールをよんで",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: meeruo yonde.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "よんで",
+        "読んで"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-te-198",
+    "verbo": "よむ",
+    "contexto": "read: hono yomu → Te-form (–te)",
+    "respuesta": "ほんをよんで",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: hono yonde.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "よんで",
+        "読んで"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-plain-199",
+    "verbo": "よむ",
+    "contexto": "read: shinbuno yomu → Plain / dictionary",
+    "respuesta": "しんぶんをよむ",
+    "pista": "Plain (dictionary) form — casual present/future. Say: shinbuno yomu.",
+    "grupos": [
+      [
+        "しんぶん",
+        "しんぶんを"
+      ],
+      [
+        "よむ",
+        "読む"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-plain-200",
+    "verbo": "よむ",
+    "contexto": "read: hono yomu → Plain / dictionary",
+    "respuesta": "ほんをよむ",
+    "pista": "Plain (dictionary) form — casual present/future. Say: hono yomu.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "よむ",
+        "読む"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-plain-201",
+    "verbo": "よむ",
+    "contexto": "read: meeruo yomu → Plain / dictionary",
+    "respuesta": "メールをよむ",
+    "pista": "Plain (dictionary) form — casual present/future. Say: meeruo yomu.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "よむ",
+        "読む"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-nai-202",
+    "verbo": "よむ",
+    "contexto": "read: hono yomu → Plain negative (–nai)",
+    "respuesta": "ほんをよまない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: hono yomanai.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "よまない",
+        "読まない"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-nai-203",
+    "verbo": "よむ",
+    "contexto": "read: shinbuno yomu → Plain negative (–nai)",
+    "respuesta": "しんぶんをよまない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: shinbuno yomanai.",
+    "grupos": [
+      [
+        "しんぶん",
+        "しんぶんを"
+      ],
+      [
+        "よまない",
+        "読まない"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-nai-204",
+    "verbo": "よむ",
+    "contexto": "read: meeruo yomu → Plain negative (–nai)",
+    "respuesta": "メールをよまない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: meeruo yomanai.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "よまない",
+        "読まない"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-ta-205",
+    "verbo": "よむ",
+    "contexto": "read: hono yomu → Plain past (–ta)",
+    "respuesta": "ほんをよんだ",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: hono yonda.",
+    "grupos": [
+      [
+        "ほん",
+        "ほんを"
+      ],
+      [
+        "よんだ",
+        "読んだ"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-ta-206",
+    "verbo": "よむ",
+    "contexto": "read: shinbuno yomu → Plain past (–ta)",
+    "respuesta": "しんぶんをよんだ",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: shinbuno yonda.",
+    "grupos": [
+      [
+        "しんぶん",
+        "しんぶんを"
+      ],
+      [
+        "よんだ",
+        "読んだ"
+      ]
+    ]
+  },
+  {
+    "id": "yomu-ta-207",
+    "verbo": "よむ",
+    "contexto": "read: meeruo yomu → Plain past (–ta)",
+    "respuesta": "メールをよんだ",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: meeruo yonda.",
+    "grupos": [
+      [
+        "メール",
+        "メールを"
+      ],
+      [
+        "よんだ",
+        "読んだ"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-masu-208",
+    "verbo": "きく",
+    "contexto": "listen / hear: rajioo kiku → Polite present (–masu)",
+    "respuesta": "ラジオをききます",
+    "pista": "Polite present/future: stem + ます. Say: rajioo kikimasu.",
+    "grupos": [
+      [
+        "ラジオ",
+        "ラジオを"
+      ],
+      [
+        "ききます",
+        "聞きます"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-masu-209",
+    "verbo": "きく",
+    "contexto": "listen / hear: ongakuo kiku → Polite present (–masu)",
+    "respuesta": "おんがくをききます",
+    "pista": "Polite present/future: stem + ます. Say: ongakuo kikimasu.",
+    "grupos": [
+      [
+        "おんがく",
+        "おんがくを"
+      ],
+      [
+        "ききます",
+        "聞きます"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-masu-210",
+    "verbo": "きく",
+    "contexto": "listen / hear: ongakuo kiku → Polite present (–masu)",
+    "respuesta": "おんがくをききます",
+    "pista": "Polite present/future: stem + ます. Say: ongakuo kikimasu.",
+    "grupos": [
+      [
+        "おんがく",
+        "おんがくを"
+      ],
+      [
+        "ききます",
+        "聞きます"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-masen-211",
+    "verbo": "きく",
+    "contexto": "listen / hear: rajioo kiku → Polite negative (–masen)",
+    "respuesta": "ラジオをききません",
+    "pista": "Polite negative: stem + ません. Say: rajioo kikimasen.",
+    "grupos": [
+      [
+        "ラジオ",
+        "ラジオを"
+      ],
+      [
+        "ききません",
+        "聞きません"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-masen-212",
+    "verbo": "きく",
+    "contexto": "listen / hear: ongakuo kiku → Polite negative (–masen)",
+    "respuesta": "おんがくをききません",
+    "pista": "Polite negative: stem + ません. Say: ongakuo kikimasen.",
+    "grupos": [
+      [
+        "おんがく",
+        "おんがくを"
+      ],
+      [
+        "ききません",
+        "聞きません"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-masen-213",
+    "verbo": "きく",
+    "contexto": "listen / hear: ongakuo kiku → Polite negative (–masen)",
+    "respuesta": "おんがくをききません",
+    "pista": "Polite negative: stem + ません. Say: ongakuo kikimasen.",
+    "grupos": [
+      [
+        "おんがく",
+        "おんがくを"
+      ],
+      [
+        "ききません",
+        "聞きません"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-mashita-214",
+    "verbo": "きく",
+    "contexto": "listen / hear: rajioo kiku → Polite past (–mashita)",
+    "respuesta": "ラジオをききました",
+    "pista": "Polite past: stem + ました. Say: rajioo kikimashita.",
+    "grupos": [
+      [
+        "ラジオ",
+        "ラジオを"
+      ],
+      [
+        "ききました",
+        "聞きました"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-mashita-215",
+    "verbo": "きく",
+    "contexto": "listen / hear: ongakuo kiku → Polite past (–mashita)",
+    "respuesta": "おんがくをききました",
+    "pista": "Polite past: stem + ました. Say: ongakuo kikimashita.",
+    "grupos": [
+      [
+        "おんがく",
+        "おんがくを"
+      ],
+      [
+        "ききました",
+        "聞きました"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-mashita-216",
+    "verbo": "きく",
+    "contexto": "listen / hear: rajioo kiku → Polite past (–mashita)",
+    "respuesta": "ラジオをききました",
+    "pista": "Polite past: stem + ました. Say: rajioo kikimashita.",
+    "grupos": [
+      [
+        "ラジオ",
+        "ラジオを"
+      ],
+      [
+        "ききました",
+        "聞きました"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-masen_deshita-217",
+    "verbo": "きく",
+    "contexto": "listen / hear: rajioo kiku → Polite past neg. (–masendeshita)",
+    "respuesta": "ラジオをききませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: rajioo kikimasendeshita.",
+    "grupos": [
+      [
+        "ラジオ",
+        "ラジオを"
+      ],
+      [
+        "ききませんでした",
+        "聞きませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-masen_deshita-218",
+    "verbo": "きく",
+    "contexto": "listen / hear: ongakuo kiku → Polite past neg. (–masendeshita)",
+    "respuesta": "おんがくをききませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: ongakuo kikimasendeshita.",
+    "grupos": [
+      [
+        "おんがく",
+        "おんがくを"
+      ],
+      [
+        "ききませんでした",
+        "聞きませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-masen_deshita-219",
+    "verbo": "きく",
+    "contexto": "listen / hear: ongakuo kiku → Polite past neg. (–masendeshita)",
+    "respuesta": "おんがくをききませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: ongakuo kikimasendeshita.",
+    "grupos": [
+      [
+        "おんがく",
+        "おんがくを"
+      ],
+      [
+        "ききませんでした",
+        "聞きませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-te-220",
+    "verbo": "きく",
+    "contexto": "listen / hear: ongakuo kiku → Te-form (–te)",
+    "respuesta": "おんがくをきいて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: ongakuo kiite.",
+    "grupos": [
+      [
+        "おんがく",
+        "おんがくを"
+      ],
+      [
+        "きいて",
+        "聞いて"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-te-221",
+    "verbo": "きく",
+    "contexto": "listen / hear: rajioo kiku → Te-form (–te)",
+    "respuesta": "ラジオをきいて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: rajioo kiite.",
+    "grupos": [
+      [
+        "ラジオ",
+        "ラジオを"
+      ],
+      [
+        "きいて",
+        "聞いて"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-te-222",
+    "verbo": "きく",
+    "contexto": "listen / hear: ongakuo kiku → Te-form (–te)",
+    "respuesta": "おんがくをきいて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: ongakuo kiite.",
+    "grupos": [
+      [
+        "おんがく",
+        "おんがくを"
+      ],
+      [
+        "きいて",
+        "聞いて"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-plain-223",
+    "verbo": "きく",
+    "contexto": "listen / hear: rajioo kiku → Plain / dictionary",
+    "respuesta": "ラジオをきく",
+    "pista": "Plain (dictionary) form — casual present/future. Say: rajioo kiku.",
+    "grupos": [
+      [
+        "ラジオ",
+        "ラジオを"
+      ],
+      [
+        "きく",
+        "聞く"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-plain-224",
+    "verbo": "きく",
+    "contexto": "listen / hear: ongakuo kiku → Plain / dictionary",
+    "respuesta": "おんがくをきく",
+    "pista": "Plain (dictionary) form — casual present/future. Say: ongakuo kiku.",
+    "grupos": [
+      [
+        "おんがく",
+        "おんがくを"
+      ],
+      [
+        "きく",
+        "聞く"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-plain-225",
+    "verbo": "きく",
+    "contexto": "listen / hear: rajioo kiku → Plain / dictionary",
+    "respuesta": "ラジオをきく",
+    "pista": "Plain (dictionary) form — casual present/future. Say: rajioo kiku.",
+    "grupos": [
+      [
+        "ラジオ",
+        "ラジオを"
+      ],
+      [
+        "きく",
+        "聞く"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-nai-226",
+    "verbo": "きく",
+    "contexto": "listen / hear: rajioo kiku → Plain negative (–nai)",
+    "respuesta": "ラジオをきかない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: rajioo kikanai.",
+    "grupos": [
+      [
+        "ラジオ",
+        "ラジオを"
+      ],
+      [
+        "きかない",
+        "聞かない"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-nai-227",
+    "verbo": "きく",
+    "contexto": "listen / hear: ongakuo kiku → Plain negative (–nai)",
+    "respuesta": "おんがくをきかない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: ongakuo kikanai.",
+    "grupos": [
+      [
+        "おんがく",
+        "おんがくを"
+      ],
+      [
+        "きかない",
+        "聞かない"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-nai-228",
+    "verbo": "きく",
+    "contexto": "listen / hear: rajioo kiku → Plain negative (–nai)",
+    "respuesta": "ラジオをきかない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: rajioo kikanai.",
+    "grupos": [
+      [
+        "ラジオ",
+        "ラジオを"
+      ],
+      [
+        "きかない",
+        "聞かない"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-ta-229",
+    "verbo": "きく",
+    "contexto": "listen / hear: ongakuo kiku → Plain past (–ta)",
+    "respuesta": "おんがくをきいた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: ongakuo kiita.",
+    "grupos": [
+      [
+        "おんがく",
+        "おんがくを"
+      ],
+      [
+        "きいた",
+        "聞いた"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-ta-230",
+    "verbo": "きく",
+    "contexto": "listen / hear: rajioo kiku → Plain past (–ta)",
+    "respuesta": "ラジオをきいた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: rajioo kiita.",
+    "grupos": [
+      [
+        "ラジオ",
+        "ラジオを"
+      ],
+      [
+        "きいた",
+        "聞いた"
+      ]
+    ]
+  },
+  {
+    "id": "kiku-ta-231",
+    "verbo": "きく",
+    "contexto": "listen / hear: rajioo kiku → Plain past (–ta)",
+    "respuesta": "ラジオをきいた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: rajioo kiita.",
+    "grupos": [
+      [
+        "ラジオ",
+        "ラジオを"
+      ],
+      [
+        "きいた",
+        "聞いた"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-masu-232",
+    "verbo": "まつ",
+    "contexto": "wait: basuo matsu → Polite present (–masu)",
+    "respuesta": "バスをまちます",
+    "pista": "Polite present/future: stem + ます. Say: basuo machimasu.",
+    "grupos": [
+      [
+        "バス",
+        "バスを"
+      ],
+      [
+        "まちます",
+        "待ちます"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-masu-233",
+    "verbo": "まつ",
+    "contexto": "wait: tomodachio matsu → Polite present (–masu)",
+    "respuesta": "ともだちをまちます",
+    "pista": "Polite present/future: stem + ます. Say: tomodachio machimasu.",
+    "grupos": [
+      [
+        "ともだち",
+        "ともだちを"
+      ],
+      [
+        "まちます",
+        "待ちます"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-masu-234",
+    "verbo": "まつ",
+    "contexto": "wait: takushiio matsu → Polite present (–masu)",
+    "respuesta": "タクシーをまちます",
+    "pista": "Polite present/future: stem + ます. Say: takushiio machimasu.",
+    "grupos": [
+      [
+        "タクシー",
+        "タクシーを"
+      ],
+      [
+        "まちます",
+        "待ちます"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-masen-235",
+    "verbo": "まつ",
+    "contexto": "wait: takushiio matsu → Polite negative (–masen)",
+    "respuesta": "タクシーをまちません",
+    "pista": "Polite negative: stem + ません. Say: takushiio machimasen.",
+    "grupos": [
+      [
+        "タクシー",
+        "タクシーを"
+      ],
+      [
+        "まちません",
+        "待ちません"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-masen-236",
+    "verbo": "まつ",
+    "contexto": "wait: basuo matsu → Polite negative (–masen)",
+    "respuesta": "バスをまちません",
+    "pista": "Polite negative: stem + ません. Say: basuo machimasen.",
+    "grupos": [
+      [
+        "バス",
+        "バスを"
+      ],
+      [
+        "まちません",
+        "待ちません"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-masen-237",
+    "verbo": "まつ",
+    "contexto": "wait: tomodachio matsu → Polite negative (–masen)",
+    "respuesta": "ともだちをまちません",
+    "pista": "Polite negative: stem + ません. Say: tomodachio machimasen.",
+    "grupos": [
+      [
+        "ともだち",
+        "ともだちを"
+      ],
+      [
+        "まちません",
+        "待ちません"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-mashita-238",
+    "verbo": "まつ",
+    "contexto": "wait: tomodachio matsu → Polite past (–mashita)",
+    "respuesta": "ともだちをまちました",
+    "pista": "Polite past: stem + ました. Say: tomodachio machimashita.",
+    "grupos": [
+      [
+        "ともだち",
+        "ともだちを"
+      ],
+      [
+        "まちました",
+        "待ちました"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-mashita-239",
+    "verbo": "まつ",
+    "contexto": "wait: takushiio matsu → Polite past (–mashita)",
+    "respuesta": "タクシーをまちました",
+    "pista": "Polite past: stem + ました. Say: takushiio machimashita.",
+    "grupos": [
+      [
+        "タクシー",
+        "タクシーを"
+      ],
+      [
+        "まちました",
+        "待ちました"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-mashita-240",
+    "verbo": "まつ",
+    "contexto": "wait: basuo matsu → Polite past (–mashita)",
+    "respuesta": "バスをまちました",
+    "pista": "Polite past: stem + ました. Say: basuo machimashita.",
+    "grupos": [
+      [
+        "バス",
+        "バスを"
+      ],
+      [
+        "まちました",
+        "待ちました"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-masen_deshita-241",
+    "verbo": "まつ",
+    "contexto": "wait: basuo matsu → Polite past neg. (–masendeshita)",
+    "respuesta": "バスをまちませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: basuo machimasendeshita.",
+    "grupos": [
+      [
+        "バス",
+        "バスを"
+      ],
+      [
+        "まちませんでした",
+        "待ちませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-masen_deshita-242",
+    "verbo": "まつ",
+    "contexto": "wait: takushiio matsu → Polite past neg. (–masendeshita)",
+    "respuesta": "タクシーをまちませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: takushiio machimasendeshita.",
+    "grupos": [
+      [
+        "タクシー",
+        "タクシーを"
+      ],
+      [
+        "まちませんでした",
+        "待ちませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-masen_deshita-243",
+    "verbo": "まつ",
+    "contexto": "wait: tomodachio matsu → Polite past neg. (–masendeshita)",
+    "respuesta": "ともだちをまちませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: tomodachio machimasendeshita.",
+    "grupos": [
+      [
+        "ともだち",
+        "ともだちを"
+      ],
+      [
+        "まちませんでした",
+        "待ちませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-te-244",
+    "verbo": "まつ",
+    "contexto": "wait: tomodachio matsu → Te-form (–te)",
+    "respuesta": "ともだちをまって",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: tomodachio matte.",
+    "grupos": [
+      [
+        "ともだち",
+        "ともだちを"
+      ],
+      [
+        "まって",
+        "待って"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-te-245",
+    "verbo": "まつ",
+    "contexto": "wait: takushiio matsu → Te-form (–te)",
+    "respuesta": "タクシーをまって",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: takushiio matte.",
+    "grupos": [
+      [
+        "タクシー",
+        "タクシーを"
+      ],
+      [
+        "まって",
+        "待って"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-te-246",
+    "verbo": "まつ",
+    "contexto": "wait: basuo matsu → Te-form (–te)",
+    "respuesta": "バスをまって",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: basuo matte.",
+    "grupos": [
+      [
+        "バス",
+        "バスを"
+      ],
+      [
+        "まって",
+        "待って"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-plain-247",
+    "verbo": "まつ",
+    "contexto": "wait: takushiio matsu → Plain / dictionary",
+    "respuesta": "タクシーをまつ",
+    "pista": "Plain (dictionary) form — casual present/future. Say: takushiio matsu.",
+    "grupos": [
+      [
+        "タクシー",
+        "タクシーを"
+      ],
+      [
+        "まつ",
+        "待つ"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-plain-248",
+    "verbo": "まつ",
+    "contexto": "wait: basuo matsu → Plain / dictionary",
+    "respuesta": "バスをまつ",
+    "pista": "Plain (dictionary) form — casual present/future. Say: basuo matsu.",
+    "grupos": [
+      [
+        "バス",
+        "バスを"
+      ],
+      [
+        "まつ",
+        "待つ"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-plain-249",
+    "verbo": "まつ",
+    "contexto": "wait: tomodachio matsu → Plain / dictionary",
+    "respuesta": "ともだちをまつ",
+    "pista": "Plain (dictionary) form — casual present/future. Say: tomodachio matsu.",
+    "grupos": [
+      [
+        "ともだち",
+        "ともだちを"
+      ],
+      [
+        "まつ",
+        "待つ"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-nai-250",
+    "verbo": "まつ",
+    "contexto": "wait: tomodachio matsu → Plain negative (–nai)",
+    "respuesta": "ともだちをまたない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: tomodachio matanai.",
+    "grupos": [
+      [
+        "ともだち",
+        "ともだちを"
+      ],
+      [
+        "またない",
+        "待たない"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-nai-251",
+    "verbo": "まつ",
+    "contexto": "wait: basuo matsu → Plain negative (–nai)",
+    "respuesta": "バスをまたない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: basuo matanai.",
+    "grupos": [
+      [
+        "バス",
+        "バスを"
+      ],
+      [
+        "またない",
+        "待たない"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-nai-252",
+    "verbo": "まつ",
+    "contexto": "wait: takushiio matsu → Plain negative (–nai)",
+    "respuesta": "タクシーをまたない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: takushiio matanai.",
+    "grupos": [
+      [
+        "タクシー",
+        "タクシーを"
+      ],
+      [
+        "またない",
+        "待たない"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-ta-253",
+    "verbo": "まつ",
+    "contexto": "wait: basuo matsu → Plain past (–ta)",
+    "respuesta": "バスをまった",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: basuo matta.",
+    "grupos": [
+      [
+        "バス",
+        "バスを"
+      ],
+      [
+        "まった",
+        "待った"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-ta-254",
+    "verbo": "まつ",
+    "contexto": "wait: takushiio matsu → Plain past (–ta)",
+    "respuesta": "タクシーをまった",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: takushiio matta.",
+    "grupos": [
+      [
+        "タクシー",
+        "タクシーを"
+      ],
+      [
+        "まった",
+        "待った"
+      ]
+    ]
+  },
+  {
+    "id": "matsu-ta-255",
+    "verbo": "まつ",
+    "contexto": "wait: tomodachio matsu → Plain past (–ta)",
+    "respuesta": "ともだちをまった",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: tomodachio matta.",
+    "grupos": [
+      [
+        "ともだち",
+        "ともだちを"
+      ],
+      [
+        "まった",
+        "待った"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-masu-256",
+    "verbo": "およぐ",
+    "contexto": "swim (ima) → Polite present (–masu)",
+    "respuesta": "いまおよぎます",
+    "pista": "Polite present/future: stem + ます. Say: ima oyogimasu.",
+    "grupos": [
+      [
+        "およぎます",
+        "泳ぎます"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-masu-257",
+    "verbo": "およぐ",
+    "contexto": "swim (kyou) → Polite present (–masu)",
+    "respuesta": "きょうおよぎます",
+    "pista": "Polite present/future: stem + ます. Say: kyou oyogimasu.",
+    "grupos": [
+      [
+        "およぎます",
+        "泳ぎます"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-masen-258",
+    "verbo": "およぐ",
+    "contexto": "swim (ashita) → Polite negative (–masen)",
+    "respuesta": "あしたおよぎません",
+    "pista": "Polite negative: stem + ません. Say: ashita oyogimasen.",
+    "grupos": [
+      [
+        "およぎません",
+        "泳ぎません"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-masen-259",
+    "verbo": "およぐ",
+    "contexto": "swim (ima) → Polite negative (–masen)",
+    "respuesta": "いまおよぎません",
+    "pista": "Polite negative: stem + ません. Say: ima oyogimasen.",
+    "grupos": [
+      [
+        "およぎません",
+        "泳ぎません"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-mashita-260",
+    "verbo": "およぐ",
+    "contexto": "swim (ima) → Polite past (–mashita)",
+    "respuesta": "いまおよぎました",
+    "pista": "Polite past: stem + ました. Say: ima oyogimashita.",
+    "grupos": [
+      [
+        "およぎました",
+        "泳ぎました"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-mashita-261",
+    "verbo": "およぐ",
+    "contexto": "swim (kyou) → Polite past (–mashita)",
+    "respuesta": "きょうおよぎました",
+    "pista": "Polite past: stem + ました. Say: kyou oyogimashita.",
+    "grupos": [
+      [
+        "およぎました",
+        "泳ぎました"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-masen_deshita-262",
+    "verbo": "およぐ",
+    "contexto": "swim (kyou) → Polite past neg. (–masendeshita)",
+    "respuesta": "きょうおよぎませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: kyou oyogimasendeshita.",
+    "grupos": [
+      [
+        "およぎませんでした",
+        "泳ぎませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-masen_deshita-263",
+    "verbo": "およぐ",
+    "contexto": "swim (ashita) → Polite past neg. (–masendeshita)",
+    "respuesta": "あしたおよぎませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: ashita oyogimasendeshita.",
+    "grupos": [
+      [
+        "およぎませんでした",
+        "泳ぎませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-te-264",
+    "verbo": "およぐ",
+    "contexto": "swim (mainichi) → Te-form (–te)",
+    "respuesta": "まいにちおよいで",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: mainichi oyoide.",
+    "grupos": [
+      [
+        "およいで",
+        "泳いで"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-te-265",
+    "verbo": "およぐ",
+    "contexto": "swim (ashita) → Te-form (–te)",
+    "respuesta": "あしたおよいで",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: ashita oyoide.",
+    "grupos": [
+      [
+        "およいで",
+        "泳いで"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-plain-266",
+    "verbo": "およぐ",
+    "contexto": "swim (mainichi) → Plain / dictionary",
+    "respuesta": "まいにちおよぐ",
+    "pista": "Plain (dictionary) form — casual present/future. Say: mainichi oyogu.",
+    "grupos": [
+      [
+        "およぐ",
+        "泳ぐ"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-plain-267",
+    "verbo": "およぐ",
+    "contexto": "swim (kyou) → Plain / dictionary",
+    "respuesta": "きょうおよぐ",
+    "pista": "Plain (dictionary) form — casual present/future. Say: kyou oyogu.",
+    "grupos": [
+      [
+        "およぐ",
+        "泳ぐ"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-nai-268",
+    "verbo": "およぐ",
+    "contexto": "swim (kinou) → Plain negative (–nai)",
+    "respuesta": "きのうおよがない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: kinou oyoganai.",
+    "grupos": [
+      [
+        "およがない",
+        "泳がない"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-nai-269",
+    "verbo": "およぐ",
+    "contexto": "swim (ashita) → Plain negative (–nai)",
+    "respuesta": "あしたおよがない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: ashita oyoganai.",
+    "grupos": [
+      [
+        "およがない",
+        "泳がない"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-ta-270",
+    "verbo": "およぐ",
+    "contexto": "swim (kinou) → Plain past (–ta)",
+    "respuesta": "きのうおよいだ",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: kinou oyoida.",
+    "grupos": [
+      [
+        "およいだ",
+        "泳いだ"
+      ]
+    ]
+  },
+  {
+    "id": "oyogu-ta-271",
+    "verbo": "およぐ",
+    "contexto": "swim (mainichi) → Plain past (–ta)",
+    "respuesta": "まいにちおよいだ",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: mainichi oyoida.",
+    "grupos": [
+      [
+        "およいだ",
+        "泳いだ"
+      ]
+    ]
+  },
+  {
+    "id": "suru-masu-272",
+    "verbo": "する",
+    "contexto": "do: shigotoo suru → Polite present (–masu)",
+    "respuesta": "しごとをします",
+    "pista": "Polite present/future: stem + ます. Say: shigotoo shimasu.",
+    "grupos": [
+      [
+        "しごと",
+        "しごとを"
+      ],
+      [
+        "します"
+      ]
+    ]
+  },
+  {
+    "id": "suru-masu-273",
+    "verbo": "する",
+    "contexto": "do: benkyouo suru → Polite present (–masu)",
+    "respuesta": "べんきょうをします",
+    "pista": "Polite present/future: stem + ます. Say: benkyouo shimasu.",
+    "grupos": [
+      [
+        "べんきょう",
+        "べんきょうを"
+      ],
+      [
+        "します"
+      ]
+    ]
+  },
+  {
+    "id": "suru-masu-274",
+    "verbo": "する",
+    "contexto": "do: tenisuo suru → Polite present (–masu)",
+    "respuesta": "テニスをします",
+    "pista": "Polite present/future: stem + ます. Say: tenisuo shimasu.",
+    "grupos": [
+      [
+        "テニス",
+        "テニスを"
+      ],
+      [
+        "します"
+      ]
+    ]
+  },
+  {
+    "id": "suru-masen-275",
+    "verbo": "する",
+    "contexto": "do: tenisuo suru → Polite negative (–masen)",
+    "respuesta": "テニスをしません",
+    "pista": "Polite negative: stem + ません. Say: tenisuo shimasen.",
+    "grupos": [
+      [
+        "テニス",
+        "テニスを"
+      ],
+      [
+        "しません"
+      ]
+    ]
+  },
+  {
+    "id": "suru-masen-276",
+    "verbo": "する",
+    "contexto": "do: benkyouo suru → Polite negative (–masen)",
+    "respuesta": "べんきょうをしません",
+    "pista": "Polite negative: stem + ません. Say: benkyouo shimasen.",
+    "grupos": [
+      [
+        "べんきょう",
+        "べんきょうを"
+      ],
+      [
+        "しません"
+      ]
+    ]
+  },
+  {
+    "id": "suru-masen-277",
+    "verbo": "する",
+    "contexto": "do: shigotoo suru → Polite negative (–masen)",
+    "respuesta": "しごとをしません",
+    "pista": "Polite negative: stem + ません. Say: shigotoo shimasen.",
+    "grupos": [
+      [
+        "しごと",
+        "しごとを"
+      ],
+      [
+        "しません"
+      ]
+    ]
+  },
+  {
+    "id": "suru-mashita-278",
+    "verbo": "する",
+    "contexto": "do: benkyouo suru → Polite past (–mashita)",
+    "respuesta": "べんきょうをしました",
+    "pista": "Polite past: stem + ました. Say: benkyouo shimashita.",
+    "grupos": [
+      [
+        "べんきょう",
+        "べんきょうを"
+      ],
+      [
+        "しました"
+      ]
+    ]
+  },
+  {
+    "id": "suru-mashita-279",
+    "verbo": "する",
+    "contexto": "do: tenisuo suru → Polite past (–mashita)",
+    "respuesta": "テニスをしました",
+    "pista": "Polite past: stem + ました. Say: tenisuo shimashita.",
+    "grupos": [
+      [
+        "テニス",
+        "テニスを"
+      ],
+      [
+        "しました"
+      ]
+    ]
+  },
+  {
+    "id": "suru-mashita-280",
+    "verbo": "する",
+    "contexto": "do: benkyouo suru → Polite past (–mashita)",
+    "respuesta": "べんきょうをしました",
+    "pista": "Polite past: stem + ました. Say: benkyouo shimashita.",
+    "grupos": [
+      [
+        "べんきょう",
+        "べんきょうを"
+      ],
+      [
+        "しました"
+      ]
+    ]
+  },
+  {
+    "id": "suru-masen_deshita-281",
+    "verbo": "する",
+    "contexto": "do: shigotoo suru → Polite past neg. (–masendeshita)",
+    "respuesta": "しごとをしませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: shigotoo shimasendeshita.",
+    "grupos": [
+      [
+        "しごと",
+        "しごとを"
+      ],
+      [
+        "しませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "suru-masen_deshita-282",
+    "verbo": "する",
+    "contexto": "do: tenisuo suru → Polite past neg. (–masendeshita)",
+    "respuesta": "テニスをしませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: tenisuo shimasendeshita.",
+    "grupos": [
+      [
+        "テニス",
+        "テニスを"
+      ],
+      [
+        "しませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "suru-masen_deshita-283",
+    "verbo": "する",
+    "contexto": "do: benkyouo suru → Polite past neg. (–masendeshita)",
+    "respuesta": "べんきょうをしませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: benkyouo shimasendeshita.",
+    "grupos": [
+      [
+        "べんきょう",
+        "べんきょうを"
+      ],
+      [
+        "しませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "suru-te-284",
+    "verbo": "する",
+    "contexto": "do: tenisuo suru → Te-form (–te)",
+    "respuesta": "テニスをして",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: tenisuo shite.",
+    "grupos": [
+      [
+        "テニス",
+        "テニスを"
+      ],
+      [
+        "して"
+      ]
+    ]
+  },
+  {
+    "id": "suru-te-285",
+    "verbo": "する",
+    "contexto": "do: benkyouo suru → Te-form (–te)",
+    "respuesta": "べんきょうをして",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: benkyouo shite.",
+    "grupos": [
+      [
+        "べんきょう",
+        "べんきょうを"
+      ],
+      [
+        "して"
+      ]
+    ]
+  },
+  {
+    "id": "suru-te-286",
+    "verbo": "する",
+    "contexto": "do: shigotoo suru → Te-form (–te)",
+    "respuesta": "しごとをして",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: shigotoo shite.",
+    "grupos": [
+      [
+        "しごと",
+        "しごとを"
+      ],
+      [
+        "して"
+      ]
+    ]
+  },
+  {
+    "id": "suru-plain-287",
+    "verbo": "する",
+    "contexto": "do: tenisuo suru → Plain / dictionary",
+    "respuesta": "テニスをする",
+    "pista": "Plain (dictionary) form — casual present/future. Say: tenisuo suru.",
+    "grupos": [
+      [
+        "テニス",
+        "テニスを"
+      ],
+      [
+        "する"
+      ]
+    ]
+  },
+  {
+    "id": "suru-plain-288",
+    "verbo": "する",
+    "contexto": "do: shigotoo suru → Plain / dictionary",
+    "respuesta": "しごとをする",
+    "pista": "Plain (dictionary) form — casual present/future. Say: shigotoo suru.",
+    "grupos": [
+      [
+        "しごと",
+        "しごとを"
+      ],
+      [
+        "する"
+      ]
+    ]
+  },
+  {
+    "id": "suru-plain-289",
+    "verbo": "する",
+    "contexto": "do: benkyouo suru → Plain / dictionary",
+    "respuesta": "べんきょうをする",
+    "pista": "Plain (dictionary) form — casual present/future. Say: benkyouo suru.",
+    "grupos": [
+      [
+        "べんきょう",
+        "べんきょうを"
+      ],
+      [
+        "する"
+      ]
+    ]
+  },
+  {
+    "id": "suru-nai-290",
+    "verbo": "する",
+    "contexto": "do: tenisuo suru → Plain negative (–nai)",
+    "respuesta": "テニスをしない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: tenisuo shinai.",
+    "grupos": [
+      [
+        "テニス",
+        "テニスを"
+      ],
+      [
+        "しない"
+      ]
+    ]
+  },
+  {
+    "id": "suru-nai-291",
+    "verbo": "する",
+    "contexto": "do: benkyouo suru → Plain negative (–nai)",
+    "respuesta": "べんきょうをしない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: benkyouo shinai.",
+    "grupos": [
+      [
+        "べんきょう",
+        "べんきょうを"
+      ],
+      [
+        "しない"
+      ]
+    ]
+  },
+  {
+    "id": "suru-nai-292",
+    "verbo": "する",
+    "contexto": "do: shigotoo suru → Plain negative (–nai)",
+    "respuesta": "しごとをしない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: shigotoo shinai.",
+    "grupos": [
+      [
+        "しごと",
+        "しごとを"
+      ],
+      [
+        "しない"
+      ]
+    ]
+  },
+  {
+    "id": "suru-ta-293",
+    "verbo": "する",
+    "contexto": "do: benkyouo suru → Plain past (–ta)",
+    "respuesta": "べんきょうをした",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: benkyouo shita.",
+    "grupos": [
+      [
+        "べんきょう",
+        "べんきょうを"
+      ],
+      [
+        "した"
+      ]
+    ]
+  },
+  {
+    "id": "suru-ta-294",
+    "verbo": "する",
+    "contexto": "do: tenisuo suru → Plain past (–ta)",
+    "respuesta": "テニスをした",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: tenisuo shita.",
+    "grupos": [
+      [
+        "テニス",
+        "テニスを"
+      ],
+      [
+        "した"
+      ]
+    ]
+  },
+  {
+    "id": "suru-ta-295",
+    "verbo": "する",
+    "contexto": "do: shigotoo suru → Plain past (–ta)",
+    "respuesta": "しごとをした",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: shigotoo shita.",
+    "grupos": [
+      [
+        "しごと",
+        "しごとを"
+      ],
+      [
+        "した"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-masu-296",
+    "verbo": "くる",
+    "contexto": "come (ima) → Polite present (–masu)",
+    "respuesta": "いまきます",
+    "pista": "Polite present/future: stem + ます. Say: ima kimasu.",
+    "grupos": [
+      [
+        "きます",
+        "来ます"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-masu-297",
+    "verbo": "くる",
+    "contexto": "come (ashita) → Polite present (–masu)",
+    "respuesta": "あしたきます",
+    "pista": "Polite present/future: stem + ます. Say: ashita kimasu.",
+    "grupos": [
+      [
+        "きます",
+        "来ます"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-masen-298",
+    "verbo": "くる",
+    "contexto": "come (ashita) → Polite negative (–masen)",
+    "respuesta": "あしたきません",
+    "pista": "Polite negative: stem + ません. Say: ashita kimasen.",
+    "grupos": [
+      [
+        "きません",
+        "来ません"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-masen-299",
+    "verbo": "くる",
+    "contexto": "come (mainichi) → Polite negative (–masen)",
+    "respuesta": "まいにちきません",
+    "pista": "Polite negative: stem + ません. Say: mainichi kimasen.",
+    "grupos": [
+      [
+        "きません",
+        "来ません"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-mashita-300",
+    "verbo": "くる",
+    "contexto": "come (kyou) → Polite past (–mashita)",
+    "respuesta": "きょうきました",
+    "pista": "Polite past: stem + ました. Say: kyou kimashita.",
+    "grupos": [
+      [
+        "きました",
+        "来ました"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-mashita-301",
+    "verbo": "くる",
+    "contexto": "come (ima) → Polite past (–mashita)",
+    "respuesta": "いまきました",
+    "pista": "Polite past: stem + ました. Say: ima kimashita.",
+    "grupos": [
+      [
+        "きました",
+        "来ました"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-masen_deshita-302",
+    "verbo": "くる",
+    "contexto": "come (mainichi) → Polite past neg. (–masendeshita)",
+    "respuesta": "まいにちきませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: mainichi kimasendeshita.",
+    "grupos": [
+      [
+        "きませんでした",
+        "来ませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-masen_deshita-303",
+    "verbo": "くる",
+    "contexto": "come (kyou) → Polite past neg. (–masendeshita)",
+    "respuesta": "きょうきませんでした",
+    "pista": "Polite past negative: stem + ませんでした. Say: kyou kimasendeshita.",
+    "grupos": [
+      [
+        "きませんでした",
+        "来ませんでした"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-te-304",
+    "verbo": "くる",
+    "contexto": "come (kinou) → Te-form (–te)",
+    "respuesta": "きのうきて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: kinou kite.",
+    "grupos": [
+      [
+        "きて",
+        "来て"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-te-305",
+    "verbo": "くる",
+    "contexto": "come (ima) → Te-form (–te)",
+    "respuesta": "いまきて",
+    "pista": "Te-form: connective / requests. Godan verbs take onbin (って/んで/いて). Say: ima kite.",
+    "grupos": [
+      [
+        "きて",
+        "来て"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-plain-306",
+    "verbo": "くる",
+    "contexto": "come (kyou) → Plain / dictionary",
+    "respuesta": "きょうくる",
+    "pista": "Plain (dictionary) form — casual present/future. Say: kyou kuru.",
+    "grupos": [
+      [
+        "くる",
+        "来る"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-plain-307",
+    "verbo": "くる",
+    "contexto": "come (ima) → Plain / dictionary",
+    "respuesta": "いまくる",
+    "pista": "Plain (dictionary) form — casual present/future. Say: ima kuru.",
+    "grupos": [
+      [
+        "くる",
+        "来る"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-nai-308",
+    "verbo": "くる",
+    "contexto": "come (kyou) → Plain negative (–nai)",
+    "respuesta": "きょうこない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: kyou konai.",
+    "grupos": [
+      [
+        "こない",
+        "来ない"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-nai-309",
+    "verbo": "くる",
+    "contexto": "come (kinou) → Plain negative (–nai)",
+    "respuesta": "きのうこない",
+    "pista": "Plain negative: a-row + ない (godan う→わ). Say: kinou konai.",
+    "grupos": [
+      [
+        "こない",
+        "来ない"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-ta-310",
+    "verbo": "くる",
+    "contexto": "come (ima) → Plain past (–ta)",
+    "respuesta": "いまきた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: ima kita.",
+    "grupos": [
+      [
+        "きた",
+        "来た"
+      ]
+    ]
+  },
+  {
+    "id": "kuru-ta-311",
+    "verbo": "くる",
+    "contexto": "come (ashita) → Plain past (–ta)",
+    "respuesta": "あしたきた",
+    "pista": "Plain past: te-form with て→た / で→だ. Say: ashita kita.",
+    "grupos": [
+      [
+        "きた",
+        "来た"
+      ]
+    ]
+  }
+]
