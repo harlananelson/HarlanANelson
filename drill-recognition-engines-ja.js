@@ -19,8 +19,11 @@
 
   if (typeof revisar !== 'function' || typeof $ !== 'function') { return; }  // not the drill page
 
-  var WHISPER_MODEL = 'onnx-community/whisper-base';
-  var STORE = 'englishDrillRec.v1';
+  // whisper-small is markedly more accurate on Japanese than -base, which matters
+  // for the short single-verb utterances this drill produces. Heavier first-load
+  // download, but fine on an M1 iPad; revert to -base if load time is a problem.
+  var WHISPER_MODEL = 'onnx-community/whisper-small';
+  var STORE = 'japaneseDrillRec.v1';
   // Safari's Web Speech API is unreliable (especially right after audio playback),
   // so default Safari / WebKit users to the on-device Whisper engine, which captures
   // audio directly. A saved preference (read below) still wins over this default.
@@ -224,7 +227,16 @@
     w.curId = ++whisperJob;
     w.postMessage({
       type: 'transcribe', id: w.curId, audio: a16,
-      model: WHISPER_MODEL, device: 'wasm', language: 'japanese'
+      model: WHISPER_MODEL, device: 'wasm', language: 'japanese',
+      // Tuned for short Japanese utterances: greedy+low temp for stable output,
+      // no_repeat_ngram to kill Whisper's short-clip repetition hallucination,
+      // a small beam for accuracy, and no timestamps (they hurt tiny clips).
+      decode: {
+        temperature: 0,
+        no_repeat_ngram_size: 3,
+        num_beams: 2,
+        return_timestamps: false
+      }
     }, [a16.buffer]);
   }
   function onWhisperMsg(e) {

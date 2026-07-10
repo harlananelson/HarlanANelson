@@ -144,7 +144,12 @@ async function drain() {
         continue;
       }
       try {
-        const out = await transcriber(job.audio, { language: job.language || 'swahili', task: 'transcribe' });
+        // Optional per-job decoding overrides (job.decode). Additive: engines that
+        // don't send `decode` get exactly the previous behaviour.
+        const genOpts = Object.assign(
+          { language: job.language || 'swahili', task: 'transcribe' },
+          job.decode || {});
+        const out = await transcriber(job.audio, genOpts);
         const text = (out && typeof out.text === 'string' ? out.text : '').trim();
         self.postMessage({ type: 'transcript', id: job.id, ok: true, text: text });
       } catch (err) {
