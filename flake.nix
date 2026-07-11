@@ -11,10 +11,6 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          config.allowUnfreePredicate = pkg:
-            builtins.elem (pkgs.lib.getName pkg) [
-              "claude-code"
-            ];
         };
 
         rPackages = with pkgs.rPackages; [
@@ -40,7 +36,6 @@
             rWithPackages
             pkgs.quarto
             pkgs.pandoc
-            pkgs.claude-code
             pkgs.netlify-cli
             pkgs.tmux
           ];
@@ -49,7 +44,7 @@
             echo "HarlanANelson website dev environment"
             echo "  R:       $(R --version | head -1)"
             echo "  Quarto:  $(quarto --version)"
-            echo "  Claude:  $(claude --version 2>/dev/null || echo 'available')"
+            echo "  Claude:  $(claude --version 2>/dev/null || echo 'not found — install natively: https://claude.com/download') (system install, self-updating)"
             echo "  Netlify: $(netlify --version 2>/dev/null | head -1 || echo 'available')"
             echo "  tmux:    $(tmux -V 2>/dev/null || echo 'available')"
           '';
