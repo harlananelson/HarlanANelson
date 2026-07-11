@@ -166,7 +166,7 @@
   <p class="eyebrow">Alex &amp; Jordan · June 2026</p>
   <h1>Choose Your Favorite Photos</h1>
   <p>Search by words (“first dance”, “the rings”) or browse by tag, then tap the heart on any photo you'd like in your album. When you're done, review your picks and send them — no account, no login.</p>
-  <span class="demo-badge">✦ Demo — sample images. Swap in your real gallery to go live.</span>
+  <span class="demo-badge">✦ Demo — sample stock photos matched to each caption. Your real gallery uses your own photos.</span>
   <p style="margin-top:14px;font-size:14px;">
     Photographers: build your own with the open toolkit →
     <a href="https://github.com/harlananelson/wedding-ai-toolkit" style="color:var(--accent-ink);font-weight:600;">github.com/harlananelson/wedding-ai-toolkit</a>
@@ -235,27 +235,29 @@
    fully functional without any real photos.
 ------------------------------------------------------------------ */
 const TAGS = ["Ceremony", "Portraits", "Reception", "Details", "Candids"];
-// Captions make the demo search meaningful (real galleries get AI-written captions).
+// Each caption is paired with keyword tags so the sample IMAGE actually depicts it —
+// search "kiss" and you see a kiss, "dance" a dance, etc. Images come from LoremFlickr
+// (real Creative-Commons wedding photos by keyword). Real galleries use your own photos.
 const CAPTIONS = {
-  Ceremony:  ["walking down the aisle", "exchanging vows", "the first kiss", "the processional", "guests watching the vows", "rings during the service"],
-  Portraits: ["the whole wedding party", "a family portrait", "the couple at sunset", "the bridesmaids", "the groomsmen laughing", "a big group photo"],
-  Reception: ["the first dance", "dancing under the lights", "the best man's speech", "a toast to the couple", "cutting the cake", "celebrating on the dance floor"],
-  Details:   ["close up of the rings", "the bridal bouquet", "the table settings", "the wedding cake", "the invitation and rings", "the shoes and jewelry"],
-  Candids:   ["a quiet moment together", "laughing at dinner", "kids on the dance floor", "grandparents chatting", "a hug goodbye", "sparklers send-off"],
+  Ceremony:  [["walking down the aisle","wedding,bride"], ["exchanging vows","wedding,ceremony"], ["the first kiss","wedding,kiss"], ["the processional","wedding,ceremony"], ["guests watching the vows","wedding,ceremony"], ["rings during the service","wedding,rings"]],
+  Portraits: [["the whole wedding party","wedding,bridalparty"], ["a family portrait","wedding,family"], ["the couple at sunset","wedding,couple"], ["the bridesmaids","wedding,bridesmaids"], ["the groomsmen laughing","wedding,groomsmen"], ["a big group photo","wedding,group"]],
+  Reception: [["the first dance","wedding,dance"], ["dancing under the lights","wedding,dancing"], ["the best man's speech","wedding,speech"], ["a toast to the couple","wedding,toast"], ["cutting the cake","wedding,cake"], ["celebrating on the dance floor","wedding,dancing"]],
+  Details:   [["close up of the rings","wedding,rings"], ["the bridal bouquet","wedding,bouquet"], ["the table settings","wedding,decor"], ["the wedding cake","wedding,cake"], ["the invitation and rings","wedding,rings"], ["the shoes and jewelry","wedding,shoes"]],
+  Candids:   [["a quiet moment together","wedding,couple"], ["laughing at dinner","wedding,dinner"], ["kids on the dance floor","wedding,dancing"], ["grandparents chatting","wedding,guests"], ["a hug goodbye","wedding,hug"], ["sparklers send-off","wedding,sparklers"]],
 };
 const tagCount = {};
 const PHOTOS = Array.from({length: 28}, (_, i) => {
   const n = String(i + 1).padStart(3, "0");
-  const seed = 1000 + i * 7;
+  const lock = 1000 + i * 7;                       // stable image per slot
   const tag = TAGS[i % TAGS.length];
   const k = (tagCount[tag] = (tagCount[tag] || 0)); tagCount[tag]++;
-  const pool = CAPTIONS[tag];
+  const [caption, kw] = CAPTIONS[tag][k % CAPTIONS[tag].length];
   return {
     id: "W-" + n,
     tag,
-    caption: pool[k % pool.length],
-    src:  `https://picsum.photos/seed/${seed}/500/${340 + (i % 4) * 40}`,
-    full: `https://picsum.photos/seed/${seed}/1200/900`,
+    caption,
+    src:  `https://loremflickr.com/500/${340 + (i % 4) * 40}/${kw}/all?lock=${lock}`,
+    full: `https://loremflickr.com/1200/900/${kw}/all?lock=${lock}`,
   };
 });
 
