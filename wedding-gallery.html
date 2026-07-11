@@ -165,7 +165,7 @@
 <header class="hero">
   <p class="eyebrow">Alex &amp; Jordan · June 2026</p>
   <h1>Choose Your Favorite Photos</h1>
-  <p>Tap the heart on any photo you'd like included in your album. When you're done, review your picks and send them to us — no account, no login.</p>
+  <p>Search by words (“first dance”, “the rings”) or browse by tag, then tap the heart on any photo you'd like in your album. When you're done, review your picks and send them — no account, no login.</p>
   <span class="demo-badge">✦ Demo — sample images. Swap in your real gallery to go live.</span>
   <p style="margin-top:14px;font-size:14px;">
     Photographers: build your own with the open toolkit →
@@ -174,6 +174,9 @@
 </header>
 
 <div class="toolbar">
+  <input id="search" type="search" autocomplete="off"
+    placeholder="Search: “first dance”, “speeches”, “the rings”, “kiss”…"
+    style="flex:1 1 220px;min-width:180px;padding:9px 16px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font-size:15px;">
   <div class="filters" id="filters"></div>
   <div class="count-pill">
     <span id="count">0</span> selected
@@ -232,13 +235,25 @@
    fully functional without any real photos.
 ------------------------------------------------------------------ */
 const TAGS = ["Ceremony", "Portraits", "Reception", "Details", "Candids"];
+// Captions make the demo search meaningful (real galleries get AI-written captions).
+const CAPTIONS = {
+  Ceremony:  ["walking down the aisle", "exchanging vows", "the first kiss", "the processional", "guests watching the vows", "rings during the service"],
+  Portraits: ["the whole wedding party", "a family portrait", "the couple at sunset", "the bridesmaids", "the groomsmen laughing", "a big group photo"],
+  Reception: ["the first dance", "dancing under the lights", "the best man's speech", "a toast to the couple", "cutting the cake", "celebrating on the dance floor"],
+  Details:   ["close up of the rings", "the bridal bouquet", "the table settings", "the wedding cake", "the invitation and rings", "the shoes and jewelry"],
+  Candids:   ["a quiet moment together", "laughing at dinner", "kids on the dance floor", "grandparents chatting", "a hug goodbye", "sparklers send-off"],
+};
+const tagCount = {};
 const PHOTOS = Array.from({length: 28}, (_, i) => {
   const n = String(i + 1).padStart(3, "0");
   const seed = 1000 + i * 7;
   const tag = TAGS[i % TAGS.length];
+  const k = (tagCount[tag] = (tagCount[tag] || 0)); tagCount[tag]++;
+  const pool = CAPTIONS[tag];
   return {
     id: "W-" + n,
     tag,
+    caption: pool[k % pool.length],
     src:  `https://picsum.photos/seed/${seed}/500/${340 + (i % 4) * 40}`,
     full: `https://picsum.photos/seed/${seed}/1200/900`,
   };
@@ -246,9 +261,24 @@ const PHOTOS = Array.from({length: 28}, (_, i) => {
 
 const selected = new Set(JSON.parse(localStorage.getItem("weddingPicks") || "[]"));
 let activeFilter = "All";
+let query = "";
 
 const $ = (s) => document.querySelector(s);
 const grid = $("#grid");
+
+// Lightweight word-stem match so "dancing" finds "the first dance", "speeches" finds
+// "the best man's speech", etc. (The real toolkit gallery uses CLIP semantic search.)
+const STOP = new Set(["the","a","an","of","and","to","in","on","at","with","for","our","us","my","me"]);
+function matches(p) {
+  if (!query.trim()) return true;
+  const hayWords = (p.caption + " " + p.tag).toLowerCase().split(/\W+/);
+  const qWords = query.toLowerCase().split(/\W+/).filter((w) => w.length >= 2 && !STOP.has(w));
+  if (qWords.length === 0) return true;
+  const stem = (w) => (w.length >= 5 ? w.slice(0, 4) : w);
+  return qWords.some((w) =>
+    hayWords.some((hw) => !STOP.has(hw) && (hw.startsWith(stem(w)) || (hw.length >= 4 && w.startsWith(stem(hw)))))
+  );
+}
 
 function save() { localStorage.setItem("weddingPicks", JSON.stringify([...selected])); }
 
@@ -271,14 +301,20 @@ function renderFilters() {
 
 function renderGrid() {
   grid.innerHTML = "";
-  PHOTOS.filter((p) => activeFilter === "All" || p.tag === activeFilter).forEach((p) => {
+  const shown = PHOTOS.filter((p) => (activeFilter === "All" || p.tag === activeFilter) && matches(p));
+  if (shown.length === 0) {
+    grid.innerHTML = `<p style="color:var(--muted);text-align:center;padding:40px;">
+      No photos match “${query}”. Try “first dance”, “speeches”, “the rings”, or a tag above.</p>`;
+    return;
+  }
+  shown.forEach((p) => {
     const fig = document.createElement("figure");
     fig.className = "card" + (selected.has(p.id) ? " selected" : "");
     fig.innerHTML = `
       <span class="id-tag">${p.id}</span>
       <button class="heart" aria-label="Favorite ${p.id}">♥</button>
-      <img loading="lazy" src="${p.src}" alt="${p.tag} photo ${p.id}">
-      <div class="tags"><span>${p.tag}</span></div>`;
+      <img loading="lazy" src="${p.src}" alt="${p.caption}">
+      <div class="tags"><span>${p.tag}</span><span>${p.caption}</span></div>`;
     fig.querySelector("img").onclick = () => openLightbox(p);
     fig.querySelector(".heart").onclick = (e) => { e.stopPropagation(); toggle(p.id); };
     grid.appendChild(fig);
@@ -345,6 +381,7 @@ function downloadList() {
 
 /* Wire up */
 renderFilters(); renderGrid(); updateCount();
+$("#search").addEventListener("input", (e) => { query = e.target.value; renderGrid(); });
 $("#reviewBtn").onclick = openDrawer;
 $("#closeDrawer").onclick = closeDrawer;
 $("#backdrop").onclick = closeDrawer;
