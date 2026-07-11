@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wedding Gallery — Select Your Favorites</title>
+<style>
+  :root {
+    --bg: #faf8f5;
+    --surface: #ffffff;
+    --ink: #2b2724;
+    --muted: #8a8178;
+    --line: #e7e0d7;
+    --accent: #b08968;
+    --accent-ink: #7f5539;
+    --heart: #d6455d;
+    --shadow: 0 1px 3px rgba(60,45,30,.08), 0 8px 24px rgba(60,45,30,.06);
+    --radius: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17140f; --surface: #211c16; --ink: #f0e9df; --muted: #a99e90;
+      --line: #342c22; --accent: #c9a27a; --accent-ink: #e2c4a2;
+      --shadow: 0 1px 3px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  header.hero {
+    text-align: center; padding: 48px 20px 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero .eyebrow {
+    letter-spacing: .22em; text-transform: uppercase; font-size: 12px;
+    color: var(--accent-ink); margin: 0 0 10px;
+  }
+  .hero h1 {
+    font-family: "Hoefler Text", Georgia, "Times New Roman", serif;
+    font-weight: 500; font-size: clamp(28px, 5vw, 44px); margin: 0 0 8px;
+  }
+  .hero p { color: var(--muted); margin: 0 auto; max-width: 560px; }
+  .demo-badge {
+    display: inline-block; margin-top: 14px; font-size: 12px; color: var(--muted);
+    border: 1px dashed var(--line); border-radius: 999px; padding: 4px 12px;
+  }
+  /* Sticky toolbar */
+  .toolbar {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(1.2) blur(10px);
+    border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    padding: 12px 18px;
+  }
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; flex: 1; }
+  .chip {
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+    padding: 6px 14px; border-radius: 999px; font-size: 13px; cursor: pointer;
+    transition: .15s;
+  }
+  .chip:hover { border-color: var(--accent); }
+  .chip[aria-pressed="true"] {
+    background: var(--accent); border-color: var(--accent); color: #fff;
+  }
+  .count-pill {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 999px; padding: 6px 8px 6px 14px; font-size: 14px; font-weight: 600;
+  }
+  .btn {
+    border: 1px solid var(--accent); background: var(--accent); color: #fff;
+    padding: 7px 16px; border-radius: 999px; font-size: 14px; font-weight: 600;
+    cursor: pointer; transition: .15s;
+  }
+  .btn:hover { filter: brightness(1.05); }
+  .btn.ghost { background: transparent; color: var(--accent-ink); }
+  .btn:disabled { opacity: .5; cursor: not-allowed; }
+  /* Masonry-ish grid */
+  .grid {
+    columns: 4 260px; column-gap: 16px; padding: 22px; max-width: 1400px; margin: 0 auto;
+  }
+  figure.card {
+    break-inside: avoid; margin: 0 0 16px; position: relative;
+    border-radius: var(--radius); overflow: hidden; background: var(--surface);
+    box-shadow: var(--shadow); cursor: zoom-in;
+  }
+  figure.card img { display: block; width: 100%; height: auto; }
+  .card .id-tag {
+    position: absolute; left: 10px; top: 10px; font-size: 11px; font-weight: 700;
+    background: rgba(0,0,0,.55); color: #fff; padding: 3px 8px; border-radius: 999px;
+    letter-spacing: .04em;
+  }
+  .heart {
+    position: absolute; right: 10px; top: 10px; width: 40px; height: 40px;
+    border: none; border-radius: 50%; cursor: pointer; font-size: 20px; line-height: 40px;
+    background: rgba(255,255,255,.85); color: #b9b0a6; transition: transform .12s, background .12s;
+    display: grid; place-items: center;
+  }
+  .heart:hover { transform: scale(1.1); }
+  figure.card.selected { outline: 3px solid var(--heart); outline-offset: -3px; }
+  figure.card.selected .heart { background: var(--heart); color: #fff; }
+  .card .tags {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 12px 10px;
+    background: linear-gradient(transparent, rgba(0,0,0,.55));
+    display: flex; gap: 6px; opacity: 0; transition: .2s;
+  }
+  figure.card:hover .tags { opacity: 1; }
+  .tags span { font-size: 11px; color: #fff; background: rgba(255,255,255,.2); padding: 2px 8px; border-radius: 999px; }
+  /* Selections drawer */
+  .drawer-backdrop {
+    position: fixed; inset: 0; background: rgba(20,15,10,.5); z-index: 40;
+    opacity: 0; pointer-events: none; transition: .2s;
+  }
+  .drawer-backdrop.open { opacity: 1; pointer-events: auto; }
+  .drawer {
+    position: fixed; top: 0; right: 0; height: 100%; width: min(420px, 92vw);
+    background: var(--surface); z-index: 50; box-shadow: var(--shadow);
+    transform: translateX(100%); transition: transform .25s ease; display: flex; flex-direction: column;
+  }
+  .drawer.open { transform: none; }
+  .drawer header { padding: 18px 20px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; }
+  .drawer header h2 { margin: 0; font-size: 18px; }
+  .drawer .body { padding: 16px 20px; overflow-y: auto; flex: 1; }
+  .picks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .picks-grid figure { margin: 0; position: relative; }
+  .picks-grid img { width: 100%; border-radius: 10px; display: block; }
+  .picks-grid .x {
+    position: absolute; right: 6px; top: 6px; width: 26px; height: 26px; border-radius: 50%;
+    border: none; background: rgba(0,0,0,.6); color: #fff; cursor: pointer; font-size: 15px;
+  }
+  .empty { color: var(--muted); text-align: center; padding: 40px 10px; }
+  .drawer form { padding: 16px 20px; border-top: 1px solid var(--line); background: var(--bg); }
+  .drawer label { display: block; font-size: 13px; font-weight: 600; margin: 10px 0 4px; }
+  .drawer input[type=text], .drawer input[type=email] {
+    width: 100%; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px;
+    background: var(--surface); color: var(--ink); font-size: 15px;
+  }
+  .drawer .actions { display: flex; gap: 10px; margin-top: 14px; }
+  .drawer .actions .btn { flex: 1; }
+  /* Lightbox */
+  .lightbox {
+    position: fixed; inset: 0; background: rgba(10,8,6,.92); z-index: 60;
+    display: none; align-items: center; justify-content: center; padding: 24px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 92vw; max-height: 82vh; border-radius: 10px; box-shadow: var(--shadow); }
+  .lightbox .lb-close { position: absolute; top: 18px; right: 22px; font-size: 30px; color: #fff; background: none; border: none; cursor: pointer; }
+  .lightbox .lb-fav { position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%); }
+  .toast {
+    position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%) translateY(20px);
+    background: var(--ink); color: var(--bg); padding: 10px 18px; border-radius: 999px;
+    font-size: 14px; opacity: 0; pointer-events: none; transition: .25s; z-index: 70;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  footer.site { text-align: center; color: var(--muted); font-size: 13px; padding: 40px 20px; border-top: 1px solid var(--line); }
+  footer.site a { color: var(--accent-ink); }
+</style>
+</head>
+<body>
+<header class="hero">
+  <p class="eyebrow">Alex &amp; Jordan · June 2026</p>
+  <h1>Choose Your Favorite Photos</h1>
+  <p>Tap the heart on any photo you'd like included in your album. When you're done, review your picks and send them to us — no account, no login.</p>
+  <span class="demo-badge">✦ Demo — sample images. Swap in your real gallery to go live.</span>
+</header>
+
+<div class="toolbar">
+  <div class="filters" id="filters"></div>
+  <div class="count-pill">
+    <span id="count">0</span> selected
+    <button class="btn" id="reviewBtn">Review picks</button>
+  </div>
+</div>
+
+<main class="grid" id="grid"></main>
+
+<!-- Selections drawer -->
+<div class="drawer-backdrop" id="backdrop"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <header>
+    <h2>Your picks (<span id="drawerCount">0</span>)</h2>
+    <button class="btn ghost" id="closeDrawer" aria-label="Close">✕</button>
+  </header>
+  <div class="body" id="picksBody"></div>
+  <!-- Netlify Forms: detected at deploy time. Selections travel in the hidden field. -->
+  <form name="wedding-photo-picks" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="pickForm">
+    <input type="hidden" name="form-name" value="wedding-photo-picks">
+    <p style="display:none"><label>Don't fill this: <input name="bot-field"></label></p>
+    <label for="guestName">Your name</label>
+    <input type="text" id="guestName" name="guest-name" placeholder="Jane Guest" required>
+    <label for="guestEmail">Email (so we can follow up)</label>
+    <input type="email" id="guestEmail" name="guest-email" placeholder="jane@example.com" required>
+    <input type="hidden" name="selected-photos" id="selectedPhotos">
+    <input type="hidden" name="selection-count" id="selectionCount">
+    <div class="actions">
+      <button type="button" class="btn ghost" id="downloadBtn">Download list</button>
+      <button type="submit" class="btn" id="submitBtn">Send my picks</button>
+    </div>
+  </form>
+</aside>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <img id="lbImg" alt="">
+  <button class="btn lb-fav" id="lbFav">♥ Add to picks</button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<footer class="site">
+  Photography by <strong>Stephen Hurst &amp; Georgia</strong> · Built as an open, contract-free gallery ·
+  <a href="index.html">harlananelson.com</a>
+</footer>
+
+<script>
+/* ------------------------------------------------------------------
+   PHOTO DATA
+   For the live gallery, replace `src`/`full` with your processed files,
+   e.g. "photos/thumb/001.jpg" and "photos/web/001.jpg", and set real tags.
+   This demo uses deterministic placeholder images so the interface is
+   fully functional without any real photos.
+------------------------------------------------------------------ */
+const TAGS = ["Ceremony", "Portraits", "Reception", "Details", "Candids"];
+const PHOTOS = Array.from({length: 28}, (_, i) => {
+  const n = String(i + 1).padStart(3, "0");
+  const seed = 1000 + i * 7;
+  const tag = TAGS[i % TAGS.length];
+  return {
+    id: "W-" + n,
+    tag,
+    src:  `https://picsum.photos/seed/${seed}/500/${340 + (i % 4) * 40}`,
+    full: `https://picsum.photos/seed/${seed}/1200/900`,
+  };
+});
+
+const selected = new Set(JSON.parse(localStorage.getItem("weddingPicks") || "[]"));
+let activeFilter = "All";
+
+const $ = (s) => document.querySelector(s);
+const grid = $("#grid");
+
+function save() { localStorage.setItem("weddingPicks", JSON.stringify([...selected])); }
+
+function toast(msg) {
+  const t = $("#toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(t._timer); t._timer = setTimeout(() => t.classList.remove("show"), 1600);
+}
+
+function renderFilters() {
+  const wrap = $("#filters");
+  wrap.innerHTML = "";
+  ["All", ...TAGS].forEach((t) => {
+    const b = document.createElement("button");
+    b.className = "chip"; b.textContent = t;
+    b.setAttribute("aria-pressed", t === activeFilter);
+    b.onclick = () => { activeFilter = t; renderFilters(); renderGrid(); };
+    wrap.appendChild(b);
+  });
+}
+
+function renderGrid() {
+  grid.innerHTML = "";
+  PHOTOS.filter((p) => activeFilter === "All" || p.tag === activeFilter).forEach((p) => {
+    const fig = document.createElement("figure");
+    fig.className = "card" + (selected.has(p.id) ? " selected" : "");
+    fig.innerHTML = `
+      <span class="id-tag">${p.id}</span>
+      <button class="heart" aria-label="Favorite ${p.id}">♥</button>
+      <img loading="lazy" src="${p.src}" alt="${p.tag} photo ${p.id}">
+      <div class="tags"><span>${p.tag}</span></div>`;
+    fig.querySelector("img").onclick = () => openLightbox(p);
+    fig.querySelector(".heart").onclick = (e) => { e.stopPropagation(); toggle(p.id); };
+    grid.appendChild(fig);
+  });
+}
+
+function toggle(id) {
+  if (selected.has(id)) { selected.delete(id); }
+  else { selected.add(id); toast("Added " + id + " to your picks"); }
+  save(); renderGrid(); updateCount();
+}
+
+function updateCount() {
+  $("#count").textContent = selected.size;
+  $("#drawerCount").textContent = selected.size;
+  $("#selectionCount").value = selected.size;
+  $("#selectedPhotos").value = [...selected].join(", ");
+  $("#submitBtn").disabled = selected.size === 0;
+}
+
+/* Drawer */
+function openDrawer() {
+  renderPicks();
+  $("#drawer").classList.add("open"); $("#backdrop").classList.add("open");
+  $("#drawer").setAttribute("aria-hidden", "false");
+}
+function closeDrawer() {
+  $("#drawer").classList.remove("open"); $("#backdrop").classList.remove("open");
+  $("#drawer").setAttribute("aria-hidden", "true");
+}
+function renderPicks() {
+  const body = $("#picksBody");
+  if (selected.size === 0) { body.innerHTML = `<div class="empty">No picks yet.<br>Tap the ♥ on photos you love.</div>`; return; }
+  const wrap = document.createElement("div"); wrap.className = "picks-grid";
+  [...selected].forEach((id) => {
+    const p = PHOTOS.find((x) => x.id === id); if (!p) return;
+    const f = document.createElement("figure");
+    f.innerHTML = `<img src="${p.src}" alt="${id}"><button class="x" aria-label="Remove ${id}">✕</button>`;
+    f.querySelector(".x").onclick = () => { toggle(id); renderPicks(); };
+    wrap.appendChild(f);
+  });
+  body.replaceChildren(wrap);
+}
+
+/* Lightbox */
+let lbCurrent = null;
+function openLightbox(p) {
+  lbCurrent = p; $("#lbImg").src = p.full; $("#lbImg").alt = p.id;
+  $("#lbFav").textContent = selected.has(p.id) ? "♥ In your picks — remove" : "♥ Add to picks";
+  $("#lightbox").classList.add("open");
+}
+function closeLightbox() { $("#lightbox").classList.remove("open"); lbCurrent = null; }
+
+/* Download list */
+function downloadList() {
+  if (selected.size === 0) { toast("No picks to download yet"); return; }
+  const lines = ["Wedding photo picks", "Guest: " + ($("#guestName").value || "(name)"),
+    "Count: " + selected.size, "", ...[...selected].sort()];
+  const blob = new Blob([lines.join("\n")], {type: "text/plain"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = "my-wedding-picks.txt"; a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+/* Wire up */
+renderFilters(); renderGrid(); updateCount();
+$("#reviewBtn").onclick = openDrawer;
+$("#closeDrawer").onclick = closeDrawer;
+$("#backdrop").onclick = closeDrawer;
+$("#downloadBtn").onclick = downloadList;
+$("#lbClose").onclick = closeLightbox;
+$("#lightbox").onclick = (e) => { if (e.target.id === "lightbox") closeLightbox(); };
+$("#lbFav").onclick = () => { if (lbCurrent) { toggle(lbCurrent.id); openLightbox(lbCurrent); } };
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeLightbox(); closeDrawer(); } });
+$("#pickForm").addEventListener("submit", () => { updateCount(); /* hidden fields ready; Netlify handles POST */ });
+</script>
+</body>
+</html>

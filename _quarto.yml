@@ -23,6 +23,7 @@ project:
     - "drill-whisper-worker.js"
     - "live-translator-diarize.js"
     - "tesla-assistant.html"
+    - "wedding-gallery.html"
 
 website:
   title: "Harlan A Nelson"
@@ -54,6 +55,8 @@ website:
         text: Japanese Drill
       - href: live-translator.html
         text: Live Translator
+      - href: wedding-gallery.html
+        text: Wedding Gallery
     right:
       - icon: linkedin
         href: https://www.linkedin.com/in/harlananelson/
