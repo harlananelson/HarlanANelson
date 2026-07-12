@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>Wedding Gallery — Select Your Favorites</title>
 <style>
   :root {
@@ -178,6 +179,7 @@
     placeholder="Search: “first dance”, “speeches”, “the rings”, “kiss”…"
     style="flex:1 1 220px;min-width:180px;padding:9px 16px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font-size:15px;">
   <div class="filters" id="filters"></div>
+  <button class="btn ghost" id="clearBtn" title="Reset search and filters">Clear</button>
   <div class="count-pill">
     <span id="count">0</span> selected
     <button class="btn" id="reviewBtn">Review picks</button>
@@ -261,28 +263,53 @@ const PHOTOS = Array.from({length: 28}, (_, i) => {
   };
 });
 
-const selected = new Set(JSON.parse(localStorage.getItem("weddingPicks") || "[]"));
+// Namespace saved picks per gallery so two galleries on one domain don't collide.
+// For a real gallery, set this to the couple/date, e.g. "smith-jones-2026-09".
+const GALLERY_ID = "alex-jordan-2026-06";
+const PICKS_KEY = "weddingPicks:" + GALLERY_ID;
+const selected = new Set(JSON.parse(localStorage.getItem(PICKS_KEY) || "[]"));
 let activeFilter = "All";
 let query = "";
 
 const $ = (s) => document.querySelector(s);
 const grid = $("#grid");
 
-// Lightweight word-stem match so "dancing" finds "the first dance", "speeches" finds
-// "the best man's speech", etc. (The real toolkit gallery uses CLIP semantic search.)
-const STOP = new Set(["the","a","an","of","and","to","in","on","at","with","for","our","us","my","me"]);
-function matches(p) {
-  if (!query.trim()) return true;
-  const hayWords = (p.caption + " " + p.tag).toLowerCase().split(/\W+/);
-  const qWords = query.toLowerCase().split(/\W+/).filter((w) => w.length >= 2 && !STOP.has(w));
-  if (qWords.length === 0) return true;
-  const stem = (w) => (w.length >= 5 ? w.slice(0, 4) : w);
-  return qWords.some((w) =>
-    hayWords.some((hw) => !STOP.has(hw) && (hw.startsWith(stem(w)) || (hw.length >= 4 && w.startsWith(stem(hw)))))
-  );
+// Escape anything interpolated into innerHTML. Demo data is hardcoded, but this file
+// is a template for real galleries whose captions come from an AI pipeline.
+function esc(s) {
+  return String(s == null ? "" : s).replace(/[&<>"']/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
 
-function save() { localStorage.setItem("weddingPicks", JSON.stringify([...selected])); }
+// Ranked search: score each photo and sort best-first, rather than a boolean filter that
+// preserves grid order. Whole-phrase caption matches rank highest; word-stem matches so
+// "dancing" finds "the first dance", "speeches" finds "the best man's speech", etc.
+// (The real toolkit gallery uses CLIP semantic search for true meaning-based ranking.)
+const STOP = new Set(["the","a","an","of","and","to","in","on","at","with","for","our","us","my","me"]);
+const stem = (w) => (w.length >= 5 ? w.slice(0, 4) : w);
+function wordHit(qWord, hayWords) {
+  return hayWords.some((hw) => !STOP.has(hw) &&
+    (hw.startsWith(stem(qWord)) || (hw.length >= 4 && qWord.startsWith(stem(hw)))));
+}
+function searchRank(p) {
+  const q = query.trim().toLowerCase();
+  if (q.length < 2) return 0;                       // handled by caller; never ranks
+  const caption = (p.caption || "").toLowerCase();
+  const tag = (p.tag || "").toLowerCase();
+  let score = 0;
+  if (caption.includes(q)) score += 0.6;            // whole-phrase caption match = strong intent
+  if (tag.includes(q)) score += 0.3;
+  const qWords = q.split(/\W+/).filter((w) => w.length >= 2 && !STOP.has(w));
+  const capWords = caption.split(/\W+/);
+  const tagWords = tag.split(/\W+/);
+  qWords.forEach((w) => {
+    if (wordHit(w, capWords)) score += 0.3;
+    if (wordHit(w, tagWords)) score += 0.2;
+  });
+  return score;
+}
+
+function save() { localStorage.setItem(PICKS_KEY, JSON.stringify([...selected])); }
 
 function toast(msg) {
   const t = $("#toast"); t.textContent = msg; t.classList.add("show");
@@ -303,20 +330,31 @@ function renderFilters() {
 
 function renderGrid() {
   grid.innerHTML = "";
-  const shown = PHOTOS.filter((p) => (activeFilter === "All" || p.tag === activeFilter) && matches(p));
+  const base = PHOTOS.filter((p) => activeFilter === "All" || p.tag === activeFilter);
+  const q = query.trim();
+  let shown;
+  if (q.length < 2) {
+    shown = base;                                   // no active query: keep gallery order
+  } else {
+    shown = base
+      .map((p, i) => ({ p, i, s: searchRank(p) }))
+      .filter((o) => o.s > 0)
+      .sort((a, b) => b.s - a.s || a.i - b.i)       // best-first, stable on ties
+      .map((o) => o.p);
+  }
   if (shown.length === 0) {
     grid.innerHTML = `<p style="color:var(--muted);text-align:center;padding:40px;">
-      No photos match “${query}”. Try “first dance”, “speeches”, “the rings”, or a tag above.</p>`;
+      No photos match “${esc(query)}”. Try “first dance”, “speeches”, “the rings”, or a tag above.</p>`;
     return;
   }
   shown.forEach((p) => {
     const fig = document.createElement("figure");
     fig.className = "card" + (selected.has(p.id) ? " selected" : "");
     fig.innerHTML = `
-      <span class="id-tag">${p.id}</span>
-      <button class="heart" aria-label="Favorite ${p.id}">♥</button>
-      <img loading="lazy" src="${p.src}" alt="${p.caption}">
-      <div class="tags"><span>${p.tag}</span><span>${p.caption}</span></div>`;
+      <span class="id-tag">${esc(p.id)}</span>
+      <button class="heart" aria-label="Favorite ${esc(p.id)}">♥</button>
+      <img loading="lazy" src="${encodeURI(p.src)}" alt="${esc(p.caption)}">
+      <div class="tags"><span>${esc(p.tag)}</span><span>${esc(p.caption)}</span></div>`;
     fig.querySelector("img").onclick = () => openLightbox(p);
     fig.querySelector(".heart").onclick = (e) => { e.stopPropagation(); toggle(p.id); };
     grid.appendChild(fig);
@@ -354,7 +392,7 @@ function renderPicks() {
   [...selected].forEach((id) => {
     const p = PHOTOS.find((x) => x.id === id); if (!p) return;
     const f = document.createElement("figure");
-    f.innerHTML = `<img src="${p.src}" alt="${id}"><button class="x" aria-label="Remove ${id}">✕</button>`;
+    f.innerHTML = `<img src="${encodeURI(p.src)}" alt="${esc(id)}"><button class="x" aria-label="Remove ${esc(id)}">✕</button>`;
     f.querySelector(".x").onclick = () => { toggle(id); renderPicks(); };
     wrap.appendChild(f);
   });
@@ -382,8 +420,19 @@ function downloadList() {
 }
 
 /* Wire up */
+function clearAll() {
+  query = ""; $("#search").value = ""; activeFilter = "All";
+  renderFilters(); renderGrid();
+}
+
 renderFilters(); renderGrid(); updateCount();
-$("#search").addEventListener("input", (e) => { query = e.target.value; renderGrid(); });
+let searchTimer;
+$("#search").addEventListener("input", (e) => {                 // debounce: don't re-render every keystroke
+  const v = e.target.value;
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => { query = v; renderGrid(); }, 180);
+});
+$("#clearBtn").onclick = clearAll;
 $("#reviewBtn").onclick = openDrawer;
 $("#closeDrawer").onclick = closeDrawer;
 $("#backdrop").onclick = closeDrawer;
