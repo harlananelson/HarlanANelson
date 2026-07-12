@@ -59,6 +59,13 @@
     padding: 12px 18px;
   }
   .filters { display: flex; gap: 8px; flex-wrap: wrap; flex: 1; }
+  .peoplebar {
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    padding: 8px 18px; border-bottom: 1px solid var(--line); background: var(--surface);
+  }
+  .peoplebar .label { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-right: 2px; }
+  .chip.person[aria-pressed="true"] { background: var(--accent-ink); border-color: var(--accent-ink); color: #fff; }
+  .card .tags span.person { background: rgba(176,137,104,.6); }
   .chip {
     border: 1px solid var(--line); background: var(--surface); color: var(--ink);
     padding: 6px 14px; border-radius: 999px; font-size: 13px; cursor: pointer;
@@ -186,6 +193,11 @@
   </div>
 </div>
 
+<div class="peoplebar" id="peoplebar">
+  <span class="label">People</span>
+  <div class="filters" id="peopleFilters"></div>
+</div>
+
 <main class="grid" id="grid"></main>
 
 <!-- Selections drawer -->
@@ -207,7 +219,8 @@
     <input type="hidden" name="selected-photos" id="selectedPhotos">
     <input type="hidden" name="selection-count" id="selectionCount">
     <div class="actions">
-      <button type="button" class="btn ghost" id="downloadBtn">Download list</button>
+      <button type="button" class="btn ghost" id="downloadBtn">Download .txt</button>
+      <button type="button" class="btn ghost" id="downloadJsonBtn">Download .json</button>
       <button type="submit" class="btn" id="submitBtn">Send my picks</button>
     </div>
   </form>
@@ -247,6 +260,9 @@ const CAPTIONS = {
   Details:   [["close up of the rings","wedding,rings"], ["the bridal bouquet","wedding,bouquet"], ["the table settings","wedding,decor"], ["the wedding cake","wedding,cake"], ["the invitation and rings","wedding,rings"], ["the shoes and jewelry","wedding,shoes"]],
   Candids:   [["a quiet moment together","wedding,couple"], ["laughing at dinner","wedding,dinner"], ["kids on the dance floor","wedding,dancing"], ["grandparents chatting","wedding,guests"], ["a hug goodbye","wedding,hug"], ["sparklers send-off","wedding,sparklers"]],
 };
+// Demo people tags. A real gallery populates `people` from the toolkit's face-grouping
+// step; guests then search or filter by the names they care about.
+const PEOPLE = ["Alex", "Jordan", "Grandma Ruth", "Uncle Sam", "Maya", "Theo", "Priya", "Liam"];
 const tagCount = {};
 const PHOTOS = Array.from({length: 28}, (_, i) => {
   const n = String(i + 1).padStart(3, "0");
@@ -258,6 +274,8 @@ const PHOTOS = Array.from({length: 28}, (_, i) => {
     id: "W-" + n,
     tag,
     caption,
+    people: [PEOPLE[i % PEOPLE.length], PEOPLE[(i * 3 + 2) % PEOPLE.length]]
+      .filter((v, j, a) => a.indexOf(v) === j),     // 1–2 unique names per photo
     src:  `https://loremflickr.com/500/${340 + (i % 4) * 40}/${kw}/all?lock=${lock}`,
     full: `https://loremflickr.com/1200/900/${kw}/all?lock=${lock}`,
   };
@@ -269,6 +287,7 @@ const GALLERY_ID = "alex-jordan-2026-06";
 const PICKS_KEY = "weddingPicks:" + GALLERY_ID;
 const selected = new Set(JSON.parse(localStorage.getItem(PICKS_KEY) || "[]"));
 let activeFilter = "All";
+let activePerson = "Everyone";
 let query = "";
 
 const $ = (s) => document.querySelector(s);
@@ -306,6 +325,12 @@ function searchRank(p) {
     if (wordHit(w, capWords)) score += 0.3;
     if (wordHit(w, tagWords)) score += 0.2;
   });
+  const people = (p.people || []).join(" ").toLowerCase();
+  if (people) {
+    if (people.includes(q)) score += 0.6;             // searching a guest's name = explicit intent
+    const peopleWords = people.split(/\W+/);
+    qWords.forEach((w) => { if (wordHit(w, peopleWords)) score += 0.6; });
+  }
   return score;
 }
 
@@ -328,9 +353,24 @@ function renderFilters() {
   });
 }
 
+function renderPeopleFilters() {
+  const wrap = $("#peopleFilters");
+  wrap.innerHTML = "";
+  const names = ["Everyone", ...[...new Set(PHOTOS.flatMap((p) => p.people || []))].sort()];
+  names.forEach((name) => {
+    const b = document.createElement("button");
+    b.className = "chip person"; b.textContent = name;
+    b.setAttribute("aria-pressed", name === activePerson);
+    b.onclick = () => { activePerson = name; renderPeopleFilters(); renderGrid(); };
+    wrap.appendChild(b);
+  });
+}
+
 function renderGrid() {
   grid.innerHTML = "";
-  const base = PHOTOS.filter((p) => activeFilter === "All" || p.tag === activeFilter);
+  const base = PHOTOS.filter((p) =>
+    (activeFilter === "All" || p.tag === activeFilter) &&
+    (activePerson === "Everyone" || (p.people || []).includes(activePerson)));
   const q = query.trim();
   let shown;
   if (q.length < 2) {
@@ -354,7 +394,7 @@ function renderGrid() {
       <span class="id-tag">${esc(p.id)}</span>
       <button class="heart" aria-label="Favorite ${esc(p.id)}">♥</button>
       <img loading="lazy" src="${encodeURI(p.src)}" alt="${esc(p.caption)}">
-      <div class="tags"><span>${esc(p.tag)}</span><span>${esc(p.caption)}</span></div>`;
+      <div class="tags"><span>${esc(p.tag)}</span><span>${esc(p.caption)}</span>${(p.people || []).map((nm) => `<span class="person">${esc(nm)}</span>`).join("")}</div>`;
     fig.querySelector("img").onclick = () => openLightbox(p);
     fig.querySelector(".heart").onclick = (e) => { e.stopPropagation(); toggle(p.id); };
     grid.appendChild(fig);
@@ -419,13 +459,23 @@ function downloadList() {
   URL.revokeObjectURL(a.href);
 }
 
-/* Wire up */
-function clearAll() {
-  query = ""; $("#search").value = ""; activeFilter = "All";
-  renderFilters(); renderGrid();
+/* Download picks as a sorted ID array — drops into the toolkit's data/selections.json. */
+function downloadJson() {
+  if (selected.size === 0) { toast("No picks to download yet"); return; }
+  const data = [...selected].sort();
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type: "application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = "my-wedding-picks.json"; a.click();
+  URL.revokeObjectURL(a.href);
 }
 
-renderFilters(); renderGrid(); updateCount();
+/* Wire up */
+function clearAll() {
+  query = ""; $("#search").value = ""; activeFilter = "All"; activePerson = "Everyone";
+  renderFilters(); renderPeopleFilters(); renderGrid();
+}
+
+renderFilters(); renderPeopleFilters(); renderGrid(); updateCount();
 let searchTimer;
 $("#search").addEventListener("input", (e) => {                 // debounce: don't re-render every keystroke
   const v = e.target.value;
@@ -437,6 +487,7 @@ $("#reviewBtn").onclick = openDrawer;
 $("#closeDrawer").onclick = closeDrawer;
 $("#backdrop").onclick = closeDrawer;
 $("#downloadBtn").onclick = downloadList;
+$("#downloadJsonBtn").onclick = downloadJson;
 $("#lbClose").onclick = closeLightbox;
 $("#lightbox").onclick = (e) => { if (e.target.id === "lightbox") closeLightbox(); };
 $("#lbFav").onclick = () => { if (lbCurrent) { toggle(lbCurrent.id); openLightbox(lbCurrent); } };
