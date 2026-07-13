@@ -160,6 +160,13 @@
     backend: cfgGet("backend", "") || "",   // "" = server default
     mode: params.get("mode") || ""   // "" = console, "mic" = phone microphone
   };
+  // ?token= is saved to localStorage above — scrub it from the visible URL
+  // and browser history (keep the other params, e.g. mode=mic).
+  if (params.has("token") && window.history && history.replaceState) {
+    params.delete("token");
+    var q = params.toString();
+    try { history.replaceState(null, "", location.pathname + (q ? "?" + q : "")); } catch (e) {}
+  }
 
   var soundOn = false;
   var lastEventId = 0;
@@ -233,6 +240,9 @@
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: text })
     }).then(function (r) { return r.blob(); }).then(function (blob) {
+      if (audioEl.src && audioEl.src.indexOf("blob:") === 0) {
+        URL.revokeObjectURL(audioEl.src);   // don't leak one per spoken reply
+      }
       audioEl.src = URL.createObjectURL(blob);
       return audioEl.play();
     }).catch(function (e) {
@@ -252,7 +262,9 @@
         setConn(true);
         fillBackends(data.backends);
         data.events.forEach(function (ev) {
-          lastEventId = Math.max(lastEventId, ev.id);
+          // overlapping polls on slow LTE return the same events — render once
+          if (ev.id <= lastEventId) return;
+          lastEventId = ev.id;
           addMsg(ev.role, ev.text, ev.backend);
           if (ev.role === "assistant" && !firstPoll && ev.id > lastSpokenId) {
             lastSpokenId = ev.id;
@@ -287,13 +299,16 @@
   }
 
   // ---- phone microphone mode (?mode=mic) ----
-  var recorder = null, chunks = [];
+  var recorder = null, chunks = [], micStarting = false;
   function micSupported() {
     return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia &&
               window.MediaRecorder);
   }
   function startRec() {
+    if (micStarting) return;   // tap while getUserMedia is pending would open
+    micStarting = true;        // a second stream and leak the first (mic stays hot)
     navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+      micStarting = false;
       chunks = [];
       var mime = "";
       ["audio/webm;codecs=opus", "audio/webm", "audio/mp4"].some(function (m) {
@@ -311,6 +326,7 @@
       $("talkBtn").className = "rec";
       $("talkBtn").textContent = "Listening… tap to stop";
     }).catch(function (e) {
+      micStarting = false;
       // The Tesla console reports mic hardware but never grants getUserMedia
       // (no permission UI) — so this rejects with NotAllowedError there. Give
       // the phone-only guidance instead of a cryptic "Permission denied".
