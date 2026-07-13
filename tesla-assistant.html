@@ -125,9 +125,10 @@
 </div>
 
 <div id="micPane">
-  <button id="talkBtn">Hold to talk</button>
-  <div id="micText">Hold the button, speak, release. Your question and the answer
-    appear on the car screen (and here). Keep this page open on your phone.</div>
+  <button id="talkBtn">Tap to talk</button>
+  <div id="micText">Tap the button, speak, tap again when you're done — hands
+    free while listening. Your question and the answer appear on the car screen
+    (and here). Keep this page open on your phone.</div>
 </div>
 
 <div id="composer">
@@ -308,7 +309,7 @@
       recorder.start(250);   // flush a chunk every 250ms so brief taps still
                              // produce a valid, non-empty clip (no headerless webm)
       $("talkBtn").className = "rec";
-      $("talkBtn").textContent = "Listening…";
+      $("talkBtn").textContent = "Listening… tap to stop";
     }).catch(function (e) {
       // The Tesla console reports mic hardware but never grants getUserMedia
       // (no permission UI) — so this rejects with NotAllowedError there. Give
@@ -317,7 +318,7 @@
         /denied|permission|not ?allowed/i.test(e.message || ""));
       if (denied) {
         $("talkBtn").className = "";
-        $("talkBtn").textContent = "Hold to talk";
+        $("talkBtn").textContent = "Tap to talk";
         setStatus("This browser won't grant microphone access. The Tesla console " +
           "has no mic — open this page on your phone (add ?mode=mic) and hold to " +
           "talk there; the question and answer still appear and speak on the car.", true);
@@ -328,7 +329,7 @@
   }
   function stopRec() {
     $("talkBtn").className = "";
-    $("talkBtn").textContent = "Hold to talk";
+    $("talkBtn").textContent = "Tap to talk";
     if (recorder && recorder.state === "recording") recorder.stop();
   }
   function uploadClip(blob) {
@@ -532,11 +533,12 @@
         "Open this page on a phone (Safari/Chrome) instead.";
       $("talkBtn").disabled = true;
     } else {
-      var tb = $("talkBtn");
-      tb.addEventListener("touchstart", function (e) { e.preventDefault(); startRec(); });
-      tb.addEventListener("touchend", function (e) { e.preventDefault(); stopRec(); });
-      tb.addEventListener("mousedown", startRec);
-      tb.addEventListener("mouseup", stopRec);
+      // Tap-to-toggle (not press-and-hold): the driver must be hands-free
+      // while speaking. Tap starts listening, tap again stops and sends.
+      $("talkBtn").addEventListener("click", function () {
+        if (recorder && recorder.state === "recording") stopRec();
+        else startRec();
+      });
     }
   } else if (micSupported()) {
     // some future console update may allow the mic; offer the mode if so
