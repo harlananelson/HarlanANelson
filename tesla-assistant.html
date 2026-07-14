@@ -4,7 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Car Assistant</title>
+<meta name="theme-color" content="#111111">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Home AI">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiSG9tZSBBSSIsInNob3J0X25hbWUiOiJIb21lIEFJIiwiZGVzY3JpcHRpb24iOiJWb2ljZSBpbnRlcmZhY2UgdG8gdGhlIGhvbWUgQUkgd29ya3N0YXRpb24iLCJzdGFydF91cmwiOiIuL3Rlc2xhLWFzc2lzdGFudC5odG1sP21vZGU9bWljIiwic2NvcGUiOiIuLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwib3JpZW50YXRpb24iOiJwb3J0cmFpdCIsImJhY2tncm91bmRfY29sb3IiOiIjMTExMTExIiwidGhlbWVfY29sb3IiOiIjMTExMTExIiwiaWNvbnMiOlt7InNyYyI6ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIWnBaWGRDYjNnOUlqQWdNQ0ExTVRJZ05URXlJajQ4Y21WamRDQjNhV1IwYUQwaU5URXlJaUJvWldsbmFIUTlJalV4TWlJZ2NuZzlJakV4TWlJZ1ptbHNiRDBpSXpGaU1XSXhZaUl2UGp4eVpXTjBJSGc5SWpJeE5pSWdlVDBpTVRBMElpQjNhV1IwYUQwaU9EQWlJR2hsYVdkb2REMGlNVGMySWlCeWVEMGlOREFpSUdacGJHdzlJaU0wWVRrd1pUSWlMejQ4Y0dGMGFDQmtQU0pOTVRZMElESXpNbUU1TWlBNU1pQXdJREFnTUNBeE9EUWdNQ0lnWm1sc2JEMGlibTl1WlNJZ2MzUnliMnRsUFNJak5HRTVNR1V5SWlCemRISnZhMlV0ZDJsa2RHZzlJakl5SWlCemRISnZhMlV0YkdsdVpXTmhjRDBpY205MWJtUWlMejQ4Y21WamRDQjRQU0l5TkRRaUlIazlJak15TWlJZ2QybGtkR2c5SWpJMElpQm9aV2xuYUhROUlqWXdJaUJtYVd4c1BTSWpOR0U1TUdVeUlpOCtQSEpsWTNRZ2VEMGlNVGc0SWlCNVBTSXpPRElpSUhkcFpIUm9QU0l4TXpZaUlHaGxhV2RvZEQwaU1qUWlJSEo0UFNJeE1pSWdabWxzYkQwaUl6UmhPVEJsTWlJdlBqd3ZjM1puUGdvPSIsInNpemVzIjoiYW55IiwidHlwZSI6ImltYWdlL3N2Zyt4bWwiLCJwdXJwb3NlIjoiYW55IG1hc2thYmxlIn1dfQo=">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iIzFiMWIxYiIvPjxyZWN0IHg9IjIxNiIgeT0iMTA0IiB3aWR0aD0iODAiIGhlaWdodD0iMTc2IiByeD0iNDAiIGZpbGw9IiM0YTkwZTIiLz48cGF0aCBkPSJNMTY0IDIzMmE5MiA5MiAwIDAgMCAxODQgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNGE5MGUyIiBzdHJva2Utd2lkdGg9IjIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cmVjdCB4PSIyNDQiIHk9IjMyMiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjYwIiBmaWxsPSIjNGE5MGUyIi8+PHJlY3QgeD0iMTg4IiB5PSIzODIiIHdpZHRoPSIxMzYiIGhlaWdodD0iMjQiIHJ4PSIxMiIgZmlsbD0iIzRhOTBlMiIvPjwvc3ZnPgo=">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iIzFiMWIxYiIvPjxyZWN0IHg9IjIxNiIgeT0iMTA0IiB3aWR0aD0iODAiIGhlaWdodD0iMTc2IiByeD0iNDAiIGZpbGw9IiM0YTkwZTIiLz48cGF0aCBkPSJNMTY0IDIzMmE5MiA5MiAwIDAgMCAxODQgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNGE5MGUyIiBzdHJva2Utd2lkdGg9IjIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cmVjdCB4PSIyNDQiIHk9IjMyMiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjYwIiBmaWxsPSIjNGE5MGUyIi8+PHJlY3QgeD0iMTg4IiB5PSIzODIiIHdpZHRoPSIxMzYiIGhlaWdodD0iMjQiIHJ4PSIxMiIgZmlsbD0iIzRhOTBlMiIvPjwvc3ZnPgo=">
+<title>Home AI</title>
 <style>
   /* Tesla console: Chromium ~109, touch only, viewed at arm's length.
      Big targets, big type, dark theme, zero external assets. */
@@ -86,7 +94,7 @@
 </head>
 <body>
 <header>
-  <h1>Car Assistant</h1>
+  <h1>Home AI</h1>
   <span id="connDot" class="dot"></span>
   <button id="soundBtn" class="secondary">🔇 Sound off</button>
   <button id="agentsBtn" class="secondary">🤖 Agents</button>
@@ -126,9 +134,10 @@
 
 <div id="micPane">
   <button id="talkBtn">Tap to talk</button>
-  <div id="micText">Tap the button, speak, tap again when you're done — hands
-    free while listening. Your question and the answer appear on the car screen
-    (and here). Keep this page open on your phone.</div>
+  <button id="convoBtn" class="secondary">🔁 Hands-free conversation: off</button>
+  <div id="micText">Tap to talk: tap once, speak, tap again to send. Or turn on
+    hands-free conversation — tap once and just talk; it detects when you stop,
+    speaks the reply, then listens again. Tap the hands-free button to end.</div>
 </div>
 
 <div id="composer">
@@ -173,6 +182,15 @@
   var lastSpokenId = 0;   // don't re-speak history on page load
   var firstPoll = true;
   var audioEl = new Audio();
+
+  // Hands-free conversation: tap once, then talk↔listen loops on its own.
+  var handsFree = false;      // whether the loop is active
+  var awaitingReply = 0;      // timestamp we sent a clip and expect a spoken reply
+  // After a spoken reply finishes, resume listening (the other half of the loop).
+  audioEl.addEventListener("ended", function () {
+    awaitingReply = 0;
+    if (handsFree) relisten();
+  });
 
   function setStatus(text, isErr) {
     var s = $("status");
@@ -249,8 +267,9 @@
       // fall back to the browser's own voice if server TTS is unavailable
       try {
         var u = new SpeechSynthesisUtterance(text);
+        u.onend = onSpeakEnd;   // keep the hands-free loop going on this path too
         speechSynthesis.speak(u);
-      } catch (e2) { setStatus("Speech failed: " + e.message, true); }
+      } catch (e2) { setStatus("Speech failed: " + e.message, true); onSpeakEnd(); }
     });
   }
 
@@ -300,9 +319,70 @@
 
   // ---- phone microphone mode (?mode=mic) ----
   var recorder = null, chunks = [], micStarting = false;
+  var audioCtx = null, silenceTimer = null;   // for hands-free auto-stop
   function micSupported() {
     return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia &&
               window.MediaRecorder);
+  }
+
+  // Play a moment of silence inside a user gesture to satisfy the browser's
+  // autoplay policy, so spoken replies can play without a tap each time.
+  function unlockAudio() {
+    try {
+      audioEl.src = "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAAAAA=";
+      audioEl.play().catch(function () {});
+    } catch (e) {}
+  }
+  function ensureSound() {
+    if (soundOn) return;
+    soundOn = true;
+    $("soundBtn").textContent = "🔊 Sound on";
+    unlockAudio();
+  }
+  function setConvoBtn() {
+    var b = $("convoBtn");
+    if (!b) return;
+    b.textContent = handsFree ? "⏹ Hands-free conversation: on"
+                              : "🔁 Hands-free conversation: off";
+    b.className = handsFree ? "" : "secondary";
+  }
+  function cleanupAudio() {
+    if (silenceTimer) { clearInterval(silenceTimer); silenceTimer = null; }
+    if (audioCtx) { try { audioCtx.close(); } catch (e) {} audioCtx = null; }
+  }
+  // Resume listening — the second half of the hands-free loop.
+  function relisten() {
+    if (!handsFree || micStarting) return;
+    if (recorder && recorder.state === "recording") return;
+    startRec();
+  }
+  function onSpeakEnd() { awaitingReply = 0; if (handsFree) relisten(); }
+
+  // Watch the mic level and auto-stop after a beat of silence — this is what
+  // makes it hands-free (no tap to end each turn). WebAudio only; if absent,
+  // the manual tap-to-stop still works.
+  function attachSilenceDetector(stream) {
+    try {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return;
+      audioCtx = new AC();
+      var an = audioCtx.createAnalyser();
+      an.fftSize = 512;
+      audioCtx.createMediaStreamSource(stream).connect(an);
+      var buf = new Uint8Array(an.fftSize);
+      var spoke = false, started = Date.now(), lastLoud = started;
+      silenceTimer = setInterval(function () {
+        an.getByteTimeDomainData(buf);
+        var sum = 0;
+        for (var i = 0; i < buf.length; i++) { var d = (buf[i] - 128) / 128; sum += d * d; }
+        var rms = Math.sqrt(sum / buf.length), now = Date.now();
+        if (rms > 0.045) { spoke = true; lastLoud = now; }
+        // stop ~1.4s after speech ends, or a 20s hard cap either way
+        if ((spoke && now - lastLoud > 1400) || now - started > 20000) {
+          if (recorder && recorder.state === "recording") recorder.stop();
+        }
+      }, 150);
+    } catch (e) { /* auto-stop unavailable; manual stop still works */ }
   }
   function startRec() {
     if (micStarting) return;   // tap while getUserMedia is pending would open
@@ -318,13 +398,17 @@
       recorder = new MediaRecorder(stream, mime ? { mimeType: mime } : undefined);
       recorder.ondataavailable = function (e) { if (e.data.size) chunks.push(e.data); };
       recorder.onstop = function () {
+        cleanupAudio();
         stream.getTracks().forEach(function (t) { t.stop(); });
+        $("talkBtn").className = "";
+        $("talkBtn").textContent = handsFree ? "Listening will resume…" : "Tap to talk";
         uploadClip(new Blob(chunks, { type: recorder.mimeType || "audio/webm" }));
       };
       recorder.start(250);   // flush a chunk every 250ms so brief taps still
                              // produce a valid, non-empty clip (no headerless webm)
+      if (handsFree) attachSilenceDetector(stream);
       $("talkBtn").className = "rec";
-      $("talkBtn").textContent = "Listening… tap to stop";
+      $("talkBtn").textContent = handsFree ? "Listening… (auto)" : "Listening… tap to stop";
     }).catch(function (e) {
       micStarting = false;
       // The Tesla console reports mic hardware but never grants getUserMedia
@@ -344,15 +428,16 @@
     });
   }
   function stopRec() {
-    $("talkBtn").className = "";
-    $("talkBtn").textContent = "Tap to talk";
-    if (recorder && recorder.state === "recording") recorder.stop();
+    if (recorder && recorder.state === "recording") recorder.stop();  // onstop cleans up
+    else { cleanupAudio(); $("talkBtn").className = ""; $("talkBtn").textContent = "Tap to talk"; }
   }
   function uploadClip(blob) {
     // A too-short/empty recording is a headerless clip ffmpeg can't decode —
     // don't send it (it would come back as a server error). Ask for a real hold.
     if (!blob || blob.size < 1200) {
-      setStatus("Didn't catch that — hold the button, speak, then release.", true);
+      setStatus(handsFree ? "Listening…" : "Didn't catch that — tap and speak.",
+                !handsFree);
+      if (handsFree) relisten();   // empty clip: just keep listening, don't stall
       return;
     }
     setStatus("Transcribing…");
@@ -366,8 +451,18 @@
       .then(function (r) { return r.json(); })
       .then(function (data) {
         setStatus(data.text ? "" : "Heard nothing — try again.", !data.text);
+        if (handsFree) {
+          if (data.text) awaitingReply = Date.now();  // reply → spoken → onSpeakEnd relistens
+          else relisten();                            // nothing heard → listen again
+        }
       })
-      .catch(function (e) { setStatus(e.message, true); });
+      .catch(function (e) {
+        setStatus(e.message, true);
+        if (handsFree) {   // stop the loop on error rather than spin on it
+          handsFree = false; cleanupAudio(); setConvoBtn();
+          $("talkBtn").className = ""; $("talkBtn").textContent = "Tap to talk";
+        }
+      });
   }
 
   // ---- agents panel (tmux sessions on the workstation) ----
@@ -525,13 +620,8 @@
   $("soundBtn").onclick = function () {
     soundOn = !soundOn;
     $("soundBtn").textContent = soundOn ? "🔊 Sound on" : "🔇 Sound off";
-    if (soundOn) {
-      // play a moment of silence inside the tap gesture to unlock <audio>
-      try {
-        audioEl.src = "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAAAAA=";
-        audioEl.play().catch(function () {});
-      } catch (e) {}
-    }
+    if (soundOn) unlockAudio();          // unlock <audio> inside this tap gesture
+    else if (handsFree) $("convoBtn").click();   // no sound -> can't loop; end it
   };
 
   // ---- wire up ----
@@ -555,6 +645,26 @@
         if (recorder && recorder.state === "recording") stopRec();
         else startRec();
       });
+      // Hands-free conversation: tap once, then it loops talk↔listen on its own.
+      $("convoBtn").addEventListener("click", function () {
+        handsFree = !handsFree;
+        setConvoBtn();
+        if (handsFree) {
+          ensureSound();   // must hear the reply to know when to listen again
+          if (!(recorder && recorder.state === "recording")) startRec();
+        } else if (recorder && recorder.state === "recording") {
+          recorder.stop();
+        } else {
+          cleanupAudio();
+          $("talkBtn").className = ""; $("talkBtn").textContent = "Tap to talk";
+        }
+      });
+      // Reply never arrived (backend error, no audio) — don't wait forever.
+      setInterval(function () {
+        if (handsFree && awaitingReply && Date.now() - awaitingReply > 90000) {
+          awaitingReply = 0; relisten();
+        }
+      }, 3000);
     }
   } else if (micSupported()) {
     // some future console update may allow the mic; offer the mode if so
