@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#111111">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="My Apps">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiTXkgQXBwcyIsInNob3J0X25hbWUiOiJNeSBBcHBzIiwiZGVzY3JpcHRpb24iOiJIb21lIGh1YiDigJQgYXNzaXN0YW50LCB0cmFuc2xhdG9yLCByZU1hcmthYmxlIiwic3RhcnRfdXJsIjoiLi9hcHBzLmh0bWwiLCJzY29wZSI6Ii4vIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJvcmllbnRhdGlvbiI6InBvcnRyYWl0IiwiYmFja2dyb3VuZF9jb2xvciI6IiMxMTExMTEiLCJ0aGVtZV9jb2xvciI6IiMxMTExMTEiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhacFpYZENiM2c5SWpBZ01DQTFNVElnTlRFeUlqNDhjbVZqZENCM2FXUjBhRDBpTlRFeUlpQm9aV2xuYUhROUlqVXhNaUlnY25nOUlqRXhNaUlnWm1sc2JEMGlJekZpTVdJeFlpSXZQanh5WldOMElIZzlJakV5TUNJZ2VUMGlNVEl3SWlCM2FXUjBhRDBpTVRJd0lpQm9aV2xuYUhROUlqRXlNQ0lnY25nOUlqTXdJaUJtYVd4c1BTSWpOR0U1TUdVeUlpOCtQSEpsWTNRZ2VEMGlNamN5SWlCNVBTSXhNakFpSUhkcFpIUm9QU0l4TWpBaUlHaGxhV2RvZEQwaU1USXdJaUJ5ZUQwaU16QWlJR1pwYkd3OUlpTmxNR0UwTkdFaUx6NDhjbVZqZENCNFBTSXhNakFpSUhrOUlqSTNNaUlnZDJsa2RHZzlJakV5TUNJZ2FHVnBaMmgwUFNJeE1qQWlJSEo0UFNJek1DSWdabWxzYkQwaUl6Vm1ZbVkzWmlJdlBqeHlaV04wSUhnOUlqSTNNaUlnZVQwaU1qY3lJaUIzYVdSMGFEMGlNVEl3SWlCb1pXbG5hSFE5SWpFeU1DSWdjbmc5SWpNd0lpQm1hV3hzUFNJallqQTJabVF3SWk4K1BDOXpkbWMrQ2c9PSIsInNpemVzIjoiYW55IiwidHlwZSI6ImltYWdlL3N2Zyt4bWwiLCJwdXJwb3NlIjoiYW55IG1hc2thYmxlIn1dfQo=">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iIzFiMWIxYiIvPjxyZWN0IHg9IjEyMCIgeT0iMTIwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjMwIiBmaWxsPSIjNGE5MGUyIi8+PHJlY3QgeD0iMjcyIiB5PSIxMjAiIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMzAiIGZpbGw9IiNlMGE0NGEiLz48cmVjdCB4PSIxMjAiIHk9IjI3MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxMjAiIHJ4PSIzMCIgZmlsbD0iIzVmYmY3ZiIvPjxyZWN0IHg9IjI3MiIgeT0iMjcyIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjMwIiBmaWxsPSIjYjA2ZmQwIi8+PC9zdmc+Cg==">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iIzFiMWIxYiIvPjxyZWN0IHg9IjEyMCIgeT0iMTIwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjMwIiBmaWxsPSIjNGE5MGUyIi8+PHJlY3QgeD0iMjcyIiB5PSIxMjAiIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMzAiIGZpbGw9IiNlMGE0NGEiLz48cmVjdCB4PSIxMjAiIHk9IjI3MiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxMjAiIHJ4PSIzMCIgZmlsbD0iIzVmYmY3ZiIvPjxyZWN0IHg9IjI3MiIgeT0iMjcyIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjMwIiBmaWxsPSIjYjA2ZmQwIi8+PC9zdmc+Cg==">
+<title>My Apps</title>
+<style>
+  /* Home hub: one installable app, a tab per back-end service on this
+     workstation. Each tab is the existing app page in an iframe — no backend
+     change. Bottom tab bar for thumb reach; dark; zero external assets. */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: #111; color: #eee; overflow: hidden;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    display: flex; flex-direction: column;
+  }
+  /* app views fill everything above the tab bar */
+  #views { position: relative; flex: 1; min-height: 0; }
+  .view {
+    position: absolute; inset: 0; display: none;
+    border: 0; width: 100%; height: 100%; background: #111;
+  }
+  .view.active { display: block; }
+  /* placeholder shown when a tab has no URL set */
+  .empty {
+    position: absolute; inset: 0; display: none;
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: 16px; text-align: center; padding: 28px; color: #bbb;
+  }
+  .empty.active { display: flex; }
+  .empty h2 { font-size: 22px; color: #eee; font-weight: 600; }
+  .empty p { font-size: 16px; line-height: 1.5; max-width: 440px; }
+  .empty button, #settings button {
+    background: #2b6cb0; color: #fff; border: 0; border-radius: 12px;
+    font-size: 18px; padding: 13px 20px; cursor: pointer;
+  }
+  /* bottom tab bar */
+  #tabs {
+    display: flex; background: #1b1b1b; border-top: 1px solid #2a2a2a;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+  #tabs button {
+    flex: 1; background: none; border: 0; color: #8a8a8a; cursor: pointer;
+    padding: 10px 4px 12px; font-size: 12px; display: flex; flex-direction: column;
+    align-items: center; gap: 3px; touch-action: manipulation;
+  }
+  #tabs button .ic { font-size: 24px; line-height: 1; }
+  #tabs button.sel { color: #4a90e2; }
+  #tabs button.gear { flex: 0 0 64px; }
+  /* settings sheet */
+  #settings {
+    position: absolute; inset: 0; z-index: 10; display: none;
+    flex-direction: column; background: #141414; padding: 22px;
+    overflow-y: auto; gap: 6px;
+  }
+  #settings.open { display: flex; }
+  #settings h1 { font-size: 22px; margin-bottom: 6px; }
+  #settings p.note { font-size: 14px; color: #999; line-height: 1.5; margin-bottom: 10px; }
+  #settings label { display: block; font-size: 14px; color: #aaa; margin: 14px 0 5px; }
+  #settings input {
+    width: 100%; font-size: 16px; padding: 12px; border-radius: 10px;
+    border: 1px solid #444; background: #222; color: #eee;
+  }
+  #settings .row { display: flex; gap: 12px; margin-top: 20px; }
+  #settings .row button.secondary { background: #333; }
+</style>
+</head>
+<body>
+
+<div id="views"></div>
+
+<div id="settings">
+  <h1>Apps</h1>
+  <p class="note">Each tab loads one app page. The first two live on this site;
+    reMarkable runs on its own address (set it to your Tailscale URL for that
+    service). Blank a URL to hide its tab. Saved in this browser.</p>
+  <div id="settingsFields"></div>
+  <div class="row">
+    <button id="saveApps">Save</button>
+    <button id="closeSettings" class="secondary">Cancel</button>
+  </div>
+</div>
+
+<nav id="tabs"></nav>
+
+<script>
+"use strict";
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+
+  // Each app is the EXISTING page in an iframe — no backend change. URLs are
+  // editable + persisted so this doubles as a launcher for anything you add.
+  var DEFAULTS = [
+    { id: "assistant",  label: "Assistant",  icon: "🤖", url: "./tesla-assistant.html" },
+    { id: "translate",  label: "Translate",  icon: "🌐", url: "./live-translator.html" },
+    { id: "remarkable", label: "reMarkable", icon: "📝", url: "" }
+  ];
+  var REMARKABLE_HINT = "https://your-machine.your-tailnet.ts.net:9443/";
+
+  function loadUrls() {
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem("hub_urls") || "{}"); } catch (e) {}
+    return DEFAULTS.map(function (a) {
+      var u = saved[a.id];
+      return { id: a.id, label: a.label, icon: a.icon,
+               url: (u === undefined ? a.url : u) };
+    });
+  }
+  function saveUrls(apps) {
+    var m = {};
+    apps.forEach(function (a) { m[a.id] = a.url; });
+    try { localStorage.setItem("hub_urls", JSON.stringify(m)); } catch (e) {}
+  }
+
+  var apps = loadUrls();
+  var active = null;
+  try { active = localStorage.getItem("hub_active"); } catch (e) {}
+
+  // Build the views (lazy: iframe src is set only when a tab is first shown, so
+  // three mics / websockets / pollers don't all start at once) and tab bar.
+  function build() {
+    var views = $("views"); views.innerHTML = "";
+    var tabs = $("tabs"); tabs.innerHTML = "";
+    apps.forEach(function (a) {
+      if (a.url) {
+        var f = document.createElement("iframe");
+        f.className = "view"; f.id = "view-" + a.id;
+        f.setAttribute("allow", "microphone; autoplay; clipboard-write; clipboard-read; fullscreen");
+        f.dataset.src = a.url;   // real src set on first activation
+        views.appendChild(f);
+      } else {
+        var e = document.createElement("div");
+        e.className = "empty"; e.id = "view-" + a.id;
+        e.innerHTML = "<h2>" + a.icon + " " + a.label + "</h2>" +
+          "<p>No address set for this app yet. Open settings and paste its URL " +
+          "(for reMarkable, that's the Tailscale address of its bridge).</p>";
+        var b = document.createElement("button");
+        b.textContent = "Open settings";
+        b.onclick = function () { openSettings(true); };
+        e.appendChild(b);
+        views.appendChild(e);
+      }
+      var t = document.createElement("button");
+      t.id = "tab-" + a.id;
+      t.innerHTML = '<span class="ic">' + a.icon + '</span>' + a.label;
+      t.onclick = function () { show(a.id); };
+      tabs.appendChild(t);
+    });
+    var gear = document.createElement("button");
+    gear.className = "gear";
+    gear.innerHTML = '<span class="ic">⚙️</span>Settings';
+    gear.onclick = function () { openSettings(true); };
+    tabs.appendChild(gear);
+
+    // pick the active tab: saved one if still present, else the first
+    var ids = apps.map(function (a) { return a.id; });
+    if (ids.indexOf(active) < 0) active = ids[0];
+    show(active);
+  }
+
+  function show(id) {
+    active = id;
+    try { localStorage.setItem("hub_active", id); } catch (e) {}
+    apps.forEach(function (a) {
+      var v = $("view-" + a.id), t = $("tab-" + a.id);
+      var on = a.id === id;
+      if (v) {
+        // set iframe src on first show (lazy), then just toggle visibility
+        if (on && v.tagName === "IFRAME" && !v.src && v.dataset.src) v.src = v.dataset.src;
+        v.classList.toggle("active", on);
+      }
+      if (t) t.classList.toggle("sel", on);
+    });
+  }
+
+  // ---- settings ----
+  function openSettings(open) {
+    if (open) {
+      var wrap = $("settingsFields"); wrap.innerHTML = "";
+      apps.forEach(function (a) {
+        var lab = document.createElement("label");
+        lab.textContent = a.label + " URL";
+        var inp = document.createElement("input");
+        inp.id = "url-" + a.id; inp.value = a.url;
+        inp.autocapitalize = "off"; inp.spellcheck = false;
+        inp.placeholder = a.id === "remarkable" ? REMARKABLE_HINT : "https://…";
+        wrap.appendChild(lab); wrap.appendChild(inp);
+      });
+    }
+    $("settings").classList.toggle("open", open);
+  }
+  $("saveApps").onclick = function () {
+    apps.forEach(function (a) {
+      var v = ($("url-" + a.id).value || "").trim().replace(/\s+/g, "");
+      a.url = v;
+    });
+    saveUrls(apps);
+    openSettings(false);
+    build();   // rebuild tabs/views with the new URLs (fresh iframes)
+  };
+  $("closeSettings").onclick = function () { openSettings(false); };
+
+  build();
+})();
+</script>
+</body>
+</html>
