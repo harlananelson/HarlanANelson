@@ -456,6 +456,7 @@
     fd.append("audio", encodeWav16k(merged), "clip.wav");
     fd.append("session", cfg.session);
     fd.append("chat", "0");            // transcribe only — no AI reply per utterance
+    fd.append("save", "1");            // persist each utterance on the workstation
     fd.append("backend", cfg.backend);
     api("/api/transcribe", { method: "POST", body: fd })
       .then(function (r) { return r.json(); })
