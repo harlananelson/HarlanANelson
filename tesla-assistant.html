@@ -82,6 +82,15 @@
   }
   #talkBtn.rec { background: #c0392b; }
   #micText { font-size: 18px; color: #bbb; text-align: center; max-width: 480px; }
+  /* Continuous mode: the transcript is the point — give it the screen, drop the
+     big talk button, and compact the controls into a bar under it. */
+  body.continuous #transcript { display: flex; }
+  body.continuous #micPane { flex: 0 0 auto; padding: 10px 12px; gap: 10px; }
+  body.continuous #talkBtn { display: none; }
+  body.continuous #micText { display: none; }
+  /* live interim line (speech being captured / transcribed) */
+  .msg.interim { align-self: flex-start; background: #23303a; color: #9cc4e0;
+    font-style: italic; opacity: .9; }
   /* Settings */
   #settings {
     display: none; padding: 18px; background: #1b1b1b; border-top: 1px solid #333;
@@ -402,6 +411,17 @@
   var contTranscript = [];   // accumulated utterance text, for on-demand analysis
   function resetCvad() { cvad = { speaking: false, silenceMs: 0, frames: [], preRoll: [], total: 0 }; }
 
+  // A live line pinned to the bottom of the transcript so you can watch it work
+  // in real time: "hearing you…" while you speak, "transcribing…" after a pause.
+  function setInterim(text) {
+    var t = $("transcript"), el = $("interim");
+    if (!text) { if (el) el.parentNode.removeChild(el); return; }
+    if (!el) { el = document.createElement("div"); el.id = "interim"; el.className = "msg interim"; t.appendChild(el); }
+    else if (el !== t.lastChild) { t.appendChild(el); }   // keep it at the bottom
+    el.textContent = text;
+    t.scrollTop = t.scrollHeight;
+  }
+
   function downsampleTo16k(frame, rate) {
     if (rate === 16000) return frame;
     var ratio = rate / 16000, n = Math.floor(frame.length / ratio), out = new Float32Array(n);
@@ -431,6 +451,7 @@
     if (!frames.length || (total / 16000) * 1000 < CMIN_MS) return;   // too short = noise
     var merged = new Float32Array(total), off = 0;
     frames.forEach(function (f) { merged.set(f, off); off += f.length; });
+    setInterim("⏳ transcribing…");
     var fd = new FormData();
     fd.append("audio", encodeWav16k(merged), "clip.wav");
     fd.append("session", cfg.session);
@@ -439,6 +460,7 @@
     api("/api/transcribe", { method: "POST", body: fd })
       .then(function (r) { return r.json(); })
       .then(function (data) {
+        setInterim("");   // clear the live line; the final text takes its place
         // chat=0 emits no server event, so render it here (device-local transcript)
         if (data && data.text) {
           contTranscript.push(data.text);
@@ -446,7 +468,7 @@
           setStatus("Continuous transcription on — just talk.");
         }
       })
-      .catch(function (e) { setStatus("Transcribe error: " + e.message, true); });
+      .catch(function (e) { setInterim(""); setStatus("Transcribe error: " + e.message, true); });
   }
   // On-demand: send the accumulated transcript for a TEXT analysis (no audio,
   // and via a side session so it doesn't disturb the running transcript sync).
@@ -481,6 +503,7 @@
         cvad.speaking = true;
         cvad.frames = cvad.preRoll.slice();
         cvad.total = cvad.frames.reduce(function (a, f) { return a + f.length; }, 0);
+        setInterim("🎙 hearing you…");   // live feedback the moment you start
       }
       cvad.frames.push(frame); cvad.total += n; cvad.silenceMs = 0;
     } else if (cvad.speaking) {         // trailing silence
@@ -813,11 +836,13 @@
         if (handsFree) $("convoBtn").click();       // exclusive with hands-free
         continuousMode = !continuousMode;
         setContBtn();
+        document.body.classList.toggle("continuous", continuousMode);  // give transcript the screen
         if (continuousMode) {
           $("talkBtn").disabled = true;             // tap-to-talk is off in this mode
           startContinuous();
         } else {
           stopContinuous();
+          setInterim("");
           $("talkBtn").disabled = false;
           setStatus("Continuous transcription off.");
         }
