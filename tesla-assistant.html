@@ -135,9 +135,12 @@
 <div id="micPane">
   <button id="talkBtn">Tap to talk</button>
   <button id="convoBtn" class="secondary">🔁 Hands-free conversation: off</button>
-  <div id="micText">Tap to talk: tap once, speak, tap again to send. Or turn on
-    hands-free conversation — tap once and just talk; it detects when you stop,
-    speaks the reply, then listens again. Tap the hands-free button to end.</div>
+  <button id="contBtn" class="secondary">⏺ Continuous transcription: off</button>
+  <button id="analyzeBtn" class="secondary" style="display:none">🧠 Analyze transcript</button>
+  <div id="micText">Tap to talk: tap once, speak, tap again to send. Hands-free:
+    tap once and just talk; it replies out loud, then listens again. Continuous:
+    always-on listening that just keeps transcribing — no spoken replies, nothing
+    interrupts the transcript; tap 🧠 when you want a text analysis of it.</div>
 </div>
 
 <div id="composer">
@@ -186,6 +189,9 @@
   // Hands-free conversation: tap once, then talk↔listen loops on its own.
   var handsFree = false;      // whether the loop is active
   var awaitingReply = 0;      // timestamp we sent a clip and expect a spoken reply
+  // Continuous transcription: always-on listening, VAD-segmented, never speaks —
+  // the transcript just keeps filling as you talk (like the translator app).
+  var continuousMode = false;
   // After a spoken reply finishes, resume listening (the other half of the loop).
   audioEl.addEventListener("ended", function () {
     awaitingReply = 0;
@@ -252,7 +258,7 @@
   // ---- spoken replies (server TTS -> <audio>; tap on the sound button
   //      doubles as the autoplay-unlock gesture) ----
   function speak(text) {
-    if (!soundOn) return;
+    if (!soundOn || continuousMode) return;   // continuous mode is text-only
     api("/api/tts", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -384,6 +390,148 @@
       }, 150);
     } catch (e) { /* auto-stop unavailable; manual stop still works */ }
   }
+
+  // ---- continuous transcription (always-on, VAD-segmented, text-only) ----
+  // Same approach as the translator app: keep one mic stream open, run a
+  // ScriptProcessor VAD over it (pre-roll so the first word isn't clipped,
+  // ~1.4s silence hangover to end an utterance), and POST each finished
+  // utterance to /api/transcribe as a 16 kHz WAV. Never speaks; never pauses.
+  var contStream = null, contCtx = null, contProc = null, contSrc = null, contRate = 16000;
+  var CFRAME = 4096, CHANG_MS = 1400, CMIN_MS = 350, CMAX_MS = 22000, CPREROLL = 4;
+  var cvad = null;
+  var contTranscript = [];   // accumulated utterance text, for on-demand analysis
+  function resetCvad() { cvad = { speaking: false, silenceMs: 0, frames: [], preRoll: [], total: 0 }; }
+
+  function downsampleTo16k(frame, rate) {
+    if (rate === 16000) return frame;
+    var ratio = rate / 16000, n = Math.floor(frame.length / ratio), out = new Float32Array(n);
+    for (var i = 0; i < n; i++) {
+      var idx = i * ratio, i0 = Math.floor(idx), frac = idx - i0;
+      var s1 = frame[i0], s2 = frame[Math.min(i0 + 1, frame.length - 1)];
+      out[i] = s1 + (s2 - s1) * frac;
+    }
+    return out;
+  }
+  function encodeWav16k(samples) {   // Float32 mono @16k -> 16-bit PCM WAV blob
+    var n = samples.length, buf = new ArrayBuffer(44 + n * 2), v = new DataView(buf);
+    function str(off, s) { for (var i = 0; i < s.length; i++) v.setUint8(off + i, s.charCodeAt(i)); }
+    str(0, "RIFF"); v.setUint32(4, 36 + n * 2, true); str(8, "WAVE"); str(12, "fmt ");
+    v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+    v.setUint32(24, 16000, true); v.setUint32(28, 32000, true); v.setUint16(32, 2, true);
+    v.setUint16(34, 16, true); str(36, "data"); v.setUint32(40, n * 2, true);
+    for (var i = 0; i < n; i++) {
+      var s = Math.max(-1, Math.min(1, samples[i]));
+      v.setInt16(44 + i * 2, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
+    }
+    return new Blob([buf], { type: "audio/wav" });
+  }
+  function contEndUtterance() {
+    var frames = cvad.frames, total = cvad.total;
+    resetCvad();
+    if (!frames.length || (total / 16000) * 1000 < CMIN_MS) return;   // too short = noise
+    var merged = new Float32Array(total), off = 0;
+    frames.forEach(function (f) { merged.set(f, off); off += f.length; });
+    var fd = new FormData();
+    fd.append("audio", encodeWav16k(merged), "clip.wav");
+    fd.append("session", cfg.session);
+    fd.append("chat", "0");            // transcribe only — no AI reply per utterance
+    fd.append("backend", cfg.backend);
+    api("/api/transcribe", { method: "POST", body: fd })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        // chat=0 emits no server event, so render it here (device-local transcript)
+        if (data && data.text) {
+          contTranscript.push(data.text);
+          addMsg("user", data.text);
+          setStatus("Continuous transcription on — just talk.");
+        }
+      })
+      .catch(function (e) { setStatus("Transcribe error: " + e.message, true); });
+  }
+  // On-demand: send the accumulated transcript for a TEXT analysis (no audio,
+  // and via a side session so it doesn't disturb the running transcript sync).
+  function analyzeTranscript() {
+    var text = contTranscript.join(" ").trim();
+    if (!text) { setStatus("Nothing transcribed yet.", true); return; }
+    setStatus("Analyzing transcript…");
+    $("analyzeBtn").disabled = true;
+    api("/api/chat", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        session: cfg.session + "-analyze",
+        message: "Analyze this transcript and respond with text only:\n\n" + text,
+        backend: cfg.backend
+      })
+    }).then(function (r) { return r.json(); })
+      .then(function (data) {
+        addMsg("assistant", data.reply || "(no analysis returned)", "analysis");
+        setStatus("Continuous transcription on — just talk.");
+      })
+      .catch(function (e) { setStatus("Analyze error: " + e.message, true); })
+      .then(function () { $("analyzeBtn").disabled = false; });
+  }
+  function contOnAudio(e) {
+    var input = e.inputBuffer.getChannelData(0);
+    var frame = downsampleTo16k(new Float32Array(input), contRate);
+    var n = frame.length, sum = 0, i;
+    for (i = 0; i < n; i++) sum += frame[i] * frame[i];
+    var rms = Math.sqrt(sum / n), frameMs = (n / 16000) * 1000;
+    if (rms >= 0.02) {                 // speaking
+      if (!cvad.speaking) {
+        cvad.speaking = true;
+        cvad.frames = cvad.preRoll.slice();
+        cvad.total = cvad.frames.reduce(function (a, f) { return a + f.length; }, 0);
+      }
+      cvad.frames.push(frame); cvad.total += n; cvad.silenceMs = 0;
+    } else if (cvad.speaking) {         // trailing silence
+      cvad.frames.push(frame); cvad.total += n; cvad.silenceMs += frameMs;
+      if (cvad.silenceMs >= CHANG_MS) { contEndUtterance(); return; }
+    } else {                           // pre-roll ring buffer while quiet
+      cvad.preRoll.push(frame);
+      if (cvad.preRoll.length > CPREROLL) cvad.preRoll.shift();
+    }
+    if (cvad.speaking && (cvad.total / 16000) * 1000 >= CMAX_MS) contEndUtterance();
+  }
+  function startContinuous() {
+    navigator.mediaDevices.getUserMedia({
+      audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 }
+    }).then(function (stream) {
+      contStream = stream;
+      var AC = window.AudioContext || window.webkitAudioContext;
+      contCtx = new AC();
+      if (contCtx.resume) contCtx.resume();   // iOS starts contexts suspended
+      contRate = contCtx.sampleRate;
+      contSrc = contCtx.createMediaStreamSource(stream);
+      contProc = contCtx.createScriptProcessor(CFRAME, 1, 1);
+      resetCvad();
+      contProc.onaudioprocess = contOnAudio;
+      contSrc.connect(contProc);
+      contProc.connect(contCtx.destination);   // required for onaudioprocess to fire
+      setStatus("Continuous transcription on — just talk. No spoken replies.");
+    }).catch(function (e) {
+      continuousMode = false; setContBtn();
+      setStatus("Mic error: " + (e && e.message || e), true);
+    });
+  }
+  function stopContinuous() {
+    if (cvad && cvad.speaking) contEndUtterance();   // flush the last utterance
+    if (contProc) { try { contProc.disconnect(); } catch (e) {} contProc.onaudioprocess = null; }
+    if (contSrc) { try { contSrc.disconnect(); } catch (e) {} }
+    if (contStream) contStream.getTracks().forEach(function (t) { t.stop(); });
+    if (contCtx) { try { contCtx.close(); } catch (e) {} }
+    contStream = contCtx = contProc = contSrc = null;
+  }
+  function setContBtn() {
+    var b = $("contBtn");
+    if (b) {
+      b.textContent = continuousMode ? "⏹ Continuous transcription: on"
+                                     : "⏺ Continuous transcription: off";
+      b.className = continuousMode ? "" : "secondary";
+    }
+    var a = $("analyzeBtn");
+    if (a) a.style.display = continuousMode ? "inline-block" : "none";
+  }
+
   function startRec() {
     if (micStarting) return;   // tap while getUserMedia is pending would open
     micStarting = true;        // a second stream and leak the first (mic stays hot)
@@ -647,6 +795,7 @@
       });
       // Hands-free conversation: tap once, then it loops talk↔listen on its own.
       $("convoBtn").addEventListener("click", function () {
+        if (continuousMode) $("contBtn").click();   // the two modes are exclusive
         handsFree = !handsFree;
         setConvoBtn();
         if (handsFree) {
@@ -659,6 +808,21 @@
           $("talkBtn").className = ""; $("talkBtn").textContent = "Tap to talk";
         }
       });
+      // Continuous transcription: always-on, VAD-segmented, text-only.
+      $("contBtn").addEventListener("click", function () {
+        if (handsFree) $("convoBtn").click();       // exclusive with hands-free
+        continuousMode = !continuousMode;
+        setContBtn();
+        if (continuousMode) {
+          $("talkBtn").disabled = true;             // tap-to-talk is off in this mode
+          startContinuous();
+        } else {
+          stopContinuous();
+          $("talkBtn").disabled = false;
+          setStatus("Continuous transcription off.");
+        }
+      });
+      $("analyzeBtn").addEventListener("click", analyzeTranscript);
       // Reply never arrived (backend error, no audio) — don't wait forever.
       setInterval(function () {
         if (handsFree && awaitingReply && Date.now() - awaitingReply > 90000) {
