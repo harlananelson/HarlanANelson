@@ -214,6 +214,25 @@
   }
   function setConn(ok) { $("connDot").className = "dot " + (ok ? "ok" : "bad"); }
 
+  // Ship browser-side errors to the bridge so they're visible on the
+  // workstation (client-errors.log) — the car/phone have no dev console.
+  function reportError(source, message) {
+    try {
+      if (!cfg.bridge || !cfg.token) return;
+      fetch(cfg.bridge + "/api/clientlog", {
+        method: "POST",
+        headers: { "Authorization": "Bearer " + cfg.token, "Content-Type": "application/json" },
+        body: JSON.stringify({ source: source, message: String(message).slice(0, 900), ua: navigator.userAgent })
+      }).catch(function () {});
+    } catch (e) {}
+  }
+  window.addEventListener("error", function (e) {
+    reportError("tesla-assistant", (e.message || "error") + " @ " + (e.filename || "") + ":" + (e.lineno || 0));
+  });
+  window.addEventListener("unhandledrejection", function (e) {
+    var r = e.reason; reportError("tesla-assistant", "unhandledrejection: " + ((r && r.message) || r || ""));
+  });
+
   function api(path, opts) {
     opts = opts || {};
     if (!cfg.bridge) return Promise.reject(new Error("No Bridge URL set — open Settings"));
@@ -311,7 +330,10 @@
           setStatus("Connected — AI backend: " + (data.backend || "?"));
         }
       })
-      .catch(function (e) { setConn(false); setStatus(e.message, true); });
+      .catch(function (e) {
+        setConn(false); setStatus(e.message, true);
+        reportError("tesla-assistant/poll", e.message);   // e.g. bad token, HTTP 5xx
+      });
   }
 
   // ---- typed input (works everywhere, the only console-native input) ----

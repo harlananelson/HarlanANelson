@@ -73,10 +73,18 @@
   }
   #settings .row { display: flex; gap: 12px; margin-top: 20px; }
   #settings .row button.secondary { background: #333; }
+  /* error banner (the hub had no error surface before) */
+  #banner {
+    display: none; background: #4a1f1c; color: #ffb4a8; font-size: 14px;
+    padding: 10px 14px; line-height: 1.4; white-space: pre-wrap; cursor: pointer;
+    border-bottom: 1px solid #6b2a25;
+  }
+  #banner.show { display: block; }
 </style>
 </head>
 <body>
 
+<div id="banner"></div>
 <div id="views"></div>
 
 <div id="settings">
@@ -97,6 +105,40 @@
 "use strict";
 (function () {
   var $ = function (id) { return document.getElementById(id); };
+
+  // ---- error visibility -------------------------------------------------
+  // The hub had no error surface. Show errors in a banner AND ship them to the
+  // bridge's /api/clientlog (same origin as the assistant page, so the bridge
+  // URL + token it saved are in our localStorage) so they're readable on the
+  // workstation in ~/.config/tesla-bridge/client-errors.log.
+  function reportError(source, message) {
+    try {
+      var bridge = (localStorage.getItem("tb_bridge") || "").replace(/\/+$/, "");
+      var token = localStorage.getItem("tb_token") || "";
+      if (bridge && token) {
+        fetch(bridge + "/api/clientlog", {
+          method: "POST",
+          headers: { "Authorization": "Bearer " + token, "Content-Type": "application/json" },
+          body: JSON.stringify({ source: source, message: String(message).slice(0, 900), ua: navigator.userAgent })
+        }).catch(function () {});
+      }
+    } catch (e) {}
+  }
+  function showBanner(text) {
+    var b = $("banner");
+    b.textContent = "⚠ " + text + "  (tap to dismiss)";
+    b.className = "show";
+  }
+  var banner = document.getElementById("banner");
+  if (banner) banner.onclick = function () { banner.className = ""; };
+  window.addEventListener("error", function (e) {
+    var m = (e.message || "error") + " @ " + (e.filename || "") + ":" + (e.lineno || 0);
+    reportError("apps.html", m); showBanner(m);
+  });
+  window.addEventListener("unhandledrejection", function (e) {
+    var r = e.reason; var m = "unhandledrejection: " + ((r && r.message) || r || "");
+    reportError("apps.html", m); showBanner(m);
+  });
 
   // Each app is the EXISTING page in an iframe — no backend change. URLs are
   // editable + persisted so this doubles as a launcher for anything you add.
@@ -169,6 +211,24 @@
     show(active);
   }
 
+  // Report a tab that fails to load or never finishes (e.g. its tailnet
+  // backend is unreachable). Cross-origin frames won't reveal their internal
+  // error, but "did it load at all" is the signal we need.
+  function watchIframeLoad(frame, app) {
+    var done = false;
+    var timer = setTimeout(function () {
+      if (done) return;
+      var m = app.label + " tab did not load (" + app.url + ") — is Tailscale on?";
+      reportError("apps.html/" + app.id, m); showBanner(m);
+    }, 12000);
+    frame.addEventListener("load", function () { done = true; clearTimeout(timer); });
+    frame.addEventListener("error", function () {
+      done = true; clearTimeout(timer);
+      var m = app.label + " tab failed to load (" + app.url + ")";
+      reportError("apps.html/" + app.id, m); showBanner(m);
+    });
+  }
+
   function show(id) {
     active = id;
     try { localStorage.setItem("hub_active", id); } catch (e) {}
@@ -177,7 +237,10 @@
       var on = a.id === id;
       if (v) {
         // set iframe src on first show (lazy), then just toggle visibility
-        if (on && v.tagName === "IFRAME" && !v.src && v.dataset.src) v.src = v.dataset.src;
+        if (on && v.tagName === "IFRAME" && !v.src && v.dataset.src) {
+          watchIframeLoad(v, a);
+          v.src = v.dataset.src;
+        }
         v.classList.toggle("active", on);
       }
       if (t) t.classList.toggle("sel", on);
