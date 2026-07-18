@@ -5,11 +5,18 @@ workstation. It's a thin shell: a bottom tab bar where each tab loads an
 existing app page in an iframe — **no backend change**. Tab URLs are editable
 and stored per-browser, so it also works as a launcher for anything added later.
 
-| Tab | Loads | Backend it talks to |
-|---|---|---|
-| 🤖 Assistant | `tesla-assistant.html` (this site) | tesla-bridge, **tailnet-only** `…ts.net` |
-| 🌐 Translate | `live-translator.html` (this site) | home-GPU translator over **`wss://…`** |
-| 📝 reMarkable | its own bridge UI (set the URL in ⚙) | reMarkable phone-bridge, **tailnet `:9443`** |
+| Tab | Loads | Backend it talks to | Server must be running |
+|---|---|---|---|
+| 🤖 Assistant | `tesla-assistant.html` (this site) | tesla-bridge, **tailnet-only** `…ts.net` | `bin/serve` (tmux `tesla-bridge`) |
+| 🌐 Translate | `live-translator.html` (this site) | home-GPU translator, **`wss://…:8443/ws`** | `~/projects/biblestudy/server/run.sh` (tmux `translator-gpu`) |
+| 📝 reMarkable | its own bridge UI (pre-filled `:9443`) | reMarkable phone-bridge, **tailnet `:9443`** | remarkable phone-bridge (`:8787`) |
+
+**Every tab's backend is on the tailnet and must be running** (none auto-start
+on boot). The Translate tab's GPU server (large-v3 on the 3090 + gemma
+translation) is launched with `cd ~/projects/biblestudy && bash server/run.sh`
+— it serves `wss://<host>.ts.net:8443/ws` directly with the tailnet TLS cert
+(NOT behind `tailscale serve`). As of 2026-07-18 it's the one confirmed-working
+CUDA whisper on this box (see the tesla-bridge README's GPU status).
 
 Install: open `harlananelson.com/apps.html` on the device → **Add to Home
 Screen** → a full-screen "My Apps" icon. Tabs lazy-load (a tab's app doesn't
