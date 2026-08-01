@@ -73,7 +73,7 @@
   var ac = null, micStream = null, srcNode = null, proc = null, gain = null;
   var capturing = false, altActive = false, srcRate = 48000;
   var vState = 'idle', frames = [], speechMs = 0, silenceMs = 0, totalMs = 0;
-  var FRAME = 4096, THRESH = 0.012, SIL_END = 900, MAX_MS = 15000, NOSPEECH_MS = 8000, MIN_SPEECH = 250;
+  var FRAME = 4096, THRESH = 0.012, SIL_END = 2000, MAX_MS = 25000, NOSPEECH_MS = 8000, MIN_SPEECH = 250;
 
   function startCapture() {
     altActive = true;
