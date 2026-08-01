@@ -1,3 +1,18 @@
+# Drill exercise phrase review — 2026-08-01
+
+## All four languages at a glance
+
+| Drill | Reviewed | Flagged | Dominant systemic issue |
+|---|---|---|---|
+| Spanish | 9,100 | 2,555 (28%) | see full analysis below |
+| English | 531 | 43 (8%) | sentence-final "usually/always" (×18); "say the truth" for "tell the truth" (×9); stative verbs in continuous/daily frames ("she was being at home", "he knows the answer every day") |
+| Japanese | 312 | 264 (85% of transitive items; kana itself flawless) | romaji fuses object+を into one word ("ringoo/pano/shigotoo" → should be "ringo o", "pan o", "shigoto o") in contexto+pista of all 264 transitive exercises |
+| Swahili | 495 | 22 (4%) | missing obligatory object marker with definite human objects ("ninasaidia mama" → "ninamsaidia mama"); all other morphology flawless |
+
+English/Japanese/Swahili are each ONE mechanical fix away from clean;
+findings live in `findings/{english,japanese,swahili}.json`. The Spanish
+set needs the deeper regeneration described below.
+
 # Spanish exercise phrase review — 2026-08-01
 
 Ten Sonnet reviewer agents (one per tense category) read all **9,100**

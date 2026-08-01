@@ -1,0 +1,346 @@
+[
+  {
+    "id": "be-past_continuous-6",
+    "field": "respuesta",
+    "text": "we were being happy at 5 pm yesterday.",
+    "cat": "unnat",
+    "fix": "we were happy at 5 pm yesterday.",
+    "note": "be+continuous doesn't fit a plain state like happy"
+  },
+  {
+    "id": "be-past_continuous-7",
+    "field": "respuesta",
+    "text": "they were being busy all morning yesterday.",
+    "cat": "unnat",
+    "fix": "they were busy all morning yesterday.",
+    "note": "be+continuous doesn't fit a plain state like busy"
+  },
+  {
+    "id": "be-past_continuous-8",
+    "field": "respuesta",
+    "text": "she was being at home when the phone rang.",
+    "cat": "gram",
+    "fix": "she was at home when the phone rang.",
+    "note": "'being' cannot take a location complement like at home"
+  },
+  {
+    "id": "say-simple_present-114",
+    "field": "respuesta",
+    "text": "they say something important usually.",
+    "cat": "unnat",
+    "fix": "they usually say something important.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "say-simple_present-115",
+    "field": "respuesta",
+    "text": "he says hello usually.",
+    "cat": "unnat",
+    "fix": "he usually says hello.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "get-simple_present-144",
+    "field": "respuesta",
+    "text": "we get the answer usually.",
+    "cat": "unnat",
+    "fix": "we usually get the answer.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "get-simple_present-146",
+    "field": "respuesta",
+    "text": "I get home usually.",
+    "cat": "unnat",
+    "fix": "I usually get home.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "make-simple_present-174",
+    "field": "respuesta",
+    "text": "you make a plan usually.",
+    "cat": "unnat",
+    "fix": "you usually make a plan.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "make-simple_present-176",
+    "field": "respuesta",
+    "text": "you make a cake usually.",
+    "cat": "unnat",
+    "fix": "you usually make a cake.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "take-simple_present-243",
+    "field": "respuesta",
+    "text": "we take a walk usually.",
+    "cat": "unnat",
+    "fix": "we usually take a walk.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "see-simple_present-272",
+    "field": "respuesta",
+    "text": "you see the movie always.",
+    "cat": "unnat",
+    "fix": "you always see the movie.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "want-simple_present-327",
+    "field": "respuesta",
+    "text": "they want a new car always.",
+    "cat": "unnat",
+    "fix": "they always want a new car.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "give-simple_present-343",
+    "field": "respuesta",
+    "text": "you give directions usually.",
+    "cat": "unnat",
+    "fix": "you usually give directions.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "tell-simple_present-372",
+    "field": "respuesta",
+    "text": "she tells him the answer always.",
+    "cat": "unnat",
+    "fix": "she always tells him the answer.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "work-simple_present-398",
+    "field": "respuesta",
+    "text": "you work from home always.",
+    "cat": "unnat",
+    "fix": "you always work from home.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "work-simple_present-399",
+    "field": "respuesta",
+    "text": "they work at the office always.",
+    "cat": "unnat",
+    "fix": "they always work at the office.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "find-simple_present-427",
+    "field": "respuesta",
+    "text": "I find the right answer usually.",
+    "cat": "unnat",
+    "fix": "I usually find the right answer.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "leave-simple_present-451",
+    "field": "respuesta",
+    "text": "you leave the house usually.",
+    "cat": "unnat",
+    "fix": "you usually leave the house.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "run-simple_present-478",
+    "field": "respuesta",
+    "text": "they run every morning usually.",
+    "cat": "unnat",
+    "fix": "they usually run every morning.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "run-simple_present-480",
+    "field": "respuesta",
+    "text": "she runs in the park always.",
+    "cat": "unnat",
+    "fix": "she always runs in the park.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "walk-simple_present-506",
+    "field": "respuesta",
+    "text": "I walk in the park always.",
+    "cat": "unnat",
+    "fix": "I always walk in the park.",
+    "note": "usually/always go mid-sentence, not sentence-final, in natural speech"
+  },
+  {
+    "id": "say-present_continuous-116",
+    "field": "respuesta",
+    "text": "they are saying the truth at the moment.",
+    "cat": "unnat",
+    "fix": "they are telling the truth at the moment.",
+    "note": "native speakers say 'tell the truth', not 'say the truth'"
+  },
+  {
+    "id": "say-simple_past-120",
+    "field": "respuesta",
+    "text": "he said the truth last month.",
+    "cat": "unnat",
+    "fix": "he told the truth last month.",
+    "note": "native speakers say 'tell the truth', not 'say the truth'"
+  },
+  {
+    "id": "say-past_continuous-122",
+    "field": "respuesta",
+    "text": "he was saying the truth when the phone rang.",
+    "cat": "unnat",
+    "fix": "he was telling the truth when the phone rang.",
+    "note": "native speakers say 'tell the truth', not 'say the truth'"
+  },
+  {
+    "id": "say-past_continuous-123",
+    "field": "respuesta",
+    "text": "he was saying the truth at 5 pm yesterday.",
+    "cat": "unnat",
+    "fix": "he was telling the truth at 5 pm yesterday.",
+    "note": "native speakers say 'tell the truth', not 'say the truth'"
+  },
+  {
+    "id": "say-past_perfect-128",
+    "field": "respuesta",
+    "text": "she had already said the truth.",
+    "cat": "unnat",
+    "fix": "she had already told the truth.",
+    "note": "native speakers say 'tell the truth', not 'say the truth'"
+  },
+  {
+    "id": "say-future_continuous-132",
+    "field": "respuesta",
+    "text": "you will be saying the truth all day tomorrow.",
+    "cat": "unnat",
+    "fix": "you will be telling the truth all day tomorrow.",
+    "note": "native speakers say 'tell the truth', not 'say the truth'"
+  },
+  {
+    "id": "say-used_to-137",
+    "field": "respuesta",
+    "text": "we used to say the truth when I was young.",
+    "cat": "unnat",
+    "fix": "we used to tell the truth when I was young.",
+    "note": "native speakers say 'tell the truth', not 'say the truth'"
+  },
+  {
+    "id": "say-used_to-138",
+    "field": "respuesta",
+    "text": "he used to say the truth years ago.",
+    "cat": "unnat",
+    "fix": "he used to tell the truth years ago.",
+    "note": "native speakers say 'tell the truth', not 'say the truth'"
+  },
+  {
+    "id": "say-present_perfect_cont-140",
+    "field": "respuesta",
+    "text": "they have been saying the truth since last year.",
+    "cat": "unnat",
+    "fix": "they have been telling the truth since last year.",
+    "note": "native speakers say 'tell the truth', not 'say the truth'"
+  },
+  {
+    "id": "know-simple_present-200",
+    "field": "respuesta",
+    "text": "he knows the answer every day.",
+    "cat": "sem",
+    "fix": "he knows the answer.",
+    "note": "knowledge is a stable state, not repeated daily like a habitual action"
+  },
+  {
+    "id": "know-simple_present-201",
+    "field": "respuesta",
+    "text": "she knows the truth every day.",
+    "cat": "sem",
+    "fix": "she knows the truth.",
+    "note": "knowledge is a stable state, not repeated daily like a habitual action"
+  },
+  {
+    "id": "know-simple_present-202",
+    "field": "respuesta",
+    "text": "we know the truth every morning.",
+    "cat": "sem",
+    "fix": "we know the truth.",
+    "note": "knowledge is a stable state, not repeated daily like a habitual action"
+  },
+  {
+    "id": "know-present_perfect-205",
+    "field": "respuesta",
+    "text": "she has just known the rules.",
+    "cat": "sem",
+    "fix": "she has just learned the rules.",
+    "note": "'know' has no inception event; 'just known' is not idiomatic"
+  },
+  {
+    "id": "see-present_continuous-274",
+    "field": "respuesta",
+    "text": "I am seeing the sunset today.",
+    "cat": "unnat",
+    "fix": "I am watching the sunset today.",
+    "note": "'see' as bare perception is stative; use 'watch' in continuous forms"
+  },
+  {
+    "id": "see-present_continuous-275",
+    "field": "respuesta",
+    "text": "you are seeing the movie right now.",
+    "cat": "unnat",
+    "fix": "you are watching the movie right now.",
+    "note": "'see' as bare perception is stative; use 'watch' in continuous forms"
+  },
+  {
+    "id": "see-past_continuous-278",
+    "field": "respuesta",
+    "text": "they were seeing the sunset at that moment.",
+    "cat": "unnat",
+    "fix": "they were watching the sunset at that moment.",
+    "note": "'see' as bare perception is stative; use 'watch' in continuous forms"
+  },
+  {
+    "id": "see-future_continuous-287",
+    "field": "respuesta",
+    "text": "you will be seeing the movie all day tomorrow.",
+    "cat": "unnat",
+    "fix": "you will be watching the movie all day tomorrow.",
+    "note": "'see' as bare perception is stative; use 'watch' in continuous forms"
+  },
+  {
+    "id": "see-present_perfect_cont-295",
+    "field": "respuesta",
+    "text": "he has been seeing the movie all day.",
+    "cat": "unnat",
+    "fix": "he has been watching the movie all day.",
+    "note": "'see' as bare perception is stative; use 'watch' in continuous forms"
+  },
+  {
+    "id": "see-past_perfect_cont-297",
+    "field": "respuesta",
+    "text": "we had been seeing the movie for a long time.",
+    "cat": "unnat",
+    "fix": "we had been watching the movie for a long time.",
+    "note": "'see' as bare perception is stative; use 'watch' in continuous forms"
+  },
+  {
+    "id": "see-past_continuous-279",
+    "field": "respuesta",
+    "text": "they were seeing her friends at that moment.",
+    "cat": "sem",
+    "fix": "they were meeting her friends at that moment.",
+    "note": "'seeing her friends' reads as dating, nonsensical for a plural group"
+  },
+  {
+    "id": "run-simple_present-478",
+    "field": "contexto",
+    "text": "usually, every morning",
+    "cat": "ctx",
+    "fix": "every morning",
+    "note": "usually and every morning are redundant frequency markers stacked together"
+  },
+  {
+    "id": "run-present_continuous-482",
+    "field": "contexto",
+    "text": "today, every morning",
+    "cat": "ctx",
+    "fix": "this morning",
+    "note": "habitual 'every morning' contradicts present continuous 'today' framing"
+  }
+]

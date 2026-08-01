@@ -1,0 +1,4226 @@
+[
+  {
+    "id": "taberu-masu-0",
+    "field": "contexto",
+    "text": "ringoo taberu",
+    "cat": "ctx",
+    "fix": "ringo o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-masu-0",
+    "field": "pista",
+    "text": "ringoo tabemasu",
+    "cat": "ctx",
+    "fix": "ringo o tabemasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-masu-1",
+    "field": "contexto",
+    "text": "pano taberu",
+    "cat": "ctx",
+    "fix": "pan o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-masu-1",
+    "field": "pista",
+    "text": "pano tabemasu",
+    "cat": "ctx",
+    "fix": "pan o tabemasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-masu-2",
+    "field": "contexto",
+    "text": "keekio taberu",
+    "cat": "ctx",
+    "fix": "keeki o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-masu-2",
+    "field": "pista",
+    "text": "keekio tabemasu",
+    "cat": "ctx",
+    "fix": "keeki o tabemasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-masen-3",
+    "field": "contexto",
+    "text": "pano taberu",
+    "cat": "ctx",
+    "fix": "pan o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-masen-3",
+    "field": "pista",
+    "text": "pano tabemasen",
+    "cat": "ctx",
+    "fix": "pan o tabemasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-masen-4",
+    "field": "contexto",
+    "text": "ringoo taberu",
+    "cat": "ctx",
+    "fix": "ringo o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-masen-4",
+    "field": "pista",
+    "text": "ringoo tabemasen",
+    "cat": "ctx",
+    "fix": "ringo o tabemasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-masen-5",
+    "field": "contexto",
+    "text": "keekio taberu",
+    "cat": "ctx",
+    "fix": "keeki o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-masen-5",
+    "field": "pista",
+    "text": "keekio tabemasen",
+    "cat": "ctx",
+    "fix": "keeki o tabemasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-mashita-6",
+    "field": "contexto",
+    "text": "pano taberu",
+    "cat": "ctx",
+    "fix": "pan o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-mashita-6",
+    "field": "pista",
+    "text": "pano tabemashita",
+    "cat": "ctx",
+    "fix": "pan o tabemashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-mashita-7",
+    "field": "contexto",
+    "text": "ringoo taberu",
+    "cat": "ctx",
+    "fix": "ringo o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-mashita-7",
+    "field": "pista",
+    "text": "ringoo tabemashita",
+    "cat": "ctx",
+    "fix": "ringo o tabemashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-mashita-8",
+    "field": "contexto",
+    "text": "keekio taberu",
+    "cat": "ctx",
+    "fix": "keeki o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-mashita-8",
+    "field": "pista",
+    "text": "keekio tabemashita",
+    "cat": "ctx",
+    "fix": "keeki o tabemashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-masen_deshita-9",
+    "field": "contexto",
+    "text": "pano taberu",
+    "cat": "ctx",
+    "fix": "pan o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-masen_deshita-9",
+    "field": "pista",
+    "text": "pano tabemasendeshita",
+    "cat": "ctx",
+    "fix": "pan o tabemasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-masen_deshita-10",
+    "field": "contexto",
+    "text": "keekio taberu",
+    "cat": "ctx",
+    "fix": "keeki o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-masen_deshita-10",
+    "field": "pista",
+    "text": "keekio tabemasendeshita",
+    "cat": "ctx",
+    "fix": "keeki o tabemasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-masen_deshita-11",
+    "field": "contexto",
+    "text": "ringoo taberu",
+    "cat": "ctx",
+    "fix": "ringo o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-masen_deshita-11",
+    "field": "pista",
+    "text": "ringoo tabemasendeshita",
+    "cat": "ctx",
+    "fix": "ringo o tabemasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-te-12",
+    "field": "contexto",
+    "text": "keekio taberu",
+    "cat": "ctx",
+    "fix": "keeki o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-te-12",
+    "field": "pista",
+    "text": "keekio tabete",
+    "cat": "ctx",
+    "fix": "keeki o tabete",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-te-13",
+    "field": "contexto",
+    "text": "pano taberu",
+    "cat": "ctx",
+    "fix": "pan o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-te-13",
+    "field": "pista",
+    "text": "pano tabete",
+    "cat": "ctx",
+    "fix": "pan o tabete",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-te-14",
+    "field": "contexto",
+    "text": "ringoo taberu",
+    "cat": "ctx",
+    "fix": "ringo o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-te-14",
+    "field": "pista",
+    "text": "ringoo tabete",
+    "cat": "ctx",
+    "fix": "ringo o tabete",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-plain-15",
+    "field": "contexto",
+    "text": "keekio taberu",
+    "cat": "ctx",
+    "fix": "keeki o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-plain-15",
+    "field": "pista",
+    "text": "keekio taberu",
+    "cat": "ctx",
+    "fix": "keeki o taberu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-plain-16",
+    "field": "contexto",
+    "text": "pano taberu",
+    "cat": "ctx",
+    "fix": "pan o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-plain-16",
+    "field": "pista",
+    "text": "pano taberu",
+    "cat": "ctx",
+    "fix": "pan o taberu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-plain-17",
+    "field": "contexto",
+    "text": "ringoo taberu",
+    "cat": "ctx",
+    "fix": "ringo o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-plain-17",
+    "field": "pista",
+    "text": "ringoo taberu",
+    "cat": "ctx",
+    "fix": "ringo o taberu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-nai-18",
+    "field": "contexto",
+    "text": "keekio taberu",
+    "cat": "ctx",
+    "fix": "keeki o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-nai-18",
+    "field": "pista",
+    "text": "keekio tabenai",
+    "cat": "ctx",
+    "fix": "keeki o tabenai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-nai-19",
+    "field": "contexto",
+    "text": "pano taberu",
+    "cat": "ctx",
+    "fix": "pan o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-nai-19",
+    "field": "pista",
+    "text": "pano tabenai",
+    "cat": "ctx",
+    "fix": "pan o tabenai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-nai-20",
+    "field": "contexto",
+    "text": "ringoo taberu",
+    "cat": "ctx",
+    "fix": "ringo o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-nai-20",
+    "field": "pista",
+    "text": "ringoo tabenai",
+    "cat": "ctx",
+    "fix": "ringo o tabenai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-ta-21",
+    "field": "contexto",
+    "text": "keekio taberu",
+    "cat": "ctx",
+    "fix": "keeki o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-ta-21",
+    "field": "pista",
+    "text": "keekio tabeta",
+    "cat": "ctx",
+    "fix": "keeki o tabeta",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-ta-22",
+    "field": "contexto",
+    "text": "ringoo taberu",
+    "cat": "ctx",
+    "fix": "ringo o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-ta-22",
+    "field": "pista",
+    "text": "ringoo tabeta",
+    "cat": "ctx",
+    "fix": "ringo o tabeta",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "taberu-ta-23",
+    "field": "contexto",
+    "text": "pano taberu",
+    "cat": "ctx",
+    "fix": "pan o taberu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "taberu-ta-23",
+    "field": "pista",
+    "text": "pano tabeta",
+    "cat": "ctx",
+    "fix": "pan o tabeta",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-masu-24",
+    "field": "contexto",
+    "text": "eigao miru",
+    "cat": "ctx",
+    "fix": "eiga o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-masu-24",
+    "field": "pista",
+    "text": "eigao mimasu",
+    "cat": "ctx",
+    "fix": "eiga o mimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-masu-25",
+    "field": "contexto",
+    "text": "terebio miru",
+    "cat": "ctx",
+    "fix": "terebi o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-masu-25",
+    "field": "pista",
+    "text": "terebio mimasu",
+    "cat": "ctx",
+    "fix": "terebi o mimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-masu-26",
+    "field": "contexto",
+    "text": "meeruo miru",
+    "cat": "ctx",
+    "fix": "meeru o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-masu-26",
+    "field": "pista",
+    "text": "meeruo mimasu",
+    "cat": "ctx",
+    "fix": "meeru o mimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-masen-27",
+    "field": "contexto",
+    "text": "eigao miru",
+    "cat": "ctx",
+    "fix": "eiga o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-masen-27",
+    "field": "pista",
+    "text": "eigao mimasen",
+    "cat": "ctx",
+    "fix": "eiga o mimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-masen-28",
+    "field": "contexto",
+    "text": "meeruo miru",
+    "cat": "ctx",
+    "fix": "meeru o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-masen-28",
+    "field": "pista",
+    "text": "meeruo mimasen",
+    "cat": "ctx",
+    "fix": "meeru o mimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-masen-29",
+    "field": "contexto",
+    "text": "terebio miru",
+    "cat": "ctx",
+    "fix": "terebi o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-masen-29",
+    "field": "pista",
+    "text": "terebio mimasen",
+    "cat": "ctx",
+    "fix": "terebi o mimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-mashita-30",
+    "field": "contexto",
+    "text": "meeruo miru",
+    "cat": "ctx",
+    "fix": "meeru o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-mashita-30",
+    "field": "pista",
+    "text": "meeruo mimashita",
+    "cat": "ctx",
+    "fix": "meeru o mimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-mashita-31",
+    "field": "contexto",
+    "text": "terebio miru",
+    "cat": "ctx",
+    "fix": "terebi o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-mashita-31",
+    "field": "pista",
+    "text": "terebio mimashita",
+    "cat": "ctx",
+    "fix": "terebi o mimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-mashita-32",
+    "field": "contexto",
+    "text": "eigao miru",
+    "cat": "ctx",
+    "fix": "eiga o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-mashita-32",
+    "field": "pista",
+    "text": "eigao mimashita",
+    "cat": "ctx",
+    "fix": "eiga o mimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-masen_deshita-33",
+    "field": "contexto",
+    "text": "terebio miru",
+    "cat": "ctx",
+    "fix": "terebi o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-masen_deshita-33",
+    "field": "pista",
+    "text": "terebio mimasendeshita",
+    "cat": "ctx",
+    "fix": "terebi o mimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-masen_deshita-34",
+    "field": "contexto",
+    "text": "eigao miru",
+    "cat": "ctx",
+    "fix": "eiga o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-masen_deshita-34",
+    "field": "pista",
+    "text": "eigao mimasendeshita",
+    "cat": "ctx",
+    "fix": "eiga o mimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-masen_deshita-35",
+    "field": "contexto",
+    "text": "meeruo miru",
+    "cat": "ctx",
+    "fix": "meeru o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-masen_deshita-35",
+    "field": "pista",
+    "text": "meeruo mimasendeshita",
+    "cat": "ctx",
+    "fix": "meeru o mimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-te-36",
+    "field": "contexto",
+    "text": "eigao miru",
+    "cat": "ctx",
+    "fix": "eiga o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-te-36",
+    "field": "pista",
+    "text": "eigao mite",
+    "cat": "ctx",
+    "fix": "eiga o mite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-te-37",
+    "field": "contexto",
+    "text": "terebio miru",
+    "cat": "ctx",
+    "fix": "terebi o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-te-37",
+    "field": "pista",
+    "text": "terebio mite",
+    "cat": "ctx",
+    "fix": "terebi o mite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-te-38",
+    "field": "contexto",
+    "text": "meeruo miru",
+    "cat": "ctx",
+    "fix": "meeru o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-te-38",
+    "field": "pista",
+    "text": "meeruo mite",
+    "cat": "ctx",
+    "fix": "meeru o mite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-plain-39",
+    "field": "contexto",
+    "text": "eigao miru",
+    "cat": "ctx",
+    "fix": "eiga o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-plain-39",
+    "field": "pista",
+    "text": "eigao miru",
+    "cat": "ctx",
+    "fix": "eiga o miru",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-plain-40",
+    "field": "contexto",
+    "text": "meeruo miru",
+    "cat": "ctx",
+    "fix": "meeru o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-plain-40",
+    "field": "pista",
+    "text": "meeruo miru",
+    "cat": "ctx",
+    "fix": "meeru o miru",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-plain-41",
+    "field": "contexto",
+    "text": "terebio miru",
+    "cat": "ctx",
+    "fix": "terebi o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-plain-41",
+    "field": "pista",
+    "text": "terebio miru",
+    "cat": "ctx",
+    "fix": "terebi o miru",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-nai-42",
+    "field": "contexto",
+    "text": "meeruo miru",
+    "cat": "ctx",
+    "fix": "meeru o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-nai-42",
+    "field": "pista",
+    "text": "meeruo minai",
+    "cat": "ctx",
+    "fix": "meeru o minai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-nai-43",
+    "field": "contexto",
+    "text": "terebio miru",
+    "cat": "ctx",
+    "fix": "terebi o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-nai-43",
+    "field": "pista",
+    "text": "terebio minai",
+    "cat": "ctx",
+    "fix": "terebi o minai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-nai-44",
+    "field": "contexto",
+    "text": "eigao miru",
+    "cat": "ctx",
+    "fix": "eiga o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-nai-44",
+    "field": "pista",
+    "text": "eigao minai",
+    "cat": "ctx",
+    "fix": "eiga o minai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-ta-45",
+    "field": "contexto",
+    "text": "eigao miru",
+    "cat": "ctx",
+    "fix": "eiga o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-ta-45",
+    "field": "pista",
+    "text": "eigao mita",
+    "cat": "ctx",
+    "fix": "eiga o mita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-ta-46",
+    "field": "contexto",
+    "text": "meeruo miru",
+    "cat": "ctx",
+    "fix": "meeru o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-ta-46",
+    "field": "pista",
+    "text": "meeruo mita",
+    "cat": "ctx",
+    "fix": "meeru o mita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "miru-ta-47",
+    "field": "contexto",
+    "text": "terebio miru",
+    "cat": "ctx",
+    "fix": "terebi o miru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "miru-ta-47",
+    "field": "pista",
+    "text": "terebio mita",
+    "cat": "ctx",
+    "fix": "terebi o mita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-masu-48",
+    "field": "contexto",
+    "text": "suugakuo oshieru",
+    "cat": "ctx",
+    "fix": "suugaku o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-masu-48",
+    "field": "pista",
+    "text": "suugakuo oshiemasu",
+    "cat": "ctx",
+    "fix": "suugaku o oshiemasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-masu-49",
+    "field": "contexto",
+    "text": "eigoo oshieru",
+    "cat": "ctx",
+    "fix": "eigo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-masu-49",
+    "field": "pista",
+    "text": "eigoo oshiemasu",
+    "cat": "ctx",
+    "fix": "eigo o oshiemasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-masu-50",
+    "field": "contexto",
+    "text": "nihongoo oshieru",
+    "cat": "ctx",
+    "fix": "nihongo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-masu-50",
+    "field": "pista",
+    "text": "nihongoo oshiemasu",
+    "cat": "ctx",
+    "fix": "nihongo o oshiemasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-masen-51",
+    "field": "contexto",
+    "text": "nihongoo oshieru",
+    "cat": "ctx",
+    "fix": "nihongo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-masen-51",
+    "field": "pista",
+    "text": "nihongoo oshiemasen",
+    "cat": "ctx",
+    "fix": "nihongo o oshiemasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-masen-52",
+    "field": "contexto",
+    "text": "eigoo oshieru",
+    "cat": "ctx",
+    "fix": "eigo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-masen-52",
+    "field": "pista",
+    "text": "eigoo oshiemasen",
+    "cat": "ctx",
+    "fix": "eigo o oshiemasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-masen-53",
+    "field": "contexto",
+    "text": "suugakuo oshieru",
+    "cat": "ctx",
+    "fix": "suugaku o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-masen-53",
+    "field": "pista",
+    "text": "suugakuo oshiemasen",
+    "cat": "ctx",
+    "fix": "suugaku o oshiemasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-mashita-54",
+    "field": "contexto",
+    "text": "suugakuo oshieru",
+    "cat": "ctx",
+    "fix": "suugaku o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-mashita-54",
+    "field": "pista",
+    "text": "suugakuo oshiemashita",
+    "cat": "ctx",
+    "fix": "suugaku o oshiemashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-mashita-55",
+    "field": "contexto",
+    "text": "eigoo oshieru",
+    "cat": "ctx",
+    "fix": "eigo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-mashita-55",
+    "field": "pista",
+    "text": "eigoo oshiemashita",
+    "cat": "ctx",
+    "fix": "eigo o oshiemashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-mashita-56",
+    "field": "contexto",
+    "text": "nihongoo oshieru",
+    "cat": "ctx",
+    "fix": "nihongo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-mashita-56",
+    "field": "pista",
+    "text": "nihongoo oshiemashita",
+    "cat": "ctx",
+    "fix": "nihongo o oshiemashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-masen_deshita-57",
+    "field": "contexto",
+    "text": "suugakuo oshieru",
+    "cat": "ctx",
+    "fix": "suugaku o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-masen_deshita-57",
+    "field": "pista",
+    "text": "suugakuo oshiemasendeshita",
+    "cat": "ctx",
+    "fix": "suugaku o oshiemasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-masen_deshita-58",
+    "field": "contexto",
+    "text": "eigoo oshieru",
+    "cat": "ctx",
+    "fix": "eigo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-masen_deshita-58",
+    "field": "pista",
+    "text": "eigoo oshiemasendeshita",
+    "cat": "ctx",
+    "fix": "eigo o oshiemasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-masen_deshita-59",
+    "field": "contexto",
+    "text": "nihongoo oshieru",
+    "cat": "ctx",
+    "fix": "nihongo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-masen_deshita-59",
+    "field": "pista",
+    "text": "nihongoo oshiemasendeshita",
+    "cat": "ctx",
+    "fix": "nihongo o oshiemasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-te-60",
+    "field": "contexto",
+    "text": "eigoo oshieru",
+    "cat": "ctx",
+    "fix": "eigo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-te-60",
+    "field": "pista",
+    "text": "eigoo oshiete",
+    "cat": "ctx",
+    "fix": "eigo o oshiete",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-te-61",
+    "field": "contexto",
+    "text": "nihongoo oshieru",
+    "cat": "ctx",
+    "fix": "nihongo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-te-61",
+    "field": "pista",
+    "text": "nihongoo oshiete",
+    "cat": "ctx",
+    "fix": "nihongo o oshiete",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-te-62",
+    "field": "contexto",
+    "text": "suugakuo oshieru",
+    "cat": "ctx",
+    "fix": "suugaku o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-te-62",
+    "field": "pista",
+    "text": "suugakuo oshiete",
+    "cat": "ctx",
+    "fix": "suugaku o oshiete",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-plain-63",
+    "field": "contexto",
+    "text": "suugakuo oshieru",
+    "cat": "ctx",
+    "fix": "suugaku o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-plain-63",
+    "field": "pista",
+    "text": "suugakuo oshieru",
+    "cat": "ctx",
+    "fix": "suugaku o oshieru",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-plain-64",
+    "field": "contexto",
+    "text": "eigoo oshieru",
+    "cat": "ctx",
+    "fix": "eigo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-plain-64",
+    "field": "pista",
+    "text": "eigoo oshieru",
+    "cat": "ctx",
+    "fix": "eigo o oshieru",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-plain-65",
+    "field": "contexto",
+    "text": "nihongoo oshieru",
+    "cat": "ctx",
+    "fix": "nihongo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-plain-65",
+    "field": "pista",
+    "text": "nihongoo oshieru",
+    "cat": "ctx",
+    "fix": "nihongo o oshieru",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-nai-66",
+    "field": "contexto",
+    "text": "nihongoo oshieru",
+    "cat": "ctx",
+    "fix": "nihongo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-nai-66",
+    "field": "pista",
+    "text": "nihongoo oshienai",
+    "cat": "ctx",
+    "fix": "nihongo o oshienai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-nai-67",
+    "field": "contexto",
+    "text": "suugakuo oshieru",
+    "cat": "ctx",
+    "fix": "suugaku o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-nai-67",
+    "field": "pista",
+    "text": "suugakuo oshienai",
+    "cat": "ctx",
+    "fix": "suugaku o oshienai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-nai-68",
+    "field": "contexto",
+    "text": "eigoo oshieru",
+    "cat": "ctx",
+    "fix": "eigo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-nai-68",
+    "field": "pista",
+    "text": "eigoo oshienai",
+    "cat": "ctx",
+    "fix": "eigo o oshienai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-ta-69",
+    "field": "contexto",
+    "text": "nihongoo oshieru",
+    "cat": "ctx",
+    "fix": "nihongo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-ta-69",
+    "field": "pista",
+    "text": "nihongoo oshieta",
+    "cat": "ctx",
+    "fix": "nihongo o oshieta",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-ta-70",
+    "field": "contexto",
+    "text": "suugakuo oshieru",
+    "cat": "ctx",
+    "fix": "suugaku o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-ta-70",
+    "field": "pista",
+    "text": "suugakuo oshieta",
+    "cat": "ctx",
+    "fix": "suugaku o oshieta",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "oshieru-ta-71",
+    "field": "contexto",
+    "text": "eigoo oshieru",
+    "cat": "ctx",
+    "fix": "eigo o oshieru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "oshieru-ta-71",
+    "field": "pista",
+    "text": "eigoo oshieta",
+    "cat": "ctx",
+    "fix": "eigo o oshieta",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-masu-88",
+    "field": "contexto",
+    "text": "koohiio nomu",
+    "cat": "ctx",
+    "fix": "koohii o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-masu-88",
+    "field": "pista",
+    "text": "koohiio nomimasu",
+    "cat": "ctx",
+    "fix": "koohii o nomimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-masu-89",
+    "field": "contexto",
+    "text": "ochao nomu",
+    "cat": "ctx",
+    "fix": "ocha o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-masu-89",
+    "field": "pista",
+    "text": "ochao nomimasu",
+    "cat": "ctx",
+    "fix": "ocha o nomimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-masu-90",
+    "field": "contexto",
+    "text": "mizuo nomu",
+    "cat": "ctx",
+    "fix": "mizu o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-masu-90",
+    "field": "pista",
+    "text": "mizuo nomimasu",
+    "cat": "ctx",
+    "fix": "mizu o nomimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-masen-91",
+    "field": "contexto",
+    "text": "ochao nomu",
+    "cat": "ctx",
+    "fix": "ocha o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-masen-91",
+    "field": "pista",
+    "text": "ochao nomimasen",
+    "cat": "ctx",
+    "fix": "ocha o nomimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-masen-92",
+    "field": "contexto",
+    "text": "koohiio nomu",
+    "cat": "ctx",
+    "fix": "koohii o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-masen-92",
+    "field": "pista",
+    "text": "koohiio nomimasen",
+    "cat": "ctx",
+    "fix": "koohii o nomimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-masen-93",
+    "field": "contexto",
+    "text": "mizuo nomu",
+    "cat": "ctx",
+    "fix": "mizu o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-masen-93",
+    "field": "pista",
+    "text": "mizuo nomimasen",
+    "cat": "ctx",
+    "fix": "mizu o nomimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-mashita-94",
+    "field": "contexto",
+    "text": "ochao nomu",
+    "cat": "ctx",
+    "fix": "ocha o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-mashita-94",
+    "field": "pista",
+    "text": "ochao nomimashita",
+    "cat": "ctx",
+    "fix": "ocha o nomimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-mashita-95",
+    "field": "contexto",
+    "text": "koohiio nomu",
+    "cat": "ctx",
+    "fix": "koohii o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-mashita-95",
+    "field": "pista",
+    "text": "koohiio nomimashita",
+    "cat": "ctx",
+    "fix": "koohii o nomimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-mashita-96",
+    "field": "contexto",
+    "text": "mizuo nomu",
+    "cat": "ctx",
+    "fix": "mizu o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-mashita-96",
+    "field": "pista",
+    "text": "mizuo nomimashita",
+    "cat": "ctx",
+    "fix": "mizu o nomimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-masen_deshita-97",
+    "field": "contexto",
+    "text": "koohiio nomu",
+    "cat": "ctx",
+    "fix": "koohii o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-masen_deshita-97",
+    "field": "pista",
+    "text": "koohiio nomimasendeshita",
+    "cat": "ctx",
+    "fix": "koohii o nomimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-masen_deshita-98",
+    "field": "contexto",
+    "text": "ochao nomu",
+    "cat": "ctx",
+    "fix": "ocha o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-masen_deshita-98",
+    "field": "pista",
+    "text": "ochao nomimasendeshita",
+    "cat": "ctx",
+    "fix": "ocha o nomimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-masen_deshita-99",
+    "field": "contexto",
+    "text": "mizuo nomu",
+    "cat": "ctx",
+    "fix": "mizu o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-masen_deshita-99",
+    "field": "pista",
+    "text": "mizuo nomimasendeshita",
+    "cat": "ctx",
+    "fix": "mizu o nomimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-te-100",
+    "field": "contexto",
+    "text": "mizuo nomu",
+    "cat": "ctx",
+    "fix": "mizu o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-te-100",
+    "field": "pista",
+    "text": "mizuo nonde",
+    "cat": "ctx",
+    "fix": "mizu o nonde",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-te-101",
+    "field": "contexto",
+    "text": "koohiio nomu",
+    "cat": "ctx",
+    "fix": "koohii o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-te-101",
+    "field": "pista",
+    "text": "koohiio nonde",
+    "cat": "ctx",
+    "fix": "koohii o nonde",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-te-102",
+    "field": "contexto",
+    "text": "ochao nomu",
+    "cat": "ctx",
+    "fix": "ocha o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-te-102",
+    "field": "pista",
+    "text": "ochao nonde",
+    "cat": "ctx",
+    "fix": "ocha o nonde",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-plain-103",
+    "field": "contexto",
+    "text": "koohiio nomu",
+    "cat": "ctx",
+    "fix": "koohii o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-plain-103",
+    "field": "pista",
+    "text": "koohiio nomu",
+    "cat": "ctx",
+    "fix": "koohii o nomu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-plain-104",
+    "field": "contexto",
+    "text": "ochao nomu",
+    "cat": "ctx",
+    "fix": "ocha o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-plain-104",
+    "field": "pista",
+    "text": "ochao nomu",
+    "cat": "ctx",
+    "fix": "ocha o nomu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-plain-105",
+    "field": "contexto",
+    "text": "mizuo nomu",
+    "cat": "ctx",
+    "fix": "mizu o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-plain-105",
+    "field": "pista",
+    "text": "mizuo nomu",
+    "cat": "ctx",
+    "fix": "mizu o nomu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-nai-106",
+    "field": "contexto",
+    "text": "koohiio nomu",
+    "cat": "ctx",
+    "fix": "koohii o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-nai-106",
+    "field": "pista",
+    "text": "koohiio nomanai",
+    "cat": "ctx",
+    "fix": "koohii o nomanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-nai-107",
+    "field": "contexto",
+    "text": "ochao nomu",
+    "cat": "ctx",
+    "fix": "ocha o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-nai-107",
+    "field": "pista",
+    "text": "ochao nomanai",
+    "cat": "ctx",
+    "fix": "ocha o nomanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-nai-108",
+    "field": "contexto",
+    "text": "mizuo nomu",
+    "cat": "ctx",
+    "fix": "mizu o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-nai-108",
+    "field": "pista",
+    "text": "mizuo nomanai",
+    "cat": "ctx",
+    "fix": "mizu o nomanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-ta-109",
+    "field": "contexto",
+    "text": "ochao nomu",
+    "cat": "ctx",
+    "fix": "ocha o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-ta-109",
+    "field": "pista",
+    "text": "ochao nonda",
+    "cat": "ctx",
+    "fix": "ocha o nonda",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-ta-110",
+    "field": "contexto",
+    "text": "koohiio nomu",
+    "cat": "ctx",
+    "fix": "koohii o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-ta-110",
+    "field": "pista",
+    "text": "koohiio nonda",
+    "cat": "ctx",
+    "fix": "koohii o nonda",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "nomu-ta-111",
+    "field": "contexto",
+    "text": "mizuo nomu",
+    "cat": "ctx",
+    "fix": "mizu o nomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "nomu-ta-111",
+    "field": "pista",
+    "text": "mizuo nonda",
+    "cat": "ctx",
+    "fix": "mizu o nonda",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-masu-112",
+    "field": "contexto",
+    "text": "meeruo kaku",
+    "cat": "ctx",
+    "fix": "meeru o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-masu-112",
+    "field": "pista",
+    "text": "meeruo kakimasu",
+    "cat": "ctx",
+    "fix": "meeru o kakimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-masu-113",
+    "field": "contexto",
+    "text": "namaeo kaku",
+    "cat": "ctx",
+    "fix": "namae o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-masu-113",
+    "field": "pista",
+    "text": "namaeo kakimasu",
+    "cat": "ctx",
+    "fix": "namae o kakimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-masu-114",
+    "field": "contexto",
+    "text": "tegamio kaku",
+    "cat": "ctx",
+    "fix": "tegami o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-masu-114",
+    "field": "pista",
+    "text": "tegamio kakimasu",
+    "cat": "ctx",
+    "fix": "tegami o kakimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-masen-115",
+    "field": "contexto",
+    "text": "meeruo kaku",
+    "cat": "ctx",
+    "fix": "meeru o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-masen-115",
+    "field": "pista",
+    "text": "meeruo kakimasen",
+    "cat": "ctx",
+    "fix": "meeru o kakimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-masen-116",
+    "field": "contexto",
+    "text": "tegamio kaku",
+    "cat": "ctx",
+    "fix": "tegami o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-masen-116",
+    "field": "pista",
+    "text": "tegamio kakimasen",
+    "cat": "ctx",
+    "fix": "tegami o kakimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-masen-117",
+    "field": "contexto",
+    "text": "namaeo kaku",
+    "cat": "ctx",
+    "fix": "namae o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-masen-117",
+    "field": "pista",
+    "text": "namaeo kakimasen",
+    "cat": "ctx",
+    "fix": "namae o kakimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-mashita-118",
+    "field": "contexto",
+    "text": "namaeo kaku",
+    "cat": "ctx",
+    "fix": "namae o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-mashita-118",
+    "field": "pista",
+    "text": "namaeo kakimashita",
+    "cat": "ctx",
+    "fix": "namae o kakimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-mashita-119",
+    "field": "contexto",
+    "text": "meeruo kaku",
+    "cat": "ctx",
+    "fix": "meeru o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-mashita-119",
+    "field": "pista",
+    "text": "meeruo kakimashita",
+    "cat": "ctx",
+    "fix": "meeru o kakimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-mashita-120",
+    "field": "contexto",
+    "text": "tegamio kaku",
+    "cat": "ctx",
+    "fix": "tegami o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-mashita-120",
+    "field": "pista",
+    "text": "tegamio kakimashita",
+    "cat": "ctx",
+    "fix": "tegami o kakimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-masen_deshita-121",
+    "field": "contexto",
+    "text": "tegamio kaku",
+    "cat": "ctx",
+    "fix": "tegami o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-masen_deshita-121",
+    "field": "pista",
+    "text": "tegamio kakimasendeshita",
+    "cat": "ctx",
+    "fix": "tegami o kakimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-masen_deshita-122",
+    "field": "contexto",
+    "text": "namaeo kaku",
+    "cat": "ctx",
+    "fix": "namae o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-masen_deshita-122",
+    "field": "pista",
+    "text": "namaeo kakimasendeshita",
+    "cat": "ctx",
+    "fix": "namae o kakimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-masen_deshita-123",
+    "field": "contexto",
+    "text": "meeruo kaku",
+    "cat": "ctx",
+    "fix": "meeru o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-masen_deshita-123",
+    "field": "pista",
+    "text": "meeruo kakimasendeshita",
+    "cat": "ctx",
+    "fix": "meeru o kakimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-te-124",
+    "field": "contexto",
+    "text": "meeruo kaku",
+    "cat": "ctx",
+    "fix": "meeru o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-te-124",
+    "field": "pista",
+    "text": "meeruo kaite",
+    "cat": "ctx",
+    "fix": "meeru o kaite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-te-125",
+    "field": "contexto",
+    "text": "tegamio kaku",
+    "cat": "ctx",
+    "fix": "tegami o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-te-125",
+    "field": "pista",
+    "text": "tegamio kaite",
+    "cat": "ctx",
+    "fix": "tegami o kaite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-te-126",
+    "field": "contexto",
+    "text": "namaeo kaku",
+    "cat": "ctx",
+    "fix": "namae o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-te-126",
+    "field": "pista",
+    "text": "namaeo kaite",
+    "cat": "ctx",
+    "fix": "namae o kaite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-plain-127",
+    "field": "contexto",
+    "text": "tegamio kaku",
+    "cat": "ctx",
+    "fix": "tegami o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-plain-127",
+    "field": "pista",
+    "text": "tegamio kaku",
+    "cat": "ctx",
+    "fix": "tegami o kaku",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-plain-128",
+    "field": "contexto",
+    "text": "meeruo kaku",
+    "cat": "ctx",
+    "fix": "meeru o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-plain-128",
+    "field": "pista",
+    "text": "meeruo kaku",
+    "cat": "ctx",
+    "fix": "meeru o kaku",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-plain-129",
+    "field": "contexto",
+    "text": "namaeo kaku",
+    "cat": "ctx",
+    "fix": "namae o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-plain-129",
+    "field": "pista",
+    "text": "namaeo kaku",
+    "cat": "ctx",
+    "fix": "namae o kaku",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-nai-130",
+    "field": "contexto",
+    "text": "meeruo kaku",
+    "cat": "ctx",
+    "fix": "meeru o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-nai-130",
+    "field": "pista",
+    "text": "meeruo kakanai",
+    "cat": "ctx",
+    "fix": "meeru o kakanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-nai-131",
+    "field": "contexto",
+    "text": "namaeo kaku",
+    "cat": "ctx",
+    "fix": "namae o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-nai-131",
+    "field": "pista",
+    "text": "namaeo kakanai",
+    "cat": "ctx",
+    "fix": "namae o kakanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-nai-132",
+    "field": "contexto",
+    "text": "tegamio kaku",
+    "cat": "ctx",
+    "fix": "tegami o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-nai-132",
+    "field": "pista",
+    "text": "tegamio kakanai",
+    "cat": "ctx",
+    "fix": "tegami o kakanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-ta-133",
+    "field": "contexto",
+    "text": "meeruo kaku",
+    "cat": "ctx",
+    "fix": "meeru o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-ta-133",
+    "field": "pista",
+    "text": "meeruo kaita",
+    "cat": "ctx",
+    "fix": "meeru o kaita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-ta-134",
+    "field": "contexto",
+    "text": "tegamio kaku",
+    "cat": "ctx",
+    "fix": "tegami o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-ta-134",
+    "field": "pista",
+    "text": "tegamio kaita",
+    "cat": "ctx",
+    "fix": "tegami o kaita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kaku-ta-135",
+    "field": "contexto",
+    "text": "namaeo kaku",
+    "cat": "ctx",
+    "fix": "namae o kaku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kaku-ta-135",
+    "field": "pista",
+    "text": "namaeo kaita",
+    "cat": "ctx",
+    "fix": "namae o kaita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-masu-136",
+    "field": "contexto",
+    "text": "nihongoo hanasu",
+    "cat": "ctx",
+    "fix": "nihongo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-masu-136",
+    "field": "pista",
+    "text": "nihongoo hanashimasu",
+    "cat": "ctx",
+    "fix": "nihongo o hanashimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-masu-137",
+    "field": "contexto",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-masu-137",
+    "field": "pista",
+    "text": "eigoo hanashimasu",
+    "cat": "ctx",
+    "fix": "eigo o hanashimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-masu-138",
+    "field": "contexto",
+    "text": "nihongoo hanasu",
+    "cat": "ctx",
+    "fix": "nihongo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-masu-138",
+    "field": "pista",
+    "text": "nihongoo hanashimasu",
+    "cat": "ctx",
+    "fix": "nihongo o hanashimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-masen-139",
+    "field": "contexto",
+    "text": "nihongoo hanasu",
+    "cat": "ctx",
+    "fix": "nihongo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-masen-139",
+    "field": "pista",
+    "text": "nihongoo hanashimasen",
+    "cat": "ctx",
+    "fix": "nihongo o hanashimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-masen-140",
+    "field": "contexto",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-masen-140",
+    "field": "pista",
+    "text": "eigoo hanashimasen",
+    "cat": "ctx",
+    "fix": "eigo o hanashimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-masen-141",
+    "field": "contexto",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-masen-141",
+    "field": "pista",
+    "text": "eigoo hanashimasen",
+    "cat": "ctx",
+    "fix": "eigo o hanashimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-mashita-142",
+    "field": "contexto",
+    "text": "nihongoo hanasu",
+    "cat": "ctx",
+    "fix": "nihongo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-mashita-142",
+    "field": "pista",
+    "text": "nihongoo hanashimashita",
+    "cat": "ctx",
+    "fix": "nihongo o hanashimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-mashita-143",
+    "field": "contexto",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-mashita-143",
+    "field": "pista",
+    "text": "eigoo hanashimashita",
+    "cat": "ctx",
+    "fix": "eigo o hanashimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-mashita-144",
+    "field": "contexto",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-mashita-144",
+    "field": "pista",
+    "text": "eigoo hanashimashita",
+    "cat": "ctx",
+    "fix": "eigo o hanashimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-masen_deshita-145",
+    "field": "contexto",
+    "text": "nihongoo hanasu",
+    "cat": "ctx",
+    "fix": "nihongo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-masen_deshita-145",
+    "field": "pista",
+    "text": "nihongoo hanashimasendeshita",
+    "cat": "ctx",
+    "fix": "nihongo o hanashimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-masen_deshita-146",
+    "field": "contexto",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-masen_deshita-146",
+    "field": "pista",
+    "text": "eigoo hanashimasendeshita",
+    "cat": "ctx",
+    "fix": "eigo o hanashimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-masen_deshita-147",
+    "field": "contexto",
+    "text": "nihongoo hanasu",
+    "cat": "ctx",
+    "fix": "nihongo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-masen_deshita-147",
+    "field": "pista",
+    "text": "nihongoo hanashimasendeshita",
+    "cat": "ctx",
+    "fix": "nihongo o hanashimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-te-148",
+    "field": "contexto",
+    "text": "nihongoo hanasu",
+    "cat": "ctx",
+    "fix": "nihongo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-te-148",
+    "field": "pista",
+    "text": "nihongoo hanashite",
+    "cat": "ctx",
+    "fix": "nihongo o hanashite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-te-149",
+    "field": "contexto",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-te-149",
+    "field": "pista",
+    "text": "eigoo hanashite",
+    "cat": "ctx",
+    "fix": "eigo o hanashite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-te-150",
+    "field": "contexto",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-te-150",
+    "field": "pista",
+    "text": "eigoo hanashite",
+    "cat": "ctx",
+    "fix": "eigo o hanashite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-plain-151",
+    "field": "contexto",
+    "text": "nihongoo hanasu",
+    "cat": "ctx",
+    "fix": "nihongo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-plain-151",
+    "field": "pista",
+    "text": "nihongoo hanasu",
+    "cat": "ctx",
+    "fix": "nihongo o hanasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-plain-152",
+    "field": "contexto",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-plain-152",
+    "field": "pista",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-plain-153",
+    "field": "contexto",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-plain-153",
+    "field": "pista",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-nai-154",
+    "field": "contexto",
+    "text": "nihongoo hanasu",
+    "cat": "ctx",
+    "fix": "nihongo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-nai-154",
+    "field": "pista",
+    "text": "nihongoo hanasanai",
+    "cat": "ctx",
+    "fix": "nihongo o hanasanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-nai-155",
+    "field": "contexto",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-nai-155",
+    "field": "pista",
+    "text": "eigoo hanasanai",
+    "cat": "ctx",
+    "fix": "eigo o hanasanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-nai-156",
+    "field": "contexto",
+    "text": "nihongoo hanasu",
+    "cat": "ctx",
+    "fix": "nihongo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-nai-156",
+    "field": "pista",
+    "text": "nihongoo hanasanai",
+    "cat": "ctx",
+    "fix": "nihongo o hanasanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-ta-157",
+    "field": "contexto",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-ta-157",
+    "field": "pista",
+    "text": "eigoo hanashita",
+    "cat": "ctx",
+    "fix": "eigo o hanashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-ta-158",
+    "field": "contexto",
+    "text": "nihongoo hanasu",
+    "cat": "ctx",
+    "fix": "nihongo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-ta-158",
+    "field": "pista",
+    "text": "nihongoo hanashita",
+    "cat": "ctx",
+    "fix": "nihongo o hanashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "hanasu-ta-159",
+    "field": "contexto",
+    "text": "eigoo hanasu",
+    "cat": "ctx",
+    "fix": "eigo o hanasu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "hanasu-ta-159",
+    "field": "pista",
+    "text": "eigoo hanashita",
+    "cat": "ctx",
+    "fix": "eigo o hanashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-masu-160",
+    "field": "contexto",
+    "text": "pano kau",
+    "cat": "ctx",
+    "fix": "pan o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-masu-160",
+    "field": "pista",
+    "text": "pano kaimasu",
+    "cat": "ctx",
+    "fix": "pan o kaimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-masu-161",
+    "field": "contexto",
+    "text": "purezentoo kau",
+    "cat": "ctx",
+    "fix": "purezento o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-masu-161",
+    "field": "pista",
+    "text": "purezentoo kaimasu",
+    "cat": "ctx",
+    "fix": "purezento o kaimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-masu-162",
+    "field": "contexto",
+    "text": "hono kau",
+    "cat": "ctx",
+    "fix": "hon o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-masu-162",
+    "field": "pista",
+    "text": "hono kaimasu",
+    "cat": "ctx",
+    "fix": "hon o kaimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-masen-163",
+    "field": "contexto",
+    "text": "purezentoo kau",
+    "cat": "ctx",
+    "fix": "purezento o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-masen-163",
+    "field": "pista",
+    "text": "purezentoo kaimasen",
+    "cat": "ctx",
+    "fix": "purezento o kaimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-masen-164",
+    "field": "contexto",
+    "text": "hono kau",
+    "cat": "ctx",
+    "fix": "hon o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-masen-164",
+    "field": "pista",
+    "text": "hono kaimasen",
+    "cat": "ctx",
+    "fix": "hon o kaimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-masen-165",
+    "field": "contexto",
+    "text": "pano kau",
+    "cat": "ctx",
+    "fix": "pan o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-masen-165",
+    "field": "pista",
+    "text": "pano kaimasen",
+    "cat": "ctx",
+    "fix": "pan o kaimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-mashita-166",
+    "field": "contexto",
+    "text": "pano kau",
+    "cat": "ctx",
+    "fix": "pan o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-mashita-166",
+    "field": "pista",
+    "text": "pano kaimashita",
+    "cat": "ctx",
+    "fix": "pan o kaimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-mashita-167",
+    "field": "contexto",
+    "text": "purezentoo kau",
+    "cat": "ctx",
+    "fix": "purezento o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-mashita-167",
+    "field": "pista",
+    "text": "purezentoo kaimashita",
+    "cat": "ctx",
+    "fix": "purezento o kaimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-mashita-168",
+    "field": "contexto",
+    "text": "hono kau",
+    "cat": "ctx",
+    "fix": "hon o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-mashita-168",
+    "field": "pista",
+    "text": "hono kaimashita",
+    "cat": "ctx",
+    "fix": "hon o kaimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-masen_deshita-169",
+    "field": "contexto",
+    "text": "hono kau",
+    "cat": "ctx",
+    "fix": "hon o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-masen_deshita-169",
+    "field": "pista",
+    "text": "hono kaimasendeshita",
+    "cat": "ctx",
+    "fix": "hon o kaimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-masen_deshita-170",
+    "field": "contexto",
+    "text": "pano kau",
+    "cat": "ctx",
+    "fix": "pan o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-masen_deshita-170",
+    "field": "pista",
+    "text": "pano kaimasendeshita",
+    "cat": "ctx",
+    "fix": "pan o kaimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-masen_deshita-171",
+    "field": "contexto",
+    "text": "purezentoo kau",
+    "cat": "ctx",
+    "fix": "purezento o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-masen_deshita-171",
+    "field": "pista",
+    "text": "purezentoo kaimasendeshita",
+    "cat": "ctx",
+    "fix": "purezento o kaimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-te-172",
+    "field": "contexto",
+    "text": "hono kau",
+    "cat": "ctx",
+    "fix": "hon o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-te-172",
+    "field": "pista",
+    "text": "hono katte",
+    "cat": "ctx",
+    "fix": "hon o katte",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-te-173",
+    "field": "contexto",
+    "text": "pano kau",
+    "cat": "ctx",
+    "fix": "pan o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-te-173",
+    "field": "pista",
+    "text": "pano katte",
+    "cat": "ctx",
+    "fix": "pan o katte",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-te-174",
+    "field": "contexto",
+    "text": "purezentoo kau",
+    "cat": "ctx",
+    "fix": "purezento o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-te-174",
+    "field": "pista",
+    "text": "purezentoo katte",
+    "cat": "ctx",
+    "fix": "purezento o katte",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-plain-175",
+    "field": "contexto",
+    "text": "hono kau",
+    "cat": "ctx",
+    "fix": "hon o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-plain-175",
+    "field": "pista",
+    "text": "hono kau",
+    "cat": "ctx",
+    "fix": "hon o kau",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-plain-176",
+    "field": "contexto",
+    "text": "purezentoo kau",
+    "cat": "ctx",
+    "fix": "purezento o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-plain-176",
+    "field": "pista",
+    "text": "purezentoo kau",
+    "cat": "ctx",
+    "fix": "purezento o kau",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-plain-177",
+    "field": "contexto",
+    "text": "pano kau",
+    "cat": "ctx",
+    "fix": "pan o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-plain-177",
+    "field": "pista",
+    "text": "pano kau",
+    "cat": "ctx",
+    "fix": "pan o kau",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-nai-178",
+    "field": "contexto",
+    "text": "pano kau",
+    "cat": "ctx",
+    "fix": "pan o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-nai-178",
+    "field": "pista",
+    "text": "pano kawanai",
+    "cat": "ctx",
+    "fix": "pan o kawanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-nai-179",
+    "field": "contexto",
+    "text": "purezentoo kau",
+    "cat": "ctx",
+    "fix": "purezento o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-nai-179",
+    "field": "pista",
+    "text": "purezentoo kawanai",
+    "cat": "ctx",
+    "fix": "purezento o kawanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-nai-180",
+    "field": "contexto",
+    "text": "hono kau",
+    "cat": "ctx",
+    "fix": "hon o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-nai-180",
+    "field": "pista",
+    "text": "hono kawanai",
+    "cat": "ctx",
+    "fix": "hon o kawanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-ta-181",
+    "field": "contexto",
+    "text": "purezentoo kau",
+    "cat": "ctx",
+    "fix": "purezento o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-ta-181",
+    "field": "pista",
+    "text": "purezentoo katta",
+    "cat": "ctx",
+    "fix": "purezento o katta",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-ta-182",
+    "field": "contexto",
+    "text": "pano kau",
+    "cat": "ctx",
+    "fix": "pan o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-ta-182",
+    "field": "pista",
+    "text": "pano katta",
+    "cat": "ctx",
+    "fix": "pan o katta",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kau-ta-183",
+    "field": "contexto",
+    "text": "hono kau",
+    "cat": "ctx",
+    "fix": "hon o kau",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kau-ta-183",
+    "field": "pista",
+    "text": "hono katta",
+    "cat": "ctx",
+    "fix": "hon o katta",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-masu-184",
+    "field": "contexto",
+    "text": "hono yomu",
+    "cat": "ctx",
+    "fix": "hon o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-masu-184",
+    "field": "pista",
+    "text": "hono yomimasu",
+    "cat": "ctx",
+    "fix": "hon o yomimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-masu-185",
+    "field": "contexto",
+    "text": "shinbuno yomu",
+    "cat": "ctx",
+    "fix": "shinbun o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-masu-185",
+    "field": "pista",
+    "text": "shinbuno yomimasu",
+    "cat": "ctx",
+    "fix": "shinbun o yomimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-masu-186",
+    "field": "contexto",
+    "text": "meeruo yomu",
+    "cat": "ctx",
+    "fix": "meeru o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-masu-186",
+    "field": "pista",
+    "text": "meeruo yomimasu",
+    "cat": "ctx",
+    "fix": "meeru o yomimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-masen-187",
+    "field": "contexto",
+    "text": "hono yomu",
+    "cat": "ctx",
+    "fix": "hon o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-masen-187",
+    "field": "pista",
+    "text": "hono yomimasen",
+    "cat": "ctx",
+    "fix": "hon o yomimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-masen-188",
+    "field": "contexto",
+    "text": "meeruo yomu",
+    "cat": "ctx",
+    "fix": "meeru o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-masen-188",
+    "field": "pista",
+    "text": "meeruo yomimasen",
+    "cat": "ctx",
+    "fix": "meeru o yomimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-masen-189",
+    "field": "contexto",
+    "text": "shinbuno yomu",
+    "cat": "ctx",
+    "fix": "shinbun o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-masen-189",
+    "field": "pista",
+    "text": "shinbuno yomimasen",
+    "cat": "ctx",
+    "fix": "shinbun o yomimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-mashita-190",
+    "field": "contexto",
+    "text": "meeruo yomu",
+    "cat": "ctx",
+    "fix": "meeru o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-mashita-190",
+    "field": "pista",
+    "text": "meeruo yomimashita",
+    "cat": "ctx",
+    "fix": "meeru o yomimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-mashita-191",
+    "field": "contexto",
+    "text": "shinbuno yomu",
+    "cat": "ctx",
+    "fix": "shinbun o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-mashita-191",
+    "field": "pista",
+    "text": "shinbuno yomimashita",
+    "cat": "ctx",
+    "fix": "shinbun o yomimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-mashita-192",
+    "field": "contexto",
+    "text": "hono yomu",
+    "cat": "ctx",
+    "fix": "hon o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-mashita-192",
+    "field": "pista",
+    "text": "hono yomimashita",
+    "cat": "ctx",
+    "fix": "hon o yomimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-masen_deshita-193",
+    "field": "contexto",
+    "text": "hono yomu",
+    "cat": "ctx",
+    "fix": "hon o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-masen_deshita-193",
+    "field": "pista",
+    "text": "hono yomimasendeshita",
+    "cat": "ctx",
+    "fix": "hon o yomimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-masen_deshita-194",
+    "field": "contexto",
+    "text": "shinbuno yomu",
+    "cat": "ctx",
+    "fix": "shinbun o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-masen_deshita-194",
+    "field": "pista",
+    "text": "shinbuno yomimasendeshita",
+    "cat": "ctx",
+    "fix": "shinbun o yomimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-masen_deshita-195",
+    "field": "contexto",
+    "text": "meeruo yomu",
+    "cat": "ctx",
+    "fix": "meeru o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-masen_deshita-195",
+    "field": "pista",
+    "text": "meeruo yomimasendeshita",
+    "cat": "ctx",
+    "fix": "meeru o yomimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-te-196",
+    "field": "contexto",
+    "text": "shinbuno yomu",
+    "cat": "ctx",
+    "fix": "shinbun o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-te-196",
+    "field": "pista",
+    "text": "shinbuno yonde",
+    "cat": "ctx",
+    "fix": "shinbun o yonde",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-te-197",
+    "field": "contexto",
+    "text": "meeruo yomu",
+    "cat": "ctx",
+    "fix": "meeru o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-te-197",
+    "field": "pista",
+    "text": "meeruo yonde",
+    "cat": "ctx",
+    "fix": "meeru o yonde",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-te-198",
+    "field": "contexto",
+    "text": "hono yomu",
+    "cat": "ctx",
+    "fix": "hon o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-te-198",
+    "field": "pista",
+    "text": "hono yonde",
+    "cat": "ctx",
+    "fix": "hon o yonde",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-plain-199",
+    "field": "contexto",
+    "text": "shinbuno yomu",
+    "cat": "ctx",
+    "fix": "shinbun o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-plain-199",
+    "field": "pista",
+    "text": "shinbuno yomu",
+    "cat": "ctx",
+    "fix": "shinbun o yomu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-plain-200",
+    "field": "contexto",
+    "text": "hono yomu",
+    "cat": "ctx",
+    "fix": "hon o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-plain-200",
+    "field": "pista",
+    "text": "hono yomu",
+    "cat": "ctx",
+    "fix": "hon o yomu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-plain-201",
+    "field": "contexto",
+    "text": "meeruo yomu",
+    "cat": "ctx",
+    "fix": "meeru o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-plain-201",
+    "field": "pista",
+    "text": "meeruo yomu",
+    "cat": "ctx",
+    "fix": "meeru o yomu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-nai-202",
+    "field": "contexto",
+    "text": "hono yomu",
+    "cat": "ctx",
+    "fix": "hon o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-nai-202",
+    "field": "pista",
+    "text": "hono yomanai",
+    "cat": "ctx",
+    "fix": "hon o yomanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-nai-203",
+    "field": "contexto",
+    "text": "shinbuno yomu",
+    "cat": "ctx",
+    "fix": "shinbun o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-nai-203",
+    "field": "pista",
+    "text": "shinbuno yomanai",
+    "cat": "ctx",
+    "fix": "shinbun o yomanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-nai-204",
+    "field": "contexto",
+    "text": "meeruo yomu",
+    "cat": "ctx",
+    "fix": "meeru o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-nai-204",
+    "field": "pista",
+    "text": "meeruo yomanai",
+    "cat": "ctx",
+    "fix": "meeru o yomanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-ta-205",
+    "field": "contexto",
+    "text": "hono yomu",
+    "cat": "ctx",
+    "fix": "hon o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-ta-205",
+    "field": "pista",
+    "text": "hono yonda",
+    "cat": "ctx",
+    "fix": "hon o yonda",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-ta-206",
+    "field": "contexto",
+    "text": "shinbuno yomu",
+    "cat": "ctx",
+    "fix": "shinbun o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-ta-206",
+    "field": "pista",
+    "text": "shinbuno yonda",
+    "cat": "ctx",
+    "fix": "shinbun o yonda",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "yomu-ta-207",
+    "field": "contexto",
+    "text": "meeruo yomu",
+    "cat": "ctx",
+    "fix": "meeru o yomu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "yomu-ta-207",
+    "field": "pista",
+    "text": "meeruo yonda",
+    "cat": "ctx",
+    "fix": "meeru o yonda",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-masu-208",
+    "field": "contexto",
+    "text": "rajioo kiku",
+    "cat": "ctx",
+    "fix": "rajio o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-masu-208",
+    "field": "pista",
+    "text": "rajioo kikimasu",
+    "cat": "ctx",
+    "fix": "rajio o kikimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-masu-209",
+    "field": "contexto",
+    "text": "ongakuo kiku",
+    "cat": "ctx",
+    "fix": "ongaku o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-masu-209",
+    "field": "pista",
+    "text": "ongakuo kikimasu",
+    "cat": "ctx",
+    "fix": "ongaku o kikimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-masu-210",
+    "field": "contexto",
+    "text": "ongakuo kiku",
+    "cat": "ctx",
+    "fix": "ongaku o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-masu-210",
+    "field": "pista",
+    "text": "ongakuo kikimasu",
+    "cat": "ctx",
+    "fix": "ongaku o kikimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-masen-211",
+    "field": "contexto",
+    "text": "rajioo kiku",
+    "cat": "ctx",
+    "fix": "rajio o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-masen-211",
+    "field": "pista",
+    "text": "rajioo kikimasen",
+    "cat": "ctx",
+    "fix": "rajio o kikimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-masen-212",
+    "field": "contexto",
+    "text": "ongakuo kiku",
+    "cat": "ctx",
+    "fix": "ongaku o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-masen-212",
+    "field": "pista",
+    "text": "ongakuo kikimasen",
+    "cat": "ctx",
+    "fix": "ongaku o kikimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-masen-213",
+    "field": "contexto",
+    "text": "ongakuo kiku",
+    "cat": "ctx",
+    "fix": "ongaku o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-masen-213",
+    "field": "pista",
+    "text": "ongakuo kikimasen",
+    "cat": "ctx",
+    "fix": "ongaku o kikimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-mashita-214",
+    "field": "contexto",
+    "text": "rajioo kiku",
+    "cat": "ctx",
+    "fix": "rajio o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-mashita-214",
+    "field": "pista",
+    "text": "rajioo kikimashita",
+    "cat": "ctx",
+    "fix": "rajio o kikimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-mashita-215",
+    "field": "contexto",
+    "text": "ongakuo kiku",
+    "cat": "ctx",
+    "fix": "ongaku o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-mashita-215",
+    "field": "pista",
+    "text": "ongakuo kikimashita",
+    "cat": "ctx",
+    "fix": "ongaku o kikimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-mashita-216",
+    "field": "contexto",
+    "text": "rajioo kiku",
+    "cat": "ctx",
+    "fix": "rajio o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-mashita-216",
+    "field": "pista",
+    "text": "rajioo kikimashita",
+    "cat": "ctx",
+    "fix": "rajio o kikimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-masen_deshita-217",
+    "field": "contexto",
+    "text": "rajioo kiku",
+    "cat": "ctx",
+    "fix": "rajio o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-masen_deshita-217",
+    "field": "pista",
+    "text": "rajioo kikimasendeshita",
+    "cat": "ctx",
+    "fix": "rajio o kikimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-masen_deshita-218",
+    "field": "contexto",
+    "text": "ongakuo kiku",
+    "cat": "ctx",
+    "fix": "ongaku o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-masen_deshita-218",
+    "field": "pista",
+    "text": "ongakuo kikimasendeshita",
+    "cat": "ctx",
+    "fix": "ongaku o kikimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-masen_deshita-219",
+    "field": "contexto",
+    "text": "ongakuo kiku",
+    "cat": "ctx",
+    "fix": "ongaku o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-masen_deshita-219",
+    "field": "pista",
+    "text": "ongakuo kikimasendeshita",
+    "cat": "ctx",
+    "fix": "ongaku o kikimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-te-220",
+    "field": "contexto",
+    "text": "ongakuo kiku",
+    "cat": "ctx",
+    "fix": "ongaku o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-te-220",
+    "field": "pista",
+    "text": "ongakuo kiite",
+    "cat": "ctx",
+    "fix": "ongaku o kiite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-te-221",
+    "field": "contexto",
+    "text": "rajioo kiku",
+    "cat": "ctx",
+    "fix": "rajio o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-te-221",
+    "field": "pista",
+    "text": "rajioo kiite",
+    "cat": "ctx",
+    "fix": "rajio o kiite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-te-222",
+    "field": "contexto",
+    "text": "ongakuo kiku",
+    "cat": "ctx",
+    "fix": "ongaku o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-te-222",
+    "field": "pista",
+    "text": "ongakuo kiite",
+    "cat": "ctx",
+    "fix": "ongaku o kiite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-plain-223",
+    "field": "contexto",
+    "text": "rajioo kiku",
+    "cat": "ctx",
+    "fix": "rajio o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-plain-223",
+    "field": "pista",
+    "text": "rajioo kiku",
+    "cat": "ctx",
+    "fix": "rajio o kiku",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-plain-224",
+    "field": "contexto",
+    "text": "ongakuo kiku",
+    "cat": "ctx",
+    "fix": "ongaku o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-plain-224",
+    "field": "pista",
+    "text": "ongakuo kiku",
+    "cat": "ctx",
+    "fix": "ongaku o kiku",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-plain-225",
+    "field": "contexto",
+    "text": "rajioo kiku",
+    "cat": "ctx",
+    "fix": "rajio o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-plain-225",
+    "field": "pista",
+    "text": "rajioo kiku",
+    "cat": "ctx",
+    "fix": "rajio o kiku",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-nai-226",
+    "field": "contexto",
+    "text": "rajioo kiku",
+    "cat": "ctx",
+    "fix": "rajio o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-nai-226",
+    "field": "pista",
+    "text": "rajioo kikanai",
+    "cat": "ctx",
+    "fix": "rajio o kikanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-nai-227",
+    "field": "contexto",
+    "text": "ongakuo kiku",
+    "cat": "ctx",
+    "fix": "ongaku o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-nai-227",
+    "field": "pista",
+    "text": "ongakuo kikanai",
+    "cat": "ctx",
+    "fix": "ongaku o kikanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-nai-228",
+    "field": "contexto",
+    "text": "rajioo kiku",
+    "cat": "ctx",
+    "fix": "rajio o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-nai-228",
+    "field": "pista",
+    "text": "rajioo kikanai",
+    "cat": "ctx",
+    "fix": "rajio o kikanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-ta-229",
+    "field": "contexto",
+    "text": "ongakuo kiku",
+    "cat": "ctx",
+    "fix": "ongaku o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-ta-229",
+    "field": "pista",
+    "text": "ongakuo kiita",
+    "cat": "ctx",
+    "fix": "ongaku o kiita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-ta-230",
+    "field": "contexto",
+    "text": "rajioo kiku",
+    "cat": "ctx",
+    "fix": "rajio o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-ta-230",
+    "field": "pista",
+    "text": "rajioo kiita",
+    "cat": "ctx",
+    "fix": "rajio o kiita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "kiku-ta-231",
+    "field": "contexto",
+    "text": "rajioo kiku",
+    "cat": "ctx",
+    "fix": "rajio o kiku",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "kiku-ta-231",
+    "field": "pista",
+    "text": "rajioo kiita",
+    "cat": "ctx",
+    "fix": "rajio o kiita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-masu-232",
+    "field": "contexto",
+    "text": "basuo matsu",
+    "cat": "ctx",
+    "fix": "basu o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-masu-232",
+    "field": "pista",
+    "text": "basuo machimasu",
+    "cat": "ctx",
+    "fix": "basu o machimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-masu-233",
+    "field": "contexto",
+    "text": "tomodachio matsu",
+    "cat": "ctx",
+    "fix": "tomodachi o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-masu-233",
+    "field": "pista",
+    "text": "tomodachio machimasu",
+    "cat": "ctx",
+    "fix": "tomodachi o machimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-masu-234",
+    "field": "contexto",
+    "text": "takushiio matsu",
+    "cat": "ctx",
+    "fix": "takushii o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-masu-234",
+    "field": "pista",
+    "text": "takushiio machimasu",
+    "cat": "ctx",
+    "fix": "takushii o machimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-masen-235",
+    "field": "contexto",
+    "text": "takushiio matsu",
+    "cat": "ctx",
+    "fix": "takushii o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-masen-235",
+    "field": "pista",
+    "text": "takushiio machimasen",
+    "cat": "ctx",
+    "fix": "takushii o machimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-masen-236",
+    "field": "contexto",
+    "text": "basuo matsu",
+    "cat": "ctx",
+    "fix": "basu o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-masen-236",
+    "field": "pista",
+    "text": "basuo machimasen",
+    "cat": "ctx",
+    "fix": "basu o machimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-masen-237",
+    "field": "contexto",
+    "text": "tomodachio matsu",
+    "cat": "ctx",
+    "fix": "tomodachi o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-masen-237",
+    "field": "pista",
+    "text": "tomodachio machimasen",
+    "cat": "ctx",
+    "fix": "tomodachi o machimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-mashita-238",
+    "field": "contexto",
+    "text": "tomodachio matsu",
+    "cat": "ctx",
+    "fix": "tomodachi o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-mashita-238",
+    "field": "pista",
+    "text": "tomodachio machimashita",
+    "cat": "ctx",
+    "fix": "tomodachi o machimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-mashita-239",
+    "field": "contexto",
+    "text": "takushiio matsu",
+    "cat": "ctx",
+    "fix": "takushii o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-mashita-239",
+    "field": "pista",
+    "text": "takushiio machimashita",
+    "cat": "ctx",
+    "fix": "takushii o machimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-mashita-240",
+    "field": "contexto",
+    "text": "basuo matsu",
+    "cat": "ctx",
+    "fix": "basu o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-mashita-240",
+    "field": "pista",
+    "text": "basuo machimashita",
+    "cat": "ctx",
+    "fix": "basu o machimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-masen_deshita-241",
+    "field": "contexto",
+    "text": "basuo matsu",
+    "cat": "ctx",
+    "fix": "basu o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-masen_deshita-241",
+    "field": "pista",
+    "text": "basuo machimasendeshita",
+    "cat": "ctx",
+    "fix": "basu o machimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-masen_deshita-242",
+    "field": "contexto",
+    "text": "takushiio matsu",
+    "cat": "ctx",
+    "fix": "takushii o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-masen_deshita-242",
+    "field": "pista",
+    "text": "takushiio machimasendeshita",
+    "cat": "ctx",
+    "fix": "takushii o machimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-masen_deshita-243",
+    "field": "contexto",
+    "text": "tomodachio matsu",
+    "cat": "ctx",
+    "fix": "tomodachi o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-masen_deshita-243",
+    "field": "pista",
+    "text": "tomodachio machimasendeshita",
+    "cat": "ctx",
+    "fix": "tomodachi o machimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-te-244",
+    "field": "contexto",
+    "text": "tomodachio matsu",
+    "cat": "ctx",
+    "fix": "tomodachi o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-te-244",
+    "field": "pista",
+    "text": "tomodachio matte",
+    "cat": "ctx",
+    "fix": "tomodachi o matte",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-te-245",
+    "field": "contexto",
+    "text": "takushiio matsu",
+    "cat": "ctx",
+    "fix": "takushii o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-te-245",
+    "field": "pista",
+    "text": "takushiio matte",
+    "cat": "ctx",
+    "fix": "takushii o matte",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-te-246",
+    "field": "contexto",
+    "text": "basuo matsu",
+    "cat": "ctx",
+    "fix": "basu o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-te-246",
+    "field": "pista",
+    "text": "basuo matte",
+    "cat": "ctx",
+    "fix": "basu o matte",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-plain-247",
+    "field": "contexto",
+    "text": "takushiio matsu",
+    "cat": "ctx",
+    "fix": "takushii o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-plain-247",
+    "field": "pista",
+    "text": "takushiio matsu",
+    "cat": "ctx",
+    "fix": "takushii o matsu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-plain-248",
+    "field": "contexto",
+    "text": "basuo matsu",
+    "cat": "ctx",
+    "fix": "basu o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-plain-248",
+    "field": "pista",
+    "text": "basuo matsu",
+    "cat": "ctx",
+    "fix": "basu o matsu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-plain-249",
+    "field": "contexto",
+    "text": "tomodachio matsu",
+    "cat": "ctx",
+    "fix": "tomodachi o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-plain-249",
+    "field": "pista",
+    "text": "tomodachio matsu",
+    "cat": "ctx",
+    "fix": "tomodachi o matsu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-nai-250",
+    "field": "contexto",
+    "text": "tomodachio matsu",
+    "cat": "ctx",
+    "fix": "tomodachi o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-nai-250",
+    "field": "pista",
+    "text": "tomodachio matanai",
+    "cat": "ctx",
+    "fix": "tomodachi o matanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-nai-251",
+    "field": "contexto",
+    "text": "basuo matsu",
+    "cat": "ctx",
+    "fix": "basu o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-nai-251",
+    "field": "pista",
+    "text": "basuo matanai",
+    "cat": "ctx",
+    "fix": "basu o matanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-nai-252",
+    "field": "contexto",
+    "text": "takushiio matsu",
+    "cat": "ctx",
+    "fix": "takushii o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-nai-252",
+    "field": "pista",
+    "text": "takushiio matanai",
+    "cat": "ctx",
+    "fix": "takushii o matanai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-ta-253",
+    "field": "contexto",
+    "text": "basuo matsu",
+    "cat": "ctx",
+    "fix": "basu o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-ta-253",
+    "field": "pista",
+    "text": "basuo matta",
+    "cat": "ctx",
+    "fix": "basu o matta",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-ta-254",
+    "field": "contexto",
+    "text": "takushiio matsu",
+    "cat": "ctx",
+    "fix": "takushii o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-ta-254",
+    "field": "pista",
+    "text": "takushiio matta",
+    "cat": "ctx",
+    "fix": "takushii o matta",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "matsu-ta-255",
+    "field": "contexto",
+    "text": "tomodachio matsu",
+    "cat": "ctx",
+    "fix": "tomodachi o matsu",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "matsu-ta-255",
+    "field": "pista",
+    "text": "tomodachio matta",
+    "cat": "ctx",
+    "fix": "tomodachi o matta",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-masu-272",
+    "field": "contexto",
+    "text": "shigotoo suru",
+    "cat": "ctx",
+    "fix": "shigoto o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-masu-272",
+    "field": "pista",
+    "text": "shigotoo shimasu",
+    "cat": "ctx",
+    "fix": "shigoto o shimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-masu-273",
+    "field": "contexto",
+    "text": "benkyouo suru",
+    "cat": "ctx",
+    "fix": "benkyou o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-masu-273",
+    "field": "pista",
+    "text": "benkyouo shimasu",
+    "cat": "ctx",
+    "fix": "benkyou o shimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-masu-274",
+    "field": "contexto",
+    "text": "tenisuo suru",
+    "cat": "ctx",
+    "fix": "tenisu o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-masu-274",
+    "field": "pista",
+    "text": "tenisuo shimasu",
+    "cat": "ctx",
+    "fix": "tenisu o shimasu",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-masen-275",
+    "field": "contexto",
+    "text": "tenisuo suru",
+    "cat": "ctx",
+    "fix": "tenisu o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-masen-275",
+    "field": "pista",
+    "text": "tenisuo shimasen",
+    "cat": "ctx",
+    "fix": "tenisu o shimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-masen-276",
+    "field": "contexto",
+    "text": "benkyouo suru",
+    "cat": "ctx",
+    "fix": "benkyou o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-masen-276",
+    "field": "pista",
+    "text": "benkyouo shimasen",
+    "cat": "ctx",
+    "fix": "benkyou o shimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-masen-277",
+    "field": "contexto",
+    "text": "shigotoo suru",
+    "cat": "ctx",
+    "fix": "shigoto o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-masen-277",
+    "field": "pista",
+    "text": "shigotoo shimasen",
+    "cat": "ctx",
+    "fix": "shigoto o shimasen",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-mashita-278",
+    "field": "contexto",
+    "text": "benkyouo suru",
+    "cat": "ctx",
+    "fix": "benkyou o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-mashita-278",
+    "field": "pista",
+    "text": "benkyouo shimashita",
+    "cat": "ctx",
+    "fix": "benkyou o shimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-mashita-279",
+    "field": "contexto",
+    "text": "tenisuo suru",
+    "cat": "ctx",
+    "fix": "tenisu o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-mashita-279",
+    "field": "pista",
+    "text": "tenisuo shimashita",
+    "cat": "ctx",
+    "fix": "tenisu o shimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-mashita-280",
+    "field": "contexto",
+    "text": "benkyouo suru",
+    "cat": "ctx",
+    "fix": "benkyou o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-mashita-280",
+    "field": "pista",
+    "text": "benkyouo shimashita",
+    "cat": "ctx",
+    "fix": "benkyou o shimashita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-masen_deshita-281",
+    "field": "contexto",
+    "text": "shigotoo suru",
+    "cat": "ctx",
+    "fix": "shigoto o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-masen_deshita-281",
+    "field": "pista",
+    "text": "shigotoo shimasendeshita",
+    "cat": "ctx",
+    "fix": "shigoto o shimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-masen_deshita-282",
+    "field": "contexto",
+    "text": "tenisuo suru",
+    "cat": "ctx",
+    "fix": "tenisu o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-masen_deshita-282",
+    "field": "pista",
+    "text": "tenisuo shimasendeshita",
+    "cat": "ctx",
+    "fix": "tenisu o shimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-masen_deshita-283",
+    "field": "contexto",
+    "text": "benkyouo suru",
+    "cat": "ctx",
+    "fix": "benkyou o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-masen_deshita-283",
+    "field": "pista",
+    "text": "benkyouo shimasendeshita",
+    "cat": "ctx",
+    "fix": "benkyou o shimasendeshita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-te-284",
+    "field": "contexto",
+    "text": "tenisuo suru",
+    "cat": "ctx",
+    "fix": "tenisu o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-te-284",
+    "field": "pista",
+    "text": "tenisuo shite",
+    "cat": "ctx",
+    "fix": "tenisu o shite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-te-285",
+    "field": "contexto",
+    "text": "benkyouo suru",
+    "cat": "ctx",
+    "fix": "benkyou o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-te-285",
+    "field": "pista",
+    "text": "benkyouo shite",
+    "cat": "ctx",
+    "fix": "benkyou o shite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-te-286",
+    "field": "contexto",
+    "text": "shigotoo suru",
+    "cat": "ctx",
+    "fix": "shigoto o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-te-286",
+    "field": "pista",
+    "text": "shigotoo shite",
+    "cat": "ctx",
+    "fix": "shigoto o shite",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-plain-287",
+    "field": "contexto",
+    "text": "tenisuo suru",
+    "cat": "ctx",
+    "fix": "tenisu o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-plain-287",
+    "field": "pista",
+    "text": "tenisuo suru",
+    "cat": "ctx",
+    "fix": "tenisu o suru",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-plain-288",
+    "field": "contexto",
+    "text": "shigotoo suru",
+    "cat": "ctx",
+    "fix": "shigoto o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-plain-288",
+    "field": "pista",
+    "text": "shigotoo suru",
+    "cat": "ctx",
+    "fix": "shigoto o suru",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-plain-289",
+    "field": "contexto",
+    "text": "benkyouo suru",
+    "cat": "ctx",
+    "fix": "benkyou o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-plain-289",
+    "field": "pista",
+    "text": "benkyouo suru",
+    "cat": "ctx",
+    "fix": "benkyou o suru",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-nai-290",
+    "field": "contexto",
+    "text": "tenisuo suru",
+    "cat": "ctx",
+    "fix": "tenisu o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-nai-290",
+    "field": "pista",
+    "text": "tenisuo shinai",
+    "cat": "ctx",
+    "fix": "tenisu o shinai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-nai-291",
+    "field": "contexto",
+    "text": "benkyouo suru",
+    "cat": "ctx",
+    "fix": "benkyou o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-nai-291",
+    "field": "pista",
+    "text": "benkyouo shinai",
+    "cat": "ctx",
+    "fix": "benkyou o shinai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-nai-292",
+    "field": "contexto",
+    "text": "shigotoo suru",
+    "cat": "ctx",
+    "fix": "shigoto o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-nai-292",
+    "field": "pista",
+    "text": "shigotoo shinai",
+    "cat": "ctx",
+    "fix": "shigoto o shinai",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-ta-293",
+    "field": "contexto",
+    "text": "benkyouo suru",
+    "cat": "ctx",
+    "fix": "benkyou o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-ta-293",
+    "field": "pista",
+    "text": "benkyouo shita",
+    "cat": "ctx",
+    "fix": "benkyou o shita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-ta-294",
+    "field": "contexto",
+    "text": "tenisuo suru",
+    "cat": "ctx",
+    "fix": "tenisu o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-ta-294",
+    "field": "pista",
+    "text": "tenisuo shita",
+    "cat": "ctx",
+    "fix": "tenisu o shita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  },
+  {
+    "id": "suru-ta-295",
+    "field": "contexto",
+    "text": "shigotoo suru",
+    "cat": "ctx",
+    "fix": "shigoto o suru",
+    "note": "object+wo particle romanized as one word, misreads as long vowel"
+  },
+  {
+    "id": "suru-ta-295",
+    "field": "pista",
+    "text": "shigotoo shita",
+    "cat": "ctx",
+    "fix": "shigoto o shita",
+    "note": "TTS romaji fuses particle wo into object, misleads pronunciation"
+  }
+]
