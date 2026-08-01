@@ -86,12 +86,23 @@ def parse_tracking(jsonl_path):
                 correct = False
             else:
                 continue  # status messages, mic errors, etc.
-            verb = (ex.get("verb") or "").split(" ")[0].strip().lower()
+            # the snapshot carries the pill text, e.g. "Verbo: sacar"
+            verb = (ex.get("verb") or "").split(":")[-1].strip().lower()
             tense = TENSE_NAMES_INV.get((ex.get("tense") or "").strip().lower())
             if verb and tense:
                 out.append((base_ts * 1000 + ev.get("t", 0), verb, tense, correct))
     out.sort()
-    return out
+    # The drill appends "Inténtalo otra vez" to the incorrect-feedback box
+    # ~300ms later, which the DOM tracker records as a second event — collapse
+    # same-verdict repeats on the same cell within 3s into one observation.
+    deduped = []
+    for ts, verb, tense, correct in out:
+        if deduped:
+            pts, pv, pt_, pc = deduped[-1]
+            if (pv, pt_, pc) == (verb, tense, correct) and ts - pts < 3000:
+                continue
+        deduped.append((ts, verb, tense, correct))
+    return deduped
 
 
 # ── the estimator ───────────────────────────────────────────────────────────
