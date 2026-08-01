@@ -28,7 +28,7 @@
     var sinWebSpeech = !(window.SpeechRecognition || window.webkitSpeechRecognition);
     return esSafari || sinWebSpeech;
   }
-  var state = { engine: pareceSafari() ? 'whisper' : 'browser', openaiKey: '', cloudModel: 'gpt-4o-transcribe' };
+  var state = { engine: 'elevenlabs', openaiKey: '', cloudModel: 'gpt-4o-transcribe' };
   try {
     var saved = JSON.parse(localStorage.getItem(STORE) || '{}');
     if (saved.engine) { state.engine = saved.engine; }
