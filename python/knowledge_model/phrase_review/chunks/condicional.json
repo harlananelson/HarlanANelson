@@ -1,0 +1,5462 @@
+[
+{
+"id": "abandonar-condicional-4420",
+"verbo": "abandonar",
+"contexto": "yo, en tu lugar, los malos hábitos",
+"respuesta": "yo abandonaría los malos hábitos en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "abandonar-condicional-4421",
+"verbo": "abandonar",
+"contexto": "ella, en esa situación, los malos hábitos",
+"respuesta": "ella abandonaría los malos hábitos en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "abandonar-condicional-4422",
+"verbo": "abandonar",
+"contexto": "ellos, en un mundo ideal, los malos hábitos",
+"respuesta": "ellos abandonarían los malos hábitos en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "abrir-condicional-4423",
+"verbo": "abrir",
+"contexto": "tú, si pudieras, un negocio",
+"respuesta": "tú abrirías un negocio si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "abrir-condicional-4424",
+"verbo": "abrir",
+"contexto": "nosotros, si fuera posible, un negocio",
+"respuesta": "nosotros abriríamos un negocio si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "abrir-condicional-4425",
+"verbo": "abrir",
+"contexto": "ustedes, de ser posible, un negocio",
+"respuesta": "ustedes abrirían un negocio de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "acabar-condicional-4426",
+"verbo": "acabar",
+"contexto": "él, con más tiempo, con los problemas",
+"respuesta": "él acabaría con los problemas con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "acabar-condicional-4427",
+"verbo": "acabar",
+"contexto": "usted, con más dinero, con los problemas",
+"respuesta": "usted acabaría con los problemas con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "acabar-condicional-4428",
+"verbo": "acabar",
+"contexto": "yo, con más experiencia, con los problemas",
+"respuesta": "yo acabaría con los problemas con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "aceptar-condicional-4429",
+"verbo": "aceptar",
+"contexto": "yo, en tu lugar, mejor",
+"respuesta": "yo aceptaría mejor en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "aceptar-condicional-4430",
+"verbo": "aceptar",
+"contexto": "ella, en esa situación, con serenidad",
+"respuesta": "ella aceptaría con serenidad en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "aceptar-condicional-4431",
+"verbo": "aceptar",
+"contexto": "ellos, en un mundo ideal, sin límites",
+"respuesta": "ellos aceptarían sin límites en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "acercar-condicional-4432",
+"verbo": "acercar",
+"contexto": "tú, si pudieras, el libro",
+"respuesta": "tú acercarías el libro si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "acercar-condicional-4433",
+"verbo": "acercar",
+"contexto": "nosotros, si fuera posible, el libro",
+"respuesta": "nosotros acercaríamos el libro si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "acercar-condicional-4434",
+"verbo": "acercar",
+"contexto": "ustedes, de ser posible, el libro",
+"respuesta": "ustedes acercarían el libro de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "acompañar-condicional-4435",
+"verbo": "acompañar",
+"contexto": "él, con más tiempo, al hospital",
+"respuesta": "él acompañaría al hospital con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "acompañar-condicional-4436",
+"verbo": "acompañar",
+"contexto": "usted, con más dinero, al hospital",
+"respuesta": "usted acompañaría al hospital con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "acompañar-condicional-4437",
+"verbo": "acompañar",
+"contexto": "yo, con más experiencia, al hospital",
+"respuesta": "yo acompañaría al hospital con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "acordar-condicional-4438",
+"verbo": "acordar",
+"contexto": "yo, en tu lugar, un plan",
+"respuesta": "yo acordaría un plan en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "acordar-condicional-4439",
+"verbo": "acordar",
+"contexto": "ella, en esa situación, un plan",
+"respuesta": "ella acordaría un plan en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "acordar-condicional-4440",
+"verbo": "acordar",
+"contexto": "ellos, en un mundo ideal, un plan",
+"respuesta": "ellos acordarían un plan en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "actuar-condicional-4441",
+"verbo": "actuar",
+"contexto": "tú, si pudieras, de otra manera",
+"respuesta": "tú actuarías de otra manera si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "actuar-condicional-4442",
+"verbo": "actuar",
+"contexto": "nosotros, si fuera posible, de otra manera",
+"respuesta": "nosotros actuaríamos de otra manera si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "actuar-condicional-4443",
+"verbo": "actuar",
+"contexto": "ustedes, de ser posible, de otra manera",
+"respuesta": "ustedes actuarían de otra manera de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "admitir-condicional-4444",
+"verbo": "admitir",
+"contexto": "él, con más tiempo, nuevos miembros",
+"respuesta": "él admitiría nuevos miembros con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "admitir-condicional-4445",
+"verbo": "admitir",
+"contexto": "usted, con más dinero, nuevos miembros",
+"respuesta": "usted admitiría nuevos miembros con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "admitir-condicional-4446",
+"verbo": "admitir",
+"contexto": "yo, con más experiencia, nuevos miembros",
+"respuesta": "yo admitiría nuevos miembros con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "aforar-condicional-4447",
+"verbo": "aforar",
+"contexto": "yo, en tu lugar, el lugar",
+"respuesta": "yo aforaría el lugar en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "aforar-condicional-4448",
+"verbo": "aforar",
+"contexto": "ella, en esa situación, el lugar",
+"respuesta": "ella aforaría el lugar en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "aforar-condicional-4449",
+"verbo": "aforar",
+"contexto": "ellos, en un mundo ideal, el lugar",
+"respuesta": "ellos aforarían el lugar en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "agradecer-condicional-4450",
+"verbo": "agradecer",
+"contexto": "tú, si pudieras, cada momento",
+"respuesta": "tú agradecerías cada momento si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "agradecer-condicional-4451",
+"verbo": "agradecer",
+"contexto": "nosotros, si fuera posible, cada momento",
+"respuesta": "nosotros agradeceríamos cada momento si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "agradecer-condicional-4452",
+"verbo": "agradecer",
+"contexto": "ustedes, de ser posible, cada momento",
+"respuesta": "ustedes agradecerían cada momento de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "alcanzar-condicional-4453",
+"verbo": "alcanzar",
+"contexto": "él, con más tiempo, la cima",
+"respuesta": "él alcanzaría la cima con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "alcanzar-condicional-4454",
+"verbo": "alcanzar",
+"contexto": "usted, con más dinero, la cima",
+"respuesta": "usted alcanzaría la cima con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "alcanzar-condicional-4455",
+"verbo": "alcanzar",
+"contexto": "yo, con más experiencia, la cima",
+"respuesta": "yo alcanzaría la cima con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "alegrar-condicional-4456",
+"verbo": "alegrar",
+"contexto": "yo, en tu lugar, a la familia",
+"respuesta": "yo alegraría a la familia en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "alegrar-condicional-4457",
+"verbo": "alegrar",
+"contexto": "ella, en esa situación, a la familia",
+"respuesta": "ella alegraría a la familia en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "alegrar-condicional-4458",
+"verbo": "alegrar",
+"contexto": "ellos, en un mundo ideal, a la familia",
+"respuesta": "ellos alegrarían a la familia en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "alejar-condicional-4459",
+"verbo": "alejar",
+"contexto": "tú, si pudieras, los problemas",
+"respuesta": "tú alejarías los problemas si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "alejar-condicional-4460",
+"verbo": "alejar",
+"contexto": "nosotros, si fuera posible, los problemas",
+"respuesta": "nosotros alejaríamos los problemas si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "alejar-condicional-4461",
+"verbo": "alejar",
+"contexto": "ustedes, de ser posible, los problemas",
+"respuesta": "ustedes alejarían los problemas de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "amar-condicional-4462",
+"verbo": "amar",
+"contexto": "él, con más tiempo, más profundamente",
+"respuesta": "él amaría más profundamente con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "amar-condicional-4463",
+"verbo": "amar",
+"contexto": "usted, con más dinero, más profundamente",
+"respuesta": "usted amaría más profundamente con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "amar-condicional-4464",
+"verbo": "amar",
+"contexto": "yo, con más experiencia, más profundamente",
+"respuesta": "yo amaría más profundamente con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "andar-condicional-4465",
+"verbo": "andar",
+"contexto": "yo, en tu lugar, por el campo",
+"respuesta": "yo andaría por el campo en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "andar-condicional-4466",
+"verbo": "andar",
+"contexto": "ella, en esa situación, por el campo",
+"respuesta": "ella andaría por el campo en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "andar-condicional-4467",
+"verbo": "andar",
+"contexto": "ellos, en un mundo ideal, por el campo",
+"respuesta": "ellos andarían por el campo en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "aparecer-condicional-4468",
+"verbo": "aparecer",
+"contexto": "tú, si pudieras, sin pensarlo",
+"respuesta": "tú aparecerías sin pensarlo si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "aparecer-condicional-4469",
+"verbo": "aparecer",
+"contexto": "nosotros, si fuera posible, sin dudar",
+"respuesta": "nosotros apareceríamos sin dudar si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "aparecer-condicional-4470",
+"verbo": "aparecer",
+"contexto": "ustedes, de ser posible, sin demora",
+"respuesta": "ustedes aparecerían sin demora de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "apartar-condicional-4471",
+"verbo": "apartar",
+"contexto": "él, con más tiempo, las distracciones",
+"respuesta": "él apartaría las distracciones con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "apartar-condicional-4472",
+"verbo": "apartar",
+"contexto": "usted, con más dinero, las distracciones",
+"respuesta": "usted apartaría las distracciones con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "apartar-condicional-4473",
+"verbo": "apartar",
+"contexto": "yo, con más experiencia, las distracciones",
+"respuesta": "yo apartaría las distracciones con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "apostar-condicional-4474",
+"verbo": "apostar",
+"contexto": "yo, en tu lugar, por el cambio",
+"respuesta": "yo apostaría por el cambio en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "apostar-condicional-4475",
+"verbo": "apostar",
+"contexto": "ella, en esa situación, por el cambio",
+"respuesta": "ella apostaría por el cambio en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "apostar-condicional-4476",
+"verbo": "apostar",
+"contexto": "ellos, en un mundo ideal, por el cambio",
+"respuesta": "ellos apostarían por el cambio en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "apoyar-condicional-4477",
+"verbo": "apoyar",
+"contexto": "tú, si pudieras, al equipo",
+"respuesta": "tú apoyarías al equipo si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "apoyar-condicional-4478",
+"verbo": "apoyar",
+"contexto": "nosotros, si fuera posible, al equipo",
+"respuesta": "nosotros apoyaríamos al equipo si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "apoyar-condicional-4479",
+"verbo": "apoyar",
+"contexto": "ustedes, de ser posible, al equipo",
+"respuesta": "ustedes apoyarían al equipo de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "aprender-condicional-4480",
+"verbo": "aprender",
+"contexto": "él, con más tiempo, de los errores",
+"respuesta": "él aprendería de los errores con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "aprender-condicional-4481",
+"verbo": "aprender",
+"contexto": "usted, con más dinero, de los errores",
+"respuesta": "usted aprendería de los errores con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "aprender-condicional-4482",
+"verbo": "aprender",
+"contexto": "yo, con más experiencia, de los errores",
+"respuesta": "yo aprendería de los errores con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "arreglar-condicional-4483",
+"verbo": "arreglar",
+"contexto": "yo, en tu lugar, la casa",
+"respuesta": "yo arreglaría la casa en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "arreglar-condicional-4484",
+"verbo": "arreglar",
+"contexto": "ella, en esa situación, la casa",
+"respuesta": "ella arreglaría la casa en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "arreglar-condicional-4485",
+"verbo": "arreglar",
+"contexto": "ellos, en un mundo ideal, la casa",
+"respuesta": "ellos arreglarían la casa en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "asegurar-condicional-4486",
+"verbo": "asegurar",
+"contexto": "tú, si pudieras, la victoria",
+"respuesta": "tú asegurarías la victoria si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "asegurar-condicional-4487",
+"verbo": "asegurar",
+"contexto": "nosotros, si fuera posible, la victoria",
+"respuesta": "nosotros aseguraríamos la victoria si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "asegurar-condicional-4488",
+"verbo": "asegurar",
+"contexto": "ustedes, de ser posible, la victoria",
+"respuesta": "ustedes asegurarían la victoria de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "asesinar-condicional-4489",
+"verbo": "asesinar",
+"contexto": "él, con más tiempo, las cosas bien",
+"respuesta": "él asesinaría las cosas bien con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "asesinar-condicional-4490",
+"verbo": "asesinar",
+"contexto": "usted, con más dinero, mucho más",
+"respuesta": "usted asesinaría mucho más con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "asesinar-condicional-4491",
+"verbo": "asesinar",
+"contexto": "yo, con más experiencia, con más eficiencia",
+"respuesta": "yo asesinaría con más eficiencia con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "asustar-condicional-4492",
+"verbo": "asustar",
+"contexto": "yo, en tu lugar, a cualquiera",
+"respuesta": "yo asustaría a cualquiera en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "asustar-condicional-4493",
+"verbo": "asustar",
+"contexto": "ella, en esa situación, a cualquiera",
+"respuesta": "ella asustaría a cualquiera en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "asustar-condicional-4494",
+"verbo": "asustar",
+"contexto": "ellos, en un mundo ideal, a cualquiera",
+"respuesta": "ellos asustarían a cualquiera en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "atacar-condicional-4495",
+"verbo": "atacar",
+"contexto": "tú, si pudieras, con estrategia",
+"respuesta": "tú atacarías con estrategia si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "atacar-condicional-4496",
+"verbo": "atacar",
+"contexto": "nosotros, si fuera posible, con estrategia",
+"respuesta": "nosotros atacaríamos con estrategia si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "atacar-condicional-4497",
+"verbo": "atacar",
+"contexto": "ustedes, de ser posible, con estrategia",
+"respuesta": "ustedes atacarían con estrategia de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "atrapar-condicional-4498",
+"verbo": "atrapar",
+"contexto": "él, con más tiempo, el momento",
+"respuesta": "él atraparía el momento con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "atrapar-condicional-4499",
+"verbo": "atrapar",
+"contexto": "usted, con más dinero, el momento",
+"respuesta": "usted atraparía el momento con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "atrapar-condicional-4500",
+"verbo": "atrapar",
+"contexto": "yo, con más experiencia, el momento",
+"respuesta": "yo atraparía el momento con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "averiguar-condicional-4501",
+"verbo": "averiguar",
+"contexto": "yo, en tu lugar, la verdad",
+"respuesta": "yo averiguaría la verdad en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "averiguar-condicional-4502",
+"verbo": "averiguar",
+"contexto": "ella, en esa situación, la verdad",
+"respuesta": "ella averiguaría la verdad en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "averiguar-condicional-4503",
+"verbo": "averiguar",
+"contexto": "ellos, en un mundo ideal, la verdad",
+"respuesta": "ellos averiguarían la verdad en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "ayudar-condicional-4504",
+"verbo": "ayudar",
+"contexto": "tú, si pudieras, con el proyecto",
+"respuesta": "tú ayudarías con el proyecto si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "ayudar-condicional-4505",
+"verbo": "ayudar",
+"contexto": "nosotros, si fuera posible, con el proyecto",
+"respuesta": "nosotros ayudaríamos con el proyecto si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "ayudar-condicional-4506",
+"verbo": "ayudar",
+"contexto": "ustedes, de ser posible, con el proyecto",
+"respuesta": "ustedes ayudarían con el proyecto de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "bailar-condicional-4507",
+"verbo": "bailar",
+"contexto": "él, con más tiempo, en la fiesta",
+"respuesta": "él bailaría en la fiesta con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "bailar-condicional-4508",
+"verbo": "bailar",
+"contexto": "usted, con más dinero, en la fiesta",
+"respuesta": "usted bailaría en la fiesta con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "bailar-condicional-4509",
+"verbo": "bailar",
+"contexto": "yo, con más experiencia, en la fiesta",
+"respuesta": "yo bailaría en la fiesta con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "bajar-condicional-4510",
+"verbo": "bajar",
+"contexto": "yo, en tu lugar, las escaleras",
+"respuesta": "yo bajaría las escaleras en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "bajar-condicional-4511",
+"verbo": "bajar",
+"contexto": "ella, en esa situación, las escaleras",
+"respuesta": "ella bajaría las escaleras en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "bajar-condicional-4512",
+"verbo": "bajar",
+"contexto": "ellos, en un mundo ideal, las escaleras",
+"respuesta": "ellos bajarían las escaleras en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "bastar-condicional-4513",
+"verbo": "bastar",
+"contexto": "tú, si pudieras, para todos",
+"respuesta": "tú bastarías para todos si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "bastar-condicional-4514",
+"verbo": "bastar",
+"contexto": "nosotros, si fuera posible, para todos",
+"respuesta": "nosotros bastaríamos para todos si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "bastar-condicional-4515",
+"verbo": "bastar",
+"contexto": "ustedes, de ser posible, para todos",
+"respuesta": "ustedes bastarían para todos de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "beber-condicional-4516",
+"verbo": "beber",
+"contexto": "él, con más tiempo, con moderación",
+"respuesta": "él bebería con moderación con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "beber-condicional-4517",
+"verbo": "beber",
+"contexto": "usted, con más dinero, con moderación",
+"respuesta": "usted bebería con moderación con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "beber-condicional-4518",
+"verbo": "beber",
+"contexto": "yo, con más experiencia, con moderación",
+"respuesta": "yo bebería con moderación con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "besar-condicional-4519",
+"verbo": "besar",
+"contexto": "yo, en tu lugar, de otra manera",
+"respuesta": "yo besaría de otra manera en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "besar-condicional-4520",
+"verbo": "besar",
+"contexto": "ella, en esa situación, lo necesario",
+"respuesta": "ella besaría lo necesario en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "besar-condicional-4521",
+"verbo": "besar",
+"contexto": "ellos, en un mundo ideal, sin preocupaciones",
+"respuesta": "ellos besarían sin preocupaciones en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "buscar-condicional-4522",
+"verbo": "buscar",
+"contexto": "tú, si pudieras, un nuevo camino",
+"respuesta": "tú buscarías un nuevo camino si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "buscar-condicional-4523",
+"verbo": "buscar",
+"contexto": "nosotros, si fuera posible, un nuevo camino",
+"respuesta": "nosotros buscaríamos un nuevo camino si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "buscar-condicional-4524",
+"verbo": "buscar",
+"contexto": "ustedes, de ser posible, un nuevo camino",
+"respuesta": "ustedes buscarían un nuevo camino de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "caer-condicional-4525",
+"verbo": "caer",
+"contexto": "él, con más tiempo, las cosas bien",
+"respuesta": "él caería las cosas bien con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "caer-condicional-4526",
+"verbo": "caer",
+"contexto": "usted, con más dinero, mucho más",
+"respuesta": "usted caería mucho más con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "caer-condicional-4527",
+"verbo": "caer",
+"contexto": "yo, con más experiencia, con más eficiencia",
+"respuesta": "yo caería con más eficiencia con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "callar-condicional-4528",
+"verbo": "callar",
+"contexto": "yo, en tu lugar, por respeto",
+"respuesta": "yo callaría por respeto en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "callar-condicional-4529",
+"verbo": "callar",
+"contexto": "ella, en esa situación, por respeto",
+"respuesta": "ella callaría por respeto en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "callar-condicional-4530",
+"verbo": "callar",
+"contexto": "ellos, en un mundo ideal, por respeto",
+"respuesta": "ellos callarían por respeto en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "calmar-condicional-4531",
+"verbo": "calmar",
+"contexto": "tú, si pudieras, con alegría",
+"respuesta": "tú calmarías con alegría si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "calmar-condicional-4532",
+"verbo": "calmar",
+"contexto": "nosotros, si fuera posible, lo antes posible",
+"respuesta": "nosotros calmaríamos lo antes posible si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "calmar-condicional-4533",
+"verbo": "calmar",
+"contexto": "ustedes, de ser posible, con más atención",
+"respuesta": "ustedes calmarían con más atención de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "cambiar-condicional-4534",
+"verbo": "cambiar",
+"contexto": "él, con más tiempo, de trabajo",
+"respuesta": "él cambiaría de trabajo con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "cambiar-condicional-4535",
+"verbo": "cambiar",
+"contexto": "usted, con más dinero, de trabajo",
+"respuesta": "usted cambiaría de trabajo con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "cambiar-condicional-4536",
+"verbo": "cambiar",
+"contexto": "yo, con más experiencia, de trabajo",
+"respuesta": "yo cambiaría de trabajo con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "caminar-condicional-4537",
+"verbo": "caminar",
+"contexto": "yo, en tu lugar, por el parque",
+"respuesta": "yo caminaría por el parque en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "caminar-condicional-4538",
+"verbo": "caminar",
+"contexto": "ella, en esa situación, por el parque",
+"respuesta": "ella caminaría por el parque en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "caminar-condicional-4539",
+"verbo": "caminar",
+"contexto": "ellos, en un mundo ideal, por el parque",
+"respuesta": "ellos caminarían por el parque en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "cantar-condicional-4540",
+"verbo": "cantar",
+"contexto": "tú, si pudieras, con el corazón",
+"respuesta": "tú cantarías con el corazón si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "cantar-condicional-4541",
+"verbo": "cantar",
+"contexto": "nosotros, si fuera posible, con el corazón",
+"respuesta": "nosotros cantaríamos con el corazón si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "cantar-condicional-4542",
+"verbo": "cantar",
+"contexto": "ustedes, de ser posible, con el corazón",
+"respuesta": "ustedes cantarían con el corazón de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "casar-condicional-4543",
+"verbo": "casar",
+"contexto": "él, con más tiempo, con una gran fiesta",
+"respuesta": "él casaría con una gran fiesta con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "casar-condicional-4544",
+"verbo": "casar",
+"contexto": "usted, con más dinero, con una gran fiesta",
+"respuesta": "usted casaría con una gran fiesta con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "casar-condicional-4545",
+"verbo": "casar",
+"contexto": "yo, con más experiencia, con una gran fiesta",
+"respuesta": "yo casaría con una gran fiesta con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "cerrar-condicional-4546",
+"verbo": "cerrar",
+"contexto": "yo, en tu lugar, la ventana",
+"respuesta": "yo cerraría la ventana en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "cerrar-condicional-4547",
+"verbo": "cerrar",
+"contexto": "ella, en esa situación, la ventana",
+"respuesta": "ella cerraría la ventana en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "cerrar-condicional-4548",
+"verbo": "cerrar",
+"contexto": "ellos, en un mundo ideal, la ventana",
+"respuesta": "ellos cerrarían la ventana en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "coger-condicional-4549",
+"verbo": "coger",
+"contexto": "tú, si pudieras, la oportunidad",
+"respuesta": "tú cogerías la oportunidad si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "coger-condicional-4550",
+"verbo": "coger",
+"contexto": "nosotros, si fuera posible, la oportunidad",
+"respuesta": "nosotros cogeríamos la oportunidad si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "coger-condicional-4551",
+"verbo": "coger",
+"contexto": "ustedes, de ser posible, la oportunidad",
+"respuesta": "ustedes cogerían la oportunidad de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "comenzar-condicional-4552",
+"verbo": "comenzar",
+"contexto": "él, con más tiempo, desde cero",
+"respuesta": "él comenzaría desde cero con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "comenzar-condicional-4553",
+"verbo": "comenzar",
+"contexto": "usted, con más dinero, desde cero",
+"respuesta": "usted comenzaría desde cero con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "comenzar-condicional-4554",
+"verbo": "comenzar",
+"contexto": "yo, con más experiencia, desde cero",
+"respuesta": "yo comenzaría desde cero con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "comer-condicional-4555",
+"verbo": "comer",
+"contexto": "yo, en tu lugar, más sano",
+"respuesta": "yo comería más sano en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "comer-condicional-4556",
+"verbo": "comer",
+"contexto": "ella, en esa situación, más sano",
+"respuesta": "ella comería más sano en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "comer-condicional-4557",
+"verbo": "comer",
+"contexto": "ellos, en un mundo ideal, más sano",
+"respuesta": "ellos comerían más sano en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "cometer-condicional-4558",
+"verbo": "cometer",
+"contexto": "tú, si pudieras, con entusiasmo",
+"respuesta": "tú cometerías con entusiasmo si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "cometer-condicional-4559",
+"verbo": "cometer",
+"contexto": "nosotros, si fuera posible, de buena gana",
+"respuesta": "nosotros cometeríamos de buena gana si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "cometer-condicional-4560",
+"verbo": "cometer",
+"contexto": "ustedes, de ser posible, mejor",
+"respuesta": "ustedes cometerían mejor de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "compartir-condicional-4561",
+"verbo": "compartir",
+"contexto": "él, con más tiempo, con los demás",
+"respuesta": "él compartiría con los demás con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "compartir-condicional-4562",
+"verbo": "compartir",
+"contexto": "usted, con más dinero, con los demás",
+"respuesta": "usted compartiría con los demás con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "compartir-condicional-4563",
+"verbo": "compartir",
+"contexto": "yo, con más experiencia, con los demás",
+"respuesta": "yo compartiría con los demás con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "comprar-condicional-4564",
+"verbo": "comprar",
+"contexto": "yo, en tu lugar, una casa nueva",
+"respuesta": "yo compraría una casa nueva en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "comprar-condicional-4565",
+"verbo": "comprar",
+"contexto": "ella, en esa situación, una casa nueva",
+"respuesta": "ella compraría una casa nueva en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "comprar-condicional-4566",
+"verbo": "comprar",
+"contexto": "ellos, en un mundo ideal, una casa nueva",
+"respuesta": "ellos comprarían una casa nueva en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "comprender-condicional-4567",
+"verbo": "comprender",
+"contexto": "tú, si pudieras, la lección",
+"respuesta": "tú comprenderías la lección si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "comprender-condicional-4568",
+"verbo": "comprender",
+"contexto": "nosotros, si fuera posible, la lección",
+"respuesta": "nosotros comprenderíamos la lección si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "comprender-condicional-4569",
+"verbo": "comprender",
+"contexto": "ustedes, de ser posible, la lección",
+"respuesta": "ustedes comprenderían la lección de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "conducir-condicional-4570",
+"verbo": "conducir",
+"contexto": "él, con más tiempo, hasta la ciudad",
+"respuesta": "él conduciría hasta la ciudad con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "conducir-condicional-4571",
+"verbo": "conducir",
+"contexto": "usted, con más dinero, hasta la ciudad",
+"respuesta": "usted conduciría hasta la ciudad con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "conducir-condicional-4572",
+"verbo": "conducir",
+"contexto": "yo, con más experiencia, hasta la ciudad",
+"respuesta": "yo conduciría hasta la ciudad con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "confiar-condicional-4573",
+"verbo": "confiar",
+"contexto": "yo, en tu lugar, en ti",
+"respuesta": "yo confiaría en ti en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "confiar-condicional-4574",
+"verbo": "confiar",
+"contexto": "ella, en esa situación, en ti",
+"respuesta": "ella confiaría en ti en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "confiar-condicional-4575",
+"verbo": "confiar",
+"contexto": "ellos, en un mundo ideal, en ti",
+"respuesta": "ellos confiarían en ti en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "conocer-condicional-4576",
+"verbo": "conocer",
+"contexto": "tú, si pudieras, a más personas",
+"respuesta": "tú conocerías a más personas si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "conocer-condicional-4577",
+"verbo": "conocer",
+"contexto": "nosotros, si fuera posible, a más personas",
+"respuesta": "nosotros conoceríamos a más personas si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "conocer-condicional-4578",
+"verbo": "conocer",
+"contexto": "ustedes, de ser posible, a más personas",
+"respuesta": "ustedes conocerían a más personas de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "conseguir-condicional-4579",
+"verbo": "conseguir",
+"contexto": "él, con más tiempo, más apoyo",
+"respuesta": "él conseguiría más apoyo con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "conseguir-condicional-4580",
+"verbo": "conseguir",
+"contexto": "usted, con más dinero, más apoyo",
+"respuesta": "usted conseguiría más apoyo con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "conseguir-condicional-4581",
+"verbo": "conseguir",
+"contexto": "yo, con más experiencia, más apoyo",
+"respuesta": "yo conseguiría más apoyo con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "considerar-condicional-4582",
+"verbo": "considerar",
+"contexto": "yo, en tu lugar, todas las opciones",
+"respuesta": "yo consideraría todas las opciones en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "considerar-condicional-4583",
+"verbo": "considerar",
+"contexto": "ella, en esa situación, todas las opciones",
+"respuesta": "ella consideraría todas las opciones en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "considerar-condicional-4584",
+"verbo": "considerar",
+"contexto": "ellos, en un mundo ideal, todas las opciones",
+"respuesta": "ellos considerarían todas las opciones en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "construir-condicional-4585",
+"verbo": "construir",
+"contexto": "tú, si pudieras, un futuro mejor",
+"respuesta": "tú construirías un futuro mejor si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "construir-condicional-4586",
+"verbo": "construir",
+"contexto": "nosotros, si fuera posible, un futuro mejor",
+"respuesta": "nosotros construiríamos un futuro mejor si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "construir-condicional-4587",
+"verbo": "construir",
+"contexto": "ustedes, de ser posible, un futuro mejor",
+"respuesta": "ustedes construirían un futuro mejor de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "contar-condicional-4588",
+"verbo": "contar",
+"contexto": "él, con más tiempo, lo que pasó",
+"respuesta": "él contaría lo que pasó con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "contar-condicional-4589",
+"verbo": "contar",
+"contexto": "usted, con más dinero, lo que pasó",
+"respuesta": "usted contaría lo que pasó con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "contar-condicional-4590",
+"verbo": "contar",
+"contexto": "yo, con más experiencia, lo que pasó",
+"respuesta": "yo contaría lo que pasó con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "contestar-condicional-4591",
+"verbo": "contestar",
+"contexto": "yo, en tu lugar, con sinceridad",
+"respuesta": "yo contestaría con sinceridad en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "contestar-condicional-4592",
+"verbo": "contestar",
+"contexto": "ella, en esa situación, con sinceridad",
+"respuesta": "ella contestaría con sinceridad en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "contestar-condicional-4593",
+"verbo": "contestar",
+"contexto": "ellos, en un mundo ideal, con sinceridad",
+"respuesta": "ellos contestarían con sinceridad en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "continuar-condicional-4594",
+"verbo": "continuar",
+"contexto": "tú, si pudieras, el camino",
+"respuesta": "tú continuarías el camino si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "continuar-condicional-4595",
+"verbo": "continuar",
+"contexto": "nosotros, si fuera posible, el camino",
+"respuesta": "nosotros continuaríamos el camino si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "continuar-condicional-4596",
+"verbo": "continuar",
+"contexto": "ustedes, de ser posible, el camino",
+"respuesta": "ustedes continuarían el camino de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "controlar-condicional-4597",
+"verbo": "controlar",
+"contexto": "él, con más tiempo, mejor las emociones",
+"respuesta": "él controlaría mejor las emociones con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "controlar-condicional-4598",
+"verbo": "controlar",
+"contexto": "usted, con más dinero, mejor las emociones",
+"respuesta": "usted controlaría mejor las emociones con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "controlar-condicional-4599",
+"verbo": "controlar",
+"contexto": "yo, con más experiencia, mejor las emociones",
+"respuesta": "yo controlaría mejor las emociones con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "convertir-condicional-4600",
+"verbo": "convertir",
+"contexto": "yo, en tu lugar, la idea en realidad",
+"respuesta": "yo convertiría la idea en realidad en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "convertir-condicional-4601",
+"verbo": "convertir",
+"contexto": "ella, en esa situación, la idea en realidad",
+"respuesta": "ella convertiría la idea en realidad en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "convertir-condicional-4602",
+"verbo": "convertir",
+"contexto": "ellos, en un mundo ideal, la idea en realidad",
+"respuesta": "ellos convertirían la idea en realidad en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "correr-condicional-4603",
+"verbo": "correr",
+"contexto": "tú, si pudieras, en el maratón",
+"respuesta": "tú correrías en el maratón si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "correr-condicional-4604",
+"verbo": "correr",
+"contexto": "nosotros, si fuera posible, en el maratón",
+"respuesta": "nosotros correríamos en el maratón si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "correr-condicional-4605",
+"verbo": "correr",
+"contexto": "ustedes, de ser posible, en el maratón",
+"respuesta": "ustedes correrían en el maratón de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "cortar-condicional-4606",
+"verbo": "cortar",
+"contexto": "él, con más tiempo, con cuidado",
+"respuesta": "él cortaría con cuidado con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "cortar-condicional-4607",
+"verbo": "cortar",
+"contexto": "usted, con más dinero, con cuidado",
+"respuesta": "usted cortaría con cuidado con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "cortar-condicional-4608",
+"verbo": "cortar",
+"contexto": "yo, con más experiencia, con cuidado",
+"respuesta": "yo cortaría con cuidado con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "costar-condicional-4609",
+"verbo": "costar",
+"contexto": "yo, en tu lugar, menos esfuerzo",
+"respuesta": "yo costaría menos esfuerzo en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "costar-condicional-4610",
+"verbo": "costar",
+"contexto": "ella, en esa situación, menos esfuerzo",
+"respuesta": "ella costaría menos esfuerzo en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "costar-condicional-4611",
+"verbo": "costar",
+"contexto": "ellos, en un mundo ideal, menos esfuerzo",
+"respuesta": "ellos costarían menos esfuerzo en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "crear-condicional-4612",
+"verbo": "crear",
+"contexto": "tú, si pudieras, una empresa",
+"respuesta": "tú crearías una empresa si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "crear-condicional-4613",
+"verbo": "crear",
+"contexto": "nosotros, si fuera posible, una empresa",
+"respuesta": "nosotros crearíamos una empresa si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "crear-condicional-4614",
+"verbo": "crear",
+"contexto": "ustedes, de ser posible, una empresa",
+"respuesta": "ustedes crearían una empresa de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "crecer-condicional-4615",
+"verbo": "crecer",
+"contexto": "él, con más tiempo, sin límites",
+"respuesta": "él crecería sin límites con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "crecer-condicional-4616",
+"verbo": "crecer",
+"contexto": "usted, con más dinero, sin límites",
+"respuesta": "usted crecería sin límites con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "crecer-condicional-4617",
+"verbo": "crecer",
+"contexto": "yo, con más experiencia, sin límites",
+"respuesta": "yo crecería sin límites con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "creer-condicional-4618",
+"verbo": "creer",
+"contexto": "yo, en tu lugar, en ti mismo",
+"respuesta": "yo creería en ti mismo en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "creer-condicional-4619",
+"verbo": "creer",
+"contexto": "ella, en esa situación, en ti mismo",
+"respuesta": "ella creería en ti mismo en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "creer-condicional-4620",
+"verbo": "creer",
+"contexto": "ellos, en un mundo ideal, en ti mismo",
+"respuesta": "ellos creerían en ti mismo en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "cubrir-condicional-4621",
+"verbo": "cubrir",
+"contexto": "tú, si pudieras, las necesidades",
+"respuesta": "tú cubrirías las necesidades si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "cubrir-condicional-4622",
+"verbo": "cubrir",
+"contexto": "nosotros, si fuera posible, las necesidades",
+"respuesta": "nosotros cubriríamos las necesidades si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "cubrir-condicional-4623",
+"verbo": "cubrir",
+"contexto": "ustedes, de ser posible, las necesidades",
+"respuesta": "ustedes cubrirían las necesidades de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "cuidar-condicional-4624",
+"verbo": "cuidar",
+"contexto": "él, con más tiempo, con más detalle",
+"respuesta": "él cuidaría con más detalle con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "cuidar-condicional-4625",
+"verbo": "cuidar",
+"contexto": "usted, con más dinero, algo mejor",
+"respuesta": "usted cuidaría algo mejor con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "cuidar-condicional-4626",
+"verbo": "cuidar",
+"contexto": "yo, con más experiencia, mejor",
+"respuesta": "yo cuidaría mejor con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "cumplir-condicional-4627",
+"verbo": "cumplir",
+"contexto": "yo, en tu lugar, la promesa",
+"respuesta": "yo cumpliría la promesa en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "cumplir-condicional-4628",
+"verbo": "cumplir",
+"contexto": "ella, en esa situación, la promesa",
+"respuesta": "ella cumpliría la promesa en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "cumplir-condicional-4629",
+"verbo": "cumplir",
+"contexto": "ellos, en un mundo ideal, la promesa",
+"respuesta": "ellos cumplirían la promesa en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "dar-condicional-4630",
+"verbo": "dar",
+"contexto": "tú, si pudieras, una oportunidad",
+"respuesta": "tú darías una oportunidad si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "dar-condicional-4631",
+"verbo": "dar",
+"contexto": "nosotros, si fuera posible, una oportunidad",
+"respuesta": "nosotros daríamos una oportunidad si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "dar-condicional-4632",
+"verbo": "dar",
+"contexto": "ustedes, de ser posible, una oportunidad",
+"respuesta": "ustedes darían una oportunidad de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "deber-condicional-4633",
+"verbo": "deber",
+"contexto": "él, con más tiempo, actuar mejor",
+"respuesta": "él debería actuar mejor con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "deber-condicional-4634",
+"verbo": "deber",
+"contexto": "usted, con más dinero, actuar mejor",
+"respuesta": "usted debería actuar mejor con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "deber-condicional-4635",
+"verbo": "deber",
+"contexto": "yo, con más experiencia, actuar mejor",
+"respuesta": "yo debería actuar mejor con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "decidir-condicional-4636",
+"verbo": "decidir",
+"contexto": "yo, en tu lugar, con más calma",
+"respuesta": "yo decidiría con más calma en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "decidir-condicional-4637",
+"verbo": "decidir",
+"contexto": "ella, en esa situación, con más calma",
+"respuesta": "ella decidiría con más calma en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "decidir-condicional-4638",
+"verbo": "decidir",
+"contexto": "ellos, en un mundo ideal, con más calma",
+"respuesta": "ellos decidirían con más calma en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "decir-condicional-4639",
+"verbo": "decir",
+"contexto": "tú, si pudieras, algo importante",
+"respuesta": "tú dirías algo importante si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "decir-condicional-4640",
+"verbo": "decir",
+"contexto": "nosotros, si fuera posible, algo importante",
+"respuesta": "nosotros diríamos algo importante si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "decir-condicional-4641",
+"verbo": "decir",
+"contexto": "ustedes, de ser posible, algo importante",
+"respuesta": "ustedes dirían algo importante de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "defender-condicional-4642",
+"verbo": "defender",
+"contexto": "él, con más tiempo, a los débiles",
+"respuesta": "él defendería a los débiles con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "defender-condicional-4643",
+"verbo": "defender",
+"contexto": "usted, con más dinero, a los débiles",
+"respuesta": "usted defendería a los débiles con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "defender-condicional-4644",
+"verbo": "defender",
+"contexto": "yo, con más experiencia, a los débiles",
+"respuesta": "yo defendería a los débiles con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "dejar-condicional-4645",
+"verbo": "dejar",
+"contexto": "yo, en tu lugar, mejor",
+"respuesta": "yo dejaría mejor en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "dejar-condicional-4646",
+"verbo": "dejar",
+"contexto": "ella, en esa situación, con serenidad",
+"respuesta": "ella dejaría con serenidad en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "dejar-condicional-4647",
+"verbo": "dejar",
+"contexto": "ellos, en un mundo ideal, sin límites",
+"respuesta": "ellos dejarían sin límites en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "demostrar-condicional-4648",
+"verbo": "demostrar",
+"contexto": "tú, si pudieras, su inocencia",
+"respuesta": "tú demostrarías su inocencia si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "demostrar-condicional-4649",
+"verbo": "demostrar",
+"contexto": "nosotros, si fuera posible, su inocencia",
+"respuesta": "nosotros demostraríamos su inocencia si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "demostrar-condicional-4650",
+"verbo": "demostrar",
+"contexto": "ustedes, de ser posible, su inocencia",
+"respuesta": "ustedes demostrarían su inocencia de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "depender-condicional-4651",
+"verbo": "depender",
+"contexto": "él, con más tiempo, de la suerte",
+"respuesta": "él dependería de la suerte con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "depender-condicional-4652",
+"verbo": "depender",
+"contexto": "usted, con más dinero, de la suerte",
+"respuesta": "usted dependería de la suerte con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "depender-condicional-4653",
+"verbo": "depender",
+"contexto": "yo, con más experiencia, de la suerte",
+"respuesta": "yo dependería de la suerte con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "desaparecer-condicional-4654",
+"verbo": "desaparecer",
+"contexto": "yo, en tu lugar, sin dejar rastro",
+"respuesta": "yo desaparecería sin dejar rastro en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "desaparecer-condicional-4655",
+"verbo": "desaparecer",
+"contexto": "ella, en esa situación, sin dejar rastro",
+"respuesta": "ella desaparecería sin dejar rastro en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "desaparecer-condicional-4656",
+"verbo": "desaparecer",
+"contexto": "ellos, en un mundo ideal, sin dejar rastro",
+"respuesta": "ellos desaparecerían sin dejar rastro en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "desarrollar-condicional-4657",
+"verbo": "desarrollar",
+"contexto": "tú, si pudieras, nuevas ideas",
+"respuesta": "tú desarrollarías nuevas ideas si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "desarrollar-condicional-4658",
+"verbo": "desarrollar",
+"contexto": "nosotros, si fuera posible, nuevas ideas",
+"respuesta": "nosotros desarrollaríamos nuevas ideas si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "desarrollar-condicional-4659",
+"verbo": "desarrollar",
+"contexto": "ustedes, de ser posible, nuevas ideas",
+"respuesta": "ustedes desarrollarían nuevas ideas de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "descubrir-condicional-4660",
+"verbo": "descubrir",
+"contexto": "él, con más tiempo, algo increíble",
+"respuesta": "él descubriría algo increíble con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "descubrir-condicional-4661",
+"verbo": "descubrir",
+"contexto": "usted, con más dinero, algo increíble",
+"respuesta": "usted descubriría algo increíble con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "descubrir-condicional-4662",
+"verbo": "descubrir",
+"contexto": "yo, con más experiencia, algo increíble",
+"respuesta": "yo descubriría algo increíble con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "desear-condicional-4663",
+"verbo": "desear",
+"contexto": "yo, en tu lugar, lo mejor",
+"respuesta": "yo desearía lo mejor en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "desear-condicional-4664",
+"verbo": "desear",
+"contexto": "ella, en esa situación, lo mejor",
+"respuesta": "ella desearía lo mejor en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "desear-condicional-4665",
+"verbo": "desear",
+"contexto": "ellos, en un mundo ideal, lo mejor",
+"respuesta": "ellos desearían lo mejor en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "despedir-condicional-4666",
+"verbo": "despedir",
+"contexto": "tú, si pudieras, a los invitados",
+"respuesta": "tú despedirías a los invitados si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "despedir-condicional-4667",
+"verbo": "despedir",
+"contexto": "nosotros, si fuera posible, a los invitados",
+"respuesta": "nosotros despediríamos a los invitados si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "despedir-condicional-4668",
+"verbo": "despedir",
+"contexto": "ustedes, de ser posible, a los invitados",
+"respuesta": "ustedes despedirían a los invitados de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "despertar-condicional-4669",
+"verbo": "despertar",
+"contexto": "él, con más tiempo, sin alarma",
+"respuesta": "él despertaría sin alarma con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "despertar-condicional-4670",
+"verbo": "despertar",
+"contexto": "usted, con más dinero, sin alarma",
+"respuesta": "usted despertaría sin alarma con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "despertar-condicional-4671",
+"verbo": "despertar",
+"contexto": "yo, con más experiencia, sin alarma",
+"respuesta": "yo despertaría sin alarma con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "destruir-condicional-4672",
+"verbo": "destruir",
+"contexto": "yo, en tu lugar, los prejuicios",
+"respuesta": "yo destruiría los prejuicios en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "destruir-condicional-4673",
+"verbo": "destruir",
+"contexto": "ella, en esa situación, los prejuicios",
+"respuesta": "ella destruiría los prejuicios en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "destruir-condicional-4674",
+"verbo": "destruir",
+"contexto": "ellos, en un mundo ideal, los prejuicios",
+"respuesta": "ellos destruirían los prejuicios en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "detener-condicional-4675",
+"verbo": "detener",
+"contexto": "tú, si pudieras, el tiempo",
+"respuesta": "tú detendrías el tiempo si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "detener-condicional-4676",
+"verbo": "detener",
+"contexto": "nosotros, si fuera posible, el tiempo",
+"respuesta": "nosotros detendríamos el tiempo si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "detener-condicional-4677",
+"verbo": "detener",
+"contexto": "ustedes, de ser posible, el tiempo",
+"respuesta": "ustedes detendrían el tiempo de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "devolver-condicional-4678",
+"verbo": "devolver",
+"contexto": "él, con más tiempo, la llamada",
+"respuesta": "él devolvería la llamada con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "devolver-condicional-4679",
+"verbo": "devolver",
+"contexto": "usted, con más dinero, la llamada",
+"respuesta": "usted devolvería la llamada con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "devolver-condicional-4680",
+"verbo": "devolver",
+"contexto": "yo, con más experiencia, la llamada",
+"respuesta": "yo devolvería la llamada con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "dirigir-condicional-4681",
+"verbo": "dirigir",
+"contexto": "yo, en tu lugar, la empresa",
+"respuesta": "yo dirigiría la empresa en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "dirigir-condicional-4682",
+"verbo": "dirigir",
+"contexto": "ella, en esa situación, la empresa",
+"respuesta": "ella dirigiría la empresa en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "dirigir-condicional-4683",
+"verbo": "dirigir",
+"contexto": "ellos, en un mundo ideal, la empresa",
+"respuesta": "ellos dirigirían la empresa en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "disculpar-condicional-4684",
+"verbo": "disculpar",
+"contexto": "tú, si pudieras, el error",
+"respuesta": "tú disculparías el error si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "disculpar-condicional-4685",
+"verbo": "disculpar",
+"contexto": "nosotros, si fuera posible, el error",
+"respuesta": "nosotros disculparíamos el error si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "disculpar-condicional-4686",
+"verbo": "disculpar",
+"contexto": "ustedes, de ser posible, el error",
+"respuesta": "ustedes disculparían el error de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "discutir-condicional-4687",
+"verbo": "discutir",
+"contexto": "él, con más tiempo, sin pelear",
+"respuesta": "él discutiría sin pelear con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "discutir-condicional-4688",
+"verbo": "discutir",
+"contexto": "usted, con más dinero, sin pelear",
+"respuesta": "usted discutiría sin pelear con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "discutir-condicional-4689",
+"verbo": "discutir",
+"contexto": "yo, con más experiencia, sin pelear",
+"respuesta": "yo discutiría sin pelear con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "disfrutar-condicional-4690",
+"verbo": "disfrutar",
+"contexto": "yo, en tu lugar, cada momento",
+"respuesta": "yo disfrutaría cada momento en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "disfrutar-condicional-4691",
+"verbo": "disfrutar",
+"contexto": "ella, en esa situación, cada momento",
+"respuesta": "ella disfrutaría cada momento en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "disfrutar-condicional-4692",
+"verbo": "disfrutar",
+"contexto": "ellos, en un mundo ideal, cada momento",
+"respuesta": "ellos disfrutarían cada momento en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "disparar-condicional-4693",
+"verbo": "disparar",
+"contexto": "tú, si pudieras, con precisión",
+"respuesta": "tú dispararías con precisión si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "disparar-condicional-4694",
+"verbo": "disparar",
+"contexto": "nosotros, si fuera posible, con precisión",
+"respuesta": "nosotros dispararíamos con precisión si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "disparar-condicional-4695",
+"verbo": "disparar",
+"contexto": "ustedes, de ser posible, con precisión",
+"respuesta": "ustedes dispararían con precisión de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "dormir-condicional-4696",
+"verbo": "dormir",
+"contexto": "él, con más tiempo, toda la noche",
+"respuesta": "él dormiría toda la noche con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "dormir-condicional-4697",
+"verbo": "dormir",
+"contexto": "usted, con más dinero, toda la noche",
+"respuesta": "usted dormiría toda la noche con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "dormir-condicional-4698",
+"verbo": "dormir",
+"contexto": "yo, con más experiencia, toda la noche",
+"respuesta": "yo dormiría toda la noche con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "echar-condicional-4699",
+"verbo": "echar",
+"contexto": "yo, en tu lugar, de menos a todos",
+"respuesta": "yo echaría de menos a todos en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "echar-condicional-4700",
+"verbo": "echar",
+"contexto": "ella, en esa situación, de menos a todos",
+"respuesta": "ella echaría de menos a todos en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "echar-condicional-4701",
+"verbo": "echar",
+"contexto": "ellos, en un mundo ideal, de menos a todos",
+"respuesta": "ellos echarían de menos a todos en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "elegir-condicional-4702",
+"verbo": "elegir",
+"contexto": "tú, si pudieras, lo mejor",
+"respuesta": "tú elegirías lo mejor si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "elegir-condicional-4703",
+"verbo": "elegir",
+"contexto": "nosotros, si fuera posible, lo mejor",
+"respuesta": "nosotros elegiríamos lo mejor si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "elegir-condicional-4704",
+"verbo": "elegir",
+"contexto": "ustedes, de ser posible, lo mejor",
+"respuesta": "ustedes elegirían lo mejor de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "empezar-condicional-4705",
+"verbo": "empezar",
+"contexto": "él, con más tiempo, sin retraso",
+"respuesta": "él empezaría sin retraso con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "empezar-condicional-4706",
+"verbo": "empezar",
+"contexto": "usted, con más dinero, sin retraso",
+"respuesta": "usted empezaría sin retraso con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "empezar-condicional-4707",
+"verbo": "empezar",
+"contexto": "yo, con más experiencia, sin retraso",
+"respuesta": "yo empezaría sin retraso con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "encantar-condicional-4708",
+"verbo": "encantar",
+"contexto": "yo, en tu lugar, a todos",
+"respuesta": "yo encantaría a todos en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "encantar-condicional-4709",
+"verbo": "encantar",
+"contexto": "ella, en esa situación, a todos",
+"respuesta": "ella encantaría a todos en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "encantar-condicional-4710",
+"verbo": "encantar",
+"contexto": "ellos, en un mundo ideal, a todos",
+"respuesta": "ellos encantarían a todos en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "encontrar-condicional-4711",
+"verbo": "encontrar",
+"contexto": "tú, si pudieras, un camino mejor",
+"respuesta": "tú encontrarías un camino mejor si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "encontrar-condicional-4712",
+"verbo": "encontrar",
+"contexto": "nosotros, si fuera posible, un camino mejor",
+"respuesta": "nosotros encontraríamos un camino mejor si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "encontrar-condicional-4713",
+"verbo": "encontrar",
+"contexto": "ustedes, de ser posible, un camino mejor",
+"respuesta": "ustedes encontrarían un camino mejor de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "enfrentar-condicional-4714",
+"verbo": "enfrentar",
+"contexto": "él, con más tiempo, los problemas",
+"respuesta": "él enfrentaría los problemas con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "enfrentar-condicional-4715",
+"verbo": "enfrentar",
+"contexto": "usted, con más dinero, los problemas",
+"respuesta": "usted enfrentaría los problemas con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "enfrentar-condicional-4716",
+"verbo": "enfrentar",
+"contexto": "yo, con más experiencia, los problemas",
+"respuesta": "yo enfrentaría los problemas con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "engañar-condicional-4717",
+"verbo": "engañar",
+"contexto": "yo, en tu lugar, a nadie",
+"respuesta": "yo engañaría a nadie en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "engañar-condicional-4718",
+"verbo": "engañar",
+"contexto": "ella, en esa situación, a nadie",
+"respuesta": "ella engañaría a nadie en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "engañar-condicional-4719",
+"verbo": "engañar",
+"contexto": "ellos, en un mundo ideal, a nadie",
+"respuesta": "ellos engañarían a nadie en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "enseñar-condicional-4720",
+"verbo": "enseñar",
+"contexto": "tú, si pudieras, a los niños",
+"respuesta": "tú enseñarías a los niños si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "enseñar-condicional-4721",
+"verbo": "enseñar",
+"contexto": "nosotros, si fuera posible, a los niños",
+"respuesta": "nosotros enseñaríamos a los niños si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "enseñar-condicional-4722",
+"verbo": "enseñar",
+"contexto": "ustedes, de ser posible, a los niños",
+"respuesta": "ustedes enseñarían a los niños de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "entender-condicional-4723",
+"verbo": "entender",
+"contexto": "él, con más tiempo, a los demás",
+"respuesta": "él entendería a los demás con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "entender-condicional-4724",
+"verbo": "entender",
+"contexto": "usted, con más dinero, a los demás",
+"respuesta": "usted entendería a los demás con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "entender-condicional-4725",
+"verbo": "entender",
+"contexto": "yo, con más experiencia, a los demás",
+"respuesta": "yo entendería a los demás con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "enterar-condicional-4726",
+"verbo": "enterar",
+"contexto": "yo, en tu lugar, a todos",
+"respuesta": "yo enteraría a todos en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "enterar-condicional-4727",
+"verbo": "enterar",
+"contexto": "ella, en esa situación, a todos",
+"respuesta": "ella enteraría a todos en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "enterar-condicional-4728",
+"verbo": "enterar",
+"contexto": "ellos, en un mundo ideal, a todos",
+"respuesta": "ellos enterarían a todos en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "entrar-condicional-4729",
+"verbo": "entrar",
+"contexto": "tú, si pudieras, al edificio",
+"respuesta": "tú entrarías al edificio si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "entrar-condicional-4730",
+"verbo": "entrar",
+"contexto": "nosotros, si fuera posible, al edificio",
+"respuesta": "nosotros entraríamos al edificio si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "entrar-condicional-4731",
+"verbo": "entrar",
+"contexto": "ustedes, de ser posible, al edificio",
+"respuesta": "ustedes entrarían al edificio de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "entregar-condicional-4732",
+"verbo": "entregar",
+"contexto": "él, con más tiempo, los documentos",
+"respuesta": "él entregaría los documentos con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "entregar-condicional-4733",
+"verbo": "entregar",
+"contexto": "usted, con más dinero, los documentos",
+"respuesta": "usted entregaría los documentos con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "entregar-condicional-4734",
+"verbo": "entregar",
+"contexto": "yo, con más experiencia, los documentos",
+"respuesta": "yo entregaría los documentos con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "enviar-condicional-4735",
+"verbo": "enviar",
+"contexto": "yo, en tu lugar, un mensaje",
+"respuesta": "yo enviaría un mensaje en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "enviar-condicional-4736",
+"verbo": "enviar",
+"contexto": "ella, en esa situación, un mensaje",
+"respuesta": "ella enviaría un mensaje en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "enviar-condicional-4737",
+"verbo": "enviar",
+"contexto": "ellos, en un mundo ideal, un mensaje",
+"respuesta": "ellos enviarían un mensaje en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "escapar-condicional-4738",
+"verbo": "escapar",
+"contexto": "tú, si pudieras, a un lugar tranquilo",
+"respuesta": "tú escaparías a un lugar tranquilo si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "escapar-condicional-4739",
+"verbo": "escapar",
+"contexto": "nosotros, si fuera posible, a un lugar tranquilo",
+"respuesta": "nosotros escaparíamos a un lugar tranquilo si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "escapar-condicional-4740",
+"verbo": "escapar",
+"contexto": "ustedes, de ser posible, a un lugar tranquilo",
+"respuesta": "ustedes escaparían a un lugar tranquilo de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "esconder-condicional-4741",
+"verbo": "esconder",
+"contexto": "él, con más tiempo, la verdad",
+"respuesta": "él escondería la verdad con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "esconder-condicional-4742",
+"verbo": "esconder",
+"contexto": "usted, con más dinero, la verdad",
+"respuesta": "usted escondería la verdad con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "esconder-condicional-4743",
+"verbo": "esconder",
+"contexto": "yo, con más experiencia, la verdad",
+"respuesta": "yo escondería la verdad con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "escribir-condicional-4744",
+"verbo": "escribir",
+"contexto": "yo, en tu lugar, una carta",
+"respuesta": "yo escribiría una carta en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "escribir-condicional-4745",
+"verbo": "escribir",
+"contexto": "ella, en esa situación, una carta",
+"respuesta": "ella escribiría una carta en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "escribir-condicional-4746",
+"verbo": "escribir",
+"contexto": "ellos, en un mundo ideal, una carta",
+"respuesta": "ellos escribirían una carta en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "escuchar-condicional-4747",
+"verbo": "escuchar",
+"contexto": "tú, si pudieras, buena música",
+"respuesta": "tú escucharías buena música si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "escuchar-condicional-4748",
+"verbo": "escuchar",
+"contexto": "nosotros, si fuera posible, buena música",
+"respuesta": "nosotros escucharíamos buena música si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "escuchar-condicional-4749",
+"verbo": "escuchar",
+"contexto": "ustedes, de ser posible, buena música",
+"respuesta": "ustedes escucharían buena música de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "esperar-condicional-4750",
+"verbo": "esperar",
+"contexto": "él, con más tiempo, lo mejor",
+"respuesta": "él esperaría lo mejor con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "esperar-condicional-4751",
+"verbo": "esperar",
+"contexto": "usted, con más dinero, lo mejor",
+"respuesta": "usted esperaría lo mejor con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "esperar-condicional-4752",
+"verbo": "esperar",
+"contexto": "yo, con más experiencia, lo mejor",
+"respuesta": "yo esperaría lo mejor con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "estar-condicional-4753",
+"verbo": "estar",
+"contexto": "yo, en tu lugar, más tranquilo",
+"respuesta": "yo estaría más tranquilo en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "estar-condicional-4754",
+"verbo": "estar",
+"contexto": "ella, en esa situación, más tranquilo",
+"respuesta": "ella estaría más tranquilo en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "estar-condicional-4755",
+"verbo": "estar",
+"contexto": "ellos, en un mundo ideal, más tranquilo",
+"respuesta": "ellos estarían más tranquilo en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "estudiar-condicional-4756",
+"verbo": "estudiar",
+"contexto": "tú, si pudieras, con dedicación",
+"respuesta": "tú estudiarías con dedicación si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "estudiar-condicional-4757",
+"verbo": "estudiar",
+"contexto": "nosotros, si fuera posible, con dedicación",
+"respuesta": "nosotros estudiaríamos con dedicación si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "estudiar-condicional-4758",
+"verbo": "estudiar",
+"contexto": "ustedes, de ser posible, con dedicación",
+"respuesta": "ustedes estudiarían con dedicación de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "evitar-condicional-4759",
+"verbo": "evitar",
+"contexto": "él, con más tiempo, errores",
+"respuesta": "él evitaría errores con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "evitar-condicional-4760",
+"verbo": "evitar",
+"contexto": "usted, con más dinero, errores",
+"respuesta": "usted evitaría errores con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "evitar-condicional-4761",
+"verbo": "evitar",
+"contexto": "yo, con más experiencia, errores",
+"respuesta": "yo evitaría errores con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "existir-condicional-4762",
+"verbo": "existir",
+"contexto": "yo, en tu lugar, sin problemas",
+"respuesta": "yo existiría sin problemas en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "existir-condicional-4763",
+"verbo": "existir",
+"contexto": "ella, en esa situación, sin problemas",
+"respuesta": "ella existiría sin problemas en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "existir-condicional-4764",
+"verbo": "existir",
+"contexto": "ellos, en un mundo ideal, sin problemas",
+"respuesta": "ellos existirían sin problemas en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "explicar-condicional-4765",
+"verbo": "explicar",
+"contexto": "tú, si pudieras, la situación",
+"respuesta": "tú explicarías la situación si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "explicar-condicional-4766",
+"verbo": "explicar",
+"contexto": "nosotros, si fuera posible, la situación",
+"respuesta": "nosotros explicaríamos la situación si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "explicar-condicional-4767",
+"verbo": "explicar",
+"contexto": "ustedes, de ser posible, la situación",
+"respuesta": "ustedes explicarían la situación de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "formar-condicional-4768",
+"verbo": "formar",
+"contexto": "él, con más tiempo, a los jóvenes",
+"respuesta": "él formaría a los jóvenes con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "formar-condicional-4769",
+"verbo": "formar",
+"contexto": "usted, con más dinero, a los jóvenes",
+"respuesta": "usted formaría a los jóvenes con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "formar-condicional-4770",
+"verbo": "formar",
+"contexto": "yo, con más experiencia, a los jóvenes",
+"respuesta": "yo formaría a los jóvenes con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "funcionar-condicional-4771",
+"verbo": "funcionar",
+"contexto": "yo, en tu lugar, mejor",
+"respuesta": "yo funcionaría mejor en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "funcionar-condicional-4772",
+"verbo": "funcionar",
+"contexto": "ella, en esa situación, mejor",
+"respuesta": "ella funcionaría mejor en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "funcionar-condicional-4773",
+"verbo": "funcionar",
+"contexto": "ellos, en un mundo ideal, mejor",
+"respuesta": "ellos funcionarían mejor en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "ganar-condicional-4774",
+"verbo": "ganar",
+"contexto": "tú, si pudieras, con entusiasmo",
+"respuesta": "tú ganarías con entusiasmo si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "ganar-condicional-4775",
+"verbo": "ganar",
+"contexto": "nosotros, si fuera posible, de buena gana",
+"respuesta": "nosotros ganaríamos de buena gana si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "ganar-condicional-4776",
+"verbo": "ganar",
+"contexto": "ustedes, de ser posible, mejor",
+"respuesta": "ustedes ganarían mejor de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "golpear-condicional-4777",
+"verbo": "golpear",
+"contexto": "él, con más tiempo, con fuerza",
+"respuesta": "él golpearía con fuerza con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "golpear-condicional-4778",
+"verbo": "golpear",
+"contexto": "usted, con más dinero, con fuerza",
+"respuesta": "usted golpearía con fuerza con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "golpear-condicional-4779",
+"verbo": "golpear",
+"contexto": "yo, con más experiencia, con fuerza",
+"respuesta": "yo golpearía con fuerza con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "gritar-condicional-4780",
+"verbo": "gritar",
+"contexto": "yo, en tu lugar, de alegría",
+"respuesta": "yo gritaría de alegría en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "gritar-condicional-4781",
+"verbo": "gritar",
+"contexto": "ella, en esa situación, de alegría",
+"respuesta": "ella gritaría de alegría en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "gritar-condicional-4782",
+"verbo": "gritar",
+"contexto": "ellos, en un mundo ideal, de alegría",
+"respuesta": "ellos gritarían de alegría en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "guardar-condicional-4783",
+"verbo": "guardar",
+"contexto": "tú, si pudieras, los recuerdos",
+"respuesta": "tú guardarías los recuerdos si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "guardar-condicional-4784",
+"verbo": "guardar",
+"contexto": "nosotros, si fuera posible, los recuerdos",
+"respuesta": "nosotros guardaríamos los recuerdos si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "guardar-condicional-4785",
+"verbo": "guardar",
+"contexto": "ustedes, de ser posible, los recuerdos",
+"respuesta": "ustedes guardarían los recuerdos de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "gustar-condicional-4786",
+"verbo": "gustar",
+"contexto": "él, con más tiempo, mucho eso",
+"respuesta": "él gustaría mucho eso con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "gustar-condicional-4787",
+"verbo": "gustar",
+"contexto": "usted, con más dinero, mucho eso",
+"respuesta": "usted gustaría mucho eso con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "gustar-condicional-4788",
+"verbo": "gustar",
+"contexto": "yo, con más experiencia, mucho eso",
+"respuesta": "yo gustaría mucho eso con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "haber-condicional-4789",
+"verbo": "haber",
+"contexto": "yo, en tu lugar, más oportunidades",
+"respuesta": "yo habría más oportunidades en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "haber-condicional-4790",
+"verbo": "haber",
+"contexto": "ella, en esa situación, más oportunidades",
+"respuesta": "ella habría más oportunidades en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "haber-condicional-4791",
+"verbo": "haber",
+"contexto": "ellos, en un mundo ideal, más oportunidades",
+"respuesta": "ellos habrían más oportunidades en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "hablar-condicional-4792",
+"verbo": "hablar",
+"contexto": "tú, si pudieras, en español",
+"respuesta": "tú hablarías en español si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "hablar-condicional-4793",
+"verbo": "hablar",
+"contexto": "nosotros, si fuera posible, en español",
+"respuesta": "nosotros hablaríamos en español si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "hablar-condicional-4794",
+"verbo": "hablar",
+"contexto": "ustedes, de ser posible, en español",
+"respuesta": "ustedes hablarían en español de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "hacer-condicional-4795",
+"verbo": "hacer",
+"contexto": "él, con más tiempo, algo diferente",
+"respuesta": "él haría algo diferente con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "hacer-condicional-4796",
+"verbo": "hacer",
+"contexto": "usted, con más dinero, algo diferente",
+"respuesta": "usted haría algo diferente con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "hacer-condicional-4797",
+"verbo": "hacer",
+"contexto": "yo, con más experiencia, algo diferente",
+"respuesta": "yo haría algo diferente con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "hallar-condicional-4798",
+"verbo": "hallar",
+"contexto": "yo, en tu lugar, la respuesta",
+"respuesta": "yo hallaría la respuesta en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "hallar-condicional-4799",
+"verbo": "hallar",
+"contexto": "ella, en esa situación, la respuesta",
+"respuesta": "ella hallaría la respuesta en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "hallar-condicional-4800",
+"verbo": "hallar",
+"contexto": "ellos, en un mundo ideal, la respuesta",
+"respuesta": "ellos hallarían la respuesta en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "huir-condicional-4801",
+"verbo": "huir",
+"contexto": "tú, si pudieras, a otro lugar",
+"respuesta": "tú huirías a otro lugar si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "huir-condicional-4802",
+"verbo": "huir",
+"contexto": "nosotros, si fuera posible, a otro lugar",
+"respuesta": "nosotros huiríamos a otro lugar si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "huir-condicional-4803",
+"verbo": "huir",
+"contexto": "ustedes, de ser posible, a otro lugar",
+"respuesta": "ustedes huirían a otro lugar de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "imaginar-condicional-4804",
+"verbo": "imaginar",
+"contexto": "él, con más tiempo, un futuro brillante",
+"respuesta": "él imaginaría un futuro brillante con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "imaginar-condicional-4805",
+"verbo": "imaginar",
+"contexto": "usted, con más dinero, un futuro brillante",
+"respuesta": "usted imaginaría un futuro brillante con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "imaginar-condicional-4806",
+"verbo": "imaginar",
+"contexto": "yo, con más experiencia, un futuro brillante",
+"respuesta": "yo imaginaría un futuro brillante con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "importar-condicional-4807",
+"verbo": "importar",
+"contexto": "yo, en tu lugar, la opinión",
+"respuesta": "yo importaría la opinión en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "importar-condicional-4808",
+"verbo": "importar",
+"contexto": "ella, en esa situación, la opinión",
+"respuesta": "ella importaría la opinión en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "importar-condicional-4809",
+"verbo": "importar",
+"contexto": "ellos, en un mundo ideal, la opinión",
+"respuesta": "ellos importarían la opinión en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "incluir-condicional-4810",
+"verbo": "incluir",
+"contexto": "tú, si pudieras, más opciones",
+"respuesta": "tú incluirías más opciones si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "incluir-condicional-4811",
+"verbo": "incluir",
+"contexto": "nosotros, si fuera posible, más opciones",
+"respuesta": "nosotros incluiríamos más opciones si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "incluir-condicional-4812",
+"verbo": "incluir",
+"contexto": "ustedes, de ser posible, más opciones",
+"respuesta": "ustedes incluirían más opciones de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "informar-condicional-4813",
+"verbo": "informar",
+"contexto": "él, con más tiempo, con detalle",
+"respuesta": "él informaría con detalle con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "informar-condicional-4814",
+"verbo": "informar",
+"contexto": "usted, con más dinero, con detalle",
+"respuesta": "usted informaría con detalle con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "informar-condicional-4815",
+"verbo": "informar",
+"contexto": "yo, con más experiencia, con detalle",
+"respuesta": "yo informaría con detalle con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "intentar-condicional-4816",
+"verbo": "intentar",
+"contexto": "yo, en tu lugar, otra vez",
+"respuesta": "yo intentaría otra vez en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "intentar-condicional-4817",
+"verbo": "intentar",
+"contexto": "ella, en esa situación, otra vez",
+"respuesta": "ella intentaría otra vez en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "intentar-condicional-4818",
+"verbo": "intentar",
+"contexto": "ellos, en un mundo ideal, otra vez",
+"respuesta": "ellos intentarían otra vez en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "interesar-condicional-4819",
+"verbo": "interesar",
+"contexto": "tú, si pudieras, al público",
+"respuesta": "tú interesarías al público si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "interesar-condicional-4820",
+"verbo": "interesar",
+"contexto": "nosotros, si fuera posible, al público",
+"respuesta": "nosotros interesaríamos al público si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "interesar-condicional-4821",
+"verbo": "interesar",
+"contexto": "ustedes, de ser posible, al público",
+"respuesta": "ustedes interesarían al público de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "invitar-condicional-4822",
+"verbo": "invitar",
+"contexto": "él, con más tiempo, a la boda",
+"respuesta": "él invitaría a la boda con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "invitar-condicional-4823",
+"verbo": "invitar",
+"contexto": "usted, con más dinero, a la boda",
+"respuesta": "usted invitaría a la boda con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "invitar-condicional-4824",
+"verbo": "invitar",
+"contexto": "yo, con más experiencia, a la boda",
+"respuesta": "yo invitaría a la boda con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "ir-condicional-4825",
+"verbo": "ir",
+"contexto": "yo, en tu lugar, al cine",
+"respuesta": "yo iría al cine en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "ir-condicional-4826",
+"verbo": "ir",
+"contexto": "ella, en esa situación, al cine",
+"respuesta": "ella iría al cine en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "ir-condicional-4827",
+"verbo": "ir",
+"contexto": "ellos, en un mundo ideal, al cine",
+"respuesta": "ellos irían al cine en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "joder-condicional-4828",
+"verbo": "joder",
+"contexto": "tú, si pudieras, la situación",
+"respuesta": "tú joderías la situación si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "joder-condicional-4829",
+"verbo": "joder",
+"contexto": "nosotros, si fuera posible, la situación",
+"respuesta": "nosotros joderíamos la situación si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "joder-condicional-4830",
+"verbo": "joder",
+"contexto": "ustedes, de ser posible, la situación",
+"respuesta": "ustedes joderían la situación de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "jugar-condicional-4831",
+"verbo": "jugar",
+"contexto": "él, con más tiempo, más seguido",
+"respuesta": "él jugaría más seguido con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "jugar-condicional-4832",
+"verbo": "jugar",
+"contexto": "usted, con más dinero, más seguido",
+"respuesta": "usted jugaría más seguido con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "jugar-condicional-4833",
+"verbo": "jugar",
+"contexto": "yo, con más experiencia, más seguido",
+"respuesta": "yo jugaría más seguido con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "jurar-condicional-4834",
+"verbo": "jurar",
+"contexto": "yo, en tu lugar, decir la verdad",
+"respuesta": "yo juraría decir la verdad en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "jurar-condicional-4835",
+"verbo": "jurar",
+"contexto": "ella, en esa situación, decir la verdad",
+"respuesta": "ella juraría decir la verdad en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "jurar-condicional-4836",
+"verbo": "jurar",
+"contexto": "ellos, en un mundo ideal, decir la verdad",
+"respuesta": "ellos jurarían decir la verdad en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "leer-condicional-4837",
+"verbo": "leer",
+"contexto": "tú, si pudieras, cada noche",
+"respuesta": "tú leerías cada noche si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "leer-condicional-4838",
+"verbo": "leer",
+"contexto": "nosotros, si fuera posible, cada noche",
+"respuesta": "nosotros leeríamos cada noche si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "leer-condicional-4839",
+"verbo": "leer",
+"contexto": "ustedes, de ser posible, cada noche",
+"respuesta": "ustedes leerían cada noche de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "levantar-condicional-4840",
+"verbo": "levantar",
+"contexto": "él, con más tiempo, más peso",
+"respuesta": "él levantaría más peso con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "levantar-condicional-4841",
+"verbo": "levantar",
+"contexto": "usted, con más dinero, más peso",
+"respuesta": "usted levantaría más peso con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "levantar-condicional-4842",
+"verbo": "levantar",
+"contexto": "yo, con más experiencia, más peso",
+"respuesta": "yo levantaría más peso con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "llamar-condicional-4843",
+"verbo": "llamar",
+"contexto": "yo, en tu lugar, por teléfono",
+"respuesta": "yo llamaría por teléfono en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "llamar-condicional-4844",
+"verbo": "llamar",
+"contexto": "ella, en esa situación, por teléfono",
+"respuesta": "ella llamaría por teléfono en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "llamar-condicional-4845",
+"verbo": "llamar",
+"contexto": "ellos, en un mundo ideal, por teléfono",
+"respuesta": "ellos llamarían por teléfono en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "llegar-condicional-4846",
+"verbo": "llegar",
+"contexto": "tú, si pudieras, más temprano",
+"respuesta": "tú llegarías más temprano si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "llegar-condicional-4847",
+"verbo": "llegar",
+"contexto": "nosotros, si fuera posible, más temprano",
+"respuesta": "nosotros llegaríamos más temprano si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "llegar-condicional-4848",
+"verbo": "llegar",
+"contexto": "ustedes, de ser posible, más temprano",
+"respuesta": "ustedes llegarían más temprano de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "llevar-condicional-4849",
+"verbo": "llevar",
+"contexto": "él, con más tiempo, las cosas bien",
+"respuesta": "él llevaría las cosas bien con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "llevar-condicional-4850",
+"verbo": "llevar",
+"contexto": "usted, con más dinero, mucho más",
+"respuesta": "usted llevaría mucho más con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "llevar-condicional-4851",
+"verbo": "llevar",
+"contexto": "yo, con más experiencia, con más eficiencia",
+"respuesta": "yo llevaría con más eficiencia con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "llorar-condicional-4852",
+"verbo": "llorar",
+"contexto": "yo, en tu lugar, de felicidad",
+"respuesta": "yo lloraría de felicidad en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "llorar-condicional-4853",
+"verbo": "llorar",
+"contexto": "ella, en esa situación, de felicidad",
+"respuesta": "ella lloraría de felicidad en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "llorar-condicional-4854",
+"verbo": "llorar",
+"contexto": "ellos, en un mundo ideal, de felicidad",
+"respuesta": "ellos llorarían de felicidad en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "lograr-condicional-4855",
+"verbo": "lograr",
+"contexto": "tú, si pudieras, más cosas",
+"respuesta": "tú lograrías más cosas si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "lograr-condicional-4856",
+"verbo": "lograr",
+"contexto": "nosotros, si fuera posible, más cosas",
+"respuesta": "nosotros lograríamos más cosas si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "lograr-condicional-4857",
+"verbo": "lograr",
+"contexto": "ustedes, de ser posible, más cosas",
+"respuesta": "ustedes lograrían más cosas de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "luchar-condicional-4858",
+"verbo": "luchar",
+"contexto": "él, con más tiempo, hasta el final",
+"respuesta": "él lucharía hasta el final con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "luchar-condicional-4859",
+"verbo": "luchar",
+"contexto": "usted, con más dinero, hasta el final",
+"respuesta": "usted lucharía hasta el final con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "luchar-condicional-4860",
+"verbo": "luchar",
+"contexto": "yo, con más experiencia, hasta el final",
+"respuesta": "yo lucharía hasta el final con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "mandar-condicional-4861",
+"verbo": "mandar",
+"contexto": "yo, en tu lugar, un mensaje",
+"respuesta": "yo mandaría un mensaje en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "mandar-condicional-4862",
+"verbo": "mandar",
+"contexto": "ella, en esa situación, un mensaje",
+"respuesta": "ella mandaría un mensaje en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "mandar-condicional-4863",
+"verbo": "mandar",
+"contexto": "ellos, en un mundo ideal, un mensaje",
+"respuesta": "ellos mandarían un mensaje en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "manejar-condicional-4864",
+"verbo": "manejar",
+"contexto": "tú, si pudieras, la situación",
+"respuesta": "tú manejarías la situación si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "manejar-condicional-4865",
+"verbo": "manejar",
+"contexto": "nosotros, si fuera posible, la situación",
+"respuesta": "nosotros manejaríamos la situación si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "manejar-condicional-4866",
+"verbo": "manejar",
+"contexto": "ustedes, de ser posible, la situación",
+"respuesta": "ustedes manejarían la situación de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "mantener-condicional-4867",
+"verbo": "mantener",
+"contexto": "él, con más tiempo, sin prisa",
+"respuesta": "él mantendría sin prisa con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "mantener-condicional-4868",
+"verbo": "mantener",
+"contexto": "usted, con más dinero, con más libertad",
+"respuesta": "usted mantendría con más libertad con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "mantener-condicional-4869",
+"verbo": "mantener",
+"contexto": "yo, con más experiencia, algo diferente",
+"respuesta": "yo mantendría algo diferente con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "marchar-condicional-4870",
+"verbo": "marchar",
+"contexto": "yo, en tu lugar, hacia el sur",
+"respuesta": "yo marcharía hacia el sur en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "marchar-condicional-4871",
+"verbo": "marchar",
+"contexto": "ella, en esa situación, hacia el sur",
+"respuesta": "ella marcharía hacia el sur en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "marchar-condicional-4872",
+"verbo": "marchar",
+"contexto": "ellos, en un mundo ideal, hacia el sur",
+"respuesta": "ellos marcharían hacia el sur en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "matar-condicional-4873",
+"verbo": "matar",
+"contexto": "tú, si pudieras, el aburrimiento",
+"respuesta": "tú matarías el aburrimiento si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "matar-condicional-4874",
+"verbo": "matar",
+"contexto": "nosotros, si fuera posible, el aburrimiento",
+"respuesta": "nosotros mataríamos el aburrimiento si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "matar-condicional-4875",
+"verbo": "matar",
+"contexto": "ustedes, de ser posible, el aburrimiento",
+"respuesta": "ustedes matarían el aburrimiento de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "mencionar-condicional-4876",
+"verbo": "mencionar",
+"contexto": "él, con más tiempo, su nombre",
+"respuesta": "él mencionaría su nombre con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "mencionar-condicional-4877",
+"verbo": "mencionar",
+"contexto": "usted, con más dinero, su nombre",
+"respuesta": "usted mencionaría su nombre con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "mencionar-condicional-4878",
+"verbo": "mencionar",
+"contexto": "yo, con más experiencia, su nombre",
+"respuesta": "yo mencionaría su nombre con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "mentir-condicional-4879",
+"verbo": "mentir",
+"contexto": "yo, en tu lugar, menos",
+"respuesta": "yo mentiría menos en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "mentir-condicional-4880",
+"verbo": "mentir",
+"contexto": "ella, en esa situación, menos",
+"respuesta": "ella mentiría menos en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "mentir-condicional-4881",
+"verbo": "mentir",
+"contexto": "ellos, en un mundo ideal, menos",
+"respuesta": "ellos mentirían menos en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "merecer-condicional-4882",
+"verbo": "merecer",
+"contexto": "tú, si pudieras, una oportunidad",
+"respuesta": "tú merecerías una oportunidad si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "merecer-condicional-4883",
+"verbo": "merecer",
+"contexto": "nosotros, si fuera posible, una oportunidad",
+"respuesta": "nosotros mereceríamos una oportunidad si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "merecer-condicional-4884",
+"verbo": "merecer",
+"contexto": "ustedes, de ser posible, una oportunidad",
+"respuesta": "ustedes merecerían una oportunidad de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "meter-condicional-4885",
+"verbo": "meter",
+"contexto": "él, con más tiempo, un gol",
+"respuesta": "él metería un gol con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "meter-condicional-4886",
+"verbo": "meter",
+"contexto": "usted, con más dinero, un gol",
+"respuesta": "usted metería un gol con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "meter-condicional-4887",
+"verbo": "meter",
+"contexto": "yo, con más experiencia, un gol",
+"respuesta": "yo metería un gol con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "mirar-condicional-4888",
+"verbo": "mirar",
+"contexto": "yo, en tu lugar, con más atención",
+"respuesta": "yo miraría con más atención en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "mirar-condicional-4889",
+"verbo": "mirar",
+"contexto": "ella, en esa situación, con más atención",
+"respuesta": "ella miraría con más atención en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "mirar-condicional-4890",
+"verbo": "mirar",
+"contexto": "ellos, en un mundo ideal, con más atención",
+"respuesta": "ellos mirarían con más atención en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "molestar-condicional-4891",
+"verbo": "molestar",
+"contexto": "tú, si pudieras, menos",
+"respuesta": "tú molestarías menos si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "molestar-condicional-4892",
+"verbo": "molestar",
+"contexto": "nosotros, si fuera posible, menos",
+"respuesta": "nosotros molestaríamos menos si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "molestar-condicional-4893",
+"verbo": "molestar",
+"contexto": "ustedes, de ser posible, menos",
+"respuesta": "ustedes molestarían menos de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "morir-condicional-4894",
+"verbo": "morir",
+"contexto": "él, con más tiempo, de risa",
+"respuesta": "él moriría de risa con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "morir-condicional-4895",
+"verbo": "morir",
+"contexto": "usted, con más dinero, de risa",
+"respuesta": "usted moriría de risa con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "morir-condicional-4896",
+"verbo": "morir",
+"contexto": "yo, con más experiencia, de risa",
+"respuesta": "yo moriría de risa con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "mostrar-condicional-4897",
+"verbo": "mostrar",
+"contexto": "yo, en tu lugar, el camino",
+"respuesta": "yo mostraría el camino en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "mostrar-condicional-4898",
+"verbo": "mostrar",
+"contexto": "ella, en esa situación, el camino",
+"respuesta": "ella mostraría el camino en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "mostrar-condicional-4899",
+"verbo": "mostrar",
+"contexto": "ellos, en un mundo ideal, el camino",
+"respuesta": "ellos mostrarían el camino en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "mover-condicional-4900",
+"verbo": "mover",
+"contexto": "tú, si pudieras, la ficha",
+"respuesta": "tú moverías la ficha si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "mover-condicional-4901",
+"verbo": "mover",
+"contexto": "nosotros, si fuera posible, la ficha",
+"respuesta": "nosotros moveríamos la ficha si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "mover-condicional-4902",
+"verbo": "mover",
+"contexto": "ustedes, de ser posible, la ficha",
+"respuesta": "ustedes moverían la ficha de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "nacer-condicional-4903",
+"verbo": "nacer",
+"contexto": "él, con más tiempo, de nuevo",
+"respuesta": "él nacería de nuevo con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "nacer-condicional-4904",
+"verbo": "nacer",
+"contexto": "usted, con más dinero, de nuevo",
+"respuesta": "usted nacería de nuevo con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "nacer-condicional-4905",
+"verbo": "nacer",
+"contexto": "yo, con más experiencia, de nuevo",
+"respuesta": "yo nacería de nuevo con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "necesitar-condicional-4906",
+"verbo": "necesitar",
+"contexto": "yo, en tu lugar, más tiempo",
+"respuesta": "yo necesitaría más tiempo en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "necesitar-condicional-4907",
+"verbo": "necesitar",
+"contexto": "ella, en esa situación, más tiempo",
+"respuesta": "ella necesitaría más tiempo en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "necesitar-condicional-4908",
+"verbo": "necesitar",
+"contexto": "ellos, en un mundo ideal, más tiempo",
+"respuesta": "ellos necesitarían más tiempo en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "negar-condicional-4909",
+"verbo": "negar",
+"contexto": "tú, si pudieras, la entrada",
+"respuesta": "tú negarías la entrada si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "negar-condicional-4910",
+"verbo": "negar",
+"contexto": "nosotros, si fuera posible, la entrada",
+"respuesta": "nosotros negaríamos la entrada si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "negar-condicional-4911",
+"verbo": "negar",
+"contexto": "ustedes, de ser posible, la entrada",
+"respuesta": "ustedes negarían la entrada de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "observar-condicional-4912",
+"verbo": "observar",
+"contexto": "él, con más tiempo, la naturaleza",
+"respuesta": "él observaría la naturaleza con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "observar-condicional-4913",
+"verbo": "observar",
+"contexto": "usted, con más dinero, la naturaleza",
+"respuesta": "usted observaría la naturaleza con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "observar-condicional-4914",
+"verbo": "observar",
+"contexto": "yo, con más experiencia, la naturaleza",
+"respuesta": "yo observaría la naturaleza con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "obtener-condicional-4915",
+"verbo": "obtener",
+"contexto": "yo, en tu lugar, de otra manera",
+"respuesta": "yo obtendría de otra manera en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "obtener-condicional-4916",
+"verbo": "obtener",
+"contexto": "ella, en esa situación, lo necesario",
+"respuesta": "ella obtendría lo necesario en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "obtener-condicional-4917",
+"verbo": "obtener",
+"contexto": "ellos, en un mundo ideal, sin preocupaciones",
+"respuesta": "ellos obtendrían sin preocupaciones en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "ocupar-condicional-4918",
+"verbo": "ocupar",
+"contexto": "tú, si pudieras, más espacio",
+"respuesta": "tú ocuparías más espacio si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "ocupar-condicional-4919",
+"verbo": "ocupar",
+"contexto": "nosotros, si fuera posible, más espacio",
+"respuesta": "nosotros ocuparíamos más espacio si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "ocupar-condicional-4920",
+"verbo": "ocupar",
+"contexto": "ustedes, de ser posible, más espacio",
+"respuesta": "ustedes ocuparían más espacio de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "ocurrir-condicional-4921",
+"verbo": "ocurrir",
+"contexto": "él, con más tiempo, algo diferente",
+"respuesta": "él ocurriría algo diferente con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "ocurrir-condicional-4922",
+"verbo": "ocurrir",
+"contexto": "usted, con más dinero, algo diferente",
+"respuesta": "usted ocurriría algo diferente con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "ocurrir-condicional-4923",
+"verbo": "ocurrir",
+"contexto": "yo, con más experiencia, algo diferente",
+"respuesta": "yo ocurriría algo diferente con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "odiar-condicional-4924",
+"verbo": "odiar",
+"contexto": "yo, en tu lugar, menos cosas",
+"respuesta": "yo odiaría menos cosas en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "odiar-condicional-4925",
+"verbo": "odiar",
+"contexto": "ella, en esa situación, menos cosas",
+"respuesta": "ella odiaría menos cosas en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "odiar-condicional-4926",
+"verbo": "odiar",
+"contexto": "ellos, en un mundo ideal, menos cosas",
+"respuesta": "ellos odiarían menos cosas en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "ofrecer-condicional-4927",
+"verbo": "ofrecer",
+"contexto": "tú, si pudieras, algo mejor",
+"respuesta": "tú ofrecerías algo mejor si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "ofrecer-condicional-4928",
+"verbo": "ofrecer",
+"contexto": "nosotros, si fuera posible, algo mejor",
+"respuesta": "nosotros ofreceríamos algo mejor si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "ofrecer-condicional-4929",
+"verbo": "ofrecer",
+"contexto": "ustedes, de ser posible, algo mejor",
+"respuesta": "ustedes ofrecerían algo mejor de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "oír-condicional-4930",
+"verbo": "oír",
+"contexto": "él, con más tiempo, algo nuevo",
+"respuesta": "él oíría algo nuevo con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "oír-condicional-4931",
+"verbo": "oír",
+"contexto": "usted, con más dinero, con más comodidad",
+"respuesta": "usted oíría con más comodidad con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "oír-condicional-4932",
+"verbo": "oír",
+"contexto": "yo, con más experiencia, sin tantas dudas",
+"respuesta": "yo oíría sin tantas dudas con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "olvidar-condicional-4933",
+"verbo": "olvidar",
+"contexto": "yo, en tu lugar, los problemas",
+"respuesta": "yo olvidaría los problemas en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "olvidar-condicional-4934",
+"verbo": "olvidar",
+"contexto": "ella, en esa situación, los problemas",
+"respuesta": "ella olvidaría los problemas en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "olvidar-condicional-4935",
+"verbo": "olvidar",
+"contexto": "ellos, en un mundo ideal, los problemas",
+"respuesta": "ellos olvidarían los problemas en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "pagar-condicional-4936",
+"verbo": "pagar",
+"contexto": "tú, si pudieras, la cuenta",
+"respuesta": "tú pagarías la cuenta si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "pagar-condicional-4937",
+"verbo": "pagar",
+"contexto": "nosotros, si fuera posible, la cuenta",
+"respuesta": "nosotros pagaríamos la cuenta si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "pagar-condicional-4938",
+"verbo": "pagar",
+"contexto": "ustedes, de ser posible, la cuenta",
+"respuesta": "ustedes pagarían la cuenta de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "parar-condicional-4939",
+"verbo": "parar",
+"contexto": "él, con más tiempo, de preocuparme",
+"respuesta": "él pararía de preocuparme con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "parar-condicional-4940",
+"verbo": "parar",
+"contexto": "usted, con más dinero, de preocuparme",
+"respuesta": "usted pararía de preocuparme con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "parar-condicional-4941",
+"verbo": "parar",
+"contexto": "yo, con más experiencia, de preocuparme",
+"respuesta": "yo pararía de preocuparme con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "parecer-condicional-4942",
+"verbo": "parecer",
+"contexto": "yo, en tu lugar, más joven",
+"respuesta": "yo parecería más joven en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "parecer-condicional-4943",
+"verbo": "parecer",
+"contexto": "ella, en esa situación, más joven",
+"respuesta": "ella parecería más joven en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "parecer-condicional-4944",
+"verbo": "parecer",
+"contexto": "ellos, en un mundo ideal, más joven",
+"respuesta": "ellos parecerían más joven en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "partir-condicional-4945",
+"verbo": "partir",
+"contexto": "tú, si pudieras, hacia el norte",
+"respuesta": "tú partirías hacia el norte si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "partir-condicional-4946",
+"verbo": "partir",
+"contexto": "nosotros, si fuera posible, hacia el norte",
+"respuesta": "nosotros partiríamos hacia el norte si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "partir-condicional-4947",
+"verbo": "partir",
+"contexto": "ustedes, de ser posible, hacia el norte",
+"respuesta": "ustedes partirían hacia el norte de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "pasar-condicional-4948",
+"verbo": "pasar",
+"contexto": "él, con más tiempo, por tu casa",
+"respuesta": "él pasaría por tu casa con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "pasar-condicional-4949",
+"verbo": "pasar",
+"contexto": "usted, con más dinero, por tu casa",
+"respuesta": "usted pasaría por tu casa con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "pasar-condicional-4950",
+"verbo": "pasar",
+"contexto": "yo, con más experiencia, por tu casa",
+"respuesta": "yo pasaría por tu casa con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "pedir-condicional-4951",
+"verbo": "pedir",
+"contexto": "yo, en tu lugar, un favor",
+"respuesta": "yo pediría un favor en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "pedir-condicional-4952",
+"verbo": "pedir",
+"contexto": "ella, en esa situación, un favor",
+"respuesta": "ella pediría un favor en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "pedir-condicional-4953",
+"verbo": "pedir",
+"contexto": "ellos, en un mundo ideal, un favor",
+"respuesta": "ellos pedirían un favor en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "pegar-condicional-4954",
+"verbo": "pegar",
+"contexto": "tú, si pudieras, los pedazos",
+"respuesta": "tú pegarías los pedazos si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "pegar-condicional-4955",
+"verbo": "pegar",
+"contexto": "nosotros, si fuera posible, los pedazos",
+"respuesta": "nosotros pegaríamos los pedazos si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "pegar-condicional-4956",
+"verbo": "pegar",
+"contexto": "ustedes, de ser posible, los pedazos",
+"respuesta": "ustedes pegarían los pedazos de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "pelear-condicional-4957",
+"verbo": "pelear",
+"contexto": "él, con más tiempo, menos",
+"respuesta": "él pelearía menos con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "pelear-condicional-4958",
+"verbo": "pelear",
+"contexto": "usted, con más dinero, menos",
+"respuesta": "usted pelearía menos con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "pelear-condicional-4959",
+"verbo": "pelear",
+"contexto": "yo, con más experiencia, menos",
+"respuesta": "yo pelearía menos con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "pensar-condicional-4960",
+"verbo": "pensar",
+"contexto": "yo, en tu lugar, con más calma",
+"respuesta": "yo pensaría con más calma en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "pensar-condicional-4961",
+"verbo": "pensar",
+"contexto": "ella, en esa situación, con más calma",
+"respuesta": "ella pensaría con más calma en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "pensar-condicional-4962",
+"verbo": "pensar",
+"contexto": "ellos, en un mundo ideal, con más calma",
+"respuesta": "ellos pensarían con más calma en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "perder-condicional-4963",
+"verbo": "perder",
+"contexto": "tú, si pudieras, el miedo",
+"respuesta": "tú perderías el miedo si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "perder-condicional-4964",
+"verbo": "perder",
+"contexto": "nosotros, si fuera posible, el miedo",
+"respuesta": "nosotros perderíamos el miedo si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "perder-condicional-4965",
+"verbo": "perder",
+"contexto": "ustedes, de ser posible, el miedo",
+"respuesta": "ustedes perderían el miedo de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "perdonar-condicional-4966",
+"verbo": "perdonar",
+"contexto": "él, con más tiempo, sin rencor",
+"respuesta": "él perdonaría sin rencor con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "perdonar-condicional-4967",
+"verbo": "perdonar",
+"contexto": "usted, con más dinero, sin rencor",
+"respuesta": "usted perdonaría sin rencor con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "perdonar-condicional-4968",
+"verbo": "perdonar",
+"contexto": "yo, con más experiencia, sin rencor",
+"respuesta": "yo perdonaría sin rencor con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "permanecer-condicional-4969",
+"verbo": "permanecer",
+"contexto": "yo, en tu lugar, en silencio",
+"respuesta": "yo permanecería en silencio en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "permanecer-condicional-4970",
+"verbo": "permanecer",
+"contexto": "ella, en esa situación, en silencio",
+"respuesta": "ella permanecería en silencio en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "permanecer-condicional-4971",
+"verbo": "permanecer",
+"contexto": "ellos, en un mundo ideal, en silencio",
+"respuesta": "ellos permanecerían en silencio en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "permitir-condicional-4972",
+"verbo": "permitir",
+"contexto": "tú, si pudieras, la entrada",
+"respuesta": "tú permitirías la entrada si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "permitir-condicional-4973",
+"verbo": "permitir",
+"contexto": "nosotros, si fuera posible, la entrada",
+"respuesta": "nosotros permitiríamos la entrada si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "permitir-condicional-4974",
+"verbo": "permitir",
+"contexto": "ustedes, de ser posible, la entrada",
+"respuesta": "ustedes permitirían la entrada de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "pertenecer-condicional-4975",
+"verbo": "pertenecer",
+"contexto": "él, con más tiempo, a otro lugar",
+"respuesta": "él pertenecería a otro lugar con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "pertenecer-condicional-4976",
+"verbo": "pertenecer",
+"contexto": "usted, con más dinero, a otro lugar",
+"respuesta": "usted pertenecería a otro lugar con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "pertenecer-condicional-4977",
+"verbo": "pertenecer",
+"contexto": "yo, con más experiencia, a otro lugar",
+"respuesta": "yo pertenecería a otro lugar con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "pesar-condicional-4978",
+"verbo": "pesar",
+"contexto": "yo, en tu lugar, menos",
+"respuesta": "yo pesaría menos en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "pesar-condicional-4979",
+"verbo": "pesar",
+"contexto": "ella, en esa situación, menos",
+"respuesta": "ella pesaría menos en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "pesar-condicional-4980",
+"verbo": "pesar",
+"contexto": "ellos, en un mundo ideal, menos",
+"respuesta": "ellos pesarían menos en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "poder-condicional-4981",
+"verbo": "poder",
+"contexto": "tú, si pudieras, ayudar a todos",
+"respuesta": "tú podrías ayudar a todos si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "poder-condicional-4982",
+"verbo": "poder",
+"contexto": "nosotros, si fuera posible, ayudar a todos",
+"respuesta": "nosotros podríamos ayudar a todos si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "poder-condicional-4983",
+"verbo": "poder",
+"contexto": "ustedes, de ser posible, ayudar a todos",
+"respuesta": "ustedes podrían ayudar a todos de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "poner-condicional-4984",
+"verbo": "poner",
+"contexto": "él, con más tiempo, con más detalle",
+"respuesta": "él pondría con más detalle con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "poner-condicional-4985",
+"verbo": "poner",
+"contexto": "usted, con más dinero, algo mejor",
+"respuesta": "usted pondría algo mejor con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "poner-condicional-4986",
+"verbo": "poner",
+"contexto": "yo, con más experiencia, mejor",
+"respuesta": "yo pondría mejor con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "preferir-condicional-4987",
+"verbo": "preferir",
+"contexto": "yo, en tu lugar, quedarse en casa",
+"respuesta": "yo preferiría quedarse en casa en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "preferir-condicional-4988",
+"verbo": "preferir",
+"contexto": "ella, en esa situación, quedarse en casa",
+"respuesta": "ella preferiría quedarse en casa en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "preferir-condicional-4989",
+"verbo": "preferir",
+"contexto": "ellos, en un mundo ideal, quedarse en casa",
+"respuesta": "ellos preferirían quedarse en casa en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "preguntar-condicional-4990",
+"verbo": "preguntar",
+"contexto": "tú, si pudieras, sobre el tema",
+"respuesta": "tú preguntarías sobre el tema si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "preguntar-condicional-4991",
+"verbo": "preguntar",
+"contexto": "nosotros, si fuera posible, sobre el tema",
+"respuesta": "nosotros preguntaríamos sobre el tema si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "preguntar-condicional-4992",
+"verbo": "preguntar",
+"contexto": "ustedes, de ser posible, sobre el tema",
+"respuesta": "ustedes preguntarían sobre el tema de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "preocupar-condicional-4993",
+"verbo": "preocupar",
+"contexto": "él, con más tiempo, la situación",
+"respuesta": "él preocuparía la situación con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "preocupar-condicional-4994",
+"verbo": "preocupar",
+"contexto": "usted, con más dinero, la situación",
+"respuesta": "usted preocuparía la situación con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "preocupar-condicional-4995",
+"verbo": "preocupar",
+"contexto": "yo, con más experiencia, la situación",
+"respuesta": "yo preocuparía la situación con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "preparar-condicional-4996",
+"verbo": "preparar",
+"contexto": "yo, en tu lugar, la cena",
+"respuesta": "yo prepararía la cena en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "preparar-condicional-4997",
+"verbo": "preparar",
+"contexto": "ella, en esa situación, la cena",
+"respuesta": "ella prepararía la cena en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "preparar-condicional-4998",
+"verbo": "preparar",
+"contexto": "ellos, en un mundo ideal, la cena",
+"respuesta": "ellos prepararían la cena en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "presentar-condicional-4999",
+"verbo": "presentar",
+"contexto": "tú, si pudieras, con alegría",
+"respuesta": "tú presentarías con alegría si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "presentar-condicional-5000",
+"verbo": "presentar",
+"contexto": "nosotros, si fuera posible, lo antes posible",
+"respuesta": "nosotros presentaríamos lo antes posible si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "presentar-condicional-5001",
+"verbo": "presentar",
+"contexto": "ustedes, de ser posible, con más atención",
+"respuesta": "ustedes presentarían con más atención de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "prestar-condicional-5002",
+"verbo": "prestar",
+"contexto": "él, con más tiempo, mi ayuda",
+"respuesta": "él prestaría mi ayuda con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "prestar-condicional-5003",
+"verbo": "prestar",
+"contexto": "usted, con más dinero, mi ayuda",
+"respuesta": "usted prestaría mi ayuda con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "prestar-condicional-5004",
+"verbo": "prestar",
+"contexto": "yo, con más experiencia, mi ayuda",
+"respuesta": "yo prestaría mi ayuda con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "probar-condicional-5005",
+"verbo": "probar",
+"contexto": "yo, en tu lugar, algo nuevo",
+"respuesta": "yo probaría algo nuevo en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "probar-condicional-5006",
+"verbo": "probar",
+"contexto": "ella, en esa situación, algo nuevo",
+"respuesta": "ella probaría algo nuevo en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "probar-condicional-5007",
+"verbo": "probar",
+"contexto": "ellos, en un mundo ideal, algo nuevo",
+"respuesta": "ellos probarían algo nuevo en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "producir-condicional-5008",
+"verbo": "producir",
+"contexto": "tú, si pudieras, algo valioso",
+"respuesta": "tú producirías algo valioso si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "producir-condicional-5009",
+"verbo": "producir",
+"contexto": "nosotros, si fuera posible, algo valioso",
+"respuesta": "nosotros produciríamos algo valioso si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "producir-condicional-5010",
+"verbo": "producir",
+"contexto": "ustedes, de ser posible, algo valioso",
+"respuesta": "ustedes producirían algo valioso de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "prometer-condicional-5011",
+"verbo": "prometer",
+"contexto": "él, con más tiempo, su apoyo",
+"respuesta": "él prometería su apoyo con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "prometer-condicional-5012",
+"verbo": "prometer",
+"contexto": "usted, con más dinero, su apoyo",
+"respuesta": "usted prometería su apoyo con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "prometer-condicional-5013",
+"verbo": "prometer",
+"contexto": "yo, con más experiencia, su apoyo",
+"respuesta": "yo prometería su apoyo con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "proteger-condicional-5014",
+"verbo": "proteger",
+"contexto": "yo, en tu lugar, a la familia",
+"respuesta": "yo protegería a la familia en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "proteger-condicional-5015",
+"verbo": "proteger",
+"contexto": "ella, en esa situación, a la familia",
+"respuesta": "ella protegería a la familia en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "proteger-condicional-5016",
+"verbo": "proteger",
+"contexto": "ellos, en un mundo ideal, a la familia",
+"respuesta": "ellos protegerían a la familia en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "quedar-condicional-5017",
+"verbo": "quedar",
+"contexto": "tú, si pudieras, más tiempo",
+"respuesta": "tú quedarías más tiempo si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "quedar-condicional-5018",
+"verbo": "quedar",
+"contexto": "nosotros, si fuera posible, más tiempo",
+"respuesta": "nosotros quedaríamos más tiempo si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "quedar-condicional-5019",
+"verbo": "quedar",
+"contexto": "ustedes, de ser posible, más tiempo",
+"respuesta": "ustedes quedarían más tiempo de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "querer-condicional-5020",
+"verbo": "querer",
+"contexto": "él, con más tiempo, un cambio",
+"respuesta": "él querría un cambio con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "querer-condicional-5021",
+"verbo": "querer",
+"contexto": "usted, con más dinero, un cambio",
+"respuesta": "usted querría un cambio con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "querer-condicional-5022",
+"verbo": "querer",
+"contexto": "yo, con más experiencia, un cambio",
+"respuesta": "yo querría un cambio con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "quitar-condicional-5023",
+"verbo": "quitar",
+"contexto": "yo, en tu lugar, las dudas",
+"respuesta": "yo quitaría las dudas en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "quitar-condicional-5024",
+"verbo": "quitar",
+"contexto": "ella, en esa situación, las dudas",
+"respuesta": "ella quitaría las dudas en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "quitar-condicional-5025",
+"verbo": "quitar",
+"contexto": "ellos, en un mundo ideal, las dudas",
+"respuesta": "ellos quitarían las dudas en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "realizar-condicional-5026",
+"verbo": "realizar",
+"contexto": "tú, si pudieras, un proyecto",
+"respuesta": "tú realizarías un proyecto si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "realizar-condicional-5027",
+"verbo": "realizar",
+"contexto": "nosotros, si fuera posible, un proyecto",
+"respuesta": "nosotros realizaríamos un proyecto si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "realizar-condicional-5028",
+"verbo": "realizar",
+"contexto": "ustedes, de ser posible, un proyecto",
+"respuesta": "ustedes realizarían un proyecto de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "recibir-condicional-5029",
+"verbo": "recibir",
+"contexto": "él, con más tiempo, buenas noticias",
+"respuesta": "él recibiría buenas noticias con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "recibir-condicional-5030",
+"verbo": "recibir",
+"contexto": "usted, con más dinero, buenas noticias",
+"respuesta": "usted recibiría buenas noticias con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "recibir-condicional-5031",
+"verbo": "recibir",
+"contexto": "yo, con más experiencia, buenas noticias",
+"respuesta": "yo recibiría buenas noticias con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "recoger-condicional-5032",
+"verbo": "recoger",
+"contexto": "yo, en tu lugar, la mesa",
+"respuesta": "yo recogería la mesa en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "recoger-condicional-5033",
+"verbo": "recoger",
+"contexto": "ella, en esa situación, la mesa",
+"respuesta": "ella recogería la mesa en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "recoger-condicional-5034",
+"verbo": "recoger",
+"contexto": "ellos, en un mundo ideal, la mesa",
+"respuesta": "ellos recogerían la mesa en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "reconocer-condicional-5035",
+"verbo": "reconocer",
+"contexto": "tú, si pudieras, el esfuerzo",
+"respuesta": "tú reconocerías el esfuerzo si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "reconocer-condicional-5036",
+"verbo": "reconocer",
+"contexto": "nosotros, si fuera posible, el esfuerzo",
+"respuesta": "nosotros reconoceríamos el esfuerzo si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "reconocer-condicional-5037",
+"verbo": "reconocer",
+"contexto": "ustedes, de ser posible, el esfuerzo",
+"respuesta": "ustedes reconocerían el esfuerzo de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "recordar-condicional-5038",
+"verbo": "recordar",
+"contexto": "él, con más tiempo, con cariño",
+"respuesta": "él recordaría con cariño con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "recordar-condicional-5039",
+"verbo": "recordar",
+"contexto": "usted, con más dinero, con cariño",
+"respuesta": "usted recordaría con cariño con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "recordar-condicional-5040",
+"verbo": "recordar",
+"contexto": "yo, con más experiencia, con cariño",
+"respuesta": "yo recordaría con cariño con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "recuperar-condicional-5041",
+"verbo": "recuperar",
+"contexto": "yo, en tu lugar, la confianza",
+"respuesta": "yo recuperaría la confianza en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "recuperar-condicional-5042",
+"verbo": "recuperar",
+"contexto": "ella, en esa situación, la confianza",
+"respuesta": "ella recuperaría la confianza en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "recuperar-condicional-5043",
+"verbo": "recuperar",
+"contexto": "ellos, en un mundo ideal, la confianza",
+"respuesta": "ellos recuperarían la confianza en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "referir-condicional-5044",
+"verbo": "referir",
+"contexto": "tú, si pudieras, la situación",
+"respuesta": "tú referirías la situación si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "referir-condicional-5045",
+"verbo": "referir",
+"contexto": "nosotros, si fuera posible, la situación",
+"respuesta": "nosotros referiríamos la situación si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "referir-condicional-5046",
+"verbo": "referir",
+"contexto": "ustedes, de ser posible, la situación",
+"respuesta": "ustedes referirían la situación de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "regresar-condicional-5047",
+"verbo": "regresar",
+"contexto": "él, con más tiempo, con buenas noticias",
+"respuesta": "él regresaría con buenas noticias con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "regresar-condicional-5048",
+"verbo": "regresar",
+"contexto": "usted, con más dinero, con buenas noticias",
+"respuesta": "usted regresaría con buenas noticias con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "regresar-condicional-5049",
+"verbo": "regresar",
+"contexto": "yo, con más experiencia, con buenas noticias",
+"respuesta": "yo regresaría con buenas noticias con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "reír-condicional-5050",
+"verbo": "reír",
+"contexto": "yo, en tu lugar, más seguido",
+"respuesta": "yo reíría más seguido en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "reír-condicional-5051",
+"verbo": "reír",
+"contexto": "ella, en esa situación, más seguido",
+"respuesta": "ella reíría más seguido en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "reír-condicional-5052",
+"verbo": "reír",
+"contexto": "ellos, en un mundo ideal, más seguido",
+"respuesta": "ellos reírían más seguido en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "repetir-condicional-5053",
+"verbo": "repetir",
+"contexto": "tú, si pudieras, el ejercicio",
+"respuesta": "tú repetirías el ejercicio si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "repetir-condicional-5054",
+"verbo": "repetir",
+"contexto": "nosotros, si fuera posible, el ejercicio",
+"respuesta": "nosotros repetiríamos el ejercicio si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "repetir-condicional-5055",
+"verbo": "repetir",
+"contexto": "ustedes, de ser posible, el ejercicio",
+"respuesta": "ustedes repetirían el ejercicio de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "representar-condicional-5056",
+"verbo": "representar",
+"contexto": "él, con más tiempo, un papel",
+"respuesta": "él representaría un papel con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "representar-condicional-5057",
+"verbo": "representar",
+"contexto": "usted, con más dinero, un papel",
+"respuesta": "usted representaría un papel con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "representar-condicional-5058",
+"verbo": "representar",
+"contexto": "yo, con más experiencia, un papel",
+"respuesta": "yo representaría un papel con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "resolver-condicional-5059",
+"verbo": "resolver",
+"contexto": "yo, en tu lugar, el problema",
+"respuesta": "yo resolvería el problema en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "resolver-condicional-5060",
+"verbo": "resolver",
+"contexto": "ella, en esa situación, el problema",
+"respuesta": "ella resolvería el problema en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "resolver-condicional-5061",
+"verbo": "resolver",
+"contexto": "ellos, en un mundo ideal, el problema",
+"respuesta": "ellos resolverían el problema en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "responder-condicional-5062",
+"verbo": "responder",
+"contexto": "tú, si pudieras, la pregunta",
+"respuesta": "tú responderías la pregunta si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "responder-condicional-5063",
+"verbo": "responder",
+"contexto": "nosotros, si fuera posible, la pregunta",
+"respuesta": "nosotros responderíamos la pregunta si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "responder-condicional-5064",
+"verbo": "responder",
+"contexto": "ustedes, de ser posible, la pregunta",
+"respuesta": "ustedes responderían la pregunta de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "resultar-condicional-5065",
+"verbo": "resultar",
+"contexto": "él, con más tiempo, beneficioso",
+"respuesta": "él resultaría beneficioso con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "resultar-condicional-5066",
+"verbo": "resultar",
+"contexto": "usted, con más dinero, beneficioso",
+"respuesta": "usted resultaría beneficioso con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "resultar-condicional-5067",
+"verbo": "resultar",
+"contexto": "yo, con más experiencia, beneficioso",
+"respuesta": "yo resultaría beneficioso con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "reunir-condicional-5068",
+"verbo": "reunir",
+"contexto": "yo, en tu lugar, a la familia",
+"respuesta": "yo reuniría a la familia en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "reunir-condicional-5069",
+"verbo": "reunir",
+"contexto": "ella, en esa situación, a la familia",
+"respuesta": "ella reuniría a la familia en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "reunir-condicional-5070",
+"verbo": "reunir",
+"contexto": "ellos, en un mundo ideal, a la familia",
+"respuesta": "ellos reunirían a la familia en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "revisar-condicional-5071",
+"verbo": "revisar",
+"contexto": "tú, si pudieras, cada detalle",
+"respuesta": "tú revisarías cada detalle si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "revisar-condicional-5072",
+"verbo": "revisar",
+"contexto": "nosotros, si fuera posible, cada detalle",
+"respuesta": "nosotros revisaríamos cada detalle si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "revisar-condicional-5073",
+"verbo": "revisar",
+"contexto": "ustedes, de ser posible, cada detalle",
+"respuesta": "ustedes revisarían cada detalle de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "robar-condicional-5074",
+"verbo": "robar",
+"contexto": "él, con más tiempo, un beso",
+"respuesta": "él robaría un beso con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "robar-condicional-5075",
+"verbo": "robar",
+"contexto": "usted, con más dinero, un beso",
+"respuesta": "usted robaría un beso con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "robar-condicional-5076",
+"verbo": "robar",
+"contexto": "yo, con más experiencia, un beso",
+"respuesta": "yo robaría un beso con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "romper-condicional-5077",
+"verbo": "romper",
+"contexto": "yo, en tu lugar, las reglas",
+"respuesta": "yo rompería las reglas en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "romper-condicional-5078",
+"verbo": "romper",
+"contexto": "ella, en esa situación, las reglas",
+"respuesta": "ella rompería las reglas en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "romper-condicional-5079",
+"verbo": "romper",
+"contexto": "ellos, en un mundo ideal, las reglas",
+"respuesta": "ellos romperían las reglas en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "saber-condicional-5080",
+"verbo": "saber",
+"contexto": "tú, si pudieras, sin pensarlo",
+"respuesta": "tú sabrías sin pensarlo si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "saber-condicional-5081",
+"verbo": "saber",
+"contexto": "nosotros, si fuera posible, sin dudar",
+"respuesta": "nosotros sabríamos sin dudar si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "saber-condicional-5082",
+"verbo": "saber",
+"contexto": "ustedes, de ser posible, sin demora",
+"respuesta": "ustedes sabrían sin demora de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "sacar-condicional-5083",
+"verbo": "sacar",
+"contexto": "él, con más tiempo, conclusiones",
+"respuesta": "él sacaría conclusiones con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "sacar-condicional-5084",
+"verbo": "sacar",
+"contexto": "usted, con más dinero, conclusiones",
+"respuesta": "usted sacaría conclusiones con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "sacar-condicional-5085",
+"verbo": "sacar",
+"contexto": "yo, con más experiencia, conclusiones",
+"respuesta": "yo sacaría conclusiones con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "salir-condicional-5086",
+"verbo": "salir",
+"contexto": "yo, en tu lugar, a cenar",
+"respuesta": "yo saldría a cenar en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "salir-condicional-5087",
+"verbo": "salir",
+"contexto": "ella, en esa situación, a cenar",
+"respuesta": "ella saldría a cenar en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "salir-condicional-5088",
+"verbo": "salir",
+"contexto": "ellos, en un mundo ideal, a cenar",
+"respuesta": "ellos saldrían a cenar en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "salvar-condicional-5089",
+"verbo": "salvar",
+"contexto": "tú, si pudieras, al mundo",
+"respuesta": "tú salvarías al mundo si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "salvar-condicional-5090",
+"verbo": "salvar",
+"contexto": "nosotros, si fuera posible, al mundo",
+"respuesta": "nosotros salvaríamos al mundo si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "salvar-condicional-5091",
+"verbo": "salvar",
+"contexto": "ustedes, de ser posible, al mundo",
+"respuesta": "ustedes salvarían al mundo de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "seguir-condicional-5092",
+"verbo": "seguir",
+"contexto": "él, con más tiempo, con la misión",
+"respuesta": "él seguiría con la misión con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "seguir-condicional-5093",
+"verbo": "seguir",
+"contexto": "usted, con más dinero, con la misión",
+"respuesta": "usted seguiría con la misión con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "seguir-condicional-5094",
+"verbo": "seguir",
+"contexto": "yo, con más experiencia, con la misión",
+"respuesta": "yo seguiría con la misión con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "señalar-condicional-5095",
+"verbo": "señalar",
+"contexto": "yo, en tu lugar, el camino",
+"respuesta": "yo señalaría el camino en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "señalar-condicional-5096",
+"verbo": "señalar",
+"contexto": "ella, en esa situación, el camino",
+"respuesta": "ella señalaría el camino en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "señalar-condicional-5097",
+"verbo": "señalar",
+"contexto": "ellos, en un mundo ideal, el camino",
+"respuesta": "ellos señalarían el camino en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "sentar-condicional-5098",
+"verbo": "sentar",
+"contexto": "tú, si pudieras, las bases",
+"respuesta": "tú sentarías las bases si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "sentar-condicional-5099",
+"verbo": "sentar",
+"contexto": "nosotros, si fuera posible, las bases",
+"respuesta": "nosotros sentaríamos las bases si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "sentar-condicional-5100",
+"verbo": "sentar",
+"contexto": "ustedes, de ser posible, las bases",
+"respuesta": "ustedes sentarían las bases de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "sentir-condicional-5101",
+"verbo": "sentir",
+"contexto": "él, con más tiempo, más gratitud",
+"respuesta": "él sentiría más gratitud con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "sentir-condicional-5102",
+"verbo": "sentir",
+"contexto": "usted, con más dinero, más gratitud",
+"respuesta": "usted sentiría más gratitud con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "sentir-condicional-5103",
+"verbo": "sentir",
+"contexto": "yo, con más experiencia, más gratitud",
+"respuesta": "yo sentiría más gratitud con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "ser-condicional-5104",
+"verbo": "ser",
+"contexto": "yo, en tu lugar, más paciente",
+"respuesta": "yo sería más paciente en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "ser-condicional-5105",
+"verbo": "ser",
+"contexto": "ella, en esa situación, más paciente",
+"respuesta": "ella sería más paciente en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "ser-condicional-5106",
+"verbo": "ser",
+"contexto": "ellos, en un mundo ideal, más paciente",
+"respuesta": "ellos serían más paciente en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "servir-condicional-5107",
+"verbo": "servir",
+"contexto": "tú, si pudieras, la cena",
+"respuesta": "tú servirías la cena si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "servir-condicional-5108",
+"verbo": "servir",
+"contexto": "nosotros, si fuera posible, la cena",
+"respuesta": "nosotros serviríamos la cena si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "servir-condicional-5109",
+"verbo": "servir",
+"contexto": "ustedes, de ser posible, la cena",
+"respuesta": "ustedes servirían la cena de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "significar-condicional-5110",
+"verbo": "significar",
+"contexto": "él, con más tiempo, algo especial",
+"respuesta": "él significaría algo especial con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "significar-condicional-5111",
+"verbo": "significar",
+"contexto": "usted, con más dinero, algo especial",
+"respuesta": "usted significaría algo especial con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "significar-condicional-5112",
+"verbo": "significar",
+"contexto": "yo, con más experiencia, algo especial",
+"respuesta": "yo significaría algo especial con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "soler-condicional-5113",
+"verbo": "soler",
+"contexto": "yo, en tu lugar, ir al parque",
+"respuesta": "yo solería ir al parque en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "soler-condicional-5114",
+"verbo": "soler",
+"contexto": "ella, en esa situación, ir al parque",
+"respuesta": "ella solería ir al parque en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "soler-condicional-5115",
+"verbo": "soler",
+"contexto": "ellos, en un mundo ideal, ir al parque",
+"respuesta": "ellos solerían ir al parque en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "soltar-condicional-5116",
+"verbo": "soltar",
+"contexto": "tú, si pudieras, una carcajada",
+"respuesta": "tú soltarías una carcajada si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "soltar-condicional-5117",
+"verbo": "soltar",
+"contexto": "nosotros, si fuera posible, una carcajada",
+"respuesta": "nosotros soltaríamos una carcajada si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "soltar-condicional-5118",
+"verbo": "soltar",
+"contexto": "ustedes, de ser posible, una carcajada",
+"respuesta": "ustedes soltarían una carcajada de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "sonar-condicional-5119",
+"verbo": "sonar",
+"contexto": "él, con más tiempo, la campana",
+"respuesta": "él sonaría la campana con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "sonar-condicional-5120",
+"verbo": "sonar",
+"contexto": "usted, con más dinero, la campana",
+"respuesta": "usted sonaría la campana con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "sonar-condicional-5121",
+"verbo": "sonar",
+"contexto": "yo, con más experiencia, la campana",
+"respuesta": "yo sonaría la campana con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "subir-condicional-5122",
+"verbo": "subir",
+"contexto": "yo, en tu lugar, la montaña",
+"respuesta": "yo subiría la montaña en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "subir-condicional-5123",
+"verbo": "subir",
+"contexto": "ella, en esa situación, la montaña",
+"respuesta": "ella subiría la montaña en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "subir-condicional-5124",
+"verbo": "subir",
+"contexto": "ellos, en un mundo ideal, la montaña",
+"respuesta": "ellos subirían la montaña en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "suceder-condicional-5125",
+"verbo": "suceder",
+"contexto": "tú, si pudieras, lo mismo",
+"respuesta": "tú sucederías lo mismo si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "suceder-condicional-5126",
+"verbo": "suceder",
+"contexto": "nosotros, si fuera posible, lo mismo",
+"respuesta": "nosotros sucederíamos lo mismo si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "suceder-condicional-5127",
+"verbo": "suceder",
+"contexto": "ustedes, de ser posible, lo mismo",
+"respuesta": "ustedes sucederían lo mismo de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "sufrir-condicional-5128",
+"verbo": "sufrir",
+"contexto": "él, con más tiempo, en silencio",
+"respuesta": "él sufriría en silencio con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "sufrir-condicional-5129",
+"verbo": "sufrir",
+"contexto": "usted, con más dinero, en silencio",
+"respuesta": "usted sufriría en silencio con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "sufrir-condicional-5130",
+"verbo": "sufrir",
+"contexto": "yo, con más experiencia, en silencio",
+"respuesta": "yo sufriría en silencio con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "superar-condicional-5131",
+"verbo": "superar",
+"contexto": "yo, en tu lugar, los obstáculos",
+"respuesta": "yo superaría los obstáculos en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "superar-condicional-5132",
+"verbo": "superar",
+"contexto": "ella, en esa situación, los obstáculos",
+"respuesta": "ella superaría los obstáculos en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "superar-condicional-5133",
+"verbo": "superar",
+"contexto": "ellos, en un mundo ideal, los obstáculos",
+"respuesta": "ellos superarían los obstáculos en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "suponer-condicional-5134",
+"verbo": "suponer",
+"contexto": "tú, si pudieras, un reto",
+"respuesta": "tú supondrías un reto si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "suponer-condicional-5135",
+"verbo": "suponer",
+"contexto": "nosotros, si fuera posible, un reto",
+"respuesta": "nosotros supondríamos un reto si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "suponer-condicional-5136",
+"verbo": "suponer",
+"contexto": "ustedes, de ser posible, un reto",
+"respuesta": "ustedes supondrían un reto de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "temer-condicional-5137",
+"verbo": "temer",
+"contexto": "él, con más tiempo, la soledad",
+"respuesta": "él temería la soledad con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "temer-condicional-5138",
+"verbo": "temer",
+"contexto": "usted, con más dinero, la soledad",
+"respuesta": "usted temería la soledad con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "temer-condicional-5139",
+"verbo": "temer",
+"contexto": "yo, con más experiencia, la soledad",
+"respuesta": "yo temería la soledad con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "tener-condicional-5140",
+"verbo": "tener",
+"contexto": "yo, en tu lugar, más paciencia",
+"respuesta": "yo tendría más paciencia en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "tener-condicional-5141",
+"verbo": "tener",
+"contexto": "ella, en esa situación, más paciencia",
+"respuesta": "ella tendría más paciencia en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "tener-condicional-5142",
+"verbo": "tener",
+"contexto": "ellos, en un mundo ideal, más paciencia",
+"respuesta": "ellos tendrían más paciencia en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "terminar-condicional-5143",
+"verbo": "terminar",
+"contexto": "tú, si pudieras, el libro",
+"respuesta": "tú terminarías el libro si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "terminar-condicional-5144",
+"verbo": "terminar",
+"contexto": "nosotros, si fuera posible, el libro",
+"respuesta": "nosotros terminaríamos el libro si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "terminar-condicional-5145",
+"verbo": "terminar",
+"contexto": "ustedes, de ser posible, el libro",
+"respuesta": "ustedes terminarían el libro de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "tirar-condicional-5146",
+"verbo": "tirar",
+"contexto": "él, con más tiempo, con fuerza",
+"respuesta": "él tiraría con fuerza con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "tirar-condicional-5147",
+"verbo": "tirar",
+"contexto": "usted, con más dinero, con fuerza",
+"respuesta": "usted tiraría con fuerza con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "tirar-condicional-5148",
+"verbo": "tirar",
+"contexto": "yo, con más experiencia, con fuerza",
+"respuesta": "yo tiraría con fuerza con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "tocar-condicional-5149",
+"verbo": "tocar",
+"contexto": "yo, en tu lugar, la guitarra",
+"respuesta": "yo tocaría la guitarra en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "tocar-condicional-5150",
+"verbo": "tocar",
+"contexto": "ella, en esa situación, la guitarra",
+"respuesta": "ella tocaría la guitarra en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "tocar-condicional-5151",
+"verbo": "tocar",
+"contexto": "ellos, en un mundo ideal, la guitarra",
+"respuesta": "ellos tocarían la guitarra en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "tomar-condicional-5152",
+"verbo": "tomar",
+"contexto": "tú, si pudieras, un descanso",
+"respuesta": "tú tomarías un descanso si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "tomar-condicional-5153",
+"verbo": "tomar",
+"contexto": "nosotros, si fuera posible, un descanso",
+"respuesta": "nosotros tomaríamos un descanso si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "tomar-condicional-5154",
+"verbo": "tomar",
+"contexto": "ustedes, de ser posible, un descanso",
+"respuesta": "ustedes tomarían un descanso de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "trabajar-condicional-5155",
+"verbo": "trabajar",
+"contexto": "él, con más tiempo, desde casa",
+"respuesta": "él trabajaría desde casa con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "trabajar-condicional-5156",
+"verbo": "trabajar",
+"contexto": "usted, con más dinero, desde casa",
+"respuesta": "usted trabajaría desde casa con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "trabajar-condicional-5157",
+"verbo": "trabajar",
+"contexto": "yo, con más experiencia, desde casa",
+"respuesta": "yo trabajaría desde casa con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "traer-condicional-5158",
+"verbo": "traer",
+"contexto": "yo, en tu lugar, buenas noticias",
+"respuesta": "yo traería buenas noticias en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "traer-condicional-5159",
+"verbo": "traer",
+"contexto": "ella, en esa situación, buenas noticias",
+"respuesta": "ella traería buenas noticias en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "traer-condicional-5160",
+"verbo": "traer",
+"contexto": "ellos, en un mundo ideal, buenas noticias",
+"respuesta": "ellos traerían buenas noticias en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "tranquilar-condicional-5161",
+"verbo": "tranquilar",
+"contexto": "tú, si pudieras, la situación",
+"respuesta": "tú tranquilarías la situación si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "tranquilar-condicional-5162",
+"verbo": "tranquilar",
+"contexto": "nosotros, si fuera posible, la situación",
+"respuesta": "nosotros tranquilaríamos la situación si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "tranquilar-condicional-5163",
+"verbo": "tranquilar",
+"contexto": "ustedes, de ser posible, la situación",
+"respuesta": "ustedes tranquilarían la situación de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "tratar-condicional-5164",
+"verbo": "tratar",
+"contexto": "él, con más tiempo, de entender",
+"respuesta": "él trataría de entender con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "tratar-condicional-5165",
+"verbo": "tratar",
+"contexto": "usted, con más dinero, de entender",
+"respuesta": "usted trataría de entender con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "tratar-condicional-5166",
+"verbo": "tratar",
+"contexto": "yo, con más experiencia, de entender",
+"respuesta": "yo trataría de entender con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "unir-condicional-5167",
+"verbo": "unir",
+"contexto": "yo, en tu lugar, a las personas",
+"respuesta": "yo uniría a las personas en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "unir-condicional-5168",
+"verbo": "unir",
+"contexto": "ella, en esa situación, a las personas",
+"respuesta": "ella uniría a las personas en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "unir-condicional-5169",
+"verbo": "unir",
+"contexto": "ellos, en un mundo ideal, a las personas",
+"respuesta": "ellos unirían a las personas en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "usar-condicional-5170",
+"verbo": "usar",
+"contexto": "tú, si pudieras, la tecnología",
+"respuesta": "tú usarías la tecnología si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "usar-condicional-5171",
+"verbo": "usar",
+"contexto": "nosotros, si fuera posible, la tecnología",
+"respuesta": "nosotros usaríamos la tecnología si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "usar-condicional-5172",
+"verbo": "usar",
+"contexto": "ustedes, de ser posible, la tecnología",
+"respuesta": "ustedes usarían la tecnología de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "utilizar-condicional-5173",
+"verbo": "utilizar",
+"contexto": "él, con más tiempo, la lógica",
+"respuesta": "él utilizaría la lógica con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "utilizar-condicional-5174",
+"verbo": "utilizar",
+"contexto": "usted, con más dinero, la lógica",
+"respuesta": "usted utilizaría la lógica con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "utilizar-condicional-5175",
+"verbo": "utilizar",
+"contexto": "yo, con más experiencia, la lógica",
+"respuesta": "yo utilizaría la lógica con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "valer-condicional-5176",
+"verbo": "valer",
+"contexto": "yo, en tu lugar, la pena",
+"respuesta": "yo valdría la pena en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "valer-condicional-5177",
+"verbo": "valer",
+"contexto": "ella, en esa situación, la pena",
+"respuesta": "ella valdría la pena en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "valer-condicional-5178",
+"verbo": "valer",
+"contexto": "ellos, en un mundo ideal, la pena",
+"respuesta": "ellos valdrían la pena en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "vender-condicional-5179",
+"verbo": "vender",
+"contexto": "tú, si pudieras, el coche",
+"respuesta": "tú venderías el coche si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "vender-condicional-5180",
+"verbo": "vender",
+"contexto": "nosotros, si fuera posible, el coche",
+"respuesta": "nosotros venderíamos el coche si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "vender-condicional-5181",
+"verbo": "vender",
+"contexto": "ustedes, de ser posible, el coche",
+"respuesta": "ustedes venderían el coche de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "venir-condicional-5182",
+"verbo": "venir",
+"contexto": "él, con más tiempo, más temprano",
+"respuesta": "él vendría más temprano con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "venir-condicional-5183",
+"verbo": "venir",
+"contexto": "usted, con más dinero, más temprano",
+"respuesta": "usted vendría más temprano con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "venir-condicional-5184",
+"verbo": "venir",
+"contexto": "yo, con más experiencia, más temprano",
+"respuesta": "yo vendría más temprano con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "ver-condicional-5185",
+"verbo": "ver",
+"contexto": "yo, en tu lugar, las cosas diferentes",
+"respuesta": "yo vería las cosas diferentes en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "ver-condicional-5186",
+"verbo": "ver",
+"contexto": "ella, en esa situación, las cosas diferentes",
+"respuesta": "ella vería las cosas diferentes en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "ver-condicional-5187",
+"verbo": "ver",
+"contexto": "ellos, en un mundo ideal, las cosas diferentes",
+"respuesta": "ellos verían las cosas diferentes en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "viajar-condicional-5188",
+"verbo": "viajar",
+"contexto": "tú, si pudieras, a España",
+"respuesta": "tú viajarías a España si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "viajar-condicional-5189",
+"verbo": "viajar",
+"contexto": "nosotros, si fuera posible, a España",
+"respuesta": "nosotros viajaríamos a España si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "viajar-condicional-5190",
+"verbo": "viajar",
+"contexto": "ustedes, de ser posible, a España",
+"respuesta": "ustedes viajarían a España de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+},
+{
+"id": "vivir-condicional-5191",
+"verbo": "vivir",
+"contexto": "él, con más tiempo, sin preocupaciones",
+"respuesta": "él viviría sin preocupaciones con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo."
+},
+{
+"id": "vivir-condicional-5192",
+"verbo": "vivir",
+"contexto": "usted, con más dinero, sin preocupaciones",
+"respuesta": "usted viviría sin preocupaciones con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos."
+},
+{
+"id": "vivir-condicional-5193",
+"verbo": "vivir",
+"contexto": "yo, con más experiencia, sin preocupaciones",
+"respuesta": "yo viviría sin preocupaciones con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento."
+},
+{
+"id": "volar-condicional-5194",
+"verbo": "volar",
+"contexto": "yo, en tu lugar, a otro país",
+"respuesta": "yo volaría a otro país en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona."
+},
+{
+"id": "volar-condicional-5195",
+"verbo": "volar",
+"contexto": "ella, en esa situación, a otro país",
+"respuesta": "ella volaría a otro país en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica."
+},
+{
+"id": "volar-condicional-5196",
+"verbo": "volar",
+"contexto": "ellos, en un mundo ideal, a otro país",
+"respuesta": "ellos volarían a otro país en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria."
+},
+{
+"id": "volver-condicional-5197",
+"verbo": "volver",
+"contexto": "tú, si pudieras, con más frecuencia",
+"respuesta": "tú volverías con más frecuencia si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición."
+},
+{
+"id": "volver-condicional-5198",
+"verbo": "volver",
+"contexto": "nosotros, si fuera posible, con ganas",
+"respuesta": "nosotros volveríamos con ganas si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad."
+},
+{
+"id": "volver-condicional-5199",
+"verbo": "volver",
+"contexto": "ustedes, de ser posible, con prontitud",
+"respuesta": "ustedes volverían con prontitud de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad."
+}
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "casar-futuro-3763",
+    "field": "respuesta",
+    "text": "Ellos casarán en junio mañana.",
+    "cat": "gram",
+    "fix": "Ellos se casarán en junio.",
+    "note": "casarse needs reflexive pronoun; \"mañana\" and \"en junio\" contradict each other"
+  },
+  {
+    "id": "casar-futuro-3764",
+    "field": "respuesta",
+    "text": "Yo casaré con mi pareja el año que viene.",
+    "cat": "gram",
+    "fix": "Yo me casaré con mi pareja el año que viene.",
+    "note": "casarse (to get married) requires the reflexive pronoun me"
+  },
+  {
+    "id": "casar-futuro-3765",
+    "field": "respuesta",
+    "text": "Mi hermana casará en la iglesia el año que viene.",
+    "cat": "gram",
+    "fix": "Mi hermana se casará en la iglesia el año que viene.",
+    "note": "casarse requires reflexive pronoun se; bare \"casará\" means to officiate a wedding"
+  },
+  {
+    "id": "asesinar-futuro-3709",
+    "field": "respuesta",
+    "text": "El villano asesinará al rey en la novela dentro de una hora.",
+    "cat": "unnat",
+    "fix": "En la novela, el villano asesinará al rey dentro de una hora.",
+    "note": "fictional frame and real-time adverb collide; unnatural word order for spoken Spanish"
+  },
+  {
+    "id": "asesinar-futuro-3710",
+    "field": "respuesta",
+    "text": "Él asesinará al personaje en la película dentro de una hora.",
+    "cat": "unnat",
+    "fix": "En la película, él asesinará al personaje dentro de una hora.",
+    "note": "narrative frame stacked with literal time adverb sounds unnatural spoken"
+  },
+  {
+    "id": "engañar-futuro-3938",
+    "field": "respuesta",
+    "text": "Yo engañaré a nadie el lunes.",
+    "cat": "gram",
+    "fix": "Yo no engañaré a nadie el lunes.",
+    "note": "negative word nadie after the verb requires \"no\" before the verb"
+  },
+  {
+    "id": "enterar-futuro-3946",
+    "field": "respuesta",
+    "text": "Yo enteraré de la noticia en unos minutos.",
+    "cat": "gram",
+    "fix": "Yo me enteraré de la noticia en unos minutos.",
+    "note": "enterarse de (to find out) needs the reflexive pronoun me"
+  },
+  {
+    "id": "enterar-futuro-3947",
+    "field": "respuesta",
+    "text": "Tú enterarás de la verdad el año que viene.",
+    "cat": "gram",
+    "fix": "Tú te enterarás de la verdad el año que viene.",
+    "note": "enterarse de requires reflexive pronoun te, missing here"
+  },
+  {
+    "id": "enterar-futuro-3948",
+    "field": "respuesta",
+    "text": "Mis padres enterarán de todo el próximo mes.",
+    "cat": "gram",
+    "fix": "Mis padres se enterarán de todo el próximo mes.",
+    "note": "enterarse de requires reflexive pronoun se, missing here"
+  },
+  {
+    "id": "mentir-futuro-4099",
+    "field": "respuesta",
+    "text": "Yo mentiré nunca más en unos minutos.",
+    "cat": "gram",
+    "fix": "Yo no mentiré nunca más.",
+    "note": "nunca after the verb needs preceding \"no\"; also clashes with \"en unos minutos\""
+  },
+  {
+    "id": "molestar-futuro-4112",
+    "field": "respuesta",
+    "text": "Yo molestaré a nadie en unos minutos.",
+    "cat": "gram",
+    "fix": "Yo no molestaré a nadie en unos minutos.",
+    "note": "negative word nadie after the verb requires \"no\" before the verb"
+  },
+  {
+    "id": "preocupar-futuro-4215",
+    "field": "respuesta",
+    "text": "Yo preocuparé por mi familia el año que viene.",
+    "cat": "gram",
+    "fix": "Yo me preocuparé por mi familia el año que viene.",
+    "note": "preocuparse por (to worry about) requires the reflexive pronoun me"
+  },
+  {
+    "id": "soler-futuro-4333",
+    "field": "respuesta",
+    "text": "Yo soleré estudiar por la noche dentro de poco.",
+    "cat": "gram",
+    "fix": "N/A — soler is a defective verb with no standard futuro simple form.",
+    "note": "soler is defective and is not conjugated in futuro simple in standard Spanish"
+  },
+  {
+    "id": "soler-futuro-4334",
+    "field": "respuesta",
+    "text": "Tú solerás correr por las mañanas la próxima vez.",
+    "cat": "gram",
+    "fix": "N/A — soler has no standard futuro simple form.",
+    "note": "soler is defective and does not take futuro simple conjugation"
+  },
+  {
+    "id": "soler-futuro-4335",
+    "field": "respuesta",
+    "text": "Nosotros soleremos cenar a las ocho la semana que viene.",
+    "cat": "gram",
+    "fix": "N/A — soler has no standard futuro simple form.",
+    "note": "soler is defective and does not take futuro simple conjugation"
+  },
+  {
+    "id": "tranquilar-futuro-4381",
+    "field": "respuesta",
+    "text": "Yo tranquilaré a los pasajeros pasado mañana.",
+    "cat": "gram",
+    "fix": "Yo tranquilizaré a los pasajeros pasado mañana.",
+    "note": "\"tranquilar\" is not a standard verb; the correct verb is tranquilizar"
+  },
+  {
+    "id": "tranquilar-futuro-4381",
+    "field": "verbo",
+    "text": "tranquilar",
+    "cat": "gram",
+    "fix": "tranquilizar",
+    "note": "non-existent infinitive; standard Spanish verb is tranquilizar"
+  },
+  {
+    "id": "tranquilar-futuro-4382",
+    "field": "respuesta",
+    "text": "La música tranquilará el ambiente dentro de poco.",
+    "cat": "gram",
+    "fix": "La música tranquilizará el ambiente dentro de poco.",
+    "note": "\"tranquilar\" is not a standard verb; the correct verb is tranquilizar"
+  },
+  {
+    "id": "tranquilar-futuro-4382",
+    "field": "verbo",
+    "text": "tranquilar",
+    "cat": "gram",
+    "fix": "tranquilizar",
+    "note": "non-existent infinitive; standard Spanish verb is tranquilizar"
+  },
+  {
+    "id": "tranquilar-futuro-4383",
+    "field": "respuesta",
+    "text": "Tú tranquilarás a los niños el próximo mes.",
+    "cat": "gram",
+    "fix": "Tú tranquilizarás a los niños el próximo mes.",
+    "note": "\"tranquilar\" is not a standard verb; the correct verb is tranquilizar"
+  },
+  {
+    "id": "tranquilar-futuro-4383",
+    "field": "verbo",
+    "text": "tranquilar",
+    "cat": "gram",
+    "fix": "tranquilizar",
+    "note": "non-existent infinitive; standard Spanish verb is tranquilizar"
+  },
+  {
+    "id": "joder-futuro-4048",
+    "field": "respuesta",
+    "text": "La lluvia joderá nuestros planes esta noche.",
+    "cat": "unnat",
+    "fix": "La lluvia arruinará nuestros planes esta noche.",
+    "note": "vulgar register out of place in a neutral learner drill sentence"
+  },
+  {
+    "id": "joder-futuro-4049",
+    "field": "respuesta",
+    "text": "El ruido joderá la concentración la semana que viene.",
+    "cat": "unnat",
+    "fix": "El ruido arruinará la concentración la semana que viene.",
+    "note": "vulgar register out of place in a neutral learner drill sentence"
+  },
+  {
+    "id": "joder-futuro-4050",
+    "field": "respuesta",
+    "text": "El retraso joderá el horario en el futuro.",
+    "cat": "unnat",
+    "fix": "El retraso arruinará el horario en el futuro.",
+    "note": "vulgar register out of place in a neutral learner drill sentence"
+  },
+  {
+    "id": "importar-futuro-4028",
+    "field": "respuesta",
+    "text": "Tu opinión importará siempre mañana.",
+    "cat": "sem",
+    "fix": "Tu opinión siempre importará.",
+    "note": "\"siempre\" (always) contradicts the specific one-day marker \"mañana\""
+  }
+]

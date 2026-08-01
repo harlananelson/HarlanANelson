@@ -1,0 +1,1266 @@
+[
+  {
+    "id": "amar-subjuntivo-5243",
+    "field": "respuesta",
+    "text": "quiero que yo ame todo correctamente.",
+    "cat": "gram",
+    "fix": "quiero amar todo correctamente.",
+    "note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+  },
+  {
+    "id": "asesinar-subjuntivo-5270",
+    "field": "respuesta",
+    "text": "espero que yo asesine a tiempo.",
+    "cat": "gram",
+    "fix": "espero asesinar a tiempo.",
+    "note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+  },
+  {
+    "id": "contar-subjuntivo-5369",
+    "field": "respuesta",
+    "text": "quiero que yo cuente de manera diferente.",
+    "cat": "gram",
+    "fix": "quiero contar de manera diferente.",
+    "note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+  },
+  {
+    "id": "crecer-subjuntivo-5396",
+    "field": "respuesta",
+    "text": "espero que yo crezca sin problemas.",
+    "cat": "gram",
+    "fix": "espero crecer sin problemas.",
+    "note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+  },
+  {
+    "id": "enfrentar-subjuntivo-5495",
+    "field": "respuesta",
+    "text": "quiero que yo enfrente con nosotros.",
+    "cat": "gram",
+    "fix": "quiero enfrentar con nosotros.",
+    "note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+  },
+  {
+    "id": "esconder-subjuntivo-5522",
+    "field": "respuesta",
+    "text": "espero que yo esconda con cuidado.",
+    "cat": "gram",
+    "fix": "espero esconder con cuidado.",
+    "note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+  },
+  {
+    "id": "levantar-subjuntivo-5621",
+    "field": "respuesta",
+    "text": "quiero que yo levante lo antes posible.",
+    "cat": "gram",
+    "fix": "quiero levantar lo antes posible.",
+    "note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+  },
+  {
+    "id": "mantener-subjuntivo-5648",
+    "field": "respuesta",
+    "text": "espero que yo mantenga la verdad pronto.",
+    "cat": "gram",
+    "fix": "espero mantener la verdad pronto.",
+    "note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+  },
+  {
+    "id": "perdonar-subjuntivo-5747",
+    "field": "respuesta",
+    "text": "quiero que yo perdone en este momento.",
+    "cat": "gram",
+    "fix": "quiero perdonar en este momento.",
+    "note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+  },
+  {
+    "id": "preocupar-subjuntivo-5774",
+    "field": "respuesta",
+    "text": "espero que yo preocupe bien esta semana.",
+    "cat": "gram",
+    "fix": "espero preocupar bien esta semana.",
+    "note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+  },
+  {
+    "id": "seguir-subjuntivo-5873",
+    "field": "respuesta",
+    "text": "quiero que yo siga todo correctamente.",
+    "cat": "gram",
+    "fix": "quiero seguir todo correctamente.",
+    "note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+  },
+  {
+    "id": "sonar-subjuntivo-5900",
+    "field": "respuesta",
+    "text": "espero que yo suene a tiempo.",
+    "cat": "gram",
+    "fix": "espero sonar a tiempo.",
+    "note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+  },
+  {
+    "id": "abandonar-subjuntivo-5202",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, usted, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "acabar-subjuntivo-5206",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, nosotros, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "acabar-subjuntivo-5208",
+    "field": "contexto",
+    "text": "cada dia",
+    "cat": "ctx",
+    "fix": "es necesario que, tú, cada día (subjuntivo)",
+    "note": "'cada dia' sin tilde no coincide con la forma correcta 'cada día' de la respuesta"
+  },
+  {
+    "id": "acordar-subjuntivo-5218",
+    "field": "contexto",
+    "text": "tan facilmente",
+    "cat": "ctx",
+    "fix": "no creo que, tú, tan fácilmente (subjuntivo)",
+    "note": "'tan facilmente' sin tilde no coincide con la forma correcta 'tan fácilmente' de la respuesta"
+  },
+  {
+    "id": "acordar-subjuntivo-5219",
+    "field": "contexto",
+    "text": "tan rapido",
+    "cat": "ctx",
+    "fix": "dudo que, ella, tan rápido (subjuntivo)",
+    "note": "'tan rapido' sin tilde no coincide con la forma correcta 'tan rápido' de la respuesta"
+  },
+  {
+    "id": "actuar-subjuntivo-5221",
+    "field": "contexto",
+    "text": "mas tarde",
+    "cat": "ctx",
+    "fix": "es posible que, él, más tarde (subjuntivo)",
+    "note": "'mas tarde' sin tilde no coincide con la forma correcta 'más tarde' de la respuesta"
+  },
+  {
+    "id": "agradecer-subjuntivo-5232",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, ustedes, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "aparecer-subjuntivo-5249",
+    "field": "contexto",
+    "text": "mas tarde",
+    "cat": "ctx",
+    "fix": "es posible que, ellos, más tarde (subjuntivo)",
+    "note": "'mas tarde' sin tilde no coincide con la forma correcta 'más tarde' de la respuesta"
+  },
+  {
+    "id": "apartar-subjuntivo-5251",
+    "field": "contexto",
+    "text": "con atencion",
+    "cat": "ctx",
+    "fix": "es necesario que, nosotros, con atención (subjuntivo)",
+    "note": "'con atencion' sin tilde no coincide con la forma correcta 'con atención' de la respuesta"
+  },
+  {
+    "id": "aprender-subjuntivo-5262",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, tú, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "arreglar-subjuntivo-5263",
+    "field": "contexto",
+    "text": "la proxima semana",
+    "cat": "ctx",
+    "fix": "es posible que, tú, la próxima semana (subjuntivo)",
+    "note": "'la proxima semana' sin tilde no coincide con la forma correcta 'la próxima semana' de la respuesta"
+  },
+  {
+    "id": "atacar-subjuntivo-5276",
+    "field": "contexto",
+    "text": "tan facilmente",
+    "cat": "ctx",
+    "fix": "no creo que, ellos, tan fácilmente (subjuntivo)",
+    "note": "'tan facilmente' sin tilde no coincide con la forma correcta 'tan fácilmente' de la respuesta"
+  },
+  {
+    "id": "averiguar-subjuntivo-5282",
+    "field": "contexto",
+    "text": "rapidamente",
+    "cat": "ctx",
+    "fix": "a menos que, ella, rápidamente (subjuntivo)",
+    "note": "'rapidamente' sin tilde no coincide con la forma correcta 'rápidamente' de la respuesta"
+  },
+  {
+    "id": "bajar-subjuntivo-5291",
+    "field": "contexto",
+    "text": "la proxima semana",
+    "cat": "ctx",
+    "fix": "es posible que, ella, la próxima semana (subjuntivo)",
+    "note": "'la proxima semana' sin tilde no coincide con la forma correcta 'la próxima semana' de la respuesta"
+  },
+  {
+    "id": "bajar-subjuntivo-5292",
+    "field": "contexto",
+    "text": "con atencion",
+    "cat": "ctx",
+    "fix": "es necesario que, usted, con atención (subjuntivo)",
+    "note": "'con atencion' sin tilde no coincide con la forma correcta 'con atención' de la respuesta"
+  },
+  {
+    "id": "caer-subjuntivo-5305",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "es posible que, nosotros, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "caer-subjuntivo-5306",
+    "field": "contexto",
+    "text": "con exito",
+    "cat": "ctx",
+    "fix": "para que, yo, con éxito (subjuntivo)",
+    "note": "'con exito' sin tilde no coincide con la forma correcta 'con éxito' de la respuesta"
+  },
+  {
+    "id": "callar-subjuntivo-5308",
+    "field": "contexto",
+    "text": "con exito",
+    "cat": "ctx",
+    "fix": "para que, tú, con éxito (subjuntivo)",
+    "note": "'con exito' sin tilde no coincide con la forma correcta 'con éxito' de la respuesta"
+  },
+  {
+    "id": "cambiar-subjuntivo-5315",
+    "field": "contexto",
+    "text": "cada dia",
+    "cat": "ctx",
+    "fix": "es necesario que, yo, cada día (subjuntivo)",
+    "note": "'cada dia' sin tilde no coincide con la forma correcta 'cada día' de la respuesta"
+  },
+  {
+    "id": "cantar-subjuntivo-5322",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, ustedes, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "comenzar-subjuntivo-5333",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "es posible que, yo, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "compartir-subjuntivo-5341",
+    "field": "contexto",
+    "text": "tan rapido",
+    "cat": "ctx",
+    "fix": "dudo que, nosotros, tan rápido (subjuntivo)",
+    "note": "'tan rapido' sin tilde no coincide con la forma correcta 'tan rápido' de la respuesta"
+  },
+  {
+    "id": "conducir-subjuntivo-5352",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, tú, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "controlar-subjuntivo-5377",
+    "field": "contexto",
+    "text": "cada dia",
+    "cat": "ctx",
+    "fix": "es necesario que, nosotros, cada día (subjuntivo)",
+    "note": "'cada dia' sin tilde no coincide con la forma correcta 'cada día' de la respuesta"
+  },
+  {
+    "id": "convertir-subjuntivo-5382",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, usted, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "correr-subjuntivo-5384",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, ellos, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "creer-subjuntivo-5399",
+    "field": "contexto",
+    "text": "con atencion",
+    "cat": "ctx",
+    "fix": "es necesario que, ella, con atención (subjuntivo)",
+    "note": "'con atencion' sin tilde no coincide con la forma correcta 'con atención' de la respuesta"
+  },
+  {
+    "id": "cuidar-subjuntivo-5404",
+    "field": "contexto",
+    "text": "rapidamente",
+    "cat": "ctx",
+    "fix": "a menos que, nosotros, rápidamente (subjuntivo)",
+    "note": "'rapidamente' sin tilde no coincide con la forma correcta 'rápidamente' de la respuesta"
+  },
+  {
+    "id": "dar-subjuntivo-5412",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, ustedes, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "decidir-subjuntivo-5416",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, tú, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "decidir-subjuntivo-5418",
+    "field": "contexto",
+    "text": "cada dia",
+    "cat": "ctx",
+    "fix": "es necesario que, usted, cada día (subjuntivo)",
+    "note": "'cada dia' sin tilde no coincide con la forma correcta 'cada día' de la respuesta"
+  },
+  {
+    "id": "demostrar-subjuntivo-5428",
+    "field": "contexto",
+    "text": "tan facilmente",
+    "cat": "ctx",
+    "fix": "no creo que, él, tan fácilmente (subjuntivo)",
+    "note": "'tan facilmente' sin tilde no coincide con la forma correcta 'tan fácilmente' de la respuesta"
+  },
+  {
+    "id": "demostrar-subjuntivo-5429",
+    "field": "contexto",
+    "text": "tan rapido",
+    "cat": "ctx",
+    "fix": "dudo que, ellos, tan rápido (subjuntivo)",
+    "note": "'tan rapido' sin tilde no coincide con la forma correcta 'tan rápido' de la respuesta"
+  },
+  {
+    "id": "depender-subjuntivo-5431",
+    "field": "contexto",
+    "text": "mas tarde",
+    "cat": "ctx",
+    "fix": "es posible que, nosotros, más tarde (subjuntivo)",
+    "note": "'mas tarde' sin tilde no coincide con la forma correcta 'más tarde' de la respuesta"
+  },
+  {
+    "id": "descubrir-subjuntivo-5442",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, tú, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "devolver-subjuntivo-5459",
+    "field": "contexto",
+    "text": "mas tarde",
+    "cat": "ctx",
+    "fix": "es posible que, yo, más tarde (subjuntivo)",
+    "note": "'mas tarde' sin tilde no coincide con la forma correcta 'más tarde' de la respuesta"
+  },
+  {
+    "id": "dirigir-subjuntivo-5461",
+    "field": "contexto",
+    "text": "con atencion",
+    "cat": "ctx",
+    "fix": "es necesario que, tú, con atención (subjuntivo)",
+    "note": "'con atencion' sin tilde no coincide con la forma correcta 'con atención' de la respuesta"
+  },
+  {
+    "id": "disfrutar-subjuntivo-5472",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, usted, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "disparar-subjuntivo-5473",
+    "field": "contexto",
+    "text": "la proxima semana",
+    "cat": "ctx",
+    "fix": "es posible que, él, la próxima semana (subjuntivo)",
+    "note": "'la proxima semana' sin tilde no coincide con la forma correcta 'la próxima semana' de la respuesta"
+  },
+  {
+    "id": "empezar-subjuntivo-5486",
+    "field": "contexto",
+    "text": "tan facilmente",
+    "cat": "ctx",
+    "fix": "no creo que, yo, tan fácilmente (subjuntivo)",
+    "note": "'tan facilmente' sin tilde no coincide con la forma correcta 'tan fácilmente' de la respuesta"
+  },
+  {
+    "id": "encontrar-subjuntivo-5492",
+    "field": "contexto",
+    "text": "rapidamente",
+    "cat": "ctx",
+    "fix": "a menos que, ellos, rápidamente (subjuntivo)",
+    "note": "'rapidamente' sin tilde no coincide con la forma correcta 'rápidamente' de la respuesta"
+  },
+  {
+    "id": "enseñar-subjuntivo-5501",
+    "field": "contexto",
+    "text": "la proxima semana",
+    "cat": "ctx",
+    "fix": "es posible que, ellos, la próxima semana (subjuntivo)",
+    "note": "'la proxima semana' sin tilde no coincide con la forma correcta 'la próxima semana' de la respuesta"
+  },
+  {
+    "id": "enseñar-subjuntivo-5502",
+    "field": "contexto",
+    "text": "con atencion",
+    "cat": "ctx",
+    "fix": "es necesario que, ustedes, con atención (subjuntivo)",
+    "note": "'con atencion' sin tilde no coincide con la forma correcta 'con atención' de la respuesta"
+  },
+  {
+    "id": "enviar-subjuntivo-5515",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "es posible que, tú, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "enviar-subjuntivo-5516",
+    "field": "contexto",
+    "text": "con exito",
+    "cat": "ctx",
+    "fix": "para que, ella, con éxito (subjuntivo)",
+    "note": "'con exito' sin tilde no coincide con la forma correcta 'con éxito' de la respuesta"
+  },
+  {
+    "id": "escapar-subjuntivo-5518",
+    "field": "contexto",
+    "text": "con exito",
+    "cat": "ctx",
+    "fix": "para que, él, con éxito (subjuntivo)",
+    "note": "'con exito' sin tilde no coincide con la forma correcta 'con éxito' de la respuesta"
+  },
+  {
+    "id": "escribir-subjuntivo-5525",
+    "field": "contexto",
+    "text": "cada dia",
+    "cat": "ctx",
+    "fix": "es necesario que, ella, cada día (subjuntivo)",
+    "note": "'cada dia' sin tilde no coincide con la forma correcta 'cada día' de la respuesta"
+  },
+  {
+    "id": "esperar-subjuntivo-5532",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, tú, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "existir-subjuntivo-5543",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "es posible que, ella, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "funcionar-subjuntivo-5551",
+    "field": "contexto",
+    "text": "tan rapido",
+    "cat": "ctx",
+    "fix": "dudo que, tú, tan rápido (subjuntivo)",
+    "note": "'tan rapido' sin tilde no coincide con la forma correcta 'tan rápido' de la respuesta"
+  },
+  {
+    "id": "gritar-subjuntivo-5562",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, usted, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "importar-subjuntivo-5587",
+    "field": "contexto",
+    "text": "cada dia",
+    "cat": "ctx",
+    "fix": "es necesario que, tú, cada día (subjuntivo)",
+    "note": "'cada dia' sin tilde no coincide con la forma correcta 'cada día' de la respuesta"
+  },
+  {
+    "id": "incluir-subjuntivo-5592",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, ustedes, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "informar-subjuntivo-5594",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, yo, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "joder-subjuntivo-5609",
+    "field": "contexto",
+    "text": "con atencion",
+    "cat": "ctx",
+    "fix": "es necesario que, ellos, con atención (subjuntivo)",
+    "note": "'con atencion' sin tilde no coincide con la forma correcta 'con atención' de la respuesta"
+  },
+  {
+    "id": "jurar-subjuntivo-5614",
+    "field": "contexto",
+    "text": "rapidamente",
+    "cat": "ctx",
+    "fix": "a menos que, tú, rápidamente (subjuntivo)",
+    "note": "'rapidamente' sin tilde no coincide con la forma correcta 'rápidamente' de la respuesta"
+  },
+  {
+    "id": "levantar-subjuntivo-5622",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, tú, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "llegar-subjuntivo-5626",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, él, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "llegar-subjuntivo-5628",
+    "field": "contexto",
+    "text": "cada dia",
+    "cat": "ctx",
+    "fix": "es necesario que, ustedes, cada día (subjuntivo)",
+    "note": "'cada dia' sin tilde no coincide con la forma correcta 'cada día' de la respuesta"
+  },
+  {
+    "id": "luchar-subjuntivo-5638",
+    "field": "contexto",
+    "text": "tan facilmente",
+    "cat": "ctx",
+    "fix": "no creo que, nosotros, tan fácilmente (subjuntivo)",
+    "note": "'tan facilmente' sin tilde no coincide con la forma correcta 'tan fácilmente' de la respuesta"
+  },
+  {
+    "id": "luchar-subjuntivo-5639",
+    "field": "contexto",
+    "text": "tan rapido",
+    "cat": "ctx",
+    "fix": "dudo que, yo, tan rápido (subjuntivo)",
+    "note": "'tan rapido' sin tilde no coincide con la forma correcta 'tan rápido' de la respuesta"
+  },
+  {
+    "id": "mandar-subjuntivo-5641",
+    "field": "contexto",
+    "text": "mas tarde",
+    "cat": "ctx",
+    "fix": "es posible que, tú, más tarde (subjuntivo)",
+    "note": "'mas tarde' sin tilde no coincide con la forma correcta 'más tarde' de la respuesta"
+  },
+  {
+    "id": "marchar-subjuntivo-5652",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, usted, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "mirar-subjuntivo-5669",
+    "field": "contexto",
+    "text": "mas tarde",
+    "cat": "ctx",
+    "fix": "es posible que, ella, más tarde (subjuntivo)",
+    "note": "'mas tarde' sin tilde no coincide con la forma correcta 'más tarde' de la respuesta"
+  },
+  {
+    "id": "molestar-subjuntivo-5671",
+    "field": "contexto",
+    "text": "con atencion",
+    "cat": "ctx",
+    "fix": "es necesario que, él, con atención (subjuntivo)",
+    "note": "'con atencion' sin tilde no coincide con la forma correcta 'con atención' de la respuesta"
+  },
+  {
+    "id": "mover-subjuntivo-5682",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, ustedes, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "nacer-subjuntivo-5683",
+    "field": "contexto",
+    "text": "la proxima semana",
+    "cat": "ctx",
+    "fix": "es posible que, nosotros, la próxima semana (subjuntivo)",
+    "note": "'la proxima semana' sin tilde no coincide con la forma correcta 'la próxima semana' de la respuesta"
+  },
+  {
+    "id": "obtener-subjuntivo-5696",
+    "field": "contexto",
+    "text": "tan facilmente",
+    "cat": "ctx",
+    "fix": "no creo que, ella, tan fácilmente (subjuntivo)",
+    "note": "'tan facilmente' sin tilde no coincide con la forma correcta 'tan fácilmente' de la respuesta"
+  },
+  {
+    "id": "ocurrir-subjuntivo-5702",
+    "field": "contexto",
+    "text": "rapidamente",
+    "cat": "ctx",
+    "fix": "a menos que, yo, rápidamente (subjuntivo)",
+    "note": "'rapidamente' sin tilde no coincide con la forma correcta 'rápidamente' de la respuesta"
+  },
+  {
+    "id": "oír-subjuntivo-5711",
+    "field": "contexto",
+    "text": "la proxima semana",
+    "cat": "ctx",
+    "fix": "es posible que, yo, la próxima semana (subjuntivo)",
+    "note": "'la proxima semana' sin tilde no coincide con la forma correcta 'la próxima semana' de la respuesta"
+  },
+  {
+    "id": "oír-subjuntivo-5712",
+    "field": "contexto",
+    "text": "con atencion",
+    "cat": "ctx",
+    "fix": "es necesario que, tú, con atención (subjuntivo)",
+    "note": "'con atencion' sin tilde no coincide con la forma correcta 'con atención' de la respuesta"
+  },
+  {
+    "id": "partir-subjuntivo-5725",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "es posible que, él, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "partir-subjuntivo-5726",
+    "field": "contexto",
+    "text": "con exito",
+    "cat": "ctx",
+    "fix": "para que, ellos, con éxito (subjuntivo)",
+    "note": "'con exito' sin tilde no coincide con la forma correcta 'con éxito' de la respuesta"
+  },
+  {
+    "id": "pasar-subjuntivo-5728",
+    "field": "contexto",
+    "text": "con exito",
+    "cat": "ctx",
+    "fix": "para que, nosotros, con éxito (subjuntivo)",
+    "note": "'con exito' sin tilde no coincide con la forma correcta 'con éxito' de la respuesta"
+  },
+  {
+    "id": "pegar-subjuntivo-5735",
+    "field": "contexto",
+    "text": "cada dia",
+    "cat": "ctx",
+    "fix": "es necesario que, ellos, cada día (subjuntivo)",
+    "note": "'cada dia' sin tilde no coincide con la forma correcta 'cada día' de la respuesta"
+  },
+  {
+    "id": "pensar-subjuntivo-5742",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, usted, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "permitir-subjuntivo-5753",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "es posible que, ellos, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "poder-subjuntivo-5761",
+    "field": "contexto",
+    "text": "tan rapido",
+    "cat": "ctx",
+    "fix": "dudo que, él, tan rápido (subjuntivo)",
+    "note": "'tan rapido' sin tilde no coincide con la forma correcta 'tan rápido' de la respuesta"
+  },
+  {
+    "id": "preguntar-subjuntivo-5772",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, ustedes, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "quedar-subjuntivo-5797",
+    "field": "contexto",
+    "text": "cada dia",
+    "cat": "ctx",
+    "fix": "es necesario que, él, cada día (subjuntivo)",
+    "note": "'cada dia' sin tilde no coincide con la forma correcta 'cada día' de la respuesta"
+  },
+  {
+    "id": "querer-subjuntivo-5802",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, tú, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "quitar-subjuntivo-5804",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, ella, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "recordar-subjuntivo-5819",
+    "field": "contexto",
+    "text": "con atencion",
+    "cat": "ctx",
+    "fix": "es necesario que, yo, con atención (subjuntivo)",
+    "note": "'con atencion' sin tilde no coincide con la forma correcta 'con atención' de la respuesta"
+  },
+  {
+    "id": "referir-subjuntivo-5824",
+    "field": "contexto",
+    "text": "rapidamente",
+    "cat": "ctx",
+    "fix": "a menos que, él, rápidamente (subjuntivo)",
+    "note": "'rapidamente' sin tilde no coincide con la forma correcta 'rápidamente' de la respuesta"
+  },
+  {
+    "id": "reír-subjuntivo-5832",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, usted, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "representar-subjuntivo-5836",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, nosotros, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "representar-subjuntivo-5838",
+    "field": "contexto",
+    "text": "cada dia",
+    "cat": "ctx",
+    "fix": "es necesario que, tú, cada día (subjuntivo)",
+    "note": "'cada dia' sin tilde no coincide con la forma correcta 'cada día' de la respuesta"
+  },
+  {
+    "id": "reunir-subjuntivo-5848",
+    "field": "contexto",
+    "text": "tan facilmente",
+    "cat": "ctx",
+    "fix": "no creo que, tú, tan fácilmente (subjuntivo)",
+    "note": "'tan facilmente' sin tilde no coincide con la forma correcta 'tan fácilmente' de la respuesta"
+  },
+  {
+    "id": "reunir-subjuntivo-5849",
+    "field": "contexto",
+    "text": "tan rapido",
+    "cat": "ctx",
+    "fix": "dudo que, ella, tan rápido (subjuntivo)",
+    "note": "'tan rapido' sin tilde no coincide con la forma correcta 'tan rápido' de la respuesta"
+  },
+  {
+    "id": "revisar-subjuntivo-5851",
+    "field": "contexto",
+    "text": "mas tarde",
+    "cat": "ctx",
+    "fix": "es posible que, él, más tarde (subjuntivo)",
+    "note": "'mas tarde' sin tilde no coincide con la forma correcta 'más tarde' de la respuesta"
+  },
+  {
+    "id": "saber-subjuntivo-5862",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, ustedes, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "sentar-subjuntivo-5879",
+    "field": "contexto",
+    "text": "mas tarde",
+    "cat": "ctx",
+    "fix": "es posible que, ellos, más tarde (subjuntivo)",
+    "note": "'mas tarde' sin tilde no coincide con la forma correcta 'más tarde' de la respuesta"
+  },
+  {
+    "id": "sentir-subjuntivo-5881",
+    "field": "contexto",
+    "text": "con atencion",
+    "cat": "ctx",
+    "fix": "es necesario que, nosotros, con atención (subjuntivo)",
+    "note": "'con atencion' sin tilde no coincide con la forma correcta 'con atención' de la respuesta"
+  },
+  {
+    "id": "significar-subjuntivo-5892",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, tú, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "soler-subjuntivo-5893",
+    "field": "contexto",
+    "text": "la proxima semana",
+    "cat": "ctx",
+    "fix": "es posible que, tú, la próxima semana (subjuntivo)",
+    "note": "'la proxima semana' sin tilde no coincide con la forma correcta 'la próxima semana' de la respuesta"
+  },
+  {
+    "id": "suceder-subjuntivo-5906",
+    "field": "contexto",
+    "text": "tan facilmente",
+    "cat": "ctx",
+    "fix": "no creo que, ellos, tan fácilmente (subjuntivo)",
+    "note": "'tan facilmente' sin tilde no coincide con la forma correcta 'tan fácilmente' de la respuesta"
+  },
+  {
+    "id": "superar-subjuntivo-5912",
+    "field": "contexto",
+    "text": "rapidamente",
+    "cat": "ctx",
+    "fix": "a menos que, ella, rápidamente (subjuntivo)",
+    "note": "'rapidamente' sin tilde no coincide con la forma correcta 'rápidamente' de la respuesta"
+  },
+  {
+    "id": "tener-subjuntivo-5921",
+    "field": "contexto",
+    "text": "la proxima semana",
+    "cat": "ctx",
+    "fix": "es posible que, ella, la próxima semana (subjuntivo)",
+    "note": "'la proxima semana' sin tilde no coincide con la forma correcta 'la próxima semana' de la respuesta"
+  },
+  {
+    "id": "tener-subjuntivo-5922",
+    "field": "contexto",
+    "text": "con atencion",
+    "cat": "ctx",
+    "fix": "es necesario que, usted, con atención (subjuntivo)",
+    "note": "'con atencion' sin tilde no coincide con la forma correcta 'con atención' de la respuesta"
+  },
+  {
+    "id": "trabajar-subjuntivo-5935",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "es posible que, nosotros, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "trabajar-subjuntivo-5936",
+    "field": "contexto",
+    "text": "con exito",
+    "cat": "ctx",
+    "fix": "para que, yo, con éxito (subjuntivo)",
+    "note": "'con exito' sin tilde no coincide con la forma correcta 'con éxito' de la respuesta"
+  },
+  {
+    "id": "traer-subjuntivo-5938",
+    "field": "contexto",
+    "text": "con exito",
+    "cat": "ctx",
+    "fix": "para que, tú, con éxito (subjuntivo)",
+    "note": "'con exito' sin tilde no coincide con la forma correcta 'con éxito' de la respuesta"
+  },
+  {
+    "id": "tratar-subjuntivo-5945",
+    "field": "contexto",
+    "text": "cada dia",
+    "cat": "ctx",
+    "fix": "es necesario que, yo, cada día (subjuntivo)",
+    "note": "'cada dia' sin tilde no coincide con la forma correcta 'cada día' de la respuesta"
+  },
+  {
+    "id": "usar-subjuntivo-5952",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "ojalá, ustedes, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "venir-subjuntivo-5963",
+    "field": "contexto",
+    "text": "manana",
+    "cat": "ctx",
+    "fix": "es posible que, yo, mañana (subjuntivo)",
+    "note": "'manana' sin tilde no coincide con la forma correcta 'mañana' de la respuesta"
+  },
+  {
+    "id": "vivir-subjuntivo-5971",
+    "field": "contexto",
+    "text": "tan rapido",
+    "cat": "ctx",
+    "fix": "dudo que, nosotros, tan rápido (subjuntivo)",
+    "note": "'tan rapido' sin tilde no coincide con la forma correcta 'tan rápido' de la respuesta"
+  },
+  {
+    "id": "tranquilar-subjuntivo-5941",
+    "field": "respuesta",
+    "text": "antes de que él tranquile sin permiso.",
+    "cat": "gram",
+    "fix": "antes de que él tranquilice sin permiso.",
+    "note": "'tranquilar' no existe en español estándar; el verbo correcto es 'tranquilizar'"
+  },
+  {
+    "id": "tranquilar-subjuntivo-5942",
+    "field": "respuesta",
+    "text": "espero que ellos tranquilen con cuidado.",
+    "cat": "gram",
+    "fix": "espero que ellos tranquilicen con cuidado.",
+    "note": "'tranquilar' no existe en español estándar; el verbo correcto es 'tranquilizar'"
+  },
+  {
+    "id": "tranquilar-subjuntivo-5943",
+    "field": "respuesta",
+    "text": "aunque ustedes tranquilen solo una vez.",
+    "cat": "gram",
+    "fix": "aunque ustedes tranquilicen solo una vez.",
+    "note": "'tranquilar' no existe en español estándar; el verbo correcto es 'tranquilizar'"
+  },
+  {
+    "id": "bastar-subjuntivo-5293",
+    "field": "respuesta",
+    "text": "es necesario que él baste sin demora.",
+    "cat": "sem",
+    "fix": "es necesario que (eso/con eso) baste sin demora.",
+    "note": "'bastar' es impersonal ('algo basta'); con sujeto personal como agente no tiene sentido"
+  },
+  {
+    "id": "bastar-subjuntivo-5294",
+    "field": "respuesta",
+    "text": "aunque ellos basten tarde.",
+    "cat": "sem",
+    "fix": "aunque (eso) baste tarde.",
+    "note": "'bastar' es impersonal ('algo basta'); con sujeto personal como agente no tiene sentido"
+  },
+  {
+    "id": "bastar-subjuntivo-5295",
+    "field": "respuesta",
+    "text": "antes de que ustedes basten de nuevo.",
+    "cat": "sem",
+    "fix": "antes de que (eso) baste de nuevo.",
+    "note": "'bastar' es impersonal ('algo basta'); con sujeto personal como agente no tiene sentido"
+  },
+  {
+    "id": "gustar-subjuntivo-5566",
+    "field": "respuesta",
+    "text": "aunque nosotros gustemos tarde.",
+    "cat": "sem",
+    "fix": "aunque (eso) nos guste tarde.",
+    "note": "'gustar' es un verbo de estructura inversa; 'tú gustes' como agente es agramatical/sin sentido"
+  },
+  {
+    "id": "gustar-subjuntivo-5567",
+    "field": "respuesta",
+    "text": "es necesario que yo guste de inmediato.",
+    "cat": "sem",
+    "fix": "es necesario que (eso) me guste de inmediato.",
+    "note": "'gustar' es un verbo de estructura inversa; 'tú gustes' como agente es agramatical/sin sentido"
+  },
+  {
+    "id": "gustar-subjuntivo-5568",
+    "field": "respuesta",
+    "text": "ojalá tú gustes este fin de semana.",
+    "cat": "sem",
+    "fix": "ojalá (eso) te guste este fin de semana.",
+    "note": "'gustar' es un verbo de estructura inversa; 'tú gustes' como agente es agramatical/sin sentido"
+  },
+  {
+    "id": "resultar-subjuntivo-5845",
+    "field": "respuesta",
+    "text": "dudo que nosotros resultemos a tiempo.",
+    "cat": "sem",
+    "fix": "dudo que (esto) resulte a tiempo.",
+    "note": "'resultar' exige un complemento predicativo o sujeto inanimado; sin él la frase no tiene sentido"
+  },
+  {
+    "id": "resultar-subjuntivo-5846",
+    "field": "respuesta",
+    "text": "ojalá yo resulte pronto.",
+    "cat": "sem",
+    "fix": "ojalá (esto) resulte bien pronto.",
+    "note": "'resultar' exige un complemento predicativo o sujeto inanimado; sin él la frase no tiene sentido"
+  },
+  {
+    "id": "resultar-subjuntivo-5847",
+    "field": "respuesta",
+    "text": "antes de que tú resultes sin permiso.",
+    "cat": "sem",
+    "fix": "antes de que (esto) resulte sin permiso.",
+    "note": "'resultar' exige un complemento predicativo o sujeto inanimado; sin él la frase no tiene sentido"
+  },
+  {
+    "id": "significar-subjuntivo-5890",
+    "field": "respuesta",
+    "text": "no creo que nosotros signifiquemos esta vez.",
+    "cat": "sem",
+    "fix": "no creo que esto signifique nada esta vez.",
+    "note": "'significar' normalmente tiene sujeto inanimado (una palabra/cosa); con persona como agente resulta sin sentido"
+  },
+  {
+    "id": "significar-subjuntivo-5891",
+    "field": "respuesta",
+    "text": "dudo que yo signifique sin ayuda.",
+    "cat": "sem",
+    "fix": "dudo que esto signifique algo sin ayuda.",
+    "note": "'significar' normalmente tiene sujeto inanimado (una palabra/cosa); con persona como agente resulta sin sentido"
+  },
+  {
+    "id": "significar-subjuntivo-5892",
+    "field": "respuesta",
+    "text": "ojalá tú signifiques mañana.",
+    "cat": "sem",
+    "fix": "ojalá esto signifique algo mañana.",
+    "note": "'significar' normalmente tiene sujeto inanimado (una palabra/cosa); con persona como agente resulta sin sentido"
+  },
+  {
+    "id": "soler-subjuntivo-5893",
+    "field": "respuesta",
+    "text": "es posible que tú suelas la próxima semana.",
+    "cat": "gram",
+    "fix": "es posible que tú suelas hacerlo la próxima semana.",
+    "note": "'soler' siempre necesita un infinitivo complementario; no puede quedar solo"
+  },
+  {
+    "id": "soler-subjuntivo-5894",
+    "field": "respuesta",
+    "text": "para que ella suela sin dificultad.",
+    "cat": "gram",
+    "fix": "para que ella suela hacerlo sin dificultad.",
+    "note": "'soler' siempre necesita un infinitivo complementario; no puede quedar solo"
+  },
+  {
+    "id": "soler-subjuntivo-5895",
+    "field": "respuesta",
+    "text": "antes de que usted suela de nuevo.",
+    "cat": "gram",
+    "fix": "antes de que usted suela hacerlo de nuevo.",
+    "note": "'soler' siempre necesita un infinitivo complementario; no puede quedar solo"
+  },
+  {
+    "id": "haber-subjuntivo-5569",
+    "field": "respuesta",
+    "text": "hasta que tú hayas de verdad.",
+    "cat": "sem",
+    "fix": "hasta que lo hayas hecho de verdad.",
+    "note": "'haber' como verbo léxico independiente (no auxiliar, no impersonal 'hay') no tiene sentido aquí"
+  },
+  {
+    "id": "haber-subjuntivo-5570",
+    "field": "respuesta",
+    "text": "no creo que ella haya hoy.",
+    "cat": "sem",
+    "fix": "no creo que haya clase hoy.",
+    "note": "'haber' como verbo léxico independiente (no auxiliar, no impersonal 'hay') no tiene sentido aquí"
+  },
+  {
+    "id": "haber-subjuntivo-5571",
+    "field": "respuesta",
+    "text": "antes de que usted haya demasiado tarde.",
+    "cat": "sem",
+    "fix": "antes de que lo haya hecho, demasiado tarde.",
+    "note": "'haber' como verbo léxico independiente (no auxiliar, no impersonal 'hay') no tiene sentido aquí"
+  },
+  {
+    "id": "casar-subjuntivo-5323",
+    "field": "respuesta",
+    "text": "sin que nosotros casemos mucho.",
+    "cat": "unnat",
+    "fix": "sin que nosotros nos casemos mucho.",
+    "note": "'casarse' (reflexivo) es la forma natural para 'to get married'; 'casar' sin 'se' suena a casar a otra persona"
+  },
+  {
+    "id": "casar-subjuntivo-5324",
+    "field": "respuesta",
+    "text": "a menos que yo case con tiempo.",
+    "cat": "unnat",
+    "fix": "a menos que yo me case con tiempo.",
+    "note": "'casarse' (reflexivo) es la forma natural para 'to get married'; 'casar' sin 'se' suena a casar a otra persona"
+  },
+  {
+    "id": "casar-subjuntivo-5325",
+    "field": "respuesta",
+    "text": "antes de que tú cases de nuevo.",
+    "cat": "unnat",
+    "fix": "antes de que tú te cases de nuevo.",
+    "note": "'casarse' (reflexivo) es la forma natural para 'to get married'; 'casar' sin 'se' suena a casar a otra persona"
+  },
+  {
+    "id": "deber-subjuntivo-5413",
+    "field": "respuesta",
+    "text": "quiero que nosotros debamos lo antes posible.",
+    "cat": "sem",
+    "fix": "quiero que paguemos la deuda lo antes posible.",
+    "note": "'deber' sin complemento (infinitivo o sustantivo) queda incompleto y sin sentido claro"
+  },
+  {
+    "id": "deber-subjuntivo-5414",
+    "field": "respuesta",
+    "text": "es importante que yo deba bien.",
+    "cat": "sem",
+    "fix": "es importante que yo actúe bien.",
+    "note": "'deber' sin complemento (infinitivo o sustantivo) queda incompleto y sin sentido claro"
+  },
+  {
+    "id": "deber-subjuntivo-5415",
+    "field": "respuesta",
+    "text": "antes de que tú debas de nuevo.",
+    "cat": "sem",
+    "fix": "antes de que vuelvas a deber dinero.",
+    "note": "'deber' sin complemento (infinitivo o sustantivo) queda incompleto y sin sentido claro"
+  },
+  {
+    "id": "bailar-subjuntivo-5287",
+    "field": "respuesta",
+    "text": "quiero que nosotros bailemos con nosotros.",
+    "cat": "sem",
+    "fix": "quiero que nosotros bailemos juntos.",
+    "note": "redundante: sujeto 'nosotros' con complemento 'con nosotros' (bailar consigo mismo no tiene sentido)"
+  },
+  {
+    "id": "temer-subjuntivo-5917",
+    "field": "respuesta",
+    "text": "quiero que nosotros temamos con nosotros.",
+    "cat": "sem",
+    "fix": "quiero que nosotros temamos juntos.",
+    "note": "redundante/sin sentido: 'temamos con nosotros' (temer consigo mismo)"
+  },
+  {
+    "id": "morir-subjuntivo-5675",
+    "field": "respuesta",
+    "text": "sin que yo muera algo.",
+    "cat": "gram",
+    "fix": "sin que yo muera antes de tiempo.",
+    "note": "'morir' es intransitivo; 'muera algo' con objeto directo es agramatical"
+  },
+  {
+    "id": "ser-subjuntivo-5884",
+    "field": "respuesta",
+    "text": "es importante que tú seas en equipo.",
+    "cat": "sem",
+    "fix": "es importante que tú trabajes en equipo.",
+    "note": "'ser en equipo' no es una construcción válida; 'ser' necesita un atributo, no 'en equipo'"
+  },
+  {
+    "id": "ser-subjuntivo-5886",
+    "field": "respuesta",
+    "text": "ojalá usted sea hoy.",
+    "cat": "sem",
+    "fix": "ojalá usted llegue hoy.",
+    "note": "'sea hoy' queda sin sentido; 'ser' exige un atributo/predicado"
+  },
+  {
+    "id": "tener-subjuntivo-5922",
+    "field": "respuesta",
+    "text": "es necesario que usted tenga con atención.",
+    "cat": "sem",
+    "fix": "es necesario que usted actúe con atención.",
+    "note": "'tenga con atención' no tiene sentido; 'tener' necesita un objeto directo, no 'con atención'"
+  },
+  {
+    "id": "escapar-subjuntivo-5519",
+    "field": "respuesta",
+    "text": "hasta que ellos escapen todo.",
+    "cat": "sem",
+    "fix": "hasta que ellos escapen del todo.",
+    "note": "'escapar todo' no es una construcción natural; falta la preposición ('escapar del todo') o sujeto/objeto distinto"
+  },
+  {
+    "id": "existir-subjuntivo-5542",
+    "field": "respuesta",
+    "text": "ojalá tú existas este fin de semana.",
+    "cat": "sem",
+    "fix": "ojalá tú estés bien este fin de semana.",
+    "note": "'existir' con plazos ('mañana', 'sin demora') sobre un sujeto animado resulta extraño/sin sentido natural"
+  },
+  {
+    "id": "existir-subjuntivo-5543",
+    "field": "respuesta",
+    "text": "es posible que ella exista mañana.",
+    "cat": "sem",
+    "fix": "es posible que ella llegue mañana.",
+    "note": "'existir' con plazos ('mañana', 'sin demora') sobre un sujeto animado resulta extraño/sin sentido natural"
+  },
+  {
+    "id": "existir-subjuntivo-5544",
+    "field": "respuesta",
+    "text": "es necesario que usted exista sin demora.",
+    "cat": "sem",
+    "fix": "es necesario que usted responda sin demora.",
+    "note": "'existir' con plazos ('mañana', 'sin demora') sobre un sujeto animado resulta extraño/sin sentido natural"
+  },
+  {
+    "id": "nacer-subjuntivo-5683",
+    "field": "respuesta",
+    "text": "es posible que nosotros nazcamos la próxima semana.",
+    "cat": "sem",
+    "fix": "es posible que el bebé nazca la próxima semana.",
+    "note": "'nacer' programado para un sujeto adulto ('nosotros', 'yo', 'tú') no tiene sentido natural sin contexto narrativo especial"
+  },
+  {
+    "id": "nacer-subjuntivo-5684",
+    "field": "respuesta",
+    "text": "para que yo nazca sin dificultad.",
+    "cat": "sem",
+    "fix": "para que el bebé nazca sin dificultad.",
+    "note": "'nacer' programado para un sujeto adulto ('nosotros', 'yo', 'tú') no tiene sentido natural sin contexto narrativo especial"
+  },
+  {
+    "id": "nacer-subjuntivo-5685",
+    "field": "respuesta",
+    "text": "antes de que tú nazcas de nuevo.",
+    "cat": "sem",
+    "fix": "antes de que vuelvas a intentarlo de nuevo.",
+    "note": "'nacer' programado para un sujeto adulto ('nosotros', 'yo', 'tú') no tiene sentido natural sin contexto narrativo especial"
+  }
+]

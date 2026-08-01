@@ -1,0 +1,98 @@
+[
+  {
+    "id": "acercar-subj_pluscuam-6774",
+    "field": "respuesta",
+    "text": "Ojala nosotros hubieramos acercado las dos familias antes.",
+    "cat": "gram",
+    "fix": "Ojala nosotros hubieramos acercado a las dos familias antes.",
+    "note": "missing personal 'a' before human direct object 'las dos familias'"
+  },
+  {
+    "id": "casar-subj_pluscuam-6883",
+    "field": "respuesta",
+    "text": "Si yo hubiera casado a mi hija en junio, habria hecho calor.",
+    "cat": "sem",
+    "fix": "Si yo hubiera casado a mi hija en junio, habria sido una boda preciosa.",
+    "note": "marrying off a daughter has no sensible causal link to the weather"
+  },
+  {
+    "id": "casar-subj_pluscuam-6884",
+    "field": "respuesta",
+    "text": "No creia que ellos hubieran casado tan joven sin permiso.",
+    "cat": "gram",
+    "fix": "No creia que ellos se hubieran casado tan joven sin permiso.",
+    "note": "getting married is reflexive 'casarse'; missing 'se'"
+  },
+  {
+    "id": "casar-subj_pluscuam-6885",
+    "field": "respuesta",
+    "text": "Ojala tu hubieras casado con esa persona cuando tuviste la oportunidad.",
+    "cat": "gram",
+    "fix": "Ojala tu te hubieras casado con esa persona cuando tuviste la oportunidad.",
+    "note": "'casarse con alguien' is reflexive; missing 'te'"
+  },
+  {
+    "id": "cuidar-subj_pluscuam-6964",
+    "field": "respuesta",
+    "text": "Si ella hubiera cuidado a su salud mejor, no estaria enferma.",
+    "cat": "gram",
+    "fix": "Si ella hubiera cuidado su salud mejor, no estaria enferma.",
+    "note": "personal 'a' wrongly used before non-person object 'salud'"
+  },
+  {
+    "id": "demostrar-subj_pluscuam-6989",
+    "field": "respuesta",
+    "text": "Dudaba que tu hubieras demostrado inocencia ante el juez.",
+    "cat": "unnat",
+    "fix": "Dudaba que tu hubieras demostrado tu inocencia ante el juez.",
+    "note": "bare noun sounds unnatural; native speech uses possessive 'tu inocencia'"
+  },
+  {
+    "id": "tranquilar-subj_pluscuam-7501",
+    "field": "respuesta",
+    "text": "Si tu hubieras tranquilado a la multitud, no habria habido panico.",
+    "cat": "gram",
+    "fix": "Si tu hubieras tranquilizado a la multitud, no habria habido panico.",
+    "note": "'tranquilar' is not standard modern Spanish; correct verb is 'tranquilizar'"
+  },
+  {
+    "id": "tranquilar-subj_pluscuam-7502",
+    "field": "respuesta",
+    "text": "Dudaba que ella hubiera tranquilado al nino sin abrazarlo.",
+    "cat": "gram",
+    "fix": "Dudaba que ella hubiera tranquilizado al nino sin abrazarlo.",
+    "note": "'tranquilar' is not standard modern Spanish; correct verb is 'tranquilizar'"
+  },
+  {
+    "id": "tranquilar-subj_pluscuam-7503",
+    "field": "respuesta",
+    "text": "Era imposible que nosotros hubieramos tranquilado a todos los pasajeros durante la turbulencia.",
+    "cat": "gram",
+    "fix": "Era imposible que nosotros hubieramos tranquilizado a todos los pasajeros durante la turbulencia.",
+    "note": "'tranquilar' is not standard modern Spanish; correct verb is 'tranquilizar'"
+  },
+  {
+    "id": "soler-subj_pluscuam-7453",
+    "field": "respuesta",
+    "text": "Si tu hubieras solido madrugar, habrias tenido mas tiempo.",
+    "cat": "unnat",
+    "fix": "Si te hubieras acostumbrado a madrugar, habrias tenido mas tiempo.",
+    "note": "'soler' almost never appears in compound/perfect tenses in real speech"
+  },
+  {
+    "id": "soler-subj_pluscuam-7454",
+    "field": "respuesta",
+    "text": "Dudaba que nosotros hubieramos solido llegar tarde a las reuniones.",
+    "cat": "unnat",
+    "fix": "Dudaba que nosotros hubieramos acostumbrado a llegar tarde a las reuniones.",
+    "note": "'soler' almost never appears in compound/perfect tenses in real speech"
+  },
+  {
+    "id": "soler-subj_pluscuam-7455",
+    "field": "respuesta",
+    "text": "No creia que ella hubiera solido cocinar para toda la familia.",
+    "cat": "unnat",
+    "fix": "No creia que ella hubiera acostumbrado a cocinar para toda la familia.",
+    "note": "'soler' almost never appears in compound/perfect tenses in real speech"
+  }
+]

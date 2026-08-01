@@ -1,0 +1,802 @@
+[
+  {
+    "id": "estar-puntual-11",
+    "field": "respuesta",
+    "text": "nosotros estuvimos muy cansado ayer por la tarde.",
+    "cat": "gram",
+    "fix": "nosotros estuvimos muy cansados ayer por la tarde.",
+    "note": "adjective must agree in plural with nosotros subject"
+  },
+  {
+    "id": "haber-puntual-22",
+    "field": "respuesta",
+    "text": "nosotros habíamos mucho ayer por la tarde.",
+    "cat": "gram",
+    "fix": "Hubo mucho ayer por la tarde.",
+    "note": "existential haber is impersonal 3rd-sg only, and habíamos is wrong tense"
+  },
+  {
+    "id": "haber-puntual-23",
+    "field": "respuesta",
+    "text": "tú hubiste mucho anoche.",
+    "cat": "gram",
+    "fix": "Hubo mucho anoche.",
+    "note": "existential haber cannot conjugate with tú, always impersonal hubo"
+  },
+  {
+    "id": "haber-puntual-24",
+    "field": "respuesta",
+    "text": "ella hubo mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "Hubo mucho el fin de semana pasado.",
+    "note": "existential haber cannot take a personal subject like ella"
+  },
+  {
+    "id": "ir-puntual-44",
+    "field": "respuesta",
+    "text": "ella fue mucho ayer por la tarde.",
+    "cat": "unnat",
+    "fix": "ella fue mucho ayer por la tarde.",
+    "note": "ir needs a destination; bare 'mucho' with ir is incomplete/unnatural"
+  },
+  {
+    "id": "ir-puntual-45",
+    "field": "respuesta",
+    "text": "ella fue mucho anoche.",
+    "cat": "unnat",
+    "fix": "ella fue mucho anoche.",
+    "note": "ir needs a destination; bare 'mucho' with ir is incomplete/unnatural"
+  },
+  {
+    "id": "ir-puntual-46",
+    "field": "respuesta",
+    "text": "yo fui mucho el fin de semana pasado.",
+    "cat": "unnat",
+    "fix": "yo fui mucho el fin de semana pasado.",
+    "note": "ir needs a destination; bare 'mucho' with ir is incomplete/unnatural"
+  },
+  {
+    "id": "poder-puntual-66",
+    "field": "respuesta",
+    "text": "nosotros pudimos mucho ayer por la tarde.",
+    "cat": "unnat",
+    "fix": "nosotros pudimos mucho ayer por la tarde.",
+    "note": "poder is a modal verb and needs an infinitive complement, not bare 'mucho'"
+  },
+  {
+    "id": "poder-puntual-67",
+    "field": "respuesta",
+    "text": "yo pude mucho anoche.",
+    "cat": "unnat",
+    "fix": "yo pude mucho anoche.",
+    "note": "poder is a modal verb and needs an infinitive complement, not bare 'mucho'"
+  },
+  {
+    "id": "poder-puntual-68",
+    "field": "respuesta",
+    "text": "ella pudo mucho el fin de semana pasado.",
+    "cat": "unnat",
+    "fix": "ella pudo mucho el fin de semana pasado.",
+    "note": "poder is a modal verb and needs an infinitive complement, not bare 'mucho'"
+  },
+  {
+    "id": "oír-puntual-352",
+    "field": "respuesta",
+    "text": "ellos oieron un ruido ayer por la tarde.",
+    "cat": "gram",
+    "fix": "ellos oyeron un ruido ayer por la tarde.",
+    "note": "wrong stem spelling, must be oyeron (i->y between vowels)"
+  },
+  {
+    "id": "oír-puntual-354",
+    "field": "respuesta",
+    "text": "ellos oieron esa canción el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "ellos oyeron esa canción el fin de semana pasado.",
+    "note": "wrong stem spelling, must be oyeron (i->y between vowels)"
+  },
+  {
+    "id": "sentir-puntual-187",
+    "field": "respuesta",
+    "text": "él sentio mucho ayer por la tarde.",
+    "cat": "gram",
+    "fix": "él sintió mucho ayer por la tarde.",
+    "note": "missing e->i stem change in 3rd person preterite of sentir"
+  },
+  {
+    "id": "sentir-puntual-189",
+    "field": "respuesta",
+    "text": "él sentio mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "él sintió mucho el fin de semana pasado.",
+    "note": "missing e->i stem change in 3rd person preterite of sentir"
+  },
+  {
+    "id": "leer-puntual-827",
+    "field": "respuesta",
+    "text": "ellos leieron el periódico el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "ellos leyeron el periódico el fin de semana pasado.",
+    "note": "missing y-insertion, must be leyeron not leieron"
+  },
+  {
+    "id": "caer-puntual-869",
+    "field": "respuesta",
+    "text": "él caio mucho ayer por la tarde.",
+    "cat": "gram",
+    "fix": "él cayó mucho ayer por la tarde.",
+    "note": "missing y-insertion, must be cayó not caio"
+  },
+  {
+    "id": "seguir-puntual-385",
+    "field": "respuesta",
+    "text": "ella seguio trabajando ayer por la tarde.",
+    "cat": "gram",
+    "fix": "ella siguió trabajando ayer por la tarde.",
+    "note": "missing e->i stem change in 3rd person preterite of seguir"
+  },
+  {
+    "id": "seguir-puntual-386",
+    "field": "respuesta",
+    "text": "ella seguio estudiando anoche.",
+    "cat": "gram",
+    "fix": "ella siguió estudiando anoche.",
+    "note": "missing e->i stem change in 3rd person preterite of seguir"
+  },
+  {
+    "id": "casar-puntual-1276",
+    "field": "respuesta",
+    "text": "ella caso mucho ayer por la tarde.",
+    "cat": "sem",
+    "fix": "ella se casó ayer por la tarde.",
+    "note": "casar needs reflexive se (get married) or an object (marry someone off); bare 'mucho' is nonsensical"
+  },
+  {
+    "id": "casar-puntual-1277",
+    "field": "respuesta",
+    "text": "tú casaste mucho anoche.",
+    "cat": "sem",
+    "fix": "tú te casaste anoche.",
+    "note": "casar needs reflexive se (get married) or an object; bare 'mucho' is nonsensical"
+  },
+  {
+    "id": "casar-puntual-1278",
+    "field": "respuesta",
+    "text": "tú casaste mucho el fin de semana pasado.",
+    "cat": "sem",
+    "fix": "tú te casaste el fin de semana pasado.",
+    "note": "casar needs reflexive se (get married) or an object; bare 'mucho' is nonsensical"
+  },
+  {
+    "id": "casar-puntual-7622",
+    "field": "respuesta",
+    "text": "Ellos casaron en la iglesia del pueblo aquel verano.",
+    "cat": "gram",
+    "fix": "Ellos se casaron en la iglesia del pueblo aquel verano.",
+    "note": "missing reflexive pronoun se for 'to get married'"
+  },
+  {
+    "id": "depender-puntual-2640",
+    "field": "respuesta",
+    "text": "él dependio mucho ayer por la tarde.",
+    "cat": "unnat",
+    "fix": "él dependio mucho ayer por la tarde.",
+    "note": "depender almost always needs 'de + complement'; bare 'mucho' is unnatural"
+  },
+  {
+    "id": "depender-puntual-2641",
+    "field": "respuesta",
+    "text": "yo dependi mucho anoche.",
+    "cat": "unnat",
+    "fix": "yo dependi mucho anoche.",
+    "note": "depender almost always needs 'de + complement'; bare 'mucho' is unnatural"
+  },
+  {
+    "id": "depender-puntual-2642",
+    "field": "respuesta",
+    "text": "ella dependio mucho el fin de semana pasado.",
+    "cat": "unnat",
+    "fix": "ella dependio mucho el fin de semana pasado.",
+    "note": "depender almost always needs 'de + complement'; bare 'mucho' is unnatural"
+  },
+  {
+    "id": "quedar-puntual-319",
+    "field": "respuesta",
+    "text": "tú quedaste mucho ayer por la tarde.",
+    "cat": "unnat",
+    "fix": "tú quedaste mucho ayer por la tarde.",
+    "note": "quedar needs a complement (place, person, or adjective); bare 'mucho' is incomplete/unnatural"
+  },
+  {
+    "id": "quedar-puntual-320",
+    "field": "respuesta",
+    "text": "yo quede mucho anoche.",
+    "cat": "unnat",
+    "fix": "yo quede mucho anoche.",
+    "note": "quedar needs a complement (place, person, or adjective); bare 'mucho' is incomplete/unnatural"
+  },
+  {
+    "id": "quedar-puntual-321",
+    "field": "respuesta",
+    "text": "yo quede mucho el fin de semana pasado.",
+    "cat": "unnat",
+    "fix": "yo quede mucho el fin de semana pasado.",
+    "note": "quedar needs a complement (place, person, or adjective); bare 'mucho' is incomplete/unnatural"
+  },
+  {
+    "id": "sentar-puntual-1100",
+    "field": "respuesta",
+    "text": "ellos sentaron mucho ayer por la tarde.",
+    "cat": "sem",
+    "fix": "ellos sentaron mucho ayer por la tarde.",
+    "note": "sentar needs an object (to seat someone) or reflexive sentarse; bare 'mucho' is nonsensical"
+  },
+  {
+    "id": "sentar-puntual-1101",
+    "field": "respuesta",
+    "text": "yo sente mucho anoche.",
+    "cat": "sem",
+    "fix": "yo sente mucho anoche.",
+    "note": "sentar needs an object (to seat someone) or reflexive sentarse; bare 'mucho' is nonsensical"
+  },
+  {
+    "id": "sentar-puntual-1102",
+    "field": "respuesta",
+    "text": "yo sente mucho el fin de semana pasado.",
+    "cat": "sem",
+    "fix": "yo sente mucho el fin de semana pasado.",
+    "note": "sentar needs an object (to seat someone) or reflexive sentarse; bare 'mucho' is nonsensical"
+  },
+  {
+    "id": "acercar-puntual-891",
+    "field": "respuesta",
+    "text": "ella acerco mucho ayer por la tarde.",
+    "cat": "sem",
+    "fix": "ella acercó la silla mucho ayer por la tarde.",
+    "note": "acercar (transitive) needs an object; bare 'mucho' is incomplete"
+  },
+  {
+    "id": "acercar-puntual-892",
+    "field": "respuesta",
+    "text": "yo acerce mucho anoche.",
+    "cat": "gram",
+    "fix": "yo acerqué algo anoche.",
+    "note": "wrong spelling (c->qu before e) and missing required object"
+  },
+  {
+    "id": "acercar-puntual-893",
+    "field": "respuesta",
+    "text": "yo acerce mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "yo acerqué algo el fin de semana pasado.",
+    "note": "wrong spelling (c->qu before e) and missing required object"
+  },
+  {
+    "id": "preocupar-puntual-737",
+    "field": "respuesta",
+    "text": "él preocupo mucho ayer por la tarde.",
+    "cat": "unnat",
+    "fix": "él preocupo mucho ayer por la tarde.",
+    "note": "preocupar needs an experiencer object (a alguien); bare 'mucho' is incomplete"
+  },
+  {
+    "id": "preocupar-puntual-738",
+    "field": "respuesta",
+    "text": "él preocupo mucho anoche.",
+    "cat": "unnat",
+    "fix": "él preocupo mucho anoche.",
+    "note": "preocupar needs an experiencer object (a alguien); bare 'mucho' is incomplete"
+  },
+  {
+    "id": "preocupar-puntual-739",
+    "field": "respuesta",
+    "text": "él preocupo mucho el fin de semana pasado.",
+    "cat": "unnat",
+    "fix": "él preocupo mucho el fin de semana pasado.",
+    "note": "preocupar needs an experiencer object (a alguien); bare 'mucho' is incomplete"
+  },
+  {
+    "id": "alegrar-puntual-1815",
+    "field": "respuesta",
+    "text": "nosotros alegramos mucho ayer por la tarde.",
+    "cat": "unnat",
+    "fix": "nosotros alegramos mucho ayer por la tarde.",
+    "note": "alegrar needs an experiencer object (a alguien); bare 'mucho' is incomplete"
+  },
+  {
+    "id": "alegrar-puntual-1816",
+    "field": "respuesta",
+    "text": "tú alegraste mucho anoche.",
+    "cat": "unnat",
+    "fix": "tú alegraste mucho anoche.",
+    "note": "alegrar needs an experiencer object (a alguien); bare 'mucho' is incomplete"
+  },
+  {
+    "id": "alegrar-puntual-1817",
+    "field": "respuesta",
+    "text": "tú alegraste mucho el fin de semana pasado.",
+    "cat": "unnat",
+    "fix": "tú alegraste mucho el fin de semana pasado.",
+    "note": "alegrar needs an experiencer object (a alguien); bare 'mucho' is incomplete"
+  },
+  {
+    "id": "destruir-puntual-2068",
+    "field": "respuesta",
+    "text": "él destruio mucho ayer por la tarde.",
+    "cat": "gram",
+    "fix": "él destruyó mucho ayer por la tarde.",
+    "note": "missing y-insertion, must be destruyó"
+  },
+  {
+    "id": "destruir-puntual-2069",
+    "field": "respuesta",
+    "text": "ellos destruieron mucho anoche.",
+    "cat": "gram",
+    "fix": "ellos destruyeron mucho anoche.",
+    "note": "missing y-insertion, must be destruyeron"
+  },
+  {
+    "id": "incluir-puntual-2157",
+    "field": "respuesta",
+    "text": "él incluio mucho anoche.",
+    "cat": "gram",
+    "fix": "él incluyó mucho anoche.",
+    "note": "missing y-insertion, must be incluyó"
+  },
+  {
+    "id": "incluir-puntual-2158",
+    "field": "respuesta",
+    "text": "ellos incluieron mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "ellos incluyeron mucho el fin de semana pasado.",
+    "note": "missing y-insertion, must be incluyeron"
+  },
+  {
+    "id": "construir-puntual-2498",
+    "field": "respuesta",
+    "text": "él construio mucho anoche.",
+    "cat": "gram",
+    "fix": "él construyó mucho anoche.",
+    "note": "missing y-insertion, must be construyó"
+  },
+  {
+    "id": "construir-puntual-2499",
+    "field": "respuesta",
+    "text": "ellos construieron mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "ellos construyeron mucho el fin de semana pasado.",
+    "note": "missing y-insertion, must be construyeron"
+  },
+  {
+    "id": "huir-puntual-2597",
+    "field": "respuesta",
+    "text": "él huio mucho anoche.",
+    "cat": "gram",
+    "fix": "él huyó mucho anoche.",
+    "note": "missing y-insertion, must be huyó"
+  },
+  {
+    "id": "huir-puntual-2598",
+    "field": "respuesta",
+    "text": "él huio mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "él huyó mucho el fin de semana pasado.",
+    "note": "missing y-insertion, must be huyó"
+  },
+  {
+    "id": "morir-puntual-507",
+    "field": "respuesta",
+    "text": "ella morio en el hospital anoche.",
+    "cat": "gram",
+    "fix": "ella murió en el hospital anoche.",
+    "note": "missing o->u stem change, must be murió"
+  },
+  {
+    "id": "morir-puntual-508",
+    "field": "respuesta",
+    "text": "ellos morieron joven el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "ellos murieron jóvenes el fin de semana pasado.",
+    "note": "missing o->u stem change (murieron) and adjective must agree in plural (jóvenes)"
+  },
+  {
+    "id": "convertir-puntual-958",
+    "field": "respuesta",
+    "text": "él convertio mucho anoche.",
+    "cat": "gram",
+    "fix": "él convirtió mucho anoche.",
+    "note": "missing e->i stem change, must be convirtió"
+  },
+  {
+    "id": "convertir-puntual-959",
+    "field": "respuesta",
+    "text": "ella convertio mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "ella convirtió mucho el fin de semana pasado.",
+    "note": "missing e->i stem change, must be convirtió"
+  },
+  {
+    "id": "servir-puntual-1089",
+    "field": "respuesta",
+    "text": "él servio mucho ayer por la tarde.",
+    "cat": "gram",
+    "fix": "él sirvió mucho ayer por la tarde.",
+    "note": "missing e->i stem change, must be sirvió"
+  },
+  {
+    "id": "referir-puntual-1366",
+    "field": "respuesta",
+    "text": "ellos referieron mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "ellos refirieron mucho el fin de semana pasado.",
+    "note": "missing e->i stem change, must be refirieron"
+  },
+  {
+    "id": "elegir-puntual-1507",
+    "field": "respuesta",
+    "text": "ella elegio mucho ayer por la tarde.",
+    "cat": "gram",
+    "fix": "ella eligió mucho ayer por la tarde.",
+    "note": "missing e->i stem change, must be eligió"
+  },
+  {
+    "id": "elegir-puntual-1508",
+    "field": "respuesta",
+    "text": "ellos elegieron mucho anoche.",
+    "cat": "gram",
+    "fix": "ellos eligieron mucho anoche.",
+    "note": "missing e->i stem change, must be eligieron"
+  },
+  {
+    "id": "mentir-puntual-1542",
+    "field": "respuesta",
+    "text": "él mentio mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "él mintió mucho el fin de semana pasado.",
+    "note": "missing e->i stem change, must be mintió"
+  },
+  {
+    "id": "despedir-puntual-2563",
+    "field": "respuesta",
+    "text": "ella despedio mucho ayer por la tarde.",
+    "cat": "gram",
+    "fix": "ella despidió mucho ayer por la tarde.",
+    "note": "missing e->i stem change, must be despidió"
+  },
+  {
+    "id": "despedir-puntual-2564",
+    "field": "respuesta",
+    "text": "ellos despedieron mucho anoche.",
+    "cat": "gram",
+    "fix": "ellos despidieron mucho anoche.",
+    "note": "missing e->i stem change, must be despidieron"
+  },
+  {
+    "id": "repetir-puntual-2684",
+    "field": "respuesta",
+    "text": "ellos repetieron mucho ayer por la tarde.",
+    "cat": "gram",
+    "fix": "ellos repitieron mucho ayer por la tarde.",
+    "note": "missing e->i stem change, must be repitieron"
+  },
+  {
+    "id": "repetir-puntual-2685",
+    "field": "respuesta",
+    "text": "ellos repetieron mucho anoche.",
+    "cat": "gram",
+    "fix": "ellos repitieron mucho anoche.",
+    "note": "missing e->i stem change, must be repitieron"
+  },
+  {
+    "id": "repetir-puntual-2686",
+    "field": "respuesta",
+    "text": "ellos repetieron mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "ellos repitieron mucho el fin de semana pasado.",
+    "note": "missing e->i stem change, must be repitieron"
+  },
+  {
+    "id": "empezar-puntual-550",
+    "field": "respuesta",
+    "text": "yo empeze mucho ayer por la tarde.",
+    "cat": "gram",
+    "fix": "yo empecé mucho ayer por la tarde.",
+    "note": "wrong spelling, empezar requires z->c before e in yo preterite"
+  },
+  {
+    "id": "empezar-puntual-551",
+    "field": "respuesta",
+    "text": "yo empeze mucho anoche.",
+    "cat": "gram",
+    "fix": "yo empecé mucho anoche.",
+    "note": "wrong spelling, empezar requires z->c before e in yo preterite"
+  },
+  {
+    "id": "empezar-puntual-552",
+    "field": "respuesta",
+    "text": "yo empeze mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "yo empecé mucho el fin de semana pasado.",
+    "note": "wrong spelling, empezar requires z->c before e in yo preterite"
+  },
+  {
+    "id": "pagar-puntual-793",
+    "field": "respuesta",
+    "text": "yo page mucho dinero anoche.",
+    "cat": "gram",
+    "fix": "yo pagué mucho dinero anoche.",
+    "note": "wrong spelling, pagar requires g->gu before e in yo preterite"
+  },
+  {
+    "id": "pagar-puntual-794",
+    "field": "respuesta",
+    "text": "yo page mucho dinero el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "yo pagué mucho dinero el fin de semana pasado.",
+    "note": "wrong spelling, pagar requires g->gu before e in yo preterite"
+  },
+  {
+    "id": "significar-puntual-837",
+    "field": "respuesta",
+    "text": "yo significe mucho anoche.",
+    "cat": "gram",
+    "fix": "yo signifiqué mucho anoche.",
+    "note": "wrong spelling, significar requires c->qu before e in yo preterite"
+  },
+  {
+    "id": "realizar-puntual-1409",
+    "field": "respuesta",
+    "text": "yo realize mucho anoche.",
+    "cat": "gram",
+    "fix": "yo realicé mucho anoche.",
+    "note": "wrong spelling (z->c required); also visually identical to English 'realize'"
+  },
+  {
+    "id": "alcanzar-puntual-2037",
+    "field": "respuesta",
+    "text": "yo alcanze mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "yo alcancé mucho el fin de semana pasado.",
+    "note": "wrong spelling, alcanzar requires z->c before e in yo preterite"
+  },
+  {
+    "id": "tranquilar-puntual-1837",
+    "field": "respuesta",
+    "text": "tú tranquilaste mucho ayer por la tarde.",
+    "cat": "gram",
+    "fix": "tú tranquilizaste mucho ayer por la tarde.",
+    "note": "'tranquilar' is not standard Spanish; the verb is tranquilizar"
+  },
+  {
+    "id": "tranquilar-puntual-1838",
+    "field": "respuesta",
+    "text": "nosotros tranquilamos mucho anoche.",
+    "cat": "gram",
+    "fix": "nosotros tranquilizamos mucho anoche.",
+    "note": "'tranquilar' is not standard Spanish; the verb is tranquilizar"
+  },
+  {
+    "id": "tranquilar-puntual-1839",
+    "field": "respuesta",
+    "text": "ella tranquilo mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "ella tranquilizó mucho el fin de semana pasado.",
+    "note": "'tranquilar' is not standard Spanish; the verb is tranquilizar"
+  },
+  {
+    "id": "tranquilar-puntual-8034",
+    "field": "respuesta",
+    "text": "Ella tranquilo al paciente justo en ese instante.",
+    "cat": "gram",
+    "fix": "Ella tranquilizó al paciente justo en ese instante.",
+    "note": "'tranquilar' is not standard Spanish; the verb is tranquilizar"
+  },
+  {
+    "id": "tranquilar-puntual-8035",
+    "field": "respuesta",
+    "text": "Yo tranquile a los ninos asustados de repente.",
+    "cat": "gram",
+    "fix": "Yo tranquilicé a los ninos asustados de repente.",
+    "note": "'tranquilar' is not standard Spanish; the verb is tranquilizar"
+  },
+  {
+    "id": "suponer-puntual-638",
+    "field": "respuesta",
+    "text": "yo suponi mucho ayer por la tarde.",
+    "cat": "gram",
+    "fix": "yo supuse mucho ayer por la tarde.",
+    "note": "suponer is irregular like poner; must be supuse not suponi"
+  },
+  {
+    "id": "suponer-puntual-639",
+    "field": "respuesta",
+    "text": "ellos suponieron mucho anoche.",
+    "cat": "gram",
+    "fix": "ellos supusieron mucho anoche.",
+    "note": "suponer is irregular like poner; must be supusieron not suponieron"
+  },
+  {
+    "id": "suponer-puntual-640",
+    "field": "respuesta",
+    "text": "yo suponi mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "yo supuse mucho el fin de semana pasado.",
+    "note": "suponer is irregular like poner; must be supuse not suponi"
+  },
+  {
+    "id": "producir-puntual-1672",
+    "field": "respuesta",
+    "text": "ellos producieron mucho ayer por la tarde.",
+    "cat": "gram",
+    "fix": "ellos produjeron mucho ayer por la tarde.",
+    "note": "producir is irregular (j-stem like conducir); must be produjeron"
+  },
+  {
+    "id": "producir-puntual-1673",
+    "field": "respuesta",
+    "text": "yo produci mucho anoche.",
+    "cat": "gram",
+    "fix": "yo produje mucho anoche.",
+    "note": "producir is irregular (j-stem); must be produje not produci"
+  },
+  {
+    "id": "producir-puntual-1674",
+    "field": "respuesta",
+    "text": "él producio mucho el fin de semana pasado.",
+    "cat": "gram",
+    "fix": "él produjo mucho el fin de semana pasado.",
+    "note": "producir is irregular (j-stem); must be produjo not producio"
+  },
+  {
+    "id": "bastar-puntual-1705",
+    "field": "respuesta",
+    "text": "ella basto mucho ayer por la tarde.",
+    "cat": "sem",
+    "fix": "ella basto mucho ayer por la tarde.",
+    "note": "bastar already means 'was enough'; pairing with degree word 'mucho' is odd/redundant"
+  },
+  {
+    "id": "bastar-puntual-1706",
+    "field": "respuesta",
+    "text": "ella basto mucho anoche.",
+    "cat": "sem",
+    "fix": "ella basto mucho anoche.",
+    "note": "bastar already means 'was enough'; pairing with degree word 'mucho' is odd/redundant"
+  },
+  {
+    "id": "bastar-puntual-1707",
+    "field": "respuesta",
+    "text": "ellos bastaron mucho el fin de semana pasado.",
+    "cat": "sem",
+    "fix": "ellos bastaron mucho el fin de semana pasado.",
+    "note": "bastar already means 'was enough'; pairing with degree word 'mucho' is odd/redundant"
+  },
+  {
+    "id": "matar-puntual-418",
+    "field": "respuesta",
+    "text": "yo mate mucho ayer por la tarde.",
+    "cat": "sem",
+    "fix": "yo mate mucho ayer por la tarde.",
+    "note": "matar needs an explicit object/victim; bare 'mucho' is odd and vague for such a specific verb"
+  },
+  {
+    "id": "matar-puntual-419",
+    "field": "respuesta",
+    "text": "ellos mataron mucho anoche.",
+    "cat": "sem",
+    "fix": "ellos mataron mucho anoche.",
+    "note": "matar needs an explicit object/victim; bare 'mucho' is odd and vague for such a specific verb"
+  },
+  {
+    "id": "matar-puntual-420",
+    "field": "respuesta",
+    "text": "él mato mucho el fin de semana pasado.",
+    "cat": "sem",
+    "fix": "él mato mucho el fin de semana pasado.",
+    "note": "matar needs an explicit object/victim; bare 'mucho' is odd and vague for such a specific verb"
+  },
+  {
+    "id": "asesinar-puntual-1991",
+    "field": "respuesta",
+    "text": "tú asesinaste mucho ayer por la tarde.",
+    "cat": "sem",
+    "fix": "tú asesinaste mucho ayer por la tarde.",
+    "note": "asesinar needs an explicit victim object; bare 'mucho' is odd and vague"
+  },
+  {
+    "id": "asesinar-puntual-1992",
+    "field": "respuesta",
+    "text": "ella asesino mucho anoche.",
+    "cat": "sem",
+    "fix": "ella asesino mucho anoche.",
+    "note": "asesinar needs an explicit victim object; bare 'mucho' is odd and vague"
+  },
+  {
+    "id": "asesinar-puntual-1993",
+    "field": "respuesta",
+    "text": "yo asesine mucho el fin de semana pasado.",
+    "cat": "sem",
+    "fix": "yo asesine mucho el fin de semana pasado.",
+    "note": "asesinar needs an explicit victim object; bare 'mucho' is odd and vague"
+  },
+  {
+    "id": "encantar-puntual-7732",
+    "field": "respuesta",
+    "text": "La musica encanto a todos aquel verano.",
+    "cat": "gram",
+    "fix": "La música les encantó a todos aquel verano.",
+    "note": "missing obligatory clitic pronoun les with 'a todos'"
+  },
+  {
+    "id": "encantar-puntual-7733",
+    "field": "respuesta",
+    "text": "La cena encanto a los invitados esa misma noche.",
+    "cat": "gram",
+    "fix": "La cena les encantó a los invitados esa misma noche.",
+    "note": "missing obligatory clitic pronoun les"
+  },
+  {
+    "id": "gustar-puntual-7784",
+    "field": "respuesta",
+    "text": "La pelicula gusto a todos aquel verano.",
+    "cat": "gram",
+    "fix": "La película les gustó a todos aquel verano.",
+    "note": "missing obligatory clitic pronoun les"
+  },
+  {
+    "id": "gustar-puntual-7785",
+    "field": "respuesta",
+    "text": "La comida gusto mucho a los invitados al mediodia.",
+    "cat": "gram",
+    "fix": "La comida les gustó mucho a los invitados al mediodia.",
+    "note": "missing obligatory clitic pronoun les"
+  },
+  {
+    "id": "importar-puntual-7798",
+    "field": "respuesta",
+    "text": "Eso importo mucho a todos en aquel momento.",
+    "cat": "gram",
+    "fix": "Eso les importó mucho a todos en aquel momento.",
+    "note": "missing obligatory clitic pronoun les"
+  },
+  {
+    "id": "importar-puntual-7799",
+    "field": "respuesta",
+    "text": "La decision importo a toda la familia aquel verano.",
+    "cat": "gram",
+    "fix": "La decisión le importó a toda la familia aquel verano.",
+    "note": "missing obligatory clitic pronoun le"
+  },
+  {
+    "id": "interesar-puntual-7806",
+    "field": "respuesta",
+    "text": "La propuesta intereso al comite en aquel momento.",
+    "cat": "gram",
+    "fix": "La propuesta le interesó al comité en aquel momento.",
+    "note": "missing obligatory clitic pronoun le"
+  },
+  {
+    "id": "interesar-puntual-7807",
+    "field": "respuesta",
+    "text": "El tema intereso a todos durante el viaje.",
+    "cat": "gram",
+    "fix": "El tema les interesó a todos durante el viaje.",
+    "note": "missing obligatory clitic pronoun les"
+  },
+  {
+    "id": "molestar-puntual-7854",
+    "field": "respuesta",
+    "text": "El ruido molesto a los vecinos durante la tormenta.",
+    "cat": "gram",
+    "fix": "El ruido les molestó a los vecinos durante la tormenta.",
+    "note": "missing obligatory clitic pronoun les"
+  },
+  {
+    "id": "molestar-puntual-7855",
+    "field": "respuesta",
+    "text": "Su comentario molesto a todos esa misma noche.",
+    "cat": "gram",
+    "fix": "Su comentario les molestó a todos esa misma noche.",
+    "note": "missing obligatory clitic pronoun les"
+  }
+]

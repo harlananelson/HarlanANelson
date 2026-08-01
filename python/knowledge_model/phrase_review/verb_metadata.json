@@ -1,0 +1,39 @@
+{
+  "_doc": "Valency/behavior classes for verbs the 2026-08-01 review showed the generator mishandles. Generation v2 must branch its sentence template on class. Verbs not listed are 'plain' (normal personal subject).",
+  "remove": {
+    "tranquilar": "not a Spanish verb — replace with tranquilizarse (or calmar)"
+  },
+  "impersonal": {
+    "haber": "existential/auxiliary only; never a personal subject; invariable 3s in existential use (hay/había/hubo/habrá/habría/haya/hubiera + noun). Drill it as auxiliary (perfect tenses) or existential, never 'yo he/había' + noun-quantity."
+  },
+  "dative_experiencer": {
+    "verbs": ["gustar", "encantar", "importar", "interesar", "preocupar", "molestar", "bastar", "pesar", "doler"],
+    "pattern": "IO clitic + verb agreeing with the THING: 'a mí me gustaba el mar', 'les preocupará la noticia'. Never conjugate for the experiencer as subject."
+  },
+  "eventive_third_person": {
+    "verbs": ["ocurrir", "suceder", "pasar"],
+    "pattern": "events as subject, usually 3s/3p: 'ocurrió algo extraño', 'eso sucede a veces'. Never 'tú sucederías'."
+  },
+  "reflexive_preferred": {
+    "casar": "marry = casarse (se casó); non-reflexive casar means to officiate/marry someone off and needs an object",
+    "acordar": "remember = acordarse de; plain acordar = to agree (different meaning)",
+    "despedir": "say goodbye = despedirse de; plain despedir = to fire someone",
+    "enterar": "find out = enterarse de; plain enterar is rare",
+    "quedar": "quedarse = stay; quedar = remain/meet — pick one meaning per exercise",
+    "alejar": "move away (oneself) = alejarse",
+    "acercar": "approach (oneself) = acercarse",
+    "casarse_note": "when drilling these, put the clitic in respuesta and its own grupo"
+  },
+  "defective": {
+    "soler": "only presente (suelo) and imperfecto (solía) are idiomatic; NO futuro/condicional/preterite drills",
+    "nacer": "biographical punctual verb — presente-habitual drills of one's own birth are nonsensical; use preterite or 3rd-person generic (los bebés nacen...)"
+  },
+  "irregular_participles": {
+    "abrir": "abierto", "cubrir": "cubierto", "descubrir": "descubierto",
+    "decir": "dicho", "escribir": "escrito", "hacer": "hecho",
+    "morir": "muerto", "poner": "puesto", "resolver": "resuelto",
+    "romper": "roto", "ver": "visto", "volver": "vuelto",
+    "devolver": "devuelto", "suponer": "supuesto", "oír": "oído", "reír": "reído",
+    "caer": "caído", "leer": "leído", "traer": "traído", "creer": "creído"
+  }
+}

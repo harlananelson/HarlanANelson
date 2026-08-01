@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "acercar-presente-2873",
+    "field": "respuesta",
+    "text": "Ella acerca el vaso mientras.",
+    "cat": "unnat",
+    "fix": "Ella acerca el vaso mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "acordar-presente-2878",
+    "field": "respuesta",
+    "text": "Nosotros acordamos los términos del contrato mientras.",
+    "cat": "unnat",
+    "fix": "Nosotros acordamos los términos del contrato mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "admitir-presente-2884",
+    "field": "respuesta",
+    "text": "Cada vez que, yo admito mi error.",
+    "cat": "gram",
+    "fix": "Cada vez, yo admito mi error.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "alegrar-presente-2898",
+    "field": "respuesta",
+    "text": "Tú alegras a tus amigos cada vez que.",
+    "cat": "gram",
+    "fix": "Tú alegras a tus amigos cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "amar-presente-2904",
+    "field": "respuesta",
+    "text": "Nosotros amamos la naturaleza cada vez que.",
+    "cat": "gram",
+    "fix": "Nosotros amamos la naturaleza cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "apoyar-presente-2918",
+    "field": "respuesta",
+    "text": "Nosotros apoyamos el proyecto mientras.",
+    "cat": "unnat",
+    "fix": "Nosotros apoyamos el proyecto mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "apoyar-presente-2919",
+    "field": "respuesta",
+    "text": "Mientras, tú apoyas a tus compañeros.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, tú apoyas a tus compañeros.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "asegurar-presente-2927",
+    "field": "respuesta",
+    "text": "Ella asegura el éxito del evento cada vez que.",
+    "cat": "gram",
+    "fix": "Ella asegura el éxito del evento cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "asesinar-presente-2929",
+    "field": "respuesta",
+    "text": "Cada vez que, él asesina al personaje en la novela.",
+    "cat": "gram",
+    "fix": "Cada vez, él asesina al personaje en la novela.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "asustar-presente-2933",
+    "field": "respuesta",
+    "text": "Mientras, él asusta a su hermana.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, él asusta a su hermana.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "atacar-presente-2935",
+    "field": "respuesta",
+    "text": "Mientras, ellos atacan al enemigo.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, ellos atacan al enemigo.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "atacar-presente-2937",
+    "field": "respuesta",
+    "text": "Nosotros atacamos la tarea difícil mientras.",
+    "cat": "unnat",
+    "fix": "Nosotros atacamos la tarea difícil mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "buscar-presente-2963",
+    "field": "respuesta",
+    "text": "Mientras, tú buscas trabajo.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, tú buscas trabajo.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "caer-presente-2966",
+    "field": "respuesta",
+    "text": "Cada vez que, ella cae de la silla.",
+    "cat": "gram",
+    "fix": "Cada vez, ella cae de la silla.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "casar-presente-2983",
+    "field": "respuesta",
+    "text": "Cada vez que, ella casa a las parejas en la iglesia.",
+    "cat": "gram",
+    "fix": "Cada vez, ella casa a las parejas en la iglesia.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "coger-presente-2991",
+    "field": "respuesta",
+    "text": "Cada vez que, nosotros cogemos las maletas.",
+    "cat": "gram",
+    "fix": "Cada vez, nosotros cogemos las maletas.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "comenzar-presente-2992",
+    "field": "respuesta",
+    "text": "Nosotros comenzamos el proyecto cada vez que.",
+    "cat": "gram",
+    "fix": "Nosotros comenzamos el proyecto cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "comer-presente-2997",
+    "field": "respuesta",
+    "text": "Cada vez que, nosotros comemos juntos en familia.",
+    "cat": "gram",
+    "fix": "Cada vez, nosotros comemos juntos en familia.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "cometer-presente-2998",
+    "field": "respuesta",
+    "text": "Mientras, yo cometo un error.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, yo cometo un error.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "comprar-presente-3005",
+    "field": "respuesta",
+    "text": "Cada vez que, nosotros compramos comida para la cena.",
+    "cat": "gram",
+    "fix": "Cada vez, nosotros compramos comida para la cena.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "conocer-presente-3018",
+    "field": "respuesta",
+    "text": "Cada vez que, ellos conocen el camino.",
+    "cat": "gram",
+    "fix": "Cada vez, ellos conocen el camino.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "conseguir-presente-3021",
+    "field": "respuesta",
+    "text": "Mientras, tú consigues lo que quieres.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, tú consigues lo que quieres.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "considerar-presente-3022",
+    "field": "respuesta",
+    "text": "Cada vez que, yo considero todas las opciones.",
+    "cat": "gram",
+    "fix": "Cada vez, yo considero todas las opciones.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "controlar-presente-3038",
+    "field": "respuesta",
+    "text": "Mientras, él controla la situación.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, él controla la situación.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "cortar-presente-3048",
+    "field": "respuesta",
+    "text": "Tú cortas el papel mientras.",
+    "cat": "unnat",
+    "fix": "Tú cortas el papel mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "cumplir-presente-3069",
+    "field": "respuesta",
+    "text": "Mientras, nosotros cumplamos los requisitos.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, nosotros cumplamos los requisitos.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "deber-presente-3074",
+    "field": "respuesta",
+    "text": "Cada vez que, tú debes mucho a tus padres.",
+    "cat": "gram",
+    "fix": "Cada vez, tú debes mucho a tus padres.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "decidir-presente-3078",
+    "field": "respuesta",
+    "text": "Cada vez que, tú decides rápidamente.",
+    "cat": "gram",
+    "fix": "Cada vez, tú decides rápidamente.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "decir-presente-3081",
+    "field": "respuesta",
+    "text": "Ellos dicen muchas mentiras mientras.",
+    "cat": "unnat",
+    "fix": "Ellos dicen muchas mentiras mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "defender-presente-3084",
+    "field": "respuesta",
+    "text": "Nosotros defendemos nuestra posición cada vez que.",
+    "cat": "gram",
+    "fix": "Nosotros defendemos nuestra posición cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "despedir-presente-3108",
+    "field": "respuesta",
+    "text": "Cada vez que, nosotros despedimos el año viejo.",
+    "cat": "gram",
+    "fix": "Cada vez, nosotros despedimos el año viejo.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "despertar-presente-3109",
+    "field": "respuesta",
+    "text": "Cada vez que, yo despierto a las seis de la mañana.",
+    "cat": "gram",
+    "fix": "Cada vez, yo despierto a las seis de la mañana.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "devolver-presente-3119",
+    "field": "respuesta",
+    "text": "Tú devuelves el dinero mientras.",
+    "cat": "unnat",
+    "fix": "Tú devuelves el dinero mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "disfrutar-presente-3131",
+    "field": "respuesta",
+    "text": "Mientras, tú disfrutas cada momento.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, tú disfrutas cada momento.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "enviar-presente-3176",
+    "field": "respuesta",
+    "text": "Mientras, tú envias un correo electrónico.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, tú envias un correo electrónico.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "evitar-presente-3200",
+    "field": "respuesta",
+    "text": "Mientras, tú evitas la comida chatarra.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, tú evitas la comida chatarra.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "formar-presente-3210",
+    "field": "respuesta",
+    "text": "Cada vez que, ella forma a los nuevos empleados.",
+    "cat": "gram",
+    "fix": "Cada vez, ella forma a los nuevos empleados.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "golpear-presente-3218",
+    "field": "respuesta",
+    "text": "Él golpea la pelota con fuerza mientras.",
+    "cat": "unnat",
+    "fix": "Él golpea la pelota con fuerza mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "gritar-presente-3220",
+    "field": "respuesta",
+    "text": "Yo grito de alegría cada vez que.",
+    "cat": "gram",
+    "fix": "Yo grito de alegría cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "guardar-presente-3223",
+    "field": "respuesta",
+    "text": "Yo guardo los documentos importantes mientras.",
+    "cat": "unnat",
+    "fix": "Yo guardo los documentos importantes mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "gustar-presente-3226",
+    "field": "respuesta",
+    "text": "Cada vez que, yo gusto a mis vecinos.",
+    "cat": "gram",
+    "fix": "Cada vez, yo gusto a mis vecinos.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "gustar-presente-3227",
+    "field": "respuesta",
+    "text": "Ella gusta a todo el mundo mientras.",
+    "cat": "unnat",
+    "fix": "Ella gusta a todo el mundo mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "haber-presente-3229",
+    "field": "respuesta",
+    "text": "Yo he terminado el trabajo mientras.",
+    "cat": "unnat",
+    "fix": "Yo he terminado el trabajo mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "hallar-presente-3238",
+    "field": "respuesta",
+    "text": "Yo hallo la respuesta mientras.",
+    "cat": "unnat",
+    "fix": "Yo hallo la respuesta mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "imaginar-presente-3245",
+    "field": "respuesta",
+    "text": "Tú imaginas las posibilidades cada vez que.",
+    "cat": "gram",
+    "fix": "Tú imaginas las posibilidades cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "imaginar-presente-3246",
+    "field": "respuesta",
+    "text": "Nosotros imaginamos el futuro cada vez que.",
+    "cat": "gram",
+    "fix": "Nosotros imaginamos el futuro cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "intentar-presente-3256",
+    "field": "respuesta",
+    "text": "Mientras, yo intento algo nuevo.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, yo intento algo nuevo.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "joder-presente-3268",
+    "field": "respuesta",
+    "text": "Cada vez que, eso jode todo el plan.",
+    "cat": "gram",
+    "fix": "Cada vez, eso jode todo el plan.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "jurar-presente-3276",
+    "field": "respuesta",
+    "text": "Nosotros juramos proteger a nuestra familia cada vez que.",
+    "cat": "gram",
+    "fix": "Nosotros juramos proteger a nuestra familia cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "llamar-presente-3284",
+    "field": "respuesta",
+    "text": "Tú llamas al doctor mientras.",
+    "cat": "unnat",
+    "fix": "Tú llamas al doctor mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "llamar-presente-3285",
+    "field": "respuesta",
+    "text": "Cada vez que, ella llama a sus amigos.",
+    "cat": "gram",
+    "fix": "Cada vez, ella llama a sus amigos.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "llegar-presente-3288",
+    "field": "respuesta",
+    "text": "Mientras, tú llegas tarde a clase.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, tú llegas tarde a clase.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "llorar-presente-3292",
+    "field": "respuesta",
+    "text": "Cada vez que, ella llora de felicidad.",
+    "cat": "gram",
+    "fix": "Cada vez, ella llora de felicidad.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "mandar-presente-3303",
+    "field": "respuesta",
+    "text": "Ella manda flores a su amiga cada vez que.",
+    "cat": "gram",
+    "fix": "Ella manda flores a su amiga cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "manejar-presente-3304",
+    "field": "respuesta",
+    "text": "Cada vez que, yo manejo la situación con calma.",
+    "cat": "gram",
+    "fix": "Cada vez, yo manejo la situación con calma.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "manejar-presente-3306",
+    "field": "respuesta",
+    "text": "Nosotros manejamos el presupuesto mientras.",
+    "cat": "unnat",
+    "fix": "Nosotros manejamos el presupuesto mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "marchar-presente-3310",
+    "field": "respuesta",
+    "text": "Ellos marchan por la calle principal mientras.",
+    "cat": "unnat",
+    "fix": "Ellos marchan por la calle principal mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "matar-presente-3313",
+    "field": "respuesta",
+    "text": "Él mata el tiempo leyendo mientras.",
+    "cat": "unnat",
+    "fix": "Él mata el tiempo leyendo mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "mencionar-presente-3316",
+    "field": "respuesta",
+    "text": "Yo menciono el tema en la reunión cada vez que.",
+    "cat": "gram",
+    "fix": "Yo menciono el tema en la reunión cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "meter-presente-3326",
+    "field": "respuesta",
+    "text": "Tú metes las manos en los bolsillos cada vez que.",
+    "cat": "gram",
+    "fix": "Tú metes las manos en los bolsillos cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "molestar-presente-3331",
+    "field": "respuesta",
+    "text": "Yo molesto a mi hermano cada vez que.",
+    "cat": "gram",
+    "fix": "Yo molesto a mi hermano cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "molestar-presente-3332",
+    "field": "respuesta",
+    "text": "Tú molestas a los vecinos con la música mientras.",
+    "cat": "unnat",
+    "fix": "Tú molestas a los vecinos con la música mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "morir-presente-3335",
+    "field": "respuesta",
+    "text": "Mientras, yo muero de hambre.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, yo muero de hambre.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "mostrar-presente-3338",
+    "field": "respuesta",
+    "text": "Ella muestra su nuevo diseño mientras.",
+    "cat": "unnat",
+    "fix": "Ella muestra su nuevo diseño mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "nacer-presente-3345",
+    "field": "respuesta",
+    "text": "Cada vez que, ella nace en primavera.",
+    "cat": "gram",
+    "fix": "Cada vez, ella nace en primavera.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "necesitar-presente-3347",
+    "field": "respuesta",
+    "text": "Nosotros necesitamos ayuda cada vez que.",
+    "cat": "gram",
+    "fix": "Nosotros necesitamos ayuda cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "observar-presente-3352",
+    "field": "respuesta",
+    "text": "Cada vez que, yo observo las aves en el parque.",
+    "cat": "gram",
+    "fix": "Cada vez, yo observo las aves en el parque.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "ocupar-presente-3358",
+    "field": "respuesta",
+    "text": "Yo ocupo el primer lugar cada vez que.",
+    "cat": "gram",
+    "fix": "Yo ocupo el primer lugar cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "ocurrir-presente-3361",
+    "field": "respuesta",
+    "text": "Eso ocurre con frecuencia mientras.",
+    "cat": "unnat",
+    "fix": "Eso ocurre con frecuencia mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "odiar-presente-3366",
+    "field": "respuesta",
+    "text": "Nosotros odiamos la violencia mientras.",
+    "cat": "unnat",
+    "fix": "Nosotros odiamos la violencia mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "pagar-presente-3377",
+    "field": "respuesta",
+    "text": "Nosotros pagamos el alquiler mientras.",
+    "cat": "unnat",
+    "fix": "Nosotros pagamos el alquiler mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "pasar-presente-3389",
+    "field": "respuesta",
+    "text": "Mientras, tú pasas mucho tiempo en el teléfono.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, tú pasas mucho tiempo en el teléfono.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "permanecer-presente-3409",
+    "field": "respuesta",
+    "text": "Yo permanezco en silencio mientras.",
+    "cat": "unnat",
+    "fix": "Yo permanezco en silencio mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "pesar-presente-3418",
+    "field": "respuesta",
+    "text": "Yo peso los ingredientes antes de cocinar mientras.",
+    "cat": "unnat",
+    "fix": "Yo peso los ingredientes antes de cocinar mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "preferir-presente-3429",
+    "field": "respuesta",
+    "text": "Tú prefieres la comida casera cada vez que.",
+    "cat": "gram",
+    "fix": "Tú prefieres la comida casera cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "preparar-presente-3438",
+    "field": "respuesta",
+    "text": "Cada vez que, tú preparas la maleta para el viaje.",
+    "cat": "gram",
+    "fix": "Cada vez, tú preparas la maleta para el viaje.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "producir-presente-3449",
+    "field": "respuesta",
+    "text": "Mientras, nosotros producimos resultados excelentes.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, nosotros producimos resultados excelentes.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "prometer-presente-3451",
+    "field": "respuesta",
+    "text": "Mientras, yo prometo llegar a tiempo.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, yo prometo llegar a tiempo.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "querer-presente-3460",
+    "field": "respuesta",
+    "text": "Yo quiero aprender a bailar cada vez que.",
+    "cat": "gram",
+    "fix": "Yo quiero aprender a bailar cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "recoger-presente-3474",
+    "field": "respuesta",
+    "text": "Nosotros recogemos los resultados del análisis cada vez que.",
+    "cat": "gram",
+    "fix": "Nosotros recogemos los resultados del análisis cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "representar-presente-3497",
+    "field": "respuesta",
+    "text": "Mientras, ella representa a los trabajadores.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, ella representa a los trabajadores.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "resolver-presente-3500",
+    "field": "respuesta",
+    "text": "Mientras, nosotros resolvemos el conflicto.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, nosotros resolvemos el conflicto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "reunir-presente-3509",
+    "field": "respuesta",
+    "text": "Nosotros reunimos los fondos necesarios cada vez que.",
+    "cat": "gram",
+    "fix": "Nosotros reunimos los fondos necesarios cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "reunir-presente-3510",
+    "field": "respuesta",
+    "text": "Ella reúne la información para el proyecto mientras.",
+    "cat": "unnat",
+    "fix": "Ella reúne la información para el proyecto mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "romper-presente-3518",
+    "field": "respuesta",
+    "text": "Tú rompes las reglas mientras.",
+    "cat": "unnat",
+    "fix": "Tú rompes las reglas mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "romper-presente-3519",
+    "field": "respuesta",
+    "text": "Ella rompe el récord mundial mientras.",
+    "cat": "unnat",
+    "fix": "Ella rompe el récord mundial mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "salvar-presente-3529",
+    "field": "respuesta",
+    "text": "Él salva vidas como médico mientras.",
+    "cat": "unnat",
+    "fix": "Él salva vidas como médico mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "seguir-presente-3533",
+    "field": "respuesta",
+    "text": "Cada vez que, tú sigues las instrucciones.",
+    "cat": "gram",
+    "fix": "Cada vez, tú sigues las instrucciones.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "señalar-presente-3537",
+    "field": "respuesta",
+    "text": "Mientras, nosotros señalamos los puntos importantes.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, nosotros señalamos los puntos importantes.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "ser-presente-3546",
+    "field": "respuesta",
+    "text": "Mientras, nosotros somos un equipo fuerte.",
+    "cat": "unnat",
+    "fix": "Mientras tanto, nosotros somos un equipo fuerte.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "servir-presente-3548",
+    "field": "respuesta",
+    "text": "Ella sirve café a los clientes cada vez que.",
+    "cat": "gram",
+    "fix": "Ella sirve café a los clientes cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "sonar-presente-3559",
+    "field": "respuesta",
+    "text": "Cada vez que, el teléfono suena durante la reunión.",
+    "cat": "gram",
+    "fix": "Cada vez, el teléfono suena durante la reunión.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "temer-presente-3577",
+    "field": "respuesta",
+    "text": "Yo temo lo peor mientras.",
+    "cat": "unnat",
+    "fix": "Yo temo lo peor mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "terminar-presente-3585",
+    "field": "respuesta",
+    "text": "Tú terminas tus tareas mientras.",
+    "cat": "unnat",
+    "fix": "Tú terminas tus tareas mientras tanto.",
+    "note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+  },
+  {
+    "id": "tocar-presente-3591",
+    "field": "respuesta",
+    "text": "Nosotros tocamos en una banda cada vez que.",
+    "cat": "gram",
+    "fix": "Nosotros tocamos en una banda cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "tomar-presente-3592",
+    "field": "respuesta",
+    "text": "Yo tomo una decisión importante cada vez que.",
+    "cat": "gram",
+    "fix": "Yo tomo una decisión importante cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "utilizar-presente-3615",
+    "field": "respuesta",
+    "text": "Cada vez que, ella utiliza métodos innovadores.",
+    "cat": "gram",
+    "fix": "Cada vez, ella utiliza métodos innovadores.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "vender-presente-3621",
+    "field": "respuesta",
+    "text": "Nosotros vendemos servicios de consultoría cada vez que.",
+    "cat": "gram",
+    "fix": "Nosotros vendemos servicios de consultoría cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "viajar-presente-3628",
+    "field": "respuesta",
+    "text": "Cada vez que, yo viajo por Europa.",
+    "cat": "gram",
+    "fix": "Cada vez, yo viajo por Europa.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "vivir-presente-3631",
+    "field": "respuesta",
+    "text": "Yo vivo en una ciudad grande cada vez que.",
+    "cat": "gram",
+    "fix": "Yo vivo en una ciudad grande cada vez.",
+    "note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+  },
+  {
+    "id": "tranquilar-presente-3601",
+    "field": "respuesta",
+    "text": "Yo tranquilo a los pasajeros nerviosos esta tarde.",
+    "cat": "unnat",
+    "fix": "Yo tranquilizo a los pasajeros nerviosos esta tarde.",
+    "note": "'tranquilar' is nonstandard and 'tranquilo' reads as the adjective, not a verb"
+  },
+  {
+    "id": "tranquilar-presente-3602",
+    "field": "respuesta",
+    "text": "Ella tranquila a su hijo antes de dormir siempre.",
+    "cat": "unnat",
+    "fix": "Ella tranquiliza a su hijo antes de dormir siempre.",
+    "note": "standard verb is 'tranquilizar'; 'tranquila' reads as the adjective"
+  },
+  {
+    "id": "tranquilar-presente-3603",
+    "field": "respuesta",
+    "text": "Ahora, nosotros tranquilamos a los vecinos preocupados.",
+    "cat": "unnat",
+    "fix": "Ahora, nosotros tranquilizamos a los vecinos preocupados.",
+    "note": "'tranquilar' is a nonstandard verb; natives say 'tranquilizar'"
+  },
+  {
+    "id": "bastar-presente-2954",
+    "field": "respuesta",
+    "text": "Normalmente, ella basta con su presencia.",
+    "cat": "unnat",
+    "fix": "Normalmente, a todos les basta con su presencia.",
+    "note": "'bastar' needs a dative construction, not a personal subject like 'ella'"
+  },
+  {
+    "id": "bastar-presente-2955",
+    "field": "respuesta",
+    "text": "Ellos bastan con poco dinero ahora.",
+    "cat": "unnat",
+    "fix": "A ellos les basta con poco dinero ahora.",
+    "note": "'bastar con' needs an indirect object (les basta), not personal subject"
+  },
+  {
+    "id": "gustar-presente-3226",
+    "field": "respuesta",
+    "text": "yo gusto a mis vecinos",
+    "cat": "gram",
+    "fix": "Les gusto a mis vecinos.",
+    "note": "gustar-type verb needs the indirect object pronoun 'les' before it"
+  },
+  {
+    "id": "gustar-presente-3227",
+    "field": "respuesta",
+    "text": "Ella gusta a todo el mundo",
+    "cat": "gram",
+    "fix": "Ella le gusta a todo el mundo.",
+    "note": "missing indirect object pronoun 'le' required with gustar-type verbs"
+  },
+  {
+    "id": "gustar-presente-3228",
+    "field": "respuesta",
+    "text": "Nosotros gustamos a nuestros profesores",
+    "cat": "gram",
+    "fix": "Les gustamos a nuestros profesores.",
+    "note": "missing indirect object pronoun 'les' required with gustar-type verbs"
+  },
+  {
+    "id": "engañar-presente-3158",
+    "field": "respuesta",
+    "text": "Yo engaño a nadie a veces.",
+    "cat": "sem",
+    "fix": "Yo no engaño a nadie.",
+    "note": "'a nadie' requires 'no'; also 'a veces' contradicts the absolute claim"
+  },
+  {
+    "id": "mentir-presente-3320",
+    "field": "respuesta",
+    "text": "Esta tarde, yo miento nunca a mis amigos.",
+    "cat": "gram",
+    "fix": "Esta tarde, nunca miento a mis amigos.",
+    "note": "'nunca' after the verb needs 'no' before it, or move nunca before the verb"
+  },
+  {
+    "id": "haber-presente-3229",
+    "field": "respuesta",
+    "text": "Yo he terminado el trabajo mientras.",
+    "cat": "ctx",
+    "fix": "Ya termino el trabajo.",
+    "note": "this drills pretérito perfecto compuesto, not simple presente de indicativo"
+  },
+  {
+    "id": "haber-presente-3230",
+    "field": "respuesta",
+    "text": "Tú has estudiado mucho en este momento.",
+    "cat": "ctx",
+    "fix": "Tú estudias mucho en este momento.",
+    "note": "present perfect (has estudiado) is not simple presente; also clashes with 'en este momento'"
+  },
+  {
+    "id": "haber-presente-3231",
+    "field": "respuesta",
+    "text": "Esta noche, nosotros hemos llegado temprano.",
+    "cat": "ctx",
+    "fix": "Esta noche, llegamos temprano.",
+    "note": "present perfect compound tense, not the simple presente this file drills"
+  },
+  {
+    "id": "morir-presente-3334",
+    "field": "respuesta",
+    "text": "Las plantas muere sin agua a veces.",
+    "cat": "gram",
+    "fix": "Las plantas mueren sin agua a veces.",
+    "note": "plural subject 'las plantas' needs plural verb 'mueren'"
+  },
+  {
+    "id": "costar-presente-3050",
+    "field": "respuesta",
+    "text": "Los zapatos cuesta cien dólares siempre.",
+    "cat": "gram",
+    "fix": "Los zapatos cuestan cien dólares siempre.",
+    "note": "plural subject 'los zapatos' needs plural verb 'cuestan'"
+  },
+  {
+    "id": "crecer-presente-3056",
+    "field": "respuesta",
+    "text": "Los niños crece muy rápido cada semana.",
+    "cat": "gram",
+    "fix": "Los niños crecen muy rápido cada semana.",
+    "note": "plural subject 'los niños' needs plural verb 'crecen'"
+  },
+  {
+    "id": "ocurrir-presente-3362",
+    "field": "respuesta",
+    "text": "Los accidentes ocurre en esa esquina hoy.",
+    "cat": "gram",
+    "fix": "Los accidentes ocurren en esa esquina hoy.",
+    "note": "plural subject 'los accidentes' needs plural verb 'ocurren'"
+  },
+  {
+    "id": "suceder-presente-3567",
+    "field": "respuesta",
+    "text": "Cada semana, los problemas sucede cuando menos lo esperas.",
+    "cat": "gram",
+    "fix": "Cada semana, los problemas suceden cuando menos lo esperas.",
+    "note": "plural subject 'los problemas' needs plural verb 'suceden'"
+  },
+  {
+    "id": "nacer-presente-3344",
+    "field": "respuesta",
+    "text": "Los bebés nace en el hospital actualmente.",
+    "cat": "gram",
+    "fix": "Los bebés nacen en el hospital actualmente.",
+    "note": "plural subject 'los bebés' needs plural verb 'nacen'"
+  },
+  {
+    "id": "cometer-presente-2999",
+    "field": "respuesta",
+    "text": "Esta noche, tú cometas errores a veces.",
+    "cat": "gram",
+    "fix": "Esta noche, tú cometes errores a veces.",
+    "note": "'cometas' is subjunctive; plain statement needs indicative 'cometes'"
+  },
+  {
+    "id": "cometer-presente-3000",
+    "field": "respuesta",
+    "text": "Siempre, ellos cometan faltas graves.",
+    "cat": "gram",
+    "fix": "Siempre, ellos cometen faltas graves.",
+    "note": "'cometan' is subjunctive; needs indicative 'cometen'"
+  },
+  {
+    "id": "cumplir-presente-3068",
+    "field": "respuesta",
+    "text": "Ahora, ella cumpla con sus obligaciones.",
+    "cat": "gram",
+    "fix": "Ahora, ella cumple con sus obligaciones.",
+    "note": "'cumpla' is subjunctive; plain statement needs indicative 'cumple'"
+  },
+  {
+    "id": "cumplir-presente-3069",
+    "field": "respuesta",
+    "text": "Mientras, nosotros cumplamos los requisitos.",
+    "cat": "gram",
+    "fix": "Cumplimos los requisitos.",
+    "note": "'cumplamos' is subjunctive; needs indicative 'cumplimos'"
+  },
+  {
+    "id": "discutir-presente-3127",
+    "field": "respuesta",
+    "text": "Nosotros discutamos el tema en la reunión actualmente.",
+    "cat": "gram",
+    "fix": "Nosotros discutimos el tema en la reunión actualmente.",
+    "note": "'discutamos' is subjunctive/command; needs indicative 'discutimos'"
+  },
+  {
+    "id": "discutir-presente-3129",
+    "field": "respuesta",
+    "text": "Cada semana, ellos discutan sobre política.",
+    "cat": "gram",
+    "fix": "Cada semana, ellos discuten sobre política.",
+    "note": "'discutan' is subjunctive; needs indicative 'discuten'"
+  },
+  {
+    "id": "esconder-presente-3182",
+    "field": "respuesta",
+    "text": "Tú escondas tus emociones normalmente.",
+    "cat": "gram",
+    "fix": "Tú escondes tus emociones normalmente.",
+    "note": "'escondas' is subjunctive; needs indicative 'escondes'"
+  },
+  {
+    "id": "esconder-presente-3183",
+    "field": "respuesta",
+    "text": "Hoy, ella esconda las galletas de los niños.",
+    "cat": "gram",
+    "fix": "Hoy, ella esconde las galletas de los niños.",
+    "note": "'esconda' is subjunctive; needs indicative 'esconde'"
+  },
+  {
+    "id": "prometer-presente-3452",
+    "field": "respuesta",
+    "text": "Tú prometas no decir nada a veces.",
+    "cat": "gram",
+    "fix": "Tú prometes no decir nada a veces.",
+    "note": "'prometas' is subjunctive; needs indicative 'prometes'"
+  },
+  {
+    "id": "prometer-presente-3453",
+    "field": "respuesta",
+    "text": "Esta noche, nosotros prometamos hacer nuestro mejor esfuerzo.",
+    "cat": "gram",
+    "fix": "Esta noche, nosotros prometemos hacer nuestro mejor esfuerzo.",
+    "note": "'prometamos' is subjunctive/command; needs indicative 'prometemos'"
+  },
+  {
+    "id": "unir-presente-3607",
+    "field": "respuesta",
+    "text": "Nosotros unamos fuerzas para el proyecto en este momento.",
+    "cat": "gram",
+    "fix": "Nosotros unimos fuerzas para el proyecto en este momento.",
+    "note": "'unamos' is subjunctive/command; needs indicative 'unimos'"
+  },
+  {
+    "id": "unir-presente-3609",
+    "field": "respuesta",
+    "text": "Esta tarde, ella una a la familia en momentos difíciles.",
+    "cat": "gram",
+    "fix": "Esta tarde, ella une a la familia en momentos difíciles.",
+    "note": "'una' is subjunctive and also misreads as the numeral 'one'"
+  },
+  {
+    "id": "dejar-presente-3085",
+    "field": "respuesta",
+    "text": "Ahora mismo, yo dejó el café sobre la mesa.",
+    "cat": "gram",
+    "fix": "Ahora mismo, yo dejo el café sobre la mesa.",
+    "note": "'dejó' is preterite (he/she left); wrong person/tense for 'yo' presente"
+  },
+  {
+    "id": "hablar-presente-3232",
+    "field": "respuesta",
+    "text": "Yo habló con mi amigo por lo general.",
+    "cat": "gram",
+    "fix": "Yo hablo con mi amigo por lo general.",
+    "note": "'habló' is preterite (he/she spoke); wrong person/tense for 'yo' presente"
+  },
+  {
+    "id": "nacer-presente-3343",
+    "field": "respuesta",
+    "text": "Hoy, yo naco en una ciudad pequeña.",
+    "cat": "gram",
+    "fix": "Nazco en una ciudad pequeña.",
+    "note": "'naco' is not a real conjugation of nacer (should be 'nazco'); also being born can't be a present habitual act"
+  },
+  {
+    "id": "enviar-presente-3175",
+    "field": "respuesta",
+    "text": "Yo envio un mensaje esta noche.",
+    "cat": "gram",
+    "fix": "Yo envío un mensaje esta noche.",
+    "note": "missing accent: hiatus requires tilde, 'envío' not 'envio'"
+  },
+  {
+    "id": "enviar-presente-3177",
+    "field": "respuesta",
+    "text": "Ella envia flores a su madre esta noche.",
+    "cat": "gram",
+    "fix": "Ella envía flores a su madre esta noche.",
+    "note": "missing accent: hiatus requires tilde, 'envía' not 'envia'"
+  },
+  {
+    "id": "enviar-presente-3176",
+    "field": "respuesta",
+    "text": "tú envias un correo electrónico",
+    "cat": "gram",
+    "fix": "tú envías un correo electrónico",
+    "note": "missing accent: hiatus requires tilde, 'envías' not 'envias'"
+  },
+  {
+    "id": "actuar-presente-2881",
+    "field": "respuesta",
+    "text": "Actualmente, él actua en la película.",
+    "cat": "gram",
+    "fix": "Actualmente, él actúa en la película.",
+    "note": "missing accent: hiatus requires tilde, 'actúa' not 'actua'"
+  },
+  {
+    "id": "actuar-presente-2882",
+    "field": "respuesta",
+    "text": "Ahora, yo actuo con responsabilidad.",
+    "cat": "gram",
+    "fix": "Ahora, yo actúo con responsabilidad.",
+    "note": "missing accent: hiatus requires tilde, 'actúo' not 'actuo'"
+  },
+  {
+    "id": "actuar-presente-2883",
+    "field": "respuesta",
+    "text": "A veces, ellas actuan en el teatro.",
+    "cat": "gram",
+    "fix": "A veces, ellas actúan en el teatro.",
+    "note": "missing accent: hiatus requires tilde, 'actúan' not 'actuan'"
+  },
+  {
+    "id": "confiar-presente-3013",
+    "field": "respuesta",
+    "text": "Hoy, yo confio en mi equipo.",
+    "cat": "gram",
+    "fix": "Hoy, yo confío en mi equipo.",
+    "note": "missing accent: hiatus requires tilde, 'confío' not 'confio'"
+  },
+  {
+    "id": "confiar-presente-3014",
+    "field": "respuesta",
+    "text": "Ella confia en sus amigos todos los días.",
+    "cat": "gram",
+    "fix": "Ella confía en sus amigos todos los días.",
+    "note": "missing accent: hiatus requires tilde, 'confía' not 'confia'"
+  },
+  {
+    "id": "continuar-presente-3035",
+    "field": "respuesta",
+    "text": "Yo continuo mi camino por lo general.",
+    "cat": "gram",
+    "fix": "Yo continúo mi camino por lo general.",
+    "note": "'continuo' (no accent) is the adjective; the verb needs 'continúo'"
+  },
+  {
+    "id": "continuar-presente-3036",
+    "field": "respuesta",
+    "text": "Ella continua sus estudios en este momento.",
+    "cat": "gram",
+    "fix": "Ella continúa sus estudios en este momento.",
+    "note": "'continua' (no accent) is the adjective; the verb needs 'continúa'"
+  },
+  {
+    "id": "existir-presente-3203",
+    "field": "respuesta",
+    "text": "Esta tarde, ellos existen en otro continente.",
+    "cat": "unnat",
+    "fix": "Esta tarde, ellos están en otro continente.",
+    "note": "'existir' isn't used to mean 'be located'; natives say 'estar' or 'vivir'"
+  },
+  {
+    "id": "existir-presente-3204",
+    "field": "respuesta",
+    "text": "Yo existo para ayudar esta mañana.",
+    "cat": "unnat",
+    "fix": "Yo existo para ayudar.",
+    "note": "tying an existential purpose statement to 'esta mañana' is unnatural"
+  },
+  {
+    "id": "tener-presente-3580",
+    "field": "respuesta",
+    "text": "Esta tarde, yo tengo dos hermanos.",
+    "cat": "sem",
+    "fix": "Yo tengo dos hermanos.",
+    "note": "sibling count is a permanent fact; pairing it with 'esta tarde' is nonsensical"
+  },
+  {
+    "id": "ser-presente-3544",
+    "field": "respuesta",
+    "text": "Esta tarde, yo soy profesor de historia.",
+    "cat": "unnat",
+    "fix": "Yo soy profesor de historia.",
+    "note": "profession as identity doesn't naturally pair with a specific afternoon"
+  },
+  {
+    "id": "soler-presente-3554",
+    "field": "respuesta",
+    "text": "A veces, ella suele cocinar los domingos.",
+    "cat": "sem",
+    "fix": "Ella suele cocinar los domingos.",
+    "note": "'a veces' (sometimes) contradicts 'suele' (usually/habitually)"
+  },
+  {
+    "id": "soler-presente-3555",
+    "field": "respuesta",
+    "text": "Nosotros solemos ir al cine los sábados ahora.",
+    "cat": "unnat",
+    "fix": "Nosotros solemos ir al cine los sábados.",
+    "note": "'ahora' (right now) doesn't fit a habitual weekly-routine statement"
+  }
+]

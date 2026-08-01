@@ -1,0 +1,5462 @@
+[
+{
+"id": "abandonar-presente-2860",
+"verbo": "abandonar",
+"contexto": "yo, normalmente, la ciudad",
+"respuesta": "Normalmente, yo abandono la ciudad.",
+"pista": "expressing a current decision"
+},
+{
+"id": "abandonar-presente-2861",
+"verbo": "abandonar",
+"contexto": "ellos, siempre, el proyecto",
+"respuesta": "Siempre, ellos abandonan el proyecto.",
+"pista": "describing what they do"
+},
+{
+"id": "abandonar-presente-2862",
+"verbo": "abandonar",
+"contexto": "tú, esta tarde, tus planes antiguos",
+"respuesta": "Esta tarde, tú abandonas tus planes antiguos.",
+"pista": "talking about a habit"
+},
+{
+"id": "abrir-presente-2863",
+"verbo": "abrir",
+"contexto": "yo, normalmente, la puerta",
+"respuesta": "Normalmente, yo abro la puerta.",
+"pista": "describing a current action"
+},
+{
+"id": "abrir-presente-2864",
+"verbo": "abrir",
+"contexto": "ella, todos los días, el libro",
+"respuesta": "Todos los días, ella abre el libro.",
+"pista": "narrating what she does"
+},
+{
+"id": "abrir-presente-2865",
+"verbo": "abrir",
+"contexto": "nosotros, ahora, las ventanas",
+"respuesta": "Ahora, nosotros abrimos las ventanas.",
+"pista": "describing a routine"
+},
+{
+"id": "acabar-presente-2866",
+"verbo": "acabar",
+"contexto": "yo, esta noche, el trabajo",
+"respuesta": "Esta noche, yo acabo el trabajo.",
+"pista": "expressing completion"
+},
+{
+"id": "acabar-presente-2867",
+"verbo": "acabar",
+"contexto": "tú, cada semana, la tarea",
+"respuesta": "Tú acabas la tarea cada semana.",
+"pista": "describing what you do"
+},
+{
+"id": "acabar-presente-2868",
+"verbo": "acabar",
+"contexto": "ellos, esta tarde, la comida",
+"respuesta": "Ellos acaban la comida esta tarde.",
+"pista": "narrating present actions"
+},
+{
+"id": "aceptar-presente-2869",
+"verbo": "aceptar",
+"contexto": "nosotros, por lo general, la oferta",
+"respuesta": "Por lo general, nosotros aceptamos la oferta.",
+"pista": "making a decision now"
+},
+{
+"id": "aceptar-presente-2870",
+"verbo": "aceptar",
+"contexto": "él, a veces, las condiciones",
+"respuesta": "A veces, él acepta las condiciones.",
+"pista": "describing his action"
+},
+{
+"id": "aceptar-presente-2871",
+"verbo": "aceptar",
+"contexto": "yo, siempre, la invitación",
+"respuesta": "Yo acepto la invitación siempre.",
+"pista": "expressing current acceptance"
+},
+{
+"id": "acercar-presente-2872",
+"verbo": "acercar",
+"contexto": "yo, esta noche, la silla a la mesa",
+"respuesta": "Esta noche, yo acerco la silla a la mesa.",
+"pista": "describing a current action"
+},
+{
+"id": "acercar-presente-2873",
+"verbo": "acercar",
+"contexto": "ella, mientras, el vaso",
+"respuesta": "Ella acerca el vaso mientras.",
+"pista": "narrating present events"
+},
+{
+"id": "acercar-presente-2874",
+"verbo": "acercar",
+"contexto": "ustedes, hoy, los documentos",
+"respuesta": "Ustedes acercan los documentos hoy.",
+"pista": "addressing a group formally"
+},
+{
+"id": "acompañar-presente-2875",
+"verbo": "acompañar",
+"contexto": "yo, hoy, a mi madre",
+"respuesta": "Yo acompaño a mi madre hoy.",
+"pista": "expressing a present action"
+},
+{
+"id": "acompañar-presente-2876",
+"verbo": "acompañar",
+"contexto": "tú, todos los días, a tu amigo al hospital",
+"respuesta": "Todos los días, tú acompañas a tu amigo al hospital.",
+"pista": "describing what you do"
+},
+{
+"id": "acompañar-presente-2877",
+"verbo": "acompañar",
+"contexto": "nosotros, siempre, a los niños a la escuela",
+"respuesta": "Siempre, nosotros acompañamos a los niños a la escuela.",
+"pista": "talking about a routine"
+},
+{
+"id": "acordar-presente-2878",
+"verbo": "acordar",
+"contexto": "nosotros, mientras, los términos del contrato",
+"respuesta": "Nosotros acordamos los términos del contrato mientras.",
+"pista": "reaching agreement now"
+},
+{
+"id": "acordar-presente-2879",
+"verbo": "acordar",
+"contexto": "ellos, hoy, una fecha para la reunión",
+"respuesta": "Ellos acuerdan una fecha para la reunión hoy.",
+"pista": "describing their action"
+},
+{
+"id": "acordar-presente-2880",
+"verbo": "acordar",
+"contexto": "yo, por lo general, una cita con el doctor",
+"respuesta": "Yo acuerdo una cita con el doctor por lo general.",
+"pista": "expressing current planning"
+},
+{
+"id": "actuar-presente-2881",
+"verbo": "actuar",
+"contexto": "él, actualmente, en la película",
+"respuesta": "Actualmente, él actua en la película.",
+"pista": "describing his current role"
+},
+{
+"id": "actuar-presente-2882",
+"verbo": "actuar",
+"contexto": "yo, ahora, con responsabilidad",
+"respuesta": "Ahora, yo actuo con responsabilidad.",
+"pista": "expressing how I behave"
+},
+{
+"id": "actuar-presente-2883",
+"verbo": "actuar",
+"contexto": "ellas, a veces, en el teatro",
+"respuesta": "A veces, ellas actuan en el teatro.",
+"pista": "narrating present activities"
+},
+{
+"id": "admitir-presente-2884",
+"verbo": "admitir",
+"contexto": "yo, cada vez que, mi error",
+"respuesta": "Cada vez que, yo admito mi error.",
+"pista": "confessing something now"
+},
+{
+"id": "admitir-presente-2885",
+"verbo": "admitir",
+"contexto": "tú, en este momento, la verdad",
+"respuesta": "Tú admites la verdad en este momento.",
+"pista": "describing what you do"
+},
+{
+"id": "admitir-presente-2886",
+"verbo": "admitir",
+"contexto": "él, todos los días, sus problemas",
+"respuesta": "Él admite sus problemas todos los días.",
+"pista": "narrating his action"
+},
+{
+"id": "aforar-presente-2887",
+"verbo": "aforar",
+"contexto": "nosotros, esta mañana, el río",
+"respuesta": "Nosotros aforamos el río esta mañana.",
+"pista": "describing a measurement activity"
+},
+{
+"id": "aforar-presente-2888",
+"verbo": "aforar",
+"contexto": "él, esta tarde, el caudal del agua",
+"respuesta": "Él afora el caudal del agua esta tarde.",
+"pista": "expressing a technical action"
+},
+{
+"id": "aforar-presente-2889",
+"verbo": "aforar",
+"contexto": "yo, normalmente, la capacidad del tanque",
+"respuesta": "Normalmente, yo aforo la capacidad del tanque.",
+"pista": "talking about current work"
+},
+{
+"id": "agradecer-presente-2890",
+"verbo": "agradecer",
+"contexto": "yo, todos los días, tu ayuda",
+"respuesta": "Todos los días, yo agradezco tu ayuda.",
+"pista": "expressing gratitude now"
+},
+{
+"id": "agradecer-presente-2891",
+"verbo": "agradecer",
+"contexto": "nosotros, actualmente, la oportunidad",
+"respuesta": "Actualmente, nosotros agradecemos la oportunidad.",
+"pista": "showing appreciation"
+},
+{
+"id": "agradecer-presente-2892",
+"verbo": "agradecer",
+"contexto": "ella, esta mañana, el regalo",
+"respuesta": "Ella agradece el regalo esta mañana.",
+"pista": "describing her reaction"
+},
+{
+"id": "alcanzar-presente-2893",
+"verbo": "alcanzar",
+"contexto": "tú, en este momento, tus metas",
+"respuesta": "En este momento, tú alcanzas tus metas.",
+"pista": "describing achievement"
+},
+{
+"id": "alcanzar-presente-2894",
+"verbo": "alcanzar",
+"contexto": "nosotros, normalmente, el objetivo",
+"respuesta": "Normalmente, nosotros alcanzamos el objetivo.",
+"pista": "expressing team progress"
+},
+{
+"id": "alcanzar-presente-2895",
+"verbo": "alcanzar",
+"contexto": "ella, esta noche, el estante alto",
+"respuesta": "Esta noche, ella alcanza el estante alto.",
+"pista": "narrating a present action"
+},
+{
+"id": "alegrar-presente-2896",
+"verbo": "alegrar",
+"contexto": "yo, por lo general, a mis padres",
+"respuesta": "Yo alegro a mis padres por lo general.",
+"pista": "expressing what makes others happy"
+},
+{
+"id": "alegrar-presente-2897",
+"verbo": "alegrar",
+"contexto": "ella, en este momento, a todos con su sonrisa",
+"respuesta": "En este momento, ella alegra a todos con su sonrisa.",
+"pista": "describing her effect"
+},
+{
+"id": "alegrar-presente-2898",
+"verbo": "alegrar",
+"contexto": "tú, cada vez que, a tus amigos",
+"respuesta": "Tú alegras a tus amigos cada vez que.",
+"pista": "talking about your personality"
+},
+{
+"id": "alejar-presente-2899",
+"verbo": "alejar",
+"contexto": "yo, esta tarde, el peligro",
+"respuesta": "Yo alejo el peligro esta tarde.",
+"pista": "expressing a protective action"
+},
+{
+"id": "alejar-presente-2900",
+"verbo": "alejar",
+"contexto": "nosotros, ahora mismo, las dudas",
+"respuesta": "Nosotros alejamos las dudas ahora mismo.",
+"pista": "describing what we eliminate"
+},
+{
+"id": "alejar-presente-2901",
+"verbo": "alejar",
+"contexto": "tú, esta mañana, los malos pensamientos",
+"respuesta": "Esta mañana, tú alejas los malos pensamientos.",
+"pista": "giving advice about habits"
+},
+{
+"id": "amar-presente-2902",
+"verbo": "amar",
+"contexto": "yo, esta noche, a mi familia",
+"respuesta": "Yo amo a mi familia esta noche.",
+"pista": "expressing deep feelings"
+},
+{
+"id": "amar-presente-2903",
+"verbo": "amar",
+"contexto": "él, a veces, a su esposa",
+"respuesta": "Él ama a su esposa a veces.",
+"pista": "describing his devotion"
+},
+{
+"id": "amar-presente-2904",
+"verbo": "amar",
+"contexto": "nosotros, cada vez que, la naturaleza",
+"respuesta": "Nosotros amamos la naturaleza cada vez que.",
+"pista": "expressing shared passion"
+},
+{
+"id": "andar-presente-2905",
+"verbo": "andar",
+"contexto": "yo, ahora mismo, por el parque",
+"respuesta": "Ahora mismo, yo ando por el parque.",
+"pista": "describing current movement"
+},
+{
+"id": "andar-presente-2906",
+"verbo": "andar",
+"contexto": "ellos, todos los días, por la calle",
+"respuesta": "Todos los días, ellos andan por la calle.",
+"pista": "narrating what they do"
+},
+{
+"id": "andar-presente-2907",
+"verbo": "andar",
+"contexto": "tú, a veces, muy rápido",
+"respuesta": "A veces, tú andas muy rápido.",
+"pista": "commenting on speed"
+},
+{
+"id": "aparecer-presente-2908",
+"verbo": "aparecer",
+"contexto": "él, esta mañana, en la televisión",
+"respuesta": "Esta mañana, él aparece en la televisión.",
+"pista": "describing where he shows up"
+},
+{
+"id": "aparecer-presente-2909",
+"verbo": "aparecer",
+"contexto": "yo, a veces, en la lista",
+"respuesta": "Yo aparezco en la lista a veces.",
+"pista": "expressing current status"
+},
+{
+"id": "aparecer-presente-2910",
+"verbo": "aparecer",
+"contexto": "ellas, cada semana, en el escenario",
+"respuesta": "Ellas aparecen en el escenario cada semana.",
+"pista": "narrating an event"
+},
+{
+"id": "apartar-presente-2911",
+"verbo": "apartar",
+"contexto": "yo, ahora mismo, los libros de la mesa",
+"respuesta": "Yo aparto los libros de la mesa ahora mismo.",
+"pista": "describing a current action"
+},
+{
+"id": "apartar-presente-2912",
+"verbo": "apartar",
+"contexto": "tú, todos los días, la mirada",
+"respuesta": "Todos los días, tú apartas la mirada.",
+"pista": "narrating a present moment"
+},
+{
+"id": "apartar-presente-2913",
+"verbo": "apartar",
+"contexto": "ella, normalmente, las sillas",
+"respuesta": "Normalmente, ella aparta las sillas.",
+"pista": "describing what she does"
+},
+{
+"id": "apostar-presente-2914",
+"verbo": "apostar",
+"contexto": "yo, siempre, por el equipo local",
+"respuesta": "Yo apuesto por el equipo local siempre.",
+"pista": "expressing a bet"
+},
+{
+"id": "apostar-presente-2915",
+"verbo": "apostar",
+"contexto": "ellos, a veces, mucho dinero",
+"respuesta": "Ellos apuestan mucho dinero a veces.",
+"pista": "describing their action"
+},
+{
+"id": "apostar-presente-2916",
+"verbo": "apostar",
+"contexto": "tú, hoy, por tu favorito",
+"respuesta": "Tú apuestas por tu favorito hoy.",
+"pista": "talking about preferences"
+},
+{
+"id": "apoyar-presente-2917",
+"verbo": "apoyar",
+"contexto": "yo, esta mañana, a mi hermano",
+"respuesta": "Esta mañana, yo apoyo a mi hermano.",
+"pista": "expressing support"
+},
+{
+"id": "apoyar-presente-2918",
+"verbo": "apoyar",
+"contexto": "nosotros, mientras, el proyecto",
+"respuesta": "Nosotros apoyamos el proyecto mientras.",
+"pista": "describing team action"
+},
+{
+"id": "apoyar-presente-2919",
+"verbo": "apoyar",
+"contexto": "tú, mientras, a tus compañeros",
+"respuesta": "Mientras, tú apoyas a tus compañeros.",
+"pista": "talking about helping others"
+},
+{
+"id": "aprender-presente-2920",
+"verbo": "aprender",
+"contexto": "yo, actualmente, español",
+"respuesta": "Actualmente, yo aprendo español.",
+"pista": "expressing current learning"
+},
+{
+"id": "aprender-presente-2921",
+"verbo": "aprender",
+"contexto": "tú, por lo general, algo nuevo",
+"respuesta": "Tú aprendes algo nuevo por lo general.",
+"pista": "describing habitual activity"
+},
+{
+"id": "aprender-presente-2922",
+"verbo": "aprender",
+"contexto": "ellos, por lo general, a cocinar",
+"respuesta": "Por lo general, ellos aprenden a cocinar.",
+"pista": "narrating what they do"
+},
+{
+"id": "arreglar-presente-2923",
+"verbo": "arreglar",
+"contexto": "yo, hoy, el coche",
+"respuesta": "Hoy, yo arreglo el coche.",
+"pista": "describing a repair"
+},
+{
+"id": "arreglar-presente-2924",
+"verbo": "arreglar",
+"contexto": "él, todos los días, la computadora",
+"respuesta": "Todos los días, él arregla la computadora.",
+"pista": "narrating his work"
+},
+{
+"id": "arreglar-presente-2925",
+"verbo": "arreglar",
+"contexto": "nosotros, cada semana, la casa",
+"respuesta": "Nosotros arreglamos la casa cada semana.",
+"pista": "talking about home improvement"
+},
+{
+"id": "asegurar-presente-2926",
+"verbo": "asegurar",
+"contexto": "yo, ahora, la puerta",
+"respuesta": "Yo aseguro la puerta ahora.",
+"pista": "describing a safety action"
+},
+{
+"id": "asegurar-presente-2927",
+"verbo": "asegurar",
+"contexto": "ella, cada vez que, el éxito del evento",
+"respuesta": "Ella asegura el éxito del evento cada vez que.",
+"pista": "narrating her effort"
+},
+{
+"id": "asegurar-presente-2928",
+"verbo": "asegurar",
+"contexto": "nosotros, esta tarde, los resultados",
+"respuesta": "Esta tarde, nosotros aseguramos los resultados.",
+"pista": "expressing team responsibility"
+},
+{
+"id": "asesinar-presente-2929",
+"verbo": "asesinar",
+"contexto": "él, cada vez que, al personaje en la novela",
+"respuesta": "Cada vez que, él asesina al personaje en la novela.",
+"pista": "narrating a fictional plot"
+},
+{
+"id": "asesinar-presente-2930",
+"verbo": "asesinar",
+"contexto": "ellos, hoy, al villano en la historia",
+"respuesta": "Ellos asesinan al villano en la historia hoy.",
+"pista": "describing a story"
+},
+{
+"id": "asesinar-presente-2931",
+"verbo": "asesinar",
+"contexto": "ella, a veces, al rival en el videojuego",
+"respuesta": "A veces, ella asesina al rival en el videojuego.",
+"pista": "talking about gaming"
+},
+{
+"id": "asustar-presente-2932",
+"verbo": "asustar",
+"contexto": "tú, esta mañana, a los niños",
+"respuesta": "Tú asustas a los niños esta mañana.",
+"pista": "describing a playful action"
+},
+{
+"id": "asustar-presente-2933",
+"verbo": "asustar",
+"contexto": "él, mientras, a su hermana",
+"respuesta": "Mientras, él asusta a su hermana.",
+"pista": "narrating a prank"
+},
+{
+"id": "asustar-presente-2934",
+"verbo": "asustar",
+"contexto": "yo, esta noche, a mi gato sin querer",
+"respuesta": "Yo asusto a mi gato sin querer esta noche.",
+"pista": "expressing an accident"
+},
+{
+"id": "atacar-presente-2935",
+"verbo": "atacar",
+"contexto": "ellos, mientras, al enemigo",
+"respuesta": "Mientras, ellos atacan al enemigo.",
+"pista": "describing a conflict"
+},
+{
+"id": "atacar-presente-2936",
+"verbo": "atacar",
+"contexto": "él, normalmente, el problema con determinación",
+"respuesta": "Él ataca el problema con determinación normalmente.",
+"pista": "expressing determination"
+},
+{
+"id": "atacar-presente-2937",
+"verbo": "atacar",
+"contexto": "nosotros, mientras, la tarea difícil",
+"respuesta": "Nosotros atacamos la tarea difícil mientras.",
+"pista": "tackling something challenging"
+},
+{
+"id": "atrapar-presente-2938",
+"verbo": "atrapar",
+"contexto": "yo, ahora mismo, la pelota",
+"respuesta": "Yo atrapo la pelota ahora mismo.",
+"pista": "describing a catch"
+},
+{
+"id": "atrapar-presente-2939",
+"verbo": "atrapar",
+"contexto": "ella, hoy, al ladrón",
+"respuesta": "Hoy, ella atrapa al ladrón.",
+"pista": "narrating an action"
+},
+{
+"id": "atrapar-presente-2940",
+"verbo": "atrapar",
+"contexto": "tú, ahora, las mariposas",
+"respuesta": "Ahora, tú atrapas las mariposas.",
+"pista": "describing an activity"
+},
+{
+"id": "averiguar-presente-2941",
+"verbo": "averiguar",
+"contexto": "yo, cada semana, la verdad",
+"respuesta": "Cada semana, yo averiguo la verdad.",
+"pista": "expressing investigation"
+},
+{
+"id": "averiguar-presente-2942",
+"verbo": "averiguar",
+"contexto": "nosotros, todos los días, los hechos",
+"respuesta": "Todos los días, nosotros averiguamos los hechos.",
+"pista": "describing research"
+},
+{
+"id": "averiguar-presente-2943",
+"verbo": "averiguar",
+"contexto": "tú, ahora, la dirección",
+"respuesta": "Ahora, tú averiguas la dirección.",
+"pista": "talking about finding out"
+},
+{
+"id": "ayudar-presente-2944",
+"verbo": "ayudar",
+"contexto": "yo, esta noche, a mi vecino",
+"respuesta": "Esta noche, yo ayudo a mi vecino.",
+"pista": "expressing willingness to help"
+},
+{
+"id": "ayudar-presente-2945",
+"verbo": "ayudar",
+"contexto": "ella, por lo general, a los estudiantes",
+"respuesta": "Por lo general, ella ayuda a los estudiantes.",
+"pista": "describing her role"
+},
+{
+"id": "ayudar-presente-2946",
+"verbo": "ayudar",
+"contexto": "nosotros, actualmente, a la comunidad",
+"respuesta": "Nosotros ayudamos a la comunidad actualmente.",
+"pista": "talking about community service"
+},
+{
+"id": "bailar-presente-2947",
+"verbo": "bailar",
+"contexto": "yo, normalmente, salsa",
+"respuesta": "Normalmente, yo bailo salsa.",
+"pista": "expressing a hobby"
+},
+{
+"id": "bailar-presente-2948",
+"verbo": "bailar",
+"contexto": "tú, todos los días, muy bien",
+"respuesta": "Tú bailas muy bien todos los días.",
+"pista": "complimenting dance skills"
+},
+{
+"id": "bailar-presente-2949",
+"verbo": "bailar",
+"contexto": "ellos, esta noche, en la fiesta",
+"respuesta": "Ellos bailan en la fiesta esta noche.",
+"pista": "narrating a party scene"
+},
+{
+"id": "bajar-presente-2950",
+"verbo": "bajar",
+"contexto": "yo, a veces, las escaleras",
+"respuesta": "A veces, yo bajo las escaleras.",
+"pista": "describing movement"
+},
+{
+"id": "bajar-presente-2951",
+"verbo": "bajar",
+"contexto": "él, hoy, del autobús",
+"respuesta": "Él baja del autobús hoy.",
+"pista": "narrating arrival"
+},
+{
+"id": "bajar-presente-2952",
+"verbo": "bajar",
+"contexto": "nosotros, en este momento, los precios",
+"respuesta": "Nosotros bajamos los precios en este momento.",
+"pista": "expressing a business action"
+},
+{
+"id": "bastar-presente-2953",
+"verbo": "bastar",
+"contexto": "eso, actualmente, para todos",
+"respuesta": "Actualmente, eso basta para todos.",
+"pista": "expressing sufficiency"
+},
+{
+"id": "bastar-presente-2954",
+"verbo": "bastar",
+"contexto": "ella, normalmente, con su presencia",
+"respuesta": "Normalmente, ella basta con su presencia.",
+"pista": "describing enough"
+},
+{
+"id": "bastar-presente-2955",
+"verbo": "bastar",
+"contexto": "ellos, ahora, con poco dinero",
+"respuesta": "Ellos bastan con poco dinero ahora.",
+"pista": "expressing adequacy"
+},
+{
+"id": "beber-presente-2956",
+"verbo": "beber",
+"contexto": "yo, a veces, agua",
+"respuesta": "A veces, yo bebo agua.",
+"pista": "describing a healthy habit"
+},
+{
+"id": "beber-presente-2957",
+"verbo": "beber",
+"contexto": "tú, esta noche, café",
+"respuesta": "Esta noche, tú bebes café.",
+"pista": "talking about morning routine"
+},
+{
+"id": "beber-presente-2958",
+"verbo": "beber",
+"contexto": "nosotros, todos los días, jugo de naranja",
+"respuesta": "Todos los días, nosotros bebemos jugo de naranja.",
+"pista": "describing breakfast habits"
+},
+{
+"id": "besar-presente-2959",
+"verbo": "besar",
+"contexto": "ella, ahora mismo, a su hijo",
+"respuesta": "Ella besa a su hijo ahora mismo.",
+"pista": "expressing maternal affection"
+},
+{
+"id": "besar-presente-2960",
+"verbo": "besar",
+"contexto": "yo, actualmente, a mi pareja",
+"respuesta": "Actualmente, yo beso a mi pareja.",
+"pista": "describing a loving gesture"
+},
+{
+"id": "besar-presente-2961",
+"verbo": "besar",
+"contexto": "ellos, ahora mismo, a sus abuelos",
+"respuesta": "Ahora mismo, ellos besan a sus abuelos.",
+"pista": "narrating family customs"
+},
+{
+"id": "buscar-presente-2962",
+"verbo": "buscar",
+"contexto": "yo, ahora, mis llaves",
+"respuesta": "Ahora, yo busco mis llaves.",
+"pista": "describing a search"
+},
+{
+"id": "buscar-presente-2963",
+"verbo": "buscar",
+"contexto": "tú, mientras, trabajo",
+"respuesta": "Mientras, tú buscas trabajo.",
+"pista": "talking about job hunting"
+},
+{
+"id": "buscar-presente-2964",
+"verbo": "buscar",
+"contexto": "nosotros, esta mañana, una solución",
+"respuesta": "Nosotros buscamos una solución esta mañana.",
+"pista": "expressing problem-solving"
+},
+{
+"id": "caer-presente-2965",
+"verbo": "caer",
+"contexto": "yo, actualmente, al suelo",
+"respuesta": "Yo caigo al suelo actualmente.",
+"pista": "describing an accident"
+},
+{
+"id": "caer-presente-2966",
+"verbo": "caer",
+"contexto": "ella, cada vez que, de la silla",
+"respuesta": "Cada vez que, ella cae de la silla.",
+"pista": "narrating a mishap"
+},
+{
+"id": "caer-presente-2967",
+"verbo": "caer",
+"contexto": "ellos, en este momento, en la trampa",
+"respuesta": "Ellos caen en la trampa en este momento.",
+"pista": "describing a situation"
+},
+{
+"id": "callar-presente-2968",
+"verbo": "callar",
+"contexto": "yo, esta noche, cuando es necesario",
+"respuesta": "Yo callo cuando es necesario esta noche.",
+"pista": "expressing self-control"
+},
+{
+"id": "callar-presente-2969",
+"verbo": "callar",
+"contexto": "tú, esta noche, en clase",
+"respuesta": "Tú callas en clase esta noche.",
+"pista": "describing behavior"
+},
+{
+"id": "callar-presente-2970",
+"verbo": "callar",
+"contexto": "ellos, esta mañana, durante la película",
+"respuesta": "Ellos callan durante la película esta mañana.",
+"pista": "narrating etiquette"
+},
+{
+"id": "calmar-presente-2971",
+"verbo": "calmar",
+"contexto": "yo, esta tarde, a mi hijo",
+"respuesta": "Esta tarde, yo calmo a mi hijo.",
+"pista": "expressing a soothing action"
+},
+{
+"id": "calmar-presente-2972",
+"verbo": "calmar",
+"contexto": "ella, cada semana, los nervios",
+"respuesta": "Cada semana, ella calma los nervios.",
+"pista": "describing her method"
+},
+{
+"id": "calmar-presente-2973",
+"verbo": "calmar",
+"contexto": "tú, siempre, a tu perro",
+"respuesta": "Siempre, tú calmas a tu perro.",
+"pista": "giving advice about pets"
+},
+{
+"id": "cambiar-presente-2974",
+"verbo": "cambiar",
+"contexto": "yo, ahora, de opinión",
+"respuesta": "Yo cambio de opinión ahora.",
+"pista": "expressing a change"
+},
+{
+"id": "cambiar-presente-2975",
+"verbo": "cambiar",
+"contexto": "nosotros, todos los días, el plan",
+"respuesta": "Todos los días, nosotros cambiamos el plan.",
+"pista": "describing team decision"
+},
+{
+"id": "cambiar-presente-2976",
+"verbo": "cambiar",
+"contexto": "él, hoy, de ropa",
+"respuesta": "Hoy, él cambia de ropa.",
+"pista": "narrating a daily action"
+},
+{
+"id": "caminar-presente-2977",
+"verbo": "caminar",
+"contexto": "yo, por lo general, al trabajo",
+"respuesta": "Por lo general, yo camino al trabajo.",
+"pista": "describing a commute"
+},
+{
+"id": "caminar-presente-2978",
+"verbo": "caminar",
+"contexto": "ellos, cada semana, por la playa",
+"respuesta": "Cada semana, ellos caminan por la playa.",
+"pista": "narrating a leisure activity"
+},
+{
+"id": "caminar-presente-2979",
+"verbo": "caminar",
+"contexto": "tú, ahora mismo, muy rápido",
+"respuesta": "Ahora mismo, tú caminas muy rápido.",
+"pista": "commenting on pace"
+},
+{
+"id": "cantar-presente-2980",
+"verbo": "cantar",
+"contexto": "ella, cada semana, una canción bonita",
+"respuesta": "Cada semana, ella canta una canción bonita.",
+"pista": "describing a performance"
+},
+{
+"id": "cantar-presente-2981",
+"verbo": "cantar",
+"contexto": "yo, normalmente, en la ducha",
+"respuesta": "Yo canto en la ducha normalmente.",
+"pista": "expressing a fun habit"
+},
+{
+"id": "cantar-presente-2982",
+"verbo": "cantar",
+"contexto": "nosotros, normalmente, en el coro",
+"respuesta": "Nosotros cantamos en el coro normalmente.",
+"pista": "talking about group activity"
+},
+{
+"id": "casar-presente-2983",
+"verbo": "casar",
+"contexto": "ella, cada vez que, a las parejas en la iglesia",
+"respuesta": "Cada vez que, ella casa a las parejas en la iglesia.",
+"pista": "describing a priest's duty"
+},
+{
+"id": "casar-presente-2984",
+"verbo": "casar",
+"contexto": "yo, siempre, los colores perfectamente",
+"respuesta": "Yo caso los colores perfectamente siempre.",
+"pista": "expressing color matching"
+},
+{
+"id": "casar-presente-2985",
+"verbo": "casar",
+"contexto": "ellos, esta tarde, a su hija",
+"respuesta": "Ellos casan a su hija esta tarde.",
+"pista": "narrating a family event"
+},
+{
+"id": "cerrar-presente-2986",
+"verbo": "cerrar",
+"contexto": "yo, esta mañana, la ventana",
+"respuesta": "Yo cierro la ventana esta mañana.",
+"pista": "describing an action"
+},
+{
+"id": "cerrar-presente-2987",
+"verbo": "cerrar",
+"contexto": "tú, actualmente, la tienda",
+"respuesta": "Actualmente, tú cierras la tienda.",
+"pista": "talking about work duties"
+},
+{
+"id": "cerrar-presente-2988",
+"verbo": "cerrar",
+"contexto": "ella, ahora, los ojos",
+"respuesta": "Ahora, ella cierra los ojos.",
+"pista": "narrating a peaceful moment"
+},
+{
+"id": "coger-presente-2989",
+"verbo": "coger",
+"contexto": "yo, hoy, el autobús",
+"respuesta": "Hoy, yo cojo el autobús.",
+"pista": "describing transportation"
+},
+{
+"id": "coger-presente-2990",
+"verbo": "coger",
+"contexto": "tú, todos los días, un taxi",
+"respuesta": "Todos los días, tú coges un taxi.",
+"pista": "suggesting a mode of travel"
+},
+{
+"id": "coger-presente-2991",
+"verbo": "coger",
+"contexto": "nosotros, cada vez que, las maletas",
+"respuesta": "Cada vez que, nosotros cogemos las maletas.",
+"pista": "describing trip preparation"
+},
+{
+"id": "comenzar-presente-2992",
+"verbo": "comenzar",
+"contexto": "nosotros, cada vez que, el proyecto",
+"respuesta": "Nosotros comenzamos el proyecto cada vez que.",
+"pista": "expressing a new start"
+},
+{
+"id": "comenzar-presente-2993",
+"verbo": "comenzar",
+"contexto": "yo, en este momento, a estudiar",
+"respuesta": "Yo comienzo a estudiar en este momento.",
+"pista": "describing the start of an activity"
+},
+{
+"id": "comenzar-presente-2994",
+"verbo": "comenzar",
+"contexto": "él, por lo general, su nuevo trabajo",
+"respuesta": "Él comienza su nuevo trabajo por lo general.",
+"pista": "narrating a career change"
+},
+{
+"id": "comer-presente-2995",
+"verbo": "comer",
+"contexto": "yo, cada semana, una ensalada",
+"respuesta": "Cada semana, yo como una ensalada.",
+"pista": "describing a healthy choice"
+},
+{
+"id": "comer-presente-2996",
+"verbo": "comer",
+"contexto": "tú, normalmente, demasiado rápido",
+"respuesta": "Tú comes demasiado rápido normalmente.",
+"pista": "commenting on eating habits"
+},
+{
+"id": "comer-presente-2997",
+"verbo": "comer",
+"contexto": "nosotros, cada vez que, juntos en familia",
+"respuesta": "Cada vez que, nosotros comemos juntos en familia.",
+"pista": "expressing family tradition"
+},
+{
+"id": "cometer-presente-2998",
+"verbo": "cometer",
+"contexto": "yo, mientras, un error",
+"respuesta": "Mientras, yo cometo un error.",
+"pista": "expressing a mistake"
+},
+{
+"id": "cometer-presente-2999",
+"verbo": "cometer",
+"contexto": "tú, esta noche, errores a veces",
+"respuesta": "Esta noche, tú cometas errores a veces.",
+"pista": "talking about being human"
+},
+{
+"id": "cometer-presente-3000",
+"verbo": "cometer",
+"contexto": "ellos, siempre, faltas graves",
+"respuesta": "Siempre, ellos cometan faltas graves.",
+"pista": "describing serious issues"
+},
+{
+"id": "compartir-presente-3001",
+"verbo": "compartir",
+"contexto": "nosotros, esta noche, la comida",
+"respuesta": "Esta noche, nosotros compartimos la comida.",
+"pista": "expressing generosity"
+},
+{
+"id": "compartir-presente-3002",
+"verbo": "compartir",
+"contexto": "yo, siempre, mis ideas",
+"respuesta": "Siempre, yo comparto mis ideas.",
+"pista": "describing openness"
+},
+{
+"id": "compartir-presente-3003",
+"verbo": "compartir",
+"contexto": "ella, normalmente, su experiencia",
+"respuesta": "Ella comparte su experiencia normalmente.",
+"pista": "narrating her contribution"
+},
+{
+"id": "comprar-presente-3004",
+"verbo": "comprar",
+"contexto": "yo, actualmente, un regalo",
+"respuesta": "Yo compro un regalo actualmente.",
+"pista": "describing a purchase"
+},
+{
+"id": "comprar-presente-3005",
+"verbo": "comprar",
+"contexto": "nosotros, cada vez que, comida para la cena",
+"respuesta": "Cada vez que, nosotros compramos comida para la cena.",
+"pista": "talking about meal planning"
+},
+{
+"id": "comprar-presente-3006",
+"verbo": "comprar",
+"contexto": "tú, hoy, ropa nueva",
+"respuesta": "Tú compras ropa nueva hoy.",
+"pista": "describing shopping"
+},
+{
+"id": "comprender-presente-3007",
+"verbo": "comprender",
+"contexto": "yo, por lo general, la situación",
+"respuesta": "Por lo general, yo comprendo la situación.",
+"pista": "expressing understanding"
+},
+{
+"id": "comprender-presente-3008",
+"verbo": "comprender",
+"contexto": "tú, ahora, el problema",
+"respuesta": "Ahora, tú comprendes el problema.",
+"pista": "acknowledging awareness"
+},
+{
+"id": "comprender-presente-3009",
+"verbo": "comprender",
+"contexto": "nosotros, cada semana, la lección",
+"respuesta": "Nosotros comprendemos la lección cada semana.",
+"pista": "describing learning"
+},
+{
+"id": "conducir-presente-3010",
+"verbo": "conducir",
+"contexto": "yo, esta mañana, el coche al trabajo",
+"respuesta": "Yo conduzco el coche al trabajo esta mañana.",
+"pista": "describing a commute"
+},
+{
+"id": "conducir-presente-3011",
+"verbo": "conducir",
+"contexto": "él, todos los días, con cuidado",
+"respuesta": "Él conduce con cuidado todos los días.",
+"pista": "narrating safe driving"
+},
+{
+"id": "conducir-presente-3012",
+"verbo": "conducir",
+"contexto": "tú, todos los días, muy bien",
+"respuesta": "Todos los días, tú conduces muy bien.",
+"pista": "complimenting driving skills"
+},
+{
+"id": "confiar-presente-3013",
+"verbo": "confiar",
+"contexto": "yo, hoy, en mi equipo",
+"respuesta": "Hoy, yo confio en mi equipo.",
+"pista": "expressing trust"
+},
+{
+"id": "confiar-presente-3014",
+"verbo": "confiar",
+"contexto": "ella, todos los días, en sus amigos",
+"respuesta": "Ella confia en sus amigos todos los días.",
+"pista": "describing her relationships"
+},
+{
+"id": "confiar-presente-3015",
+"verbo": "confiar",
+"contexto": "nosotros, cada semana, en el proceso",
+"respuesta": "Cada semana, nosotros confiamos en el proceso.",
+"pista": "expressing faith in method"
+},
+{
+"id": "conocer-presente-3016",
+"verbo": "conocer",
+"contexto": "yo, ahora mismo, a mucha gente",
+"respuesta": "Ahora mismo, yo conozco a mucha gente.",
+"pista": "expressing social connections"
+},
+{
+"id": "conocer-presente-3017",
+"verbo": "conocer",
+"contexto": "tú, en este momento, la ciudad muy bien",
+"respuesta": "En este momento, tú conoces la ciudad muy bien.",
+"pista": "describing familiarity"
+},
+{
+"id": "conocer-presente-3018",
+"verbo": "conocer",
+"contexto": "ellos, cada vez que, el camino",
+"respuesta": "Cada vez que, ellos conocen el camino.",
+"pista": "narrating their knowledge"
+},
+{
+"id": "conseguir-presente-3019",
+"verbo": "conseguir",
+"contexto": "yo, siempre, buenos resultados",
+"respuesta": "Siempre, yo consigo buenos resultados.",
+"pista": "expressing achievement"
+},
+{
+"id": "conseguir-presente-3020",
+"verbo": "conseguir",
+"contexto": "nosotros, en este momento, los boletos",
+"respuesta": "Nosotros conseguimos los boletos en este momento.",
+"pista": "describing a successful purchase"
+},
+{
+"id": "conseguir-presente-3021",
+"verbo": "conseguir",
+"contexto": "tú, mientras, lo que quieres",
+"respuesta": "Mientras, tú consigues lo que quieres.",
+"pista": "talking about determination"
+},
+{
+"id": "considerar-presente-3022",
+"verbo": "considerar",
+"contexto": "yo, cada vez que, todas las opciones",
+"respuesta": "Cada vez que, yo considero todas las opciones.",
+"pista": "expressing careful thought"
+},
+{
+"id": "considerar-presente-3023",
+"verbo": "considerar",
+"contexto": "nosotros, por lo general, la propuesta",
+"respuesta": "Por lo general, nosotros consideramos la propuesta.",
+"pista": "describing evaluation"
+},
+{
+"id": "considerar-presente-3024",
+"verbo": "considerar",
+"contexto": "ella, por lo general, las consecuencias",
+"respuesta": "Por lo general, ella considera las consecuencias.",
+"pista": "narrating thoughtfulness"
+},
+{
+"id": "construir-presente-3025",
+"verbo": "construir",
+"contexto": "ellos, esta tarde, una casa nueva",
+"respuesta": "Ellos construyen una casa nueva esta tarde.",
+"pista": "describing a construction project"
+},
+{
+"id": "construir-presente-3026",
+"verbo": "construir",
+"contexto": "yo, a veces, un mueble",
+"respuesta": "Yo construyo un mueble a veces.",
+"pista": "expressing hands-on work"
+},
+{
+"id": "construir-presente-3027",
+"verbo": "construir",
+"contexto": "nosotros, a veces, un futuro mejor",
+"respuesta": "A veces, nosotros construimos un futuro mejor.",
+"pista": "expressing hope and effort"
+},
+{
+"id": "contar-presente-3028",
+"verbo": "contar",
+"contexto": "yo, esta noche, una historia",
+"respuesta": "Esta noche, yo cuento una historia.",
+"pista": "expressing storytelling"
+},
+{
+"id": "contar-presente-3029",
+"verbo": "contar",
+"contexto": "ella, en este momento, los secretos a su amiga",
+"respuesta": "En este momento, ella cuenta los secretos a su amiga.",
+"pista": "narrating a confidence"
+},
+{
+"id": "contar-presente-3030",
+"verbo": "contar",
+"contexto": "tú, por lo general, el dinero",
+"respuesta": "Por lo general, tú cuentas el dinero.",
+"pista": "describing a practical action"
+},
+{
+"id": "contestar-presente-3031",
+"verbo": "contestar",
+"contexto": "yo, esta tarde, el teléfono",
+"respuesta": "Yo contesto el teléfono esta tarde.",
+"pista": "describing a response"
+},
+{
+"id": "contestar-presente-3032",
+"verbo": "contestar",
+"contexto": "tú, en este momento, las preguntas",
+"respuesta": "En este momento, tú contestas las preguntas.",
+"pista": "talking about participation"
+},
+{
+"id": "contestar-presente-3033",
+"verbo": "contestar",
+"contexto": "él, esta tarde, los correos electrónicos",
+"respuesta": "Esta tarde, él contesta los correos electrónicos.",
+"pista": "narrating work habits"
+},
+{
+"id": "continuar-presente-3034",
+"verbo": "continuar",
+"contexto": "nosotros, ahora mismo, con el plan",
+"respuesta": "Nosotros continuamos con el plan ahora mismo.",
+"pista": "expressing persistence"
+},
+{
+"id": "continuar-presente-3035",
+"verbo": "continuar",
+"contexto": "yo, por lo general, mi camino",
+"respuesta": "Yo continuo mi camino por lo general.",
+"pista": "describing forward movement"
+},
+{
+"id": "continuar-presente-3036",
+"verbo": "continuar",
+"contexto": "ella, en este momento, sus estudios",
+"respuesta": "Ella continua sus estudios en este momento.",
+"pista": "narrating her dedication"
+},
+{
+"id": "controlar-presente-3037",
+"verbo": "controlar",
+"contexto": "yo, normalmente, mis emociones",
+"respuesta": "Yo controlo mis emociones normalmente.",
+"pista": "expressing self-discipline"
+},
+{
+"id": "controlar-presente-3038",
+"verbo": "controlar",
+"contexto": "él, mientras, la situación",
+"respuesta": "Mientras, él controla la situación.",
+"pista": "describing leadership"
+},
+{
+"id": "controlar-presente-3039",
+"verbo": "controlar",
+"contexto": "nosotros, por lo general, los gastos",
+"respuesta": "Nosotros controlamos los gastos por lo general.",
+"pista": "talking about budgeting"
+},
+{
+"id": "convertir-presente-3040",
+"verbo": "convertir",
+"contexto": "yo, esta mañana, el agua en hielo",
+"respuesta": "Yo convierto el agua en hielo esta mañana.",
+"pista": "describing a transformation"
+},
+{
+"id": "convertir-presente-3041",
+"verbo": "convertir",
+"contexto": "ella, ahora, sus sueños en realidad",
+"respuesta": "Ella convierte sus sueños en realidad ahora.",
+"pista": "expressing ambition"
+},
+{
+"id": "convertir-presente-3042",
+"verbo": "convertir",
+"contexto": "nosotros, en este momento, la idea en un proyecto",
+"respuesta": "Nosotros convertimos la idea en un proyecto en este momento.",
+"pista": "describing innovation"
+},
+{
+"id": "correr-presente-3043",
+"verbo": "correr",
+"contexto": "yo, ahora mismo, en el parque",
+"respuesta": "Ahora mismo, yo corro en el parque.",
+"pista": "describing exercise"
+},
+{
+"id": "correr-presente-3044",
+"verbo": "correr",
+"contexto": "tú, ahora mismo, muy rápido",
+"respuesta": "Ahora mismo, tú corres muy rápido.",
+"pista": "commenting on speed"
+},
+{
+"id": "correr-presente-3045",
+"verbo": "correr",
+"contexto": "ellos, esta tarde, una maratón",
+"respuesta": "Ellos corren una maratón esta tarde.",
+"pista": "narrating an athletic event"
+},
+{
+"id": "cortar-presente-3046",
+"verbo": "cortar",
+"contexto": "yo, ahora, el pan",
+"respuesta": "Ahora, yo corto el pan.",
+"pista": "describing food preparation"
+},
+{
+"id": "cortar-presente-3047",
+"verbo": "cortar",
+"contexto": "ella, en este momento, las flores",
+"respuesta": "En este momento, ella corta las flores.",
+"pista": "narrating a garden activity"
+},
+{
+"id": "cortar-presente-3048",
+"verbo": "cortar",
+"contexto": "tú, mientras, el papel",
+"respuesta": "Tú cortas el papel mientras.",
+"pista": "describing a craft"
+},
+{
+"id": "costar-presente-3049",
+"verbo": "costar",
+"contexto": "eso, cada semana, mucho dinero",
+"respuesta": "Cada semana, eso cuesta mucho dinero.",
+"pista": "expressing price"
+},
+{
+"id": "costar-presente-3050",
+"verbo": "costar",
+"contexto": "los zapatos, siempre, cien dólares",
+"respuesta": "Los zapatos cuesta cien dólares siempre.",
+"pista": "describing a cost"
+},
+{
+"id": "costar-presente-3051",
+"verbo": "costar",
+"contexto": "el viaje, actualmente, una fortuna",
+"respuesta": "El viaje cuesta una fortuna actualmente.",
+"pista": "talking about expenses"
+},
+{
+"id": "crear-presente-3052",
+"verbo": "crear",
+"contexto": "yo, en este momento, una obra de arte",
+"respuesta": "Yo creo una obra de arte en este momento.",
+"pista": "expressing creativity"
+},
+{
+"id": "crear-presente-3053",
+"verbo": "crear",
+"contexto": "nosotros, todos los días, un plan",
+"respuesta": "Todos los días, nosotros creamos un plan.",
+"pista": "describing planning"
+},
+{
+"id": "crear-presente-3054",
+"verbo": "crear",
+"contexto": "ella, ahora mismo, música hermosa",
+"respuesta": "Ella crea música hermosa ahora mismo.",
+"pista": "narrating artistic talent"
+},
+{
+"id": "crecer-presente-3055",
+"verbo": "crecer",
+"contexto": "yo, normalmente, como persona",
+"respuesta": "Normalmente, yo crezco como persona.",
+"pista": "expressing personal growth"
+},
+{
+"id": "crecer-presente-3056",
+"verbo": "crecer",
+"contexto": "los niños, cada semana, muy rápido",
+"respuesta": "Los niños crece muy rápido cada semana.",
+"pista": "describing child development"
+},
+{
+"id": "crecer-presente-3057",
+"verbo": "crecer",
+"contexto": "ella, ahora mismo, en su carrera",
+"respuesta": "Ahora mismo, ella crece en su carrera.",
+"pista": "narrating professional progress"
+},
+{
+"id": "creer-presente-3058",
+"verbo": "creer",
+"contexto": "yo, esta noche, en ti",
+"respuesta": "Esta noche, yo creo en ti.",
+"pista": "expressing faith"
+},
+{
+"id": "creer-presente-3059",
+"verbo": "creer",
+"contexto": "nosotros, ahora mismo, en la justicia",
+"respuesta": "Nosotros creemos en la justicia ahora mismo.",
+"pista": "describing shared values"
+},
+{
+"id": "creer-presente-3060",
+"verbo": "creer",
+"contexto": "tú, actualmente, en los milagros",
+"respuesta": "Tú crees en los milagros actualmente.",
+"pista": "talking about beliefs"
+},
+{
+"id": "cubrir-presente-3061",
+"verbo": "cubrir",
+"contexto": "yo, siempre, la mesa con un mantel",
+"respuesta": "Yo cubro la mesa con un mantel siempre.",
+"pista": "describing a setup"
+},
+{
+"id": "cubrir-presente-3062",
+"verbo": "cubrir",
+"contexto": "ella, a veces, al bebé con una manta",
+"respuesta": "A veces, ella cubre al bebé con una manta.",
+"pista": "narrating care"
+},
+{
+"id": "cubrir-presente-3063",
+"verbo": "cubrir",
+"contexto": "nosotros, normalmente, los gastos del viaje",
+"respuesta": "Nosotros cubrimos los gastos del viaje normalmente.",
+"pista": "talking about finances"
+},
+{
+"id": "cuidar-presente-3064",
+"verbo": "cuidar",
+"contexto": "yo, todos los días, a mi abuela",
+"respuesta": "Yo cuido a mi abuela todos los días.",
+"pista": "expressing care for family"
+},
+{
+"id": "cuidar-presente-3065",
+"verbo": "cuidar",
+"contexto": "tú, hoy, tu salud",
+"respuesta": "Hoy, tú cuidas tu salud.",
+"pista": "giving health advice"
+},
+{
+"id": "cuidar-presente-3066",
+"verbo": "cuidar",
+"contexto": "nosotros, normalmente, el medio ambiente",
+"respuesta": "Normalmente, nosotros cuidamos el medio ambiente.",
+"pista": "expressing environmental concern"
+},
+{
+"id": "cumplir-presente-3067",
+"verbo": "cumplir",
+"contexto": "yo, a veces, mis promesas",
+"respuesta": "A veces, yo cumplo mis promesas.",
+"pista": "expressing reliability"
+},
+{
+"id": "cumplir-presente-3068",
+"verbo": "cumplir",
+"contexto": "ella, ahora, con sus obligaciones",
+"respuesta": "Ahora, ella cumpla con sus obligaciones.",
+"pista": "narrating responsibility"
+},
+{
+"id": "cumplir-presente-3069",
+"verbo": "cumplir",
+"contexto": "nosotros, mientras, los requisitos",
+"respuesta": "Mientras, nosotros cumplamos los requisitos.",
+"pista": "describing compliance"
+},
+{
+"id": "dar-presente-3070",
+"verbo": "dar",
+"contexto": "yo, actualmente, un consejo",
+"respuesta": "Actualmente, yo doy un consejo.",
+"pista": "expressing advice-giving"
+},
+{
+"id": "dar-presente-3071",
+"verbo": "dar",
+"contexto": "ella, siempre, un regalo a su madre",
+"respuesta": "Ella da un regalo a su madre siempre.",
+"pista": "describing a generous act"
+},
+{
+"id": "dar-presente-3072",
+"verbo": "dar",
+"contexto": "nosotros, actualmente, las gracias",
+"respuesta": "Actualmente, nosotros damos las gracias.",
+"pista": "expressing gratitude"
+},
+{
+"id": "deber-presente-3073",
+"verbo": "deber",
+"contexto": "yo, esta mañana, dinero al banco",
+"respuesta": "Esta mañana, yo debo dinero al banco.",
+"pista": "expressing a financial obligation"
+},
+{
+"id": "deber-presente-3074",
+"verbo": "deber",
+"contexto": "tú, cada vez que, mucho a tus padres",
+"respuesta": "Cada vez que, tú debes mucho a tus padres.",
+"pista": "describing gratitude owed"
+},
+{
+"id": "deber-presente-3075",
+"verbo": "deber",
+"contexto": "nosotros, a veces, terminar el proyecto",
+"respuesta": "A veces, nosotros debemos terminar el proyecto.",
+"pista": "expressing obligation"
+},
+{
+"id": "decidir-presente-3076",
+"verbo": "decidir",
+"contexto": "yo, esta mañana, mi futuro",
+"respuesta": "Yo decido mi futuro esta mañana.",
+"pista": "expressing a life choice"
+},
+{
+"id": "decidir-presente-3077",
+"verbo": "decidir",
+"contexto": "nosotros, ahora, juntos",
+"respuesta": "Ahora, nosotros decidimos juntos.",
+"pista": "describing collective decision"
+},
+{
+"id": "decidir-presente-3078",
+"verbo": "decidir",
+"contexto": "tú, cada vez que, rápidamente",
+"respuesta": "Cada vez que, tú decides rápidamente.",
+"pista": "commenting on decision speed"
+},
+{
+"id": "decir-presente-3079",
+"verbo": "decir",
+"contexto": "yo, actualmente, la verdad",
+"respuesta": "Yo digo la verdad actualmente.",
+"pista": "expressing honesty"
+},
+{
+"id": "decir-presente-3080",
+"verbo": "decir",
+"contexto": "tú, normalmente, cosas interesantes",
+"respuesta": "Tú dices cosas interesantes normalmente.",
+"pista": "describing someone's speech"
+},
+{
+"id": "decir-presente-3081",
+"verbo": "decir",
+"contexto": "ellos, mientras, muchas mentiras",
+"respuesta": "Ellos dicen muchas mentiras mientras.",
+"pista": "narrating dishonesty"
+},
+{
+"id": "defender-presente-3082",
+"verbo": "defender",
+"contexto": "yo, cada semana, mis derechos",
+"respuesta": "Yo defiendo mis derechos cada semana.",
+"pista": "expressing self-advocacy"
+},
+{
+"id": "defender-presente-3083",
+"verbo": "defender",
+"contexto": "ella, por lo general, a su familia",
+"respuesta": "Ella defiende a su familia por lo general.",
+"pista": "narrating protection"
+},
+{
+"id": "defender-presente-3084",
+"verbo": "defender",
+"contexto": "nosotros, cada vez que, nuestra posición",
+"respuesta": "Nosotros defendemos nuestra posición cada vez que.",
+"pista": "expressing team stance"
+},
+{
+"id": "dejar-presente-3085",
+"verbo": "dejar",
+"contexto": "yo, ahora mismo, el café sobre la mesa",
+"respuesta": "Ahora mismo, yo dejó el café sobre la mesa.",
+"pista": "describing a simple action"
+},
+{
+"id": "dejar-presente-3086",
+"verbo": "dejar",
+"contexto": "tú, por lo general, todo en orden",
+"respuesta": "Tú dejas todo en orden por lo general.",
+"pista": "talking about tidiness"
+},
+{
+"id": "dejar-presente-3087",
+"verbo": "dejar",
+"contexto": "ella, a veces, de fumar",
+"respuesta": "Ella deja de fumar a veces.",
+"pista": "narrating quitting a habit"
+},
+{
+"id": "demostrar-presente-3088",
+"verbo": "demostrar",
+"contexto": "yo, cada semana, mi capacidad",
+"respuesta": "Yo demuestro mi capacidad cada semana.",
+"pista": "expressing proof of ability"
+},
+{
+"id": "demostrar-presente-3089",
+"verbo": "demostrar",
+"contexto": "él, ahora mismo, su talento",
+"respuesta": "Él demuestra su talento ahora mismo.",
+"pista": "narrating talent display"
+},
+{
+"id": "demostrar-presente-3090",
+"verbo": "demostrar",
+"contexto": "nosotros, esta tarde, los resultados",
+"respuesta": "Nosotros demostramos los resultados esta tarde.",
+"pista": "presenting findings"
+},
+{
+"id": "depender-presente-3091",
+"verbo": "depender",
+"contexto": "eso, esta noche, de ti",
+"respuesta": "Esta noche, eso depende de ti.",
+"pista": "expressing reliance"
+},
+{
+"id": "depender-presente-3092",
+"verbo": "depender",
+"contexto": "yo, esta mañana, de mi trabajo",
+"respuesta": "Esta mañana, yo dependo de mi trabajo.",
+"pista": "describing financial dependence"
+},
+{
+"id": "depender-presente-3093",
+"verbo": "depender",
+"contexto": "nosotros, en este momento, del clima",
+"respuesta": "En este momento, nosotros dependemos del clima.",
+"pista": "expressing conditional planning"
+},
+{
+"id": "desaparecer-presente-3094",
+"verbo": "desaparecer",
+"contexto": "él, siempre, sin dejar rastro",
+"respuesta": "Siempre, él desaparece sin dejar rastro.",
+"pista": "narrating a mystery"
+},
+{
+"id": "desaparecer-presente-3095",
+"verbo": "desaparecer",
+"contexto": "yo, ahora mismo, de las redes sociales",
+"respuesta": "Yo desaparezco de las redes sociales ahora mismo.",
+"pista": "describing digital absence"
+},
+{
+"id": "desaparecer-presente-3096",
+"verbo": "desaparecer",
+"contexto": "ellos, todos los días, entre la multitud",
+"respuesta": "Ellos desaparecen entre la multitud todos los días.",
+"pista": "narrating a crowded scene"
+},
+{
+"id": "desarrollar-presente-3097",
+"verbo": "desarrollar",
+"contexto": "nosotros, ahora, una aplicación nueva",
+"respuesta": "Nosotros desarrollamos una aplicación nueva ahora.",
+"pista": "describing tech work"
+},
+{
+"id": "desarrollar-presente-3098",
+"verbo": "desarrollar",
+"contexto": "yo, en este momento, mis habilidades",
+"respuesta": "En este momento, yo desarrollo mis habilidades.",
+"pista": "expressing self-improvement"
+},
+{
+"id": "desarrollar-presente-3099",
+"verbo": "desarrollar",
+"contexto": "ella, por lo general, un plan estratégico",
+"respuesta": "Ella desarrolla un plan estratégico por lo general.",
+"pista": "narrating professional work"
+},
+{
+"id": "descubrir-presente-3100",
+"verbo": "descubrir",
+"contexto": "yo, actualmente, algo nuevo",
+"respuesta": "Yo descubro algo nuevo actualmente.",
+"pista": "expressing discovery"
+},
+{
+"id": "descubrir-presente-3101",
+"verbo": "descubrir",
+"contexto": "tú, esta noche, la verdad",
+"respuesta": "Tú descubres la verdad esta noche.",
+"pista": "describing revelation"
+},
+{
+"id": "descubrir-presente-3102",
+"verbo": "descubrir",
+"contexto": "ellos, por lo general, un tesoro escondido",
+"respuesta": "Ellos descubren un tesoro escondido por lo general.",
+"pista": "narrating an adventure"
+},
+{
+"id": "desear-presente-3103",
+"verbo": "desear",
+"contexto": "yo, todos los días, paz en el mundo",
+"respuesta": "Todos los días, yo deseo paz en el mundo.",
+"pista": "expressing a wish"
+},
+{
+"id": "desear-presente-3104",
+"verbo": "desear",
+"contexto": "ella, actualmente, viajar por Europa",
+"respuesta": "Ella desea viajar por Europa actualmente.",
+"pista": "describing her dreams"
+},
+{
+"id": "desear-presente-3105",
+"verbo": "desear",
+"contexto": "nosotros, ahora mismo, un buen resultado",
+"respuesta": "Ahora mismo, nosotros deseamos un buen resultado.",
+"pista": "expressing hope"
+},
+{
+"id": "despedir-presente-3106",
+"verbo": "despedir",
+"contexto": "yo, en este momento, a mi amigo en el aeropuerto",
+"respuesta": "Yo despido a mi amigo en el aeropuerto en este momento.",
+"pista": "describing a farewell"
+},
+{
+"id": "despedir-presente-3107",
+"verbo": "despedir",
+"contexto": "ella, siempre, a los invitados",
+"respuesta": "Ella despide a los invitados siempre.",
+"pista": "narrating a goodbye"
+},
+{
+"id": "despedir-presente-3108",
+"verbo": "despedir",
+"contexto": "nosotros, cada vez que, el año viejo",
+"respuesta": "Cada vez que, nosotros despedimos el año viejo.",
+"pista": "talking about New Year traditions"
+},
+{
+"id": "despertar-presente-3109",
+"verbo": "despertar",
+"contexto": "yo, cada vez que, a las seis de la mañana",
+"respuesta": "Cada vez que, yo despierto a las seis de la mañana.",
+"pista": "describing a morning routine"
+},
+{
+"id": "despertar-presente-3110",
+"verbo": "despertar",
+"contexto": "tú, hoy, muy temprano",
+"respuesta": "Tú despiertas muy temprano hoy.",
+"pista": "commenting on wake-up time"
+},
+{
+"id": "despertar-presente-3111",
+"verbo": "despertar",
+"contexto": "ella, esta mañana, al bebé sin querer",
+"respuesta": "Ella despierta al bebé sin querer esta mañana.",
+"pista": "narrating an accident"
+},
+{
+"id": "destruir-presente-3112",
+"verbo": "destruir",
+"contexto": "ellos, esta mañana, el edificio viejo",
+"respuesta": "Ellos destruyen el edificio viejo esta mañana.",
+"pista": "describing demolition"
+},
+{
+"id": "destruir-presente-3113",
+"verbo": "destruir",
+"contexto": "yo, en este momento, las pruebas",
+"respuesta": "En este momento, yo destruyo las pruebas.",
+"pista": "narrating evidence destruction"
+},
+{
+"id": "destruir-presente-3114",
+"verbo": "destruir",
+"contexto": "ella, actualmente, todo a su paso",
+"respuesta": "Ella destruye todo a su paso actualmente.",
+"pista": "expressing figurative damage"
+},
+{
+"id": "detener-presente-3115",
+"verbo": "detener",
+"contexto": "yo, a veces, el coche en el semáforo",
+"respuesta": "Yo detengo el coche en el semáforo a veces.",
+"pista": "describing driving"
+},
+{
+"id": "detener-presente-3116",
+"verbo": "detener",
+"contexto": "ella, esta noche, la pelea",
+"respuesta": "Ella detiene la pelea esta noche.",
+"pista": "narrating intervention"
+},
+{
+"id": "detener-presente-3117",
+"verbo": "detener",
+"contexto": "ellos, esta tarde, al sospechoso",
+"respuesta": "Esta tarde, ellos detienen al sospechoso.",
+"pista": "describing law enforcement"
+},
+{
+"id": "devolver-presente-3118",
+"verbo": "devolver",
+"contexto": "yo, actualmente, el libro a la biblioteca",
+"respuesta": "Actualmente, yo devuelvo el libro a la biblioteca.",
+"pista": "describing a return"
+},
+{
+"id": "devolver-presente-3119",
+"verbo": "devolver",
+"contexto": "tú, mientras, el dinero",
+"respuesta": "Tú devuelves el dinero mientras.",
+"pista": "talking about repayment"
+},
+{
+"id": "devolver-presente-3120",
+"verbo": "devolver",
+"contexto": "nosotros, esta tarde, los productos defectuosos",
+"respuesta": "Esta tarde, nosotros devolvemos los productos defectuosos.",
+"pista": "describing consumer rights"
+},
+{
+"id": "dirigir-presente-3121",
+"verbo": "dirigir",
+"contexto": "yo, a veces, la empresa",
+"respuesta": "A veces, yo dirijo la empresa.",
+"pista": "expressing leadership"
+},
+{
+"id": "dirigir-presente-3122",
+"verbo": "dirigir",
+"contexto": "ella, siempre, el equipo de ventas",
+"respuesta": "Siempre, ella dirige el equipo de ventas.",
+"pista": "narrating management"
+},
+{
+"id": "dirigir-presente-3123",
+"verbo": "dirigir",
+"contexto": "él, esta mañana, la orquesta",
+"respuesta": "Esta mañana, él dirige la orquesta.",
+"pista": "describing a conductor's role"
+},
+{
+"id": "disculpar-presente-3124",
+"verbo": "disculpar",
+"contexto": "yo, cada semana, a mi amigo",
+"respuesta": "Cada semana, yo disculpo a mi amigo.",
+"pista": "expressing forgiveness"
+},
+{
+"id": "disculpar-presente-3125",
+"verbo": "disculpar",
+"contexto": "ella, hoy, el retraso",
+"respuesta": "Hoy, ella disculpa el retraso.",
+"pista": "apologizing for lateness"
+},
+{
+"id": "disculpar-presente-3126",
+"verbo": "disculpar",
+"contexto": "nosotros, cada semana, los errores del pasado",
+"respuesta": "Cada semana, nosotros disculpamos los errores del pasado.",
+"pista": "expressing understanding"
+},
+{
+"id": "discutir-presente-3127",
+"verbo": "discutir",
+"contexto": "nosotros, actualmente, el tema en la reunión",
+"respuesta": "Nosotros discutamos el tema en la reunión actualmente.",
+"pista": "describing a meeting"
+},
+{
+"id": "discutir-presente-3128",
+"verbo": "discutir",
+"contexto": "yo, a veces, con mi hermano",
+"respuesta": "A veces, yo discuto con mi hermano.",
+"pista": "expressing family dynamics"
+},
+{
+"id": "discutir-presente-3129",
+"verbo": "discutir",
+"contexto": "ellos, cada semana, sobre política",
+"respuesta": "Cada semana, ellos discutan sobre política.",
+"pista": "narrating a debate"
+},
+{
+"id": "disfrutar-presente-3130",
+"verbo": "disfrutar",
+"contexto": "yo, a veces, la música",
+"respuesta": "A veces, yo disfruto la música.",
+"pista": "expressing enjoyment"
+},
+{
+"id": "disfrutar-presente-3131",
+"verbo": "disfrutar",
+"contexto": "tú, mientras, cada momento",
+"respuesta": "Mientras, tú disfrutas cada momento.",
+"pista": "giving advice about life"
+},
+{
+"id": "disfrutar-presente-3132",
+"verbo": "disfrutar",
+"contexto": "nosotros, cada semana, las vacaciones",
+"respuesta": "Nosotros disfrutamos las vacaciones cada semana.",
+"pista": "describing a holiday"
+},
+{
+"id": "disparar-presente-3133",
+"verbo": "disparar",
+"contexto": "él, cada semana, al blanco",
+"respuesta": "Él dispara al blanco cada semana.",
+"pista": "describing target practice"
+},
+{
+"id": "disparar-presente-3134",
+"verbo": "disparar",
+"contexto": "yo, en este momento, la cámara fotográfica",
+"respuesta": "En este momento, yo disparo la cámara fotográfica.",
+"pista": "expressing photography"
+},
+{
+"id": "disparar-presente-3135",
+"verbo": "disparar",
+"contexto": "ellos, hoy, los fuegos artificiales",
+"respuesta": "Hoy, ellos disparan los fuegos artificiales.",
+"pista": "narrating a celebration"
+},
+{
+"id": "dormir-presente-3136",
+"verbo": "dormir",
+"contexto": "yo, hoy, ocho horas",
+"respuesta": "Yo duermo ocho horas hoy.",
+"pista": "describing a sleep schedule"
+},
+{
+"id": "dormir-presente-3137",
+"verbo": "dormir",
+"contexto": "tú, por lo general, muy poco",
+"respuesta": "Por lo general, tú duermes muy poco.",
+"pista": "commenting on sleep habits"
+},
+{
+"id": "dormir-presente-3138",
+"verbo": "dormir",
+"contexto": "ella, a veces, profundamente",
+"respuesta": "A veces, ella duerme profundamente.",
+"pista": "narrating peaceful sleep"
+},
+{
+"id": "echar-presente-3139",
+"verbo": "echar",
+"contexto": "yo, en este momento, agua en el vaso",
+"respuesta": "Yo echo agua en el vaso en este momento.",
+"pista": "describing pouring"
+},
+{
+"id": "echar-presente-3140",
+"verbo": "echar",
+"contexto": "tú, normalmente, sal en la comida",
+"respuesta": "Normalmente, tú echas sal en la comida.",
+"pista": "talking about cooking"
+},
+{
+"id": "echar-presente-3141",
+"verbo": "echar",
+"contexto": "ella, actualmente, de menos a su familia",
+"respuesta": "Ella echa de menos a su familia actualmente.",
+"pista": "expressing homesickness"
+},
+{
+"id": "elegir-presente-3142",
+"verbo": "elegir",
+"contexto": "yo, ahora, la mejor opción",
+"respuesta": "Yo elijo la mejor opción ahora.",
+"pista": "expressing decision-making"
+},
+{
+"id": "elegir-presente-3143",
+"verbo": "elegir",
+"contexto": "nosotros, por lo general, un restaurante",
+"respuesta": "Por lo general, nosotros elegimos un restaurante.",
+"pista": "describing group choice"
+},
+{
+"id": "elegir-presente-3144",
+"verbo": "elegir",
+"contexto": "tú, ahora mismo, tu camino",
+"respuesta": "Tú eliges tu camino ahora mismo.",
+"pista": "talking about life choices"
+},
+{
+"id": "empezar-presente-3145",
+"verbo": "empezar",
+"contexto": "yo, normalmente, a trabajar",
+"respuesta": "Yo empiezo a trabajar normalmente.",
+"pista": "describing start of workday"
+},
+{
+"id": "empezar-presente-3146",
+"verbo": "empezar",
+"contexto": "nosotros, siempre, el proyecto",
+"respuesta": "Nosotros empezamos el proyecto siempre.",
+"pista": "expressing team initiative"
+},
+{
+"id": "empezar-presente-3147",
+"verbo": "empezar",
+"contexto": "tú, esta mañana, a entender",
+"respuesta": "Tú empiezas a entender esta mañana.",
+"pista": "describing growing comprehension"
+},
+{
+"id": "encantar-presente-3148",
+"verbo": "encantar",
+"contexto": "yo, cada semana, a los niños con mis historias",
+"respuesta": "Yo encanto a los niños con mis historias cada semana.",
+"pista": "describing charm"
+},
+{
+"id": "encantar-presente-3149",
+"verbo": "encantar",
+"contexto": "ella, actualmente, a todos con su talento",
+"respuesta": "Ella encanta a todos con su talento actualmente.",
+"pista": "narrating someone's appeal"
+},
+{
+"id": "encantar-presente-3150",
+"verbo": "encantar",
+"contexto": "nosotros, esta noche, al público con el show",
+"respuesta": "Esta noche, nosotros encantamos al público con el show.",
+"pista": "describing audience reaction"
+},
+{
+"id": "encontrar-presente-3151",
+"verbo": "encontrar",
+"contexto": "yo, por lo general, mis llaves perdidas",
+"respuesta": "Por lo general, yo encuentro mis llaves perdidas.",
+"pista": "describing a discovery"
+},
+{
+"id": "encontrar-presente-3152",
+"verbo": "encontrar",
+"contexto": "ella, esta noche, trabajo nuevo",
+"respuesta": "Ella encuentra trabajo nuevo esta noche.",
+"pista": "narrating job search success"
+},
+{
+"id": "encontrar-presente-3153",
+"verbo": "encontrar",
+"contexto": "nosotros, esta tarde, la solución al problema",
+"respuesta": "Nosotros encontramos la solución al problema esta tarde.",
+"pista": "expressing problem-solving"
+},
+{
+"id": "enfrentar-presente-3154",
+"verbo": "enfrentar",
+"contexto": "yo, cada semana, mis miedos",
+"respuesta": "Yo enfrento mis miedos cada semana.",
+"pista": "expressing courage"
+},
+{
+"id": "enfrentar-presente-3155",
+"verbo": "enfrentar",
+"contexto": "nosotros, en este momento, los desafíos",
+"respuesta": "Nosotros enfrentamos los desafíos en este momento.",
+"pista": "describing team resilience"
+},
+{
+"id": "enfrentar-presente-3156",
+"verbo": "enfrentar",
+"contexto": "tú, por lo general, la situación con calma",
+"respuesta": "Por lo general, tú enfrentas la situación con calma.",
+"pista": "giving advice about challenges"
+},
+{
+"id": "engañar-presente-3157",
+"verbo": "engañar",
+"contexto": "él, actualmente, a sus clientes",
+"respuesta": "Él engaña a sus clientes actualmente.",
+"pista": "describing deception"
+},
+{
+"id": "engañar-presente-3158",
+"verbo": "engañar",
+"contexto": "yo, a veces, a nadie",
+"respuesta": "Yo engaño a nadie a veces.",
+"pista": "expressing honesty"
+},
+{
+"id": "engañar-presente-3159",
+"verbo": "engañar",
+"contexto": "ellos, esta noche, al público",
+"respuesta": "Ellos engañan al público esta noche.",
+"pista": "narrating fraud"
+},
+{
+"id": "enseñar-presente-3160",
+"verbo": "enseñar",
+"contexto": "yo, todos los días, matemáticas",
+"respuesta": "Todos los días, yo enseño matemáticas.",
+"pista": "describing a teaching role"
+},
+{
+"id": "enseñar-presente-3161",
+"verbo": "enseñar",
+"contexto": "ella, hoy, a sus hijos a leer",
+"respuesta": "Ella enseña a sus hijos a leer hoy.",
+"pista": "narrating parental guidance"
+},
+{
+"id": "enseñar-presente-3162",
+"verbo": "enseñar",
+"contexto": "nosotros, actualmente, con el ejemplo",
+"respuesta": "Actualmente, nosotros enseñamos con el ejemplo.",
+"pista": "expressing leadership style"
+},
+{
+"id": "entender-presente-3163",
+"verbo": "entender",
+"contexto": "yo, siempre, el problema",
+"respuesta": "Yo entiendo el problema siempre.",
+"pista": "expressing comprehension"
+},
+{
+"id": "entender-presente-3164",
+"verbo": "entender",
+"contexto": "tú, ahora mismo, la lección",
+"respuesta": "Ahora mismo, tú entiendes la lección.",
+"pista": "describing learning progress"
+},
+{
+"id": "entender-presente-3165",
+"verbo": "entender",
+"contexto": "nosotros, hoy, la situación",
+"respuesta": "Hoy, nosotros entendemos la situación.",
+"pista": "expressing shared understanding"
+},
+{
+"id": "enterar-presente-3166",
+"verbo": "enterar",
+"contexto": "yo, ahora mismo, a todos de las noticias",
+"respuesta": "Ahora mismo, yo entero a todos de las noticias.",
+"pista": "spreading news"
+},
+{
+"id": "enterar-presente-3167",
+"verbo": "enterar",
+"contexto": "ella, esta noche, a su jefe de los cambios",
+"respuesta": "Ella entera a su jefe de los cambios esta noche.",
+"pista": "reporting updates"
+},
+{
+"id": "enterar-presente-3168",
+"verbo": "enterar",
+"contexto": "nosotros, actualmente, a los vecinos del evento",
+"respuesta": "Nosotros enteramos a los vecinos del evento actualmente.",
+"pista": "informing the community"
+},
+{
+"id": "entrar-presente-3169",
+"verbo": "entrar",
+"contexto": "yo, ahora mismo, en la oficina",
+"respuesta": "Yo entro en la oficina ahora mismo.",
+"pista": "describing arrival"
+},
+{
+"id": "entrar-presente-3170",
+"verbo": "entrar",
+"contexto": "tú, en este momento, por la puerta principal",
+"respuesta": "Tú entras por la puerta principal en este momento.",
+"pista": "giving directions"
+},
+{
+"id": "entrar-presente-3171",
+"verbo": "entrar",
+"contexto": "ellos, esta tarde, al edificio",
+"respuesta": "Ellos entran al edificio esta tarde.",
+"pista": "narrating entry"
+},
+{
+"id": "entregar-presente-3172",
+"verbo": "entregar",
+"contexto": "yo, esta tarde, el informe",
+"respuesta": "Esta tarde, yo entrego el informe.",
+"pista": "describing a delivery"
+},
+{
+"id": "entregar-presente-3173",
+"verbo": "entregar",
+"contexto": "nosotros, esta noche, los paquetes",
+"respuesta": "Esta noche, nosotros entregamos los paquetes.",
+"pista": "expressing distribution"
+},
+{
+"id": "entregar-presente-3174",
+"verbo": "entregar",
+"contexto": "ella, esta mañana, las notas a los estudiantes",
+"respuesta": "Ella entrega las notas a los estudiantes esta mañana.",
+"pista": "narrating academic duties"
+},
+{
+"id": "enviar-presente-3175",
+"verbo": "enviar",
+"contexto": "yo, esta noche, un mensaje",
+"respuesta": "Yo envio un mensaje esta noche.",
+"pista": "describing communication"
+},
+{
+"id": "enviar-presente-3176",
+"verbo": "enviar",
+"contexto": "tú, mientras, un correo electrónico",
+"respuesta": "Mientras, tú envias un correo electrónico.",
+"pista": "talking about email"
+},
+{
+"id": "enviar-presente-3177",
+"verbo": "enviar",
+"contexto": "ella, esta noche, flores a su madre",
+"respuesta": "Ella envia flores a su madre esta noche.",
+"pista": "narrating a thoughtful gesture"
+},
+{
+"id": "escapar-presente-3178",
+"verbo": "escapar",
+"contexto": "yo, esta mañana, de la rutina",
+"respuesta": "Esta mañana, yo escapo de la rutina.",
+"pista": "expressing freedom"
+},
+{
+"id": "escapar-presente-3179",
+"verbo": "escapar",
+"contexto": "ellos, siempre, de la prisión",
+"respuesta": "Siempre, ellos escapan de la prisión.",
+"pista": "narrating an escape"
+},
+{
+"id": "escapar-presente-3180",
+"verbo": "escapar",
+"contexto": "él, esta tarde, del peligro",
+"respuesta": "Esta tarde, él escapa del peligro.",
+"pista": "describing a narrow escape"
+},
+{
+"id": "esconder-presente-3181",
+"verbo": "esconder",
+"contexto": "yo, cada semana, el regalo",
+"respuesta": "Cada semana, yo escondo el regalo.",
+"pista": "describing a surprise preparation"
+},
+{
+"id": "esconder-presente-3182",
+"verbo": "esconder",
+"contexto": "tú, normalmente, tus emociones",
+"respuesta": "Tú escondas tus emociones normalmente.",
+"pista": "talking about emotional control"
+},
+{
+"id": "esconder-presente-3183",
+"verbo": "esconder",
+"contexto": "ella, hoy, las galletas de los niños",
+"respuesta": "Hoy, ella esconda las galletas de los niños.",
+"pista": "narrating a playful act"
+},
+{
+"id": "escribir-presente-3184",
+"verbo": "escribir",
+"contexto": "yo, cada semana, una carta",
+"respuesta": "Yo escribo una carta cada semana.",
+"pista": "describing a writing activity"
+},
+{
+"id": "escribir-presente-3185",
+"verbo": "escribir",
+"contexto": "tú, actualmente, un libro",
+"respuesta": "Tú escribes un libro actualmente.",
+"pista": "talking about authorship"
+},
+{
+"id": "escribir-presente-3186",
+"verbo": "escribir",
+"contexto": "nosotros, esta mañana, un informe",
+"respuesta": "Esta mañana, nosotros escribimos un informe.",
+"pista": "describing teamwork"
+},
+{
+"id": "escuchar-presente-3187",
+"verbo": "escuchar",
+"contexto": "yo, esta tarde, música clásica",
+"respuesta": "Yo escucho música clásica esta tarde.",
+"pista": "describing a leisure activity"
+},
+{
+"id": "escuchar-presente-3188",
+"verbo": "escuchar",
+"contexto": "tú, hoy, con atención",
+"respuesta": "Hoy, tú escuchas con atención.",
+"pista": "giving advice about listening"
+},
+{
+"id": "escuchar-presente-3189",
+"verbo": "escuchar",
+"contexto": "nosotros, ahora mismo, las noticias",
+"respuesta": "Ahora mismo, nosotros escuchamos las noticias.",
+"pista": "describing a daily habit"
+},
+{
+"id": "esperar-presente-3190",
+"verbo": "esperar",
+"contexto": "yo, cada semana, el autobús",
+"respuesta": "Cada semana, yo espero el autobús.",
+"pista": "describing waiting"
+},
+{
+"id": "esperar-presente-3191",
+"verbo": "esperar",
+"contexto": "nosotros, esta mañana, buenas noticias",
+"respuesta": "Nosotros esperamos buenas noticias esta mañana.",
+"pista": "expressing hope"
+},
+{
+"id": "esperar-presente-3192",
+"verbo": "esperar",
+"contexto": "tú, hoy, con paciencia",
+"respuesta": "Hoy, tú esperas con paciencia.",
+"pista": "giving advice about patience"
+},
+{
+"id": "estar-presente-3193",
+"verbo": "estar",
+"contexto": "yo, hoy, en casa",
+"respuesta": "Yo estoy en casa hoy.",
+"pista": "expressing location"
+},
+{
+"id": "estar-presente-3194",
+"verbo": "estar",
+"contexto": "tú, normalmente, muy contento",
+"respuesta": "Normalmente, tú estás muy contento.",
+"pista": "describing emotions"
+},
+{
+"id": "estar-presente-3195",
+"verbo": "estar",
+"contexto": "nosotros, a veces, listos para salir",
+"respuesta": "Nosotros estamos listos para salir a veces.",
+"pista": "expressing readiness"
+},
+{
+"id": "estudiar-presente-3196",
+"verbo": "estudiar",
+"contexto": "yo, actualmente, para el examen",
+"respuesta": "Yo estudio para el examen actualmente.",
+"pista": "describing preparation"
+},
+{
+"id": "estudiar-presente-3197",
+"verbo": "estudiar",
+"contexto": "ella, esta noche, medicina",
+"respuesta": "Ella estudia medicina esta noche.",
+"pista": "narrating career path"
+},
+{
+"id": "estudiar-presente-3198",
+"verbo": "estudiar",
+"contexto": "nosotros, esta noche, juntos en la biblioteca",
+"respuesta": "Esta noche, nosotros estudiamos juntos en la biblioteca.",
+"pista": "describing study habits"
+},
+{
+"id": "evitar-presente-3199",
+"verbo": "evitar",
+"contexto": "yo, normalmente, los problemas",
+"respuesta": "Normalmente, yo evito los problemas.",
+"pista": "expressing caution"
+},
+{
+"id": "evitar-presente-3200",
+"verbo": "evitar",
+"contexto": "tú, mientras, la comida chatarra",
+"respuesta": "Mientras, tú evitas la comida chatarra.",
+"pista": "giving health advice"
+},
+{
+"id": "evitar-presente-3201",
+"verbo": "evitar",
+"contexto": "nosotros, normalmente, los conflictos",
+"respuesta": "Nosotros evitamos los conflictos normalmente.",
+"pista": "describing team harmony"
+},
+{
+"id": "existir-presente-3202",
+"verbo": "existir",
+"contexto": "eso, normalmente, en la realidad",
+"respuesta": "Normalmente, eso existe en la realidad.",
+"pista": "expressing existence"
+},
+{
+"id": "existir-presente-3203",
+"verbo": "existir",
+"contexto": "ellos, esta tarde, en otro continente",
+"respuesta": "Esta tarde, ellos existen en otro continente.",
+"pista": "describing location of beings"
+},
+{
+"id": "existir-presente-3204",
+"verbo": "existir",
+"contexto": "yo, esta mañana, para ayudar",
+"respuesta": "Yo existo para ayudar esta mañana.",
+"pista": "expressing purpose"
+},
+{
+"id": "explicar-presente-3205",
+"verbo": "explicar",
+"contexto": "yo, actualmente, la lección",
+"respuesta": "Yo explico la lección actualmente.",
+"pista": "describing a teaching moment"
+},
+{
+"id": "explicar-presente-3206",
+"verbo": "explicar",
+"contexto": "ella, esta noche, el proceso",
+"respuesta": "Esta noche, ella explica el proceso.",
+"pista": "narrating instruction"
+},
+{
+"id": "explicar-presente-3207",
+"verbo": "explicar",
+"contexto": "tú, esta noche, las reglas del juego",
+"respuesta": "Tú explicas las reglas del juego esta noche.",
+"pista": "describing game rules"
+},
+{
+"id": "formar-presente-3208",
+"verbo": "formar",
+"contexto": "nosotros, siempre, un equipo nuevo",
+"respuesta": "Nosotros formamos un equipo nuevo siempre.",
+"pista": "describing team building"
+},
+{
+"id": "formar-presente-3209",
+"verbo": "formar",
+"contexto": "yo, ahora, parte del grupo",
+"respuesta": "Ahora, yo formo parte del grupo.",
+"pista": "expressing belonging"
+},
+{
+"id": "formar-presente-3210",
+"verbo": "formar",
+"contexto": "ella, cada vez que, a los nuevos empleados",
+"respuesta": "Cada vez que, ella forma a los nuevos empleados.",
+"pista": "narrating training"
+},
+{
+"id": "funcionar-presente-3211",
+"verbo": "funcionar",
+"contexto": "el coche, ahora mismo, perfectamente",
+"respuesta": "Ahora mismo, el coche funciona perfectamente.",
+"pista": "describing machine status"
+},
+{
+"id": "funcionar-presente-3212",
+"verbo": "funcionar",
+"contexto": "yo, normalmente, bien bajo presión",
+"respuesta": "Yo funciono bien bajo presión normalmente.",
+"pista": "expressing work style"
+},
+{
+"id": "funcionar-presente-3213",
+"verbo": "funcionar",
+"contexto": "ellos, por lo general, como equipo",
+"respuesta": "Por lo general, ellos funcionan como equipo.",
+"pista": "describing teamwork"
+},
+{
+"id": "ganar-presente-3214",
+"verbo": "ganar",
+"contexto": "yo, ahora, el partido",
+"respuesta": "Yo gano el partido ahora.",
+"pista": "expressing victory"
+},
+{
+"id": "ganar-presente-3215",
+"verbo": "ganar",
+"contexto": "nosotros, cada semana, experiencia",
+"respuesta": "Nosotros ganamos experiencia cada semana.",
+"pista": "describing learning"
+},
+{
+"id": "ganar-presente-3216",
+"verbo": "ganar",
+"contexto": "tú, actualmente, un buen salario",
+"respuesta": "Tú ganas un buen salario actualmente.",
+"pista": "talking about compensation"
+},
+{
+"id": "golpear-presente-3217",
+"verbo": "golpear",
+"contexto": "yo, siempre, la mesa con frustración",
+"respuesta": "Yo golpeo la mesa con frustración siempre.",
+"pista": "expressing frustration"
+},
+{
+"id": "golpear-presente-3218",
+"verbo": "golpear",
+"contexto": "él, mientras, la pelota con fuerza",
+"respuesta": "Él golpea la pelota con fuerza mientras.",
+"pista": "describing sports"
+},
+{
+"id": "golpear-presente-3219",
+"verbo": "golpear",
+"contexto": "tú, actualmente, la puerta para entrar",
+"respuesta": "Actualmente, tú golpeas la puerta para entrar.",
+"pista": "describing knocking"
+},
+{
+"id": "gritar-presente-3220",
+"verbo": "gritar",
+"contexto": "yo, cada vez que, de alegría",
+"respuesta": "Yo grito de alegría cada vez que.",
+"pista": "expressing joy"
+},
+{
+"id": "gritar-presente-3221",
+"verbo": "gritar",
+"contexto": "ellos, cada semana, en el estadio",
+"respuesta": "Cada semana, ellos gritan en el estadio.",
+"pista": "narrating a sports event"
+},
+{
+"id": "gritar-presente-3222",
+"verbo": "gritar",
+"contexto": "tú, hoy, demasiado fuerte",
+"respuesta": "Hoy, tú gritas demasiado fuerte.",
+"pista": "commenting on volume"
+},
+{
+"id": "guardar-presente-3223",
+"verbo": "guardar",
+"contexto": "yo, mientras, los documentos importantes",
+"respuesta": "Yo guardo los documentos importantes mientras.",
+"pista": "describing organization"
+},
+{
+"id": "guardar-presente-3224",
+"verbo": "guardar",
+"contexto": "tú, cada semana, el secreto",
+"respuesta": "Cada semana, tú guardas el secreto.",
+"pista": "talking about trust"
+},
+{
+"id": "guardar-presente-3225",
+"verbo": "guardar",
+"contexto": "nosotros, actualmente, comida para mañana",
+"respuesta": "Nosotros guardamos comida para mañana actualmente.",
+"pista": "describing meal planning"
+},
+{
+"id": "gustar-presente-3226",
+"verbo": "gustar",
+"contexto": "yo, cada vez que, a mis vecinos",
+"respuesta": "Cada vez que, yo gusto a mis vecinos.",
+"pista": "expressing being liked"
+},
+{
+"id": "gustar-presente-3227",
+"verbo": "gustar",
+"contexto": "ella, mientras, a todo el mundo",
+"respuesta": "Ella gusta a todo el mundo mientras.",
+"pista": "describing someone's popularity"
+},
+{
+"id": "gustar-presente-3228",
+"verbo": "gustar",
+"contexto": "nosotros, normalmente, a nuestros profesores",
+"respuesta": "Nosotros gustamos a nuestros profesores normalmente.",
+"pista": "expressing teacher approval"
+},
+{
+"id": "haber-presente-3229",
+"verbo": "haber",
+"contexto": "yo, mientras, terminado el trabajo",
+"respuesta": "Yo he terminado el trabajo mientras.",
+"pista": "expressing completed actions"
+},
+{
+"id": "haber-presente-3230",
+"verbo": "haber",
+"contexto": "tú, en este momento, estudiado mucho",
+"respuesta": "Tú has estudiado mucho en este momento.",
+"pista": "describing effort"
+},
+{
+"id": "haber-presente-3231",
+"verbo": "haber",
+"contexto": "nosotros, esta noche, llegado temprano",
+"respuesta": "Esta noche, nosotros hemos llegado temprano.",
+"pista": "narrating timely arrival"
+},
+{
+"id": "hablar-presente-3232",
+"verbo": "hablar",
+"contexto": "yo, por lo general, con mi amigo",
+"respuesta": "Yo habló con mi amigo por lo general.",
+"pista": "describing conversation"
+},
+{
+"id": "hablar-presente-3233",
+"verbo": "hablar",
+"contexto": "ella, ahora mismo, tres idiomas",
+"respuesta": "Ella habla tres idiomas ahora mismo.",
+"pista": "narrating language skills"
+},
+{
+"id": "hablar-presente-3234",
+"verbo": "hablar",
+"contexto": "nosotros, esta noche, sobre el futuro",
+"respuesta": "Nosotros hablamos sobre el futuro esta noche.",
+"pista": "discussing plans"
+},
+{
+"id": "hacer-presente-3235",
+"verbo": "hacer",
+"contexto": "yo, por lo general, la cena",
+"respuesta": "Por lo general, yo hago la cena.",
+"pista": "describing cooking"
+},
+{
+"id": "hacer-presente-3236",
+"verbo": "hacer",
+"contexto": "tú, actualmente, ejercicio",
+"respuesta": "Tú haces ejercicio actualmente.",
+"pista": "talking about fitness"
+},
+{
+"id": "hacer-presente-3237",
+"verbo": "hacer",
+"contexto": "nosotros, esta tarde, planes para el fin de semana",
+"respuesta": "Esta tarde, nosotros hacemos planes para el fin de semana.",
+"pista": "planning activities"
+},
+{
+"id": "hallar-presente-3238",
+"verbo": "hallar",
+"contexto": "yo, mientras, la respuesta",
+"respuesta": "Yo hallo la respuesta mientras.",
+"pista": "expressing discovery"
+},
+{
+"id": "hallar-presente-3239",
+"verbo": "hallar",
+"contexto": "ella, por lo general, una solución creativa",
+"respuesta": "Por lo general, ella halla una solución creativa.",
+"pista": "narrating problem-solving"
+},
+{
+"id": "hallar-presente-3240",
+"verbo": "hallar",
+"contexto": "nosotros, normalmente, el camino correcto",
+"respuesta": "Nosotros hallamos el camino correcto normalmente.",
+"pista": "describing navigation"
+},
+{
+"id": "huir-presente-3241",
+"verbo": "huir",
+"contexto": "yo, ahora mismo, del peligro",
+"respuesta": "Ahora mismo, yo huyo del peligro.",
+"pista": "expressing escape"
+},
+{
+"id": "huir-presente-3242",
+"verbo": "huir",
+"contexto": "ellos, todos los días, de la tormenta",
+"respuesta": "Ellos huyen de la tormenta todos los días.",
+"pista": "narrating weather escape"
+},
+{
+"id": "huir-presente-3243",
+"verbo": "huir",
+"contexto": "él, normalmente, de la realidad",
+"respuesta": "Normalmente, él huye de la realidad.",
+"pista": "describing avoidance"
+},
+{
+"id": "imaginar-presente-3244",
+"verbo": "imaginar",
+"contexto": "yo, esta mañana, un mundo mejor",
+"respuesta": "Esta mañana, yo imagino un mundo mejor.",
+"pista": "expressing idealism"
+},
+{
+"id": "imaginar-presente-3245",
+"verbo": "imaginar",
+"contexto": "tú, cada vez que, las posibilidades",
+"respuesta": "Tú imaginas las posibilidades cada vez que.",
+"pista": "encouraging creativity"
+},
+{
+"id": "imaginar-presente-3246",
+"verbo": "imaginar",
+"contexto": "nosotros, cada vez que, el futuro",
+"respuesta": "Nosotros imaginamos el futuro cada vez que.",
+"pista": "describing vision"
+},
+{
+"id": "importar-presente-3247",
+"verbo": "importar",
+"contexto": "yo, hoy, productos del extranjero",
+"respuesta": "Hoy, yo importo productos del extranjero.",
+"pista": "describing imports"
+},
+{
+"id": "importar-presente-3248",
+"verbo": "importar",
+"contexto": "ella, siempre, materiales de China",
+"respuesta": "Ella importa materiales de China siempre.",
+"pista": "narrating business"
+},
+{
+"id": "importar-presente-3249",
+"verbo": "importar",
+"contexto": "nosotros, todos los días, tecnología nueva",
+"respuesta": "Nosotros importamos tecnología nueva todos los días.",
+"pista": "describing acquisition"
+},
+{
+"id": "incluir-presente-3250",
+"verbo": "incluir",
+"contexto": "yo, hoy, a todos en el plan",
+"respuesta": "Hoy, yo incluyo a todos en el plan.",
+"pista": "expressing inclusiveness"
+},
+{
+"id": "incluir-presente-3251",
+"verbo": "incluir",
+"contexto": "nosotros, actualmente, los detalles en el informe",
+"respuesta": "Actualmente, nosotros incluimos los detalles en el informe.",
+"pista": "describing thoroughness"
+},
+{
+"id": "incluir-presente-3252",
+"verbo": "incluir",
+"contexto": "ella, normalmente, una nota personal",
+"respuesta": "Normalmente, ella incluye una nota personal.",
+"pista": "narrating a thoughtful addition"
+},
+{
+"id": "informar-presente-3253",
+"verbo": "informar",
+"contexto": "yo, todos los días, a mi jefe",
+"respuesta": "Yo informo a mi jefe todos los días.",
+"pista": "describing reporting"
+},
+{
+"id": "informar-presente-3254",
+"verbo": "informar",
+"contexto": "ella, todos los días, a los medios",
+"respuesta": "Ella informa a los medios todos los días.",
+"pista": "narrating a press release"
+},
+{
+"id": "informar-presente-3255",
+"verbo": "informar",
+"contexto": "nosotros, ahora mismo, al público",
+"respuesta": "Nosotros informamos al público ahora mismo.",
+"pista": "expressing transparency"
+},
+{
+"id": "intentar-presente-3256",
+"verbo": "intentar",
+"contexto": "yo, mientras, algo nuevo",
+"respuesta": "Mientras, yo intento algo nuevo.",
+"pista": "expressing willingness to try"
+},
+{
+"id": "intentar-presente-3257",
+"verbo": "intentar",
+"contexto": "tú, actualmente, resolver el problema",
+"respuesta": "Actualmente, tú intentas resolver el problema.",
+"pista": "describing effort"
+},
+{
+"id": "intentar-presente-3258",
+"verbo": "intentar",
+"contexto": "nosotros, en este momento, mejorar cada día",
+"respuesta": "En este momento, nosotros intentamos mejorar cada día.",
+"pista": "expressing aspiration"
+},
+{
+"id": "interesar-presente-3259",
+"verbo": "interesar",
+"contexto": "yo, por lo general, a los estudiantes con mi clase",
+"respuesta": "Yo intereso a los estudiantes con mi clase por lo general.",
+"pista": "expressing engagement"
+},
+{
+"id": "interesar-presente-3260",
+"verbo": "interesar",
+"contexto": "ella, a veces, a los inversores",
+"respuesta": "Ella interesa a los inversores a veces.",
+"pista": "narrating a pitch"
+},
+{
+"id": "interesar-presente-3261",
+"verbo": "interesar",
+"contexto": "nosotros, en este momento, a la audiencia",
+"respuesta": "Nosotros interesamos a la audiencia en este momento.",
+"pista": "describing audience capture"
+},
+{
+"id": "invitar-presente-3262",
+"verbo": "invitar",
+"contexto": "yo, por lo general, a mis amigos a cenar",
+"respuesta": "Yo invito a mis amigos a cenar por lo general.",
+"pista": "describing hospitality"
+},
+{
+"id": "invitar-presente-3263",
+"verbo": "invitar",
+"contexto": "tú, siempre, a tu familia a la fiesta",
+"respuesta": "Tú invitas a tu familia a la fiesta siempre.",
+"pista": "talking about social planning"
+},
+{
+"id": "invitar-presente-3264",
+"verbo": "invitar",
+"contexto": "ella, por lo general, a sus colegas al evento",
+"respuesta": "Ella invita a sus colegas al evento por lo general.",
+"pista": "narrating professional socializing"
+},
+{
+"id": "ir-presente-3265",
+"verbo": "ir",
+"contexto": "yo, todos los días, al supermercado",
+"respuesta": "Yo voy al supermercado todos los días.",
+"pista": "describing an errand"
+},
+{
+"id": "ir-presente-3266",
+"verbo": "ir",
+"contexto": "nosotros, esta noche, de vacaciones",
+"respuesta": "Nosotros vamos de vacaciones esta noche.",
+"pista": "talking about travel"
+},
+{
+"id": "ir-presente-3267",
+"verbo": "ir",
+"contexto": "tú, actualmente, a la escuela",
+"respuesta": "Tú vas a la escuela actualmente.",
+"pista": "describing a daily routine"
+},
+{
+"id": "joder-presente-3268",
+"verbo": "joder",
+"contexto": "eso, cada vez que, todo el plan",
+"respuesta": "Cada vez que, eso jode todo el plan.",
+"pista": "expressing frustration about ruined plans"
+},
+{
+"id": "joder-presente-3269",
+"verbo": "joder",
+"contexto": "yo, cada semana, la situación sin querer",
+"respuesta": "Cada semana, yo jodo la situación sin querer.",
+"pista": "describing accidental mess-up"
+},
+{
+"id": "joder-presente-3270",
+"verbo": "joder",
+"contexto": "ellos, por lo general, el proyecto",
+"respuesta": "Ellos joden el proyecto por lo general.",
+"pista": "narrating project disruption"
+},
+{
+"id": "jugar-presente-3271",
+"verbo": "jugar",
+"contexto": "yo, ahora, al fútbol",
+"respuesta": "Yo juego al fútbol ahora.",
+"pista": "describing a sport"
+},
+{
+"id": "jugar-presente-3272",
+"verbo": "jugar",
+"contexto": "ellos, siempre, en el parque",
+"respuesta": "Ellos juegan en el parque siempre.",
+"pista": "narrating children playing"
+},
+{
+"id": "jugar-presente-3273",
+"verbo": "jugar",
+"contexto": "tú, en este momento, videojuegos",
+"respuesta": "En este momento, tú juegas videojuegos.",
+"pista": "talking about gaming"
+},
+{
+"id": "jurar-presente-3274",
+"verbo": "jurar",
+"contexto": "yo, actualmente, decir la verdad",
+"respuesta": "Actualmente, yo juro decir la verdad.",
+"pista": "expressing a solemn promise"
+},
+{
+"id": "jurar-presente-3275",
+"verbo": "jurar",
+"contexto": "él, hoy, lealtad a su país",
+"respuesta": "Él jura lealtad a su país hoy.",
+"pista": "describing patriotism"
+},
+{
+"id": "jurar-presente-3276",
+"verbo": "jurar",
+"contexto": "nosotros, cada vez que, proteger a nuestra familia",
+"respuesta": "Nosotros juramos proteger a nuestra familia cada vez que.",
+"pista": "expressing dedication"
+},
+{
+"id": "leer-presente-3277",
+"verbo": "leer",
+"contexto": "yo, hoy, un libro interesante",
+"respuesta": "Yo leo un libro interesante hoy.",
+"pista": "describing a reading habit"
+},
+{
+"id": "leer-presente-3278",
+"verbo": "leer",
+"contexto": "tú, ahora, el periódico",
+"respuesta": "Ahora, tú lees el periódico.",
+"pista": "talking about staying informed"
+},
+{
+"id": "leer-presente-3279",
+"verbo": "leer",
+"contexto": "ella, ahora mismo, cuentos a los niños",
+"respuesta": "Ahora mismo, ella lee cuentos a los niños.",
+"pista": "narrating bedtime stories"
+},
+{
+"id": "levantar-presente-3280",
+"verbo": "levantar",
+"contexto": "yo, ahora, la mano en clase",
+"respuesta": "Yo levanto la mano en clase ahora.",
+"pista": "describing classroom behavior"
+},
+{
+"id": "levantar-presente-3281",
+"verbo": "levantar",
+"contexto": "tú, en este momento, pesas en el gimnasio",
+"respuesta": "Tú levantas pesas en el gimnasio en este momento.",
+"pista": "talking about exercise"
+},
+{
+"id": "levantar-presente-3282",
+"verbo": "levantar",
+"contexto": "nosotros, normalmente, la mesa después de comer",
+"respuesta": "Nosotros levantamos la mesa después de comer normalmente.",
+"pista": "describing cleanup"
+},
+{
+"id": "llamar-presente-3283",
+"verbo": "llamar",
+"contexto": "yo, por lo general, a mi madre",
+"respuesta": "Yo llamo a mi madre por lo general.",
+"pista": "describing a phone call"
+},
+{
+"id": "llamar-presente-3284",
+"verbo": "llamar",
+"contexto": "tú, mientras, al doctor",
+"respuesta": "Tú llamas al doctor mientras.",
+"pista": "suggesting making an appointment"
+},
+{
+"id": "llamar-presente-3285",
+"verbo": "llamar",
+"contexto": "ella, cada vez que, a sus amigos",
+"respuesta": "Cada vez que, ella llama a sus amigos.",
+"pista": "narrating social contact"
+},
+{
+"id": "llegar-presente-3286",
+"verbo": "llegar",
+"contexto": "yo, cada semana, a la oficina temprano",
+"respuesta": "Cada semana, yo llego a la oficina temprano.",
+"pista": "describing punctuality"
+},
+{
+"id": "llegar-presente-3287",
+"verbo": "llegar",
+"contexto": "nosotros, normalmente, al acuerdo",
+"respuesta": "Nosotros llegamos al acuerdo normalmente.",
+"pista": "expressing negotiation success"
+},
+{
+"id": "llegar-presente-3288",
+"verbo": "llegar",
+"contexto": "tú, mientras, tarde a clase",
+"respuesta": "Mientras, tú llegas tarde a clase.",
+"pista": "commenting on tardiness"
+},
+{
+"id": "llevar-presente-3289",
+"verbo": "llevar",
+"contexto": "yo, ahora mismo, una chaqueta",
+"respuesta": "Ahora mismo, yo llevo una chaqueta.",
+"pista": "describing clothing choice"
+},
+{
+"id": "llevar-presente-3290",
+"verbo": "llevar",
+"contexto": "ella, a veces, a los niños al colegio",
+"respuesta": "A veces, ella lleva a los niños al colegio.",
+"pista": "narrating parental duty"
+},
+{
+"id": "llevar-presente-3291",
+"verbo": "llevar",
+"contexto": "tú, ahora mismo, el equipaje",
+"respuesta": "Tú llevas el equipaje ahora mismo.",
+"pista": "describing travel tasks"
+},
+{
+"id": "llorar-presente-3292",
+"verbo": "llorar",
+"contexto": "ella, cada vez que, de felicidad",
+"respuesta": "Cada vez que, ella llora de felicidad.",
+"pista": "expressing happy tears"
+},
+{
+"id": "llorar-presente-3293",
+"verbo": "llorar",
+"contexto": "yo, esta noche, cuando veo películas tristes",
+"respuesta": "Esta noche, yo lloro cuando veo películas tristes.",
+"pista": "describing emotional sensitivity"
+},
+{
+"id": "llorar-presente-3294",
+"verbo": "llorar",
+"contexto": "ellos, esta noche, por la pérdida",
+"respuesta": "Ellos lloran por la pérdida esta noche.",
+"pista": "narrating grief"
+},
+{
+"id": "lograr-presente-3295",
+"verbo": "lograr",
+"contexto": "yo, ahora mismo, mis objetivos",
+"respuesta": "Ahora mismo, yo logro mis objetivos.",
+"pista": "expressing achievement"
+},
+{
+"id": "lograr-presente-3296",
+"verbo": "lograr",
+"contexto": "nosotros, todos los días, un gran éxito",
+"respuesta": "Todos los días, nosotros logramos un gran éxito.",
+"pista": "describing team success"
+},
+{
+"id": "lograr-presente-3297",
+"verbo": "lograr",
+"contexto": "tú, esta mañana, todo lo que deseas",
+"respuesta": "Esta mañana, tú logras todo lo que deseas.",
+"pista": "encouraging someone"
+},
+{
+"id": "luchar-presente-3298",
+"verbo": "luchar",
+"contexto": "yo, cada semana, por mis derechos",
+"respuesta": "Yo lucho por mis derechos cada semana.",
+"pista": "expressing advocacy"
+},
+{
+"id": "luchar-presente-3299",
+"verbo": "luchar",
+"contexto": "ella, cada semana, contra la injusticia",
+"respuesta": "Cada semana, ella lucha contra la injusticia.",
+"pista": "narrating activism"
+},
+{
+"id": "luchar-presente-3300",
+"verbo": "luchar",
+"contexto": "nosotros, actualmente, por un mundo mejor",
+"respuesta": "Actualmente, nosotros luchamos por un mundo mejor.",
+"pista": "expressing shared ideals"
+},
+{
+"id": "mandar-presente-3301",
+"verbo": "mandar",
+"contexto": "yo, esta tarde, un paquete",
+"respuesta": "Yo mando un paquete esta tarde.",
+"pista": "describing sending"
+},
+{
+"id": "mandar-presente-3302",
+"verbo": "mandar",
+"contexto": "tú, actualmente, un mensaje de texto",
+"respuesta": "Actualmente, tú mandas un mensaje de texto.",
+"pista": "talking about texting"
+},
+{
+"id": "mandar-presente-3303",
+"verbo": "mandar",
+"contexto": "ella, cada vez que, flores a su amiga",
+"respuesta": "Ella manda flores a su amiga cada vez que.",
+"pista": "narrating a kind gesture"
+},
+{
+"id": "manejar-presente-3304",
+"verbo": "manejar",
+"contexto": "yo, cada vez que, la situación con calma",
+"respuesta": "Cada vez que, yo manejo la situación con calma.",
+"pista": "expressing composure"
+},
+{
+"id": "manejar-presente-3305",
+"verbo": "manejar",
+"contexto": "él, ahora, el coche nuevo",
+"respuesta": "Él maneja el coche nuevo ahora.",
+"pista": "describing driving"
+},
+{
+"id": "manejar-presente-3306",
+"verbo": "manejar",
+"contexto": "nosotros, mientras, el presupuesto",
+"respuesta": "Nosotros manejamos el presupuesto mientras.",
+"pista": "talking about management"
+},
+{
+"id": "mantener-presente-3307",
+"verbo": "mantener",
+"contexto": "yo, normalmente, la calma",
+"respuesta": "Yo mantengo la calma normalmente.",
+"pista": "expressing composure"
+},
+{
+"id": "mantener-presente-3308",
+"verbo": "mantener",
+"contexto": "nosotros, siempre, el orden",
+"respuesta": "Nosotros mantenemos el orden siempre.",
+"pista": "describing organization"
+},
+{
+"id": "mantener-presente-3309",
+"verbo": "mantener",
+"contexto": "tú, por lo general, tu promesa",
+"respuesta": "Por lo general, tú mantienes tu promesa.",
+"pista": "talking about reliability"
+},
+{
+"id": "marchar-presente-3310",
+"verbo": "marchar",
+"contexto": "ellos, mientras, por la calle principal",
+"respuesta": "Ellos marchan por la calle principal mientras.",
+"pista": "describing a march"
+},
+{
+"id": "marchar-presente-3311",
+"verbo": "marchar",
+"contexto": "yo, hoy, hacia mi destino",
+"respuesta": "Yo marcho hacia mi destino hoy.",
+"pista": "expressing determination"
+},
+{
+"id": "marchar-presente-3312",
+"verbo": "marchar",
+"contexto": "nosotros, cada semana, juntos en la protesta",
+"respuesta": "Nosotros marchamos juntos en la protesta cada semana.",
+"pista": "narrating activism"
+},
+{
+"id": "matar-presente-3313",
+"verbo": "matar",
+"contexto": "él, mientras, el tiempo leyendo",
+"respuesta": "Él mata el tiempo leyendo mientras.",
+"pista": "describing leisure"
+},
+{
+"id": "matar-presente-3314",
+"verbo": "matar",
+"contexto": "yo, ahora, las horas en el trabajo",
+"respuesta": "Yo mato las horas en el trabajo ahora.",
+"pista": "expressing boredom"
+},
+{
+"id": "matar-presente-3315",
+"verbo": "matar",
+"contexto": "ella, esta tarde, mosquitos en verano",
+"respuesta": "Esta tarde, ella mata mosquitos en verano.",
+"pista": "describing a common annoyance"
+},
+{
+"id": "mencionar-presente-3316",
+"verbo": "mencionar",
+"contexto": "yo, cada vez que, el tema en la reunión",
+"respuesta": "Yo menciono el tema en la reunión cada vez que.",
+"pista": "describing communication"
+},
+{
+"id": "mencionar-presente-3317",
+"verbo": "mencionar",
+"contexto": "tú, por lo general, un dato importante",
+"respuesta": "Tú mencionas un dato importante por lo general.",
+"pista": "talking about sharing info"
+},
+{
+"id": "mencionar-presente-3318",
+"verbo": "mencionar",
+"contexto": "ella, a veces, a su amigo en la conversación",
+"respuesta": "A veces, ella menciona a su amigo en la conversación.",
+"pista": "narrating a discussion"
+},
+{
+"id": "mentir-presente-3319",
+"verbo": "mentir",
+"contexto": "él, cada semana, a sus padres",
+"respuesta": "Él miente a sus padres cada semana.",
+"pista": "describing dishonesty"
+},
+{
+"id": "mentir-presente-3320",
+"verbo": "mentir",
+"contexto": "yo, esta tarde, nunca a mis amigos",
+"respuesta": "Esta tarde, yo miento nunca a mis amigos.",
+"pista": "expressing honesty"
+},
+{
+"id": "mentir-presente-3321",
+"verbo": "mentir",
+"contexto": "ellos, cada semana, sobre su edad",
+"respuesta": "Cada semana, ellos mienten sobre su edad.",
+"pista": "narrating a common deception"
+},
+{
+"id": "merecer-presente-3322",
+"verbo": "merecer",
+"contexto": "tú, normalmente, un descanso",
+"respuesta": "Normalmente, tú mereces un descanso.",
+"pista": "expressing deserving rest"
+},
+{
+"id": "merecer-presente-3323",
+"verbo": "merecer",
+"contexto": "ella, esta noche, el premio",
+"respuesta": "Ella merece el premio esta noche.",
+"pista": "narrating recognition"
+},
+{
+"id": "merecer-presente-3324",
+"verbo": "merecer",
+"contexto": "nosotros, ahora, una oportunidad",
+"respuesta": "Nosotros merecemos una oportunidad ahora.",
+"pista": "expressing worthiness"
+},
+{
+"id": "meter-presente-3325",
+"verbo": "meter",
+"contexto": "yo, siempre, la ropa en la maleta",
+"respuesta": "Siempre, yo meto la ropa en la maleta.",
+"pista": "describing packing"
+},
+{
+"id": "meter-presente-3326",
+"verbo": "meter",
+"contexto": "tú, cada vez que, las manos en los bolsillos",
+"respuesta": "Tú metes las manos en los bolsillos cada vez que.",
+"pista": "narrating a gesture"
+},
+{
+"id": "meter-presente-3327",
+"verbo": "meter",
+"contexto": "ella, siempre, los libros en la mochila",
+"respuesta": "Siempre, ella mete los libros en la mochila.",
+"pista": "describing preparation"
+},
+{
+"id": "mirar-presente-3328",
+"verbo": "mirar",
+"contexto": "yo, esta mañana, por la ventana",
+"respuesta": "Yo miro por la ventana esta mañana.",
+"pista": "describing observation"
+},
+{
+"id": "mirar-presente-3329",
+"verbo": "mirar",
+"contexto": "tú, todos los días, las estrellas",
+"respuesta": "Tú miras las estrellas todos los días.",
+"pista": "talking about stargazing"
+},
+{
+"id": "mirar-presente-3330",
+"verbo": "mirar",
+"contexto": "nosotros, por lo general, la televisión",
+"respuesta": "Nosotros miramos la televisión por lo general.",
+"pista": "describing a leisure activity"
+},
+{
+"id": "molestar-presente-3331",
+"verbo": "molestar",
+"contexto": "yo, cada vez que, a mi hermano",
+"respuesta": "Yo molesto a mi hermano cada vez que.",
+"pista": "describing sibling dynamics"
+},
+{
+"id": "molestar-presente-3332",
+"verbo": "molestar",
+"contexto": "tú, mientras, a los vecinos con la música",
+"respuesta": "Tú molestas a los vecinos con la música mientras.",
+"pista": "talking about noise"
+},
+{
+"id": "molestar-presente-3333",
+"verbo": "molestar",
+"contexto": "ellos, siempre, a los demás pasajeros",
+"respuesta": "Ellos molestan a los demás pasajeros siempre.",
+"pista": "narrating public annoyance"
+},
+{
+"id": "morir-presente-3334",
+"verbo": "morir",
+"contexto": "las plantas, a veces, sin agua",
+"respuesta": "Las plantas muere sin agua a veces.",
+"pista": "describing neglect consequences"
+},
+{
+"id": "morir-presente-3335",
+"verbo": "morir",
+"contexto": "yo, mientras, de hambre",
+"respuesta": "Mientras, yo muero de hambre.",
+"pista": "expressing extreme hunger figuratively"
+},
+{
+"id": "morir-presente-3336",
+"verbo": "morir",
+"contexto": "él, siempre, de risa con esa broma",
+"respuesta": "Siempre, él muere de risa con esa broma.",
+"pista": "describing laughter"
+},
+{
+"id": "mostrar-presente-3337",
+"verbo": "mostrar",
+"contexto": "yo, por lo general, mis fotos del viaje",
+"respuesta": "Yo muestro mis fotos del viaje por lo general.",
+"pista": "describing sharing memories"
+},
+{
+"id": "mostrar-presente-3338",
+"verbo": "mostrar",
+"contexto": "ella, mientras, su nuevo diseño",
+"respuesta": "Ella muestra su nuevo diseño mientras.",
+"pista": "narrating a presentation"
+},
+{
+"id": "mostrar-presente-3339",
+"verbo": "mostrar",
+"contexto": "nosotros, hoy, los resultados del estudio",
+"respuesta": "Nosotros mostramos los resultados del estudio hoy.",
+"pista": "presenting findings"
+},
+{
+"id": "mover-presente-3340",
+"verbo": "mover",
+"contexto": "yo, ahora, los muebles",
+"respuesta": "Ahora, yo muevo los muebles.",
+"pista": "describing rearrangement"
+},
+{
+"id": "mover-presente-3341",
+"verbo": "mover",
+"contexto": "nosotros, ahora mismo, el coche del estacionamiento",
+"respuesta": "Nosotros movemos el coche del estacionamiento ahora mismo.",
+"pista": "describing parking"
+},
+{
+"id": "mover-presente-3342",
+"verbo": "mover",
+"contexto": "tú, cada semana, las piezas del ajedrez",
+"respuesta": "Tú mueves las piezas del ajedrez cada semana.",
+"pista": "describing a game"
+},
+{
+"id": "nacer-presente-3343",
+"verbo": "nacer",
+"contexto": "yo, hoy, en una ciudad pequeña",
+"respuesta": "Hoy, yo naco en una ciudad pequeña.",
+"pista": "expressing origin"
+},
+{
+"id": "nacer-presente-3344",
+"verbo": "nacer",
+"contexto": "los bebés, actualmente, en el hospital",
+"respuesta": "Los bebés nace en el hospital actualmente.",
+"pista": "describing childbirth"
+},
+{
+"id": "nacer-presente-3345",
+"verbo": "nacer",
+"contexto": "ella, cada vez que, en primavera",
+"respuesta": "Cada vez que, ella nace en primavera.",
+"pista": "narrating a birth season"
+},
+{
+"id": "necesitar-presente-3346",
+"verbo": "necesitar",
+"contexto": "yo, normalmente, más tiempo",
+"respuesta": "Yo necesito más tiempo normalmente.",
+"pista": "expressing a need"
+},
+{
+"id": "necesitar-presente-3347",
+"verbo": "necesitar",
+"contexto": "nosotros, cada vez que, ayuda",
+"respuesta": "Nosotros necesitamos ayuda cada vez que.",
+"pista": "requesting assistance"
+},
+{
+"id": "necesitar-presente-3348",
+"verbo": "necesitar",
+"contexto": "tú, normalmente, descansar",
+"respuesta": "Normalmente, tú necesitas descansar.",
+"pista": "giving advice"
+},
+{
+"id": "negar-presente-3349",
+"verbo": "negar",
+"contexto": "él, esta mañana, las acusaciones",
+"respuesta": "Esta mañana, él niega las acusaciones.",
+"pista": "describing denial"
+},
+{
+"id": "negar-presente-3350",
+"verbo": "negar",
+"contexto": "yo, esta noche, la entrada a los menores",
+"respuesta": "Yo niego la entrada a los menores esta noche.",
+"pista": "expressing a rule"
+},
+{
+"id": "negar-presente-3351",
+"verbo": "negar",
+"contexto": "ellos, hoy, su participación",
+"respuesta": "Hoy, ellos niegan su participación.",
+"pista": "narrating evasion"
+},
+{
+"id": "observar-presente-3352",
+"verbo": "observar",
+"contexto": "yo, cada vez que, las aves en el parque",
+"respuesta": "Cada vez que, yo observo las aves en el parque.",
+"pista": "describing birdwatching"
+},
+{
+"id": "observar-presente-3353",
+"verbo": "observar",
+"contexto": "ella, en este momento, los detalles del cuadro",
+"respuesta": "Ella observa los detalles del cuadro en este momento.",
+"pista": "narrating art appreciation"
+},
+{
+"id": "observar-presente-3354",
+"verbo": "observar",
+"contexto": "nosotros, normalmente, el comportamiento de los animales",
+"respuesta": "Nosotros observamos el comportamiento de los animales normalmente.",
+"pista": "describing study"
+},
+{
+"id": "obtener-presente-3355",
+"verbo": "obtener",
+"contexto": "yo, cada semana, buenas calificaciones",
+"respuesta": "Cada semana, yo obtengo buenas calificaciones.",
+"pista": "expressing academic success"
+},
+{
+"id": "obtener-presente-3356",
+"verbo": "obtener",
+"contexto": "nosotros, por lo general, los permisos necesarios",
+"respuesta": "Por lo general, nosotros obtenemos los permisos necesarios.",
+"pista": "describing bureaucracy"
+},
+{
+"id": "obtener-presente-3357",
+"verbo": "obtener",
+"contexto": "tú, por lo general, información valiosa",
+"respuesta": "Tú obtienes información valiosa por lo general.",
+"pista": "talking about research"
+},
+{
+"id": "ocupar-presente-3358",
+"verbo": "ocupar",
+"contexto": "yo, cada vez que, el primer lugar",
+"respuesta": "Yo ocupo el primer lugar cada vez que.",
+"pista": "expressing ranking"
+},
+{
+"id": "ocupar-presente-3359",
+"verbo": "ocupar",
+"contexto": "nosotros, ahora, toda la oficina",
+"respuesta": "Nosotros ocupamos toda la oficina ahora.",
+"pista": "describing space usage"
+},
+{
+"id": "ocupar-presente-3360",
+"verbo": "ocupar",
+"contexto": "ella, esta tarde, un puesto importante",
+"respuesta": "Ella ocupa un puesto importante esta tarde.",
+"pista": "narrating career position"
+},
+{
+"id": "ocurrir-presente-3361",
+"verbo": "ocurrir",
+"contexto": "eso, mientras, con frecuencia",
+"respuesta": "Eso ocurre con frecuencia mientras.",
+"pista": "expressing frequency"
+},
+{
+"id": "ocurrir-presente-3362",
+"verbo": "ocurrir",
+"contexto": "los accidentes, hoy, en esa esquina",
+"respuesta": "Los accidentes ocurre en esa esquina hoy.",
+"pista": "describing a danger zone"
+},
+{
+"id": "ocurrir-presente-3363",
+"verbo": "ocurrir",
+"contexto": "algo extraño, todos los días, en esta casa",
+"respuesta": "Algo extraño ocurre en esta casa todos los días.",
+"pista": "narrating a mystery"
+},
+{
+"id": "odiar-presente-3364",
+"verbo": "odiar",
+"contexto": "yo, ahora, la injusticia",
+"respuesta": "Yo odio la injusticia ahora.",
+"pista": "expressing strong dislike"
+},
+{
+"id": "odiar-presente-3365",
+"verbo": "odiar",
+"contexto": "ella, esta mañana, las mentiras",
+"respuesta": "Esta mañana, ella odia las mentiras.",
+"pista": "describing her values"
+},
+{
+"id": "odiar-presente-3366",
+"verbo": "odiar",
+"contexto": "nosotros, mientras, la violencia",
+"respuesta": "Nosotros odiamos la violencia mientras.",
+"pista": "expressing shared values"
+},
+{
+"id": "ofrecer-presente-3367",
+"verbo": "ofrecer",
+"contexto": "yo, hoy, mi ayuda",
+"respuesta": "Hoy, yo ofrezco mi ayuda.",
+"pista": "expressing willingness"
+},
+{
+"id": "ofrecer-presente-3368",
+"verbo": "ofrecer",
+"contexto": "ella, normalmente, una disculpa",
+"respuesta": "Normalmente, ella ofrece una disculpa.",
+"pista": "narrating an apology"
+},
+{
+"id": "ofrecer-presente-3369",
+"verbo": "ofrecer",
+"contexto": "nosotros, ahora, nuestros servicios",
+"respuesta": "Nosotros ofrecemos nuestros servicios ahora.",
+"pista": "describing business"
+},
+{
+"id": "oír-presente-3370",
+"verbo": "oír",
+"contexto": "yo, esta tarde, un ruido extraño",
+"respuesta": "Esta tarde, yo oigo un ruido extraño.",
+"pista": "describing perception"
+},
+{
+"id": "oír-presente-3371",
+"verbo": "oír",
+"contexto": "tú, a veces, la música desde aquí",
+"respuesta": "A veces, tú oyes la música desde aquí.",
+"pista": "expressing auditory experience"
+},
+{
+"id": "oír-presente-3372",
+"verbo": "oír",
+"contexto": "nosotros, ahora, las campanas de la iglesia",
+"respuesta": "Ahora, nosotros oímos las campanas de la iglesia.",
+"pista": "narrating a sound"
+},
+{
+"id": "olvidar-presente-3373",
+"verbo": "olvidar",
+"contexto": "yo, cada semana, las llaves en casa",
+"respuesta": "Cada semana, yo olvido las llaves en casa.",
+"pista": "describing forgetfulness"
+},
+{
+"id": "olvidar-presente-3374",
+"verbo": "olvidar",
+"contexto": "tú, en este momento, la cita con el dentista",
+"respuesta": "En este momento, tú olvidas la cita con el dentista.",
+"pista": "talking about missed appointments"
+},
+{
+"id": "olvidar-presente-3375",
+"verbo": "olvidar",
+"contexto": "ella, a veces, su contraseña",
+"respuesta": "A veces, ella olvida su contraseña.",
+"pista": "narrating a common problem"
+},
+{
+"id": "pagar-presente-3376",
+"verbo": "pagar",
+"contexto": "yo, esta noche, la cuenta",
+"respuesta": "Esta noche, yo pago la cuenta.",
+"pista": "describing a payment"
+},
+{
+"id": "pagar-presente-3377",
+"verbo": "pagar",
+"contexto": "nosotros, mientras, el alquiler",
+"respuesta": "Nosotros pagamos el alquiler mientras.",
+"pista": "talking about housing costs"
+},
+{
+"id": "pagar-presente-3378",
+"verbo": "pagar",
+"contexto": "tú, a veces, con tarjeta de crédito",
+"respuesta": "A veces, tú pagas con tarjeta de crédito.",
+"pista": "describing payment method"
+},
+{
+"id": "parar-presente-3379",
+"verbo": "parar",
+"contexto": "yo, normalmente, el coche en la esquina",
+"respuesta": "Normalmente, yo paro el coche en la esquina.",
+"pista": "describing stopping"
+},
+{
+"id": "parar-presente-3380",
+"verbo": "parar",
+"contexto": "él, esta mañana, de hablar un momento",
+"respuesta": "Él para de hablar un momento esta mañana.",
+"pista": "expressing a pause"
+},
+{
+"id": "parar-presente-3381",
+"verbo": "parar",
+"contexto": "nosotros, a veces, el trabajo a las cinco",
+"respuesta": "A veces, nosotros paramos el trabajo a las cinco.",
+"pista": "describing work schedule"
+},
+{
+"id": "parecer-presente-3382",
+"verbo": "parecer",
+"contexto": "eso, cada semana, una buena idea",
+"respuesta": "Cada semana, eso parece una buena idea.",
+"pista": "expressing opinion"
+},
+{
+"id": "parecer-presente-3383",
+"verbo": "parecer",
+"contexto": "él, esta mañana, muy cansado",
+"respuesta": "Esta mañana, él parece muy cansado.",
+"pista": "describing appearance"
+},
+{
+"id": "parecer-presente-3384",
+"verbo": "parecer",
+"contexto": "yo, hoy, más joven de lo que soy",
+"respuesta": "Yo parezco más joven de lo que soy hoy.",
+"pista": "expressing youthful appearance"
+},
+{
+"id": "partir-presente-3385",
+"verbo": "partir",
+"contexto": "yo, todos los días, el pastel en ocho pedazos",
+"respuesta": "Todos los días, yo parto el pastel en ocho pedazos.",
+"pista": "describing cutting"
+},
+{
+"id": "partir-presente-3386",
+"verbo": "partir",
+"contexto": "nosotros, actualmente, hacia la montaña",
+"respuesta": "Nosotros partimos hacia la montaña actualmente.",
+"pista": "expressing departure"
+},
+{
+"id": "partir-presente-3387",
+"verbo": "partir",
+"contexto": "ella, actualmente, la fruta para todos",
+"respuesta": "Actualmente, ella parte la fruta para todos.",
+"pista": "describing sharing food"
+},
+{
+"id": "pasar-presente-3388",
+"verbo": "pasar",
+"contexto": "yo, ahora mismo, por tu casa",
+"respuesta": "Ahora mismo, yo paso por tu casa.",
+"pista": "describing a visit"
+},
+{
+"id": "pasar-presente-3389",
+"verbo": "pasar",
+"contexto": "tú, mientras, mucho tiempo en el teléfono",
+"respuesta": "Mientras, tú pasas mucho tiempo en el teléfono.",
+"pista": "commenting on phone usage"
+},
+{
+"id": "pasar-presente-3390",
+"verbo": "pasar",
+"contexto": "nosotros, siempre, las vacaciones en la playa",
+"respuesta": "Nosotros pasamos las vacaciones en la playa siempre.",
+"pista": "describing holiday plans"
+},
+{
+"id": "pedir-presente-3391",
+"verbo": "pedir",
+"contexto": "yo, ahora mismo, un café",
+"respuesta": "Ahora mismo, yo pido un café.",
+"pista": "describing an order"
+},
+{
+"id": "pedir-presente-3392",
+"verbo": "pedir",
+"contexto": "tú, ahora, ayuda cuando la necesitas",
+"respuesta": "Tú pides ayuda cuando la necesitas ahora.",
+"pista": "giving advice about asking"
+},
+{
+"id": "pedir-presente-3393",
+"verbo": "pedir",
+"contexto": "nosotros, por lo general, una pizza para cenar",
+"respuesta": "Nosotros pedimos una pizza para cenar por lo general.",
+"pista": "describing a dinner order"
+},
+{
+"id": "pegar-presente-3394",
+"verbo": "pegar",
+"contexto": "yo, normalmente, el cartel en la pared",
+"respuesta": "Yo pego el cartel en la pared normalmente.",
+"pista": "describing attachment"
+},
+{
+"id": "pegar-presente-3395",
+"verbo": "pegar",
+"contexto": "ella, siempre, los sellos en el sobre",
+"respuesta": "Ella pega los sellos en el sobre siempre.",
+"pista": "narrating mail preparation"
+},
+{
+"id": "pegar-presente-3396",
+"verbo": "pegar",
+"contexto": "tú, hoy, las piezas con pegamento",
+"respuesta": "Hoy, tú pegas las piezas con pegamento.",
+"pista": "describing crafting"
+},
+{
+"id": "pelear-presente-3397",
+"verbo": "pelear",
+"contexto": "ellos, esta noche, por el primer lugar",
+"respuesta": "Esta noche, ellos pelean por el primer lugar.",
+"pista": "describing competition"
+},
+{
+"id": "pelear-presente-3398",
+"verbo": "pelear",
+"contexto": "yo, ahora, por mis derechos",
+"respuesta": "Yo peleo por mis derechos ahora.",
+"pista": "expressing advocacy"
+},
+{
+"id": "pelear-presente-3399",
+"verbo": "pelear",
+"contexto": "nosotros, cada semana, contra la corrupción",
+"respuesta": "Nosotros peleamos contra la corrupción cada semana.",
+"pista": "narrating a cause"
+},
+{
+"id": "pensar-presente-3400",
+"verbo": "pensar",
+"contexto": "yo, en este momento, en mi familia",
+"respuesta": "Yo pienso en mi familia en este momento.",
+"pista": "expressing thoughts"
+},
+{
+"id": "pensar-presente-3401",
+"verbo": "pensar",
+"contexto": "tú, ahora mismo, demasiado",
+"respuesta": "Tú piensas demasiado ahora mismo.",
+"pista": "commenting on overthinking"
+},
+{
+"id": "pensar-presente-3402",
+"verbo": "pensar",
+"contexto": "nosotros, hoy, en el futuro",
+"respuesta": "Hoy, nosotros pensamos en el futuro.",
+"pista": "describing planning"
+},
+{
+"id": "perder-presente-3403",
+"verbo": "perder",
+"contexto": "yo, por lo general, las llaves con frecuencia",
+"respuesta": "Por lo general, yo pierdo las llaves con frecuencia.",
+"pista": "expressing a recurring problem"
+},
+{
+"id": "perder-presente-3404",
+"verbo": "perder",
+"contexto": "tú, ahora mismo, la paciencia",
+"respuesta": "Ahora mismo, tú pierdes la paciencia.",
+"pista": "describing frustration"
+},
+{
+"id": "perder-presente-3405",
+"verbo": "perder",
+"contexto": "nosotros, ahora mismo, el tiempo con discusiones",
+"respuesta": "Nosotros perdemos el tiempo con discusiones ahora mismo.",
+"pista": "expressing wasted time"
+},
+{
+"id": "perdonar-presente-3406",
+"verbo": "perdonar",
+"contexto": "yo, en este momento, a mi amigo",
+"respuesta": "En este momento, yo perdono a mi amigo.",
+"pista": "expressing forgiveness"
+},
+{
+"id": "perdonar-presente-3407",
+"verbo": "perdonar",
+"contexto": "ella, esta noche, los errores de los demás",
+"respuesta": "Ella perdona los errores de los demás esta noche.",
+"pista": "narrating compassion"
+},
+{
+"id": "perdonar-presente-3408",
+"verbo": "perdonar",
+"contexto": "nosotros, normalmente, con facilidad",
+"respuesta": "Nosotros perdonamos con facilidad normalmente.",
+"pista": "describing a character trait"
+},
+{
+"id": "permanecer-presente-3409",
+"verbo": "permanecer",
+"contexto": "yo, mientras, en silencio",
+"respuesta": "Yo permanezco en silencio mientras.",
+"pista": "expressing restraint"
+},
+{
+"id": "permanecer-presente-3410",
+"verbo": "permanecer",
+"contexto": "ella, ahora, en su puesto",
+"respuesta": "Ahora, ella permanece en su puesto.",
+"pista": "narrating dedication"
+},
+{
+"id": "permanecer-presente-3411",
+"verbo": "permanecer",
+"contexto": "nosotros, hoy, unidos",
+"respuesta": "Hoy, nosotros permanecemos unidos.",
+"pista": "expressing solidarity"
+},
+{
+"id": "permitir-presente-3412",
+"verbo": "permitir",
+"contexto": "yo, siempre, la entrada a todos",
+"respuesta": "Yo permito la entrada a todos siempre.",
+"pista": "expressing openness"
+},
+{
+"id": "permitir-presente-3413",
+"verbo": "permitir",
+"contexto": "ella, a veces, las visitas los domingos",
+"respuesta": "A veces, ella permite las visitas los domingos.",
+"pista": "describing a policy"
+},
+{
+"id": "permitir-presente-3414",
+"verbo": "permitir",
+"contexto": "nosotros, cada semana, los cambios necesarios",
+"respuesta": "Nosotros permitimos los cambios necesarios cada semana.",
+"pista": "expressing flexibility"
+},
+{
+"id": "pertenecer-presente-3415",
+"verbo": "pertenecer",
+"contexto": "yo, normalmente, a este grupo",
+"respuesta": "Yo pertenezco a este grupo normalmente.",
+"pista": "expressing membership"
+},
+{
+"id": "pertenecer-presente-3416",
+"verbo": "pertenecer",
+"contexto": "eso, en este momento, a mi abuelo",
+"respuesta": "Eso pertenece a mi abuelo en este momento.",
+"pista": "describing ownership"
+},
+{
+"id": "pertenecer-presente-3417",
+"verbo": "pertenecer",
+"contexto": "nosotros, por lo general, a la misma organización",
+"respuesta": "Por lo general, nosotros pertenecemos a la misma organización.",
+"pista": "expressing shared affiliation"
+},
+{
+"id": "pesar-presente-3418",
+"verbo": "pesar",
+"contexto": "yo, mientras, los ingredientes antes de cocinar",
+"respuesta": "Yo peso los ingredientes antes de cocinar mientras.",
+"pista": "describing measurement"
+},
+{
+"id": "pesar-presente-3419",
+"verbo": "pesar",
+"contexto": "ella, en este momento, las frutas en la balanza",
+"respuesta": "En este momento, ella pesa las frutas en la balanza.",
+"pista": "narrating market shopping"
+},
+{
+"id": "pesar-presente-3420",
+"verbo": "pesar",
+"contexto": "tú, esta mañana, el equipaje antes de viajar",
+"respuesta": "Tú pesas el equipaje antes de viajar esta mañana.",
+"pista": "describing travel preparation"
+},
+{
+"id": "poder-presente-3421",
+"verbo": "poder",
+"contexto": "yo, esta tarde, resolver el problema",
+"respuesta": "Esta tarde, yo puedo resolver el problema.",
+"pista": "expressing ability"
+},
+{
+"id": "poder-presente-3422",
+"verbo": "poder",
+"contexto": "tú, en este momento, hablar español",
+"respuesta": "Tú puedes hablar español en este momento.",
+"pista": "describing language skills"
+},
+{
+"id": "poder-presente-3423",
+"verbo": "poder",
+"contexto": "nosotros, hoy, terminar a tiempo",
+"respuesta": "Nosotros podemos terminar a tiempo hoy.",
+"pista": "expressing team capability"
+},
+{
+"id": "poner-presente-3424",
+"verbo": "poner",
+"contexto": "yo, todos los días, la mesa para la cena",
+"respuesta": "Yo pongo la mesa para la cena todos los días.",
+"pista": "describing dinner preparation"
+},
+{
+"id": "poner-presente-3425",
+"verbo": "poner",
+"contexto": "tú, por lo general, atención en clase",
+"respuesta": "Por lo general, tú pones atención en clase.",
+"pista": "giving advice about focus"
+},
+{
+"id": "poner-presente-3426",
+"verbo": "poner",
+"contexto": "ella, cada semana, música para relajarse",
+"respuesta": "Ella pone música para relajarse cada semana.",
+"pista": "narrating a relaxation method"
+},
+{
+"id": "preferir-presente-3427",
+"verbo": "preferir",
+"contexto": "yo, ahora, el café al té",
+"respuesta": "Yo prefiero el café al té ahora.",
+"pista": "expressing preference"
+},
+{
+"id": "preferir-presente-3428",
+"verbo": "preferir",
+"contexto": "nosotros, siempre, caminar en vez de conducir",
+"respuesta": "Nosotros preferimos caminar en vez de conducir siempre.",
+"pista": "describing lifestyle choice"
+},
+{
+"id": "preferir-presente-3429",
+"verbo": "preferir",
+"contexto": "tú, cada vez que, la comida casera",
+"respuesta": "Tú prefieres la comida casera cada vez que.",
+"pista": "talking about food preferences"
+},
+{
+"id": "preguntar-presente-3430",
+"verbo": "preguntar",
+"contexto": "yo, ahora, la dirección",
+"respuesta": "Ahora, yo pregunto la dirección.",
+"pista": "describing asking for directions"
+},
+{
+"id": "preguntar-presente-3431",
+"verbo": "preguntar",
+"contexto": "tú, todos los días, por tu madre",
+"respuesta": "Tú preguntas por tu madre todos los días.",
+"pista": "expressing concern for family"
+},
+{
+"id": "preguntar-presente-3432",
+"verbo": "preguntar",
+"contexto": "ella, hoy, sobre el horario",
+"respuesta": "Hoy, ella pregunta sobre el horario.",
+"pista": "narrating an inquiry"
+},
+{
+"id": "preocupar-presente-3433",
+"verbo": "preocupar",
+"contexto": "yo, hoy, a mis padres con mi comportamiento",
+"respuesta": "Hoy, yo preocupo a mis padres con mi comportamiento.",
+"pista": "expressing concern caused"
+},
+{
+"id": "preocupar-presente-3434",
+"verbo": "preocupar",
+"contexto": "eso, en este momento, a todos en la oficina",
+"respuesta": "Eso preocupa a todos en la oficina en este momento.",
+"pista": "describing workplace worry"
+},
+{
+"id": "preocupar-presente-3435",
+"verbo": "preocupar",
+"contexto": "ella, en este momento, a su familia",
+"respuesta": "Ella preocupa a su familia en este momento.",
+"pista": "narrating family concern"
+},
+{
+"id": "preparar-presente-3436",
+"verbo": "preparar",
+"contexto": "yo, esta noche, el desayuno",
+"respuesta": "Yo preparo el desayuno esta noche.",
+"pista": "describing morning routine"
+},
+{
+"id": "preparar-presente-3437",
+"verbo": "preparar",
+"contexto": "nosotros, a veces, la presentación",
+"respuesta": "A veces, nosotros preparamos la presentación.",
+"pista": "expressing teamwork"
+},
+{
+"id": "preparar-presente-3438",
+"verbo": "preparar",
+"contexto": "tú, cada vez que, la maleta para el viaje",
+"respuesta": "Cada vez que, tú preparas la maleta para el viaje.",
+"pista": "describing travel preparation"
+},
+{
+"id": "presentar-presente-3439",
+"verbo": "presentar",
+"contexto": "yo, esta mañana, el informe al jefe",
+"respuesta": "Esta mañana, yo presento el informe al jefe.",
+"pista": "describing a work delivery"
+},
+{
+"id": "presentar-presente-3440",
+"verbo": "presentar",
+"contexto": "ella, normalmente, a su novio a la familia",
+"respuesta": "Ella presenta a su novio a la familia normalmente.",
+"pista": "narrating introductions"
+},
+{
+"id": "presentar-presente-3441",
+"verbo": "presentar",
+"contexto": "nosotros, ahora mismo, nuestra propuesta",
+"respuesta": "Nosotros presentamos nuestra propuesta ahora mismo.",
+"pista": "expressing business pitch"
+},
+{
+"id": "prestar-presente-3442",
+"verbo": "prestar",
+"contexto": "yo, actualmente, dinero a mi amigo",
+"respuesta": "Yo presto dinero a mi amigo actualmente.",
+"pista": "describing lending"
+},
+{
+"id": "prestar-presente-3443",
+"verbo": "prestar",
+"contexto": "tú, ahora mismo, atención a los detalles",
+"respuesta": "Ahora mismo, tú prestas atención a los detalles.",
+"pista": "expressing attentiveness"
+},
+{
+"id": "prestar-presente-3444",
+"verbo": "prestar",
+"contexto": "ella, siempre, sus libros a los compañeros",
+"respuesta": "Siempre, ella presta sus libros a los compañeros.",
+"pista": "narrating generosity"
+},
+{
+"id": "probar-presente-3445",
+"verbo": "probar",
+"contexto": "yo, en este momento, la comida antes de servirla",
+"respuesta": "En este momento, yo pruebo la comida antes de servirla.",
+"pista": "describing tasting"
+},
+{
+"id": "probar-presente-3446",
+"verbo": "probar",
+"contexto": "tú, esta noche, algo nuevo",
+"respuesta": "Tú pruebas algo nuevo esta noche.",
+"pista": "encouraging experimentation"
+},
+{
+"id": "probar-presente-3447",
+"verbo": "probar",
+"contexto": "nosotros, todos los días, diferentes métodos",
+"respuesta": "Nosotros probamos diferentes métodos todos los días.",
+"pista": "describing problem-solving"
+},
+{
+"id": "producir-presente-3448",
+"verbo": "producir",
+"contexto": "yo, ahora, contenido para las redes sociales",
+"respuesta": "Yo produzco contenido para las redes sociales ahora.",
+"pista": "describing content creation"
+},
+{
+"id": "producir-presente-3449",
+"verbo": "producir",
+"contexto": "nosotros, mientras, resultados excelentes",
+"respuesta": "Mientras, nosotros producimos resultados excelentes.",
+"pista": "expressing team output"
+},
+{
+"id": "producir-presente-3450",
+"verbo": "producir",
+"contexto": "ella, ahora, películas independientes",
+"respuesta": "Ella produce películas independientes ahora.",
+"pista": "narrating film production"
+},
+{
+"id": "prometer-presente-3451",
+"verbo": "prometer",
+"contexto": "yo, mientras, llegar a tiempo",
+"respuesta": "Mientras, yo prometo llegar a tiempo.",
+"pista": "expressing a commitment"
+},
+{
+"id": "prometer-presente-3452",
+"verbo": "prometer",
+"contexto": "tú, a veces, no decir nada",
+"respuesta": "Tú prometas no decir nada a veces.",
+"pista": "describing a promise"
+},
+{
+"id": "prometer-presente-3453",
+"verbo": "prometer",
+"contexto": "nosotros, esta noche, hacer nuestro mejor esfuerzo",
+"respuesta": "Esta noche, nosotros prometamos hacer nuestro mejor esfuerzo.",
+"pista": "expressing team dedication"
+},
+{
+"id": "proteger-presente-3454",
+"verbo": "proteger",
+"contexto": "yo, actualmente, a mi familia",
+"respuesta": "Yo protejo a mi familia actualmente.",
+"pista": "expressing protection"
+},
+{
+"id": "proteger-presente-3455",
+"verbo": "proteger",
+"contexto": "nosotros, esta mañana, el medio ambiente",
+"respuesta": "Nosotros protegemos el medio ambiente esta mañana.",
+"pista": "describing conservation"
+},
+{
+"id": "proteger-presente-3456",
+"verbo": "proteger",
+"contexto": "ella, todos los días, a los animales",
+"respuesta": "Todos los días, ella protege a los animales.",
+"pista": "narrating animal welfare"
+},
+{
+"id": "quedar-presente-3457",
+"verbo": "quedar",
+"contexto": "yo, actualmente, con mis amigos los viernes",
+"respuesta": "Yo quedo con mis amigos los viernes actualmente.",
+"pista": "describing social plans"
+},
+{
+"id": "quedar-presente-3458",
+"verbo": "quedar",
+"contexto": "nosotros, hoy, en el restaurante a las ocho",
+"respuesta": "Hoy, nosotros quedamos en el restaurante a las ocho.",
+"pista": "making plans"
+},
+{
+"id": "quedar-presente-3459",
+"verbo": "quedar",
+"contexto": "tú, ahora mismo, en casa cuando llueve",
+"respuesta": "Tú quedas en casa cuando llueve ahora mismo.",
+"pista": "describing weather-based decisions"
+},
+{
+"id": "querer-presente-3460",
+"verbo": "querer",
+"contexto": "yo, cada vez que, aprender a bailar",
+"respuesta": "Yo quiero aprender a bailar cada vez que.",
+"pista": "expressing desire"
+},
+{
+"id": "querer-presente-3461",
+"verbo": "querer",
+"contexto": "tú, cada semana, viajar por el mundo",
+"respuesta": "Tú quieres viajar por el mundo cada semana.",
+"pista": "describing dreams"
+},
+{
+"id": "querer-presente-3462",
+"verbo": "querer",
+"contexto": "nosotros, siempre, lo mejor para todos",
+"respuesta": "Nosotros queremos lo mejor para todos siempre.",
+"pista": "expressing good intentions"
+},
+{
+"id": "quitar-presente-3463",
+"verbo": "quitar",
+"contexto": "yo, esta noche, la mancha de la camisa",
+"respuesta": "Yo quito la mancha de la camisa esta noche.",
+"pista": "describing cleaning"
+},
+{
+"id": "quitar-presente-3464",
+"verbo": "quitar",
+"contexto": "tú, ahora, los zapatos al entrar",
+"respuesta": "Tú quitas los zapatos al entrar ahora.",
+"pista": "talking about customs"
+},
+{
+"id": "quitar-presente-3465",
+"verbo": "quitar",
+"contexto": "ella, esta mañana, las malas hierbas del jardín",
+"respuesta": "Ella quita las malas hierbas del jardín esta mañana.",
+"pista": "describing gardening"
+},
+{
+"id": "realizar-presente-3466",
+"verbo": "realizar",
+"contexto": "yo, por lo general, un proyecto importante",
+"respuesta": "Yo realizo un proyecto importante por lo general.",
+"pista": "describing accomplishment"
+},
+{
+"id": "realizar-presente-3467",
+"verbo": "realizar",
+"contexto": "nosotros, hoy, cambios significativos",
+"respuesta": "Hoy, nosotros realizamos cambios significativos.",
+"pista": "expressing transformation"
+},
+{
+"id": "realizar-presente-3468",
+"verbo": "realizar",
+"contexto": "ella, esta tarde, su sueño de ser doctora",
+"respuesta": "Ella realiza su sueño de ser doctora esta tarde.",
+"pista": "narrating ambition fulfillment"
+},
+{
+"id": "recibir-presente-3469",
+"verbo": "recibir",
+"contexto": "yo, todos los días, un paquete",
+"respuesta": "Yo recibo un paquete todos los días.",
+"pista": "describing delivery"
+},
+{
+"id": "recibir-presente-3470",
+"verbo": "recibir",
+"contexto": "tú, por lo general, buenas noticias",
+"respuesta": "Tú recibes buenas noticias por lo general.",
+"pista": "expressing positive updates"
+},
+{
+"id": "recibir-presente-3471",
+"verbo": "recibir",
+"contexto": "nosotros, esta tarde, a los invitados en la puerta",
+"respuesta": "Esta tarde, nosotros recibimos a los invitados en la puerta.",
+"pista": "describing hospitality"
+},
+{
+"id": "recoger-presente-3472",
+"verbo": "recoger",
+"contexto": "yo, hoy, a los niños de la escuela",
+"respuesta": "Hoy, yo recojo a los niños de la escuela.",
+"pista": "describing parental duty"
+},
+{
+"id": "recoger-presente-3473",
+"verbo": "recoger",
+"contexto": "tú, todos los días, la basura del suelo",
+"respuesta": "Todos los días, tú recoges la basura del suelo.",
+"pista": "talking about cleanliness"
+},
+{
+"id": "recoger-presente-3474",
+"verbo": "recoger",
+"contexto": "nosotros, cada vez que, los resultados del análisis",
+"respuesta": "Nosotros recogemos los resultados del análisis cada vez que.",
+"pista": "describing data collection"
+},
+{
+"id": "reconocer-presente-3475",
+"verbo": "reconocer",
+"contexto": "yo, en este momento, mi error",
+"respuesta": "En este momento, yo reconozco mi error.",
+"pista": "expressing humility"
+},
+{
+"id": "reconocer-presente-3476",
+"verbo": "reconocer",
+"contexto": "ella, esta tarde, su voz al teléfono",
+"respuesta": "Esta tarde, ella reconoce su voz al teléfono.",
+"pista": "narrating recognition"
+},
+{
+"id": "reconocer-presente-3477",
+"verbo": "reconocer",
+"contexto": "nosotros, esta tarde, el esfuerzo de todos",
+"respuesta": "Esta tarde, nosotros reconocemos el esfuerzo de todos.",
+"pista": "expressing appreciation"
+},
+{
+"id": "recordar-presente-3478",
+"verbo": "recordar",
+"contexto": "yo, cada semana, los buenos tiempos",
+"respuesta": "Cada semana, yo recuerdo los buenos tiempos.",
+"pista": "expressing nostalgia"
+},
+{
+"id": "recordar-presente-3479",
+"verbo": "recordar",
+"contexto": "tú, esta mañana, la contraseña",
+"respuesta": "Tú recuerdas la contraseña esta mañana.",
+"pista": "talking about memory"
+},
+{
+"id": "recordar-presente-3480",
+"verbo": "recordar",
+"contexto": "ella, actualmente, su infancia con cariño",
+"respuesta": "Ella recuerda su infancia con cariño actualmente.",
+"pista": "narrating fond memories"
+},
+{
+"id": "recuperar-presente-3481",
+"verbo": "recuperar",
+"contexto": "yo, normalmente, mi salud",
+"respuesta": "Yo recupero mi salud normalmente.",
+"pista": "expressing recovery"
+},
+{
+"id": "recuperar-presente-3482",
+"verbo": "recuperar",
+"contexto": "nosotros, por lo general, el tiempo perdido",
+"respuesta": "Nosotros recuperamos el tiempo perdido por lo general.",
+"pista": "describing making up for lost time"
+},
+{
+"id": "recuperar-presente-3483",
+"verbo": "recuperar",
+"contexto": "ella, esta mañana, su confianza poco a poco",
+"respuesta": "Esta mañana, ella recupera su confianza poco a poco.",
+"pista": "narrating emotional healing"
+},
+{
+"id": "referir-presente-3484",
+"verbo": "referir",
+"contexto": "yo, actualmente, al paciente al especialista",
+"respuesta": "Yo refiero al paciente al especialista actualmente.",
+"pista": "describing a medical referral"
+},
+{
+"id": "referir-presente-3485",
+"verbo": "referir",
+"contexto": "ella, a veces, la historia con detalle",
+"respuesta": "A veces, ella refiere la historia con detalle.",
+"pista": "narrating detailed storytelling"
+},
+{
+"id": "referir-presente-3486",
+"verbo": "referir",
+"contexto": "nosotros, en este momento, el caso al departamento legal",
+"respuesta": "En este momento, nosotros referimos el caso al departamento legal.",
+"pista": "describing bureaucratic process"
+},
+{
+"id": "regresar-presente-3487",
+"verbo": "regresar",
+"contexto": "yo, esta noche, a casa después del trabajo",
+"respuesta": "Yo regreso a casa después del trabajo esta noche.",
+"pista": "describing commute"
+},
+{
+"id": "regresar-presente-3488",
+"verbo": "regresar",
+"contexto": "nosotros, ahora, de las vacaciones",
+"respuesta": "Nosotros regresamos de las vacaciones ahora.",
+"pista": "narrating return from holiday"
+},
+{
+"id": "regresar-presente-3489",
+"verbo": "regresar",
+"contexto": "tú, por lo general, a tu ciudad natal",
+"respuesta": "Por lo general, tú regresas a tu ciudad natal.",
+"pista": "talking about homecoming"
+},
+{
+"id": "reír-presente-3490",
+"verbo": "reír",
+"contexto": "yo, normalmente, con mis amigos",
+"respuesta": "Normalmente, yo río con mis amigos.",
+"pista": "expressing social joy"
+},
+{
+"id": "reír-presente-3491",
+"verbo": "reír",
+"contexto": "ella, cada semana, a carcajadas",
+"respuesta": "Ella ríe a carcajadas cada semana.",
+"pista": "narrating loud laughter"
+},
+{
+"id": "reír-presente-3492",
+"verbo": "reír",
+"contexto": "nosotros, actualmente, de los chistes",
+"respuesta": "Actualmente, nosotros reímos de los chistes.",
+"pista": "describing shared humor"
+},
+{
+"id": "repetir-presente-3493",
+"verbo": "repetir",
+"contexto": "yo, actualmente, la pregunta",
+"respuesta": "Actualmente, yo repito la pregunta.",
+"pista": "expressing repetition"
+},
+{
+"id": "repetir-presente-3494",
+"verbo": "repetir",
+"contexto": "tú, esta noche, los mismos errores",
+"respuesta": "Tú repites los mismos errores esta noche.",
+"pista": "commenting on patterns"
+},
+{
+"id": "repetir-presente-3495",
+"verbo": "repetir",
+"contexto": "ella, todos los días, la lección varias veces",
+"respuesta": "Todos los días, ella repite la lección varias veces.",
+"pista": "narrating thorough teaching"
+},
+{
+"id": "representar-presente-3496",
+"verbo": "representar",
+"contexto": "yo, actualmente, a mi país",
+"respuesta": "Yo represento a mi país actualmente.",
+"pista": "expressing national pride"
+},
+{
+"id": "representar-presente-3497",
+"verbo": "representar",
+"contexto": "ella, mientras, a los trabajadores",
+"respuesta": "Mientras, ella representa a los trabajadores.",
+"pista": "narrating union role"
+},
+{
+"id": "representar-presente-3498",
+"verbo": "representar",
+"contexto": "nosotros, todos los días, una obra de teatro",
+"respuesta": "Todos los días, nosotros representamos una obra de teatro.",
+"pista": "describing a performance"
+},
+{
+"id": "resolver-presente-3499",
+"verbo": "resolver",
+"contexto": "yo, ahora, los problemas con calma",
+"respuesta": "Yo resuelvo los problemas con calma ahora.",
+"pista": "expressing problem-solving"
+},
+{
+"id": "resolver-presente-3500",
+"verbo": "resolver",
+"contexto": "nosotros, mientras, el conflicto",
+"respuesta": "Mientras, nosotros resolvemos el conflicto.",
+"pista": "describing mediation"
+},
+{
+"id": "resolver-presente-3501",
+"verbo": "resolver",
+"contexto": "tú, en este momento, la ecuación rápidamente",
+"respuesta": "Tú resuelves la ecuación rápidamente en este momento.",
+"pista": "narrating math skills"
+},
+{
+"id": "responder-presente-3502",
+"verbo": "responder",
+"contexto": "yo, ahora mismo, a todas las preguntas",
+"respuesta": "Yo respondo a todas las preguntas ahora mismo.",
+"pista": "expressing thoroughness"
+},
+{
+"id": "responder-presente-3503",
+"verbo": "responder",
+"contexto": "tú, siempre, con sinceridad",
+"respuesta": "Siempre, tú respondes con sinceridad.",
+"pista": "describing honest communication"
+},
+{
+"id": "responder-presente-3504",
+"verbo": "responder",
+"contexto": "ella, a veces, al correo electrónico",
+"respuesta": "Ella responde al correo electrónico a veces.",
+"pista": "narrating prompt response"
+},
+{
+"id": "resultar-presente-3505",
+"verbo": "resultar",
+"contexto": "eso, hoy, muy difícil",
+"respuesta": "Hoy, eso resulta muy difícil.",
+"pista": "expressing difficulty"
+},
+{
+"id": "resultar-presente-3506",
+"verbo": "resultar",
+"contexto": "el plan, todos los días, exitoso",
+"respuesta": "El plan resulta exitoso todos los días.",
+"pista": "describing success"
+},
+{
+"id": "resultar-presente-3507",
+"verbo": "resultar",
+"contexto": "la reunión, esta noche, muy productiva",
+"respuesta": "Esta noche, la reunión resulta muy productiva.",
+"pista": "narrating meeting outcome"
+},
+{
+"id": "reunir-presente-3508",
+"verbo": "reunir",
+"contexto": "yo, en este momento, a toda la familia",
+"respuesta": "En este momento, yo reúno a toda la familia.",
+"pista": "describing family gathering"
+},
+{
+"id": "reunir-presente-3509",
+"verbo": "reunir",
+"contexto": "nosotros, cada vez que, los fondos necesarios",
+"respuesta": "Nosotros reunimos los fondos necesarios cada vez que.",
+"pista": "expressing fundraising"
+},
+{
+"id": "reunir-presente-3510",
+"verbo": "reunir",
+"contexto": "ella, mientras, la información para el proyecto",
+"respuesta": "Ella reúne la información para el proyecto mientras.",
+"pista": "narrating research"
+},
+{
+"id": "revisar-presente-3511",
+"verbo": "revisar",
+"contexto": "yo, esta mañana, el documento antes de enviarlo",
+"respuesta": "Esta mañana, yo reviso el documento antes de enviarlo.",
+"pista": "describing quality control"
+},
+{
+"id": "revisar-presente-3512",
+"verbo": "revisar",
+"contexto": "tú, esta noche, las cuentas del mes",
+"respuesta": "Tú revisas las cuentas del mes esta noche.",
+"pista": "talking about finances"
+},
+{
+"id": "revisar-presente-3513",
+"verbo": "revisar",
+"contexto": "nosotros, normalmente, el equipo regularmente",
+"respuesta": "Nosotros revisamos el equipo regularmente normalmente.",
+"pista": "describing maintenance"
+},
+{
+"id": "robar-presente-3514",
+"verbo": "robar",
+"contexto": "él, a veces, la atención de todos",
+"respuesta": "A veces, él roba la atención de todos.",
+"pista": "describing charisma figuratively"
+},
+{
+"id": "robar-presente-3515",
+"verbo": "robar",
+"contexto": "ellos, normalmente, ideas de otras empresas",
+"respuesta": "Ellos roban ideas de otras empresas normalmente.",
+"pista": "narrating intellectual theft"
+},
+{
+"id": "robar-presente-3516",
+"verbo": "robar",
+"contexto": "ella, todos los días, corazones con su sonrisa",
+"respuesta": "Todos los días, ella roba corazones con su sonrisa.",
+"pista": "expressing charm figuratively"
+},
+{
+"id": "romper-presente-3517",
+"verbo": "romper",
+"contexto": "yo, en este momento, el silencio",
+"respuesta": "En este momento, yo rompo el silencio.",
+"pista": "expressing breaking quiet"
+},
+{
+"id": "romper-presente-3518",
+"verbo": "romper",
+"contexto": "tú, mientras, las reglas",
+"respuesta": "Tú rompes las reglas mientras.",
+"pista": "describing rule-breaking"
+},
+{
+"id": "romper-presente-3519",
+"verbo": "romper",
+"contexto": "ella, mientras, el récord mundial",
+"respuesta": "Ella rompe el récord mundial mientras.",
+"pista": "narrating an achievement"
+},
+{
+"id": "saber-presente-3520",
+"verbo": "saber",
+"contexto": "yo, esta tarde, la respuesta",
+"respuesta": "Esta tarde, yo sé la respuesta.",
+"pista": "expressing knowledge"
+},
+{
+"id": "saber-presente-3521",
+"verbo": "saber",
+"contexto": "tú, esta mañana, cocinar muy bien",
+"respuesta": "Tú sabes cocinar muy bien esta mañana.",
+"pista": "describing a skill"
+},
+{
+"id": "saber-presente-3522",
+"verbo": "saber",
+"contexto": "nosotros, por lo general, la verdad",
+"respuesta": "Por lo general, nosotros sabemos la verdad.",
+"pista": "expressing shared knowledge"
+},
+{
+"id": "sacar-presente-3523",
+"verbo": "sacar",
+"contexto": "yo, todos los días, buenas notas",
+"respuesta": "Todos los días, yo saco buenas notas.",
+"pista": "expressing academic success"
+},
+{
+"id": "sacar-presente-3524",
+"verbo": "sacar",
+"contexto": "tú, normalmente, al perro a pasear",
+"respuesta": "Normalmente, tú sacas al perro a pasear.",
+"pista": "describing a daily chore"
+},
+{
+"id": "sacar-presente-3525",
+"verbo": "sacar",
+"contexto": "ella, cada semana, dinero del cajero",
+"respuesta": "Cada semana, ella saca dinero del cajero.",
+"pista": "narrating a bank transaction"
+},
+{
+"id": "salir-presente-3526",
+"verbo": "salir",
+"contexto": "yo, esta mañana, de casa temprano",
+"respuesta": "Esta mañana, yo salgo de casa temprano.",
+"pista": "describing a morning routine"
+},
+{
+"id": "salir-presente-3527",
+"verbo": "salir",
+"contexto": "nosotros, siempre, a cenar los viernes",
+"respuesta": "Siempre, nosotros salimos a cenar los viernes.",
+"pista": "expressing a social habit"
+},
+{
+"id": "salir-presente-3528",
+"verbo": "salir",
+"contexto": "tú, ahora mismo, con tus amigos",
+"respuesta": "Ahora mismo, tú sales con tus amigos.",
+"pista": "talking about socializing"
+},
+{
+"id": "salvar-presente-3529",
+"verbo": "salvar",
+"contexto": "él, mientras, vidas como médico",
+"respuesta": "Él salva vidas como médico mientras.",
+"pista": "describing a doctor's role"
+},
+{
+"id": "salvar-presente-3530",
+"verbo": "salvar",
+"contexto": "yo, siempre, a los animales en peligro",
+"respuesta": "Yo salvo a los animales en peligro siempre.",
+"pista": "expressing animal rescue"
+},
+{
+"id": "salvar-presente-3531",
+"verbo": "salvar",
+"contexto": "nosotros, esta tarde, el bosque de la destrucción",
+"respuesta": "Esta tarde, nosotros salvamos el bosque de la destrucción.",
+"pista": "narrating conservation"
+},
+{
+"id": "seguir-presente-3532",
+"verbo": "seguir",
+"contexto": "yo, esta noche, mis sueños",
+"respuesta": "Yo sigo mis sueños esta noche.",
+"pista": "expressing perseverance"
+},
+{
+"id": "seguir-presente-3533",
+"verbo": "seguir",
+"contexto": "tú, cada vez que, las instrucciones",
+"respuesta": "Cada vez que, tú sigues las instrucciones.",
+"pista": "describing compliance"
+},
+{
+"id": "seguir-presente-3534",
+"verbo": "seguir",
+"contexto": "nosotros, en este momento, adelante con el plan",
+"respuesta": "Nosotros seguimos adelante con el plan en este momento.",
+"pista": "expressing continuation"
+},
+{
+"id": "señalar-presente-3535",
+"verbo": "señalar",
+"contexto": "yo, actualmente, el error en el documento",
+"respuesta": "Yo señalo el error en el documento actualmente.",
+"pista": "describing error identification"
+},
+{
+"id": "señalar-presente-3536",
+"verbo": "señalar",
+"contexto": "ella, a veces, la dirección correcta",
+"respuesta": "Ella señala la dirección correcta a veces.",
+"pista": "narrating guidance"
+},
+{
+"id": "señalar-presente-3537",
+"verbo": "señalar",
+"contexto": "nosotros, mientras, los puntos importantes",
+"respuesta": "Mientras, nosotros señalamos los puntos importantes.",
+"pista": "describing highlighting"
+},
+{
+"id": "sentar-presente-3538",
+"verbo": "sentar",
+"contexto": "yo, a veces, a los invitados en la mesa",
+"respuesta": "A veces, yo siento a los invitados en la mesa.",
+"pista": "describing seating arrangement"
+},
+{
+"id": "sentar-presente-3539",
+"verbo": "sentar",
+"contexto": "ella, por lo general, al niño en la silla",
+"respuesta": "Por lo general, ella sienta al niño en la silla.",
+"pista": "narrating childcare"
+},
+{
+"id": "sentar-presente-3540",
+"verbo": "sentar",
+"contexto": "nosotros, normalmente, las bases del acuerdo",
+"respuesta": "Nosotros sentamos las bases del acuerdo normalmente.",
+"pista": "expressing foundation-setting"
+},
+{
+"id": "sentir-presente-3541",
+"verbo": "sentir",
+"contexto": "yo, todos los días, mucha alegría",
+"respuesta": "Todos los días, yo siento mucha alegría.",
+"pista": "expressing happiness"
+},
+{
+"id": "sentir-presente-3542",
+"verbo": "sentir",
+"contexto": "tú, siempre, nostalgia por el pasado",
+"respuesta": "Siempre, tú sientes nostalgia por el pasado.",
+"pista": "describing longing"
+},
+{
+"id": "sentir-presente-3543",
+"verbo": "sentir",
+"contexto": "nosotros, esta noche, la presión del trabajo",
+"respuesta": "Esta noche, nosotros sentimos la presión del trabajo.",
+"pista": "expressing work stress"
+},
+{
+"id": "ser-presente-3544",
+"verbo": "ser",
+"contexto": "yo, esta tarde, profesor de historia",
+"respuesta": "Esta tarde, yo soy profesor de historia.",
+"pista": "expressing identity"
+},
+{
+"id": "ser-presente-3545",
+"verbo": "ser",
+"contexto": "tú, por lo general, muy inteligente",
+"respuesta": "Por lo general, tú eres muy inteligente.",
+"pista": "describing a trait"
+},
+{
+"id": "ser-presente-3546",
+"verbo": "ser",
+"contexto": "nosotros, mientras, un equipo fuerte",
+"respuesta": "Mientras, nosotros somos un equipo fuerte.",
+"pista": "expressing team identity"
+},
+{
+"id": "servir-presente-3547",
+"verbo": "servir",
+"contexto": "yo, a veces, la comida a los invitados",
+"respuesta": "Yo sirvo la comida a los invitados a veces.",
+"pista": "describing hosting"
+},
+{
+"id": "servir-presente-3548",
+"verbo": "servir",
+"contexto": "ella, cada vez que, café a los clientes",
+"respuesta": "Ella sirve café a los clientes cada vez que.",
+"pista": "narrating service"
+},
+{
+"id": "servir-presente-3549",
+"verbo": "servir",
+"contexto": "nosotros, ahora, a nuestra comunidad",
+"respuesta": "Nosotros servimos a nuestra comunidad ahora.",
+"pista": "expressing community service"
+},
+{
+"id": "significar-presente-3550",
+"verbo": "significar",
+"contexto": "eso, esta tarde, mucho para mí",
+"respuesta": "Esta tarde, eso significa mucho para mí.",
+"pista": "expressing importance"
+},
+{
+"id": "significar-presente-3551",
+"verbo": "significar",
+"contexto": "ella, en este momento, todo para su familia",
+"respuesta": "En este momento, ella significa todo para su familia.",
+"pista": "describing someone's importance"
+},
+{
+"id": "significar-presente-3552",
+"verbo": "significar",
+"contexto": "nosotros, esta noche, esperanza para los demás",
+"respuesta": "Esta noche, nosotros significamos esperanza para los demás.",
+"pista": "expressing symbolic meaning"
+},
+{
+"id": "soler-presente-3553",
+"verbo": "soler",
+"contexto": "yo, por lo general, despertarme temprano",
+"respuesta": "Yo suelo despertarme temprano por lo general.",
+"pista": "describing a usual habit"
+},
+{
+"id": "soler-presente-3554",
+"verbo": "soler",
+"contexto": "ella, a veces, cocinar los domingos",
+"respuesta": "A veces, ella suele cocinar los domingos.",
+"pista": "narrating routine"
+},
+{
+"id": "soler-presente-3555",
+"verbo": "soler",
+"contexto": "nosotros, ahora, ir al cine los sábados",
+"respuesta": "Nosotros solemos ir al cine los sábados ahora.",
+"pista": "describing weekend habit"
+},
+{
+"id": "soltar-presente-3556",
+"verbo": "soltar",
+"contexto": "yo, siempre, la cuerda",
+"respuesta": "Siempre, yo suelto la cuerda.",
+"pista": "describing letting go"
+},
+{
+"id": "soltar-presente-3557",
+"verbo": "soltar",
+"contexto": "tú, a veces, una carcajada",
+"respuesta": "Tú sueltas una carcajada a veces.",
+"pista": "describing spontaneous laughter"
+},
+{
+"id": "soltar-presente-3558",
+"verbo": "soltar",
+"contexto": "ella, ahora mismo, al perro en el parque",
+"respuesta": "Ahora mismo, ella suelta al perro en el parque.",
+"pista": "narrating pet freedom"
+},
+{
+"id": "sonar-presente-3559",
+"verbo": "sonar",
+"contexto": "el teléfono, cada vez que, durante la reunión",
+"respuesta": "Cada vez que, el teléfono suena durante la reunión.",
+"pista": "describing an interruption"
+},
+{
+"id": "sonar-presente-3560",
+"verbo": "sonar",
+"contexto": "la alarma, esta tarde, a las seis",
+"respuesta": "Esta tarde, la alarma suena a las seis.",
+"pista": "narrating wake-up time"
+},
+{
+"id": "sonar-presente-3561",
+"verbo": "sonar",
+"contexto": "eso, todos los días, interesante",
+"respuesta": "Eso suena interesante todos los días.",
+"pista": "expressing curiosity"
+},
+{
+"id": "subir-presente-3562",
+"verbo": "subir",
+"contexto": "yo, hoy, las escaleras",
+"respuesta": "Yo subo las escaleras hoy.",
+"pista": "describing physical activity"
+},
+{
+"id": "subir-presente-3563",
+"verbo": "subir",
+"contexto": "tú, esta tarde, al autobús",
+"respuesta": "Esta tarde, tú subes al autobús.",
+"pista": "describing boarding"
+},
+{
+"id": "subir-presente-3564",
+"verbo": "subir",
+"contexto": "nosotros, ahora, la montaña",
+"respuesta": "Nosotros subimos la montaña ahora.",
+"pista": "narrating a hike"
+},
+{
+"id": "suceder-presente-3565",
+"verbo": "suceder",
+"contexto": "eso, normalmente, con frecuencia",
+"respuesta": "Eso sucede con frecuencia normalmente.",
+"pista": "expressing recurrence"
+},
+{
+"id": "suceder-presente-3566",
+"verbo": "suceder",
+"contexto": "algo extraño, ahora, en la oficina",
+"respuesta": "Algo extraño sucede en la oficina ahora.",
+"pista": "narrating unusual events"
+},
+{
+"id": "suceder-presente-3567",
+"verbo": "suceder",
+"contexto": "los problemas, cada semana, cuando menos lo esperas",
+"respuesta": "Cada semana, los problemas sucede cuando menos lo esperas.",
+"pista": "describing unexpected issues"
+},
+{
+"id": "sufrir-presente-3568",
+"verbo": "sufrir",
+"contexto": "yo, normalmente, de alergias en primavera",
+"respuesta": "Normalmente, yo sufro de alergias en primavera.",
+"pista": "describing health issues"
+},
+{
+"id": "sufrir-presente-3569",
+"verbo": "sufrir",
+"contexto": "ella, siempre, por la distancia",
+"respuesta": "Ella sufre por la distancia siempre.",
+"pista": "narrating emotional pain"
+},
+{
+"id": "sufrir-presente-3570",
+"verbo": "sufrir",
+"contexto": "nosotros, ahora mismo, las consecuencias de nuestras decisiones",
+"respuesta": "Nosotros sufrimos las consecuencias de nuestras decisiones ahora mismo.",
+"pista": "expressing accountability"
+},
+{
+"id": "superar-presente-3571",
+"verbo": "superar",
+"contexto": "yo, esta tarde, mis miedos",
+"respuesta": "Yo supero mis miedos esta tarde.",
+"pista": "expressing overcoming fear"
+},
+{
+"id": "superar-presente-3572",
+"verbo": "superar",
+"contexto": "tú, esta mañana, todos los obstáculos",
+"respuesta": "Esta mañana, tú superas todos los obstáculos.",
+"pista": "encouraging perseverance"
+},
+{
+"id": "superar-presente-3573",
+"verbo": "superar",
+"contexto": "nosotros, actualmente, las expectativas",
+"respuesta": "Nosotros superamos las expectativas actualmente.",
+"pista": "expressing exceeding expectations"
+},
+{
+"id": "suponer-presente-3574",
+"verbo": "suponer",
+"contexto": "yo, ahora, que es verdad",
+"respuesta": "Ahora, yo supongo que es verdad.",
+"pista": "expressing assumption"
+},
+{
+"id": "suponer-presente-3575",
+"verbo": "suponer",
+"contexto": "eso, en este momento, un gran cambio",
+"respuesta": "Eso supone un gran cambio en este momento.",
+"pista": "describing implications"
+},
+{
+"id": "suponer-presente-3576",
+"verbo": "suponer",
+"contexto": "nosotros, ahora, que vendrá mañana",
+"respuesta": "Nosotros suponemos que vendrá mañana ahora.",
+"pista": "expressing expectation"
+},
+{
+"id": "temer-presente-3577",
+"verbo": "temer",
+"contexto": "yo, mientras, lo peor",
+"respuesta": "Yo temo lo peor mientras.",
+"pista": "expressing fear"
+},
+{
+"id": "temer-presente-3578",
+"verbo": "temer",
+"contexto": "ella, a veces, la oscuridad",
+"respuesta": "Ella teme la oscuridad a veces.",
+"pista": "narrating a phobia"
+},
+{
+"id": "temer-presente-3579",
+"verbo": "temer",
+"contexto": "nosotros, a veces, las consecuencias",
+"respuesta": "Nosotros tememos las consecuencias a veces.",
+"pista": "expressing worry about outcomes"
+},
+{
+"id": "tener-presente-3580",
+"verbo": "tener",
+"contexto": "yo, esta tarde, dos hermanos",
+"respuesta": "Esta tarde, yo tengo dos hermanos.",
+"pista": "describing family"
+},
+{
+"id": "tener-presente-3581",
+"verbo": "tener",
+"contexto": "tú, a veces, mucha suerte",
+"respuesta": "Tú tienes mucha suerte a veces.",
+"pista": "expressing fortune"
+},
+{
+"id": "tener-presente-3582",
+"verbo": "tener",
+"contexto": "nosotros, hoy, una reunión importante",
+"respuesta": "Nosotros tenemos una reunión importante hoy.",
+"pista": "describing schedule"
+},
+{
+"id": "terminar-presente-3583",
+"verbo": "terminar",
+"contexto": "yo, todos los días, el libro esta semana",
+"respuesta": "Todos los días, yo termino el libro esta semana.",
+"pista": "expressing completion"
+},
+{
+"id": "terminar-presente-3584",
+"verbo": "terminar",
+"contexto": "nosotros, por lo general, el proyecto a tiempo",
+"respuesta": "Nosotros terminamos el proyecto a tiempo por lo general.",
+"pista": "describing deadline success"
+},
+{
+"id": "terminar-presente-3585",
+"verbo": "terminar",
+"contexto": "tú, mientras, tus tareas",
+"respuesta": "Tú terminas tus tareas mientras.",
+"pista": "talking about responsibilities"
+},
+{
+"id": "tirar-presente-3586",
+"verbo": "tirar",
+"contexto": "yo, todos los días, la basura",
+"respuesta": "Todos los días, yo tiro la basura.",
+"pista": "describing a chore"
+},
+{
+"id": "tirar-presente-3587",
+"verbo": "tirar",
+"contexto": "tú, ahora, la pelota muy lejos",
+"respuesta": "Tú tiras la pelota muy lejos ahora.",
+"pista": "describing a throw"
+},
+{
+"id": "tirar-presente-3588",
+"verbo": "tirar",
+"contexto": "ella, ahora, los papeles viejos",
+"respuesta": "Ahora, ella tira los papeles viejos.",
+"pista": "narrating decluttering"
+},
+{
+"id": "tocar-presente-3589",
+"verbo": "tocar",
+"contexto": "yo, ahora, la guitarra",
+"respuesta": "Ahora, yo toco la guitarra.",
+"pista": "describing a musical hobby"
+},
+{
+"id": "tocar-presente-3590",
+"verbo": "tocar",
+"contexto": "ella, a veces, el piano con maestría",
+"respuesta": "Ella toca el piano con maestría a veces.",
+"pista": "narrating musical talent"
+},
+{
+"id": "tocar-presente-3591",
+"verbo": "tocar",
+"contexto": "nosotros, cada vez que, en una banda",
+"respuesta": "Nosotros tocamos en una banda cada vez que.",
+"pista": "describing group music"
+},
+{
+"id": "tomar-presente-3592",
+"verbo": "tomar",
+"contexto": "yo, cada vez que, una decisión importante",
+"respuesta": "Yo tomo una decisión importante cada vez que.",
+"pista": "expressing decision-making"
+},
+{
+"id": "tomar-presente-3593",
+"verbo": "tomar",
+"contexto": "tú, esta tarde, el sol en la playa",
+"respuesta": "Esta tarde, tú tomas el sol en la playa.",
+"pista": "describing sunbathing"
+},
+{
+"id": "tomar-presente-3594",
+"verbo": "tomar",
+"contexto": "nosotros, esta tarde, café en la mañana",
+"respuesta": "Esta tarde, nosotros tomamos café en la mañana.",
+"pista": "describing morning routine"
+},
+{
+"id": "trabajar-presente-3595",
+"verbo": "trabajar",
+"contexto": "yo, a veces, en una empresa grande",
+"respuesta": "Yo trabajo en una empresa grande a veces.",
+"pista": "describing employment"
+},
+{
+"id": "trabajar-presente-3596",
+"verbo": "trabajar",
+"contexto": "ella, esta tarde, desde casa",
+"respuesta": "Ella trabaja desde casa esta tarde.",
+"pista": "narrating remote work"
+},
+{
+"id": "trabajar-presente-3597",
+"verbo": "trabajar",
+"contexto": "nosotros, en este momento, en equipo",
+"respuesta": "Nosotros trabajamos en equipo en este momento.",
+"pista": "expressing teamwork"
+},
+{
+"id": "traer-presente-3598",
+"verbo": "traer",
+"contexto": "yo, cada semana, la comida para la fiesta",
+"respuesta": "Yo traigo la comida para la fiesta cada semana.",
+"pista": "describing contribution"
+},
+{
+"id": "traer-presente-3599",
+"verbo": "traer",
+"contexto": "tú, esta noche, buenas noticias",
+"respuesta": "Esta noche, tú traes buenas noticias.",
+"pista": "expressing positive delivery"
+},
+{
+"id": "traer-presente-3600",
+"verbo": "traer",
+"contexto": "ella, ahora mismo, flores para la oficina",
+"respuesta": "Ella trae flores para la oficina ahora mismo.",
+"pista": "narrating a kind gesture"
+},
+{
+"id": "tranquilar-presente-3601",
+"verbo": "tranquilar",
+"contexto": "yo, esta tarde, a los pasajeros nerviosos",
+"respuesta": "Yo tranquilo a los pasajeros nerviosos esta tarde.",
+"pista": "expressing calming others"
+},
+{
+"id": "tranquilar-presente-3602",
+"verbo": "tranquilar",
+"contexto": "ella, siempre, a su hijo antes de dormir",
+"respuesta": "Ella tranquila a su hijo antes de dormir siempre.",
+"pista": "narrating bedtime routine"
+},
+{
+"id": "tranquilar-presente-3603",
+"verbo": "tranquilar",
+"contexto": "nosotros, ahora, a los vecinos preocupados",
+"respuesta": "Ahora, nosotros tranquilamos a los vecinos preocupados.",
+"pista": "describing community reassurance"
+},
+{
+"id": "tratar-presente-3604",
+"verbo": "tratar",
+"contexto": "yo, todos los días, de ser amable",
+"respuesta": "Yo trato de ser amable todos los días.",
+"pista": "expressing effort to be kind"
+},
+{
+"id": "tratar-presente-3605",
+"verbo": "tratar",
+"contexto": "nosotros, hoy, a todos con respeto",
+"respuesta": "Nosotros tratamos a todos con respeto hoy.",
+"pista": "describing respectful behavior"
+},
+{
+"id": "tratar-presente-3606",
+"verbo": "tratar",
+"contexto": "ella, cada semana, el tema con cuidado",
+"respuesta": "Ella trata el tema con cuidado cada semana.",
+"pista": "narrating tactful discussion"
+},
+{
+"id": "unir-presente-3607",
+"verbo": "unir",
+"contexto": "nosotros, en este momento, fuerzas para el proyecto",
+"respuesta": "Nosotros unamos fuerzas para el proyecto en este momento.",
+"pista": "expressing collaboration"
+},
+{
+"id": "unir-presente-3608",
+"verbo": "unir",
+"contexto": "yo, hoy, las piezas del rompecabezas",
+"respuesta": "Yo uno las piezas del rompecabezas hoy.",
+"pista": "describing assembly"
+},
+{
+"id": "unir-presente-3609",
+"verbo": "unir",
+"contexto": "ella, esta tarde, a la familia en momentos difíciles",
+"respuesta": "Esta tarde, ella una a la familia en momentos difíciles.",
+"pista": "narrating family unity"
+},
+{
+"id": "usar-presente-3610",
+"verbo": "usar",
+"contexto": "yo, siempre, el transporte público",
+"respuesta": "Yo uso el transporte público siempre.",
+"pista": "describing commuting"
+},
+{
+"id": "usar-presente-3611",
+"verbo": "usar",
+"contexto": "tú, todos los días, mucha tecnología",
+"respuesta": "Tú usas mucha tecnología todos los días.",
+"pista": "talking about tech habits"
+},
+{
+"id": "usar-presente-3612",
+"verbo": "usar",
+"contexto": "nosotros, esta tarde, materiales reciclados",
+"respuesta": "Esta tarde, nosotros usamos materiales reciclados.",
+"pista": "expressing eco-friendly choices"
+},
+{
+"id": "utilizar-presente-3613",
+"verbo": "utilizar",
+"contexto": "yo, ahora, herramientas modernas",
+"respuesta": "Yo utilizo herramientas modernas ahora.",
+"pista": "describing tool usage"
+},
+{
+"id": "utilizar-presente-3614",
+"verbo": "utilizar",
+"contexto": "nosotros, en este momento, energía renovable",
+"respuesta": "En este momento, nosotros utilizamos energía renovable.",
+"pista": "expressing sustainability"
+},
+{
+"id": "utilizar-presente-3615",
+"verbo": "utilizar",
+"contexto": "ella, cada vez que, métodos innovadores",
+"respuesta": "Cada vez que, ella utiliza métodos innovadores.",
+"pista": "narrating creative approaches"
+},
+{
+"id": "valer-presente-3616",
+"verbo": "valer",
+"contexto": "eso, a veces, mucho dinero",
+"respuesta": "Eso vale mucho dinero a veces.",
+"pista": "expressing value"
+},
+{
+"id": "valer-presente-3617",
+"verbo": "valer",
+"contexto": "yo, hoy, por mis habilidades",
+"respuesta": "Hoy, yo valgo por mis habilidades.",
+"pista": "expressing self-worth"
+},
+{
+"id": "valer-presente-3618",
+"verbo": "valer",
+"contexto": "el esfuerzo, esta tarde, la pena",
+"respuesta": "El esfuerzo vale la pena esta tarde.",
+"pista": "describing worthwhile effort"
+},
+{
+"id": "vender-presente-3619",
+"verbo": "vender",
+"contexto": "yo, ahora mismo, productos artesanales",
+"respuesta": "Ahora mismo, yo vendo productos artesanales.",
+"pista": "describing a business"
+},
+{
+"id": "vender-presente-3620",
+"verbo": "vender",
+"contexto": "tú, cada semana, tu coche viejo",
+"respuesta": "Tú vendes tu coche viejo cada semana.",
+"pista": "talking about selling possessions"
+},
+{
+"id": "vender-presente-3621",
+"verbo": "vender",
+"contexto": "nosotros, cada vez que, servicios de consultoría",
+"respuesta": "Nosotros vendemos servicios de consultoría cada vez que.",
+"pista": "describing professional offerings"
+},
+{
+"id": "venir-presente-3622",
+"verbo": "venir",
+"contexto": "yo, ahora mismo, de una familia grande",
+"respuesta": "Ahora mismo, yo vengo de una familia grande.",
+"pista": "expressing origin"
+},
+{
+"id": "venir-presente-3623",
+"verbo": "venir",
+"contexto": "ella, cada semana, a la reunión puntual",
+"respuesta": "Ella viene a la reunión puntual cada semana.",
+"pista": "narrating punctuality"
+},
+{
+"id": "venir-presente-3624",
+"verbo": "venir",
+"contexto": "ellos, ahora mismo, de muy lejos",
+"respuesta": "Ellos vienen de muy lejos ahora mismo.",
+"pista": "describing long-distance travel"
+},
+{
+"id": "ver-presente-3625",
+"verbo": "ver",
+"contexto": "yo, esta tarde, una película interesante",
+"respuesta": "Esta tarde, yo veo una película interesante.",
+"pista": "describing entertainment"
+},
+{
+"id": "ver-presente-3626",
+"verbo": "ver",
+"contexto": "tú, esta mañana, el partido de fútbol",
+"respuesta": "Esta mañana, tú ves el partido de fútbol.",
+"pista": "talking about watching sports"
+},
+{
+"id": "ver-presente-3627",
+"verbo": "ver",
+"contexto": "nosotros, ahora mismo, las noticias juntos",
+"respuesta": "Nosotros vemos las noticias juntos ahora mismo.",
+"pista": "describing a shared activity"
+},
+{
+"id": "viajar-presente-3628",
+"verbo": "viajar",
+"contexto": "yo, cada vez que, por Europa",
+"respuesta": "Cada vez que, yo viajo por Europa.",
+"pista": "describing travel"
+},
+{
+"id": "viajar-presente-3629",
+"verbo": "viajar",
+"contexto": "ella, esta tarde, por trabajo",
+"respuesta": "Ella viaja por trabajo esta tarde.",
+"pista": "narrating business travel"
+},
+{
+"id": "viajar-presente-3630",
+"verbo": "viajar",
+"contexto": "nosotros, siempre, en tren",
+"respuesta": "Siempre, nosotros viajamos en tren.",
+"pista": "describing a mode of transport"
+},
+{
+"id": "vivir-presente-3631",
+"verbo": "vivir",
+"contexto": "yo, cada vez que, en una ciudad grande",
+"respuesta": "Yo vivo en una ciudad grande cada vez que.",
+"pista": "expressing where I live"
+},
+{
+"id": "vivir-presente-3632",
+"verbo": "vivir",
+"contexto": "tú, todos los días, cerca del centro",
+"respuesta": "Tú vives cerca del centro todos los días.",
+"pista": "describing location"
+},
+{
+"id": "vivir-presente-3633",
+"verbo": "vivir",
+"contexto": "nosotros, esta tarde, una vida tranquila",
+"respuesta": "Esta tarde, nosotros vivimos una vida tranquila.",
+"pista": "expressing lifestyle"
+},
+{
+"id": "volar-presente-3634",
+"verbo": "volar",
+"contexto": "yo, siempre, a Madrid",
+"respuesta": "Yo vuelo a Madrid siempre.",
+"pista": "describing air travel"
+},
+{
+"id": "volar-presente-3635",
+"verbo": "volar",
+"contexto": "nosotros, esta tarde, en primera clase",
+"respuesta": "Nosotros volamos en primera clase esta tarde.",
+"pista": "describing travel luxury"
+},
+{
+"id": "volar-presente-3636",
+"verbo": "volar",
+"contexto": "ella, a veces, a su destino favorito",
+"respuesta": "Ella vuela a su destino favorito a veces.",
+"pista": "narrating travel plans"
+},
+{
+"id": "volver-presente-3637",
+"verbo": "volver",
+"contexto": "yo, siempre, a casa después del trabajo",
+"respuesta": "Siempre, yo vuelvo a casa después del trabajo.",
+"pista": "describing return home"
+},
+{
+"id": "volver-presente-3638",
+"verbo": "volver",
+"contexto": "tú, todos los días, a intentar",
+"respuesta": "Tú vuelves a intentar todos los días.",
+"pista": "encouraging persistence"
+},
+{
+"id": "volver-presente-3639",
+"verbo": "volver",
+"contexto": "nosotros, a veces, al mismo lugar cada año",
+"respuesta": "A veces, nosotros volvemos al mismo lugar cada año.",
+"pista": "describing tradition"
+}
+]

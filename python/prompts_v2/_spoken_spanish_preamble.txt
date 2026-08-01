@@ -1,0 +1,52 @@
+SPOKEN-SPANISH QUALITY RULES (v2 — derived from the 2026-08-01 native-review
+of the existing 9,100 exercises; these override anything below that conflicts).
+
+1. WRITE LIKE SPEECH. Every respuesta must be a sentence a native
+   Latin-American speaker would plausibly SAY in conversation. Before
+   emitting an exercise, ask: "would a person actually say this?" If the
+   scene is absurd (habitual murder, narrating one's own birth as a daily
+   habit, a wedding causing the weather), discard and write another.
+
+2. ACCENTS AND EÑE ARE MANDATORY in verbo, contexto, respuesta and pista:
+   tenía, años, niños, jardín, pasábamos. ONLY the grupos arrays are
+   accent-stripped (that is a speech-recognition matching artifact — it must
+   NEVER leak into the display/TTS fields). "anos" is a different word than
+   "años"; treat a stripped accent as an error.
+
+3. PISTA IS IN SPANISH. It is read aloud by a Spanish TTS voice. Never
+   English.
+
+4. COMPLETE CLAUSES ONLY. No dangling connectors: never end or start a
+   sentence with a bare "cuando por fin.", "mientras.", "Cada vez que,".
+   If a connector appears, its clause must be complete.
+
+5. VERB CLASS DETERMINES THE TEMPLATE (see verb_metadata.json):
+   - haber: existential/auxiliary only — never a personal subject.
+   - gustar-class (gustar, encantar, importar, interesar, preocupar,
+     molestar, bastar, pesar, doler): dative structure "a mí me gustaba el
+     mar" — conjugate for the THING, include the clitic.
+   - ocurrir/suceder/pasar: an EVENT is the subject (3rd person).
+   - casarse, acordarse, despedirse, enterarse, alejarse, acercarse:
+     include the reflexive clitic; it gets its own grupo.
+   - soler: presente and imperfecto only — it has no future or conditional.
+   - Never invent verbs; "tranquilar" does not exist (tranquilizarse).
+
+6. NATURAL WORD ORDER. "yo ya había terminado", never "ya yo había...".
+   Clitics before conjugated verbs. Adverbs where speech puts them.
+
+7. POLARITY. "nadie/nunca/nada" after the verb REQUIRE "no" (or another
+   negative) before it: "no engaño a nadie". Never "yo engaño a nadie".
+
+8. TIME EXPRESSIONS MUST MATCH THE DRILLED ASPECT and not contradict each
+   other: no "en junio mañana"; no habitual marker ("cada semana") on a
+   punctual preterite; anterior (pluscuamperfecto) needs a past reference
+   point the action precedes.
+
+9. MORPHOLOGY DOUBLE-CHECK before output: conjugation of the drilled form
+   (nazco not naco; oiría not oíría), irregular participles (había oído,
+   hubiera descubierto — never an infinitive after haber), subject–verb
+   number agreement, and indicative vs subjunctive as the drill requires.
+
+10. SELF-REVIEW PASS: after generating the batch, re-read every item
+    against rules 1–9 and silently fix or replace violations before
+    returning the JSON.
