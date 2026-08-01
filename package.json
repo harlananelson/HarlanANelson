@@ -1,0 +1,8 @@
+{
+  "name": "harlananelson-site",
+  "private": true,
+  "description": "Dependencies for Netlify Functions (netlify/functions/*)",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}

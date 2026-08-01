@@ -135,21 +135,32 @@
           <span class="pill" id="estadoPill">Status: new</span>
           <span class="pill" id="colaPill">Review: 0</span>
           <span class="pill" id="vozPill">Mic: ready</span>
-          <button type="button" class="pill" id="slowToggle" style="cursor:pointer; border:none; font:inherit;">Speed: normal</button>
         </div>
         <div class="target"><span id="verboLine"></span> <span class="tense-label" id="tenseLabel"></span></div>
         <div class="hint" id="definicionLine" style="margin-top:var(--space-2); font-style:italic;"></div>
         <div class="context" id="contextoLine"></div>
         <div class="hint" id="pistaLine"></div>
 
-        <div class="actions" style="margin-top:1rem;">
-          <button class="btn primary" id="contextoBtn">Hear context</button>
-          <button class="btn secondary-strong" id="verboBtn">Hear verb</button>
-          <button class="btn" id="pistaBtn">Hear hint</button>
-          <button class="btn" id="decirBtn">Say answer</button>
-          <button class="btn" id="fraseBtn">Hear model sentence</button>
-          <button class="btn" id="instruccionesBtn">Hear instructions</button>
-          <button class="btn" id="nextBtn">Next</button>
+        <style>
+          .actions-primary { display:flex; gap:var(--space-2); flex-wrap:wrap; margin-top:1rem; }
+          .actions-primary .btn.big { font-size:1.1rem; padding:0.85em 1.3em; flex:2 1 12rem; }
+          .actions-primary .btn.next { flex:1 1 7rem; }
+          .listen-group { display:flex; align-items:center; gap:var(--space-2); flex-wrap:wrap; margin-top:var(--space-2); }
+          .listen-group .mini { opacity:0.7; }
+          .listen-group .btn { font-size:0.85rem; padding:0.4em 0.7em; }
+        </style>
+        <div class="actions-primary">
+          <button class="btn primary big" id="decirBtn">🎤 Say answer</button>
+          <button class="btn secondary-strong next" id="nextBtn">Next →</button>
+        </div>
+        <div class="listen-group" role="group" aria-label="Listen">
+          <span class="mini">Listen:</span>
+          <button class="btn" id="contextoBtn">Context</button>
+          <button class="btn" id="verboBtn">Verb</button>
+          <button class="btn" id="pistaBtn">Hint</button>
+          <button class="btn" id="fraseBtn">Model sentence</button>
+          <button class="btn" id="slowToggle">Speed: normal</button>
+          <button class="btn" id="instruccionesBtn">Instructions</button>
         </div>
 
         <div class="voicebox" aria-live="polite">
@@ -12021,5 +12032,6 @@ actualizar();
 $('vozPill').textContent = elEnabled ? 'Voice: ElevenLabs' : 'Voice: browser';
 </script>
 <script src="drill-recognition-engines-en.js"></script>
+<script src="drill-tracking.js"></script>
 </body>
 </html>
