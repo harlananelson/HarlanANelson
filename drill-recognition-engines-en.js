@@ -260,8 +260,14 @@
     try { userKey = (localStorage.getItem('el_api_key') || '').trim(); } catch (e) {}
 
     function handleText(t) { if (altActive) { deliver(typeof t === 'string' ? t : ''); } }
-    function handleErr(err) {
-      if (altActive) { deliver('', 'ElevenLabs transcription failed: ' + ((err && err.message) || err)); }
+
+    function serverTranscribe() {
+      fetch('/.netlify/functions/stt', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ audio_base64: bufToBase64(wav), language: 'en' })
+      }).then(parseElevenLabs).then(handleText).catch(function (err) {
+        if (altActive) { deliver('', 'ElevenLabs (server): ' + ((err && err.message) || err)); }
+      });
     }
 
     if (userKey) {
@@ -271,14 +277,16 @@
       form.append('file', new Blob([wav], { type: 'audio/wav' }), 'answer.wav');
       fetch('https://api.elevenlabs.io/v1/speech-to-text', {
         method: 'POST', headers: { 'xi-api-key': userKey }, body: form
-      }).then(parseElevenLabs).then(handleText).catch(handleErr);
-    } else {
-      fetch('/.netlify/functions/stt', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ audio_base64: bufToBase64(wav), language: 'en' })
       }).then(parseElevenLabs).then(handleText).catch(function (err) {
-        if (altActive) { deliver('', 'ElevenLabs (server): ' + ((err && err.message) || err)); }
+        // A personal key that is invalid, revoked, or missing the
+        // speech_to_text permission shouldn't dead-end the drill — fall
+        // back to the server-side key.
+        var m = String((err && err.message) || err);
+        if (/\b401\b|\b403\b|unauthorized|permission|invalid api key/i.test(m)) { serverTranscribe(); return; }
+        if (altActive) { deliver('', 'ElevenLabs transcription failed: ' + m); }
       });
+    } else {
+      serverTranscribe();
     }
   }
   function parseElevenLabs(res) {
