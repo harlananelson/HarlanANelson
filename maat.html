@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0f1419">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Maat">
+<meta name="description" content="Maat — right order for a whole digital life. One app under your control.">
+<!-- PWA: name Maat, standalone, feather icon -->
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiTWFhdCIsInNob3J0X25hbWUiOiJNYWF0IiwiZGVzY3JpcHRpb24iOiJSaWdodCBvcmRlciBmb3IgYSB3aG9sZSBkaWdpdGFsIGxpZmUuIE9uZSBhcHAgdW5kZXIgeW91ciBjb250cm9sLiIsInN0YXJ0X3VybCI6Ii4vbWFhdC5odG1sIiwic2NvcGUiOiIuLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwib3JpZW50YXRpb24iOiJhbnkiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiIzBmMTQxOSIsInRoZW1lX2NvbG9yIjoiIzBmMTQxOSIsImljb25zIjpbeyJzcmMiOiJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0OGNtVmpkQ0IzYVdSMGFEMGlOVEV5SWlCb1pXbG5hSFE5SWpVeE1pSWdjbmc5SWpFeE1pSWdabWxzYkQwaUl6Qm1NVFF4T1NJdlBqeHdZWFJvSUdROUlrMHlOVFlnT1RaakxUSTBJREF0TkRRZ01qQXRORFFnTkRSMk1UYzJZekFnTmpBZ05EZ2dNVEE0SURFd09DQXhNRGdnTWpRZ01DQTBOQzB5TUNBME5DMDBOSE10TWpBdE5EUXRORFF0TkRSakxUSTBJREF0TkRRdE1qQXRORFF0TkRSV01UUXdZekF0TWpRdE1qQXRORFF0TkRRdE5EUjZJaUJtYVd4c1BTSWpZemhoTXpaaklpOCtQSEJoZEdnZ1pEMGlUVEl5TUNBek9EQm9OekoyTXpKb0xUY3llaUlnWm1sc2JEMGlJMk00WVRNMll5SXZQanh3WVhSb0lHUTlJazB4T1RJZ05ESTBhREV5T0hZeU5FZ3hPVEo2SWlCbWFXeHNQU0lqWXpoaE16WmpJaUJ2Y0dGamFYUjVQU0l1TnlJdlBqd3ZjM1puUGc9PSIsInNpemVzIjoiYW55IiwidHlwZSI6ImltYWdlL3N2Zyt4bWwiLCJwdXJwb3NlIjoiYW55IG1hc2thYmxlIn1dfQ=="
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iIzBmMTQxOSIvPjxwYXRoIGQ9Ik0yNTYgOTZjLTI0IDAtNDQgMjAtNDQgNDR2MTc2YzAgNjAgNDggMTA4IDEwOCAxMDggMjQgMCA0NC0yMCA0NC00NHMtMjAtNDQtNDQtNDRjLTI0IDAtNDQtMjAtNDQtNDRWMTQwYzAtMjQtMjAtNDQtNDQtNDR6IiBmaWxsPSIjYzhhMzZjIi8+PHBhdGggZD0iTTIyMCAzODBoNzJ2MzJoLTcyeiIgZmlsbD0iI2M4YTM2YyIvPjxwYXRoIGQ9Ik0xOTIgNDI0aDEyOHYyNEgxOTJ6IiBmaWxsPSIjYzhhMzZjIiBvcGFjaXR5PSIuNyIvPjwvc3ZnPg==">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iIzBmMTQxOSIvPjxwYXRoIGQ9Ik0yNTYgOTZjLTI0IDAtNDQgMjAtNDQgNDR2MTc2YzAgNjAgNDggMTA4IDEwOCAxMDggMjQgMCA0NC0yMCA0NC00NHMtMjAtNDQtNDQtNDRjLTI0IDAtNDQtMjAtNDQtNDRWMTQwYzAtMjQtMjAtNDQtNDQtNDR6IiBmaWxsPSIjYzhhMzZjIi8+PHBhdGggZD0iTTIyMCAzODBoNzJ2MzJoLTcyeiIgZmlsbD0iI2M4YTM2YyIvPjwvc3ZnPg==">
+<title>Maat</title>
+<style>
+  /* Maat: one installable shell. Modes load existing apps in iframes — no
+     backend change. Sermon + Voice/AI need Tailscale and home services. */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: #0f1419; color: #e8e6e1;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  #banner {
+    display: none; background: #4a1f1c; color: #ffb4a8; font-size: 14px;
+    padding: 10px 14px; line-height: 1.4; white-space: pre-wrap; cursor: pointer;
+    border-bottom: 1px solid #6b2a25;
+  }
+  #banner.show { display: block; }
+  #views { position: relative; flex: 1; min-height: 0; }
+  .view {
+    position: absolute; inset: 0; display: none;
+    border: 0; width: 100%; height: 100%; background: #0f1419;
+  }
+  .view.active { display: block; }
+  .panel {
+    position: absolute; inset: 0; display: none;
+    overflow-y: auto; padding: 28px 22px 40px; max-width: 640px; margin: 0 auto;
+  }
+  .panel.active { display: block; }
+  .panel h1 {
+    font-size: 28px; font-weight: 600; letter-spacing: 0.02em;
+    color: #e8e6e1; margin-bottom: 6px;
+  }
+  .panel .tagline { color: #c8a36c; font-size: 17px; margin-bottom: 20px; line-height: 1.4; }
+  .panel p { font-size: 16px; line-height: 1.55; color: #b8b4ac; margin-bottom: 14px; }
+  .panel ul { margin: 0 0 16px 1.2em; color: #b8b4ac; font-size: 15px; line-height: 1.5; }
+  .panel li { margin-bottom: 6px; }
+  .panel .note {
+    margin-top: 20px; padding: 14px 16px; border-radius: 12px;
+    background: #1a222c; border: 1px solid #2a3540; font-size: 14px; color: #9aa3ad;
+  }
+  .panel code { font-size: 13px; color: #c8a36c; }
+  #tabs {
+    display: flex; background: #151c24; border-top: 1px solid #2a3540;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+  #tabs button {
+    flex: 1; background: none; border: 0; color: #7a8490; cursor: pointer;
+    padding: 10px 4px 12px; font-size: 11px; display: flex; flex-direction: column;
+    align-items: center; gap: 3px; touch-action: manipulation;
+  }
+  #tabs button .ic { font-size: 22px; line-height: 1; }
+  #tabs button.sel { color: #c8a36c; }
+  #tabs button.gear { flex: 0 0 56px; }
+  #settings {
+    position: absolute; inset: 0; z-index: 10; display: none;
+    flex-direction: column; background: #121820; padding: 22px;
+    overflow-y: auto; gap: 6px;
+  }
+  #settings.open { display: flex; }
+  #settings h1 { font-size: 22px; margin-bottom: 6px; color: #e8e6e1; }
+  #settings p.note { font-size: 14px; color: #8a939e; line-height: 1.5; margin-bottom: 10px; }
+  #settings label { display: block; font-size: 14px; color: #9aa3ad; margin: 14px 0 5px; }
+  #settings input {
+    width: 100%; font-size: 16px; padding: 12px; border-radius: 10px;
+    border: 1px solid #3a4550; background: #1a222c; color: #e8e6e1;
+  }
+  #settings .row { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+  #settings button {
+    background: #c8a36c; color: #0f1419; border: 0; border-radius: 12px;
+    font-size: 17px; padding: 13px 20px; cursor: pointer; font-weight: 600;
+  }
+  #settings button.secondary { background: #2a3540; color: #e8e6e1; font-weight: 500; }
+  .empty {
+    position: absolute; inset: 0; display: none;
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: 16px; text-align: center; padding: 28px; color: #9aa3ad;
+  }
+  .empty.active { display: flex; }
+  .empty h2 { font-size: 20px; color: #e8e6e1; }
+  .empty button {
+    background: #c8a36c; color: #0f1419; border: 0; border-radius: 12px;
+    font-size: 16px; padding: 12px 18px; cursor: pointer; font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+<div id="banner"></div>
+<div id="views"></div>
+
+<div id="settings">
+  <h1>Maat</h1>
+  <p class="note">Each mode loads an existing tool. Sermon and Voice need
+    Tailscale and the matching home service. Blank a URL to hide that mode.
+    Saved in this browser only.</p>
+  <div id="settingsFields"></div>
+  <div class="row">
+    <button id="saveModes" type="button">Save</button>
+    <button id="closeSettings" type="button" class="secondary">Cancel</button>
+  </div>
+</div>
+
+<nav id="tabs" aria-label="Maat modes"></nav>
+
+<script>
+"use strict";
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+
+  function reportError(source, message) {
+    try {
+      var bridge = (localStorage.getItem("tb_bridge") || "").replace(/\/+$/, "");
+      var token = localStorage.getItem("tb_token") || "";
+      if (bridge && token) {
+        fetch(bridge + "/api/clientlog", {
+          method: "POST",
+          headers: { "Authorization": "Bearer " + token, "Content-Type": "application/json" },
+          body: JSON.stringify({ source: source, message: String(message).slice(0, 900), ua: navigator.userAgent })
+        }).catch(function () {});
+      }
+    } catch (e) {}
+  }
+  function showBanner(text) {
+    var b = $("banner");
+    b.textContent = "⚠ " + text + "  (tap to dismiss)";
+    b.className = "show";
+  }
+  var banner = $("banner");
+  if (banner) banner.onclick = function () { banner.className = ""; };
+  window.addEventListener("error", function (e) {
+    var m = (e.message || "error") + " @ " + (e.filename || "") + ":" + (e.lineno || 0);
+    reportError("maat.html", m); showBanner(m);
+  });
+  window.addEventListener("unhandledrejection", function (e) {
+    var r = e.reason; var m = "unhandledrejection: " + ((r && r.message) || r || "");
+    reportError("maat.html", m); showBanner(m);
+  });
+
+  // Modes: existing pages in iframes (+ About panel). Editable URLs.
+  var DEFAULTS = [
+    {
+      id: "sermon",
+      label: "Sermon",
+      icon: "📖",
+      url: "./live-translator.html",
+      kind: "iframe",
+      hint: "Home GPU translator. On iPad prefer the tailnet page if WebSocket fails."
+    },
+    {
+      id: "voice",
+      label: "Voice + AI",
+      icon: "🎙️",
+      url: "./tesla-assistant.html?mode=mic",
+      kind: "iframe",
+      hint: "Transcribe on the workstation, answer with Ollama/Claude/Grok, speak back."
+    },
+    {
+      id: "assistant",
+      label: "Assistant",
+      icon: "💬",
+      url: "./tesla-assistant.html",
+      kind: "iframe",
+      hint: "Full chat + agents UI (same bridge as Voice)."
+    },
+    {
+      id: "about",
+      label: "About",
+      icon: "🪶",
+      url: "",
+      kind: "about"
+    }
+  ];
+
+  function loadModes() {
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem("maat_urls") || "{}"); } catch (e) {}
+    return DEFAULTS.map(function (a) {
+      var u = saved[a.id];
+      return {
+        id: a.id, label: a.label, icon: a.icon, kind: a.kind, hint: a.hint,
+        url: (u === undefined ? a.url : u)
+      };
+    });
+  }
+  function saveModes(modes) {
+    var m = {};
+    modes.forEach(function (a) { m[a.id] = a.url; });
+    try { localStorage.setItem("maat_urls", JSON.stringify(m)); } catch (e) {}
+  }
+
+  var modes = loadModes();
+  var active = null;
+  try { active = localStorage.getItem("maat_active"); } catch (e) {}
+
+  function aboutHtml() {
+    return (
+      '<h1>Maat</h1>' +
+      '<p class="tagline">Right order for a whole digital life.</p>' +
+      '<p>One app under <strong style="color:#e8e6e1">your</strong> control — ' +
+      'work and data held together, not scattered across silos that each own a fragment of your life.</p>' +
+      '<p>Maat is an ancient word for right order and balance. We use it for a simple idea: ' +
+      'one place for the work of a life, with the data under the person who lives it.</p>' +
+      '<p><strong style="color:#e8e6e1">Modes (v1)</strong></p>' +
+      '<ul>' +
+      '<li><strong>Sermon</strong> — live Spanish→English captions (home GPU when available)</li>' +
+      '<li><strong>Voice + AI</strong> — speak → transcribe on your machine → answer → hear the reply</li>' +
+      '<li><strong>Assistant</strong> — same bridge: chat, agents, continuous dictation</li>' +
+      '</ul>' +
+      '<p>Language drills are a <em>separate</em> public app ' +
+      '(<a href="./languages.html" style="color:#c8a36c">Languages</a>), so learning stays easy to share.</p>' +
+      '<div class="note">' +
+      '<strong style="color:#e8e6e1">To test modes that use the home workstation</strong><br>' +
+      '1. Connect Tailscale on this device<br>' +
+      '2. Sermon: <code>cd ~/projects/biblestudy && bash server/run.sh</code><br>' +
+      '3. Voice / Assistant: tesla-bridge <code>bin/serve</code> + token in the page Settings<br>' +
+      '4. On iPad, sermon WebSockets work best from the tailnet origin if this page cannot open <code>wss://</code>' +
+      '</div>' +
+      '<p style="margin-top:18px;font-size:13px;color:#6a7380">Existing tools are unchanged — Maat only launches them. ' +
+      'Direct links: live-translator, tesla-assistant, apps hub still work.</p>'
+    );
+  }
+
+  function build() {
+    var views = $("views"); views.innerHTML = "";
+    var tabs = $("tabs"); tabs.innerHTML = "";
+    modes.forEach(function (a) {
+      if (a.kind === "about") {
+        var p = document.createElement("div");
+        p.className = "panel"; p.id = "view-" + a.id;
+        p.innerHTML = aboutHtml();
+        views.appendChild(p);
+      } else if (a.url) {
+        var f = document.createElement("iframe");
+        f.className = "view"; f.id = "view-" + a.id;
+        f.setAttribute("allow", "microphone; autoplay; clipboard-write; clipboard-read; fullscreen");
+        f.setAttribute("title", a.label);
+        f.dataset.src = a.url;
+        views.appendChild(f);
+      } else {
+        var e = document.createElement("div");
+        e.className = "empty"; e.id = "view-" + a.id;
+        e.innerHTML = "<h2>" + a.icon + " " + a.label + "</h2>" +
+          "<p>No URL set. Open settings and paste the tool address.</p>";
+        var b = document.createElement("button");
+        b.type = "button"; b.textContent = "Open settings";
+        b.onclick = function () { openSettings(true); };
+        e.appendChild(b);
+        views.appendChild(e);
+      }
+      var t = document.createElement("button");
+      t.type = "button";
+      t.id = "tab-" + a.id;
+      t.innerHTML = '<span class="ic">' + a.icon + '</span>' + a.label;
+      t.onclick = function () { show(a.id); };
+      tabs.appendChild(t);
+    });
+    var gear = document.createElement("button");
+    gear.type = "button";
+    gear.className = "gear";
+    gear.innerHTML = '<span class="ic">⚙️</span>';
+    gear.setAttribute("aria-label", "Settings");
+    gear.onclick = function () { openSettings(true); };
+    tabs.appendChild(gear);
+
+    var ids = modes.map(function (a) { return a.id; });
+    if (ids.indexOf(active) < 0) active = ids[0] || "about";
+    show(active);
+  }
+
+  function watchIframeLoad(frame, app) {
+    var done = false;
+    var timer = setTimeout(function () {
+      if (done) return;
+      var m = app.label + " did not load (" + app.url + ") — is Tailscale on / service running?";
+      reportError("maat.html/" + app.id, m); showBanner(m);
+    }, 12000);
+    frame.addEventListener("load", function () { done = true; clearTimeout(timer); });
+    frame.addEventListener("error", function () {
+      done = true; clearTimeout(timer);
+      var m = app.label + " failed to load (" + app.url + ")";
+      reportError("maat.html/" + app.id, m); showBanner(m);
+    });
+  }
+
+  function show(id) {
+    active = id;
+    try { localStorage.setItem("maat_active", id); } catch (e) {}
+    modes.forEach(function (a) {
+      var v = $("view-" + a.id), t = $("tab-" + a.id);
+      var on = a.id === id;
+      if (v) {
+        if (on && v.tagName === "IFRAME" && !v.getAttribute("src") && v.dataset.src) {
+          watchIframeLoad(v, a);
+          v.src = v.dataset.src;
+        }
+        v.classList.toggle("active", on);
+      }
+      if (t) t.classList.toggle("sel", on);
+    });
+  }
+
+  function openSettings(open) {
+    if (open) {
+      var wrap = $("settingsFields"); wrap.innerHTML = "";
+      modes.forEach(function (a) {
+        if (a.kind === "about") return;
+        var lab = document.createElement("label");
+        lab.textContent = a.label + " URL";
+        lab.htmlFor = "url-" + a.id;
+        var inp = document.createElement("input");
+        inp.id = "url-" + a.id; inp.value = a.url || "";
+        inp.autocapitalize = "off"; inp.spellcheck = false;
+        inp.placeholder = a.hint || "https://… or ./page.html";
+        wrap.appendChild(lab); wrap.appendChild(inp);
+        if (a.hint) {
+          var h = document.createElement("p");
+          h.className = "note"; h.style.margin = "4px 0 0";
+          h.style.fontSize = "12px"; h.textContent = a.hint;
+          wrap.appendChild(h);
+        }
+      });
+    }
+    $("settings").classList.toggle("open", open);
+  }
+  $("saveModes").onclick = function () {
+    modes.forEach(function (a) {
+      if (a.kind === "about") return;
+      var el = $("url-" + a.id);
+      if (!el) return;
+      a.url = (el.value || "").trim().replace(/\s+/g, "");
+    });
+    saveModes(modes);
+    openSettings(false);
+    build();
+  };
+  $("closeSettings").onclick = function () { openSettings(false); };
+
+  // Deep link: ?mode=sermon|voice|assistant|about
+  try {
+    var q = new URLSearchParams(location.search).get("mode");
+    if (q) active = q;
+  } catch (e) {}
+
+  build();
+})();
+</script>
+</body>
+</html>
