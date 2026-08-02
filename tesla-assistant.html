@@ -146,6 +146,15 @@
   <button id="convoBtn" class="secondary">🔁 Hands-free conversation: off</button>
   <button id="contBtn" class="secondary">⏺ Continuous transcription: off</button>
   <button id="analyzeBtn" class="secondary" style="display:none">🧠 Analyze transcript</button>
+  <div id="analysisPane" style="display:none; position:fixed; inset:0; z-index:30; background:rgba(0,0,0,.55); padding:20px;">
+    <div style="max-width:640px; margin:0 auto; max-height:100%; display:flex; flex-direction:column; background:#161b22; border:1px solid #30363d; border-radius:12px; overflow:hidden;">
+      <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; border-bottom:1px solid #30363d;">
+        <strong style="flex:1">🧠 Transcript analyses</strong>
+        <button id="analysisClose" class="secondary" style="margin:0">Close</button>
+      </div>
+      <div id="analysisList" style="overflow-y:auto; padding:12px 14px; white-space:pre-wrap; font-size:15px; line-height:1.5;"></div>
+    </div>
+  </div>
   <div id="micText">Tap to talk: tap once, speak, tap again to send. Hands-free:
     tap once and just talk; it replies out loud, then listens again. Continuous:
     always-on listening that just keeps transcribing — no spoken replies, nothing
@@ -495,11 +504,41 @@
   }
   // On-demand: send the accumulated transcript for a TEXT analysis (no audio,
   // and via a side session so it doesn't disturb the running transcript sync).
+  // Runs as a BACKGROUND job: it never touches the main status line and the
+  // result waits in a separate pane — the live transcript flow is never
+  // interrupted. Progress/ready state is shown only on the button itself.
+  var analysisResults = [];   // newest first
+  var analysisRunning = false, analysisUnseen = 0;
+  function paintAnalyzeBtn() {
+    var a = $("analyzeBtn");
+    if (!a) return;
+    if (analysisRunning) {
+      a.textContent = analysisUnseen
+        ? "🧠 analyzing… (" + analysisUnseen + " ready)"
+        : "🧠 analyzing…";
+    } else if (analysisUnseen) {
+      a.textContent = "🧠 " + analysisUnseen + " analysis ready — view";
+    } else {
+      a.textContent = "🧠 Analyze transcript";
+    }
+  }
+  function showAnalysisPane() {
+    var list = $("analysisList");
+    list.textContent = analysisResults.length
+      ? analysisResults.map(function (r) { return "— " + r.at + " —\n" + r.text; }).join("\n\n")
+      : "No analyses yet.";
+    $("analysisPane").style.display = "block";
+    analysisUnseen = 0;
+    paintAnalyzeBtn();
+  }
   function analyzeTranscript() {
+    // Unseen result waiting and nothing running? The tap means "show me".
+    if (analysisUnseen && !analysisRunning) { showAnalysisPane(); return; }
+    if (analysisRunning) { showAnalysisPane(); return; }  // peek while it runs
     var text = contTranscript.join(" ").trim();
     if (!text) { setStatus("Nothing transcribed yet.", true); return; }
-    setStatus("Analyzing transcript…");
-    $("analyzeBtn").disabled = true;
+    analysisRunning = true;
+    paintAnalyzeBtn();
     api("/api/chat", {
       method: "POST", headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -509,11 +548,18 @@
       })
     }).then(function (r) { return r.json(); })
       .then(function (data) {
-        addMsg("assistant", data.reply || "(no analysis returned)", "analysis");
-        setStatus("Continuous transcription on — just talk.");
+        analysisResults.unshift({
+          at: new Date().toLocaleTimeString(),
+          text: data.reply || "(no analysis returned)"
+        });
+        analysisUnseen += 1;
       })
-      .catch(function (e) { setStatus("Analyze error: " + e.message, true); })
-      .then(function () { $("analyzeBtn").disabled = false; });
+      .catch(function (e) {
+        analysisResults.unshift({ at: new Date().toLocaleTimeString(),
+                                  text: "Analyze error: " + e.message });
+        analysisUnseen += 1;
+      })
+      .then(function () { analysisRunning = false; paintAnalyzeBtn(); });
   }
   function contOnAudio(e) {
     var input = e.inputBuffer.getChannelData(0);
@@ -871,6 +917,9 @@
         }
       });
       $("analyzeBtn").addEventListener("click", analyzeTranscript);
+      $("analysisClose").addEventListener("click", function () {
+        $("analysisPane").style.display = "none";
+      });
       // Reply never arrived (backend error, no audio) — don't wait forever.
       setInterval(function () {
         if (handsFree && awaitingReply && Date.now() - awaitingReply > 90000) {
