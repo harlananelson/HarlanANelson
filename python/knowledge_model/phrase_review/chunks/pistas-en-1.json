@@ -1,0 +1,2742 @@
+[
+{
+"id": "abrir-presente-2863",
+"respuesta": "Normalmente, yo abro la puerta.",
+"pista": "describing a current action"
+},
+{
+"id": "aceptar-presente-2870",
+"respuesta": "A veces, él acepta las condiciones.",
+"pista": "describing his action"
+},
+{
+"id": "acercar-presente-2872",
+"respuesta": "Esta noche, yo acerco la silla a la mesa.",
+"pista": "describing a current action"
+},
+{
+"id": "acompañar-presente-2875",
+"respuesta": "Yo acompaño a mi madre hoy.",
+"pista": "expressing a present action"
+},
+{
+"id": "acordar-presente-2879",
+"respuesta": "Ellos acuerdan una fecha para la reunión hoy.",
+"pista": "describing their action"
+},
+{
+"id": "admitir-presente-2886",
+"respuesta": "Él admite sus problemas todos los días.",
+"pista": "narrating his action"
+},
+{
+"id": "aforar-presente-2888",
+"respuesta": "Él afora el caudal del agua esta tarde.",
+"pista": "expressing a technical action"
+},
+{
+"id": "alcanzar-presente-2895",
+"respuesta": "Esta noche, ella alcanza el estante alto.",
+"pista": "narrating a present action"
+},
+{
+"id": "alejar-presente-2899",
+"respuesta": "Yo alejo el peligro esta tarde.",
+"pista": "expressing a protective action"
+},
+{
+"id": "apartar-presente-2911",
+"respuesta": "Yo aparto los libros de la mesa ahora mismo.",
+"pista": "describing a current action"
+},
+{
+"id": "apostar-presente-2915",
+"respuesta": "Ellos apuestan mucho dinero a veces.",
+"pista": "describing their action"
+},
+{
+"id": "apoyar-presente-2918",
+"respuesta": "Nosotros apoyamos el proyecto mientras.",
+"pista": "describing team action"
+},
+{
+"id": "asegurar-presente-2926",
+"respuesta": "Yo aseguro la puerta ahora.",
+"pista": "describing a safety action"
+},
+{
+"id": "asustar-presente-2932",
+"respuesta": "Tú asustas a los niños esta mañana.",
+"pista": "describing a playful action"
+},
+{
+"id": "atrapar-presente-2939",
+"respuesta": "Hoy, ella atrapa al ladrón.",
+"pista": "narrating an action"
+},
+{
+"id": "bajar-presente-2952",
+"respuesta": "Nosotros bajamos los precios en este momento.",
+"pista": "expressing a business action"
+},
+{
+"id": "calmar-presente-2971",
+"respuesta": "Esta tarde, yo calmo a mi hijo.",
+"pista": "expressing a soothing action"
+},
+{
+"id": "cambiar-presente-2976",
+"respuesta": "Hoy, él cambia de ropa.",
+"pista": "narrating a daily action"
+},
+{
+"id": "cerrar-presente-2986",
+"respuesta": "Yo cierro la ventana esta mañana.",
+"pista": "describing an action"
+},
+{
+"id": "comenzar-presente-2993",
+"respuesta": "Yo comienzo a estudiar en este momento.",
+"pista": "describing the start of an activity"
+},
+{
+"id": "contar-presente-3030",
+"respuesta": "Por lo general, tú cuentas el dinero.",
+"pista": "describing a practical action"
+},
+{
+"id": "dejar-presente-3085",
+"respuesta": "Ahora mismo, yo dejo el café sobre la mesa.",
+"pista": "describing a simple action"
+},
+{
+"id": "enterar-presente-3168",
+"respuesta": "Nosotros enteramos a los vecinos del evento actualmente.",
+"pista": "informing the community"
+},
+{
+"id": "abrir-subj_imperfecto-5984",
+"respuesta": "no creia que nosotros abrieramos el libro",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "abrir-subj_imperfecto-5985",
+"respuesta": "dudaba que ellos abrieran la ventana",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "aceptar-subj_imperfecto-5991",
+"respuesta": "no pensaba que los ninos aceptaran las condiciones",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "acercar-subj_imperfecto-5994",
+"respuesta": "no era cierto que la gente acercara a la ventana",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "acordar-subj_imperfecto-6000",
+"respuesta": "era posible que ellos acordaran los terminos",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "admitir-subj_imperfecto-6005",
+"respuesta": "era improbable que carlos admitiera el error",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "aforar-subj_imperfecto-6008",
+"respuesta": "no era verdad que mi madre aforara el teatro",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "alcanzar-subj_imperfecto-6014",
+"respuesta": "no creia que nosotros alcanzaramos el exito",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "alcanzar-subj_imperfecto-6015",
+"respuesta": "dudaba que ellos alcanzaran la cima",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "alejar-subj_imperfecto-6021",
+"respuesta": "no pensaba que los ninos alejaran de alli",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "amar-subj_imperfecto-6024",
+"respuesta": "no era cierto que la gente amara con pasion",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "aparecer-subj_imperfecto-6030",
+"respuesta": "era posible que ellos aparecieran en la television",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "apostar-subj_imperfecto-6035",
+"respuesta": "era improbable que carlos apostara por el equipo",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "apoyar-subj_imperfecto-6038",
+"respuesta": "no era verdad que mi madre apoyara a su amigo",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "arreglar-subj_imperfecto-6044",
+"respuesta": "no creia que nosotros arreglaramos la casa",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "arreglar-subj_imperfecto-6045",
+"respuesta": "dudaba que ellos arreglaran el problema",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "asesinar-subj_imperfecto-6051",
+"respuesta": "no pensaba que los ninos asesinaran al enemigo",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "asustar-subj_imperfecto-6054",
+"respuesta": "no era cierto que la gente asustara a nadie",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "atrapar-subj_imperfecto-6060",
+"respuesta": "era posible que ellos atraparan al criminal",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "ayudar-subj_imperfecto-6065",
+"respuesta": "era improbable que carlos ayudara con la cena",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "bailar-subj_imperfecto-6068",
+"respuesta": "no era verdad que mi madre bailara toda la noche",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "bastar-subj_imperfecto-6074",
+"respuesta": "no creia que nosotros bastaramos para todos",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "bastar-subj_imperfecto-6075",
+"respuesta": "dudaba que ellos bastaran con poco",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "besar-subj_imperfecto-6081",
+"respuesta": "no pensaba que los ninos besaran a su pareja",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "buscar-subj_imperfecto-6084",
+"respuesta": "no era cierto que la gente buscara un lugar",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "callar-subj_imperfecto-6090",
+"respuesta": "era posible que ellos callaran por respeto",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "cambiar-subj_imperfecto-6095",
+"respuesta": "era improbable que carlos cambiara el mundo",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "caminar-subj_imperfecto-6098",
+"respuesta": "no era verdad que mi madre caminara mas despacio",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "casar-subj_imperfecto-6104",
+"respuesta": "no creia que nosotros casaramos a su hija",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "casar-subj_imperfecto-6105",
+"respuesta": "dudaba que ellos casaran por amor",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "coger-subj_imperfecto-6111",
+"respuesta": "no pensaba que los ninos cogieran el telefono",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "comenzar-subj_imperfecto-6114",
+"respuesta": "no era cierto que la gente comenzara a trabajar",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "cometer-subj_imperfecto-6120",
+"respuesta": "era posible que ellos cometieran una locura",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "comprar-subj_imperfecto-6125",
+"respuesta": "era improbable que carlos comprara el regalo",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "comprender-subj_imperfecto-6128",
+"respuesta": "no era verdad que mi madre comprendiera el problema",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "confiar-subj_imperfecto-6134",
+"respuesta": "no creia que nosotros confiaramos en el proceso",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "confiar-subj_imperfecto-6135",
+"respuesta": "dudaba que ellos confiaran mas en si mismo",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "conseguir-subj_imperfecto-6141",
+"respuesta": "no pensaba que los ninos consiguieran sus metas",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "considerar-subj_imperfecto-6144",
+"respuesta": "no era cierto que la gente considerara el futuro",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "contar-subj_imperfecto-6150",
+"respuesta": "era posible que ellos contaran un secreto",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "continuar-subj_imperfecto-6155",
+"respuesta": "era improbable que carlos continuara trabajando",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "controlar-subj_imperfecto-6158",
+"respuesta": "no era verdad que mi madre controlara sus emociones",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "correr-subj_imperfecto-6164",
+"respuesta": "no creia que nosotros corrieramos un maraton",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "correr-subj_imperfecto-6165",
+"respuesta": "dudaba que ellos corrieran mas rapido",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "costar-subj_imperfecto-6171",
+"respuesta": "no pensaba que los ninos costaran menos",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "crear-subj_imperfecto-6174",
+"respuesta": "no era cierto que la gente creara una obra de arte",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "creer-subj_imperfecto-6180",
+"respuesta": "era posible que ellos creyeran en si mismo",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "cuidar-subj_imperfecto-6185",
+"respuesta": "era improbable que carlos cuidara su salud",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "cumplir-subj_imperfecto-6188",
+"respuesta": "no era verdad que mi madre cumpliera los requisitos",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "deber-subj_imperfecto-6194",
+"respuesta": "no creia que nosotros debieramos mas tiempo",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "deber-subj_imperfecto-6195",
+"respuesta": "dudaba que ellos debieran una explicacion",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "decir-subj_imperfecto-6201",
+"respuesta": "no pensaba que los ninos dijeran que si",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "defender-subj_imperfecto-6204",
+"respuesta": "no era cierto que la gente defendiera la causa",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "demostrar-subj_imperfecto-6210",
+"respuesta": "era posible que ellos demostraran su valor",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "desaparecer-subj_imperfecto-6215",
+"respuesta": "era improbable que carlos desapareciera de la vista",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "desarrollar-subj_imperfecto-6218",
+"respuesta": "no era verdad que mi madre desarrollara nuevas ideas",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "desear-subj_imperfecto-6224",
+"respuesta": "no creia que nosotros desearamos la paz",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "desear-subj_imperfecto-6225",
+"respuesta": "dudaba que ellos desearan mas tiempo",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "despertar-subj_imperfecto-6231",
+"respuesta": "no pensaba que los ninos despertaran a los ninos",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "destruir-subj_imperfecto-6234",
+"respuesta": "no era cierto que la gente destruyera todo",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "devolver-subj_imperfecto-6240",
+"respuesta": "era posible que ellos devolvieran el favor",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "disculpar-subj_imperfecto-6245",
+"respuesta": "era improbable que carlos disculpara a su hermano",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "discutir-subj_imperfecto-6248",
+"respuesta": "no era verdad que mi madre discutiera con respeto",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "disparar-subj_imperfecto-6254",
+"respuesta": "no creia que nosotros dispararamos con precision",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "disparar-subj_imperfecto-6255",
+"respuesta": "dudaba que ellos dispararan el arma",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "echar-subj_imperfecto-6261",
+"respuesta": "no pensaba que los ninos echaran un vistazo",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "elegir-subj_imperfecto-6264",
+"respuesta": "no era cierto que la gente eligiera un camino",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "encantar-subj_imperfecto-6270",
+"respuesta": "era posible que ellos encantaran la idea",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "enfrentar-subj_imperfecto-6275",
+"respuesta": "era improbable que carlos enfrentara la realidad",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "enganar-subj_imperfecto-6278",
+"respuesta": "no era verdad que mi madre enganara con mentiras",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "entender-subj_imperfecto-6284",
+"respuesta": "no creia que nosotros entendieramos el idioma",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "entender-subj_imperfecto-6285",
+"respuesta": "dudaba que ellos entendieran el problema",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "entrar-subj_imperfecto-6291",
+"respuesta": "no pensaba que los ninos entraran al edificio",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "entregar-subj_imperfecto-6294",
+"respuesta": "no era cierto que la gente entregara los resultados",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "escapar-subj_imperfecto-6300",
+"respuesta": "era posible que ellos escaparan de alli",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "escribir-subj_imperfecto-6305",
+"respuesta": "era improbable que carlos escribiera un libro",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "escuchar-subj_imperfecto-6308",
+"respuesta": "no era verdad que mi madre escuchara con atencion",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "estar-subj_imperfecto-6314",
+"respuesta": "no creia que nosotros estuvieramos preparado",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "estar-subj_imperfecto-6315",
+"respuesta": "dudaba que ellos estuvieran mas tranquilo",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "evitar-subj_imperfecto-6321",
+"respuesta": "no pensaba que los ninos evitaran el peligro",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "existir-subj_imperfecto-6324",
+"respuesta": "no era cierto que la gente existiera otra opcion",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "formar-subj_imperfecto-6330",
+"respuesta": "era posible que ellos formaran una familia",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "ganar-subj_imperfecto-6335",
+"respuesta": "era improbable que carlos ganara mas dinero",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "golpear-subj_imperfecto-6338",
+"respuesta": "no era verdad que mi madre golpeara con fuerza",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "guardar-subj_imperfecto-6344",
+"respuesta": "no creia que nosotros guardaramos silencio",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "guardar-subj_imperfecto-6345",
+"respuesta": "dudaba que ellos guardaran los documentos",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "haber-subj_imperfecto-6351",
+"respuesta": "no pensaba que los ninos hubieran otra opcion",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "hablar-subj_imperfecto-6354",
+"respuesta": "no era cierto que la gente hablara en publico",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "hallar-subj_imperfecto-6360",
+"respuesta": "era posible que ellos hallaran la respuesta",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "imaginar-subj_imperfecto-6365",
+"respuesta": "era improbable que carlos imaginara la escena",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "importar-subj_imperfecto-6368",
+"respuesta": "no era verdad que mi madre importara el resultado",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "informar-subj_imperfecto-6374",
+"respuesta": "no creia que nosotros informaramos sobre el tema",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "informar-subj_imperfecto-6375",
+"respuesta": "dudaba que ellos informaran a la policia",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "interesar-subj_imperfecto-6381",
+"respuesta": "no pensaba que los ninos interesaran a los estudiantes",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "invitar-subj_imperfecto-6384",
+"respuesta": "no era cierto que la gente invitara a todos",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "joder-subj_imperfecto-6390",
+"respuesta": "era posible que ellos jodieran el asunto",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "jurar-subj_imperfecto-6395",
+"respuesta": "era improbable que carlos jurara lealtad",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "leer-subj_imperfecto-6398",
+"respuesta": "no era verdad que mi madre leyera las noticias",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "llamar-subj_imperfecto-6404",
+"respuesta": "no creia que nosotros llamaramos a la puerta",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "llamar-subj_imperfecto-6405",
+"respuesta": "dudaba que ellos llamaran al medico",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "llevar-subj_imperfecto-6411",
+"respuesta": "no pensaba que los ninos llevaran ropa elegante",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "llorar-subj_imperfecto-6414",
+"respuesta": "no era cierto que la gente llorara en silencio",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "luchar-subj_imperfecto-6420",
+"respuesta": "era posible que ellos lucharan por sus derechos",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "manejar-subj_imperfecto-6425",
+"respuesta": "era improbable que carlos manejara la situacion",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "mantener-subj_imperfecto-6428",
+"respuesta": "no era verdad que mi madre mantuviera su promesa",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "matar-subj_imperfecto-6434",
+"respuesta": "no creia que nosotros mataramos el tiempo",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "matar-subj_imperfecto-6435",
+"respuesta": "dudaba que ellos mataran la esperanza",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "mentir-subj_imperfecto-6441",
+"respuesta": "no pensaba que los ninos mintieran en el juicio",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "merecer-subj_imperfecto-6444",
+"respuesta": "no era cierto que la gente mereciera mas respeto",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "mirar-subj_imperfecto-6450",
+"respuesta": "era posible que ellos miraran hacia el cielo",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "morir-subj_imperfecto-6455",
+"respuesta": "era improbable que carlos muriera por la causa",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "mostrar-subj_imperfecto-6458",
+"respuesta": "no era verdad que mi madre mostrara sus sentimientos",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "nacer-subj_imperfecto-6464",
+"respuesta": "no creia que nosotros nacieramos con talento",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "nacer-subj_imperfecto-6465",
+"respuesta": "dudaba que ellos nacieran en primavera",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "negar-subj_imperfecto-6471",
+"respuesta": "no pensaba que los ninos negaran los hechos",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "observar-subj_imperfecto-6474",
+"respuesta": "no era cierto que la gente observara el comportamiento",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "ocupar-subj_imperfecto-6480",
+"respuesta": "era posible que ellos ocuparan su tiempo",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "odiar-subj_imperfecto-6485",
+"respuesta": "era improbable que carlos odiara las mentiras",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "ofrecer-subj_imperfecto-6488",
+"respuesta": "no era verdad que mi madre ofreciera una solucion",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "olvidar-subj_imperfecto-6494",
+"respuesta": "no creia que nosotros olvidaramos las llaves",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "olvidar-subj_imperfecto-6495",
+"respuesta": "dudaba que ellos olvidaran su nombre",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "parar-subj_imperfecto-6501",
+"respuesta": "no pensaba que los ninos pararan un momento",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "parecer-subj_imperfecto-6504",
+"respuesta": "no era cierto que la gente pareciera una buena idea",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "pasar-subj_imperfecto-6510",
+"respuesta": "era posible que ellos pasaran un buen rato",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "pegar-subj_imperfecto-6515",
+"respuesta": "era improbable que carlos pegara con pegamento",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "pelear-subj_imperfecto-6518",
+"respuesta": "no era verdad que mi madre peleara con valor",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "perder-subj_imperfecto-6524",
+"respuesta": "no creia que nosotros perdieramos la oportunidad",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "perder-subj_imperfecto-6525",
+"respuesta": "dudaba que ellos perdieran el partido",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "permanecer-subj_imperfecto-6531",
+"respuesta": "no pensaba que los ninos permanecieran tranquilo",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "permitir-subj_imperfecto-6534",
+"respuesta": "no era cierto que la gente permitiera el acceso",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "pesar-subj_imperfecto-6540",
+"respuesta": "era posible que ellos pesaran la decision",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "poner-subj_imperfecto-6545",
+"respuesta": "era improbable que carlos pusiera atencion",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "preferir-subj_imperfecto-6548",
+"respuesta": "no era verdad que mi madre prefiriera otra opcion",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "preocupar-subj_imperfecto-6554",
+"respuesta": "no creia que nosotros preocuparamos por el futuro",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "preocupar-subj_imperfecto-6555",
+"respuesta": "dudaba que ellos preocuparan a la familia",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "presentar-subj_imperfecto-6561",
+"respuesta": "no pensaba que los ninos presentaran los resultados",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "prestar-subj_imperfecto-6564",
+"respuesta": "no era cierto que la gente prestara su coche",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "producir-subj_imperfecto-6570",
+"respuesta": "era posible que ellos produjeran un cambio",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "proteger-subj_imperfecto-6575",
+"respuesta": "era improbable que carlos protegiera el medio ambiente",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "quedar-subj_imperfecto-6578",
+"respuesta": "no era verdad que mi madre quedara con los amigos",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "quitar-subj_imperfecto-6584",
+"respuesta": "no creia que nosotros quitaramos las dudas",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "quitar-subj_imperfecto-6585",
+"respuesta": "dudaba que ellos quitaran el dolor",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "recibir-subj_imperfecto-6591",
+"respuesta": "no pensaba que los ninos recibieran buenas noticias",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "recoger-subj_imperfecto-6594",
+"respuesta": "no era cierto que la gente recogiera la mesa",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "recordar-subj_imperfecto-6600",
+"respuesta": "era posible que ellos recordaran la promesa",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "referir-subj_imperfecto-6605",
+"respuesta": "era improbable que carlos refiriera al tema",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "regresar-subj_imperfecto-6608",
+"respuesta": "no era verdad que mi madre regresara al trabajo",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "repetir-subj_imperfecto-6614",
+"respuesta": "no creia que nosotros repitieramos el ejercicio",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "repetir-subj_imperfecto-6615",
+"respuesta": "dudaba que ellos repitieran la pregunta",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "resolver-subj_imperfecto-6621",
+"respuesta": "no pensaba que los ninos resolvieran el conflicto",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "responder-subj_imperfecto-6624",
+"respuesta": "no era cierto que la gente respondiera al telefono",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "reunir-subj_imperfecto-6630",
+"respuesta": "era posible que ellos reunieran suficiente dinero",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "robar-subj_imperfecto-6635",
+"respuesta": "era improbable que carlos robara las joyas",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "romper-subj_imperfecto-6638",
+"respuesta": "no era verdad que mi madre rompiera las reglas",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "sacar-subj_imperfecto-6644",
+"respuesta": "no creia que nosotros sacaramos la basura",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "sacar-subj_imperfecto-6645",
+"respuesta": "dudaba que ellos sacaran las fotos",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "salvar-subj_imperfecto-6651",
+"respuesta": "no pensaba que los ninos salvaran la situacion",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "seguir-subj_imperfecto-6654",
+"respuesta": "no era cierto que la gente siguiera sus suenos",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "sentar-subj_imperfecto-6660",
+"respuesta": "era posible que ellos sentaran bien",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "ser-subj_imperfecto-6665",
+"respuesta": "era improbable que carlos fuera el lider",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "servir-subj_imperfecto-6668",
+"respuesta": "no era verdad que mi madre sirviera de ejemplo",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "soler-subj_imperfecto-6674",
+"respuesta": "no creia que nosotros solieramos comer alli",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "soler-subj_imperfecto-6675",
+"respuesta": "dudaba que ellos solieran salir los viernes",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "sonar-subj_imperfecto-6681",
+"respuesta": "no pensaba que los ninos sonaran con el futuro",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "subir-subj_imperfecto-6684",
+"respuesta": "no era cierto que la gente subiera el volumen",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "sufrir-subj_imperfecto-6690",
+"respuesta": "era posible que ellos sufrieran las consecuencias",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "suponer-subj_imperfecto-6695",
+"respuesta": "era improbable que carlos supusiera un cambio",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "temer-subj_imperfecto-6698",
+"respuesta": "no era verdad que mi madre temiera por su vida",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "terminar-subj_imperfecto-6704",
+"respuesta": "no creia que nosotros terminaramos a tiempo",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "terminar-subj_imperfecto-6705",
+"respuesta": "dudaba que ellos terminaran la carrera",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "tocar-subj_imperfecto-6711",
+"respuesta": "no pensaba que los ninos tocaran el piano",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "tomar-subj_imperfecto-6714",
+"respuesta": "no era cierto que la gente tomara un descanso",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "traer-subj_imperfecto-6720",
+"respuesta": "era posible que ellos trajeran la comida",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "tratar-subj_imperfecto-6725",
+"respuesta": "era improbable que carlos tratara el problema",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "unir-subj_imperfecto-6728",
+"respuesta": "no era verdad que mi madre uniera las piezas",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "utilizar-subj_imperfecto-6734",
+"respuesta": "no creia que nosotros utilizaramos otra estrategia",
+"pista": "negated belief triggers subjunctive in the past"
+},
+{
+"id": "utilizar-subj_imperfecto-6735",
+"respuesta": "dudaba que ellos utilizaran la herramienta",
+"pista": "doubt in the past triggers imperfect subjunctive"
+},
+{
+"id": "vender-subj_imperfecto-6741",
+"respuesta": "no pensaba que los ninos vendieran los productos",
+"pista": "negated thought triggers subjunctive in the past"
+},
+{
+"id": "venir-subj_imperfecto-6744",
+"respuesta": "no era cierto que la gente viniera temprano",
+"pista": "negating certainty in the past triggers subjunctive"
+},
+{
+"id": "viajar-subj_imperfecto-6750",
+"respuesta": "era posible que ellos viajaran con la familia",
+"pista": "possibility in the past triggers subjunctive"
+},
+{
+"id": "volar-subj_imperfecto-6755",
+"respuesta": "era improbable que carlos volara a otro pais",
+"pista": "improbability in the past triggers subjunctive"
+},
+{
+"id": "volver-subj_imperfecto-6758",
+"respuesta": "no era verdad que mi madre volviera a intentarlo",
+"pista": "denying truth in the past triggers subjunctive"
+},
+{
+"id": "abandonar-subj_pluscuam-6760",
+"respuesta": "Si yo hubiera abandonado el proyecto a tiempo, todo habria sido diferente.",
+"pista": "Pluperfect subjunctive expresses an unrealized past action - something that didn't happen."
+},
+{
+"id": "abandonar-subj_pluscuam-6762",
+"respuesta": "Ojala tu hubieras abandonado esa idea antes.",
+"pista": "Ojala + pluperfect subjunctive expresses a wish about something that didn't happen in the past."
+},
+{
+"id": "abrir-subj_pluscuam-6765",
+"respuesta": "Actuaba como si tu hubieras abierto el regalo sin permiso.",
+"pista": "Como si + pluperfect subjunctive describes a past action that may not have occurred."
+},
+{
+"id": "acabar-subj_pluscuam-6767",
+"respuesta": "Era imposible que ellos hubieran acabado la tarea tan rapido.",
+"pista": "Era imposible que triggers the subjunctive for past impossibilities."
+},
+{
+"id": "aceptar-subj_pluscuam-6769",
+"respuesta": "Si nosotros hubieramos aceptado la oferta, habriamos sido ricos.",
+"pista": "Si + pluperfect subjunctive sets up a hypothetical past that didn't happen."
+},
+{
+"id": "aceptar-subj_pluscuam-6770",
+"respuesta": "Dudaba que ella hubiera aceptado mi disculpa sinceramente.",
+"pista": "Doubt about a past action requires the pluperfect subjunctive."
+},
+{
+"id": "acercar-subj_pluscuam-6773",
+"respuesta": "No creia que el hubiera acercado el coche tanto al borde.",
+"pista": "Disbelief about a completed past action uses pluperfect subjunctive."
+},
+{
+"id": "acercar-subj_pluscuam-6774",
+"respuesta": "Ojala nosotros hubieramos acercado las dos familias antes.",
+"pista": "Ojala expresses a wish that something had happened differently in the past."
+},
+{
+"id": "acompanar-subj_pluscuam-6775",
+"respuesta": "Si yo hubiera acompanado a mi madre al medico, me sentiria mejor.",
+"pista": "Expresses regret about not accompanying someone in the past."
+},
+{
+"id": "acompanar-subj_pluscuam-6776",
+"respuesta": "Dudaba que ellos hubieran acompanado al nino a la escuela.",
+"pista": "Doubt triggers subjunctive when referring to past events."
+},
+{
+"id": "acordar-subj_pluscuam-6778",
+"respuesta": "Si nosotros hubieramos acordado los terminos antes, no habria conflicto.",
+"pista": "Pluperfect subjunctive for hypothetical past agreements that didn't happen."
+},
+{
+"id": "acordar-subj_pluscuam-6779",
+"respuesta": "No creia que ellos hubieran acordado un precio tan bajo.",
+"pista": "Disbelief about past events triggers the pluperfect subjunctive."
+},
+{
+"id": "aforar-subj_pluscuam-6789",
+"respuesta": "Era imposible que tu hubieras aforado el rio en tan poco tiempo.",
+"pista": "Past impossibility requires the pluperfect subjunctive."
+},
+{
+"id": "agradecer-subj_pluscuam-6790",
+"respuesta": "Si yo hubiera agradecido su ayuda, habria sido mas educado.",
+"pista": "Regret about not having thanked someone in the past."
+},
+{
+"id": "agradecer-subj_pluscuam-6792",
+"respuesta": "Ojala nosotros hubieramos agradecido a los voluntarios mejor.",
+"pista": "Wishing you had shown more gratitude in the past."
+},
+{
+"id": "alegrar-subj_pluscuam-6797",
+"respuesta": "No creia que tu hubieras alegrado a los ninos con ese regalo.",
+"pista": "Disbelief about causing joy in the past."
+},
+{
+"id": "alegrar-subj_pluscuam-6798",
+"respuesta": "Ojala nosotros hubieramos alegrado la fiesta con musica.",
+"pista": "Wishing you had made the party happier in the past."
+},
+{
+"id": "alejar-subj_pluscuam-6799",
+"respuesta": "Si yo hubiera alejado el peligro de mi familia, estariamos tranquilos.",
+"pista": "Pluperfect subjunctive for an unrealized protective action in the past."
+},
+{
+"id": "alejar-subj_pluscuam-6800",
+"respuesta": "Dudaba que ella hubiera alejado a los curiosos de la escena.",
+"pista": "Doubt about a past action of distancing uses pluperfect subjunctive."
+},
+{
+"id": "amar-subj_pluscuam-6802",
+"respuesta": "Si ella hubiera amado a alguien de verdad, habria sido feliz.",
+"pista": "Pluperfect subjunctive for hypothetical past love that didn't happen."
+},
+{
+"id": "amar-subj_pluscuam-6803",
+"respuesta": "No creia que tu hubieras amado a esa persona tanto.",
+"pista": "Disbelief about the depth of past love uses pluperfect subjunctive."
+},
+{
+"id": "amar-subj_pluscuam-6804",
+"respuesta": "Ojala yo hubiera amado con mas intensidad en mi juventud.",
+"pista": "Wishing you had loved more intensely in the past."
+},
+{
+"id": "aparecer-subj_pluscuam-6808",
+"respuesta": "Si el documento hubiera aparecido a tiempo, habriamos ganado el caso.",
+"pista": "Pluperfect subjunctive for things that didn't appear when needed."
+},
+{
+"id": "apartar-subj_pluscuam-6811",
+"respuesta": "Si tu hubieras apartado las dudas de tu mente, habrias actuado con confianza.",
+"pista": "Pluperfect subjunctive for unrealized mental actions in the past."
+},
+{
+"id": "apostar-subj_pluscuam-6814",
+"respuesta": "Si nosotros hubieramos apostado por ese caballo, habriamos ganado.",
+"pista": "Pluperfect subjunctive for missed betting opportunities in the past."
+},
+{
+"id": "apoyar-subj_pluscuam-6817",
+"respuesta": "Si yo hubiera apoyado a mi hermano en su decision, estaria agradecido.",
+"pista": "Regret about not supporting someone in the past."
+},
+{
+"id": "arreglar-subj_pluscuam-6823",
+"respuesta": "Si yo hubiera arreglado el coche antes del viaje, no habriamos tenido problemas.",
+"pista": "Pluperfect subjunctive for unrealized repairs in the past."
+},
+{
+"id": "asustar-subj_pluscuam-6833",
+"respuesta": "Dudaba que tu hubieras asustado al perro con los gritos.",
+"pista": "Doubt about causing fear in the past."
+},
+{
+"id": "atacar-subj_pluscuam-6837",
+"respuesta": "No creia que el hubiera atacado a su propio aliado por sorpresa.",
+"pista": "Disbelief about a betrayal in the past."
+},
+{
+"id": "atrapar-subj_pluscuam-6839",
+"respuesta": "Dudaba que nosotros hubieramos atrapado al gato sin ayuda.",
+"pista": "Doubt about catching something in the past."
+},
+{
+"id": "atrapar-subj_pluscuam-6840",
+"respuesta": "Ojala tu hubieras atrapado la pelota en el ultimo momento.",
+"pista": "Wishing you had caught the ball at the last moment."
+},
+{
+"id": "averiguar-subj_pluscuam-6842",
+"respuesta": "No creia que tu hubieras averiguado el secreto tan rapido.",
+"pista": "Disbelief about discovering something quickly in the past."
+},
+{
+"id": "ayudar-subj_pluscuam-6844",
+"respuesta": "Si yo hubiera ayudado a mi vecino, habria sido lo correcto.",
+"pista": "Regret about not helping someone in the past."
+},
+{
+"id": "ayudar-subj_pluscuam-6845",
+"respuesta": "Dudaba que ellos hubieran ayudado a los refugiados sin interes.",
+"pista": "Doubt about selfless help in the past."
+},
+{
+"id": "bailar-subj_pluscuam-6847",
+"respuesta": "Si tu hubieras bailado conmigo esa noche, habria sido magico.",
+"pista": "Pluperfect subjunctive for a missed romantic opportunity in the past."
+},
+{
+"id": "bailar-subj_pluscuam-6849",
+"respuesta": "Ojala nosotros hubieramos bailado toda la noche en la boda.",
+"pista": "Wishing you had danced all night at the wedding."
+},
+{
+"id": "bajar-subj_pluscuam-6850",
+"respuesta": "Si yo hubiera bajado las escaleras mas despacio, no me habria caido.",
+"pista": "Pluperfect subjunctive for an unrealized careful action in the past."
+},
+{
+"id": "bajar-subj_pluscuam-6851",
+"respuesta": "Dudaba que ellos hubieran bajado el precio sin presion.",
+"pista": "Doubt about a voluntary price reduction in the past."
+},
+{
+"id": "bastar-subj_pluscuam-6853",
+"respuesta": "Si el dinero hubiera bastado para todos, no habria problemas.",
+"pista": "Pluperfect subjunctive for hypothetical sufficiency in the past."
+},
+{
+"id": "bastar-subj_pluscuam-6855",
+"respuesta": "No creia que una disculpa hubiera bastado para resolver el conflicto.",
+"pista": "Disbelief that an apology would have been enough."
+},
+{
+"id": "beber-subj_pluscuam-6857",
+"respuesta": "Era imposible que nosotros hubieramos bebido toda el agua en una hora.",
+"pista": "Past impossibility of consuming all the water."
+},
+{
+"id": "buscar-subj_pluscuam-6863",
+"respuesta": "No creia que ellos hubieran buscado en todos los rincones ya.",
+"pista": "Disbelief about the thoroughness of a past search."
+},
+{
+"id": "caer-subj_pluscuam-6865",
+"respuesta": "Si la lluvia hubiera caido antes, habriamos regado el jardin.",
+"pista": "Pluperfect subjunctive for weather events that didn't occur."
+},
+{
+"id": "caer-subj_pluscuam-6867",
+"respuesta": "Dudaba que nosotros hubieramos caido en la trampa tan facilmente.",
+"pista": "Doubt about falling into a trap easily in the past."
+},
+{
+"id": "callar-subj_pluscuam-6868",
+"respuesta": "Si tu hubieras callado la verdad, no habria problemas.",
+"pista": "Pluperfect subjunctive for keeping quiet about something in the past."
+},
+{
+"id": "cambiar-subj_pluscuam-6875",
+"respuesta": "No creia que ellos hubieran cambiado las reglas sin consultar.",
+"pista": "Disbelief about unauthorized rule changes in the past."
+},
+{
+"id": "casar-subj_pluscuam-6885",
+"respuesta": "Ojala tu hubieras casado con esa persona cuando tuviste la oportunidad.",
+"pista": "Wishing you had married the right person."
+},
+{
+"id": "cerrar-subj_pluscuam-6888",
+"respuesta": "Ojala nosotros hubieramos cerrado la tienda antes de la tormenta.",
+"pista": "Wishing you had closed up before the storm."
+},
+{
+"id": "coger-subj_pluscuam-6889",
+"respuesta": "Si yo hubiera cogido el autobus a tiempo, habria llegado puntual.",
+"pista": "Pluperfect subjunctive for missing transportation in the past."
+},
+{
+"id": "coger-subj_pluscuam-6890",
+"respuesta": "Dudaba que ella hubiera cogido las llaves antes de salir.",
+"pista": "Doubt about grabbing something before leaving."
+},
+{
+"id": "compartir-subj_pluscuam-6901",
+"respuesta": "Si tu hubieras compartido la noticia con todos, se habrian alegrado.",
+"pista": "Pluperfect subjunctive for unrealized sharing in the past."
+},
+{
+"id": "compartir-subj_pluscuam-6903",
+"respuesta": "Dudaba que ellos hubieran compartido los recursos equitativamente.",
+"pista": "Doubt about fair sharing in the past."
+},
+{
+"id": "comprar-subj_pluscuam-6905",
+"respuesta": "No creia que ella hubiera comprado tantos zapatos en un dia.",
+"pista": "Disbelief about excessive shopping in the past."
+},
+{
+"id": "conducir-subj_pluscuam-6910",
+"respuesta": "Si ella hubiera conducido con mas cuidado, no habria tenido el accidente.",
+"pista": "Pluperfect subjunctive for careless driving in the past."
+},
+{
+"id": "confiar-subj_pluscuam-6915",
+"respuesta": "Ojala yo hubiera confiado en mi instinto desde el principio.",
+"pista": "Wishing you had trusted your instinct from the start."
+},
+{
+"id": "conseguir-subj_pluscuam-6919",
+"respuesta": "Si yo hubiera conseguido el trabajo, habria estado contento.",
+"pista": "Pluperfect subjunctive for a job opportunity that didn't materialize."
+},
+{
+"id": "conseguir-subj_pluscuam-6920",
+"respuesta": "Era imposible que ellos hubieran conseguido las entradas a ultima hora.",
+"pista": "Past impossibility of getting tickets at the last minute."
+},
+{
+"id": "considerar-subj_pluscuam-6922",
+"respuesta": "Si nosotros hubieramos considerado todas las opciones antes, habriamos elegido mejor.",
+"pista": "Pluperfect subjunctive for insufficient deliberation in the past."
+},
+{
+"id": "construir-subj_pluscuam-6925",
+"respuesta": "Si ellos hubieran construido el puente a tiempo, habriamos cruzado el rio.",
+"pista": "Pluperfect subjunctive for construction that didn't happen on time."
+},
+{
+"id": "construir-subj_pluscuam-6927",
+"respuesta": "Ojala nosotros hubieramos construido un refugio antes de la tormenta.",
+"pista": "Wishing you had built shelter before the storm."
+},
+{
+"id": "contar-subj_pluscuam-6928",
+"respuesta": "Si tu hubieras contado la historia desde el principio, te habriamos entendido.",
+"pista": "Pluperfect subjunctive for not telling the full story earlier."
+},
+{
+"id": "contar-subj_pluscuam-6929",
+"respuesta": "Dudaba que el hubiera contado el dinero correctamente.",
+"pista": "Doubt about accurate counting in the past."
+},
+{
+"id": "controlar-subj_pluscuam-6939",
+"respuesta": "Ojala nosotros hubieramos controlado los gastos desde el principio.",
+"pista": "Wishing you had controlled spending from the start."
+},
+{
+"id": "cortar-subj_pluscuam-6947",
+"respuesta": "Dudaba que ella hubiera cortado la cuerda con ese cuchillo.",
+"pista": "Doubt about cutting something in the past."
+},
+{
+"id": "crecer-subj_pluscuam-6957",
+"respuesta": "Ojala yo hubiera crecido en el campo como mis abuelos.",
+"pista": "Wishing you had grown up in the countryside."
+},
+{
+"id": "creer-subj_pluscuam-6958",
+"respuesta": "Si tu hubieras creido en mi, habrias invertido.",
+"pista": "Pluperfect subjunctive for lack of belief in the past."
+},
+{
+"id": "cubrir-subj_pluscuam-6962",
+"respuesta": "Dudaba que el seguro hubiera cubierto todos los danos del accidente.",
+"pista": "Doubt about insurance coverage in the past. Irregular participle: cubierto."
+},
+{
+"id": "cuidar-subj_pluscuam-6964",
+"respuesta": "Si ella hubiera cuidado a su salud mejor, no estaria enferma.",
+"pista": "Pluperfect subjunctive for neglected health care in the past."
+},
+{
+"id": "cuidar-subj_pluscuam-6965",
+"respuesta": "Ojala tu hubieras cuidado las plantas durante el verano.",
+"pista": "Wishing someone had taken care of the plants."
+},
+{
+"id": "cumplir-subj_pluscuam-6967",
+"respuesta": "Si el hubiera cumplido su promesa, todo seria diferente.",
+"pista": "Pluperfect subjunctive for broken promises in the past."
+},
+{
+"id": "dar-subj_pluscuam-6971",
+"respuesta": "Dudaba que ella hubiera dado una segunda oportunidad a nadie.",
+"pista": "Doubt about giving second chances in the past."
+},
+{
+"id": "decir-subj_pluscuam-6981",
+"respuesta": "Ojala nosotros hubieramos dicho la verdad a tiempo.",
+"pista": "Wishing you had told the truth in time. Irregular participle: dicho."
+},
+{
+"id": "despedir-subj_pluscuam-7008",
+"respuesta": "Ojala nosotros hubieramos despedido a ese empleado antes de la crisis.",
+"pista": "Wishing you had let someone go before things got worse."
+},
+{
+"id": "despertar-subj_pluscuam-7009",
+"respuesta": "Si yo hubiera despertado mas temprano, habria llegado a tiempo.",
+"pista": "Pluperfect subjunctive for oversleeping in the past."
+},
+{
+"id": "devolver-subj_pluscuam-7020",
+"respuesta": "Ojala tu hubieras devuelto la llamada ayer.",
+"pista": "Wishing you had returned the call. Irregular participle: devuelto."
+},
+{
+"id": "discutir-subj_pluscuam-7029",
+"respuesta": "No creia que tu hubieras discutido con el jefe tan abiertamente.",
+"pista": "Disbelief about openly arguing with the boss."
+},
+{
+"id": "disparar-subj_pluscuam-7033",
+"respuesta": "Si el cazador hubiera disparado al ciervo, habria cenado.",
+"pista": "Pluperfect subjunctive for a missed shot in the past."
+},
+{
+"id": "dormir-subj_pluscuam-7036",
+"respuesta": "Si tu hubieras dormido mejor anoche, estarias descansado.",
+"pista": "Pluperfect subjunctive for poor sleep in the past."
+},
+{
+"id": "dormir-subj_pluscuam-7037",
+"respuesta": "Dudaba que el bebe hubiera dormido toda la noche sin llorar.",
+"pista": "Doubt about a baby sleeping through the night."
+},
+{
+"id": "echar-subj_pluscuam-7041",
+"respuesta": "Ojala nosotros hubieramos echado sal a la comida antes.",
+"pista": "Wishing you had added salt to the food."
+},
+{
+"id": "elegir-subj_pluscuam-7043",
+"respuesta": "Dudaba que ellos hubieran elegido al mejor candidato para el puesto.",
+"pista": "Doubt about choosing the best candidate."
+},
+{
+"id": "empezar-subj_pluscuam-7047",
+"respuesta": "Era imposible que tu hubieras empezado a las seis de la manana.",
+"pista": "Past impossibility of starting at six in the morning."
+},
+{
+"id": "ensenar-subj_pluscuam-7061",
+"respuesta": "Dudaba que el profesor hubiera ensenado ese tema correctamente.",
+"pista": "Doubt about correct teaching in the past."
+},
+{
+"id": "entender-subj_pluscuam-7064",
+"respuesta": "No creia que ellos hubieran entendido la gravedad del problema.",
+"pista": "Disbelief about understanding the seriousness of a problem."
+},
+{
+"id": "entregar-subj_pluscuam-7074",
+"respuesta": "Ojala tu hubieras entregado el premio en persona.",
+"pista": "Wishing you had delivered the prize personally."
+},
+{
+"id": "escuchar-subj_pluscuam-7089",
+"respuesta": "Ojala nosotros hubieramos escuchado esa cancion en vivo.",
+"pista": "Wishing you had heard that song live."
+},
+{
+"id": "estar-subj_pluscuam-7095",
+"respuesta": "Ojala nosotros hubieramos estado preparados para la emergencia.",
+"pista": "Wishing you had been prepared for the emergency."
+},
+{
+"id": "estudiar-subj_pluscuam-7098",
+"respuesta": "Ojala nosotros hubieramos estudiado en el extranjero de jovenes.",
+"pista": "Wishing you had studied abroad when young."
+},
+{
+"id": "existir-subj_pluscuam-7102",
+"respuesta": "Si una solucion hubiera existido antes, habriamos evitado el desastre.",
+"pista": "Pluperfect subjunctive for something that didn't exist in time."
+},
+{
+"id": "existir-subj_pluscuam-7103",
+"respuesta": "Dudaba que esa tecnologia hubiera existido en esa epoca realmente.",
+"pista": "Doubt about the existence of technology in the past."
+},
+{
+"id": "existir-subj_pluscuam-7104",
+"respuesta": "No creia que un lugar tan hermoso hubiera existido en este planeta.",
+"pista": "Disbelief about the existence of a beautiful place."
+},
+{
+"id": "explicar-subj_pluscuam-7107",
+"respuesta": "Ojala nosotros hubieramos explicado nuestras intenciones desde el principio.",
+"pista": "Wishing you had explained your intentions from the start."
+},
+{
+"id": "formar-subj_pluscuam-7109",
+"respuesta": "No creia que ella hubiera formado parte del grupo desde el inicio.",
+"pista": "Disbelief about group membership from the start."
+},
+{
+"id": "ganar-subj_pluscuam-7115",
+"respuesta": "No creia que ella hubiera ganado la loteria de verdad.",
+"pista": "Disbelief about winning the lottery."
+},
+{
+"id": "golpear-subj_pluscuam-7117",
+"respuesta": "Si el hubiera golpeado la pelota mas fuerte, habria marcado un gol.",
+"pista": "Pluperfect subjunctive for insufficient force in the past."
+},
+{
+"id": "gustar-subj_pluscuam-7127",
+"respuesta": "Dudaba que la comida hubiera gustado a los invitados de verdad.",
+"pista": "Doubt about whether guests liked the food."
+},
+{
+"id": "haber-subj_pluscuam-7131",
+"respuesta": "Ojala hubiera habido otra oportunidad para intentarlo.",
+"pista": "Wishing there had been another chance."
+},
+{
+"id": "hallar-subj_pluscuam-7140",
+"respuesta": "Era imposible que nosotros hubieramos hallado la salida en la oscuridad.",
+"pista": "Past impossibility of finding the exit in darkness."
+},
+{
+"id": "invitar-subj_pluscuam-7163",
+"respuesta": "No creia que ellos hubieran invitado a todo el barrio a cenar.",
+"pista": "Disbelief about inviting the whole neighborhood."
+},
+{
+"id": "invitar-subj_pluscuam-7164",
+"respuesta": "Ojala nosotros hubieramos invitado a los abuelos a la boda.",
+"pista": "Wishing you had invited grandparents to the wedding."
+},
+{
+"id": "jurar-subj_pluscuam-7175",
+"respuesta": "No creia que tu hubieras jurado decir la verdad ante el juez.",
+"pista": "Disbelief about swearing to tell the truth."
+},
+{
+"id": "leer-subj_pluscuam-7177",
+"respuesta": "Si yo hubiera leido el contrato antes de firmar, habria notado el error.",
+"pista": "Pluperfect subjunctive for not reading before signing."
+},
+{
+"id": "llegar-subj_pluscuam-7188",
+"respuesta": "Era imposible que nosotros hubieramos llegado en dos horas a la cima.",
+"pista": "Past impossibility of reaching the summit so quickly."
+},
+{
+"id": "llevar-subj_pluscuam-7191",
+"respuesta": "Ojala nosotros hubieramos llevado mas comida al picnic.",
+"pista": "Wishing you had brought more food to the picnic."
+},
+{
+"id": "luchar-subj_pluscuam-7199",
+"respuesta": "Dudaba que ellos hubieran luchado hasta el final sin rendirse.",
+"pista": "Doubt about fighting until the end."
+},
+{
+"id": "merecer-subj_pluscuam-7224",
+"respuesta": "No creia que ella hubiera merecido una segunda oportunidad despues de todo.",
+"pista": "Disbelief about deserving another chance."
+},
+{
+"id": "mirar-subj_pluscuam-7228",
+"respuesta": "Si ella hubiera mirado por la ventana, habria visto el accidente.",
+"pista": "Pluperfect subjunctive for not looking when it mattered."
+},
+{
+"id": "mirar-subj_pluscuam-7229",
+"respuesta": "Dudaba que tu hubieras mirado el mapa antes de conducir.",
+"pista": "Doubt about checking a map before driving."
+},
+{
+"id": "ocurrir-subj_pluscuam-7262",
+"respuesta": "No creia que algo tan terrible hubiera ocurrido en nuestro barrio.",
+"pista": "Disbelief about a terrible event in the neighborhood."
+},
+{
+"id": "oir-subj_pluscuam-7271",
+"respuesta": "Dudaba que ella hubiera oido la conversacion desde el otro cuarto.",
+"pista": "Doubt about overhearing a conversation from another room."
+},
+{
+"id": "parar-subj_pluscuam-7280",
+"respuesta": "Dudaba que la lluvia hubiera parado antes de la boda segun el pronostico.",
+"pista": "Doubt about rain stopping before a wedding."
+},
+{
+"id": "parecer-subj_pluscuam-7282",
+"respuesta": "Si la idea hubiera parecido buena, la habriamos aceptado.",
+"pista": "Pluperfect subjunctive for ideas that didn't seem good."
+},
+{
+"id": "pasar-subj_pluscuam-7290",
+"respuesta": "Ojala nosotros hubieramos pasado mas tiempo en la playa.",
+"pista": "Wishing you had spent more time at the beach."
+},
+{
+"id": "perdonar-subj_pluscuam-7308",
+"respuesta": "Ojala nosotros hubieramos perdonado las ofensas antes de separarnos.",
+"pista": "Wishing you had forgiven before parting ways."
+},
+{
+"id": "permitir-subj_pluscuam-7313",
+"respuesta": "Dudaba que el jefe hubiera permitido un descanso en medio del proyecto.",
+"pista": "Doubt about the boss allowing a break."
+},
+{
+"id": "poder-subj_pluscuam-7321",
+"respuesta": "Si yo hubiera podido viajar en ese momento, habria ido a Paris.",
+"pista": "Pluperfect subjunctive for inability to travel in the past."
+},
+{
+"id": "probar-subj_pluscuam-7345",
+"respuesta": "Si tu hubieras probado la comida antes de servir, habrias notado la sal.",
+"pista": "Pluperfect subjunctive for not tasting food before serving."
+},
+{
+"id": "proteger-subj_pluscuam-7356",
+"respuesta": "Ojala nosotros hubieramos protegido el medio ambiente mejor en el pasado.",
+"pista": "Wishing you had protected the environment better."
+},
+{
+"id": "quitar-subj_pluscuam-7364",
+"respuesta": "Dudaba que tu hubieras quitado los zapatos antes de entrar.",
+"pista": "Doubt about removing shoes before entering."
+},
+{
+"id": "realizar-subj_pluscuam-7368",
+"respuesta": "Ojala tu hubieras realizado el viaje cuando tenias la oportunidad.",
+"pista": "Wishing you had taken the trip when possible."
+},
+{
+"id": "recoger-subj_pluscuam-7374",
+"respuesta": "Ojala nosotros hubieramos recogido los frutos antes de la tormenta.",
+"pista": "Wishing you had harvested before the storm."
+},
+{
+"id": "reconocer-subj_pluscuam-7376",
+"respuesta": "No creia que tu hubieras reconocido al sospechoso en la oscuridad.",
+"pista": "Disbelief about identifying someone in the dark."
+},
+{
+"id": "recuperar-subj_pluscuam-7383",
+"respuesta": "Ojala tu hubieras recuperado los archivos antes de formatear.",
+"pista": "Wishing you had backed up files before formatting."
+},
+{
+"id": "regresar-subj_pluscuam-7389",
+"respuesta": "Ojala nosotros hubieramos regresado al pueblo una vez mas.",
+"pista": "Wishing you had returned to the village once more."
+},
+{
+"id": "repetir-subj_pluscuam-7395",
+"respuesta": "No creia que ellos hubieran repetido el mismo error dos veces.",
+"pista": "Disbelief about repeating the same mistake."
+},
+{
+"id": "representar-subj_pluscuam-7398",
+"respuesta": "Ojala tu hubieras representado el papel principal en la obra.",
+"pista": "Wishing you had played the lead role."
+},
+{
+"id": "resolver-subj_pluscuam-7401",
+"respuesta": "Ojala ella hubiera resuelto la ecuacion para el examen.",
+"pista": "Wishing the equation had been solved. Irregular participle: resuelto."
+},
+{
+"id": "reunir-subj_pluscuam-7410",
+"respuesta": "Ojala ella hubiera reunido las pruebas antes del juicio.",
+"pista": "Wishing evidence had been gathered before trial."
+},
+{
+"id": "revisar-subj_pluscuam-7411",
+"respuesta": "Si yo hubiera revisado el documento antes de enviarlo, no habria errores.",
+"pista": "Pluperfect subjunctive for not reviewing before sending."
+},
+{
+"id": "revisar-subj_pluscuam-7413",
+"respuesta": "Ojala tu hubieras revisado las cuentas antes de firmar.",
+"pista": "Wishing you had reviewed the accounts."
+},
+{
+"id": "romper-subj_pluscuam-7418",
+"respuesta": "Dudaba que ella hubiera roto con su novio por esa razon.",
+"pista": "Doubt about breaking up for that reason. Irregular participle: roto."
+},
+{
+"id": "saber-subj_pluscuam-7420",
+"respuesta": "Si yo hubiera sabido la verdad antes, habria actuado diferente.",
+"pista": "Pluperfect subjunctive for not knowing the truth."
+},
+{
+"id": "saber-subj_pluscuam-7422",
+"respuesta": "Ojala nosotros hubieramos sabido el resultado antes de apostar.",
+"pista": "Wishing you had known the outcome before betting."
+},
+{
+"id": "sacar-subj_pluscuam-7425",
+"respuesta": "Ojala yo hubiera sacado fotos del atardecer ayer.",
+"pista": "Wishing you had taken photos of the sunset."
+},
+{
+"id": "salir-subj_pluscuam-7427",
+"respuesta": "Era imposible que el hubiera salido del pais sin pasaporte.",
+"pista": "Past impossibility of leaving the country without a passport."
+},
+{
+"id": "salvar-subj_pluscuam-7431",
+"respuesta": "Ojala tu hubieras salvado esos documentos antes del incendio.",
+"pista": "Wishing you had saved documents before the fire."
+},
+{
+"id": "seguir-subj_pluscuam-7434",
+"respuesta": "Ojala nosotros hubieramos seguido con el plan original sin cambios.",
+"pista": "Wishing you had stuck with the original plan."
+},
+{
+"id": "senalar-subj_pluscuam-7437",
+"respuesta": "Dudaba que nosotros hubieramos senalado los errores en la primera revision.",
+"pista": "Doubt about catching errors in the first review."
+},
+{
+"id": "sentar-subj_pluscuam-7440",
+"respuesta": "Ojala nosotros hubieramos sentado las bases para el futuro.",
+"pista": "Wishing you had laid the foundations for the future."
+},
+{
+"id": "sonar-subj_pluscuam-7459",
+"respuesta": "Si el telefono hubiera sonado a medianoche, me habria despertado.",
+"pista": "Pluperfect subjunctive for a phone that didn't ring."
+},
+{
+"id": "sonar-subj_pluscuam-7460",
+"respuesta": "Dudaba que la alarma hubiera sonado antes de las seis esa manana.",
+"pista": "Doubt about the alarm going off before six."
+},
+{
+"id": "sonar-subj_pluscuam-7461",
+"respuesta": "No creia que la musica hubiera sonado tan fuerte desde la calle.",
+"pista": "Disbelief about music being so loud from the street."
+},
+{
+"id": "subir-subj_pluscuam-7464",
+"respuesta": "Ojala yo hubiera subido los precios antes de la inflacion.",
+"pista": "Wishing you had raised prices before inflation."
+},
+{
+"id": "sufrir-subj_pluscuam-7469",
+"respuesta": "Dudaba que nosotros hubieramos sufrido tanto como ellos decían.",
+"pista": "Doubt about the degree of past suffering."
+},
+{
+"id": "temer-subj_pluscuam-7477",
+"respuesta": "Si yo hubiera temido lo peor, habria tomado precauciones.",
+"pista": "Pluperfect subjunctive for not fearing the worst."
+},
+{
+"id": "tener-subj_pluscuam-7482",
+"respuesta": "Ojala nosotros hubieramos tenido la oportunidad de viajar juntos.",
+"pista": "Wishing you had had the opportunity to travel together."
+},
+{
+"id": "terminar-subj_pluscuam-7485",
+"respuesta": "Ojala nosotros hubieramos terminado la discusion de manera pacifica.",
+"pista": "Wishing you had ended the argument peacefully."
+},
+{
+"id": "traer-subj_pluscuam-7500",
+"respuesta": "Ojala nosotros hubieramos traido mas agua para la excursion.",
+"pista": "Wishing you had brought more water for the hike."
+},
+{
+"id": "unir-subj_pluscuam-7509",
+"respuesta": "Ojala tu hubieras unido las dos mitades antes de que se rompieran.",
+"pista": "Wishing you had joined the two halves together."
+},
+{
+"id": "utilizar-subj_pluscuam-7514",
+"respuesta": "Dudaba que ellos hubieran utilizado la tecnologia eficientemente.",
+"pista": "Doubt about efficient technology use."
+},
+{
+"id": "valer-subj_pluscuam-7516",
+"respuesta": "Si el esfuerzo hubiera valido la pena, habriamos continuado.",
+"pista": "Pluperfect subjunctive for effort that wasn't worth it."
+},
+{
+"id": "vender-subj_pluscuam-7521",
+"respuesta": "Ojala ella hubiera vendido las acciones antes de la caida.",
+"pista": "Wishing stocks had been sold before the crash."
+},
+{
+"id": "venir-subj_pluscuam-7524",
+"respuesta": "Ojala nosotros hubieramos venido mas preparados a la reunion.",
+"pista": "Wishing you had come more prepared to the meeting."
+},
+{
+"id": "ver-subj_pluscuam-7527",
+"respuesta": "Ojala nosotros hubieramos visto ese espectaculo en persona.",
+"pista": "Wishing you had seen the show in person. Irregular participle: visto."
+},
+{
+"id": "viajar-subj_pluscuam-7529",
+"respuesta": "Era imposible que tu hubieras viajado alrededor del mundo en treinta dias.",
+"pista": "Past impossibility of traveling around the world in 30 days."
+},
+{
+"id": "viajar-subj_pluscuam-7530",
+"respuesta": "Ojala yo hubiera viajado mas en mi juventud sin responsabilidades.",
+"pista": "Wishing you had traveled more when young."
+},
+{
+"id": "abandonar-puntual-7540",
+"respuesta": "Ella abandono la casa vieja hace tres dias.",
+"pista": "completed action of leaving behind three days ago"
+},
+{
+"id": "abandonar-puntual-7541",
+"respuesta": "Nosotros abandonamos el proyecto justo en ese instante.",
+"pista": "completed action of giving up the project at that exact moment"
+},
+{
+"id": "abrir-puntual-7542",
+"respuesta": "Yo abri la puerta en la madrugada.",
+"pista": "completed action of opening the door in the early morning"
+},
+{
+"id": "abrir-puntual-7543",
+"respuesta": "Ellos abrieron la tienda al mediodia.",
+"pista": "completed action of opening the store at noon"
+},
+{
+"id": "acabar-puntual-7544",
+"respuesta": "Tu acabaste la tarea al final del dia.",
+"pista": "completed action of finishing the task at the end of the day"
+},
+{
+"id": "acabar-puntual-7545",
+"respuesta": "Ella acabo el libro esa misma noche.",
+"pista": "completed action of finishing the book that very night"
+},
+{
+"id": "aceptar-puntual-7546",
+"respuesta": "El acepto la oferta tras la reunion.",
+"pista": "completed action of accepting the offer after the meeting"
+},
+{
+"id": "aceptar-puntual-7547",
+"respuesta": "Nosotros aceptamos la verdad de repente.",
+"pista": "completed action of accepting the truth suddenly"
+},
+{
+"id": "acercar-puntual-7548",
+"respuesta": "Yo acerque la silla a la mesa en aquel momento.",
+"pista": "completed action of bringing the chair closer at that moment"
+},
+{
+"id": "acercar-puntual-7549",
+"respuesta": "Ella acerco el vaso nada mas llegar.",
+"pista": "completed action of bringing the glass closer right upon arriving"
+},
+{
+"id": "acompanar-puntual-7550",
+"respuesta": "El acompano a su madre durante el viaje.",
+"pista": "completed action of accompanying his mother during the trip"
+},
+{
+"id": "acompanar-puntual-7551",
+"respuesta": "Yo acompane a mi amiga al anochecer.",
+"pista": "completed action of accompanying my friend at nightfall"
+},
+{
+"id": "acordar-puntual-7552",
+"respuesta": "Ellos acordaron los terminos del contrato el martes pasado.",
+"pista": "completed action of agreeing on contract terms last Tuesday"
+},
+{
+"id": "acordar-puntual-7553",
+"respuesta": "Nosotros acordamos el plan tras la reunion.",
+"pista": "completed action of agreeing on the plan after the meeting"
+},
+{
+"id": "actuar-puntual-7554",
+"respuesta": "Ella actuo con valentia justo en ese instante.",
+"pista": "completed action of acting bravely at that exact moment"
+},
+{
+"id": "actuar-puntual-7555",
+"respuesta": "Yo actue en la obra de teatro aquel verano.",
+"pista": "completed action of performing in the play that summer"
+},
+{
+"id": "admitir-puntual-7556",
+"respuesta": "El admitio su error de repente.",
+"pista": "completed action of admitting his mistake suddenly"
+},
+{
+"id": "admitir-puntual-7557",
+"respuesta": "Tu admitiste la derrota al final del dia.",
+"pista": "completed action of admitting defeat at the end of the day"
+},
+{
+"id": "aforar-puntual-7558",
+"respuesta": "Ellos aforaron el recinto hace una semana.",
+"pista": "completed action of gauging the venue a week ago"
+},
+{
+"id": "aforar-puntual-7559",
+"respuesta": "Nosotros aforamos la sala el martes pasado.",
+"pista": "completed action of gauging the room last Tuesday"
+},
+{
+"id": "agradecer-puntual-7560",
+"respuesta": "Yo agradeci su ayuda en aquel momento.",
+"pista": "completed action of being grateful for the help at that moment"
+},
+{
+"id": "agradecer-puntual-7561",
+"respuesta": "Ella agradecio el consejo tras la reunion.",
+"pista": "completed action of being grateful for the advice after the meeting"
+},
+{
+"id": "alcanzar-puntual-7562",
+"respuesta": "El alcanzo la cima al mediodia.",
+"pista": "completed action of reaching the summit at noon"
+},
+{
+"id": "alcanzar-puntual-7563",
+"respuesta": "Yo alcance mi meta hace tres dias.",
+"pista": "completed action of reaching my goal three days ago"
+},
+{
+"id": "alegrar-puntual-7564",
+"respuesta": "La noticia alegro a todos esa misma noche.",
+"pista": "completed action of making everyone happy that very night"
+},
+{
+"id": "alegrar-puntual-7565",
+"respuesta": "Tu visita alegro a mi abuela de repente.",
+"pista": "completed action of cheering up my grandmother suddenly"
+},
+{
+"id": "alejar-puntual-7566",
+"respuesta": "Yo aleje el coche del arbol durante la tormenta.",
+"pista": "completed action of moving the car away from the tree during the storm"
+},
+{
+"id": "alejar-puntual-7567",
+"respuesta": "Ella alejo a los ninos del peligro justo en ese instante.",
+"pista": "completed action of moving the children away from danger at that instant"
+},
+{
+"id": "amar-puntual-7568",
+"respuesta": "El amo con todo su corazon aquel verano.",
+"pista": "completed action of loving with all his heart that summer"
+},
+{
+"id": "amar-puntual-7569",
+"respuesta": "Yo ame la vida en aquel momento.",
+"pista": "completed action of loving life at that moment"
+},
+{
+"id": "andar-puntual-7570",
+"respuesta": "Nosotros anduvimos por las calles antiguas durante el viaje.",
+"pista": "completed action of walking through old streets during the trip"
+},
+{
+"id": "andar-puntual-7571",
+"respuesta": "Yo anduve por el parque en la madrugada.",
+"pista": "completed action of walking through the park in the early morning"
+},
+{
+"id": "aparecer-puntual-7572",
+"respuesta": "El gato aparecio en la cocina de repente.",
+"pista": "completed action of the cat appearing in the kitchen suddenly"
+},
+{
+"id": "aparecer-puntual-7573",
+"respuesta": "Las llaves aparecieron en el sofa al final del dia.",
+"pista": "completed action of the keys appearing on the sofa at the end of the day"
+},
+{
+"id": "apartar-puntual-7574",
+"respuesta": "Yo aparte la mirada justo en ese instante.",
+"pista": "completed action of looking away at that exact moment"
+},
+{
+"id": "apartar-puntual-7575",
+"respuesta": "Ella aparto los platos de la mesa nada mas llegar.",
+"pista": "completed action of moving the plates off the table right upon arriving"
+},
+{
+"id": "apostar-puntual-7576",
+"respuesta": "El aposto todo su dinero aquel verano.",
+"pista": "completed action of betting all his money that summer"
+},
+{
+"id": "apostar-puntual-7577",
+"respuesta": "Nosotros apostamos por el equipo local el martes pasado.",
+"pista": "completed action of betting on the local team last Tuesday"
+},
+{
+"id": "apoyar-puntual-7578",
+"respuesta": "Ella apoyo a su hermano en aquel momento.",
+"pista": "completed action of supporting her brother at that moment"
+},
+{
+"id": "apoyar-puntual-7579",
+"respuesta": "Yo apoye la puerta con fuerza durante la tormenta.",
+"pista": "completed action of bracing the door firmly during the storm"
+},
+{
+"id": "aprender-puntual-7580",
+"respuesta": "Tu aprendiste a nadar aquel verano.",
+"pista": "completed action of learning to swim that summer"
+},
+{
+"id": "aprender-puntual-7581",
+"respuesta": "Yo aprendi la leccion hace una semana.",
+"pista": "completed action of learning the lesson a week ago"
+},
+{
+"id": "arreglar-puntual-7582",
+"respuesta": "El arreglo el coche al mediodia.",
+"pista": "completed action of fixing the car at noon"
+},
+{
+"id": "arreglar-puntual-7583",
+"respuesta": "Nosotros arreglamos la tuberia hace tres dias.",
+"pista": "completed action of fixing the pipe three days ago"
+},
+{
+"id": "asegurar-puntual-7584",
+"respuesta": "Ella aseguro la victoria tras la reunion.",
+"pista": "completed action of securing the victory after the meeting"
+},
+{
+"id": "asegurar-puntual-7585",
+"respuesta": "Yo asegure las ventanas esa misma noche.",
+"pista": "completed action of securing the windows that very night"
+},
+{
+"id": "asesinar-puntual-7586",
+"respuesta": "El criminal asesino al testigo en la madrugada.",
+"pista": "completed action of murdering the witness in the early morning"
+},
+{
+"id": "asesinar-puntual-7587",
+"respuesta": "Ellos asesinaron al lider aquel verano.",
+"pista": "completed action of assassinating the leader that summer"
+},
+{
+"id": "asustar-puntual-7588",
+"respuesta": "El ruido asusto a los ninos de repente.",
+"pista": "completed action of the noise scaring the children suddenly"
+},
+{
+"id": "asustar-puntual-7589",
+"respuesta": "Yo asuste a mi hermana justo en ese instante.",
+"pista": "completed action of scaring my sister at that exact moment"
+},
+{
+"id": "atacar-puntual-7590",
+"respuesta": "El ejercito ataco la fortaleza al anochecer.",
+"pista": "completed action of the army attacking the fortress at nightfall"
+},
+{
+"id": "atacar-puntual-7591",
+"respuesta": "Yo ataque el problema directamente en aquel momento.",
+"pista": "completed action of tackling the problem directly at that moment"
+},
+{
+"id": "atrapar-puntual-7592",
+"respuesta": "La policia atrapo al ladron hace una semana.",
+"pista": "completed action of the police catching the thief a week ago"
+},
+{
+"id": "atrapar-puntual-7593",
+"respuesta": "El atrapo la pelota nada mas llegar.",
+"pista": "completed action of catching the ball right upon arriving"
+},
+{
+"id": "averiguar-puntual-7594",
+"respuesta": "Yo averigue la verdad al final del dia.",
+"pista": "completed action of finding out the truth at the end of the day"
+},
+{
+"id": "averiguar-puntual-7595",
+"respuesta": "Ella averiguo el secreto esa misma noche.",
+"pista": "completed action of finding out the secret that very night"
+},
+{
+"id": "ayudar-puntual-7596",
+"respuesta": "Tu ayudaste a los vecinos durante la tormenta.",
+"pista": "completed action of helping the neighbors during the storm"
+},
+{
+"id": "ayudar-puntual-7597",
+"respuesta": "Nosotros ayudamos a preparar la cena el martes pasado.",
+"pista": "completed action of helping prepare dinner last Tuesday"
+},
+{
+"id": "bailar-puntual-7598",
+"respuesta": "Ella bailo toda la noche aquel verano.",
+"pista": "completed action of dancing all night that summer"
+},
+{
+"id": "bailar-puntual-7599",
+"respuesta": "Yo baile con mi pareja en la madrugada.",
+"pista": "completed action of dancing with my partner in the early morning"
+},
+{
+"id": "bajar-puntual-7600",
+"respuesta": "El bajo las escaleras al anochecer.",
+"pista": "completed action of going down the stairs at nightfall"
+},
+{
+"id": "bajar-puntual-7601",
+"respuesta": "Nosotros bajamos el volumen de repente.",
+"pista": "completed action of turning down the volume suddenly"
+},
+{
+"id": "bastar-puntual-7602",
+"respuesta": "Una palabra basto para convencerlo en aquel momento.",
+"pista": "completed action of one word being enough to convince him"
+},
+{
+"id": "bastar-puntual-7603",
+"respuesta": "Eso basto para cambiar todo esa misma noche.",
+"pista": "completed action of that being enough to change everything that night"
+},
+{
+"id": "beber-puntual-7604",
+"respuesta": "Yo bebi un cafe a las dos en punto.",
+"pista": "completed action of drinking a coffee at two o'clock"
+},
+{
+"id": "beber-puntual-7605",
+"respuesta": "Ellos bebieron mucha agua durante el viaje.",
+"pista": "completed action of drinking a lot of water during the trip"
+},
+{
+"id": "besar-puntual-7606",
+"respuesta": "Ella beso a su hijo al mediodia.",
+"pista": "completed action of kissing her son at noon"
+},
+{
+"id": "besar-puntual-7607",
+"respuesta": "El beso su mano justo en ese instante.",
+"pista": "completed action of kissing her hand at that exact moment"
+},
+{
+"id": "buscar-puntual-7608",
+"respuesta": "Yo busque las llaves en la madrugada.",
+"pista": "completed action of searching for the keys in the early morning"
+},
+{
+"id": "buscar-puntual-7609",
+"respuesta": "Ellos buscaron un nuevo apartamento hace tres dias.",
+"pista": "completed action of looking for a new apartment three days ago"
+},
+{
+"id": "caer-puntual-7610",
+"respuesta": "El vaso cayo al suelo de repente.",
+"pista": "completed action of the glass falling to the floor suddenly"
+},
+{
+"id": "caer-puntual-7611",
+"respuesta": "Yo cai en la calle durante la tormenta.",
+"pista": "completed action of falling on the street during the storm"
+},
+{
+"id": "callar-puntual-7612",
+"respuesta": "Todos callaron en la sala justo en ese instante.",
+"pista": "completed action of everyone going silent in the room at that instant"
+},
+{
+"id": "callar-puntual-7613",
+"respuesta": "Yo calle al nino nada mas llegar.",
+"pista": "completed action of quieting the child right upon arriving"
+},
+{
+"id": "calmar-puntual-7614",
+"respuesta": "Ella calmo a su amiga tras la reunion.",
+"pista": "completed action of calming her friend after the meeting"
+},
+{
+"id": "calmar-puntual-7615",
+"respuesta": "La musica calmo a todos al anochecer.",
+"pista": "completed action of the music calming everyone at nightfall"
+},
+{
+"id": "cambiar-puntual-7616",
+"respuesta": "El cambio de opinion hace una semana.",
+"pista": "completed action of changing his mind a week ago"
+},
+{
+"id": "cambiar-puntual-7617",
+"respuesta": "Yo cambie la cerradura el martes pasado.",
+"pista": "completed action of changing the lock last Tuesday"
+},
+{
+"id": "caminar-puntual-7618",
+"respuesta": "Nosotros caminamos por la playa aquel verano.",
+"pista": "completed action of walking along the beach that summer"
+},
+{
+"id": "caminar-puntual-7619",
+"respuesta": "Ella camino hasta la estacion al mediodia.",
+"pista": "completed action of walking to the station at noon"
+},
+{
+"id": "cantar-puntual-7620",
+"respuesta": "Tu cantaste una cancion hermosa esa misma noche.",
+"pista": "completed action of singing a beautiful song that very night"
+},
+{
+"id": "cantar-puntual-7621",
+"respuesta": "El canto en el balcon en la madrugada.",
+"pista": "completed action of singing on the balcony in the early morning"
+},
+{
+"id": "casar-puntual-7622",
+"respuesta": "Ellos casaron en la iglesia del pueblo aquel verano.",
+"pista": "completed action of getting married in the village church that summer"
+},
+{
+"id": "casar-puntual-7623",
+"respuesta": "El cura caso a la pareja al mediodia.",
+"pista": "completed action of the priest marrying the couple at noon"
+},
+{
+"id": "cerrar-puntual-7624",
+"respuesta": "Yo cerre todas las ventanas al anochecer.",
+"pista": "completed action of closing all the windows at nightfall"
+},
+{
+"id": "cerrar-puntual-7625",
+"respuesta": "Ella cerro la puerta de repente.",
+"pista": "completed action of closing the door suddenly"
+},
+{
+"id": "coger-puntual-7626",
+"respuesta": "El cogio el paraguas nada mas llegar.",
+"pista": "completed action of grabbing the umbrella right upon arriving"
+},
+{
+"id": "coger-puntual-7627",
+"respuesta": "Yo cogi el autobus a las dos en punto.",
+"pista": "completed action of catching the bus at two o'clock"
+},
+{
+"id": "comenzar-puntual-7628",
+"respuesta": "La pelicula comenzo sin retraso a las dos en punto.",
+"pista": "completed action of the movie starting without delay at two o'clock"
+},
+{
+"id": "comenzar-puntual-7629",
+"respuesta": "Yo comence un nuevo trabajo el martes pasado.",
+"pista": "completed action of starting a new job last Tuesday"
+},
+{
+"id": "comer-puntual-7630",
+"respuesta": "Nosotros comimos en el restaurante al mediodia.",
+"pista": "completed action of eating at the restaurant at noon"
+},
+{
+"id": "comer-puntual-7631",
+"respuesta": "Yo comi paella por primera vez hace tres dias.",
+"pista": "completed action of eating paella for the first time three days ago"
+},
+{
+"id": "cometer-puntual-7632",
+"respuesta": "El cometio un grave error en aquel momento.",
+"pista": "completed action of making a serious mistake at that moment"
+},
+{
+"id": "cometer-puntual-7633",
+"respuesta": "Ellos cometieron muchas faltas aquel verano.",
+"pista": "completed action of making many mistakes that summer"
+},
+{
+"id": "compartir-puntual-7634",
+"respuesta": "Nosotros compartimos historias increibles durante el viaje.",
+"pista": "completed action of sharing incredible stories during the trip"
+},
+{
+"id": "compartir-puntual-7635",
+"respuesta": "Ella compartio su secreto esa misma noche.",
+"pista": "completed action of sharing her secret that very night"
+},
+{
+"id": "comprar-puntual-7636",
+"respuesta": "Yo compre un coche nuevo el martes pasado.",
+"pista": "completed action of buying a new car last Tuesday"
+},
+{
+"id": "comprar-puntual-7637",
+"respuesta": "Ella compro flores para la casa al mediodia.",
+"pista": "completed action of buying flowers for the house at noon"
+},
+{
+"id": "comprender-puntual-7638",
+"respuesta": "Tu comprendiste la situacion de repente.",
+"pista": "completed action of understanding the situation suddenly"
+},
+{
+"id": "comprender-puntual-7639",
+"respuesta": "Yo comprendi todo al final del dia.",
+"pista": "completed action of understanding everything at the end of the day"
+},
+{
+"id": "conducir-puntual-7640",
+"respuesta": "Yo conduje hasta la playa en la madrugada.",
+"pista": "completed action of driving to the beach in the early morning"
+},
+{
+"id": "conducir-puntual-7641",
+"respuesta": "El condujo con cuidado durante la tormenta.",
+"pista": "completed action of driving carefully during the storm"
+},
+{
+"id": "confiar-puntual-7642",
+"respuesta": "Ella confio en su instinto en aquel momento.",
+"pista": "completed action of trusting her instinct at that moment"
+},
+{
+"id": "confiar-puntual-7643",
+"respuesta": "Yo confie en mi equipo justo en ese instante.",
+"pista": "completed action of trusting my team at that exact moment"
+},
+{
+"id": "conocer-puntual-7644",
+"respuesta": "Yo conoci a mi mejor amigo aquel verano.",
+"pista": "completed action of meeting my best friend that summer"
+},
+{
+"id": "conocer-puntual-7645",
+"respuesta": "Ellos conocieron la verdad durante el viaje.",
+"pista": "completed action of learning the truth during the trip"
+},
+{
+"id": "conseguir-puntual-7646",
+"respuesta": "Ella consiguio el puesto tras la reunion.",
+"pista": "completed action of getting the position after the meeting"
+},
+{
+"id": "conseguir-puntual-7647",
+"respuesta": "Nosotros conseguimos las entradas al final del dia.",
+"pista": "completed action of getting the tickets at the end of the day"
+},
+{
+"id": "considerar-puntual-7648",
+"respuesta": "El considero todas las opciones hace una semana.",
+"pista": "completed action of considering all the options a week ago"
+},
+{
+"id": "considerar-puntual-7649",
+"respuesta": "Yo considere su propuesta en aquel momento.",
+"pista": "completed action of considering her proposal at that moment"
+},
+{
+"id": "construir-puntual-7650",
+"respuesta": "Ellos construyeron una casa en el campo aquel verano.",
+"pista": "completed action of building a house in the countryside that summer"
+},
+{
+"id": "construir-puntual-7651",
+"respuesta": "Yo construi una estanteria hace tres dias.",
+"pista": "completed action of building a shelf three days ago"
+},
+{
+"id": "contar-puntual-7652",
+"respuesta": "Ella conto una historia fascinante esa misma noche.",
+"pista": "completed action of telling a fascinating story that very night"
+},
+{
+"id": "contar-puntual-7653",
+"respuesta": "Tu contaste el dinero al anochecer.",
+"pista": "completed action of counting the money at nightfall"
+},
+{
+"id": "contestar-puntual-7654",
+"respuesta": "Yo conteste el telefono nada mas llegar.",
+"pista": "completed action of answering the phone right upon arriving"
+},
+{
+"id": "contestar-puntual-7655",
+"respuesta": "El contesto con mucha seguridad de repente.",
+"pista": "completed action of answering with great confidence suddenly"
+},
+{
+"id": "continuar-puntual-7656",
+"respuesta": "Ella continuo con el trabajo tras la reunion.",
+"pista": "completed action of continuing with the work after the meeting"
+},
+{
+"id": "continuar-puntual-7657",
+"respuesta": "Nosotros continuamos el viaje durante la tormenta.",
+"pista": "completed action of continuing the trip during the storm"
+},
+{
+"id": "controlar-puntual-7658",
+"respuesta": "El controlo la situacion justo en ese instante.",
+"pista": "completed action of controlling the situation at that exact moment"
+},
+{
+"id": "controlar-puntual-7659",
+"respuesta": "Yo controle mis emociones en aquel momento.",
+"pista": "completed action of controlling my emotions at that moment"
+},
+{
+"id": "convertir-puntual-7660",
+"respuesta": "El convirtio el garaje en estudio aquel verano.",
+"pista": "completed action of converting the garage into a studio that summer"
+},
+{
+"id": "convertir-puntual-7661",
+"respuesta": "Ellos convirtieron la idea en realidad hace una semana.",
+"pista": "completed action of turning the idea into reality a week ago"
+},
+{
+"id": "correr-puntual-7662",
+"respuesta": "Yo corri cinco kilometros en la madrugada.",
+"pista": "completed action of running five kilometers in the early morning"
+},
+{
+"id": "correr-puntual-7663",
+"respuesta": "Ella corrio hacia la salida de repente.",
+"pista": "completed action of running toward the exit suddenly"
+},
+{
+"id": "cortar-puntual-7664",
+"respuesta": "Tu cortaste el pan al mediodia.",
+"pista": "completed action of cutting the bread at noon"
+},
+{
+"id": "cortar-puntual-7665",
+"respuesta": "El corto la cuerda justo en ese instante.",
+"pista": "completed action of cutting the rope at that exact moment"
+},
+{
+"id": "costar-puntual-7666",
+"respuesta": "El viaje costo mucho dinero aquel verano.",
+"pista": "completed action of the trip costing a lot of money that summer"
+},
+{
+"id": "costar-puntual-7667",
+"respuesta": "La reparacion costo una fortuna hace tres dias.",
+"pista": "completed action of the repair costing a fortune three days ago"
+},
+{
+"id": "crear-puntual-7668",
+"respuesta": "Ella creo una obra maestra el martes pasado.",
+"pista": "completed action of creating a masterpiece last Tuesday"
+},
+{
+"id": "crear-puntual-7669",
+"respuesta": "Nosotros creamos un plan perfecto durante el viaje.",
+"pista": "completed action of creating a perfect plan during the trip"
+},
+{
+"id": "crecer-puntual-7670",
+"respuesta": "La planta crecio mucho aquel verano.",
+"pista": "completed action of the plant growing a lot that summer"
+},
+{
+"id": "crecer-puntual-7671",
+"respuesta": "Yo creci como persona en aquel momento.",
+"pista": "completed action of growing as a person at that moment"
+},
+{
+"id": "creer-puntual-7672",
+"respuesta": "El creyo en la magia de repente.",
+"pista": "completed action of believing in magic suddenly"
+},
+{
+"id": "creer-puntual-7673",
+"respuesta": "Yo creí sus palabras justo en ese instante.",
+"pista": "completed action of believing his words at that exact moment"
+},
+{
+"id": "cubrir-puntual-7674",
+"respuesta": "Ella cubrio la mesa con un mantel al anochecer.",
+"pista": "completed action of covering the table with a cloth at nightfall"
+},
+{
+"id": "cubrir-puntual-7675",
+"respuesta": "La nieve cubrio todo el jardin durante la tormenta.",
+"pista": "completed action of the snow covering the entire garden during the storm"
+},
+{
+"id": "cuidar-puntual-7676",
+"respuesta": "Yo cuide de mi abuela aquel verano.",
+"pista": "completed action of taking care of my grandmother that summer"
+},
+{
+"id": "cuidar-puntual-7677",
+"respuesta": "Ella cuido a los ninos esa misma noche.",
+"pista": "completed action of taking care of the children that very night"
+},
+{
+"id": "cumplir-puntual-7678",
+"respuesta": "El cumplio su promesa el martes pasado.",
+"pista": "completed action of keeping his promise last Tuesday"
+},
+{
+"id": "cumplir-puntual-7679",
+"respuesta": "Nosotros cumplimos con el deber al final del dia.",
+"pista": "completed action of fulfilling the duty at the end of the day"
+},
+{
+"id": "dar-puntual-7680",
+"respuesta": "Yo di un abrazo a mi madre nada mas llegar.",
+"pista": "completed action of giving my mother a hug right upon arriving"
+},
+{
+"id": "dar-puntual-7681",
+"respuesta": "Ella dio las gracias a todos tras la reunion.",
+"pista": "completed action of thanking everyone after the meeting"
+},
+{
+"id": "deber-puntual-7682",
+"respuesta": "El debio mucho dinero hace una semana.",
+"pista": "completed action of owing a lot of money a week ago"
+},
+{
+"id": "deber-puntual-7683",
+"respuesta": "Nosotros debimos tomar una decision en aquel momento.",
+"pista": "completed action of having to make a decision at that moment"
+},
+{
+"id": "decidir-puntual-7684",
+"respuesta": "Yo decidi mudarme al final del dia.",
+"pista": "completed action of deciding to move at the end of the day"
+},
+{
+"id": "decidir-puntual-7685",
+"respuesta": "Ellos decidieron el destino del viaje esa misma noche.",
+"pista": "completed action of deciding the trip destination that very night"
+},
+{
+"id": "decir-puntual-7686",
+"respuesta": "Ella dijo la verdad de repente.",
+"pista": "completed action of telling the truth suddenly"
+},
+{
+"id": "decir-puntual-7687",
+"respuesta": "Yo dije que no en aquel momento.",
+"pista": "completed action of saying no at that moment"
+},
+{
+"id": "defender-puntual-7688",
+"respuesta": "El defendio a su familia justo en ese instante.",
+"pista": "completed action of defending his family at that exact moment"
+},
+{
+"id": "defender-puntual-7689",
+"respuesta": "Nosotros defendimos nuestra posicion durante la tormenta.",
+"pista": "completed action of defending our position during the storm"
+},
+{
+"id": "dejar-puntual-7690",
+"respuesta": "Ella dejó las llaves en la mesa al anochecer.",
+"pista": "completed action of leaving the keys on the table at nightfall"
+},
+{
+"id": "dejar-puntual-7691",
+"respuesta": "Yo deje de fumar hace tres dias.",
+"pista": "completed action of quitting smoking three days ago"
+},
+{
+"id": "demostrar-puntual-7692",
+"respuesta": "El demostro su inocencia tras la reunion.",
+"pista": "completed action of proving his innocence after the meeting"
+},
+{
+"id": "demostrar-puntual-7693",
+"respuesta": "Ella demostro gran valentia en aquel momento.",
+"pista": "completed action of demonstrating great courage at that moment"
+},
+{
+"id": "depender-puntual-7694",
+"respuesta": "Todo dependio de una decision en aquel momento.",
+"pista": "completed action of everything depending on one decision at that moment"
+},
+{
+"id": "depender-puntual-7695",
+"respuesta": "El resultado dependio del clima aquel verano.",
+"pista": "completed action of the result depending on the weather that summer"
+},
+{
+"id": "desaparecer-puntual-7696",
+"respuesta": "El gato desaparecio del jardin de repente.",
+"pista": "completed action of the cat disappearing from the garden suddenly"
+},
+{
+"id": "desaparecer-puntual-7697",
+"respuesta": "Las nubes desaparecieron del cielo al mediodia.",
+"pista": "completed action of the clouds disappearing from the sky at noon"
+},
+{
+"id": "desarrollar-puntual-7698",
+"respuesta": "Ellos desarrollaron un nuevo producto aquel verano.",
+"pista": "completed action of developing a new product that summer"
+},
+{
+"id": "desarrollar-puntual-7699",
+"respuesta": "Yo desarrolle la idea hace una semana.",
+"pista": "completed action of developing the idea a week ago"
+},
+{
+"id": "descubrir-puntual-7700",
+"respuesta": "Ella descubrio la verdad esa misma noche.",
+"pista": "completed action of discovering the truth that very night"
+},
+{
+"id": "descubrir-puntual-7701",
+"respuesta": "Nosotros descubrimos un lugar magico durante el viaje.",
+"pista": "completed action of discovering a magical place during the trip"
+},
+{
+"id": "desear-puntual-7702",
+"respuesta": "Yo desee estar lejos en aquel momento.",
+"pista": "completed action of wishing to be far away at that moment"
+},
+{
+"id": "desear-puntual-7703",
+"respuesta": "Ella deseo volver a casa justo en ese instante.",
+"pista": "completed action of wishing to go home at that exact moment"
+},
+{
+"id": "despedir-puntual-7704",
+"respuesta": "El jefe despidio a tres empleados el martes pasado.",
+"pista": "completed action of the boss firing three employees last Tuesday"
+},
+{
+"id": "despedir-puntual-7705",
+"respuesta": "Nosotros despedimos a nuestros amigos al anochecer.",
+"pista": "completed action of saying goodbye to our friends at nightfall"
+},
+{
+"id": "despertar-puntual-7706",
+"respuesta": "Yo desperte con un ruido extrano en la madrugada.",
+"pista": "completed action of waking up to a strange noise in the early morning"
+},
+{
+"id": "despertar-puntual-7707",
+"respuesta": "Ella desperto a los ninos a las dos en punto.",
+"pista": "completed action of waking the children at two o'clock"
+},
+{
+"id": "destruir-puntual-7708",
+"respuesta": "La tormenta destruyo el puente aquel verano.",
+"pista": "completed action of the storm destroying the bridge that summer"
+},
+{
+"id": "destruir-puntual-7709",
+"respuesta": "Ellos destruyeron las pruebas hace tres dias.",
+"pista": "completed action of destroying the evidence three days ago"
+},
+{
+"id": "detener-puntual-7710",
+"respuesta": "La policia detuvo al sospechoso al mediodia.",
+"pista": "completed action of the police arresting the suspect at noon"
+},
+{
+"id": "detener-puntual-7711",
+"respuesta": "Yo detuve el coche justo en ese instante.",
+"pista": "completed action of stopping the car at that exact moment"
+},
+{
+"id": "devolver-puntual-7712",
+"respuesta": "El devolvio el libro a la biblioteca hace una semana.",
+"pista": "completed action of returning the book to the library a week ago"
+},
+{
+"id": "devolver-puntual-7713",
+"respuesta": "Yo devolvi el dinero nada mas llegar.",
+"pista": "completed action of returning the money right upon arriving"
+},
+{
+"id": "dirigir-puntual-7714",
+"respuesta": "Ella dirigio la empresa aquel verano.",
+"pista": "completed action of directing the company that summer"
+},
+{
+"id": "dirigir-puntual-7715",
+"respuesta": "Yo dirigi al grupo durante el viaje.",
+"pista": "completed action of leading the group during the trip"
+},
+{
+"id": "disculpar-puntual-7716",
+"respuesta": "Ella disculpo a su companero tras la reunion.",
+"pista": "completed action of excusing her colleague after the meeting"
+},
+{
+"id": "disculpar-puntual-7717",
+"respuesta": "Yo disculpe mi comportamiento de repente.",
+"pista": "completed action of apologizing for my behavior suddenly"
+},
+{
+"id": "discutir-puntual-7718",
+"respuesta": "Ellos discutieron el problema esa misma noche.",
+"pista": "completed action of discussing the problem that very night"
+},
+{
+"id": "discutir-puntual-7719",
+"respuesta": "Nosotros discutimos las opciones al final del dia.",
+"pista": "completed action of discussing the options at the end of the day"
+},
+{
+"id": "disfrutar-puntual-7720",
+"respuesta": "Nosotros disfrutamos de la playa aquel verano.",
+"pista": "completed action of enjoying the beach that summer"
+},
+{
+"id": "disfrutar-puntual-7721",
+"respuesta": "Ella disfruto de cada momento durante el viaje.",
+"pista": "completed action of enjoying every moment during the trip"
+},
+{
+"id": "disparar-puntual-7722",
+"respuesta": "El soldado disparo al enemigo al anochecer.",
+"pista": "completed action of the soldier shooting at the enemy at nightfall"
+},
+{
+"id": "disparar-puntual-7723",
+"respuesta": "Ellos dispararon una flecha justo en ese instante.",
+"pista": "completed action of shooting an arrow at that exact moment"
+},
+{
+"id": "dormir-puntual-7724",
+"respuesta": "Yo dormi diez horas esa misma noche.",
+"pista": "completed action of sleeping ten hours that very night"
+},
+{
+"id": "dormir-puntual-7725",
+"respuesta": "El bebe durmio toda la tarde al mediodia.",
+"pista": "completed action of the baby sleeping all afternoon at noon"
+},
+{
+"id": "echar-puntual-7726",
+"respuesta": "Yo eche a correr de repente.",
+"pista": "completed action of starting to run suddenly"
+}
+]
