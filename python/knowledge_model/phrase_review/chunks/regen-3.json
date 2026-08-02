@@ -1,0 +1,9447 @@
+[
+{
+"exercise": {
+"id": "caer-habitual-874",
+"verbo": "caer",
+"contexto": "ellos, en aquella época, a menudo, mucho.",
+"respuesta": "ellos caían mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"caian"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos caian mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos caían mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mover-habitual-905",
+"verbo": "mover",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos movían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"movian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos movian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos movían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mover-habitual-906",
+"verbo": "mover",
+"contexto": "tú, cuando era joven, siempre, mucho.",
+"respuesta": "tú movías mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"tú"
+],
+[
+"movias"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú movias mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "tú movías mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mover-habitual-907",
+"verbo": "mover",
+"contexto": "yo, en aquella época, a menudo, mucho.",
+"respuesta": "yo movía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"movia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo movia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo movía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "comenzar-habitual-927",
+"verbo": "comenzar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros comenzábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"comenzabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros comenzabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros comenzábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "regresar-habitual-938",
+"verbo": "regresar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros regresábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"regresabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros regresabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros regresábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "convertir-habitual-960",
+"verbo": "convertir",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros convertíamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"convertiamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros convertiamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros convertíamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "convertir-habitual-961",
+"verbo": "convertir",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros convertíamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"convertiamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros convertiamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros convertíamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "convertir-habitual-962",
+"verbo": "convertir",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros convertíamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"convertiamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros convertiamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros convertíamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "escribir-habitual-982",
+"verbo": "escribir",
+"contexto": "él, de niño, todos los días, un mensaje.",
+"respuesta": "él escribía un mensaje de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"escribia"
+],
+[
+"un mensaje"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él escribia un mensaje de niño, todos los días.",
+"cat": "gram",
+"fix": "él escribía un mensaje de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "escribir-habitual-983",
+"verbo": "escribir",
+"contexto": "ellos, cuando era joven, siempre, una carta.",
+"respuesta": "ellos escribían una carta cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"escribian"
+],
+[
+"una carta"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos escribian una carta cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos escribían una carta cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "escribir-habitual-984",
+"verbo": "escribir",
+"contexto": "ellos, en aquella época, a menudo, una carta.",
+"respuesta": "ellos escribían una carta en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"escribian"
+],
+[
+"una carta"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos escribian una carta en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos escribían una carta en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "meter-habitual-993",
+"verbo": "meter",
+"contexto": "yo, de niño, todos los días, mucho.",
+"respuesta": "yo metía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"metia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo metia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "yo metía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "meter-habitual-994",
+"verbo": "meter",
+"contexto": "yo, cuando era joven, siempre, mucho.",
+"respuesta": "yo metía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"yo"
+],
+[
+"metia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo metia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "yo metía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "meter-habitual-995",
+"verbo": "meter",
+"contexto": "yo, en aquella época, a menudo, mucho.",
+"respuesta": "yo metía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"metia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo metia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo metía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "detener-habitual-1004",
+"verbo": "detener",
+"contexto": "ella, de niño, todos los días, mucho.",
+"respuesta": "ella detenía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"detenia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella detenia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ella detenía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "detener-habitual-1005",
+"verbo": "detener",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros deteníamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"deteniamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros deteniamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros deteníamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "detener-habitual-1006",
+"verbo": "detener",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él detenía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"detenia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él detenia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él detenía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "decidir-habitual-1015",
+"verbo": "decidir",
+"contexto": "yo, de niño, todos los días, mucho.",
+"respuesta": "yo decidía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"decidia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo decidia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "yo decidía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "decidir-habitual-1016",
+"verbo": "decidir",
+"contexto": "tú, cuando era joven, siempre, mucho.",
+"respuesta": "tú decidías mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"tú"
+],
+[
+"decidias"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú decidias mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "tú decidías mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "decidir-habitual-1017",
+"verbo": "decidir",
+"contexto": "ellos, en aquella época, a menudo, mucho.",
+"respuesta": "ellos decidían mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"decidian"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos decidian mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos decidían mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "correr-habitual-1026",
+"verbo": "correr",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos corrían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"corrian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos corrian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos corrían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "correr-habitual-1027",
+"verbo": "correr",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros corríamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"corriamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros corriamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros corríamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "correr-habitual-1028",
+"verbo": "correr",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros corríamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"corriamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros corriamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros corríamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "funcionar-habitual-1037",
+"verbo": "funcionar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros funcionábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"funcionabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros funcionabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros funcionábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "funcionar-habitual-1038",
+"verbo": "funcionar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros funcionábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"funcionabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros funcionabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros funcionábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "existir-habitual-1059",
+"verbo": "existir",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos existían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"existian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos existian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos existían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "existir-habitual-1060",
+"verbo": "existir",
+"contexto": "ella, cuando era joven, siempre, mucho.",
+"respuesta": "ella existía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ella"
+],
+[
+"existia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella existia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ella existía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "existir-habitual-1061",
+"verbo": "existir",
+"contexto": "ellos, en aquella época, a menudo, mucho.",
+"respuesta": "ellos existían mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"existian"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos existian mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos existían mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "subir-habitual-1081",
+"verbo": "subir",
+"contexto": "él, de niño, todos los días, al autobús.",
+"respuesta": "él subía al autobús de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"subia"
+],
+[
+"al autobús"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él subia al autobús de niño, todos los días.",
+"cat": "gram",
+"fix": "él subía al autobús de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "subir-habitual-1082",
+"verbo": "subir",
+"contexto": "ellos, cuando era joven, siempre, al autobús.",
+"respuesta": "ellos subían al autobús cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"subian"
+],
+[
+"al autobús"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos subian al autobús cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos subían al autobús cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "subir-habitual-1083",
+"verbo": "subir",
+"contexto": "él, en aquella época, a menudo, las escaleras.",
+"respuesta": "él subía las escaleras en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"subia"
+],
+[
+"las escaleras"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él subia las escaleras en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él subía las escaleras en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "servir-habitual-1092",
+"verbo": "servir",
+"contexto": "ella, de niño, todos los días, mucho.",
+"respuesta": "ella servía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"servia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella servia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ella servía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "servir-habitual-1093",
+"verbo": "servir",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos servían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"servian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos servian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos servían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "servir-habitual-1094",
+"verbo": "servir",
+"contexto": "ellos, en aquella época, a menudo, mucho.",
+"respuesta": "ellos servían mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"servian"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos servian mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos servían mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "levantar-habitual-1138",
+"verbo": "levantar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros levantábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"levantabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros levantabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros levantábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "quitar-habitual-1181",
+"verbo": "quitar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros quitábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"quitabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros quitabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros quitábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "amar-habitual-1193",
+"verbo": "amar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros amábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"amabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros amabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros amábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "coger-habitual-1202",
+"verbo": "coger",
+"contexto": "yo, de niño, todos los días, mucho.",
+"respuesta": "yo cogía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"cogia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo cogia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "yo cogía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "coger-habitual-1203",
+"verbo": "coger",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros cogíamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"cogiamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros cogiamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros cogíamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "coger-habitual-1204",
+"verbo": "coger",
+"contexto": "tú, en aquella época, a menudo, mucho.",
+"respuesta": "tú cogías mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"tú"
+],
+[
+"cogias"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú cogias mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "tú cogías mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "disparar-habitual-1215",
+"verbo": "disparar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros disparábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"disparabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros disparabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros disparábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "beber-habitual-1235",
+"verbo": "beber",
+"contexto": "ella, de niño, todos los días, agua.",
+"respuesta": "ella bebía agua de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"bebia"
+],
+[
+"agua"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella bebia agua de niño, todos los días.",
+"cat": "gram",
+"fix": "ella bebía agua de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "beber-habitual-1236",
+"verbo": "beber",
+"contexto": "ellos, cuando era joven, siempre, café.",
+"respuesta": "ellos bebían café cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"bebian"
+],
+[
+"café"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos bebian café cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos bebían café cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "beber-habitual-1237",
+"verbo": "beber",
+"contexto": "ella, en aquella época, a menudo, café.",
+"respuesta": "ella bebía café en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"bebia"
+],
+[
+"café"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella bebia café en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella bebía café en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "vender-habitual-1246",
+"verbo": "vender",
+"contexto": "ella, de niño, todos los días, la casa.",
+"respuesta": "ella vendía la casa de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"vendia"
+],
+[
+"la casa"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella vendia la casa de niño, todos los días.",
+"cat": "gram",
+"fix": "ella vendía la casa de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "vender-habitual-1247",
+"verbo": "vender",
+"contexto": "tú, cuando era joven, siempre, la casa.",
+"respuesta": "tú vendías la casa cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"tú"
+],
+[
+"vendias"
+],
+[
+"la casa"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú vendias la casa cuando era joven, siempre.",
+"cat": "gram",
+"fix": "tú vendías la casa cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "vender-habitual-1248",
+"verbo": "vender",
+"contexto": "ella, en aquella época, a menudo, la casa.",
+"respuesta": "ella vendía la casa en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"vendia"
+],
+[
+"la casa"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella vendia la casa en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella vendía la casa en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "aparecer-habitual-1268",
+"verbo": "aparecer",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú aparecías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"aparecias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú aparecias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú aparecías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "aparecer-habitual-1269",
+"verbo": "aparecer",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él aparecía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"aparecia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él aparecia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él aparecía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "aparecer-habitual-1270",
+"verbo": "aparecer",
+"contexto": "ellos, en aquella época, a menudo, mucho.",
+"respuesta": "ellos aparecían mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"aparecian"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos aparecian mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos aparecían mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "prometer-habitual-1312",
+"verbo": "prometer",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos prometían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"prometian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos prometian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos prometían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "prometer-habitual-1313",
+"verbo": "prometer",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros prometíamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"prometiamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros prometiamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros prometíamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "prometer-habitual-1314",
+"verbo": "prometer",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros prometíamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"prometiamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros prometiamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros prometíamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "enseñar-habitual-1324",
+"verbo": "enseñar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros enseñábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"enseñabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros enseñabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros enseñábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "descubrir-habitual-1334",
+"verbo": "descubrir",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos descubrían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"descubrian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos descubrian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos descubrían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "descubrir-habitual-1335",
+"verbo": "descubrir",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos descubrían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"descubrian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos descubrian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos descubrían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "descubrir-habitual-1336",
+"verbo": "descubrir",
+"contexto": "yo, en aquella época, a menudo, mucho.",
+"respuesta": "yo descubría mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"descubria"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo descubria mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo descubría mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "referir-habitual-1367",
+"verbo": "referir",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú referías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"referias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú referias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú referías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "referir-habitual-1368",
+"verbo": "referir",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros referíamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"referiamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros referiamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros referíamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "referir-habitual-1369",
+"verbo": "referir",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él refería mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"referia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él referia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él refería mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "imaginar-habitual-1390",
+"verbo": "imaginar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros imaginábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"imaginabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros imaginabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros imaginábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "aprender-habitual-1400",
+"verbo": "aprender",
+"contexto": "yo, de niño, todos los días, mucho español.",
+"respuesta": "yo aprendía mucho español de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"aprendia"
+],
+[
+"mucho español"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo aprendia mucho español de niño, todos los días.",
+"cat": "gram",
+"fix": "yo aprendía mucho español de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "aprender-habitual-1401",
+"verbo": "aprender",
+"contexto": "ella, cuando era joven, siempre, mucho español.",
+"respuesta": "ella aprendía mucho español cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ella"
+],
+[
+"aprendia"
+],
+[
+"mucho español"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella aprendia mucho español cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ella aprendía mucho español cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "aprender-habitual-1402",
+"verbo": "aprender",
+"contexto": "nosotros, en aquella época, a menudo, mucho español.",
+"respuesta": "nosotros aprendíamos mucho español en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"aprendiamos"
+],
+[
+"mucho español"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros aprendiamos mucho español en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros aprendíamos mucho español en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "confiar-habitual-1424",
+"verbo": "confiar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros confiábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"confiabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros confiabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros confiábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cerrar-habitual-1445",
+"verbo": "cerrar",
+"contexto": "nosotros, cuando era joven, siempre, la tienda.",
+"respuesta": "nosotros cerrábamos la tienda cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"cerrabamos"
+],
+[
+"la tienda"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros cerrabamos la tienda cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros cerrábamos la tienda cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ofrecer-habitual-1455",
+"verbo": "ofrecer",
+"contexto": "yo, de niño, todos los días, mucho.",
+"respuesta": "yo ofrecía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"ofrecia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo ofrecia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "yo ofrecía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ofrecer-habitual-1456",
+"verbo": "ofrecer",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos ofrecían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"ofrecian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos ofrecian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos ofrecían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ofrecer-habitual-1457",
+"verbo": "ofrecer",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él ofrecía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"ofrecia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él ofrecia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él ofrecía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "bajar-habitual-1467",
+"verbo": "bajar",
+"contexto": "nosotros, cuando era joven, siempre, las escaleras.",
+"respuesta": "nosotros bajábamos las escaleras cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"bajabamos"
+],
+[
+"las escaleras"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros bajabamos las escaleras cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros bajábamos las escaleras cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "preparar-habitual-1500",
+"verbo": "preparar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros preparábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"preparabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros preparabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros preparábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "elegir-habitual-1510",
+"verbo": "elegir",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú elegías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"elegias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú elegias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú elegías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "elegir-habitual-1511",
+"verbo": "elegir",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos elegían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"elegian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos elegian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos elegían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "elegir-habitual-1512",
+"verbo": "elegir",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él elegía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"elegia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él elegia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él elegía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "parar-habitual-1523",
+"verbo": "parar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros parábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"parabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros parabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros parábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "desaparecer-habitual-1532",
+"verbo": "desaparecer",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú desaparecías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"desaparecias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú desaparecias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú desaparecías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "desaparecer-habitual-1533",
+"verbo": "desaparecer",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él desaparecía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"desaparecia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él desaparecia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él desaparecía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "desaparecer-habitual-1534",
+"verbo": "desaparecer",
+"contexto": "yo, en aquella época, a menudo, mucho.",
+"respuesta": "yo desaparecía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"desaparecia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo desaparecia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo desaparecía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mentir-habitual-1543",
+"verbo": "mentir",
+"contexto": "ella, de niño, todos los días, mucho.",
+"respuesta": "ella mentía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"mentia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella mentia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ella mentía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mentir-habitual-1544",
+"verbo": "mentir",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él mentía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"mentia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él mentia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él mentía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mentir-habitual-1545",
+"verbo": "mentir",
+"contexto": "ella, en aquella época, a menudo, mucho.",
+"respuesta": "ella mentía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"mentia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella mentia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella mentía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "romper-habitual-1554",
+"verbo": "romper",
+"contexto": "él, de niño, todos los días, mucho.",
+"respuesta": "él rompía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"rompia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él rompia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "él rompía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "romper-habitual-1555",
+"verbo": "romper",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros rompíamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"rompiamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros rompiamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros rompíamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "romper-habitual-1556",
+"verbo": "romper",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él rompía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"rompia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él rompia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él rompía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "obtener-habitual-1576",
+"verbo": "obtener",
+"contexto": "ella, de niño, todos los días, mucho.",
+"respuesta": "ella obtenía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"obtenia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella obtenia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ella obtenía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "obtener-habitual-1577",
+"verbo": "obtener",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros obteníamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"obteniamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros obteniamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros obteníamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "obtener-habitual-1578",
+"verbo": "obtener",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros obteníamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"obteniamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros obteniamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros obteníamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "molestar-habitual-1587",
+"verbo": "molestar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros molestábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"molestabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros molestabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros molestábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "utilizar-habitual-1600",
+"verbo": "utilizar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros utilizábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"utilizabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros utilizabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros utilizábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "resultar-habitual-1631",
+"verbo": "resultar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros resultábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"resultabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros resultabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros resultábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "resultar-habitual-1632",
+"verbo": "resultar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros resultábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"resultabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros resultabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros resultábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "responder-habitual-1653",
+"verbo": "responder",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú respondías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"respondias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú respondias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú respondías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "responder-habitual-1654",
+"verbo": "responder",
+"contexto": "yo, cuando era joven, siempre, mucho.",
+"respuesta": "yo respondía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"yo"
+],
+[
+"respondia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo respondia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "yo respondía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "responder-habitual-1655",
+"verbo": "responder",
+"contexto": "tú, en aquella época, a menudo, mucho.",
+"respuesta": "tú respondías mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"tú"
+],
+[
+"respondias"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú respondias mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "tú respondías mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "producir-habitual-1675",
+"verbo": "producir",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos producían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"producian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos producian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos producían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "producir-habitual-1676",
+"verbo": "producir",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros producíamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"produciamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros produciamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros producíamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "producir-habitual-1677",
+"verbo": "producir",
+"contexto": "ellos, en aquella época, a menudo, mucho.",
+"respuesta": "ellos producían mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"producian"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos producian mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos producían mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "probar-habitual-1699",
+"verbo": "probar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros probábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"probabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros probabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros probábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "evitar-habitual-1720",
+"verbo": "evitar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros evitábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"evitabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros evitabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros evitábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-habitual-1730",
+"verbo": "soler",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros solíamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"soliamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros soliamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros solíamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-habitual-1731",
+"verbo": "soler",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos solían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"solian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos solian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos solían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-habitual-1732",
+"verbo": "soler",
+"contexto": "yo, en aquella época, a menudo, mucho.",
+"respuesta": "yo solía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"solia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo solia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo solía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reconocer-habitual-1741",
+"verbo": "reconocer",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos reconocían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"reconocian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos reconocian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos reconocían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reconocer-habitual-1742",
+"verbo": "reconocer",
+"contexto": "ella, cuando era joven, siempre, mucho.",
+"respuesta": "ella reconocía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ella"
+],
+[
+"reconocia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella reconocia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ella reconocía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reconocer-habitual-1743",
+"verbo": "reconocer",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros reconocíamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"reconociamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros reconociamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros reconocíamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "escapar-habitual-1754",
+"verbo": "escapar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros escapábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"escapabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros escapabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros escapábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cumplir-habitual-1763",
+"verbo": "cumplir",
+"contexto": "ella, de niño, todos los días, mucho.",
+"respuesta": "ella cumplía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"cumplia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella cumplia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ella cumplía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cumplir-habitual-1764",
+"verbo": "cumplir",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él cumplía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"cumplia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él cumplia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él cumplía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cumplir-habitual-1765",
+"verbo": "cumplir",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros cumplíamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"cumpliamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros cumpliamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros cumplíamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "comprender-habitual-1774",
+"verbo": "comprender",
+"contexto": "él, de niño, todos los días, mucho.",
+"respuesta": "él comprendía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"comprendia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él comprendia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "él comprendía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "comprender-habitual-1775",
+"verbo": "comprender",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros comprendíamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"comprendiamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros comprendiamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros comprendíamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "comprender-habitual-1776",
+"verbo": "comprender",
+"contexto": "yo, en aquella época, a menudo, mucho.",
+"respuesta": "yo comprendía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"comprendia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo comprendia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo comprendía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mandar-habitual-1787",
+"verbo": "mandar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros mandábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"mandabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros mandabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros mandábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "partir-habitual-1796",
+"verbo": "partir",
+"contexto": "él, de niño, todos los días, mucho.",
+"respuesta": "él partía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"partia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él partia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "él partía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "partir-habitual-1797",
+"verbo": "partir",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros partíamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"partiamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros partiamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros partíamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "partir-habitual-1798",
+"verbo": "partir",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él partía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"partia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él partia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él partía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "temer-habitual-1807",
+"verbo": "temer",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú temías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"temias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú temias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú temías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "temer-habitual-1808",
+"verbo": "temer",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos temían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"temian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos temian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos temían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "temer-habitual-1809",
+"verbo": "temer",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él temía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"temia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él temia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él temía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-habitual-1840",
+"verbo": "tranquilar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros tranquilábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"tranquilabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros tranquilabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros tranquilábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-habitual-1841",
+"verbo": "tranquilar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros tranquilábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"tranquilabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros tranquilabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros tranquilábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "preferir-habitual-1862",
+"verbo": "preferir",
+"contexto": "él, de niño, todos los días, mucho.",
+"respuesta": "él prefería mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"preferia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él preferia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "él prefería mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "preferir-habitual-1863",
+"verbo": "preferir",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos preferían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"preferian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos preferian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos preferían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "preferir-habitual-1864",
+"verbo": "preferir",
+"contexto": "ella, en aquella época, a menudo, mucho.",
+"respuesta": "ella prefería mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"preferia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella preferia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella prefería mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conducir-habitual-1873",
+"verbo": "conducir",
+"contexto": "ellos, de niño, todos los días, el coche.",
+"respuesta": "ellos conducían el coche de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"conducian"
+],
+[
+"el coche"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos conducian el coche de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos conducían el coche de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conducir-habitual-1874",
+"verbo": "conducir",
+"contexto": "ellos, cuando era joven, siempre, muy despacio.",
+"respuesta": "ellos conducían muy despacio cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"conducian"
+],
+[
+"muy despacio"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos conducian muy despacio cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos conducían muy despacio cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conducir-habitual-1875",
+"verbo": "conducir",
+"contexto": "tú, en aquella época, a menudo, muy despacio.",
+"respuesta": "tú conducías muy despacio en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"tú"
+],
+[
+"conducias"
+],
+[
+"muy despacio"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú conducias muy despacio en aquella época, a menudo.",
+"cat": "gram",
+"fix": "tú conducías muy despacio en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "proteger-habitual-1895",
+"verbo": "proteger",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos protegían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"protegian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos protegian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos protegían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "proteger-habitual-1896",
+"verbo": "proteger",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él protegía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"protegia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él protegia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él protegía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "proteger-habitual-1897",
+"verbo": "proteger",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros protegíamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"protegiamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros protegiamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros protegíamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "sufrir-habitual-1906",
+"verbo": "sufrir",
+"contexto": "ella, de niño, todos los días, mucho.",
+"respuesta": "ella sufría mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"sufria"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella sufria mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ella sufría mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "sufrir-habitual-1907",
+"verbo": "sufrir",
+"contexto": "yo, cuando era joven, siempre, mucho.",
+"respuesta": "yo sufría mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"yo"
+],
+[
+"sufria"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo sufria mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "yo sufría mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "sufrir-habitual-1908",
+"verbo": "sufrir",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él sufría mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"sufria"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él sufria mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él sufría mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "dirigir-habitual-1961",
+"verbo": "dirigir",
+"contexto": "yo, de niño, todos los días, mucho.",
+"respuesta": "yo dirigía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"dirigia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo dirigia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "yo dirigía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "dirigir-habitual-1962",
+"verbo": "dirigir",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos dirigían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"dirigian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos dirigian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos dirigían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "dirigir-habitual-1963",
+"verbo": "dirigir",
+"contexto": "ellos, en aquella época, a menudo, mucho.",
+"respuesta": "ellos dirigían mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"dirigian"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos dirigian mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos dirigían mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "recoger-habitual-1972",
+"verbo": "recoger",
+"contexto": "ella, de niño, todos los días, mucho.",
+"respuesta": "ella recogía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"recogia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella recogia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ella recogía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "recoger-habitual-1973",
+"verbo": "recoger",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él recogía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"recogia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él recogia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él recogía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "recoger-habitual-1974",
+"verbo": "recoger",
+"contexto": "tú, en aquella época, a menudo, mucho.",
+"respuesta": "tú recogías mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"tú"
+],
+[
+"recogias"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú recogias mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "tú recogías mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "asesinar-habitual-1994",
+"verbo": "asesinar",
+"contexto": "nosotros, de niño, todos los días, mucho ejercicio.",
+"respuesta": "nosotros asesinábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"asesinabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros asesinabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros asesinábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+},
+{
+"field": "respuesta",
+"text": "nosotros asesinabamos mucho de niño, todos los días.",
+"cat": "sem",
+"fix": "nosotros jugábamos mucho de niño, todos los días.",
+"note": "habitual childhood murder is a bizarre, inappropriate drill sentence"
+},
+{
+"field": "contexto",
+"text": "nosotros, de niño, todos los días, mucho.",
+"cat": "sem",
+"fix": "nosotros, de niño, todos los días, mucho ejercicio.",
+"note": "template mismatch produces a nonsensical/disturbing sentence with asesinar"
+}
+]
+},
+{
+"exercise": {
+"id": "volar-habitual-2007",
+"verbo": "volar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros volábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"volabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros volabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros volábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reunir-habitual-2016",
+"verbo": "reunir",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos reunían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"reunian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos reunian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos reunían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reunir-habitual-2017",
+"verbo": "reunir",
+"contexto": "ella, cuando era joven, siempre, mucho.",
+"respuesta": "ella reunía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ella"
+],
+[
+"reunia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella reunia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ella reunía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reunir-habitual-2018",
+"verbo": "reunir",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él reunía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"reunia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él reunia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él reunía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "crecer-habitual-2027",
+"verbo": "crecer",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros crecíamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"creciamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros creciamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros crecíamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "crecer-habitual-2028",
+"verbo": "crecer",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él crecía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"crecia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él crecia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él crecía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "crecer-habitual-2029",
+"verbo": "crecer",
+"contexto": "tú, en aquella época, a menudo, mucho.",
+"respuesta": "tú crecías mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"tú"
+],
+[
+"crecias"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú crecias mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "tú crecías mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "alcanzar-habitual-2038",
+"verbo": "alcanzar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros alcanzábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"alcanzabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros alcanzabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros alcanzábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "devolver-habitual-2049",
+"verbo": "devolver",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos devolvían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"devolvian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos devolvian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos devolvían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "devolver-habitual-2050",
+"verbo": "devolver",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él devolvía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"devolvia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él devolvia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él devolvía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "devolver-habitual-2051",
+"verbo": "devolver",
+"contexto": "tú, en aquella época, a menudo, mucho.",
+"respuesta": "tú devolvías mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"tú"
+],
+[
+"devolvias"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú devolvias mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "tú devolvías mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "joder-habitual-2060",
+"verbo": "joder",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros jodíamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"jodiamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros jodiamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros jodíamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "joder-habitual-2061",
+"verbo": "joder",
+"contexto": "yo, cuando era joven, siempre, mucho.",
+"respuesta": "yo jodía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"yo"
+],
+[
+"jodia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo jodia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "yo jodía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "joder-habitual-2062",
+"verbo": "joder",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él jodía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"jodia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él jodia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él jodía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "destruir-habitual-2071",
+"verbo": "destruir",
+"contexto": "él, de niño, todos los días, mucho.",
+"respuesta": "él destruía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"destruia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él destruia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "él destruía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "destruir-habitual-2072",
+"verbo": "destruir",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos destruían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"destruian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos destruian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos destruían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "destruir-habitual-2073",
+"verbo": "destruir",
+"contexto": "ella, en aquella época, a menudo, mucho.",
+"respuesta": "ella destruía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"destruia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella destruia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella destruía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "entregar-habitual-2083",
+"verbo": "entregar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros entregábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"entregabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros entregabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros entregábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "entregar-habitual-2084",
+"verbo": "entregar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros entregábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"entregabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros entregabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros entregábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "demostrar-habitual-2105",
+"verbo": "demostrar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros demostrábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"demostrabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros demostrabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros demostrábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "merecer-habitual-2137",
+"verbo": "merecer",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros merecíamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"mereciamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros mereciamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros merecíamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "merecer-habitual-2138",
+"verbo": "merecer",
+"contexto": "ella, cuando era joven, siempre, mucho.",
+"respuesta": "ella merecía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ella"
+],
+[
+"merecia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella merecia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ella merecía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "merecer-habitual-2139",
+"verbo": "merecer",
+"contexto": "ellos, en aquella época, a menudo, mucho.",
+"respuesta": "ellos merecían mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"merecian"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos merecian mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos merecían mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "bailar-habitual-2148",
+"verbo": "bailar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros bailábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"bailabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros bailabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros bailábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "bailar-habitual-2149",
+"verbo": "bailar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros bailábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"bailabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros bailabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros bailábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "incluir-habitual-2159",
+"verbo": "incluir",
+"contexto": "ella, de niño, todos los días, mucho.",
+"respuesta": "ella incluía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"incluia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella incluia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ella incluía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "incluir-habitual-2160",
+"verbo": "incluir",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros incluíamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"incluiamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros incluiamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros incluíamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "incluir-habitual-2161",
+"verbo": "incluir",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él incluía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"incluia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él incluia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él incluía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reír-habitual-2170",
+"verbo": "reír",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú reías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"reias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú reias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú reías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reír-habitual-2171",
+"verbo": "reír",
+"contexto": "ella, cuando era joven, siempre, mucho.",
+"respuesta": "ella reía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ella"
+],
+[
+"reia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella reia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ella reía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reír-habitual-2172",
+"verbo": "reír",
+"contexto": "ellos, en aquella época, a menudo, mucho.",
+"respuesta": "ellos reían mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"reian"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos reian mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos reían mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cortar-habitual-2183",
+"verbo": "cortar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros cortábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"cortabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros cortabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros cortábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "luchar-habitual-2204",
+"verbo": "luchar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros luchábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"luchabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros luchabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros luchábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "estudiar-habitual-2216",
+"verbo": "estudiar",
+"contexto": "nosotros, en aquella época, a menudo, toda la noche.",
+"respuesta": "nosotros estudiábamos toda la noche en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"estudiabamos"
+],
+[
+"toda la noche"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros estudiabamos toda la noche en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros estudiábamos toda la noche en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "resolver-habitual-2225",
+"verbo": "resolver",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú resolvías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"resolvias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú resolvias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú resolvías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "resolver-habitual-2226",
+"verbo": "resolver",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos resolvían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"resolvian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos resolvian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos resolvían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "resolver-habitual-2227",
+"verbo": "resolver",
+"contexto": "yo, en aquella época, a menudo, mucho.",
+"respuesta": "yo resolvía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"resolvia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo resolvia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo resolvía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "señalar-habitual-2281",
+"verbo": "señalar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros señalábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"señalabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros señalabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros señalábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "marchar-habitual-2302",
+"verbo": "marchar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros marchábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"marchabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros marchabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros marchábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "nacer-habitual-2313",
+"verbo": "nacer",
+"contexto": "nosotros, de niño, todos los días, en 1990.",
+"respuesta": "nosotros nacíamos en 1990 de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"naciamos"
+],
+[
+"en 1990"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros naciamos en 1990 de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros nacíamos en 1990 de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "nacer-habitual-2314",
+"verbo": "nacer",
+"contexto": "ella, cuando era joven, siempre, en España.",
+"respuesta": "ella nacía en España cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ella"
+],
+[
+"nacia"
+],
+[
+"en España"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella nacia en España cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ella nacía en España cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "nacer-habitual-2315",
+"verbo": "nacer",
+"contexto": "nosotros, en aquella época, a menudo, en 1990.",
+"respuesta": "nosotros nacíamos en 1990 en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"naciamos"
+],
+[
+"en 1990"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros naciamos en 1990 en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros nacíamos en 1990 en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "averiguar-habitual-2324",
+"verbo": "averiguar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros averiguábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"averiguabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros averiguabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros averiguábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "averiguar-habitual-2325",
+"verbo": "averiguar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros averiguábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"averiguabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros averiguabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros averiguábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "averiguar-habitual-2326",
+"verbo": "averiguar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros averiguábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"averiguabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros averiguabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros averiguábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "esconder-habitual-2335",
+"verbo": "esconder",
+"contexto": "él, de niño, todos los días, mucho.",
+"respuesta": "él escondía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"escondia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él escondia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "él escondía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "esconder-habitual-2336",
+"verbo": "esconder",
+"contexto": "tú, cuando era joven, siempre, mucho.",
+"respuesta": "tú escondías mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"tú"
+],
+[
+"escondias"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú escondias mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "tú escondías mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "esconder-habitual-2337",
+"verbo": "esconder",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros escondíamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"escondiamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros escondiamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros escondíamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "costar-habitual-2348",
+"verbo": "costar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros costábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"costabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros costabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros costábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "soltar-habitual-2357",
+"verbo": "soltar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros soltábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"soltabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros soltabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros soltábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "contestar-habitual-2381",
+"verbo": "contestar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros contestábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"contestabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros contestabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros contestábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "jurar-habitual-2390",
+"verbo": "jurar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros jurábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"jurabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros jurabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros jurábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "agradecer-habitual-2401",
+"verbo": "agradecer",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros agradecíamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"agradeciamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros agradeciamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros agradecíamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "agradecer-habitual-2402",
+"verbo": "agradecer",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos agradecían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"agradecian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos agradecian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos agradecían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "agradecer-habitual-2403",
+"verbo": "agradecer",
+"contexto": "yo, en aquella época, a menudo, mucho.",
+"respuesta": "yo agradecía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"agradecia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo agradecia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo agradecía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "unir-habitual-2412",
+"verbo": "unir",
+"contexto": "yo, de niño, todos los días, mucho.",
+"respuesta": "yo unía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"unia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo unia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "yo unía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "unir-habitual-2413",
+"verbo": "unir",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos unían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"unian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos unian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos unían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "unir-habitual-2414",
+"verbo": "unir",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él unía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"unia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él unia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él unía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "disfrutar-habitual-2423",
+"verbo": "disfrutar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros disfrutábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"disfrutabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros disfrutabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros disfrutábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "disfrutar-habitual-2425",
+"verbo": "disfrutar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros disfrutábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"disfrutabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros disfrutabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros disfrutábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "apostar-habitual-2435",
+"verbo": "apostar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros apostábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"apostabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros apostabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros apostábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "odiar-habitual-2447",
+"verbo": "odiar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros odiábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"odiabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros odiabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros odiábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "acordar-habitual-2469",
+"verbo": "acordar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros acordábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"acordabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros acordabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros acordábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "enfrentar-habitual-2480",
+"verbo": "enfrentar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros enfrentábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"enfrentabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros enfrentabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros enfrentábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "representar-habitual-2489",
+"verbo": "representar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros representábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"representabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros representabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros representábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "construir-habitual-2500",
+"verbo": "construir",
+"contexto": "yo, de niño, todos los días, mucho.",
+"respuesta": "yo construía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"construia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo construia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "yo construía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "construir-habitual-2501",
+"verbo": "construir",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros construíamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"construiamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros construiamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros construíamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "construir-habitual-2502",
+"verbo": "construir",
+"contexto": "yo, en aquella época, a menudo, mucho.",
+"respuesta": "yo construía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"construia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo construia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo construía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mencionar-habitual-2512",
+"verbo": "mencionar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros mencionábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"mencionabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros mencionabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros mencionábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "revisar-habitual-2522",
+"verbo": "revisar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros revisábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"revisabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros revisabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros revisábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "interesar-habitual-2556",
+"verbo": "interesar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros interesábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"interesabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros interesabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros interesábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "despedir-habitual-2566",
+"verbo": "despedir",
+"contexto": "yo, de niño, todos los días, mucho.",
+"respuesta": "yo despedía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"despedia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo despedia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "yo despedía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "despedir-habitual-2567",
+"verbo": "despedir",
+"contexto": "ella, cuando era joven, siempre, mucho.",
+"respuesta": "ella despedía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ella"
+],
+[
+"despedia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella despedia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ella despedía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "despedir-habitual-2568",
+"verbo": "despedir",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él despedía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"despedia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él despedia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él despedía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cometer-habitual-2588",
+"verbo": "cometer",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú cometías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"cometias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú cometias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú cometías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cometer-habitual-2589",
+"verbo": "cometer",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él cometía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"cometia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él cometia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él cometía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cometer-habitual-2590",
+"verbo": "cometer",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros cometíamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"cometiamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros cometiamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros cometíamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "huir-habitual-2599",
+"verbo": "huir",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú huías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"huias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú huias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú huías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "huir-habitual-2600",
+"verbo": "huir",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos huían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"huian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos huian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos huían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "huir-habitual-2601",
+"verbo": "huir",
+"contexto": "ella, en aquella época, a menudo, mucho.",
+"respuesta": "ella huía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"huia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella huia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella huía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "hallar-habitual-2623",
+"verbo": "hallar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros hallábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"hallabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros hallabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros hallábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "depender-habitual-2643",
+"verbo": "depender",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos dependían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"dependian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos dependian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos dependían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "depender-habitual-2644",
+"verbo": "depender",
+"contexto": "yo, cuando era joven, siempre, mucho.",
+"respuesta": "yo dependía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"yo"
+],
+[
+"dependia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo dependia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "yo dependía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "depender-habitual-2645",
+"verbo": "depender",
+"contexto": "ellos, en aquella época, a menudo, mucho.",
+"respuesta": "ellos dependían mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"dependian"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos dependian mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos dependían mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "compartir-habitual-2654",
+"verbo": "compartir",
+"contexto": "él, de niño, todos los días, mucho.",
+"respuesta": "él compartía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"compartia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él compartia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "él compartía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "compartir-habitual-2655",
+"verbo": "compartir",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros compartíamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"compartiamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros compartiamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros compartíamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "compartir-habitual-2656",
+"verbo": "compartir",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él compartía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"compartia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él compartia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él compartía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pertenecer-habitual-2676",
+"verbo": "pertenecer",
+"contexto": "yo, de niño, todos los días, mucho.",
+"respuesta": "yo pertenecía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"pertenecia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo pertenecia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "yo pertenecía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pertenecer-habitual-2677",
+"verbo": "pertenecer",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él pertenecía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"pertenecia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él pertenecia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él pertenecía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pertenecer-habitual-2678",
+"verbo": "pertenecer",
+"contexto": "ellos, en aquella época, a menudo, mucho.",
+"respuesta": "ellos pertenecían mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"pertenecian"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos pertenecian mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos pertenecían mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "repetir-habitual-2687",
+"verbo": "repetir",
+"contexto": "ella, de niño, todos los días, mucho.",
+"respuesta": "ella repetía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"repetia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella repetia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ella repetía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "repetir-habitual-2688",
+"verbo": "repetir",
+"contexto": "tú, cuando era joven, siempre, mucho.",
+"respuesta": "tú repetías mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"tú"
+],
+[
+"repetias"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú repetias mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "tú repetías mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "repetir-habitual-2689",
+"verbo": "repetir",
+"contexto": "ella, en aquella época, a menudo, mucho.",
+"respuesta": "ella repetía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"repetia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella repetia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella repetía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cubrir-habitual-2709",
+"verbo": "cubrir",
+"contexto": "él, de niño, todos los días, mucho.",
+"respuesta": "él cubría mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"cubria"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él cubria mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "él cubría mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cubrir-habitual-2710",
+"verbo": "cubrir",
+"contexto": "tú, cuando era joven, siempre, mucho.",
+"respuesta": "tú cubrías mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"tú"
+],
+[
+"cubrias"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú cubrias mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "tú cubrías mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cubrir-habitual-2711",
+"verbo": "cubrir",
+"contexto": "ella, en aquella época, a menudo, mucho.",
+"respuesta": "ella cubría mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"cubria"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella cubria mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella cubría mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "permanecer-habitual-2720",
+"verbo": "permanecer",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú permanecías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"permanecias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú permanecias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú permanecías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "permanecer-habitual-2721",
+"verbo": "permanecer",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros permanecíamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"permaneciamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros permaneciamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros permanecíamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "permanecer-habitual-2722",
+"verbo": "permanecer",
+"contexto": "ella, en aquella época, a menudo, mucho.",
+"respuesta": "ella permanecía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"permanecia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella permanecia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella permanecía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "apartar-habitual-2744",
+"verbo": "apartar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros apartábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"apartabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros apartabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros apartábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "desarrollar-habitual-2766",
+"verbo": "desarrollar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros desarrollábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"desarrollabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros desarrollabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros desarrollábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "discutir-habitual-2797",
+"verbo": "discutir",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos discutían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"discutian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos discutian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos discutían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "discutir-habitual-2798",
+"verbo": "discutir",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él discutía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"discutia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él discutia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él discutía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "discutir-habitual-2799",
+"verbo": "discutir",
+"contexto": "ellos, en aquella época, a menudo, mucho.",
+"respuesta": "ellos discutían mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"discutian"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos discutian mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos discutían mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pegar-habitual-2810",
+"verbo": "pegar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros pegábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"pegabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros pegabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros pegábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "admitir-habitual-2819",
+"verbo": "admitir",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú admitías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"admitias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú admitias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú admitías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "admitir-habitual-2820",
+"verbo": "admitir",
+"contexto": "yo, cuando era joven, siempre, mucho.",
+"respuesta": "yo admitía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"yo"
+],
+[
+"admitia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo admitia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "yo admitía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "admitir-habitual-2821",
+"verbo": "admitir",
+"contexto": "ellos, en aquella época, a menudo, mucho.",
+"respuesta": "ellos admitían mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"admitian"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos admitian mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos admitían mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "defender-habitual-2830",
+"verbo": "defender",
+"contexto": "él, de niño, todos los días, mucho.",
+"respuesta": "él defendía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"defendia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él defendia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "él defendía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "defender-habitual-2831",
+"verbo": "defender",
+"contexto": "tú, cuando era joven, siempre, mucho.",
+"respuesta": "tú defendías mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"tú"
+],
+[
+"defendias"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú defendias mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "tú defendías mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "defender-habitual-2832",
+"verbo": "defender",
+"contexto": "yo, en aquella época, a menudo, mucho.",
+"respuesta": "yo defendía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"defendia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo defendia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo defendía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "superar-habitual-2841",
+"verbo": "superar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros superábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"superabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros superabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros superábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "abrir-habitual-8062",
+"verbo": "abrir",
+"contexto": "yo, por las tardes, las ventanas del salon",
+"respuesta": "Por las tardes, yo abría las ventanas del salon.",
+"pista": "Por las tardes abriendo las ventanas del salón: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"abria"
+],
+[
+"las ventanas del salon"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, yo abria las ventanas del salon.",
+"cat": "gram",
+"fix": "Por las tardes, yo abría las ventanas del salon.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "abrir-habitual-8063",
+"verbo": "abrir",
+"contexto": "la tienda, los domingos, a las diez de la mañana",
+"respuesta": "Los domingos, la tienda abría a las diez de la mañana.",
+"pista": "Los domingos, la tienda abriendo a las diez de la mañana: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"la tienda"
+],
+[
+"abria"
+],
+[
+"a las diez de la manana"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, la tienda abria a las diez de la manana.",
+"cat": "gram",
+"fix": "Los domingos, la tienda abría a las diez de la mañana.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "acabar-habitual-8064",
+"verbo": "acabar",
+"contexto": "nosotros, en aquellos tiempos, el trabajo muy tarde",
+"respuesta": "En aquellos tiempos, nosotros acabábamos el trabajo muy tarde.",
+"pista": "En aquellos tiempos acabando el trabajo muy tarde: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"acababamos"
+],
+[
+"el trabajo muy tarde"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, nosotros acababamos el trabajo muy tarde.",
+"cat": "gram",
+"fix": "En aquellos tiempos, nosotros acabábamos el trabajo muy tarde.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "acercar-habitual-8068",
+"verbo": "acercar",
+"contexto": "mi madre, cada verano, la silla al jardín",
+"respuesta": "Cada verano, mi madre acercaba la silla al jardín.",
+"pista": "Cada verano, mi madre acercando la silla al jardín: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi madre"
+],
+[
+"acercaba"
+],
+[
+"la silla al jardin"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, mi madre acercaba la silla al jardin.",
+"cat": "gram",
+"fix": "Cada verano, mi madre acercaba la silla al jardín.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "acompanar-habitual-8070",
+"verbo": "acompanar",
+"contexto": "mi hermano, los domingos, a mi abuela al mercado",
+"respuesta": "Los domingos, mi hermano acompañaba a mi abuela al mercado.",
+"pista": "Los domingos, mi hermano acompañando a mi abuela al mercado: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi hermano"
+],
+[
+"acompanaba"
+],
+[
+"a mi abuela al mercado"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, mi hermano acompanaba a mi abuela al mercado.",
+"cat": "gram",
+"fix": "Los domingos, mi hermano acompañaba a mi abuela al mercado.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "acompanar-habitual-8071",
+"verbo": "acompanar",
+"contexto": "yo, cuando vivía en Madrid, a mis amigos al cine",
+"respuesta": "Cuando vivía en Madrid, yo acompañaba a mis amigos al cine.",
+"pista": "Cuando vivía en Madrid acompañando a mis amigos al cine: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"acompanaba"
+],
+[
+"a mis amigos al cine"
+],
+[
+"cuando vivia en madrid"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando vivia en Madrid, yo acompanaba a mis amigos al cine.",
+"cat": "gram",
+"fix": "Cuando vivía en Madrid, yo acompañaba a mis amigos al cine.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "acordar-habitual-8072",
+"verbo": "acordar",
+"contexto": "nosotros, en aquellos tiempos, las reglas del juego juntos",
+"respuesta": "En aquellos tiempos, nosotros acordábamos las reglas del juego juntos.",
+"pista": "En aquellos tiempos acordando las reglas del juego juntos: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"acordabamos"
+],
+[
+"las reglas del juego juntos"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, nosotros acordabamos las reglas del juego juntos.",
+"cat": "gram",
+"fix": "En aquellos tiempos, nosotros acordábamos las reglas del juego juntos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "actuar-habitual-8075",
+"verbo": "actuar",
+"contexto": "ellos, en mis años de universidad, en el grupo de drama",
+"respuesta": "En mis años de universidad, ellos actuaban en el grupo de drama.",
+"pista": "En mis años de universidad actuando en el grupo de drama: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"ellos"
+],
+[
+"actuaban"
+],
+[
+"en el grupo de drama"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, ellos actuaban en el grupo de drama.",
+"cat": "gram",
+"fix": "En mis años de universidad, ellos actuaban en el grupo de drama.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "admitir-habitual-8076",
+"verbo": "admitir",
+"contexto": "el profesor, semana tras semana, sus propios errores",
+"respuesta": "Semana tras semana, el profesor admitía sus propios errores.",
+"pista": "Semana tras semana, el profesor admitiendo sus propios errores: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el profesor"
+],
+[
+"admitia"
+],
+[
+"sus propios errores"
+],
+[
+"semana tras semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Semana tras semana, el profesor admitia sus propios errores.",
+"cat": "gram",
+"fix": "Semana tras semana, el profesor admitía sus propios errores.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "admitir-habitual-8077",
+"verbo": "admitir",
+"contexto": "nosotros, durante la infancia, nuestras travesuras a mama",
+"respuesta": "Durante la infancia, nosotros admitíamos nuestras travesuras a mama.",
+"pista": "Durante la infancia admitiendo nuestras travesuras a mamá: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"admitiamos"
+],
+[
+"nuestras travesuras a mama"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, nosotros admitiamos nuestras travesuras a mama.",
+"cat": "gram",
+"fix": "Durante la infancia, nosotros admitíamos nuestras travesuras a mama.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "aforar-habitual-8079",
+"verbo": "aforar",
+"contexto": "ellos, cuando trabajaba allí, el caudal del río",
+"respuesta": "Cuando trabajaba allí, ellos aforaban el caudal del río.",
+"pista": "Cuando trabajaba allí aforando el caudal del río: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"ellos"
+],
+[
+"aforaban"
+],
+[
+"el caudal del rio"
+],
+[
+"cuando trabajaba alli"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando trabajaba alli, ellos aforaban el caudal del rio.",
+"cat": "gram",
+"fix": "Cuando trabajaba allí, ellos aforaban el caudal del río.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "agradecer-habitual-8080",
+"verbo": "agradecer",
+"contexto": "yo, en aquellos tiempos, cada pequeño favor",
+"respuesta": "En aquellos tiempos, yo agradecía cada pequeño favor.",
+"pista": "En aquellos tiempos agradeciendo cada pequeño favor: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"agradecia"
+],
+[
+"cada pequeno favor"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, yo agradecia cada pequeno favor.",
+"cat": "gram",
+"fix": "En aquellos tiempos, yo agradecía cada pequeño favor.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "agradecer-habitual-8081",
+"verbo": "agradecer",
+"contexto": "mis abuelos, los domingos, la visita de la familia",
+"respuesta": "Los domingos, mis abuelos agradecían la visita de la familia.",
+"pista": "Los domingos, mis abuelos agradeciendo la visita de la familia: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mis abuelos"
+],
+[
+"agradecian"
+],
+[
+"la visita de la familia"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, mis abuelos agradecian la visita de la familia.",
+"cat": "gram",
+"fix": "Los domingos, mis abuelos agradecían la visita de la familia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "alcanzar-habitual-8082",
+"verbo": "alcanzar",
+"contexto": "el autobús, con frecuencia, velocidades altas en la autopista",
+"respuesta": "El autobús alcanzaba velocidades altas en la autopista con frecuencia.",
+"pista": "El autobús alcanzando velocidades altas en la autopista con frecuencia: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el autobus"
+],
+[
+"alcanzaba"
+],
+[
+"velocidades altas en la autopista"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El autobus alcanzaba velocidades altas en la autopista con frecuencia.",
+"cat": "gram",
+"fix": "El autobús alcanzaba velocidades altas en la autopista con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "alcanzar-habitual-8083",
+"verbo": "alcanzar",
+"contexto": "yo, en mis ratos libres, las metas que me proponía",
+"respuesta": "En mis ratos libres, yo alcanzaba las metas que me proponía.",
+"pista": "En mis ratos libres alcanzando las metas que me proponía: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"alcanzaba"
+],
+[
+"las metas que me proponia"
+],
+[
+"en mis ratos libres"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis ratos libres, yo alcanzaba las metas que me proponia.",
+"cat": "gram",
+"fix": "En mis ratos libres, yo alcanzaba las metas que me proponía.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "alegrar-habitual-8084",
+"verbo": "alegrar",
+"contexto": "la música, cada verano, a todos los vecinos",
+"respuesta": "Cada verano, la música alegraba a todos los vecinos.",
+"pista": "Cada verano, la música alegrando a todos los vecinos: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"la musica"
+],
+[
+"alegraba"
+],
+[
+"a todos los vecinos"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, la musica alegraba a todos los vecinos.",
+"cat": "gram",
+"fix": "Cada verano, la música alegraba a todos los vecinos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "alejar-habitual-8086",
+"verbo": "alejar",
+"contexto": "mi padre, por las tardes, a los perros del jardín",
+"respuesta": "Por las tardes, mi padre alejaba a los perros del jardín.",
+"pista": "Por las tardes, mi padre alejando a los perros del jardín: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi padre"
+],
+[
+"alejaba"
+],
+[
+"a los perros del jardin"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, mi padre alejaba a los perros del jardin.",
+"cat": "gram",
+"fix": "Por las tardes, mi padre alejaba a los perros del jardín.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "amar-habitual-8089",
+"verbo": "amar",
+"contexto": "nosotros, cuando vivía en Madrid, las noches de verano",
+"respuesta": "Cuando vivía en Madrid, nosotros amábamos las noches de verano.",
+"pista": "Cuando vivía en Madrid amando las noches de verano: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"amabamos"
+],
+[
+"las noches de verano"
+],
+[
+"cuando vivia en madrid"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando vivia en Madrid, nosotros amabamos las noches de verano.",
+"cat": "gram",
+"fix": "Cuando vivía en Madrid, nosotros amábamos las noches de verano.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+}
+]

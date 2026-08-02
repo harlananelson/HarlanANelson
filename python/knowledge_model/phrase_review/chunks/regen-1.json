@@ -1,0 +1,8709 @@
+[
+{
+"exercise": {
+"id": "acercar-presente-2873",
+"verbo": "acercar",
+"contexto": "ella, mientras, el vaso",
+"respuesta": "Ella acerca el vaso mientras.",
+"pista": "narrating present events",
+"grupos": [
+[
+"ella"
+],
+[
+"acerca"
+],
+[
+"el vaso"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella acerca el vaso mientras.",
+"cat": "unnat",
+"fix": "Ella acerca el vaso mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "acordar-presente-2878",
+"verbo": "acordar",
+"contexto": "nosotros, mientras, los términos del contrato",
+"respuesta": "Nosotros acordamos los términos del contrato mientras.",
+"pista": "reaching agreement now",
+"grupos": [
+[
+"nosotros"
+],
+[
+"acordamos"
+],
+[
+"los terminos del contrato"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros acordamos los términos del contrato mientras.",
+"cat": "unnat",
+"fix": "Nosotros acordamos los términos del contrato mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "admitir-presente-2884",
+"verbo": "admitir",
+"contexto": "yo, cada vez que, mi error",
+"respuesta": "Cada vez que, yo admito mi error.",
+"pista": "confessing something now",
+"grupos": [
+[
+"yo"
+],
+[
+"admito"
+],
+[
+"mi error"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, yo admito mi error.",
+"cat": "gram",
+"fix": "Cada vez, yo admito mi error.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "alegrar-presente-2898",
+"verbo": "alegrar",
+"contexto": "tú, cada vez que, a tus amigos",
+"respuesta": "Tú alegras a tus amigos cada vez que.",
+"pista": "talking about your personality",
+"grupos": [
+[
+"tu"
+],
+[
+"alegras"
+],
+[
+"a tus amigos"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú alegras a tus amigos cada vez que.",
+"cat": "gram",
+"fix": "Tú alegras a tus amigos cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "amar-presente-2904",
+"verbo": "amar",
+"contexto": "nosotros, cada vez que, la naturaleza",
+"respuesta": "Nosotros amamos la naturaleza cada vez que.",
+"pista": "expressing shared passion",
+"grupos": [
+[
+"nosotros"
+],
+[
+"amamos"
+],
+[
+"la naturaleza"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros amamos la naturaleza cada vez que.",
+"cat": "gram",
+"fix": "Nosotros amamos la naturaleza cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "apoyar-presente-2918",
+"verbo": "apoyar",
+"contexto": "nosotros, mientras, el proyecto",
+"respuesta": "Nosotros apoyamos el proyecto mientras.",
+"pista": "Describe la acción de un equipo.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"apoyamos"
+],
+[
+"el proyecto"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros apoyamos el proyecto mientras.",
+"cat": "unnat",
+"fix": "Nosotros apoyamos el proyecto mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "apoyar-presente-2919",
+"verbo": "apoyar",
+"contexto": "tú, mientras, a tus compañeros",
+"respuesta": "Mientras, tú apoyas a tus compañeros.",
+"pista": "talking about helping others",
+"grupos": [
+[
+"tu"
+],
+[
+"apoyas"
+],
+[
+"a tus companeros"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, tú apoyas a tus compañeros.",
+"cat": "unnat",
+"fix": "Mientras tanto, tú apoyas a tus compañeros.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "asegurar-presente-2927",
+"verbo": "asegurar",
+"contexto": "ella, cada vez que, el éxito del evento",
+"respuesta": "Ella asegura el éxito del evento cada vez que.",
+"pista": "narrating her effort",
+"grupos": [
+[
+"ella"
+],
+[
+"asegura"
+],
+[
+"el exito del evento"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella asegura el éxito del evento cada vez que.",
+"cat": "gram",
+"fix": "Ella asegura el éxito del evento cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "asesinar-presente-2929",
+"verbo": "asesinar",
+"contexto": "él, cada vez que, al personaje en la novela",
+"respuesta": "Cada vez que, él asesina al personaje en la novela.",
+"pista": "narrating a fictional plot",
+"grupos": [
+[
+"el"
+],
+[
+"asesina"
+],
+[
+"al personaje en la novela"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, él asesina al personaje en la novela.",
+"cat": "gram",
+"fix": "Cada vez, él asesina al personaje en la novela.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "asustar-presente-2933",
+"verbo": "asustar",
+"contexto": "él, mientras, a su hermana",
+"respuesta": "Mientras, él asusta a su hermana.",
+"pista": "narrating a prank",
+"grupos": [
+[
+"el"
+],
+[
+"asusta"
+],
+[
+"a su hermana"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, él asusta a su hermana.",
+"cat": "unnat",
+"fix": "Mientras tanto, él asusta a su hermana.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "atacar-presente-2935",
+"verbo": "atacar",
+"contexto": "ellos, mientras, al enemigo",
+"respuesta": "Mientras, ellos atacan al enemigo.",
+"pista": "describing a conflict",
+"grupos": [
+[
+"ellos"
+],
+[
+"atacan"
+],
+[
+"al enemigo"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, ellos atacan al enemigo.",
+"cat": "unnat",
+"fix": "Mientras tanto, ellos atacan al enemigo.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "atacar-presente-2937",
+"verbo": "atacar",
+"contexto": "nosotros, mientras, la tarea difícil",
+"respuesta": "Nosotros atacamos la tarea difícil mientras.",
+"pista": "tackling something challenging",
+"grupos": [
+[
+"nosotros"
+],
+[
+"atacamos"
+],
+[
+"la tarea dificil"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros atacamos la tarea difícil mientras.",
+"cat": "unnat",
+"fix": "Nosotros atacamos la tarea difícil mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "buscar-presente-2963",
+"verbo": "buscar",
+"contexto": "tú, mientras, trabajo",
+"respuesta": "Mientras, tú buscas trabajo.",
+"pista": "talking about job hunting",
+"grupos": [
+[
+"tu"
+],
+[
+"buscas"
+],
+[
+"trabajo"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, tú buscas trabajo.",
+"cat": "unnat",
+"fix": "Mientras tanto, tú buscas trabajo.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "caer-presente-2966",
+"verbo": "caer",
+"contexto": "ella, cada vez que, de la silla",
+"respuesta": "Cada vez que, ella cae de la silla.",
+"pista": "narrating a mishap",
+"grupos": [
+[
+"ella"
+],
+[
+"cae"
+],
+[
+"de la silla"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, ella cae de la silla.",
+"cat": "gram",
+"fix": "Cada vez, ella cae de la silla.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-presente-2983",
+"verbo": "casar",
+"contexto": "ella, cada vez que, a las parejas en la iglesia",
+"respuesta": "Cada vez que, ella casa a las parejas en la iglesia.",
+"pista": "describing a priest's duty",
+"grupos": [
+[
+"ella"
+],
+[
+"casa"
+],
+[
+"a las parejas en la iglesia"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, ella casa a las parejas en la iglesia.",
+"cat": "gram",
+"fix": "Cada vez, ella casa a las parejas en la iglesia.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "coger-presente-2991",
+"verbo": "coger",
+"contexto": "nosotros, cada vez que, las maletas",
+"respuesta": "Cada vez que, nosotros cogemos las maletas.",
+"pista": "describing trip preparation",
+"grupos": [
+[
+"nosotros"
+],
+[
+"cogemos"
+],
+[
+"las maletas"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, nosotros cogemos las maletas.",
+"cat": "gram",
+"fix": "Cada vez, nosotros cogemos las maletas.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "comenzar-presente-2992",
+"verbo": "comenzar",
+"contexto": "nosotros, cada vez que, el proyecto",
+"respuesta": "Nosotros comenzamos el proyecto cada vez que.",
+"pista": "expressing a new start",
+"grupos": [
+[
+"nosotros"
+],
+[
+"comenzamos"
+],
+[
+"el proyecto"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros comenzamos el proyecto cada vez que.",
+"cat": "gram",
+"fix": "Nosotros comenzamos el proyecto cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "comer-presente-2997",
+"verbo": "comer",
+"contexto": "nosotros, cada vez que, juntos en familia",
+"respuesta": "Cada vez que, nosotros comemos juntos en familia.",
+"pista": "expressing family tradition",
+"grupos": [
+[
+"nosotros"
+],
+[
+"comemos"
+],
+[
+"juntos en familia"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, nosotros comemos juntos en familia.",
+"cat": "gram",
+"fix": "Cada vez, nosotros comemos juntos en familia.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "cometer-presente-2998",
+"verbo": "cometer",
+"contexto": "yo, mientras, un error",
+"respuesta": "Mientras, yo cometo un error.",
+"pista": "expressing a mistake",
+"grupos": [
+[
+"yo"
+],
+[
+"cometo"
+],
+[
+"un error"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, yo cometo un error.",
+"cat": "unnat",
+"fix": "Mientras tanto, yo cometo un error.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "comprar-presente-3005",
+"verbo": "comprar",
+"contexto": "nosotros, cada vez que, comida para la cena",
+"respuesta": "Cada vez que, nosotros compramos comida para la cena.",
+"pista": "talking about meal planning",
+"grupos": [
+[
+"nosotros"
+],
+[
+"compramos"
+],
+[
+"comida para la cena"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, nosotros compramos comida para la cena.",
+"cat": "gram",
+"fix": "Cada vez, nosotros compramos comida para la cena.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "conocer-presente-3018",
+"verbo": "conocer",
+"contexto": "ellos, cada vez que, el camino",
+"respuesta": "Cada vez que, ellos conocen el camino.",
+"pista": "narrating their knowledge",
+"grupos": [
+[
+"ellos"
+],
+[
+"conocen"
+],
+[
+"el camino"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, ellos conocen el camino.",
+"cat": "gram",
+"fix": "Cada vez, ellos conocen el camino.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "conseguir-presente-3021",
+"verbo": "conseguir",
+"contexto": "tú, mientras, lo que quieres",
+"respuesta": "Mientras, tú consigues lo que quieres.",
+"pista": "talking about determination",
+"grupos": [
+[
+"tu"
+],
+[
+"consigues"
+],
+[
+"lo que quieres"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, tú consigues lo que quieres.",
+"cat": "unnat",
+"fix": "Mientras tanto, tú consigues lo que quieres.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "considerar-presente-3022",
+"verbo": "considerar",
+"contexto": "yo, cada vez que, todas las opciones",
+"respuesta": "Cada vez que, yo considero todas las opciones.",
+"pista": "expressing careful thought",
+"grupos": [
+[
+"yo"
+],
+[
+"considero"
+],
+[
+"todas las opciones"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, yo considero todas las opciones.",
+"cat": "gram",
+"fix": "Cada vez, yo considero todas las opciones.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "controlar-presente-3038",
+"verbo": "controlar",
+"contexto": "él, mientras, la situación",
+"respuesta": "Mientras, él controla la situación.",
+"pista": "describing leadership",
+"grupos": [
+[
+"el"
+],
+[
+"controla"
+],
+[
+"la situacion"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, él controla la situación.",
+"cat": "unnat",
+"fix": "Mientras tanto, él controla la situación.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "cortar-presente-3048",
+"verbo": "cortar",
+"contexto": "tú, mientras, el papel",
+"respuesta": "Tú cortas el papel mientras.",
+"pista": "describing a craft",
+"grupos": [
+[
+"tu"
+],
+[
+"cortas"
+],
+[
+"el papel"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú cortas el papel mientras.",
+"cat": "unnat",
+"fix": "Tú cortas el papel mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "cumplir-presente-3069",
+"verbo": "cumplir",
+"contexto": "nosotros, mientras, los requisitos",
+"respuesta": "Mientras, nosotros cumplamos los requisitos.",
+"pista": "describing compliance",
+"grupos": [
+[
+"nosotros"
+],
+[
+"cumplamos"
+],
+[
+"los requisitos"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, nosotros cumplamos los requisitos.",
+"cat": "unnat",
+"fix": "Mientras tanto, nosotros cumplamos los requisitos.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+},
+{
+"field": "respuesta",
+"text": "Mientras, nosotros cumplamos los requisitos.",
+"cat": "gram",
+"fix": "Cumplimos los requisitos.",
+"note": "'cumplamos' is subjunctive; needs indicative 'cumplimos'"
+}
+]
+},
+{
+"exercise": {
+"id": "deber-presente-3074",
+"verbo": "deber",
+"contexto": "tú, cada vez que, mucho a tus padres",
+"respuesta": "Cada vez que, tú debes mucho a tus padres.",
+"pista": "describing gratitude owed",
+"grupos": [
+[
+"tu"
+],
+[
+"debes"
+],
+[
+"mucho a tus padres"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, tú debes mucho a tus padres.",
+"cat": "gram",
+"fix": "Cada vez, tú debes mucho a tus padres.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "decidir-presente-3078",
+"verbo": "decidir",
+"contexto": "tú, cada vez que, rápidamente",
+"respuesta": "Cada vez que, tú decides rápidamente.",
+"pista": "commenting on decision speed",
+"grupos": [
+[
+"tu"
+],
+[
+"decides"
+],
+[
+"rapidamente"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, tú decides rápidamente.",
+"cat": "gram",
+"fix": "Cada vez, tú decides rápidamente.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "decir-presente-3081",
+"verbo": "decir",
+"contexto": "ellos, mientras, muchas mentiras",
+"respuesta": "Ellos dicen muchas mentiras mientras.",
+"pista": "narrating dishonesty",
+"grupos": [
+[
+"ellos"
+],
+[
+"dicen"
+],
+[
+"muchas mentiras"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ellos dicen muchas mentiras mientras.",
+"cat": "unnat",
+"fix": "Ellos dicen muchas mentiras mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "defender-presente-3084",
+"verbo": "defender",
+"contexto": "nosotros, cada vez que, nuestra posición",
+"respuesta": "Nosotros defendemos nuestra posición cada vez que.",
+"pista": "expressing team stance",
+"grupos": [
+[
+"nosotros"
+],
+[
+"defendemos"
+],
+[
+"nuestra posicion"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros defendemos nuestra posición cada vez que.",
+"cat": "gram",
+"fix": "Nosotros defendemos nuestra posición cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "despedir-presente-3108",
+"verbo": "despedir",
+"contexto": "nosotros, cada vez que, el año viejo",
+"respuesta": "Cada vez que, nosotros despedimos el año viejo.",
+"pista": "talking about New Year traditions",
+"grupos": [
+[
+"nosotros"
+],
+[
+"despedimos"
+],
+[
+"el ano viejo"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, nosotros despedimos el año viejo.",
+"cat": "gram",
+"fix": "Cada vez, nosotros despedimos el año viejo.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "despertar-presente-3109",
+"verbo": "despertar",
+"contexto": "yo, cada vez que, a las seis de la mañana",
+"respuesta": "Cada vez que, yo despierto a las seis de la mañana.",
+"pista": "describing a morning routine",
+"grupos": [
+[
+"yo"
+],
+[
+"despierto"
+],
+[
+"a las seis de la manana"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, yo despierto a las seis de la mañana.",
+"cat": "gram",
+"fix": "Cada vez, yo despierto a las seis de la mañana.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "devolver-presente-3119",
+"verbo": "devolver",
+"contexto": "tú, mientras, el dinero",
+"respuesta": "Tú devuelves el dinero mientras.",
+"pista": "talking about repayment",
+"grupos": [
+[
+"tu"
+],
+[
+"devuelves"
+],
+[
+"el dinero"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú devuelves el dinero mientras.",
+"cat": "unnat",
+"fix": "Tú devuelves el dinero mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "disfrutar-presente-3131",
+"verbo": "disfrutar",
+"contexto": "tú, mientras, cada momento",
+"respuesta": "Mientras, tú disfrutas cada momento.",
+"pista": "giving advice about life",
+"grupos": [
+[
+"tu"
+],
+[
+"disfrutas"
+],
+[
+"cada momento"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, tú disfrutas cada momento.",
+"cat": "unnat",
+"fix": "Mientras tanto, tú disfrutas cada momento.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "enviar-presente-3176",
+"verbo": "enviar",
+"contexto": "tú, mientras, un correo electrónico",
+"respuesta": "Mientras, tú envías un correo electrónico.",
+"pista": "talking about email",
+"grupos": [
+[
+"tu"
+],
+[
+"envias"
+],
+[
+"un correo electronico"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, tú envias un correo electrónico.",
+"cat": "unnat",
+"fix": "Mientras tanto, tú envias un correo electrónico.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+},
+{
+"field": "respuesta",
+"text": "tú envias un correo electrónico",
+"cat": "gram",
+"fix": "tú envías un correo electrónico",
+"note": "missing accent: hiatus requires tilde, 'envías' not 'envias'"
+}
+]
+},
+{
+"exercise": {
+"id": "evitar-presente-3200",
+"verbo": "evitar",
+"contexto": "tú, mientras, la comida chatarra",
+"respuesta": "Mientras, tú evitas la comida chatarra.",
+"pista": "giving health advice",
+"grupos": [
+[
+"tu"
+],
+[
+"evitas"
+],
+[
+"la comida chatarra"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, tú evitas la comida chatarra.",
+"cat": "unnat",
+"fix": "Mientras tanto, tú evitas la comida chatarra.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "formar-presente-3210",
+"verbo": "formar",
+"contexto": "ella, cada vez que, a los nuevos empleados",
+"respuesta": "Cada vez que, ella forma a los nuevos empleados.",
+"pista": "narrating training",
+"grupos": [
+[
+"ella"
+],
+[
+"forma"
+],
+[
+"a los nuevos empleados"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, ella forma a los nuevos empleados.",
+"cat": "gram",
+"fix": "Cada vez, ella forma a los nuevos empleados.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "golpear-presente-3218",
+"verbo": "golpear",
+"contexto": "él, mientras, la pelota con fuerza",
+"respuesta": "Él golpea la pelota con fuerza mientras.",
+"pista": "describing sports",
+"grupos": [
+[
+"el"
+],
+[
+"golpea"
+],
+[
+"la pelota con fuerza"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Él golpea la pelota con fuerza mientras.",
+"cat": "unnat",
+"fix": "Él golpea la pelota con fuerza mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "gritar-presente-3220",
+"verbo": "gritar",
+"contexto": "yo, cada vez que, de alegría",
+"respuesta": "Yo grito de alegría cada vez que.",
+"pista": "expressing joy",
+"grupos": [
+[
+"yo"
+],
+[
+"grito"
+],
+[
+"de alegria"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo grito de alegría cada vez que.",
+"cat": "gram",
+"fix": "Yo grito de alegría cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "guardar-presente-3223",
+"verbo": "guardar",
+"contexto": "yo, mientras, los documentos importantes",
+"respuesta": "Yo guardo los documentos importantes mientras.",
+"pista": "describing organization",
+"grupos": [
+[
+"yo"
+],
+[
+"guardo"
+],
+[
+"los documentos importantes"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo guardo los documentos importantes mientras.",
+"cat": "unnat",
+"fix": "Yo guardo los documentos importantes mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-presente-3226",
+"verbo": "gustar",
+"contexto": "yo, cada vez que, a mis vecinos",
+"respuesta": "Cada vez que, yo gusto a mis vecinos.",
+"pista": "expressing being liked",
+"grupos": [
+[
+"yo"
+],
+[
+"gusto"
+],
+[
+"a mis vecinos"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, yo gusto a mis vecinos.",
+"cat": "gram",
+"fix": "Cada vez, yo gusto a mis vecinos.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+},
+{
+"field": "respuesta",
+"text": "yo gusto a mis vecinos",
+"cat": "gram",
+"fix": "Les gusto a mis vecinos.",
+"note": "gustar-type verb needs the indirect object pronoun 'les' before it"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-presente-3227",
+"verbo": "gustar",
+"contexto": "ella, mientras, a todo el mundo",
+"respuesta": "Ella gusta a todo el mundo mientras.",
+"pista": "describing someone's popularity",
+"grupos": [
+[
+"ella"
+],
+[
+"gusta"
+],
+[
+"a todo el mundo"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella gusta a todo el mundo mientras.",
+"cat": "unnat",
+"fix": "Ella gusta a todo el mundo mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+},
+{
+"field": "respuesta",
+"text": "Ella gusta a todo el mundo",
+"cat": "gram",
+"fix": "Ella le gusta a todo el mundo.",
+"note": "missing indirect object pronoun 'le' required with gustar-type verbs"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-presente-3229",
+"verbo": "haber",
+"contexto": "yo, mientras, terminado el trabajo",
+"respuesta": "Yo he terminado el trabajo mientras.",
+"pista": "expressing completed actions",
+"grupos": [
+[
+"yo"
+],
+[
+"he"
+],
+[
+"terminado el trabajo"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo he terminado el trabajo mientras.",
+"cat": "unnat",
+"fix": "Yo he terminado el trabajo mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+},
+{
+"field": "respuesta",
+"text": "Yo he terminado el trabajo mientras.",
+"cat": "ctx",
+"fix": "Ya termino el trabajo.",
+"note": "this drills pretérito perfecto compuesto, not simple presente de indicativo"
+}
+]
+},
+{
+"exercise": {
+"id": "hallar-presente-3238",
+"verbo": "hallar",
+"contexto": "yo, mientras, la respuesta",
+"respuesta": "Yo hallo la respuesta mientras.",
+"pista": "expressing discovery",
+"grupos": [
+[
+"yo"
+],
+[
+"hallo"
+],
+[
+"la respuesta"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo hallo la respuesta mientras.",
+"cat": "unnat",
+"fix": "Yo hallo la respuesta mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "imaginar-presente-3245",
+"verbo": "imaginar",
+"contexto": "tú, cada vez que, las posibilidades",
+"respuesta": "Tú imaginas las posibilidades cada vez que.",
+"pista": "encouraging creativity",
+"grupos": [
+[
+"tu"
+],
+[
+"imaginas"
+],
+[
+"las posibilidades"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú imaginas las posibilidades cada vez que.",
+"cat": "gram",
+"fix": "Tú imaginas las posibilidades cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "imaginar-presente-3246",
+"verbo": "imaginar",
+"contexto": "nosotros, cada vez que, el futuro",
+"respuesta": "Nosotros imaginamos el futuro cada vez que.",
+"pista": "describing vision",
+"grupos": [
+[
+"nosotros"
+],
+[
+"imaginamos"
+],
+[
+"el futuro"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros imaginamos el futuro cada vez que.",
+"cat": "gram",
+"fix": "Nosotros imaginamos el futuro cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "intentar-presente-3256",
+"verbo": "intentar",
+"contexto": "yo, mientras, algo nuevo",
+"respuesta": "Mientras, yo intento algo nuevo.",
+"pista": "expressing willingness to try",
+"grupos": [
+[
+"yo"
+],
+[
+"intento"
+],
+[
+"algo nuevo"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, yo intento algo nuevo.",
+"cat": "unnat",
+"fix": "Mientras tanto, yo intento algo nuevo.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "joder-presente-3268",
+"verbo": "joder",
+"contexto": "eso, cada vez que, todo el plan",
+"respuesta": "Cada vez que, eso jode todo el plan.",
+"pista": "expressing frustration about ruined plans",
+"grupos": [
+[
+"eso"
+],
+[
+"jode"
+],
+[
+"todo el plan"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, eso jode todo el plan.",
+"cat": "gram",
+"fix": "Cada vez, eso jode todo el plan.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "jurar-presente-3276",
+"verbo": "jurar",
+"contexto": "nosotros, cada vez que, proteger a nuestra familia",
+"respuesta": "Nosotros juramos proteger a nuestra familia cada vez que.",
+"pista": "expressing dedication",
+"grupos": [
+[
+"nosotros"
+],
+[
+"juramos"
+],
+[
+"proteger a nuestra familia"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros juramos proteger a nuestra familia cada vez que.",
+"cat": "gram",
+"fix": "Nosotros juramos proteger a nuestra familia cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "llamar-presente-3284",
+"verbo": "llamar",
+"contexto": "tú, mientras, al doctor",
+"respuesta": "Tú llamas al doctor mientras.",
+"pista": "suggesting making an appointment",
+"grupos": [
+[
+"tu"
+],
+[
+"llamas"
+],
+[
+"al doctor"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú llamas al doctor mientras.",
+"cat": "unnat",
+"fix": "Tú llamas al doctor mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "llamar-presente-3285",
+"verbo": "llamar",
+"contexto": "ella, cada vez que, a sus amigos",
+"respuesta": "Cada vez que, ella llama a sus amigos.",
+"pista": "narrating social contact",
+"grupos": [
+[
+"ella"
+],
+[
+"llama"
+],
+[
+"a sus amigos"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, ella llama a sus amigos.",
+"cat": "gram",
+"fix": "Cada vez, ella llama a sus amigos.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "llegar-presente-3288",
+"verbo": "llegar",
+"contexto": "tú, mientras, tarde a clase",
+"respuesta": "Mientras, tú llegas tarde a clase.",
+"pista": "commenting on tardiness",
+"grupos": [
+[
+"tu"
+],
+[
+"llegas"
+],
+[
+"tarde a clase"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, tú llegas tarde a clase.",
+"cat": "unnat",
+"fix": "Mientras tanto, tú llegas tarde a clase.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "llorar-presente-3292",
+"verbo": "llorar",
+"contexto": "ella, cada vez que, de felicidad",
+"respuesta": "Cada vez que, ella llora de felicidad.",
+"pista": "expressing happy tears",
+"grupos": [
+[
+"ella"
+],
+[
+"llora"
+],
+[
+"de felicidad"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, ella llora de felicidad.",
+"cat": "gram",
+"fix": "Cada vez, ella llora de felicidad.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "mandar-presente-3303",
+"verbo": "mandar",
+"contexto": "ella, cada vez que, flores a su amiga",
+"respuesta": "Ella manda flores a su amiga cada vez que.",
+"pista": "narrating a kind gesture",
+"grupos": [
+[
+"ella"
+],
+[
+"manda"
+],
+[
+"flores a su amiga"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella manda flores a su amiga cada vez que.",
+"cat": "gram",
+"fix": "Ella manda flores a su amiga cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "manejar-presente-3304",
+"verbo": "manejar",
+"contexto": "yo, cada vez que, la situación con calma",
+"respuesta": "Cada vez que, yo manejo la situación con calma.",
+"pista": "expressing composure",
+"grupos": [
+[
+"yo"
+],
+[
+"manejo"
+],
+[
+"la situacion con calma"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, yo manejo la situación con calma.",
+"cat": "gram",
+"fix": "Cada vez, yo manejo la situación con calma.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "manejar-presente-3306",
+"verbo": "manejar",
+"contexto": "nosotros, mientras, el presupuesto",
+"respuesta": "Nosotros manejamos el presupuesto mientras.",
+"pista": "talking about management",
+"grupos": [
+[
+"nosotros"
+],
+[
+"manejamos"
+],
+[
+"el presupuesto"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros manejamos el presupuesto mientras.",
+"cat": "unnat",
+"fix": "Nosotros manejamos el presupuesto mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "marchar-presente-3310",
+"verbo": "marchar",
+"contexto": "ellos, mientras, por la calle principal",
+"respuesta": "Ellos marchan por la calle principal mientras.",
+"pista": "describing a march",
+"grupos": [
+[
+"ellos"
+],
+[
+"marchan"
+],
+[
+"por la calle principal"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ellos marchan por la calle principal mientras.",
+"cat": "unnat",
+"fix": "Ellos marchan por la calle principal mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "matar-presente-3313",
+"verbo": "matar",
+"contexto": "él, mientras, el tiempo leyendo",
+"respuesta": "Él mata el tiempo leyendo mientras.",
+"pista": "describing leisure",
+"grupos": [
+[
+"el"
+],
+[
+"mata"
+],
+[
+"el tiempo leyendo"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Él mata el tiempo leyendo mientras.",
+"cat": "unnat",
+"fix": "Él mata el tiempo leyendo mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "mencionar-presente-3316",
+"verbo": "mencionar",
+"contexto": "yo, cada vez que, el tema en la reunión",
+"respuesta": "Yo menciono el tema en la reunión cada vez que.",
+"pista": "describing communication",
+"grupos": [
+[
+"yo"
+],
+[
+"menciono"
+],
+[
+"el tema en la reunion"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo menciono el tema en la reunión cada vez que.",
+"cat": "gram",
+"fix": "Yo menciono el tema en la reunión cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "meter-presente-3326",
+"verbo": "meter",
+"contexto": "tú, cada vez que, las manos en los bolsillos",
+"respuesta": "Tú metes las manos en los bolsillos cada vez que.",
+"pista": "narrating a gesture",
+"grupos": [
+[
+"tu"
+],
+[
+"metes"
+],
+[
+"las manos en los bolsillos"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú metes las manos en los bolsillos cada vez que.",
+"cat": "gram",
+"fix": "Tú metes las manos en los bolsillos cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "molestar-presente-3331",
+"verbo": "molestar",
+"contexto": "yo, cada vez que, a mi hermano",
+"respuesta": "Yo molesto a mi hermano cada vez que.",
+"pista": "describing sibling dynamics",
+"grupos": [
+[
+"yo"
+],
+[
+"molesto"
+],
+[
+"a mi hermano"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo molesto a mi hermano cada vez que.",
+"cat": "gram",
+"fix": "Yo molesto a mi hermano cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "molestar-presente-3332",
+"verbo": "molestar",
+"contexto": "tú, mientras, a los vecinos con la música",
+"respuesta": "Tú molestas a los vecinos con la música mientras.",
+"pista": "talking about noise",
+"grupos": [
+[
+"tu"
+],
+[
+"molestas"
+],
+[
+"a los vecinos con la musica"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú molestas a los vecinos con la música mientras.",
+"cat": "unnat",
+"fix": "Tú molestas a los vecinos con la música mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "morir-presente-3335",
+"verbo": "morir",
+"contexto": "yo, mientras, de hambre",
+"respuesta": "Mientras, yo muero de hambre.",
+"pista": "expressing extreme hunger figuratively",
+"grupos": [
+[
+"yo"
+],
+[
+"muero"
+],
+[
+"de hambre"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, yo muero de hambre.",
+"cat": "unnat",
+"fix": "Mientras tanto, yo muero de hambre.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "mostrar-presente-3338",
+"verbo": "mostrar",
+"contexto": "ella, mientras, su nuevo diseño",
+"respuesta": "Ella muestra su nuevo diseño mientras.",
+"pista": "narrating a presentation",
+"grupos": [
+[
+"ella"
+],
+[
+"muestra"
+],
+[
+"su nuevo diseno"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella muestra su nuevo diseño mientras.",
+"cat": "unnat",
+"fix": "Ella muestra su nuevo diseño mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "nacer-presente-3345",
+"verbo": "nacer",
+"contexto": "ella, cada vez que, en primavera",
+"respuesta": "Cada vez que, ella nace en primavera.",
+"pista": "narrating a birth season",
+"grupos": [
+[
+"ella"
+],
+[
+"nace"
+],
+[
+"en primavera"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, ella nace en primavera.",
+"cat": "gram",
+"fix": "Cada vez, ella nace en primavera.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "necesitar-presente-3347",
+"verbo": "necesitar",
+"contexto": "nosotros, cada vez que, ayuda",
+"respuesta": "Nosotros necesitamos ayuda cada vez que.",
+"pista": "requesting assistance",
+"grupos": [
+[
+"nosotros"
+],
+[
+"necesitamos"
+],
+[
+"ayuda"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros necesitamos ayuda cada vez que.",
+"cat": "gram",
+"fix": "Nosotros necesitamos ayuda cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "observar-presente-3352",
+"verbo": "observar",
+"contexto": "yo, cada vez que, las aves en el parque",
+"respuesta": "Cada vez que, yo observo las aves en el parque.",
+"pista": "describing birdwatching",
+"grupos": [
+[
+"yo"
+],
+[
+"observo"
+],
+[
+"las aves en el parque"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, yo observo las aves en el parque.",
+"cat": "gram",
+"fix": "Cada vez, yo observo las aves en el parque.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "ocupar-presente-3358",
+"verbo": "ocupar",
+"contexto": "yo, cada vez que, el primer lugar",
+"respuesta": "Yo ocupo el primer lugar cada vez que.",
+"pista": "expressing ranking",
+"grupos": [
+[
+"yo"
+],
+[
+"ocupo"
+],
+[
+"el primer lugar"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo ocupo el primer lugar cada vez que.",
+"cat": "gram",
+"fix": "Yo ocupo el primer lugar cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "ocurrir-presente-3361",
+"verbo": "ocurrir",
+"contexto": "eso, mientras, con frecuencia",
+"respuesta": "Eso ocurre con frecuencia mientras.",
+"pista": "expressing frequency",
+"grupos": [
+[
+"eso"
+],
+[
+"ocurre"
+],
+[
+"con frecuencia"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Eso ocurre con frecuencia mientras.",
+"cat": "unnat",
+"fix": "Eso ocurre con frecuencia mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "odiar-presente-3366",
+"verbo": "odiar",
+"contexto": "nosotros, mientras, la violencia",
+"respuesta": "Nosotros odiamos la violencia mientras.",
+"pista": "expressing shared values",
+"grupos": [
+[
+"nosotros"
+],
+[
+"odiamos"
+],
+[
+"la violencia"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros odiamos la violencia mientras.",
+"cat": "unnat",
+"fix": "Nosotros odiamos la violencia mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "pagar-presente-3377",
+"verbo": "pagar",
+"contexto": "nosotros, mientras, el alquiler",
+"respuesta": "Nosotros pagamos el alquiler mientras.",
+"pista": "talking about housing costs",
+"grupos": [
+[
+"nosotros"
+],
+[
+"pagamos"
+],
+[
+"el alquiler"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros pagamos el alquiler mientras.",
+"cat": "unnat",
+"fix": "Nosotros pagamos el alquiler mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "pasar-presente-3389",
+"verbo": "pasar",
+"contexto": "tú, mientras, mucho tiempo en el teléfono",
+"respuesta": "Mientras, tú pasas mucho tiempo en el teléfono.",
+"pista": "commenting on phone usage",
+"grupos": [
+[
+"tu"
+],
+[
+"pasas"
+],
+[
+"mucho tiempo en el telefono"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, tú pasas mucho tiempo en el teléfono.",
+"cat": "unnat",
+"fix": "Mientras tanto, tú pasas mucho tiempo en el teléfono.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "permanecer-presente-3409",
+"verbo": "permanecer",
+"contexto": "yo, mientras, en silencio",
+"respuesta": "Yo permanezco en silencio mientras.",
+"pista": "expressing restraint",
+"grupos": [
+[
+"yo"
+],
+[
+"permanezco"
+],
+[
+"en silencio"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo permanezco en silencio mientras.",
+"cat": "unnat",
+"fix": "Yo permanezco en silencio mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "pesar-presente-3418",
+"verbo": "pesar",
+"contexto": "yo, mientras, los ingredientes antes de cocinar",
+"respuesta": "Yo peso los ingredientes antes de cocinar mientras.",
+"pista": "describing measurement",
+"grupos": [
+[
+"yo"
+],
+[
+"peso"
+],
+[
+"los ingredientes antes de cocinar"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo peso los ingredientes antes de cocinar mientras.",
+"cat": "unnat",
+"fix": "Yo peso los ingredientes antes de cocinar mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "preferir-presente-3429",
+"verbo": "preferir",
+"contexto": "tú, cada vez que, la comida casera",
+"respuesta": "Tú prefieres la comida casera cada vez que.",
+"pista": "talking about food preferences",
+"grupos": [
+[
+"tu"
+],
+[
+"prefieres"
+],
+[
+"la comida casera"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú prefieres la comida casera cada vez que.",
+"cat": "gram",
+"fix": "Tú prefieres la comida casera cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "preparar-presente-3438",
+"verbo": "preparar",
+"contexto": "tú, cada vez que, la maleta para el viaje",
+"respuesta": "Cada vez que, tú preparas la maleta para el viaje.",
+"pista": "describing travel preparation",
+"grupos": [
+[
+"tu"
+],
+[
+"preparas"
+],
+[
+"la maleta para el viaje"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, tú preparas la maleta para el viaje.",
+"cat": "gram",
+"fix": "Cada vez, tú preparas la maleta para el viaje.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "producir-presente-3449",
+"verbo": "producir",
+"contexto": "nosotros, mientras, resultados excelentes",
+"respuesta": "Mientras, nosotros producimos resultados excelentes.",
+"pista": "expressing team output",
+"grupos": [
+[
+"nosotros"
+],
+[
+"producimos"
+],
+[
+"resultados excelentes"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, nosotros producimos resultados excelentes.",
+"cat": "unnat",
+"fix": "Mientras tanto, nosotros producimos resultados excelentes.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "prometer-presente-3451",
+"verbo": "prometer",
+"contexto": "yo, mientras, llegar a tiempo",
+"respuesta": "Mientras, yo prometo llegar a tiempo.",
+"pista": "expressing a commitment",
+"grupos": [
+[
+"yo"
+],
+[
+"prometo"
+],
+[
+"llegar a tiempo"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, yo prometo llegar a tiempo.",
+"cat": "unnat",
+"fix": "Mientras tanto, yo prometo llegar a tiempo.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "querer-presente-3460",
+"verbo": "querer",
+"contexto": "yo, cada vez que, aprender a bailar",
+"respuesta": "Yo quiero aprender a bailar cada vez que.",
+"pista": "expressing desire",
+"grupos": [
+[
+"yo"
+],
+[
+"quiero"
+],
+[
+"aprender a bailar"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo quiero aprender a bailar cada vez que.",
+"cat": "gram",
+"fix": "Yo quiero aprender a bailar cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "recoger-presente-3474",
+"verbo": "recoger",
+"contexto": "nosotros, cada vez que, los resultados del análisis",
+"respuesta": "Nosotros recogemos los resultados del análisis cada vez que.",
+"pista": "describing data collection",
+"grupos": [
+[
+"nosotros"
+],
+[
+"recogemos"
+],
+[
+"los resultados del analisis"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros recogemos los resultados del análisis cada vez que.",
+"cat": "gram",
+"fix": "Nosotros recogemos los resultados del análisis cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "representar-presente-3497",
+"verbo": "representar",
+"contexto": "ella, mientras, a los trabajadores",
+"respuesta": "Mientras, ella representa a los trabajadores.",
+"pista": "narrating union role",
+"grupos": [
+[
+"ella"
+],
+[
+"representa"
+],
+[
+"a los trabajadores"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, ella representa a los trabajadores.",
+"cat": "unnat",
+"fix": "Mientras tanto, ella representa a los trabajadores.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "resolver-presente-3500",
+"verbo": "resolver",
+"contexto": "nosotros, mientras, el conflicto",
+"respuesta": "Mientras, nosotros resolvemos el conflicto.",
+"pista": "describing mediation",
+"grupos": [
+[
+"nosotros"
+],
+[
+"resolvemos"
+],
+[
+"el conflicto"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, nosotros resolvemos el conflicto.",
+"cat": "unnat",
+"fix": "Mientras tanto, nosotros resolvemos el conflicto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "reunir-presente-3509",
+"verbo": "reunir",
+"contexto": "nosotros, cada vez que, los fondos necesarios",
+"respuesta": "Nosotros reunimos los fondos necesarios cada vez que.",
+"pista": "expressing fundraising",
+"grupos": [
+[
+"nosotros"
+],
+[
+"reunimos"
+],
+[
+"los fondos necesarios"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros reunimos los fondos necesarios cada vez que.",
+"cat": "gram",
+"fix": "Nosotros reunimos los fondos necesarios cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "reunir-presente-3510",
+"verbo": "reunir",
+"contexto": "ella, mientras, la información para el proyecto",
+"respuesta": "Ella reúne la información para el proyecto mientras.",
+"pista": "narrating research",
+"grupos": [
+[
+"ella"
+],
+[
+"reune"
+],
+[
+"la informacion para el proyecto"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella reúne la información para el proyecto mientras.",
+"cat": "unnat",
+"fix": "Ella reúne la información para el proyecto mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "romper-presente-3518",
+"verbo": "romper",
+"contexto": "tú, mientras, las reglas",
+"respuesta": "Tú rompes las reglas mientras.",
+"pista": "describing rule-breaking",
+"grupos": [
+[
+"tu"
+],
+[
+"rompes"
+],
+[
+"las reglas"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú rompes las reglas mientras.",
+"cat": "unnat",
+"fix": "Tú rompes las reglas mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "romper-presente-3519",
+"verbo": "romper",
+"contexto": "ella, mientras, el récord mundial",
+"respuesta": "Ella rompe el récord mundial mientras.",
+"pista": "narrating an achievement",
+"grupos": [
+[
+"ella"
+],
+[
+"rompe"
+],
+[
+"el record mundial"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella rompe el récord mundial mientras.",
+"cat": "unnat",
+"fix": "Ella rompe el récord mundial mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "salvar-presente-3529",
+"verbo": "salvar",
+"contexto": "él, mientras, vidas como médico",
+"respuesta": "Él salva vidas como médico mientras.",
+"pista": "describing a doctor's role",
+"grupos": [
+[
+"el"
+],
+[
+"salva"
+],
+[
+"vidas como medico"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Él salva vidas como médico mientras.",
+"cat": "unnat",
+"fix": "Él salva vidas como médico mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "seguir-presente-3533",
+"verbo": "seguir",
+"contexto": "tú, cada vez que, las instrucciones",
+"respuesta": "Cada vez que, tú sigues las instrucciones.",
+"pista": "describing compliance",
+"grupos": [
+[
+"tu"
+],
+[
+"sigues"
+],
+[
+"las instrucciones"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, tú sigues las instrucciones.",
+"cat": "gram",
+"fix": "Cada vez, tú sigues las instrucciones.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "señalar-presente-3537",
+"verbo": "señalar",
+"contexto": "nosotros, mientras, los puntos importantes",
+"respuesta": "Mientras, nosotros señalamos los puntos importantes.",
+"pista": "describing highlighting",
+"grupos": [
+[
+"nosotros"
+],
+[
+"senalamos"
+],
+[
+"los puntos importantes"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, nosotros señalamos los puntos importantes.",
+"cat": "unnat",
+"fix": "Mientras tanto, nosotros señalamos los puntos importantes.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "ser-presente-3546",
+"verbo": "ser",
+"contexto": "nosotros, mientras, un equipo fuerte",
+"respuesta": "Mientras, nosotros somos un equipo fuerte.",
+"pista": "expressing team identity",
+"grupos": [
+[
+"nosotros"
+],
+[
+"somos"
+],
+[
+"un equipo fuerte"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mientras, nosotros somos un equipo fuerte.",
+"cat": "unnat",
+"fix": "Mientras tanto, nosotros somos un equipo fuerte.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "servir-presente-3548",
+"verbo": "servir",
+"contexto": "ella, cada vez que, café a los clientes",
+"respuesta": "Ella sirve café a los clientes cada vez que.",
+"pista": "narrating service",
+"grupos": [
+[
+"ella"
+],
+[
+"sirve"
+],
+[
+"cafe a los clientes"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella sirve café a los clientes cada vez que.",
+"cat": "gram",
+"fix": "Ella sirve café a los clientes cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "sonar-presente-3559",
+"verbo": "sonar",
+"contexto": "el teléfono, cada vez que, durante la reunión",
+"respuesta": "Cada vez que, el teléfono suena durante la reunión.",
+"pista": "describing an interruption",
+"grupos": [
+[
+"el telefono"
+],
+[
+"suena"
+],
+[
+"durante la reunion"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, el teléfono suena durante la reunión.",
+"cat": "gram",
+"fix": "Cada vez, el teléfono suena durante la reunión.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "temer-presente-3577",
+"verbo": "temer",
+"contexto": "yo, mientras, lo peor",
+"respuesta": "Yo temo lo peor mientras.",
+"pista": "expressing fear",
+"grupos": [
+[
+"yo"
+],
+[
+"temo"
+],
+[
+"lo peor"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo temo lo peor mientras.",
+"cat": "unnat",
+"fix": "Yo temo lo peor mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "terminar-presente-3585",
+"verbo": "terminar",
+"contexto": "tú, mientras, tus tareas",
+"respuesta": "Tú terminas tus tareas mientras.",
+"pista": "talking about responsibilities",
+"grupos": [
+[
+"tu"
+],
+[
+"terminas"
+],
+[
+"tus tareas"
+],
+[
+"mientras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú terminas tus tareas mientras.",
+"cat": "unnat",
+"fix": "Tú terminas tus tareas mientras tanto.",
+"note": "bare trailing/leading 'mientras' with no paired action reads incomplete; use 'mientras tanto'"
+}
+]
+},
+{
+"exercise": {
+"id": "tocar-presente-3591",
+"verbo": "tocar",
+"contexto": "nosotros, cada vez que, en una banda",
+"respuesta": "Nosotros tocamos en una banda cada vez que.",
+"pista": "describing group music",
+"grupos": [
+[
+"nosotros"
+],
+[
+"tocamos"
+],
+[
+"en una banda"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros tocamos en una banda cada vez que.",
+"cat": "gram",
+"fix": "Nosotros tocamos en una banda cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "tomar-presente-3592",
+"verbo": "tomar",
+"contexto": "yo, cada vez que, una decisión importante",
+"respuesta": "Yo tomo una decisión importante cada vez que.",
+"pista": "expressing decision-making",
+"grupos": [
+[
+"yo"
+],
+[
+"tomo"
+],
+[
+"una decision importante"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo tomo una decisión importante cada vez que.",
+"cat": "gram",
+"fix": "Yo tomo una decisión importante cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "utilizar-presente-3615",
+"verbo": "utilizar",
+"contexto": "ella, cada vez que, métodos innovadores",
+"respuesta": "Cada vez que, ella utiliza métodos innovadores.",
+"pista": "narrating creative approaches",
+"grupos": [
+[
+"ella"
+],
+[
+"utiliza"
+],
+[
+"metodos innovadores"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, ella utiliza métodos innovadores.",
+"cat": "gram",
+"fix": "Cada vez, ella utiliza métodos innovadores.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "vender-presente-3621",
+"verbo": "vender",
+"contexto": "nosotros, cada vez que, servicios de consultoría",
+"respuesta": "Nosotros vendemos servicios de consultoría cada vez que.",
+"pista": "describing professional offerings",
+"grupos": [
+[
+"nosotros"
+],
+[
+"vendemos"
+],
+[
+"servicios de consultoria"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros vendemos servicios de consultoría cada vez que.",
+"cat": "gram",
+"fix": "Nosotros vendemos servicios de consultoría cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "viajar-presente-3628",
+"verbo": "viajar",
+"contexto": "yo, cada vez que, por Europa",
+"respuesta": "Cada vez que, yo viajo por Europa.",
+"pista": "describing travel",
+"grupos": [
+[
+"yo"
+],
+[
+"viajo"
+],
+[
+"por Europa"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada vez que, yo viajo por Europa.",
+"cat": "gram",
+"fix": "Cada vez, yo viajo por Europa.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "vivir-presente-3631",
+"verbo": "vivir",
+"contexto": "yo, cada vez que, en una ciudad grande",
+"respuesta": "Yo vivo en una ciudad grande cada vez que.",
+"pista": "expressing where I live",
+"grupos": [
+[
+"yo"
+],
+[
+"vivo"
+],
+[
+"en una ciudad grande"
+],
+[
+"cada vez que"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo vivo en una ciudad grande cada vez que.",
+"cat": "gram",
+"fix": "Yo vivo en una ciudad grande cada vez.",
+"note": "'cada vez que' is a conjunction needing a clause; left dangling it's ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-presente-3601",
+"verbo": "tranquilar",
+"contexto": "yo, esta tarde, a los pasajeros nerviosos",
+"respuesta": "Yo tranquilo a los pasajeros nerviosos esta tarde.",
+"pista": "expressing calming others",
+"grupos": [
+[
+"yo"
+],
+[
+"tranquilo"
+],
+[
+"a los pasajeros nerviosos"
+],
+[
+"esta tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo tranquilo a los pasajeros nerviosos esta tarde.",
+"cat": "unnat",
+"fix": "Yo tranquilizo a los pasajeros nerviosos esta tarde.",
+"note": "'tranquilar' is nonstandard and 'tranquilo' reads as the adjective, not a verb"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-presente-3602",
+"verbo": "tranquilar",
+"contexto": "ella, siempre, a su hijo antes de dormir",
+"respuesta": "Ella tranquila a su hijo antes de dormir siempre.",
+"pista": "narrating bedtime routine",
+"grupos": [
+[
+"ella"
+],
+[
+"tranquila"
+],
+[
+"a su hijo antes de dormir"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella tranquila a su hijo antes de dormir siempre.",
+"cat": "unnat",
+"fix": "Ella tranquiliza a su hijo antes de dormir siempre.",
+"note": "standard verb is 'tranquilizar'; 'tranquila' reads as the adjective"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-presente-3603",
+"verbo": "tranquilar",
+"contexto": "nosotros, ahora, a los vecinos preocupados",
+"respuesta": "Ahora, nosotros tranquilamos a los vecinos preocupados.",
+"pista": "describing community reassurance",
+"grupos": [
+[
+"nosotros"
+],
+[
+"tranquilamos"
+],
+[
+"a los vecinos preocupados"
+],
+[
+"ahora"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ahora, nosotros tranquilamos a los vecinos preocupados.",
+"cat": "unnat",
+"fix": "Ahora, nosotros tranquilizamos a los vecinos preocupados.",
+"note": "'tranquilar' is a nonstandard verb; natives say 'tranquilizar'"
+}
+]
+},
+{
+"exercise": {
+"id": "bastar-presente-2954",
+"verbo": "bastar",
+"contexto": "ella, normalmente, con su presencia",
+"respuesta": "Normalmente, ella basta con su presencia.",
+"pista": "describing enough",
+"grupos": [
+[
+"ella"
+],
+[
+"basta"
+],
+[
+"con su presencia"
+],
+[
+"normalmente"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Normalmente, ella basta con su presencia.",
+"cat": "unnat",
+"fix": "Normalmente, a todos les basta con su presencia.",
+"note": "'bastar' needs a dative construction, not a personal subject like 'ella'"
+}
+]
+},
+{
+"exercise": {
+"id": "bastar-presente-2955",
+"verbo": "bastar",
+"contexto": "ellos, ahora, con poco dinero",
+"respuesta": "Ellos bastan con poco dinero ahora.",
+"pista": "expressing adequacy",
+"grupos": [
+[
+"ellos"
+],
+[
+"bastan"
+],
+[
+"con poco dinero"
+],
+[
+"ahora"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ellos bastan con poco dinero ahora.",
+"cat": "unnat",
+"fix": "A ellos les basta con poco dinero ahora.",
+"note": "'bastar con' needs an indirect object (les basta), not personal subject"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-presente-3228",
+"verbo": "gustar",
+"contexto": "nosotros, normalmente, a nuestros profesores",
+"respuesta": "Nosotros gustamos a nuestros profesores normalmente.",
+"pista": "expressing teacher approval",
+"grupos": [
+[
+"nosotros"
+],
+[
+"gustamos"
+],
+[
+"a nuestros profesores"
+],
+[
+"normalmente"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros gustamos a nuestros profesores",
+"cat": "gram",
+"fix": "Les gustamos a nuestros profesores.",
+"note": "missing indirect object pronoun 'les' required with gustar-type verbs"
+}
+]
+},
+{
+"exercise": {
+"id": "engañar-presente-3158",
+"verbo": "engañar",
+"contexto": "yo, a veces, a nadie",
+"respuesta": "Yo engaño a nadie a veces.",
+"pista": "expressing honesty",
+"grupos": [
+[
+"yo"
+],
+[
+"engano"
+],
+[
+"a nadie"
+],
+[
+"a veces"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo engaño a nadie a veces.",
+"cat": "sem",
+"fix": "Yo no engaño a nadie.",
+"note": "'a nadie' requires 'no'; also 'a veces' contradicts the absolute claim"
+}
+]
+},
+{
+"exercise": {
+"id": "mentir-presente-3320",
+"verbo": "mentir",
+"contexto": "yo, esta tarde, nunca a mis amigos",
+"respuesta": "Esta tarde, yo miento nunca a mis amigos.",
+"pista": "expressing honesty",
+"grupos": [
+[
+"yo"
+],
+[
+"miento"
+],
+[
+"nunca a mis amigos"
+],
+[
+"esta tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Esta tarde, yo miento nunca a mis amigos.",
+"cat": "gram",
+"fix": "Esta tarde, nunca miento a mis amigos.",
+"note": "'nunca' after the verb needs 'no' before it, or move nunca before the verb"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-presente-3230",
+"verbo": "haber",
+"contexto": "tú, en este momento, estudiado mucho",
+"respuesta": "Tú has estudiado mucho en este momento.",
+"pista": "describing effort",
+"grupos": [
+[
+"tu"
+],
+[
+"has"
+],
+[
+"estudiado mucho"
+],
+[
+"en este momento"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú has estudiado mucho en este momento.",
+"cat": "ctx",
+"fix": "Tú estudias mucho en este momento.",
+"note": "present perfect (has estudiado) is not simple presente; also clashes with 'en este momento'"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-presente-3231",
+"verbo": "haber",
+"contexto": "nosotros, esta noche, llegado temprano",
+"respuesta": "Esta noche, nosotros hemos llegado temprano.",
+"pista": "narrating timely arrival",
+"grupos": [
+[
+"nosotros"
+],
+[
+"hemos"
+],
+[
+"llegado temprano"
+],
+[
+"esta noche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Esta noche, nosotros hemos llegado temprano.",
+"cat": "ctx",
+"fix": "Esta noche, llegamos temprano.",
+"note": "present perfect compound tense, not the simple presente this file drills"
+}
+]
+},
+{
+"exercise": {
+"id": "morir-presente-3334",
+"verbo": "morir",
+"contexto": "las plantas, a veces, sin agua",
+"respuesta": "Las plantas muere sin agua a veces.",
+"pista": "describing neglect consequences",
+"grupos": [
+[
+"las plantas"
+],
+[
+"muere"
+],
+[
+"sin agua"
+],
+[
+"a veces"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Las plantas muere sin agua a veces.",
+"cat": "gram",
+"fix": "Las plantas mueren sin agua a veces.",
+"note": "plural subject 'las plantas' needs plural verb 'mueren'"
+}
+]
+},
+{
+"exercise": {
+"id": "costar-presente-3050",
+"verbo": "costar",
+"contexto": "los zapatos, siempre, cien dólares",
+"respuesta": "Los zapatos cuesta cien dólares siempre.",
+"pista": "describing a cost",
+"grupos": [
+[
+"los zapatos"
+],
+[
+"cuesta"
+],
+[
+"cien dolares"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los zapatos cuesta cien dólares siempre.",
+"cat": "gram",
+"fix": "Los zapatos cuestan cien dólares siempre.",
+"note": "plural subject 'los zapatos' needs plural verb 'cuestan'"
+}
+]
+},
+{
+"exercise": {
+"id": "crecer-presente-3056",
+"verbo": "crecer",
+"contexto": "los niños, cada semana, muy rápido",
+"respuesta": "Los niños crece muy rápido cada semana.",
+"pista": "describing child development",
+"grupos": [
+[
+"los ninos"
+],
+[
+"crece"
+],
+[
+"muy rapido"
+],
+[
+"cada semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los niños crece muy rápido cada semana.",
+"cat": "gram",
+"fix": "Los niños crecen muy rápido cada semana.",
+"note": "plural subject 'los niños' needs plural verb 'crecen'"
+}
+]
+},
+{
+"exercise": {
+"id": "ocurrir-presente-3362",
+"verbo": "ocurrir",
+"contexto": "los accidentes, hoy, en esa esquina",
+"respuesta": "Los accidentes ocurre en esa esquina hoy.",
+"pista": "describing a danger zone",
+"grupos": [
+[
+"los accidentes"
+],
+[
+"ocurre"
+],
+[
+"en esa esquina"
+],
+[
+"hoy"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los accidentes ocurre en esa esquina hoy.",
+"cat": "gram",
+"fix": "Los accidentes ocurren en esa esquina hoy.",
+"note": "plural subject 'los accidentes' needs plural verb 'ocurren'"
+}
+]
+},
+{
+"exercise": {
+"id": "suceder-presente-3567",
+"verbo": "suceder",
+"contexto": "los problemas, cada semana, cuando menos lo esperas",
+"respuesta": "Cada semana, los problemas sucede cuando menos lo esperas.",
+"pista": "describing unexpected issues",
+"grupos": [
+[
+"los problemas"
+],
+[
+"sucede"
+],
+[
+"cuando menos lo esperas"
+],
+[
+"cada semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada semana, los problemas sucede cuando menos lo esperas.",
+"cat": "gram",
+"fix": "Cada semana, los problemas suceden cuando menos lo esperas.",
+"note": "plural subject 'los problemas' needs plural verb 'suceden'"
+}
+]
+},
+{
+"exercise": {
+"id": "nacer-presente-3344",
+"verbo": "nacer",
+"contexto": "los bebés, actualmente, en el hospital",
+"respuesta": "Los bebés nace en el hospital actualmente.",
+"pista": "describing childbirth",
+"grupos": [
+[
+"los bebes"
+],
+[
+"nace"
+],
+[
+"en el hospital"
+],
+[
+"actualmente"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los bebés nace en el hospital actualmente.",
+"cat": "gram",
+"fix": "Los bebés nacen en el hospital actualmente.",
+"note": "plural subject 'los bebés' needs plural verb 'nacen'"
+}
+]
+},
+{
+"exercise": {
+"id": "cometer-presente-2999",
+"verbo": "cometer",
+"contexto": "tú, esta noche, errores a veces",
+"respuesta": "Esta noche, tú cometas errores a veces.",
+"pista": "talking about being human",
+"grupos": [
+[
+"tu"
+],
+[
+"cometas"
+],
+[
+"errores a veces"
+],
+[
+"esta noche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Esta noche, tú cometas errores a veces.",
+"cat": "gram",
+"fix": "Esta noche, tú cometes errores a veces.",
+"note": "'cometas' is subjunctive; plain statement needs indicative 'cometes'"
+}
+]
+},
+{
+"exercise": {
+"id": "cometer-presente-3000",
+"verbo": "cometer",
+"contexto": "ellos, siempre, faltas graves",
+"respuesta": "Siempre, ellos cometan faltas graves.",
+"pista": "describing serious issues",
+"grupos": [
+[
+"ellos"
+],
+[
+"cometan"
+],
+[
+"faltas graves"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Siempre, ellos cometan faltas graves.",
+"cat": "gram",
+"fix": "Siempre, ellos cometen faltas graves.",
+"note": "'cometan' is subjunctive; needs indicative 'cometen'"
+}
+]
+},
+{
+"exercise": {
+"id": "cumplir-presente-3068",
+"verbo": "cumplir",
+"contexto": "ella, ahora, con sus obligaciones",
+"respuesta": "Ahora, ella cumpla con sus obligaciones.",
+"pista": "narrating responsibility",
+"grupos": [
+[
+"ella"
+],
+[
+"cumpla"
+],
+[
+"con sus obligaciones"
+],
+[
+"ahora"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ahora, ella cumpla con sus obligaciones.",
+"cat": "gram",
+"fix": "Ahora, ella cumple con sus obligaciones.",
+"note": "'cumpla' is subjunctive; plain statement needs indicative 'cumple'"
+}
+]
+},
+{
+"exercise": {
+"id": "discutir-presente-3127",
+"verbo": "discutir",
+"contexto": "nosotros, actualmente, el tema en la reunión",
+"respuesta": "Nosotros discutamos el tema en la reunión actualmente.",
+"pista": "describing a meeting",
+"grupos": [
+[
+"nosotros"
+],
+[
+"discutamos"
+],
+[
+"el tema en la reunion"
+],
+[
+"actualmente"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros discutamos el tema en la reunión actualmente.",
+"cat": "gram",
+"fix": "Nosotros discutimos el tema en la reunión actualmente.",
+"note": "'discutamos' is subjunctive/command; needs indicative 'discutimos'"
+}
+]
+},
+{
+"exercise": {
+"id": "discutir-presente-3129",
+"verbo": "discutir",
+"contexto": "ellos, cada semana, sobre política",
+"respuesta": "Cada semana, ellos discutan sobre política.",
+"pista": "narrating a debate",
+"grupos": [
+[
+"ellos"
+],
+[
+"discutan"
+],
+[
+"sobre politica"
+],
+[
+"cada semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada semana, ellos discutan sobre política.",
+"cat": "gram",
+"fix": "Cada semana, ellos discuten sobre política.",
+"note": "'discutan' is subjunctive; needs indicative 'discuten'"
+}
+]
+},
+{
+"exercise": {
+"id": "esconder-presente-3182",
+"verbo": "esconder",
+"contexto": "tú, normalmente, tus emociones",
+"respuesta": "Tú escondas tus emociones normalmente.",
+"pista": "talking about emotional control",
+"grupos": [
+[
+"tu"
+],
+[
+"escondas"
+],
+[
+"tus emociones"
+],
+[
+"normalmente"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú escondas tus emociones normalmente.",
+"cat": "gram",
+"fix": "Tú escondes tus emociones normalmente.",
+"note": "'escondas' is subjunctive; needs indicative 'escondes'"
+}
+]
+},
+{
+"exercise": {
+"id": "esconder-presente-3183",
+"verbo": "esconder",
+"contexto": "ella, hoy, las galletas de los niños",
+"respuesta": "Hoy, ella esconda las galletas de los niños.",
+"pista": "narrating a playful act",
+"grupos": [
+[
+"ella"
+],
+[
+"esconda"
+],
+[
+"las galletas de los ninos"
+],
+[
+"hoy"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Hoy, ella esconda las galletas de los niños.",
+"cat": "gram",
+"fix": "Hoy, ella esconde las galletas de los niños.",
+"note": "'esconda' is subjunctive; needs indicative 'esconde'"
+}
+]
+},
+{
+"exercise": {
+"id": "prometer-presente-3452",
+"verbo": "prometer",
+"contexto": "tú, a veces, no decir nada",
+"respuesta": "Tú prometas no decir nada a veces.",
+"pista": "describing a promise",
+"grupos": [
+[
+"tu"
+],
+[
+"prometas"
+],
+[
+"no decir nada"
+],
+[
+"a veces"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú prometas no decir nada a veces.",
+"cat": "gram",
+"fix": "Tú prometes no decir nada a veces.",
+"note": "'prometas' is subjunctive; needs indicative 'prometes'"
+}
+]
+},
+{
+"exercise": {
+"id": "prometer-presente-3453",
+"verbo": "prometer",
+"contexto": "nosotros, esta noche, hacer nuestro mejor esfuerzo",
+"respuesta": "Esta noche, nosotros prometamos hacer nuestro mejor esfuerzo.",
+"pista": "expressing team dedication",
+"grupos": [
+[
+"nosotros"
+],
+[
+"prometamos"
+],
+[
+"hacer nuestro mejor esfuerzo"
+],
+[
+"esta noche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Esta noche, nosotros prometamos hacer nuestro mejor esfuerzo.",
+"cat": "gram",
+"fix": "Esta noche, nosotros prometemos hacer nuestro mejor esfuerzo.",
+"note": "'prometamos' is subjunctive/command; needs indicative 'prometemos'"
+}
+]
+},
+{
+"exercise": {
+"id": "unir-presente-3607",
+"verbo": "unir",
+"contexto": "nosotros, en este momento, fuerzas para el proyecto",
+"respuesta": "Nosotros unamos fuerzas para el proyecto en este momento.",
+"pista": "expressing collaboration",
+"grupos": [
+[
+"nosotros"
+],
+[
+"unamos"
+],
+[
+"fuerzas para el proyecto"
+],
+[
+"en este momento"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros unamos fuerzas para el proyecto en este momento.",
+"cat": "gram",
+"fix": "Nosotros unimos fuerzas para el proyecto en este momento.",
+"note": "'unamos' is subjunctive/command; needs indicative 'unimos'"
+}
+]
+},
+{
+"exercise": {
+"id": "unir-presente-3609",
+"verbo": "unir",
+"contexto": "ella, esta tarde, a la familia en momentos difíciles",
+"respuesta": "Esta tarde, ella una a la familia en momentos difíciles.",
+"pista": "narrating family unity",
+"grupos": [
+[
+"ella"
+],
+[
+"una"
+],
+[
+"a la familia en momentos dificiles"
+],
+[
+"esta tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Esta tarde, ella una a la familia en momentos difíciles.",
+"cat": "gram",
+"fix": "Esta tarde, ella une a la familia en momentos difíciles.",
+"note": "'una' is subjunctive and also misreads as the numeral 'one'"
+}
+]
+},
+{
+"exercise": {
+"id": "dejar-presente-3085",
+"verbo": "dejar",
+"contexto": "yo, ahora mismo, el café sobre la mesa",
+"respuesta": "Ahora mismo, yo dejo el café sobre la mesa.",
+"pista": "Describe una acción sencilla.",
+"grupos": [
+[
+"yo"
+],
+[
+"dejó"
+],
+[
+"el cafe sobre la mesa"
+],
+[
+"ahora mismo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ahora mismo, yo dejó el café sobre la mesa.",
+"cat": "gram",
+"fix": "Ahora mismo, yo dejo el café sobre la mesa.",
+"note": "'dejó' is preterite (he/she left); wrong person/tense for 'yo' presente"
+}
+]
+},
+{
+"exercise": {
+"id": "hablar-presente-3232",
+"verbo": "hablar",
+"contexto": "yo, por lo general, con mi amigo",
+"respuesta": "Yo hablo con mi amigo por lo general.",
+"pista": "describing conversation",
+"grupos": [
+[
+"yo"
+],
+[
+"habló"
+],
+[
+"con mi amigo"
+],
+[
+"por lo general"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo habló con mi amigo por lo general.",
+"cat": "gram",
+"fix": "Yo hablo con mi amigo por lo general.",
+"note": "'habló' is preterite (he/she spoke); wrong person/tense for 'yo' presente"
+}
+]
+},
+{
+"exercise": {
+"id": "nacer-presente-3343",
+"verbo": "nacer",
+"contexto": "yo, hoy, en una ciudad pequeña",
+"respuesta": "Hoy, yo naco en una ciudad pequeña.",
+"pista": "expressing origin",
+"grupos": [
+[
+"yo"
+],
+[
+"naco"
+],
+[
+"en una ciudad pequena"
+],
+[
+"hoy"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Hoy, yo naco en una ciudad pequeña.",
+"cat": "gram",
+"fix": "Nazco en una ciudad pequeña.",
+"note": "'naco' is not a real conjugation of nacer (should be 'nazco'); also being born can't be a present habitual act"
+}
+]
+},
+{
+"exercise": {
+"id": "enviar-presente-3175",
+"verbo": "enviar",
+"contexto": "yo, esta noche, un mensaje",
+"respuesta": "Yo envío un mensaje esta noche.",
+"pista": "describing communication",
+"grupos": [
+[
+"yo"
+],
+[
+"envio"
+],
+[
+"un mensaje"
+],
+[
+"esta noche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo envio un mensaje esta noche.",
+"cat": "gram",
+"fix": "Yo envío un mensaje esta noche.",
+"note": "missing accent: hiatus requires tilde, 'envío' not 'envio'"
+}
+]
+},
+{
+"exercise": {
+"id": "enviar-presente-3177",
+"verbo": "enviar",
+"contexto": "ella, esta noche, flores a su madre",
+"respuesta": "Ella envía flores a su madre esta noche.",
+"pista": "narrating a thoughtful gesture",
+"grupos": [
+[
+"ella"
+],
+[
+"envia"
+],
+[
+"flores a su madre"
+],
+[
+"esta noche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella envia flores a su madre esta noche.",
+"cat": "gram",
+"fix": "Ella envía flores a su madre esta noche.",
+"note": "missing accent: hiatus requires tilde, 'envía' not 'envia'"
+}
+]
+},
+{
+"exercise": {
+"id": "actuar-presente-2881",
+"verbo": "actuar",
+"contexto": "él, actualmente, en la película",
+"respuesta": "Actualmente, él actúa en la película.",
+"pista": "describing his current role",
+"grupos": [
+[
+"el"
+],
+[
+"actua"
+],
+[
+"en la pelicula"
+],
+[
+"actualmente"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Actualmente, él actua en la película.",
+"cat": "gram",
+"fix": "Actualmente, él actúa en la película.",
+"note": "missing accent: hiatus requires tilde, 'actúa' not 'actua'"
+}
+]
+},
+{
+"exercise": {
+"id": "actuar-presente-2882",
+"verbo": "actuar",
+"contexto": "yo, ahora, con responsabilidad",
+"respuesta": "Ahora, yo actúo con responsabilidad.",
+"pista": "expressing how I behave",
+"grupos": [
+[
+"yo"
+],
+[
+"actuo"
+],
+[
+"con responsabilidad"
+],
+[
+"ahora"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ahora, yo actuo con responsabilidad.",
+"cat": "gram",
+"fix": "Ahora, yo actúo con responsabilidad.",
+"note": "missing accent: hiatus requires tilde, 'actúo' not 'actuo'"
+}
+]
+},
+{
+"exercise": {
+"id": "actuar-presente-2883",
+"verbo": "actuar",
+"contexto": "ellas, a veces, en el teatro",
+"respuesta": "A veces, ellas actúan en el teatro.",
+"pista": "narrating present activities",
+"grupos": [
+[
+"ellas"
+],
+[
+"actuan"
+],
+[
+"en el teatro"
+],
+[
+"a veces"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "A veces, ellas actuan en el teatro.",
+"cat": "gram",
+"fix": "A veces, ellas actúan en el teatro.",
+"note": "missing accent: hiatus requires tilde, 'actúan' not 'actuan'"
+}
+]
+},
+{
+"exercise": {
+"id": "confiar-presente-3013",
+"verbo": "confiar",
+"contexto": "yo, hoy, en mi equipo",
+"respuesta": "Hoy, yo confío en mi equipo.",
+"pista": "expressing trust",
+"grupos": [
+[
+"yo"
+],
+[
+"confio"
+],
+[
+"en mi equipo"
+],
+[
+"hoy"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Hoy, yo confio en mi equipo.",
+"cat": "gram",
+"fix": "Hoy, yo confío en mi equipo.",
+"note": "missing accent: hiatus requires tilde, 'confío' not 'confio'"
+}
+]
+},
+{
+"exercise": {
+"id": "confiar-presente-3014",
+"verbo": "confiar",
+"contexto": "ella, todos los días, en sus amigos",
+"respuesta": "Ella confía en sus amigos todos los días.",
+"pista": "describing her relationships",
+"grupos": [
+[
+"ella"
+],
+[
+"confia"
+],
+[
+"en sus amigos"
+],
+[
+"todos los dias"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella confia en sus amigos todos los días.",
+"cat": "gram",
+"fix": "Ella confía en sus amigos todos los días.",
+"note": "missing accent: hiatus requires tilde, 'confía' not 'confia'"
+}
+]
+},
+{
+"exercise": {
+"id": "continuar-presente-3035",
+"verbo": "continuar",
+"contexto": "yo, por lo general, mi camino",
+"respuesta": "Yo continúo mi camino por lo general.",
+"pista": "describing forward movement",
+"grupos": [
+[
+"yo"
+],
+[
+"continuo"
+],
+[
+"mi camino"
+],
+[
+"por lo general"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo continuo mi camino por lo general.",
+"cat": "gram",
+"fix": "Yo continúo mi camino por lo general.",
+"note": "'continuo' (no accent) is the adjective; the verb needs 'continúo'"
+}
+]
+},
+{
+"exercise": {
+"id": "continuar-presente-3036",
+"verbo": "continuar",
+"contexto": "ella, en este momento, sus estudios",
+"respuesta": "Ella continúa sus estudios en este momento.",
+"pista": "narrating her dedication",
+"grupos": [
+[
+"ella"
+],
+[
+"continua"
+],
+[
+"sus estudios"
+],
+[
+"en este momento"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella continua sus estudios en este momento.",
+"cat": "gram",
+"fix": "Ella continúa sus estudios en este momento.",
+"note": "'continua' (no accent) is the adjective; the verb needs 'continúa'"
+}
+]
+},
+{
+"exercise": {
+"id": "existir-presente-3203",
+"verbo": "existir",
+"contexto": "ellos, esta tarde, en otro continente",
+"respuesta": "Esta tarde, ellos existen en otro continente.",
+"pista": "describing location of beings",
+"grupos": [
+[
+"ellos"
+],
+[
+"existen"
+],
+[
+"en otro continente"
+],
+[
+"esta tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Esta tarde, ellos existen en otro continente.",
+"cat": "unnat",
+"fix": "Esta tarde, ellos están en otro continente.",
+"note": "'existir' isn't used to mean 'be located'; natives say 'estar' or 'vivir'"
+}
+]
+},
+{
+"exercise": {
+"id": "existir-presente-3204",
+"verbo": "existir",
+"contexto": "yo, esta mañana, para ayudar",
+"respuesta": "Yo existo para ayudar esta mañana.",
+"pista": "expressing purpose",
+"grupos": [
+[
+"yo"
+],
+[
+"existo"
+],
+[
+"para ayudar"
+],
+[
+"esta manana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo existo para ayudar esta mañana.",
+"cat": "unnat",
+"fix": "Yo existo para ayudar.",
+"note": "tying an existential purpose statement to 'esta mañana' is unnatural"
+}
+]
+},
+{
+"exercise": {
+"id": "tener-presente-3580",
+"verbo": "tener",
+"contexto": "yo, esta tarde, dos hermanos",
+"respuesta": "Esta tarde, yo tengo dos hermanos.",
+"pista": "describing family",
+"grupos": [
+[
+"yo"
+],
+[
+"tengo"
+],
+[
+"dos hermanos"
+],
+[
+"esta tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Esta tarde, yo tengo dos hermanos.",
+"cat": "sem",
+"fix": "Yo tengo dos hermanos.",
+"note": "sibling count is a permanent fact; pairing it with 'esta tarde' is nonsensical"
+}
+]
+},
+{
+"exercise": {
+"id": "ser-presente-3544",
+"verbo": "ser",
+"contexto": "yo, esta tarde, profesor de historia",
+"respuesta": "Esta tarde, yo soy profesor de historia.",
+"pista": "expressing identity",
+"grupos": [
+[
+"yo"
+],
+[
+"soy"
+],
+[
+"profesor de historia"
+],
+[
+"esta tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Esta tarde, yo soy profesor de historia.",
+"cat": "unnat",
+"fix": "Yo soy profesor de historia.",
+"note": "profession as identity doesn't naturally pair with a specific afternoon"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-presente-3554",
+"verbo": "soler",
+"contexto": "ella, a veces, cocinar los domingos",
+"respuesta": "A veces, ella suele cocinar los domingos.",
+"pista": "narrating routine",
+"grupos": [
+[
+"ella"
+],
+[
+"suele"
+],
+[
+"cocinar los domingos"
+],
+[
+"a veces"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "A veces, ella suele cocinar los domingos.",
+"cat": "sem",
+"fix": "Ella suele cocinar los domingos.",
+"note": "'a veces' (sometimes) contradicts 'suele' (usually/habitually)"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-presente-3555",
+"verbo": "soler",
+"contexto": "nosotros, ahora, ir al cine los sábados",
+"respuesta": "Nosotros solemos ir al cine los sábados ahora.",
+"pista": "describing weekend habit",
+"grupos": [
+[
+"nosotros"
+],
+[
+"solemos"
+],
+[
+"ir al cine los sabados"
+],
+[
+"ahora"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros solemos ir al cine los sábados ahora.",
+"cat": "unnat",
+"fix": "Nosotros solemos ir al cine los sábados.",
+"note": "'ahora' (right now) doesn't fit a habitual weekly-routine statement"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-futuro-3763",
+"verbo": "casar",
+"contexto": "ellos, mañana, en junio",
+"respuesta": "Ellos casarán en junio mañana.",
+"pista": "El futuro simple es uno de los tiempos más regulares del español",
+"grupos": [
+[
+"ellos"
+],
+[
+"casaran"
+],
+[
+"en junio"
+],
+[
+"manana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ellos casarán en junio mañana.",
+"cat": "gram",
+"fix": "Ellos se casarán en junio.",
+"note": "casarse needs reflexive pronoun; \"mañana\" and \"en junio\" contradict each other"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-futuro-3764",
+"verbo": "casar",
+"contexto": "yo, el año que viene, con mi pareja",
+"respuesta": "Yo casaré con mi pareja el año que viene.",
+"pista": "El futuro simple se forma con el infinitivo + terminación",
+"grupos": [
+[
+"yo"
+],
+[
+"casare"
+],
+[
+"con mi pareja"
+],
+[
+"el ano que viene"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo casaré con mi pareja el año que viene.",
+"cat": "gram",
+"fix": "Yo me casaré con mi pareja el año que viene.",
+"note": "casarse (to get married) requires the reflexive pronoun me"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-futuro-3765",
+"verbo": "casar",
+"contexto": "mi hermana, el año que viene, en la iglesia",
+"respuesta": "Mi hermana casará en la iglesia el año que viene.",
+"pista": "El futuro simple se forma con el infinitivo + terminación",
+"grupos": [
+[
+"mi hermana"
+],
+[
+"casara"
+],
+[
+"en la iglesia"
+],
+[
+"el ano que viene"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mi hermana casará en la iglesia el año que viene.",
+"cat": "gram",
+"fix": "Mi hermana se casará en la iglesia el año que viene.",
+"note": "casarse requires reflexive pronoun se; bare \"casará\" means to officiate a wedding"
+}
+]
+},
+{
+"exercise": {
+"id": "asesinar-futuro-3709",
+"verbo": "asesinar",
+"contexto": "el villano, dentro de una hora, al rey en la novela",
+"respuesta": "El villano asesinará al rey en la novela dentro de una hora.",
+"pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+"grupos": [
+[
+"el villano"
+],
+[
+"asesinara"
+],
+[
+"al rey en la novela"
+],
+[
+"dentro de una hora"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El villano asesinará al rey en la novela dentro de una hora.",
+"cat": "unnat",
+"fix": "En la novela, el villano asesinará al rey dentro de una hora.",
+"note": "fictional frame and real-time adverb collide; unnatural word order for spoken Spanish"
+}
+]
+},
+{
+"exercise": {
+"id": "asesinar-futuro-3710",
+"verbo": "asesinar",
+"contexto": "él, dentro de una hora, al personaje en la película",
+"respuesta": "Él asesinará al personaje en la película dentro de una hora.",
+"pista": "El futuro simple indica una acción posterior al momento de hablar",
+"grupos": [
+[
+"el"
+],
+[
+"asesinara"
+],
+[
+"al personaje en la pelicula"
+],
+[
+"dentro de una hora"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Él asesinará al personaje en la película dentro de una hora.",
+"cat": "unnat",
+"fix": "En la película, él asesinará al personaje dentro de una hora.",
+"note": "narrative frame stacked with literal time adverb sounds unnatural spoken"
+}
+]
+},
+{
+"exercise": {
+"id": "engañar-futuro-3938",
+"verbo": "engañar",
+"contexto": "yo, el lunes, a nadie",
+"respuesta": "Yo engañaré a nadie el lunes.",
+"pista": "El futuro simple es uno de los tiempos más regulares del español",
+"grupos": [
+[
+"yo"
+],
+[
+"enganare"
+],
+[
+"a nadie"
+],
+[
+"el lunes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo engañaré a nadie el lunes.",
+"cat": "gram",
+"fix": "Yo no engañaré a nadie el lunes.",
+"note": "negative word nadie after the verb requires \"no\" before the verb"
+}
+]
+},
+{
+"exercise": {
+"id": "enterar-futuro-3946",
+"verbo": "enterar",
+"contexto": "yo, en unos minutos, de la noticia",
+"respuesta": "Yo enteraré de la noticia en unos minutos.",
+"pista": "Usa el futuro para hablar de planes y proyectos",
+"grupos": [
+[
+"yo"
+],
+[
+"enterare"
+],
+[
+"de la noticia"
+],
+[
+"en unos minutos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo enteraré de la noticia en unos minutos.",
+"cat": "gram",
+"fix": "Yo me enteraré de la noticia en unos minutos.",
+"note": "enterarse de (to find out) needs the reflexive pronoun me"
+}
+]
+},
+{
+"exercise": {
+"id": "enterar-futuro-3947",
+"verbo": "enterar",
+"contexto": "tú, el año que viene, de la verdad",
+"respuesta": "Tú enterarás de la verdad el año que viene.",
+"pista": "El futuro simple se forma con el infinitivo + terminación",
+"grupos": [
+[
+"tu"
+],
+[
+"enteraras"
+],
+[
+"de la verdad"
+],
+[
+"el ano que viene"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú enterarás de la verdad el año que viene.",
+"cat": "gram",
+"fix": "Tú te enterarás de la verdad el año que viene.",
+"note": "enterarse de requires reflexive pronoun te, missing here"
+}
+]
+},
+{
+"exercise": {
+"id": "enterar-futuro-3948",
+"verbo": "enterar",
+"contexto": "mis padres, el próximo mes, de todo",
+"respuesta": "Mis padres enterarán de todo el próximo mes.",
+"pista": "Usa el futuro para hablar de planes y proyectos",
+"grupos": [
+[
+"mis padres"
+],
+[
+"enteraran"
+],
+[
+"de todo"
+],
+[
+"el proximo mes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mis padres enterarán de todo el próximo mes.",
+"cat": "gram",
+"fix": "Mis padres se enterarán de todo el próximo mes.",
+"note": "enterarse de requires reflexive pronoun se, missing here"
+}
+]
+},
+{
+"exercise": {
+"id": "mentir-futuro-4099",
+"verbo": "mentir",
+"contexto": "yo, en unos minutos, nunca más",
+"respuesta": "Yo mentiré nunca más en unos minutos.",
+"pista": "Usa el futuro para expresar acciones que ocurrirán",
+"grupos": [
+[
+"yo"
+],
+[
+"mentire"
+],
+[
+"nunca mas"
+],
+[
+"en unos minutos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo mentiré nunca más en unos minutos.",
+"cat": "gram",
+"fix": "Yo no mentiré nunca más.",
+"note": "nunca after the verb needs preceding \"no\"; also clashes with \"en unos minutos\""
+}
+]
+},
+{
+"exercise": {
+"id": "molestar-futuro-4112",
+"verbo": "molestar",
+"contexto": "yo, en unos minutos, a nadie",
+"respuesta": "Yo molestaré a nadie en unos minutos.",
+"pista": "Las terminaciones del futuro son iguales para las tres conjugaciones",
+"grupos": [
+[
+"yo"
+],
+[
+"molestare"
+],
+[
+"a nadie"
+],
+[
+"en unos minutos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo molestaré a nadie en unos minutos.",
+"cat": "gram",
+"fix": "Yo no molestaré a nadie en unos minutos.",
+"note": "negative word nadie after the verb requires \"no\" before the verb"
+}
+]
+},
+{
+"exercise": {
+"id": "preocupar-futuro-4215",
+"verbo": "preocupar",
+"contexto": "yo, el año que viene, por mi familia",
+"respuesta": "Yo preocuparé por mi familia el año que viene.",
+"pista": "Las terminaciones del futuro son iguales para las tres conjugaciones",
+"grupos": [
+[
+"yo"
+],
+[
+"preocupare"
+],
+[
+"por mi familia"
+],
+[
+"el ano que viene"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo preocuparé por mi familia el año que viene.",
+"cat": "gram",
+"fix": "Yo me preocuparé por mi familia el año que viene.",
+"note": "preocuparse por (to worry about) requires the reflexive pronoun me"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-futuro-4333",
+"verbo": "soler",
+"contexto": "yo, dentro de poco, estudiar por la noche",
+"respuesta": "Yo soleré estudiar por la noche dentro de poco.",
+"pista": "El futuro simple se forma con el infinitivo + terminación",
+"grupos": [
+[
+"yo"
+],
+[
+"solere"
+],
+[
+"estudiar por la noche"
+],
+[
+"dentro de poco"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo soleré estudiar por la noche dentro de poco.",
+"cat": "gram",
+"fix": "N/A — soler is a defective verb with no standard futuro simple form.",
+"note": "soler is defective and is not conjugated in futuro simple in standard Spanish"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-futuro-4334",
+"verbo": "soler",
+"contexto": "tú, la próxima vez, correr por las mañanas",
+"respuesta": "Tú solerás correr por las mañanas la próxima vez.",
+"pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+"grupos": [
+[
+"tu"
+],
+[
+"soleras"
+],
+[
+"correr por las mananas"
+],
+[
+"la proxima vez"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú solerás correr por las mañanas la próxima vez.",
+"cat": "gram",
+"fix": "N/A — soler has no standard futuro simple form.",
+"note": "soler is defective and does not take futuro simple conjugation"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-futuro-4335",
+"verbo": "soler",
+"contexto": "nosotros, la semana que viene, cenar a las ocho",
+"respuesta": "Nosotros soleremos cenar a las ocho la semana que viene.",
+"pista": "El futuro simple indica una acción posterior al momento de hablar",
+"grupos": [
+[
+"nosotros"
+],
+[
+"soleremos"
+],
+[
+"cenar a las ocho"
+],
+[
+"la semana que viene"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros soleremos cenar a las ocho la semana que viene.",
+"cat": "gram",
+"fix": "N/A — soler has no standard futuro simple form.",
+"note": "soler is defective and does not take futuro simple conjugation"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-futuro-4381",
+"verbo": "tranquilar",
+"contexto": "yo, pasado mañana, a los pasajeros",
+"respuesta": "Yo tranquilaré a los pasajeros pasado mañana.",
+"pista": "Las terminaciones del futuro son iguales para las tres conjugaciones",
+"grupos": [
+[
+"yo"
+],
+[
+"tranquilare"
+],
+[
+"a los pasajeros"
+],
+[
+"pasado manana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo tranquilaré a los pasajeros pasado mañana.",
+"cat": "gram",
+"fix": "Yo tranquilizaré a los pasajeros pasado mañana.",
+"note": "\"tranquilar\" is not a standard verb; the correct verb is tranquilizar"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-futuro-4382",
+"verbo": "tranquilar",
+"contexto": "la música, dentro de poco, el ambiente",
+"respuesta": "La música tranquilará el ambiente dentro de poco.",
+"pista": "El futuro simple puede expresar probabilidad en el presente",
+"grupos": [
+[
+"la musica"
+],
+[
+"tranquilara"
+],
+[
+"el ambiente"
+],
+[
+"dentro de poco"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "La música tranquilará el ambiente dentro de poco.",
+"cat": "gram",
+"fix": "La música tranquilizará el ambiente dentro de poco.",
+"note": "\"tranquilar\" is not a standard verb; the correct verb is tranquilizar"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-futuro-4383",
+"verbo": "tranquilar",
+"contexto": "tú, el próximo mes, a los niños",
+"respuesta": "Tú tranquilarás a los niños el próximo mes.",
+"pista": "Usa el futuro para hablar de planes y proyectos",
+"grupos": [
+[
+"tu"
+],
+[
+"tranquilaras"
+],
+[
+"a los ninos"
+],
+[
+"el proximo mes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tú tranquilarás a los niños el próximo mes.",
+"cat": "gram",
+"fix": "Tú tranquilizarás a los niños el próximo mes.",
+"note": "\"tranquilar\" is not a standard verb; the correct verb is tranquilizar"
+}
+]
+},
+{
+"exercise": {
+"id": "joder-futuro-4048",
+"verbo": "joder",
+"contexto": "la lluvia, esta noche, nuestros planes",
+"respuesta": "La lluvia joderá nuestros planes esta noche.",
+"pista": "El futuro simple se forma con el infinitivo + terminación",
+"grupos": [
+[
+"la lluvia"
+],
+[
+"jodera"
+],
+[
+"nuestros planes"
+],
+[
+"esta noche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "La lluvia joderá nuestros planes esta noche.",
+"cat": "unnat",
+"fix": "La lluvia arruinará nuestros planes esta noche.",
+"note": "vulgar register out of place in a neutral learner drill sentence"
+}
+]
+},
+{
+"exercise": {
+"id": "joder-futuro-4049",
+"verbo": "joder",
+"contexto": "el ruido, la semana que viene, la concentración",
+"respuesta": "El ruido joderá la concentración la semana que viene.",
+"pista": "El futuro simple indica una acción posterior al momento de hablar",
+"grupos": [
+[
+"el ruido"
+],
+[
+"jodera"
+],
+[
+"la concentracion"
+],
+[
+"la semana que viene"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El ruido joderá la concentración la semana que viene.",
+"cat": "unnat",
+"fix": "El ruido arruinará la concentración la semana que viene.",
+"note": "vulgar register out of place in a neutral learner drill sentence"
+}
+]
+},
+{
+"exercise": {
+"id": "joder-futuro-4050",
+"verbo": "joder",
+"contexto": "el retraso, en el futuro, el horario",
+"respuesta": "El retraso joderá el horario en el futuro.",
+"pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+"grupos": [
+[
+"el retraso"
+],
+[
+"jodera"
+],
+[
+"el horario"
+],
+[
+"en el futuro"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El retraso joderá el horario en el futuro.",
+"cat": "unnat",
+"fix": "El retraso arruinará el horario en el futuro.",
+"note": "vulgar register out of place in a neutral learner drill sentence"
+}
+]
+},
+{
+"exercise": {
+"id": "importar-futuro-4028",
+"verbo": "importar",
+"contexto": "tu opinión, mañana, siempre",
+"respuesta": "Tu opinión importará siempre mañana.",
+"pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+"grupos": [
+[
+"tu opinion"
+],
+[
+"importara"
+],
+[
+"siempre"
+],
+[
+"manana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Tu opinión importará siempre mañana.",
+"cat": "sem",
+"fix": "Tu opinión siempre importará.",
+"note": "\"siempre\" (always) contradicts the specific one-day marker \"mañana\""
+}
+]
+},
+{
+"exercise": {
+"id": "asesinar-condicional-4489",
+"verbo": "asesinar",
+"contexto": "él, con más tiempo, las cosas bien",
+"respuesta": "él asesinaría las cosas bien con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo.",
+"grupos": [
+[
+"el"
+],
+[
+"asesinaria"
+],
+[
+"las cosas bien"
+],
+[
+"con mas tiempo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él asesinaría las cosas bien con más tiempo.",
+"cat": "sem",
+"fix": "él haría las cosas bien con más tiempo.",
+"note": "asesinar (murder) cannot take 'las cosas bien' as object; nonsensical"
+}
+]
+},
+{
+"exercise": {
+"id": "besar-condicional-4520",
+"verbo": "besar",
+"contexto": "ella, en esa situación, lo necesario",
+"respuesta": "ella besaría lo necesario en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+"grupos": [
+[
+"ella"
+],
+[
+"besaria"
+],
+[
+"lo necesario"
+],
+[
+"en esa situacion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella besaría lo necesario en esa situación.",
+"cat": "sem",
+"fix": "ella haría lo necesario en esa situación.",
+"note": "besar doesn't collocate with 'lo necesario'; object mismatch"
+}
+]
+},
+{
+"exercise": {
+"id": "caer-condicional-4525",
+"verbo": "caer",
+"contexto": "él, con más tiempo, las cosas bien",
+"respuesta": "él caería las cosas bien con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo.",
+"grupos": [
+[
+"el"
+],
+[
+"caeria"
+],
+[
+"las cosas bien"
+],
+[
+"con mas tiempo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él caería las cosas bien con más tiempo.",
+"cat": "sem",
+"fix": "él llevaría las cosas bien con más tiempo.",
+"note": "caer is intransitive, cannot take direct object 'las cosas bien'"
+}
+]
+},
+{
+"exercise": {
+"id": "cometer-condicional-4558",
+"verbo": "cometer",
+"contexto": "tú, si pudieras, con entusiasmo",
+"respuesta": "tú cometerías con entusiasmo si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición.",
+"grupos": [
+[
+"tu"
+],
+[
+"cometerias"
+],
+[
+"con entusiasmo"
+],
+[
+"si pudieras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú cometerías con entusiasmo si pudieras.",
+"cat": "unnat",
+"fix": "tú cometerías el mismo error con entusiasmo si pudieras.",
+"note": "cometer always requires a direct object; sounds incomplete alone"
+}
+]
+},
+{
+"exercise": {
+"id": "cometer-condicional-4559",
+"verbo": "cometer",
+"contexto": "nosotros, si fuera posible, de buena gana",
+"respuesta": "nosotros cometeríamos de buena gana si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"cometeriamos"
+],
+[
+"de buena gana"
+],
+[
+"si fuera posible"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros cometeríamos de buena gana si fuera posible.",
+"cat": "unnat",
+"fix": "nosotros cometeríamos el mismo error de buena gana si fuera posible.",
+"note": "cometer always requires a direct object; sounds incomplete alone"
+}
+]
+},
+{
+"exercise": {
+"id": "cometer-condicional-4560",
+"verbo": "cometer",
+"contexto": "ustedes, de ser posible, mejor",
+"respuesta": "ustedes cometerían mejor de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad.",
+"grupos": [
+[
+"ustedes"
+],
+[
+"cometerian"
+],
+[
+"mejor"
+],
+[
+"de ser posible"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ustedes cometerían mejor de ser posible.",
+"cat": "unnat",
+"fix": "ustedes cometerían menos errores de ser posible.",
+"note": "cometer needs an object; 'cometerían mejor' is incomplete/unnatural"
+}
+]
+},
+{
+"exercise": {
+"id": "costar-condicional-4609",
+"verbo": "costar",
+"contexto": "yo, en tu lugar, menos esfuerzo",
+"respuesta": "yo costaría menos esfuerzo en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona.",
+"grupos": [
+[
+"yo"
+],
+[
+"costaria"
+],
+[
+"menos esfuerzo"
+],
+[
+"en tu lugar"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo costaría menos esfuerzo en tu lugar.",
+"cat": "sem",
+"fix": "me costaría menos esfuerzo en tu lugar.",
+"note": "costar is impersonal; a person can't be its subject 'costing' effort"
+}
+]
+},
+{
+"exercise": {
+"id": "costar-condicional-4610",
+"verbo": "costar",
+"contexto": "ella, en esa situación, menos esfuerzo",
+"respuesta": "ella costaría menos esfuerzo en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+"grupos": [
+[
+"ella"
+],
+[
+"costaria"
+],
+[
+"menos esfuerzo"
+],
+[
+"en esa situacion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella costaría menos esfuerzo en esa situación.",
+"cat": "sem",
+"fix": "le costaría menos esfuerzo en esa situación.",
+"note": "costar is impersonal; wrong selectional subject"
+}
+]
+},
+{
+"exercise": {
+"id": "costar-condicional-4611",
+"verbo": "costar",
+"contexto": "ellos, en un mundo ideal, menos esfuerzo",
+"respuesta": "ellos costarían menos esfuerzo en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria.",
+"grupos": [
+[
+"ellos"
+],
+[
+"costarian"
+],
+[
+"menos esfuerzo"
+],
+[
+"en un mundo ideal"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos costarían menos esfuerzo en un mundo ideal.",
+"cat": "sem",
+"fix": "les costaría menos esfuerzo en un mundo ideal.",
+"note": "costar is impersonal; wrong selectional subject"
+}
+]
+},
+{
+"exercise": {
+"id": "dejar-condicional-4645",
+"verbo": "dejar",
+"contexto": "yo, en tu lugar, mejor",
+"respuesta": "yo dejaría mejor en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona.",
+"grupos": [
+[
+"yo"
+],
+[
+"dejaria"
+],
+[
+"mejor"
+],
+[
+"en tu lugar"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo dejaría mejor en tu lugar.",
+"cat": "unnat",
+"fix": "yo lo dejaría mejor en tu lugar.",
+"note": "dejar requires a direct object; standalone form sounds incomplete"
+}
+]
+},
+{
+"exercise": {
+"id": "dejar-condicional-4646",
+"verbo": "dejar",
+"contexto": "ella, en esa situación, con serenidad",
+"respuesta": "ella dejaría con serenidad en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+"grupos": [
+[
+"ella"
+],
+[
+"dejaria"
+],
+[
+"con serenidad"
+],
+[
+"en esa situacion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella dejaría con serenidad en esa situación.",
+"cat": "unnat",
+"fix": "ella lo dejaría con serenidad en esa situación.",
+"note": "dejar requires a direct object; standalone form sounds incomplete"
+}
+]
+},
+{
+"exercise": {
+"id": "dejar-condicional-4647",
+"verbo": "dejar",
+"contexto": "ellos, en un mundo ideal, sin límites",
+"respuesta": "ellos dejarían sin límites en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria.",
+"grupos": [
+[
+"ellos"
+],
+[
+"dejarian"
+],
+[
+"sin limites"
+],
+[
+"en un mundo ideal"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos dejarían sin límites en un mundo ideal.",
+"cat": "unnat",
+"fix": "ellos lo dejarían pasar sin límites en un mundo ideal.",
+"note": "dejar without object is nonsensical here"
+}
+]
+},
+{
+"exercise": {
+"id": "ganar-condicional-4776",
+"verbo": "ganar",
+"contexto": "ustedes, de ser posible, mejor",
+"respuesta": "ustedes ganarían mejor de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad.",
+"grupos": [
+[
+"ustedes"
+],
+[
+"ganarian"
+],
+[
+"mejor"
+],
+[
+"de ser posible"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ustedes ganarían mejor de ser posible.",
+"cat": "unnat",
+"fix": "ustedes ganarían más de ser posible.",
+"note": "'ganar mejor' doesn't collocate; natural comparative is 'ganar más'"
+}
+]
+},
+{
+"exercise": {
+"id": "obtener-condicional-4915",
+"verbo": "obtener",
+"contexto": "yo, en tu lugar, de otra manera",
+"respuesta": "yo obtendría de otra manera en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona.",
+"grupos": [
+[
+"yo"
+],
+[
+"obtendria"
+],
+[
+"de otra manera"
+],
+[
+"en tu lugar"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo obtendría de otra manera en tu lugar.",
+"cat": "unnat",
+"fix": "yo lo obtendría de otra manera en tu lugar.",
+"note": "obtener requires a direct object; sounds incomplete without it"
+}
+]
+},
+{
+"exercise": {
+"id": "obtener-condicional-4917",
+"verbo": "obtener",
+"contexto": "ellos, en un mundo ideal, sin preocupaciones",
+"respuesta": "ellos obtendrían sin preocupaciones en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria.",
+"grupos": [
+[
+"ellos"
+],
+[
+"obtendrian"
+],
+[
+"sin preocupaciones"
+],
+[
+"en un mundo ideal"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos obtendrían sin preocupaciones en un mundo ideal.",
+"cat": "unnat",
+"fix": "ellos lo obtendrían sin preocupaciones en un mundo ideal.",
+"note": "obtener requires a direct object; sounds incomplete without it"
+}
+]
+},
+{
+"exercise": {
+"id": "poner-condicional-4984",
+"verbo": "poner",
+"contexto": "él, con más tiempo, con más detalle",
+"respuesta": "él pondría con más detalle con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo.",
+"grupos": [
+[
+"el"
+],
+[
+"pondria"
+],
+[
+"con mas detalle"
+],
+[
+"con mas tiempo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él pondría con más detalle con más tiempo.",
+"cat": "unnat",
+"fix": "él lo pondría con más detalle con más tiempo.",
+"note": "poner requires a direct object; sounds incomplete without it"
+}
+]
+},
+{
+"exercise": {
+"id": "poner-condicional-4986",
+"verbo": "poner",
+"contexto": "yo, con más experiencia, mejor",
+"respuesta": "yo pondría mejor con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento.",
+"grupos": [
+[
+"yo"
+],
+[
+"pondria"
+],
+[
+"mejor"
+],
+[
+"con mas experiencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo pondría mejor con más experiencia.",
+"cat": "unnat",
+"fix": "yo lo pondría mejor con más experiencia.",
+"note": "poner requires a direct object; sounds incomplete without it"
+}
+]
+},
+{
+"exercise": {
+"id": "saber-condicional-5082",
+"verbo": "saber",
+"contexto": "ustedes, de ser posible, sin demora",
+"respuesta": "ustedes sabrían sin demora de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad.",
+"grupos": [
+[
+"ustedes"
+],
+[
+"sabrian"
+],
+[
+"sin demora"
+],
+[
+"de ser posible"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ustedes sabrían sin demora de ser posible.",
+"cat": "unnat",
+"fix": "ustedes actuarían sin demora de ser posible.",
+"note": "'saber sin demora' is an odd collocation; 'demora' pairs with action verbs"
+}
+]
+},
+{
+"exercise": {
+"id": "estar-condicional-4754",
+"verbo": "estar",
+"contexto": "ella, en esa situación, más tranquilo",
+"respuesta": "ella estaría más tranquilo en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+"grupos": [
+[
+"ella"
+],
+[
+"estaria"
+],
+[
+"mas tranquilo"
+],
+[
+"en esa situacion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella estaría más tranquilo en esa situación.",
+"cat": "gram",
+"fix": "ella estaría más tranquila en esa situación.",
+"note": "adjective must agree in gender with 'ella': tranquila, not tranquilo"
+}
+]
+},
+{
+"exercise": {
+"id": "estar-condicional-4755",
+"verbo": "estar",
+"contexto": "ellos, en un mundo ideal, más tranquilo",
+"respuesta": "ellos estarían más tranquilo en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria.",
+"grupos": [
+[
+"ellos"
+],
+[
+"estarian"
+],
+[
+"mas tranquilo"
+],
+[
+"en un mundo ideal"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos estarían más tranquilo en un mundo ideal.",
+"cat": "gram",
+"fix": "ellos estarían más tranquilos en un mundo ideal.",
+"note": "adjective must agree in number with 'ellos': tranquilos, not tranquilo"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-condicional-4786",
+"verbo": "gustar",
+"contexto": "él, con más tiempo, mucho eso",
+"respuesta": "él gustaría mucho eso con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo.",
+"grupos": [
+[
+"el"
+],
+[
+"gustaria"
+],
+[
+"mucho eso"
+],
+[
+"con mas tiempo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él gustaría mucho eso con más tiempo.",
+"cat": "calque",
+"fix": "eso le gustaría mucho con más tiempo.",
+"note": "gustar uses inverse construction (algo le gusta a alguien), not transitive"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-condicional-4787",
+"verbo": "gustar",
+"contexto": "usted, con más dinero, mucho eso",
+"respuesta": "usted gustaría mucho eso con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos.",
+"grupos": [
+[
+"usted"
+],
+[
+"gustaria"
+],
+[
+"mucho eso"
+],
+[
+"con mas dinero"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "usted gustaría mucho eso con más dinero.",
+"cat": "calque",
+"fix": "eso le gustaría mucho a usted con más dinero.",
+"note": "gustar uses inverse construction, not transitive with a personal subject"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-condicional-4788",
+"verbo": "gustar",
+"contexto": "yo, con más experiencia, mucho eso",
+"respuesta": "yo gustaría mucho eso con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento.",
+"grupos": [
+[
+"yo"
+],
+[
+"gustaria"
+],
+[
+"mucho eso"
+],
+[
+"con mas experiencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo gustaría mucho eso con más experiencia.",
+"cat": "calque",
+"fix": "eso me gustaría mucho con más experiencia.",
+"note": "gustar uses inverse construction, not transitive with a personal subject"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-condicional-4789",
+"verbo": "haber",
+"contexto": "yo, en tu lugar, más oportunidades",
+"respuesta": "yo habría más oportunidades en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona.",
+"grupos": [
+[
+"yo"
+],
+[
+"habria"
+],
+[
+"mas oportunidades"
+],
+[
+"en tu lugar"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo habría más oportunidades en tu lugar.",
+"cat": "gram",
+"fix": "habría más oportunidades en tu lugar.",
+"note": "impersonal 'haber' (there would be) never takes a personal subject like yo"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-condicional-4790",
+"verbo": "haber",
+"contexto": "ella, en esa situación, más oportunidades",
+"respuesta": "ella habría más oportunidades en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+"grupos": [
+[
+"ella"
+],
+[
+"habria"
+],
+[
+"mas oportunidades"
+],
+[
+"en esa situacion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella habría más oportunidades en esa situación.",
+"cat": "gram",
+"fix": "habría más oportunidades en esa situación.",
+"note": "impersonal 'haber' never takes a personal subject"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-condicional-4791",
+"verbo": "haber",
+"contexto": "ellos, en un mundo ideal, más oportunidades",
+"respuesta": "ellos habrían más oportunidades en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria.",
+"grupos": [
+[
+"ellos"
+],
+[
+"habrian"
+],
+[
+"mas oportunidades"
+],
+[
+"en un mundo ideal"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos habrían más oportunidades en un mundo ideal.",
+"cat": "gram",
+"fix": "habría más oportunidades en un mundo ideal.",
+"note": "impersonal 'haber' is invariable ('habría'), never 'habrían'"
+}
+]
+},
+{
+"exercise": {
+"id": "importar-condicional-4807",
+"verbo": "importar",
+"contexto": "yo, en tu lugar, la opinión",
+"respuesta": "yo importaría la opinión en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona.",
+"grupos": [
+[
+"yo"
+],
+[
+"importaria"
+],
+[
+"la opinion"
+],
+[
+"en tu lugar"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo importaría la opinión en tu lugar.",
+"cat": "calque",
+"fix": "la opinión me importaría en tu lugar.",
+"note": "importar (to matter) uses inverse construction like gustar"
+}
+]
+},
+{
+"exercise": {
+"id": "importar-condicional-4808",
+"verbo": "importar",
+"contexto": "ella, en esa situación, la opinión",
+"respuesta": "ella importaría la opinión en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+"grupos": [
+[
+"ella"
+],
+[
+"importaria"
+],
+[
+"la opinion"
+],
+[
+"en esa situacion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella importaría la opinión en esa situación.",
+"cat": "calque",
+"fix": "la opinión le importaría en esa situación.",
+"note": "importar (to matter) uses inverse construction, not transitive"
+}
+]
+},
+{
+"exercise": {
+"id": "importar-condicional-4809",
+"verbo": "importar",
+"contexto": "ellos, en un mundo ideal, la opinión",
+"respuesta": "ellos importarían la opinión en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria.",
+"grupos": [
+[
+"ellos"
+],
+[
+"importarian"
+],
+[
+"la opinion"
+],
+[
+"en un mundo ideal"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos importarían la opinión en un mundo ideal.",
+"cat": "calque",
+"fix": "la opinión les importaría en un mundo ideal.",
+"note": "importar (to matter) uses inverse construction, not transitive"
+}
+]
+},
+{
+"exercise": {
+"id": "mantener-condicional-4867",
+"verbo": "mantener",
+"contexto": "él, con más tiempo, sin prisa",
+"respuesta": "él mantendría sin prisa con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo.",
+"grupos": [
+[
+"el"
+],
+[
+"mantendria"
+],
+[
+"sin prisa"
+],
+[
+"con mas tiempo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él mantendría sin prisa con más tiempo.",
+"cat": "unnat",
+"fix": "él lo mantendría sin prisa con más tiempo.",
+"note": "mantener requires a direct object; sounds incomplete without it"
+}
+]
+},
+{
+"exercise": {
+"id": "mantener-condicional-4868",
+"verbo": "mantener",
+"contexto": "usted, con más dinero, con más libertad",
+"respuesta": "usted mantendría con más libertad con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos.",
+"grupos": [
+[
+"usted"
+],
+[
+"mantendria"
+],
+[
+"con mas libertad"
+],
+[
+"con mas dinero"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "usted mantendría con más libertad con más dinero.",
+"cat": "unnat",
+"fix": "usted lo mantendría con más libertad con más dinero.",
+"note": "mantener requires a direct object; sounds incomplete without it"
+}
+]
+},
+{
+"exercise": {
+"id": "ocurrir-condicional-4921",
+"verbo": "ocurrir",
+"contexto": "él, con más tiempo, algo diferente",
+"respuesta": "él ocurriría algo diferente con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo.",
+"grupos": [
+[
+"el"
+],
+[
+"ocurriria"
+],
+[
+"algo diferente"
+],
+[
+"con mas tiempo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él ocurriría algo diferente con más tiempo.",
+"cat": "gram",
+"fix": "a él le ocurriría algo diferente con más tiempo.",
+"note": "ocurrir (to happen) is impersonal; needs indirect object, not personal subject+object"
+}
+]
+},
+{
+"exercise": {
+"id": "ocurrir-condicional-4922",
+"verbo": "ocurrir",
+"contexto": "usted, con más dinero, algo diferente",
+"respuesta": "usted ocurriría algo diferente con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos.",
+"grupos": [
+[
+"usted"
+],
+[
+"ocurriria"
+],
+[
+"algo diferente"
+],
+[
+"con mas dinero"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "usted ocurriría algo diferente con más dinero.",
+"cat": "gram",
+"fix": "a usted le ocurriría algo diferente con más dinero.",
+"note": "ocurrir is impersonal; wrong construction"
+}
+]
+},
+{
+"exercise": {
+"id": "ocurrir-condicional-4923",
+"verbo": "ocurrir",
+"contexto": "yo, con más experiencia, algo diferente",
+"respuesta": "yo ocurriría algo diferente con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento.",
+"grupos": [
+[
+"yo"
+],
+[
+"ocurriria"
+],
+[
+"algo diferente"
+],
+[
+"con mas experiencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo ocurriría algo diferente con más experiencia.",
+"cat": "gram",
+"fix": "me ocurriría algo diferente con más experiencia.",
+"note": "ocurrir is impersonal; wrong construction"
+}
+]
+},
+{
+"exercise": {
+"id": "oír-condicional-4930",
+"verbo": "oír",
+"contexto": "él, con más tiempo, algo nuevo",
+"respuesta": "él oiría algo nuevo con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo.",
+"grupos": [
+[
+"el"
+],
+[
+"oiria"
+],
+[
+"algo nuevo"
+],
+[
+"con mas tiempo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él oíría algo nuevo con más tiempo.",
+"cat": "gram",
+"fix": "él oiría algo nuevo con más tiempo.",
+"note": "misspelled conditional; correct form is 'oiría' with a single accent"
+}
+]
+},
+{
+"exercise": {
+"id": "oír-condicional-4931",
+"verbo": "oír",
+"contexto": "usted, con más dinero, con más comodidad",
+"respuesta": "usted oiría con más comodidad con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos.",
+"grupos": [
+[
+"usted"
+],
+[
+"oiria"
+],
+[
+"con mas comodidad"
+],
+[
+"con mas dinero"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "usted oíría con más comodidad con más dinero.",
+"cat": "gram",
+"fix": "usted oiría con más comodidad con más dinero.",
+"note": "misspelled conditional; correct form is 'oiría'"
+}
+]
+},
+{
+"exercise": {
+"id": "oír-condicional-4932",
+"verbo": "oír",
+"contexto": "yo, con más experiencia, sin tantas dudas",
+"respuesta": "yo oiría sin tantas dudas con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento.",
+"grupos": [
+[
+"yo"
+],
+[
+"oiria"
+],
+[
+"sin tantas dudas"
+],
+[
+"con mas experiencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo oíría sin tantas dudas con más experiencia.",
+"cat": "gram",
+"fix": "yo oiría sin tantas dudas con más experiencia.",
+"note": "misspelled conditional; correct form is 'oiría'"
+}
+]
+},
+{
+"exercise": {
+"id": "parecer-condicional-4944",
+"verbo": "parecer",
+"contexto": "ellos, en un mundo ideal, más joven",
+"respuesta": "ellos parecerían más joven en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria.",
+"grupos": [
+[
+"ellos"
+],
+[
+"parecerian"
+],
+[
+"mas joven"
+],
+[
+"en un mundo ideal"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos parecerían más joven en un mundo ideal.",
+"cat": "gram",
+"fix": "ellos parecerían más jóvenes en un mundo ideal.",
+"note": "adjective must agree in number with 'ellos': jóvenes, not joven"
+}
+]
+},
+{
+"exercise": {
+"id": "preocupar-condicional-4993",
+"verbo": "preocupar",
+"contexto": "él, con más tiempo, la situación",
+"respuesta": "él preocuparía la situación con más tiempo.",
+"pista": "Describe lo que alguien haría si tuviera más tiempo.",
+"grupos": [
+[
+"el"
+],
+[
+"preocuparia"
+],
+[
+"la situacion"
+],
+[
+"con mas tiempo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él preocuparía la situación con más tiempo.",
+"cat": "calque",
+"fix": "la situación le preocuparía con más tiempo.",
+"note": "preocupar uses inverse construction (algo le preocupa a alguien)"
+}
+]
+},
+{
+"exercise": {
+"id": "preocupar-condicional-4994",
+"verbo": "preocupar",
+"contexto": "usted, con más dinero, la situación",
+"respuesta": "usted preocuparía la situación con más dinero.",
+"pista": "Habla de lo que haría alguien con más recursos.",
+"grupos": [
+[
+"usted"
+],
+[
+"preocuparia"
+],
+[
+"la situacion"
+],
+[
+"con mas dinero"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "usted preocuparía la situación con más dinero.",
+"cat": "calque",
+"fix": "la situación le preocuparía a usted con más dinero.",
+"note": "preocupar uses inverse construction, not transitive"
+}
+]
+},
+{
+"exercise": {
+"id": "preocupar-condicional-4995",
+"verbo": "preocupar",
+"contexto": "yo, con más experiencia, la situación",
+"respuesta": "yo preocuparía la situación con más experiencia.",
+"pista": "Reflexiona sobre lo que harías con más conocimiento.",
+"grupos": [
+[
+"yo"
+],
+[
+"preocuparia"
+],
+[
+"la situacion"
+],
+[
+"con mas experiencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo preocuparía la situación con más experiencia.",
+"cat": "calque",
+"fix": "la situación me preocuparía con más experiencia.",
+"note": "preocupar uses inverse construction, not transitive"
+}
+]
+},
+{
+"exercise": {
+"id": "reír-condicional-5050",
+"verbo": "reír",
+"contexto": "yo, en tu lugar, más seguido",
+"respuesta": "yo reíría más seguido en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona.",
+"grupos": [
+[
+"yo"
+],
+[
+"reiria"
+],
+[
+"mas seguido"
+],
+[
+"en tu lugar"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo reiría más seguido en tu lugar.",
+"cat": "gram",
+"fix": "yo reiría más seguido en tu lugar.",
+"note": "misspelled conditional; correct form has a single accent, 'reiría'"
+}
+]
+},
+{
+"exercise": {
+"id": "reír-condicional-5051",
+"verbo": "reír",
+"contexto": "ella, en esa situación, más seguido",
+"respuesta": "ella reíría más seguido en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+"grupos": [
+[
+"ella"
+],
+[
+"reiria"
+],
+[
+"mas seguido"
+],
+[
+"en esa situacion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella reiría más seguido en esa situación.",
+"cat": "gram",
+"fix": "ella reiría más seguido en esa situación.",
+"note": "misspelled conditional; correct form is 'reiría'"
+}
+]
+},
+{
+"exercise": {
+"id": "ser-condicional-5106",
+"verbo": "ser",
+"contexto": "ellos, en un mundo ideal, más paciente",
+"respuesta": "ellos serían más paciente en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria.",
+"grupos": [
+[
+"ellos"
+],
+[
+"serian"
+],
+[
+"mas paciente"
+],
+[
+"en un mundo ideal"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos serían más paciente en un mundo ideal.",
+"cat": "gram",
+"fix": "ellos serían más pacientes en un mundo ideal.",
+"note": "adjective must agree in number with 'ellos': pacientes, not paciente"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-condicional-5113",
+"verbo": "soler",
+"contexto": "yo, en tu lugar, ir al parque",
+"respuesta": "yo solería ir al parque en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona.",
+"grupos": [
+[
+"yo"
+],
+[
+"soleria"
+],
+[
+"ir al parque"
+],
+[
+"en tu lugar"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo solería ir al parque en tu lugar.",
+"cat": "unnat",
+"fix": "yo iría normalmente al parque en tu lugar.",
+"note": "soler is defective; native speakers essentially never use 'solería'"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-condicional-5114",
+"verbo": "soler",
+"contexto": "ella, en esa situación, ir al parque",
+"respuesta": "ella solería ir al parque en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+"grupos": [
+[
+"ella"
+],
+[
+"soleria"
+],
+[
+"ir al parque"
+],
+[
+"en esa situacion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella solería ir al parque en esa situación.",
+"cat": "unnat",
+"fix": "ella iría normalmente al parque en esa situación.",
+"note": "soler is defective; native speakers essentially never use 'solería'"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-condicional-5115",
+"verbo": "soler",
+"contexto": "ellos, en un mundo ideal, ir al parque",
+"respuesta": "ellos solerían ir al parque en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria.",
+"grupos": [
+[
+"ellos"
+],
+[
+"solerian"
+],
+[
+"ir al parque"
+],
+[
+"en un mundo ideal"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos solerían ir al parque en un mundo ideal.",
+"cat": "unnat",
+"fix": "ellos irían normalmente al parque en un mundo ideal.",
+"note": "soler is defective; native speakers essentially never use 'solerían'"
+}
+]
+},
+{
+"exercise": {
+"id": "suceder-condicional-5125",
+"verbo": "suceder",
+"contexto": "tú, si pudieras, lo mismo",
+"respuesta": "tú sucederías lo mismo si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición.",
+"grupos": [
+[
+"tu"
+],
+[
+"sucederias"
+],
+[
+"lo mismo"
+],
+[
+"si pudieras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú sucederías lo mismo si pudieras.",
+"cat": "gram",
+"fix": "te sucedería lo mismo si pudieras.",
+"note": "suceder (to happen) is impersonal; needs indirect object, not personal subject"
+}
+]
+},
+{
+"exercise": {
+"id": "suceder-condicional-5126",
+"verbo": "suceder",
+"contexto": "nosotros, si fuera posible, lo mismo",
+"respuesta": "nosotros sucederíamos lo mismo si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"sucederiamos"
+],
+[
+"lo mismo"
+],
+[
+"si fuera posible"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros sucederíamos lo mismo si fuera posible.",
+"cat": "gram",
+"fix": "nos sucedería lo mismo si fuera posible.",
+"note": "suceder is impersonal; wrong construction"
+}
+]
+},
+{
+"exercise": {
+"id": "suceder-condicional-5127",
+"verbo": "suceder",
+"contexto": "ustedes, de ser posible, lo mismo",
+"respuesta": "ustedes sucederían lo mismo de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad.",
+"grupos": [
+[
+"ustedes"
+],
+[
+"sucederian"
+],
+[
+"lo mismo"
+],
+[
+"de ser posible"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ustedes sucederían lo mismo de ser posible.",
+"cat": "gram",
+"fix": "les sucedería lo mismo de ser posible.",
+"note": "suceder is impersonal; wrong construction"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-condicional-5161",
+"verbo": "tranquilar",
+"contexto": "tú, si pudieras, la situación",
+"respuesta": "tú tranquilarías la situación si pudieras.",
+"pista": "Expresa una acción hipotética que depende de una condición.",
+"grupos": [
+[
+"tu"
+],
+[
+"tranquilarias"
+],
+[
+"la situacion"
+],
+[
+"si pudieras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú tranquilarías la situación si pudieras.",
+"cat": "unnat",
+"fix": "tú tranquilizarías la situación si pudieras.",
+"note": "standard Spanish verb is 'tranquilizar'; 'tranquilar' is non-standard/rare"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-condicional-5162",
+"verbo": "tranquilar",
+"contexto": "nosotros, si fuera posible, la situación",
+"respuesta": "nosotros tranquilaríamos la situación si fuera posible.",
+"pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"tranquilariamos"
+],
+[
+"la situacion"
+],
+[
+"si fuera posible"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros tranquilaríamos la situación si fuera posible.",
+"cat": "unnat",
+"fix": "nosotros tranquilizaríamos la situación si fuera posible.",
+"note": "standard verb is 'tranquilizar', not 'tranquilar'"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-condicional-5163",
+"verbo": "tranquilar",
+"contexto": "ustedes, de ser posible, la situación",
+"respuesta": "ustedes tranquilarían la situación de ser posible.",
+"pista": "Presenta una acción cortés condicionada a la posibilidad.",
+"grupos": [
+[
+"ustedes"
+],
+[
+"tranquilarian"
+],
+[
+"la situacion"
+],
+[
+"de ser posible"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ustedes tranquilarían la situación de ser posible.",
+"cat": "unnat",
+"fix": "ustedes tranquilizarían la situación de ser posible.",
+"note": "standard verb is 'tranquilizar', not 'tranquilar'"
+}
+]
+},
+{
+"exercise": {
+"id": "valer-condicional-5176",
+"verbo": "valer",
+"contexto": "yo, en tu lugar, la pena",
+"respuesta": "yo valdría la pena en tu lugar.",
+"pista": "Expresa lo que harías en la situación de otra persona.",
+"grupos": [
+[
+"yo"
+],
+[
+"valdria"
+],
+[
+"la pena"
+],
+[
+"en tu lugar"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo valdría la pena en tu lugar.",
+"cat": "sem",
+"fix": "valdría la pena en tu lugar.",
+"note": "'valer la pena' is an impersonal idiom; a person can't be its subject"
+}
+]
+},
+{
+"exercise": {
+"id": "valer-condicional-5177",
+"verbo": "valer",
+"contexto": "ella, en esa situación, la pena",
+"respuesta": "ella valdría la pena en esa situación.",
+"pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+"grupos": [
+[
+"ella"
+],
+[
+"valdria"
+],
+[
+"la pena"
+],
+[
+"en esa situacion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella valdría la pena en esa situación.",
+"cat": "sem",
+"fix": "valdría la pena en esa situación.",
+"note": "'valer la pena' is an impersonal idiom; a person can't be its subject"
+}
+]
+},
+{
+"exercise": {
+"id": "valer-condicional-5178",
+"verbo": "valer",
+"contexto": "ellos, en un mundo ideal, la pena",
+"respuesta": "ellos valdrían la pena en un mundo ideal.",
+"pista": "Describe una situación ideal e imaginaria.",
+"grupos": [
+[
+"ellos"
+],
+[
+"valdrian"
+],
+[
+"la pena"
+],
+[
+"en un mundo ideal"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos valdrían la pena en un mundo ideal.",
+"cat": "sem",
+"fix": "valdría la pena en un mundo ideal.",
+"note": "'valer la pena' is an impersonal idiom; a person can't be its subject"
+}
+]
+},
+{
+"exercise": {
+"id": "amar-subjuntivo-5243",
+"verbo": "amar",
+"contexto": "quiero que, yo, todo correctamente (subjuntivo)",
+"respuesta": "quiero que yo ame todo correctamente.",
+"pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+"grupos": [
+[
+"quiero que"
+],
+[
+"ame"
+],
+[
+"yo"
+],
+[
+"todo correctamente"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "quiero que yo ame todo correctamente.",
+"cat": "gram",
+"fix": "quiero amar todo correctamente.",
+"note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+}
+]
+},
+{
+"exercise": {
+"id": "asesinar-subjuntivo-5270",
+"verbo": "asesinar",
+"contexto": "espero que, yo, a tiempo (subjuntivo)",
+"respuesta": "espero que yo asesine a tiempo.",
+"pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+"grupos": [
+[
+"espero que"
+],
+[
+"asesine"
+],
+[
+"yo"
+],
+[
+"a tiempo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "espero que yo asesine a tiempo.",
+"cat": "gram",
+"fix": "espero asesinar a tiempo.",
+"note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+}
+]
+},
+{
+"exercise": {
+"id": "contar-subjuntivo-5369",
+"verbo": "contar",
+"contexto": "quiero que, yo, de manera diferente (subjuntivo)",
+"respuesta": "quiero que yo cuente de manera diferente.",
+"pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+"grupos": [
+[
+"quiero que"
+],
+[
+"cuente"
+],
+[
+"yo"
+],
+[
+"de manera diferente"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "quiero que yo cuente de manera diferente.",
+"cat": "gram",
+"fix": "quiero contar de manera diferente.",
+"note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+}
+]
+},
+{
+"exercise": {
+"id": "crecer-subjuntivo-5396",
+"verbo": "crecer",
+"contexto": "espero que, yo, sin problemas (subjuntivo)",
+"respuesta": "espero que yo crezca sin problemas.",
+"pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+"grupos": [
+[
+"espero que"
+],
+[
+"crezca"
+],
+[
+"yo"
+],
+[
+"sin problemas"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "espero que yo crezca sin problemas.",
+"cat": "gram",
+"fix": "espero crecer sin problemas.",
+"note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+}
+]
+},
+{
+"exercise": {
+"id": "enfrentar-subjuntivo-5495",
+"verbo": "enfrentar",
+"contexto": "quiero que, yo, con nosotros (subjuntivo)",
+"respuesta": "quiero que yo enfrente con nosotros.",
+"pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+"grupos": [
+[
+"quiero que"
+],
+[
+"enfrente"
+],
+[
+"yo"
+],
+[
+"con nosotros"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "quiero que yo enfrente con nosotros.",
+"cat": "gram",
+"fix": "quiero enfrentar con nosotros.",
+"note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+}
+]
+},
+{
+"exercise": {
+"id": "esconder-subjuntivo-5522",
+"verbo": "esconder",
+"contexto": "espero que, yo, con cuidado (subjuntivo)",
+"respuesta": "espero que yo esconda con cuidado.",
+"pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+"grupos": [
+[
+"espero que"
+],
+[
+"esconda"
+],
+[
+"yo"
+],
+[
+"con cuidado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "espero que yo esconda con cuidado.",
+"cat": "gram",
+"fix": "espero esconder con cuidado.",
+"note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+}
+]
+},
+{
+"exercise": {
+"id": "levantar-subjuntivo-5621",
+"verbo": "levantar",
+"contexto": "quiero que, yo, lo antes posible (subjuntivo)",
+"respuesta": "quiero que yo levante lo antes posible.",
+"pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+"grupos": [
+[
+"quiero que"
+],
+[
+"levante"
+],
+[
+"yo"
+],
+[
+"lo antes posible"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "quiero que yo levante lo antes posible.",
+"cat": "gram",
+"fix": "quiero levantar lo antes posible.",
+"note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+}
+]
+},
+{
+"exercise": {
+"id": "mantener-subjuntivo-5648",
+"verbo": "mantener",
+"contexto": "espero que, yo, la verdad pronto (subjuntivo)",
+"respuesta": "espero que yo mantenga la verdad pronto.",
+"pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+"grupos": [
+[
+"espero que"
+],
+[
+"mantenga"
+],
+[
+"yo"
+],
+[
+"la verdad pronto"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "espero que yo mantenga la verdad pronto.",
+"cat": "gram",
+"fix": "espero mantener la verdad pronto.",
+"note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+}
+]
+},
+{
+"exercise": {
+"id": "perdonar-subjuntivo-5747",
+"verbo": "perdonar",
+"contexto": "quiero que, yo, en este momento (subjuntivo)",
+"respuesta": "quiero que yo perdone en este momento.",
+"pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+"grupos": [
+[
+"quiero que"
+],
+[
+"perdone"
+],
+[
+"yo"
+],
+[
+"en este momento"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "quiero que yo perdone en este momento.",
+"cat": "gram",
+"fix": "quiero perdonar en este momento.",
+"note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+}
+]
+},
+{
+"exercise": {
+"id": "preocupar-subjuntivo-5774",
+"verbo": "preocupar",
+"contexto": "espero que, yo, bien esta semana (subjuntivo)",
+"respuesta": "espero que yo preocupe bien esta semana.",
+"pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+"grupos": [
+[
+"espero que"
+],
+[
+"preocupe"
+],
+[
+"yo"
+],
+[
+"bien esta semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "espero que yo preocupe bien esta semana.",
+"cat": "gram",
+"fix": "espero preocupar bien esta semana.",
+"note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+}
+]
+},
+{
+"exercise": {
+"id": "seguir-subjuntivo-5873",
+"verbo": "seguir",
+"contexto": "quiero que, yo, todo correctamente (subjuntivo)",
+"respuesta": "quiero que yo siga todo correctamente.",
+"pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+"grupos": [
+[
+"quiero que"
+],
+[
+"siga"
+],
+[
+"yo"
+],
+[
+"todo correctamente"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "quiero que yo siga todo correctamente.",
+"cat": "gram",
+"fix": "quiero seguir todo correctamente.",
+"note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+}
+]
+},
+{
+"exercise": {
+"id": "sonar-subjuntivo-5900",
+"verbo": "sonar",
+"contexto": "espero que, yo, a tiempo (subjuntivo)",
+"respuesta": "espero que yo suene a tiempo.",
+"pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+"grupos": [
+[
+"espero que"
+],
+[
+"suene"
+],
+[
+"yo"
+],
+[
+"a tiempo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "espero que yo suene a tiempo.",
+"cat": "gram",
+"fix": "espero sonar a tiempo.",
+"note": "mismo sujeto (yo) exige infinitivo, no 'que + subjuntivo'"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-subjuntivo-5941",
+"verbo": "tranquilar",
+"contexto": "antes de que, él, sin permiso (subjuntivo)",
+"respuesta": "antes de que él tranquile sin permiso.",
+"pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+"grupos": [
+[
+"antes de que"
+],
+[
+"tranquile"
+],
+[
+"el"
+],
+[
+"sin permiso"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "antes de que él tranquile sin permiso.",
+"cat": "gram",
+"fix": "antes de que él tranquilice sin permiso.",
+"note": "'tranquilar' no existe en español estándar; el verbo correcto es 'tranquilizar'"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-subjuntivo-5942",
+"verbo": "tranquilar",
+"contexto": "espero que, ellos, con cuidado (subjuntivo)",
+"respuesta": "espero que ellos tranquilen con cuidado.",
+"pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+"grupos": [
+[
+"espero que"
+],
+[
+"tranquilen"
+],
+[
+"ellos"
+],
+[
+"con cuidado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "espero que ellos tranquilen con cuidado.",
+"cat": "gram",
+"fix": "espero que ellos tranquilicen con cuidado.",
+"note": "'tranquilar' no existe en español estándar; el verbo correcto es 'tranquilizar'"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-subjuntivo-5943",
+"verbo": "tranquilar",
+"contexto": "aunque, ustedes, solo una vez (subjuntivo)",
+"respuesta": "aunque ustedes tranquilen solo una vez.",
+"pista": "'Aunque' con subjuntivo indica una situación hipotética o no confirmada.",
+"grupos": [
+[
+"aunque"
+],
+[
+"tranquilen"
+],
+[
+"ustedes"
+],
+[
+"solo una vez"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "aunque ustedes tranquilen solo una vez.",
+"cat": "gram",
+"fix": "aunque ustedes tranquilicen solo una vez.",
+"note": "'tranquilar' no existe en español estándar; el verbo correcto es 'tranquilizar'"
+}
+]
+},
+{
+"exercise": {
+"id": "bastar-subjuntivo-5293",
+"verbo": "bastar",
+"contexto": "es necesario que, él, sin demora (subjuntivo)",
+"respuesta": "es necesario que él baste sin demora.",
+"pista": "La expresión impersonal 'es necesario que' exige el subjuntivo.",
+"grupos": [
+[
+"es necesario que"
+],
+[
+"baste"
+],
+[
+"el"
+],
+[
+"sin demora"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "es necesario que él baste sin demora.",
+"cat": "sem",
+"fix": "es necesario que (eso/con eso) baste sin demora.",
+"note": "'bastar' es impersonal ('algo basta'); con sujeto personal como agente no tiene sentido"
+}
+]
+},
+{
+"exercise": {
+"id": "bastar-subjuntivo-5294",
+"verbo": "bastar",
+"contexto": "aunque, ellos, tarde (subjuntivo)",
+"respuesta": "aunque ellos basten tarde.",
+"pista": "'Aunque' con subjuntivo indica una situación hipotética o no confirmada.",
+"grupos": [
+[
+"aunque"
+],
+[
+"basten"
+],
+[
+"ellos"
+],
+[
+"tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "aunque ellos basten tarde.",
+"cat": "sem",
+"fix": "aunque (eso) baste tarde.",
+"note": "'bastar' es impersonal ('algo basta'); con sujeto personal como agente no tiene sentido"
+}
+]
+},
+{
+"exercise": {
+"id": "bastar-subjuntivo-5295",
+"verbo": "bastar",
+"contexto": "antes de que, ustedes, de nuevo (subjuntivo)",
+"respuesta": "antes de que ustedes basten de nuevo.",
+"pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+"grupos": [
+[
+"antes de que"
+],
+[
+"basten"
+],
+[
+"ustedes"
+],
+[
+"de nuevo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "antes de que ustedes basten de nuevo.",
+"cat": "sem",
+"fix": "antes de que (eso) baste de nuevo.",
+"note": "'bastar' es impersonal ('algo basta'); con sujeto personal como agente no tiene sentido"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-subjuntivo-5566",
+"verbo": "gustar",
+"contexto": "aunque, nosotros, tarde (subjuntivo)",
+"respuesta": "aunque nosotros gustemos tarde.",
+"pista": "'Aunque' con subjuntivo indica una situación hipotética o no confirmada.",
+"grupos": [
+[
+"aunque"
+],
+[
+"gustemos"
+],
+[
+"nosotros"
+],
+[
+"tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "aunque nosotros gustemos tarde.",
+"cat": "sem",
+"fix": "aunque (eso) nos guste tarde.",
+"note": "'gustar' es un verbo de estructura inversa; 'tú gustes' como agente es agramatical/sin sentido"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-subjuntivo-5567",
+"verbo": "gustar",
+"contexto": "es necesario que, yo, de inmediato (subjuntivo)",
+"respuesta": "es necesario que yo guste de inmediato.",
+"pista": "La expresión impersonal 'es necesario que' exige el subjuntivo.",
+"grupos": [
+[
+"es necesario que"
+],
+[
+"guste"
+],
+[
+"yo"
+],
+[
+"de inmediato"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "es necesario que yo guste de inmediato.",
+"cat": "sem",
+"fix": "es necesario que (eso) me guste de inmediato.",
+"note": "'gustar' es un verbo de estructura inversa; 'tú gustes' como agente es agramatical/sin sentido"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-subjuntivo-5568",
+"verbo": "gustar",
+"contexto": "ojalá, tú, este fin de semana (subjuntivo)",
+"respuesta": "ojalá tú gustes este fin de semana.",
+"pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+"grupos": [
+[
+"ojala"
+],
+[
+"gustes"
+],
+[
+"tu"
+],
+[
+"este fin de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ojalá tú gustes este fin de semana.",
+"cat": "sem",
+"fix": "ojalá (eso) te guste este fin de semana.",
+"note": "'gustar' es un verbo de estructura inversa; 'tú gustes' como agente es agramatical/sin sentido"
+}
+]
+},
+{
+"exercise": {
+"id": "resultar-subjuntivo-5845",
+"verbo": "resultar",
+"contexto": "dudo que, nosotros, a tiempo (subjuntivo)",
+"respuesta": "dudo que nosotros resultemos a tiempo.",
+"pista": "El verbo 'dudar' expresa incertidumbre y requiere el subjuntivo.",
+"grupos": [
+[
+"dudo que"
+],
+[
+"resultemos"
+],
+[
+"nosotros"
+],
+[
+"a tiempo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "dudo que nosotros resultemos a tiempo.",
+"cat": "sem",
+"fix": "dudo que (esto) resulte a tiempo.",
+"note": "'resultar' exige un complemento predicativo o sujeto inanimado; sin él la frase no tiene sentido"
+}
+]
+},
+{
+"exercise": {
+"id": "resultar-subjuntivo-5846",
+"verbo": "resultar",
+"contexto": "ojalá, yo, pronto (subjuntivo)",
+"respuesta": "ojalá yo resulte pronto.",
+"pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+"grupos": [
+[
+"ojala"
+],
+[
+"resulte"
+],
+[
+"yo"
+],
+[
+"pronto"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ojalá yo resulte pronto.",
+"cat": "sem",
+"fix": "ojalá (esto) resulte bien pronto.",
+"note": "'resultar' exige un complemento predicativo o sujeto inanimado; sin él la frase no tiene sentido"
+}
+]
+},
+{
+"exercise": {
+"id": "resultar-subjuntivo-5847",
+"verbo": "resultar",
+"contexto": "antes de que, tú, sin permiso (subjuntivo)",
+"respuesta": "antes de que tú resultes sin permiso.",
+"pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+"grupos": [
+[
+"antes de que"
+],
+[
+"resultes"
+],
+[
+"tu"
+],
+[
+"sin permiso"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "antes de que tú resultes sin permiso.",
+"cat": "sem",
+"fix": "antes de que (esto) resulte sin permiso.",
+"note": "'resultar' exige un complemento predicativo o sujeto inanimado; sin él la frase no tiene sentido"
+}
+]
+},
+{
+"exercise": {
+"id": "significar-subjuntivo-5890",
+"verbo": "significar",
+"contexto": "no creo que, nosotros, esta vez (subjuntivo)",
+"respuesta": "no creo que nosotros signifiquemos esta vez.",
+"pista": "'No creo que' expresa duda y necesita el subjuntivo.",
+"grupos": [
+[
+"no creo que"
+],
+[
+"signifiquemos"
+],
+[
+"nosotros"
+],
+[
+"esta vez"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no creo que nosotros signifiquemos esta vez.",
+"cat": "sem",
+"fix": "no creo que esto signifique nada esta vez.",
+"note": "'significar' normalmente tiene sujeto inanimado (una palabra/cosa); con persona como agente resulta sin sentido"
+}
+]
+},
+{
+"exercise": {
+"id": "significar-subjuntivo-5891",
+"verbo": "significar",
+"contexto": "dudo que, yo, sin ayuda (subjuntivo)",
+"respuesta": "dudo que yo signifique sin ayuda.",
+"pista": "El verbo 'dudar' expresa incertidumbre y requiere el subjuntivo.",
+"grupos": [
+[
+"dudo que"
+],
+[
+"signifique"
+],
+[
+"yo"
+],
+[
+"sin ayuda"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "dudo que yo signifique sin ayuda.",
+"cat": "sem",
+"fix": "dudo que esto signifique algo sin ayuda.",
+"note": "'significar' normalmente tiene sujeto inanimado (una palabra/cosa); con persona como agente resulta sin sentido"
+}
+]
+},
+{
+"exercise": {
+"id": "significar-subjuntivo-5892",
+"verbo": "significar",
+"contexto": "ojalá, tú, ojalá, tú, mañana (subjuntivo) (subjuntivo)",
+"respuesta": "ojalá tú signifiques mañana.",
+"pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+"grupos": [
+[
+"ojala"
+],
+[
+"signifiques"
+],
+[
+"tu"
+],
+[
+"manana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ojalá tú signifiques mañana.",
+"cat": "sem",
+"fix": "ojalá esto signifique algo mañana.",
+"note": "'significar' normalmente tiene sujeto inanimado (una palabra/cosa); con persona como agente resulta sin sentido"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-subjuntivo-5893",
+"verbo": "soler",
+"contexto": "es posible que, tú, es posible que, tú, la próxima semana (subjuntivo) (subjuntivo)",
+"respuesta": "es posible que tú suelas la próxima semana.",
+"pista": "'Es posible que' expresa posibilidad y requiere el subjuntivo.",
+"grupos": [
+[
+"es posible que"
+],
+[
+"suelas"
+],
+[
+"tu"
+],
+[
+"la proxima semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "es posible que tú suelas la próxima semana.",
+"cat": "gram",
+"fix": "es posible que tú suelas hacerlo la próxima semana.",
+"note": "'soler' siempre necesita un infinitivo complementario; no puede quedar solo"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-subjuntivo-5894",
+"verbo": "soler",
+"contexto": "para que, ella, sin dificultad (subjuntivo)",
+"respuesta": "para que ella suela sin dificultad.",
+"pista": "'Para que' introduce un propósito y siempre lleva subjuntivo.",
+"grupos": [
+[
+"para que"
+],
+[
+"suela"
+],
+[
+"ella"
+],
+[
+"sin dificultad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "para que ella suela sin dificultad.",
+"cat": "gram",
+"fix": "para que ella suela hacerlo sin dificultad.",
+"note": "'soler' siempre necesita un infinitivo complementario; no puede quedar solo"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-subjuntivo-5895",
+"verbo": "soler",
+"contexto": "antes de que, usted, de nuevo (subjuntivo)",
+"respuesta": "antes de que usted suela de nuevo.",
+"pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+"grupos": [
+[
+"antes de que"
+],
+[
+"suela"
+],
+[
+"usted"
+],
+[
+"de nuevo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "antes de que usted suela de nuevo.",
+"cat": "gram",
+"fix": "antes de que usted suela hacerlo de nuevo.",
+"note": "'soler' siempre necesita un infinitivo complementario; no puede quedar solo"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-subjuntivo-5569",
+"verbo": "haber",
+"contexto": "hasta que, tú, de verdad (subjuntivo)",
+"respuesta": "hasta que tú hayas de verdad.",
+"pista": "'Hasta que' con una acción futura requiere el subjuntivo.",
+"grupos": [
+[
+"hasta que"
+],
+[
+"hayas"
+],
+[
+"tu"
+],
+[
+"de verdad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "hasta que tú hayas de verdad.",
+"cat": "sem",
+"fix": "hasta que lo hayas hecho de verdad.",
+"note": "'haber' como verbo léxico independiente (no auxiliar, no impersonal 'hay') no tiene sentido aquí"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-subjuntivo-5570",
+"verbo": "haber",
+"contexto": "no creo que, ella, hoy (subjuntivo)",
+"respuesta": "no creo que ella haya hoy.",
+"pista": "'No creo que' expresa duda y necesita el subjuntivo.",
+"grupos": [
+[
+"no creo que"
+],
+[
+"haya"
+],
+[
+"ella"
+],
+[
+"hoy"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no creo que ella haya hoy.",
+"cat": "sem",
+"fix": "no creo que haya clase hoy.",
+"note": "'haber' como verbo léxico independiente (no auxiliar, no impersonal 'hay') no tiene sentido aquí"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-subjuntivo-5571",
+"verbo": "haber",
+"contexto": "antes de que, usted, demasiado tarde (subjuntivo)",
+"respuesta": "antes de que usted haya demasiado tarde.",
+"pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+"grupos": [
+[
+"antes de que"
+],
+[
+"haya"
+],
+[
+"usted"
+],
+[
+"demasiado tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "antes de que usted haya demasiado tarde.",
+"cat": "sem",
+"fix": "antes de que lo haya hecho, demasiado tarde.",
+"note": "'haber' como verbo léxico independiente (no auxiliar, no impersonal 'hay') no tiene sentido aquí"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-subjuntivo-5323",
+"verbo": "casar",
+"contexto": "sin que, nosotros, mucho (subjuntivo)",
+"respuesta": "sin que nosotros casemos mucho.",
+"pista": "'Sin que' expresa una acción que no ocurre y necesita el subjuntivo.",
+"grupos": [
+[
+"sin que"
+],
+[
+"casemos"
+],
+[
+"nosotros"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "sin que nosotros casemos mucho.",
+"cat": "unnat",
+"fix": "sin que nosotros nos casemos mucho.",
+"note": "'casarse' (reflexivo) es la forma natural para 'to get married'; 'casar' sin 'se' suena a casar a otra persona"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-subjuntivo-5324",
+"verbo": "casar",
+"contexto": "a menos que, yo, con tiempo (subjuntivo)",
+"respuesta": "a menos que yo case con tiempo.",
+"pista": "'A menos que' introduce una condición y siempre lleva subjuntivo.",
+"grupos": [
+[
+"a menos que"
+],
+[
+"case"
+],
+[
+"yo"
+],
+[
+"con tiempo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "a menos que yo case con tiempo.",
+"cat": "unnat",
+"fix": "a menos que yo me case con tiempo.",
+"note": "'casarse' (reflexivo) es la forma natural para 'to get married'; 'casar' sin 'se' suena a casar a otra persona"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-subjuntivo-5325",
+"verbo": "casar",
+"contexto": "antes de que, tú, de nuevo (subjuntivo)",
+"respuesta": "antes de que tú cases de nuevo.",
+"pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+"grupos": [
+[
+"antes de que"
+],
+[
+"cases"
+],
+[
+"tu"
+],
+[
+"de nuevo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "antes de que tú cases de nuevo.",
+"cat": "unnat",
+"fix": "antes de que tú te cases de nuevo.",
+"note": "'casarse' (reflexivo) es la forma natural para 'to get married'; 'casar' sin 'se' suena a casar a otra persona"
+}
+]
+},
+{
+"exercise": {
+"id": "deber-subjuntivo-5413",
+"verbo": "deber",
+"contexto": "quiero que, nosotros, lo antes posible (subjuntivo)",
+"respuesta": "quiero que nosotros debamos lo antes posible.",
+"pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+"grupos": [
+[
+"quiero que"
+],
+[
+"debamos"
+],
+[
+"nosotros"
+],
+[
+"lo antes posible"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "quiero que nosotros debamos lo antes posible.",
+"cat": "sem",
+"fix": "quiero que paguemos la deuda lo antes posible.",
+"note": "'deber' sin complemento (infinitivo o sustantivo) queda incompleto y sin sentido claro"
+}
+]
+},
+{
+"exercise": {
+"id": "deber-subjuntivo-5414",
+"verbo": "deber",
+"contexto": "es importante que, yo, bien (subjuntivo)",
+"respuesta": "es importante que yo deba bien.",
+"pista": "'Es importante que' expresa una valoración y necesita el subjuntivo.",
+"grupos": [
+[
+"es importante que"
+],
+[
+"deba"
+],
+[
+"yo"
+],
+[
+"bien"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "es importante que yo deba bien.",
+"cat": "sem",
+"fix": "es importante que yo actúe bien.",
+"note": "'deber' sin complemento (infinitivo o sustantivo) queda incompleto y sin sentido claro"
+}
+]
+},
+{
+"exercise": {
+"id": "deber-subjuntivo-5415",
+"verbo": "deber",
+"contexto": "antes de que, tú, de nuevo (subjuntivo)",
+"respuesta": "antes de que tú debas de nuevo.",
+"pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+"grupos": [
+[
+"antes de que"
+],
+[
+"debas"
+],
+[
+"tu"
+],
+[
+"de nuevo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "antes de que tú debas de nuevo.",
+"cat": "sem",
+"fix": "antes de que vuelvas a deber dinero.",
+"note": "'deber' sin complemento (infinitivo o sustantivo) queda incompleto y sin sentido claro"
+}
+]
+},
+{
+"exercise": {
+"id": "bailar-subjuntivo-5287",
+"verbo": "bailar",
+"contexto": "quiero que, nosotros, con nosotros (subjuntivo)",
+"respuesta": "quiero que nosotros bailemos con nosotros.",
+"pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+"grupos": [
+[
+"quiero que"
+],
+[
+"bailemos"
+],
+[
+"nosotros"
+],
+[
+"con nosotros"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "quiero que nosotros bailemos con nosotros.",
+"cat": "sem",
+"fix": "quiero que nosotros bailemos juntos.",
+"note": "redundante: sujeto 'nosotros' con complemento 'con nosotros' (bailar consigo mismo no tiene sentido)"
+}
+]
+},
+{
+"exercise": {
+"id": "temer-subjuntivo-5917",
+"verbo": "temer",
+"contexto": "quiero que, nosotros, con nosotros (subjuntivo)",
+"respuesta": "quiero que nosotros temamos con nosotros.",
+"pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+"grupos": [
+[
+"quiero que"
+],
+[
+"temamos"
+],
+[
+"nosotros"
+],
+[
+"con nosotros"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "quiero que nosotros temamos con nosotros.",
+"cat": "sem",
+"fix": "quiero que nosotros temamos juntos.",
+"note": "redundante/sin sentido: 'temamos con nosotros' (temer consigo mismo)"
+}
+]
+},
+{
+"exercise": {
+"id": "morir-subjuntivo-5675",
+"verbo": "morir",
+"contexto": "sin que, yo, algo (subjuntivo)",
+"respuesta": "sin que yo muera algo.",
+"pista": "'Sin que' expresa una acción que no ocurre y necesita el subjuntivo.",
+"grupos": [
+[
+"sin que"
+],
+[
+"muera"
+],
+[
+"yo"
+],
+[
+"algo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "sin que yo muera algo.",
+"cat": "gram",
+"fix": "sin que yo muera antes de tiempo.",
+"note": "'morir' es intransitivo; 'muera algo' con objeto directo es agramatical"
+}
+]
+},
+{
+"exercise": {
+"id": "ser-subjuntivo-5884",
+"verbo": "ser",
+"contexto": "es importante que, tú, en equipo (subjuntivo)",
+"respuesta": "es importante que tú seas en equipo.",
+"pista": "'Es importante que' expresa una valoración y necesita el subjuntivo.",
+"grupos": [
+[
+"es importante que"
+],
+[
+"seas"
+],
+[
+"tu"
+],
+[
+"en equipo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "es importante que tú seas en equipo.",
+"cat": "sem",
+"fix": "es importante que tú trabajes en equipo.",
+"note": "'ser en equipo' no es una construcción válida; 'ser' necesita un atributo, no 'en equipo'"
+}
+]
+},
+{
+"exercise": {
+"id": "ser-subjuntivo-5886",
+"verbo": "ser",
+"contexto": "ojalá, usted, hoy (subjuntivo)",
+"respuesta": "ojalá usted sea hoy.",
+"pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+"grupos": [
+[
+"ojala"
+],
+[
+"sea"
+],
+[
+"usted"
+],
+[
+"hoy"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ojalá usted sea hoy.",
+"cat": "sem",
+"fix": "ojalá usted llegue hoy.",
+"note": "'sea hoy' queda sin sentido; 'ser' exige un atributo/predicado"
+}
+]
+},
+{
+"exercise": {
+"id": "tener-subjuntivo-5922",
+"verbo": "tener",
+"contexto": "es necesario que, usted, es necesario que, usted, con atención (subjuntivo) (subjuntivo)",
+"respuesta": "es necesario que usted tenga con atención.",
+"pista": "La expresión impersonal 'es necesario que' exige el subjuntivo.",
+"grupos": [
+[
+"es necesario que"
+],
+[
+"tenga"
+],
+[
+"usted"
+],
+[
+"con atencion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "es necesario que usted tenga con atención.",
+"cat": "sem",
+"fix": "es necesario que usted actúe con atención.",
+"note": "'tenga con atención' no tiene sentido; 'tener' necesita un objeto directo, no 'con atención'"
+}
+]
+},
+{
+"exercise": {
+"id": "escapar-subjuntivo-5519",
+"verbo": "escapar",
+"contexto": "hasta que, ellos, todo (subjuntivo)",
+"respuesta": "hasta que ellos escapen todo.",
+"pista": "'Hasta que' con una acción futura requiere el subjuntivo.",
+"grupos": [
+[
+"hasta que"
+],
+[
+"escapen"
+],
+[
+"ellos"
+],
+[
+"todo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "hasta que ellos escapen todo.",
+"cat": "sem",
+"fix": "hasta que ellos escapen del todo.",
+"note": "'escapar todo' no es una construcción natural; falta la preposición ('escapar del todo') o sujeto/objeto distinto"
+}
+]
+},
+{
+"exercise": {
+"id": "existir-subjuntivo-5542",
+"verbo": "existir",
+"contexto": "ojalá, tú, este fin de semana (subjuntivo)",
+"respuesta": "ojalá tú existas este fin de semana.",
+"pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+"grupos": [
+[
+"ojala"
+],
+[
+"existas"
+],
+[
+"tu"
+],
+[
+"este fin de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ojalá tú existas este fin de semana.",
+"cat": "sem",
+"fix": "ojalá tú estés bien este fin de semana.",
+"note": "'existir' con plazos ('mañana', 'sin demora') sobre un sujeto animado resulta extraño/sin sentido natural"
+}
+]
+},
+{
+"exercise": {
+"id": "existir-subjuntivo-5543",
+"verbo": "existir",
+"contexto": "es posible que, ella, es posible que, ella, mañana (subjuntivo) (subjuntivo)",
+"respuesta": "es posible que ella exista mañana.",
+"pista": "'Es posible que' expresa posibilidad y requiere el subjuntivo.",
+"grupos": [
+[
+"es posible que"
+],
+[
+"exista"
+],
+[
+"ella"
+],
+[
+"manana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "es posible que ella exista mañana.",
+"cat": "sem",
+"fix": "es posible que ella llegue mañana.",
+"note": "'existir' con plazos ('mañana', 'sin demora') sobre un sujeto animado resulta extraño/sin sentido natural"
+}
+]
+}
+]

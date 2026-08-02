@@ -32,6 +32,10 @@
    "type": "lemma",
    "verb": "acordar"
   },
+  "lemma:acostumbrarse": {
+   "type": "lemma",
+   "verb": "acostumbrarse"
+  },
   "lemma:actuar": {
    "type": "lemma",
    "verb": "actuar"
@@ -91,6 +95,10 @@
   "lemma:arreglar": {
    "type": "lemma",
    "verb": "arreglar"
+  },
+  "lemma:arruinar": {
+   "type": "lemma",
+   "verb": "arruinar"
   },
   "lemma:asegurar": {
    "type": "lemma",
@@ -171,6 +179,10 @@
   "lemma:casar": {
    "type": "lemma",
    "verb": "casar"
+  },
+  "lemma:casarse": {
+   "type": "lemma",
+   "verb": "casarse"
   },
   "lemma:cerrar": {
    "type": "lemma",
@@ -400,6 +412,10 @@
    "type": "lemma",
    "verb": "enfrentar"
   },
+  "lemma:enfrentarse": {
+   "type": "lemma",
+   "verb": "enfrentarse"
+  },
   "lemma:enganar": {
    "type": "lemma",
    "verb": "enganar"
@@ -423,6 +439,10 @@
   "lemma:enterar": {
    "type": "lemma",
    "verb": "enterar"
+  },
+  "lemma:enterarse": {
+   "type": "lemma",
+   "verb": "enterarse"
   },
   "lemma:entrar": {
    "type": "lemma",
@@ -575,6 +595,10 @@
   "lemma:levantar": {
    "type": "lemma",
    "verb": "levantar"
+  },
+  "lemma:levantarse": {
+   "type": "lemma",
+   "verb": "levantarse"
   },
   "lemma:llamar": {
    "type": "lemma",
@@ -1015,6 +1039,14 @@
   "lemma:tranquilar": {
    "type": "lemma",
    "verb": "tranquilar"
+  },
+  "lemma:tranquilizar": {
+   "type": "lemma",
+   "verb": "tranquilizar"
+  },
+  "lemma:tranquilizarse": {
+   "type": "lemma",
+   "verb": "tranquilizarse"
   },
   "lemma:tratar": {
    "type": "lemma",
@@ -2243,7 +2275,7 @@
    "verb": "oír",
    "tense": "puntual",
    "family": "ir",
-   "regular": true,
+   "regular": false,
    "n_exercises": 3
   },
   "cell:oír:habitual": {
@@ -2267,8 +2299,8 @@
    "verb": "oír",
    "tense": "anterior",
    "family": "ir",
-   "regular": false,
-   "n_exercises": 3
+   "regular": true,
+   "n_exercises": 4
   },
   "cell:salir:puntual": {
    "type": "cell",
@@ -3099,7 +3131,7 @@
    "verb": "suponer",
    "tense": "anterior",
    "family": "er",
-   "regular": true,
+   "regular": false,
    "n_exercises": 4
   },
   "cell:recordar:puntual": {
@@ -3468,7 +3500,7 @@
    "tense": "habitual",
    "family": "ar",
    "regular": true,
-   "n_exercises": 5
+   "n_exercises": 6
   },
   "cell:jugar:fondo": {
    "type": "cell",
@@ -3651,7 +3683,7 @@
    "verb": "significar",
    "tense": "puntual",
    "family": "ar",
-   "regular": true,
+   "regular": false,
    "n_exercises": 5
   },
   "cell:significar:habitual": {
@@ -4950,13 +4982,21 @@
    "regular": true,
    "n_exercises": 3
   },
+  "cell:casarse:anterior": {
+   "type": "cell",
+   "verb": "casarse",
+   "tense": "anterior",
+   "family": null,
+   "regular": false,
+   "n_exercises": 2
+  },
   "cell:casar:anterior": {
    "type": "cell",
    "verb": "casar",
    "tense": "anterior",
    "family": "ar",
    "regular": true,
-   "n_exercises": 4
+   "n_exercises": 2
   },
   "cell:lograr:puntual": {
    "type": "cell",
@@ -5068,7 +5108,7 @@
    "tense": "habitual",
    "family": "ar",
    "regular": true,
-   "n_exercises": 3
+   "n_exercises": 5
   },
   "cell:enseñar:fondo": {
    "type": "cell",
@@ -5084,7 +5124,7 @@
    "tense": "anterior",
    "family": "ar",
    "regular": true,
-   "n_exercises": 3
+   "n_exercises": 4
   },
   "cell:descubrir:puntual": {
    "type": "cell",
@@ -5115,7 +5155,7 @@
    "verb": "descubrir",
    "tense": "anterior",
    "family": "ir",
-   "regular": false,
+   "regular": true,
    "n_exercises": 4
   },
   "cell:andar:puntual": {
@@ -6262,13 +6302,21 @@
    "regular": true,
    "n_exercises": 3
   },
+  "cell:acostumbrarse:anterior": {
+   "type": "cell",
+   "verb": "acostumbrarse",
+   "tense": "anterior",
+   "family": null,
+   "regular": false,
+   "n_exercises": 2
+  },
   "cell:soler:anterior": {
    "type": "cell",
    "verb": "soler",
    "tense": "anterior",
    "family": "er",
    "regular": true,
-   "n_exercises": 4
+   "n_exercises": 2
   },
   "cell:reconocer:puntual": {
    "type": "cell",
@@ -6558,13 +6606,21 @@
    "regular": true,
    "n_exercises": 4
   },
-  "cell:tranquilar:puntual": {
+  "cell:tranquilizar:puntual": {
    "type": "cell",
-   "verb": "tranquilar",
+   "verb": "tranquilizar",
    "tense": "puntual",
    "family": "ar",
-   "regular": true,
+   "regular": false,
    "n_exercises": 5
+  },
+  "cell:tranquilizarse:habitual": {
+   "type": "cell",
+   "verb": "tranquilizarse",
+   "tense": "habitual",
+   "family": null,
+   "regular": false,
+   "n_exercises": 4
   },
   "cell:tranquilar:habitual": {
    "type": "cell",
@@ -6572,7 +6628,7 @@
    "tense": "habitual",
    "family": "ar",
    "regular": true,
-   "n_exercises": 5
+   "n_exercises": 1
   },
   "cell:tranquilar:fondo": {
    "type": "cell",
@@ -6582,9 +6638,9 @@
    "regular": true,
    "n_exercises": 3
   },
-  "cell:tranquilar:anterior": {
+  "cell:tranquilizar:anterior": {
    "type": "cell",
-   "verb": "tranquilar",
+   "verb": "tranquilizar",
    "tense": "anterior",
    "family": "ar",
    "regular": true,
@@ -7020,7 +7076,7 @@
    "tense": "habitual",
    "family": "ar",
    "regular": true,
-   "n_exercises": 5
+   "n_exercises": 4
   },
   "cell:asesinar:fondo": {
    "type": "cell",
@@ -7195,7 +7251,7 @@
    "verb": "devolver",
    "tense": "anterior",
    "family": "er",
-   "regular": false,
+   "regular": true,
    "n_exercises": 4
   },
   "cell:joder:puntual": {
@@ -7324,7 +7380,7 @@
    "tense": "anterior",
    "family": "ar",
    "regular": true,
-   "n_exercises": 3
+   "n_exercises": 4
   },
   "cell:demostrar:puntual": {
    "type": "cell",
@@ -7547,8 +7603,8 @@
    "verb": "reír",
    "tense": "anterior",
    "family": "ir",
-   "regular": false,
-   "n_exercises": 3
+   "regular": true,
+   "n_exercises": 4
   },
   "cell:cortar:puntual": {
    "type": "cell",
@@ -7852,7 +7908,7 @@
    "tense": "habitual",
    "family": "ar",
    "regular": true,
-   "n_exercises": 3
+   "n_exercises": 5
   },
   "cell:señalar:fondo": {
    "type": "cell",
@@ -7868,7 +7924,7 @@
    "tense": "anterior",
    "family": "ar",
    "regular": true,
-   "n_exercises": 3
+   "n_exercises": 4
   },
   "cell:negar:puntual": {
    "type": "cell",
@@ -9068,7 +9124,7 @@
    "tense": "habitual",
    "family": "ar",
    "regular": true,
-   "n_exercises": 3
+   "n_exercises": 5
   },
   "cell:engañar:fondo": {
    "type": "cell",
@@ -9084,7 +9140,7 @@
    "tense": "anterior",
    "family": "ar",
    "regular": true,
-   "n_exercises": 3
+   "n_exercises": 4
   },
   "cell:cubrir:puntual": {
    "type": "cell",
@@ -9115,7 +9171,7 @@
    "verb": "cubrir",
    "tense": "anterior",
    "family": "ir",
-   "regular": false,
+   "regular": true,
    "n_exercises": 4
   },
   "cell:permanecer:puntual": {
@@ -9907,7 +9963,7 @@
    "verb": "cometer",
    "tense": "presente",
    "family": "er",
-   "regular": false,
+   "regular": true,
    "n_exercises": 3
   },
   "cell:compartir:presente": {
@@ -10091,7 +10147,7 @@
    "verb": "cumplir",
    "tense": "presente",
    "family": "ir",
-   "regular": false,
+   "regular": true,
    "n_exercises": 3
   },
   "cell:dar:presente": {
@@ -10251,7 +10307,7 @@
    "verb": "discutir",
    "tense": "presente",
    "family": "ir",
-   "regular": false,
+   "regular": true,
    "n_exercises": 3
   },
   "cell:disfrutar:presente": {
@@ -10395,7 +10451,7 @@
    "verb": "esconder",
    "tense": "presente",
    "family": "er",
-   "regular": false,
+   "regular": true,
    "n_exercises": 3
   },
   "cell:escribir:presente": {
@@ -10827,7 +10883,7 @@
    "verb": "nacer",
    "tense": "presente",
    "family": "er",
-   "regular": true,
+   "regular": false,
    "n_exercises": 3
   },
   "cell:necesitar:presente": {
@@ -11115,7 +11171,7 @@
    "verb": "prometer",
    "tense": "presente",
    "family": "er",
-   "regular": false,
+   "regular": true,
    "n_exercises": 3
   },
   "cell:proteger:presente": {
@@ -11510,9 +11566,9 @@
    "regular": false,
    "n_exercises": 3
   },
-  "cell:tranquilar:presente": {
+  "cell:tranquilizar:presente": {
    "type": "cell",
-   "verb": "tranquilar",
+   "verb": "tranquilizar",
    "tense": "presente",
    "family": "ar",
    "regular": true,
@@ -11531,7 +11587,7 @@
    "verb": "unir",
    "tense": "presente",
    "family": "ir",
-   "regular": false,
+   "regular": true,
    "n_exercises": 3
   },
   "cell:usar:presente": {
@@ -11942,12 +11998,12 @@
    "regular": true,
    "n_exercises": 3
   },
-  "cell:casar:futuro": {
+  "cell:casarse:futuro": {
    "type": "cell",
-   "verb": "casar",
+   "verb": "casarse",
    "tense": "futuro",
-   "family": "ar",
-   "regular": true,
+   "family": null,
+   "regular": false,
    "n_exercises": 3
   },
   "cell:cerrar:futuro": {
@@ -12430,12 +12486,12 @@
    "regular": true,
    "n_exercises": 3
   },
-  "cell:enterar:futuro": {
+  "cell:enterarse:futuro": {
    "type": "cell",
-   "verb": "enterar",
+   "verb": "enterarse",
    "tense": "futuro",
-   "family": "ar",
-   "regular": true,
+   "family": null,
+   "regular": false,
    "n_exercises": 3
   },
   "cell:entrar:futuro": {
@@ -12702,11 +12758,11 @@
    "regular": true,
    "n_exercises": 3
   },
-  "cell:joder:futuro": {
+  "cell:arruinar:futuro": {
    "type": "cell",
-   "verb": "joder",
+   "verb": "arruinar",
    "tense": "futuro",
-   "family": "er",
+   "family": "ar",
    "regular": true,
    "n_exercises": 3
   },
@@ -13462,12 +13518,12 @@
    "regular": true,
    "n_exercises": 3
   },
-  "cell:soler:futuro": {
+  "cell:acostumbrarse:futuro": {
    "type": "cell",
-   "verb": "soler",
+   "verb": "acostumbrarse",
    "tense": "futuro",
-   "family": "er",
-   "regular": true,
+   "family": null,
+   "regular": false,
    "n_exercises": 3
   },
   "cell:soltar:futuro": {
@@ -13590,9 +13646,9 @@
    "regular": true,
    "n_exercises": 3
   },
-  "cell:tranquilar:futuro": {
+  "cell:tranquilizar:futuro": {
    "type": "cell",
-   "verb": "tranquilar",
+   "verb": "tranquilizar",
    "tense": "futuro",
    "family": "ar",
    "regular": true,
@@ -14780,7 +14836,7 @@
    "tense": "condicional",
    "family": "ir",
    "regular": true,
-   "n_exercises": 3
+   "n_exercises": 6
   },
   "cell:joder:condicional": {
    "type": "cell",
@@ -15542,14 +15598,6 @@
    "regular": true,
    "n_exercises": 3
   },
-  "cell:soler:condicional": {
-   "type": "cell",
-   "verb": "soler",
-   "tense": "condicional",
-   "family": "er",
-   "regular": true,
-   "n_exercises": 3
-  },
   "cell:soltar:condicional": {
    "type": "cell",
    "verb": "soltar",
@@ -15670,9 +15718,9 @@
    "regular": true,
    "n_exercises": 3
   },
-  "cell:tranquilar:condicional": {
+  "cell:tranquilizar:condicional": {
    "type": "cell",
-   "verb": "tranquilar",
+   "verb": "tranquilizar",
    "tense": "condicional",
    "family": "ar",
    "regular": true,
@@ -16102,12 +16150,12 @@
    "regular": true,
    "n_exercises": 3
   },
-  "cell:casar:subjuntivo": {
+  "cell:casarse:subjuntivo": {
    "type": "cell",
-   "verb": "casar",
+   "verb": "casarse",
    "tense": "subjuntivo",
-   "family": "ar",
-   "regular": true,
+   "family": null,
+   "regular": false,
    "n_exercises": 3
   },
   "cell:cerrar:subjuntivo": {
@@ -16564,7 +16612,15 @@
    "tense": "subjuntivo",
    "family": "ar",
    "regular": true,
-   "n_exercises": 3
+   "n_exercises": 2
+  },
+  "cell:enfrentarse:subjuntivo": {
+   "type": "cell",
+   "verb": "enfrentarse",
+   "tense": "subjuntivo",
+   "family": null,
+   "regular": false,
+   "n_exercises": 1
   },
   "cell:engañar:subjuntivo": {
    "type": "cell",
@@ -16900,7 +16956,15 @@
    "tense": "subjuntivo",
    "family": "ar",
    "regular": true,
-   "n_exercises": 3
+   "n_exercises": 2
+  },
+  "cell:levantarse:subjuntivo": {
+   "type": "cell",
+   "verb": "levantarse",
+   "tense": "subjuntivo",
+   "family": null,
+   "regular": false,
+   "n_exercises": 1
   },
   "cell:llamar:subjuntivo": {
    "type": "cell",
@@ -17750,12 +17814,12 @@
    "regular": false,
    "n_exercises": 3
   },
-  "cell:tranquilar:subjuntivo": {
+  "cell:tranquilizar:subjuntivo": {
    "type": "cell",
-   "verb": "tranquilar",
+   "verb": "tranquilizar",
    "tense": "subjuntivo",
    "family": "ar",
-   "regular": true,
+   "regular": false,
    "n_exercises": 3
   },
   "cell:tratar:subjuntivo": {
@@ -19830,9 +19894,9 @@
    "regular": false,
    "n_exercises": 3
   },
-  "cell:tranquilar:subj_imperfecto": {
+  "cell:tranquilizar:subj_imperfecto": {
    "type": "cell",
-   "verb": "tranquilar",
+   "verb": "tranquilizar",
    "tense": "subj_imperfecto",
    "family": "ar",
    "regular": true,
@@ -21782,12 +21846,12 @@
    "regular": true,
    "n_exercises": 3
   },
-  "cell:soler:subj_pluscuam": {
+  "cell:acostumbrarse:subj_pluscuam": {
    "type": "cell",
-   "verb": "soler",
+   "verb": "acostumbrarse",
    "tense": "subj_pluscuam",
-   "family": "er",
-   "regular": true,
+   "family": null,
+   "regular": false,
    "n_exercises": 3
   },
   "cell:soltar:subj_pluscuam": {
@@ -21910,9 +21974,9 @@
    "regular": true,
    "n_exercises": 3
   },
-  "cell:tranquilar:subj_pluscuam": {
+  "cell:tranquilizar:subj_pluscuam": {
    "type": "cell",
-   "verb": "tranquilar",
+   "verb": "tranquilizar",
    "tense": "subj_pluscuam",
    "family": "ar",
    "regular": true,
@@ -22070,22 +22134,6 @@
    "regular": true,
    "n_exercises": 2
   },
-  "cell:enganar:habitual": {
-   "type": "cell",
-   "verb": "enganar",
-   "tense": "habitual",
-   "family": "ar",
-   "regular": true,
-   "n_exercises": 2
-  },
-  "cell:ensenar:habitual": {
-   "type": "cell",
-   "verb": "ensenar",
-   "tense": "habitual",
-   "family": "ar",
-   "regular": true,
-   "n_exercises": 2
-  },
   "cell:oir:habitual": {
    "type": "cell",
    "verb": "oir",
@@ -22099,14 +22147,6 @@
    "verb": "reir",
    "tense": "habitual",
    "family": "ir",
-   "regular": true,
-   "n_exercises": 2
-  },
-  "cell:senalar:habitual": {
-   "type": "cell",
-   "verb": "senalar",
-   "tense": "habitual",
-   "family": "ar",
    "regular": true,
    "n_exercises": 2
   },
@@ -22154,54 +22194,6 @@
    "type": "cell",
    "verb": "senalar",
    "tense": "fondo",
-   "family": "ar",
-   "regular": true,
-   "n_exercises": 1
-  },
-  "cell:acompanar:anterior": {
-   "type": "cell",
-   "verb": "acompanar",
-   "tense": "anterior",
-   "family": "ar",
-   "regular": true,
-   "n_exercises": 1
-  },
-  "cell:enganar:anterior": {
-   "type": "cell",
-   "verb": "enganar",
-   "tense": "anterior",
-   "family": "ar",
-   "regular": true,
-   "n_exercises": 1
-  },
-  "cell:ensenar:anterior": {
-   "type": "cell",
-   "verb": "ensenar",
-   "tense": "anterior",
-   "family": "ar",
-   "regular": true,
-   "n_exercises": 1
-  },
-  "cell:oir:anterior": {
-   "type": "cell",
-   "verb": "oir",
-   "tense": "anterior",
-   "family": "ir",
-   "regular": true,
-   "n_exercises": 1
-  },
-  "cell:reir:anterior": {
-   "type": "cell",
-   "verb": "reir",
-   "tense": "anterior",
-   "family": "ir",
-   "regular": true,
-   "n_exercises": 1
-  },
-  "cell:senalar:anterior": {
-   "type": "cell",
-   "verb": "senalar",
-   "tense": "anterior",
    "family": "ar",
    "regular": true,
    "n_exercises": 1
@@ -23789,10 +23781,6 @@
    "cell:oír:puntual"
   ],
   [
-   "rule:ir:puntual",
-   "cell:oír:puntual"
-  ],
-  [
    "cell:oír:presente",
    "cell:oír:puntual"
   ],
@@ -23822,6 +23810,10 @@
   ],
   [
    "lemma:oír",
+   "cell:oír:anterior"
+  ],
+  [
+   "rule:ir:anterior",
    "cell:oír:anterior"
   ],
   [
@@ -25141,10 +25133,6 @@
    "cell:suponer:anterior"
   ],
   [
-   "rule:er:anterior",
-   "cell:suponer:anterior"
-  ],
-  [
    "cell:suponer:puntual",
    "cell:suponer:anterior"
   ],
@@ -26022,10 +26010,6 @@
   ],
   [
    "lemma:significar",
-   "cell:significar:puntual"
-  ],
-  [
-   "rule:ar:puntual",
    "cell:significar:puntual"
   ],
   [
@@ -28101,6 +28085,10 @@
    "cell:casar:fondo"
   ],
   [
+   "lemma:casarse",
+   "cell:casarse:anterior"
+  ],
+  [
    "lemma:casar",
    "cell:casar:anterior"
   ],
@@ -28362,6 +28350,10 @@
   ],
   [
    "lemma:descubrir",
+   "cell:descubrir:anterior"
+  ],
+  [
+   "rule:ir:anterior",
    "cell:descubrir:anterior"
   ],
   [
@@ -30197,6 +30189,10 @@
    "cell:soler:fondo"
   ],
   [
+   "lemma:acostumbrarse",
+   "cell:acostumbrarse:anterior"
+  ],
+  [
    "lemma:soler",
    "cell:soler:anterior"
   ],
@@ -30681,16 +30677,16 @@
    "cell:llorar:anterior"
   ],
   [
-   "lemma:tranquilar",
-   "cell:tranquilar:puntual"
+   "lemma:tranquilizar",
+   "cell:tranquilizar:puntual"
   ],
   [
-   "rule:ar:puntual",
-   "cell:tranquilar:puntual"
+   "cell:tranquilizar:presente",
+   "cell:tranquilizar:puntual"
   ],
   [
-   "cell:tranquilar:presente",
-   "cell:tranquilar:puntual"
+   "lemma:tranquilizarse",
+   "cell:tranquilizarse:habitual"
   ],
   [
    "lemma:tranquilar",
@@ -30698,10 +30694,6 @@
   ],
   [
    "rule:ar:habitual",
-   "cell:tranquilar:habitual"
-  ],
-  [
-   "cell:tranquilar:presente",
    "cell:tranquilar:habitual"
   ],
   [
@@ -30717,20 +30709,16 @@
    "cell:tranquilar:fondo"
   ],
   [
-   "lemma:tranquilar",
-   "cell:tranquilar:anterior"
+   "lemma:tranquilizar",
+   "cell:tranquilizar:anterior"
   ],
   [
    "rule:ar:anterior",
-   "cell:tranquilar:anterior"
+   "cell:tranquilizar:anterior"
   ],
   [
-   "cell:tranquilar:puntual",
-   "cell:tranquilar:anterior"
-  ],
-  [
-   "cell:tranquilar:habitual",
-   "cell:tranquilar:anterior"
+   "cell:tranquilizar:puntual",
+   "cell:tranquilizar:anterior"
   ],
   [
    "lemma:actuar",
@@ -31697,6 +31685,10 @@
    "cell:devolver:anterior"
   ],
   [
+   "rule:er:anterior",
+   "cell:devolver:anterior"
+  ],
+  [
    "cell:devolver:puntual",
    "cell:devolver:anterior"
   ],
@@ -32250,6 +32242,10 @@
   ],
   [
    "lemma:reír",
+   "cell:reír:anterior"
+  ],
+  [
+   "rule:ir:anterior",
    "cell:reír:anterior"
   ],
   [
@@ -34773,6 +34769,10 @@
    "cell:cubrir:anterior"
   ],
   [
+   "rule:ir:anterior",
+   "cell:cubrir:anterior"
+  ],
+  [
    "cell:cubrir:puntual",
    "cell:cubrir:anterior"
   ],
@@ -35793,6 +35793,10 @@
    "cell:cometer:presente"
   ],
   [
+   "rule:er:presente",
+   "cell:cometer:presente"
+  ],
+  [
    "lemma:compartir",
    "cell:compartir:presente"
   ],
@@ -35941,6 +35945,10 @@
    "cell:cumplir:presente"
   ],
   [
+   "rule:ir:presente",
+   "cell:cumplir:presente"
+  ],
+  [
    "lemma:dar",
    "cell:dar:presente"
   ],
@@ -36050,6 +36058,10 @@
   ],
   [
    "lemma:discutir",
+   "cell:discutir:presente"
+  ],
+  [
+   "rule:ir:presente",
    "cell:discutir:presente"
   ],
   [
@@ -36170,6 +36182,10 @@
   ],
   [
    "lemma:esconder",
+   "cell:esconder:presente"
+  ],
+  [
+   "rule:er:presente",
    "cell:esconder:presente"
   ],
   [
@@ -36553,10 +36569,6 @@
    "cell:nacer:presente"
   ],
   [
-   "rule:er:presente",
-   "cell:nacer:presente"
-  ],
-  [
    "lemma:necesitar",
    "cell:necesitar:presente"
   ],
@@ -36778,6 +36790,10 @@
   ],
   [
    "lemma:prometer",
+   "cell:prometer:presente"
+  ],
+  [
+   "rule:er:presente",
    "cell:prometer:presente"
   ],
   [
@@ -37085,12 +37101,12 @@
    "cell:traer:presente"
   ],
   [
-   "lemma:tranquilar",
-   "cell:tranquilar:presente"
+   "lemma:tranquilizar",
+   "cell:tranquilizar:presente"
   ],
   [
    "rule:ar:presente",
-   "cell:tranquilar:presente"
+   "cell:tranquilizar:presente"
   ],
   [
    "lemma:tratar",
@@ -37102,6 +37118,10 @@
   ],
   [
    "lemma:unir",
+   "cell:unir:presente"
+  ],
+  [
+   "rule:ir:presente",
    "cell:unir:presente"
   ],
   [
@@ -37657,16 +37677,8 @@
    "cell:cantar:futuro"
   ],
   [
-   "lemma:casar",
-   "cell:casar:futuro"
-  ],
-  [
-   "rule:ar:futuro",
-   "cell:casar:futuro"
-  ],
-  [
-   "cell:casar:presente",
-   "cell:casar:futuro"
+   "lemma:casarse",
+   "cell:casarse:futuro"
   ],
   [
    "lemma:cerrar",
@@ -38381,16 +38393,8 @@
    "cell:entender:futuro"
   ],
   [
-   "lemma:enterar",
-   "cell:enterar:futuro"
-  ],
-  [
-   "rule:ar:futuro",
-   "cell:enterar:futuro"
-  ],
-  [
-   "cell:enterar:presente",
-   "cell:enterar:futuro"
+   "lemma:enterarse",
+   "cell:enterarse:futuro"
   ],
   [
    "lemma:entrar",
@@ -38781,16 +38785,12 @@
    "cell:ir:futuro"
   ],
   [
-   "lemma:joder",
-   "cell:joder:futuro"
+   "lemma:arruinar",
+   "cell:arruinar:futuro"
   ],
   [
-   "rule:er:futuro",
-   "cell:joder:futuro"
-  ],
-  [
-   "cell:joder:presente",
-   "cell:joder:futuro"
+   "rule:ar:futuro",
+   "cell:arruinar:futuro"
   ],
   [
    "lemma:jugar",
@@ -39893,16 +39893,8 @@
    "cell:significar:futuro"
   ],
   [
-   "lemma:soler",
-   "cell:soler:futuro"
-  ],
-  [
-   "rule:er:futuro",
-   "cell:soler:futuro"
-  ],
-  [
-   "cell:soler:presente",
-   "cell:soler:futuro"
+   "lemma:acostumbrarse",
+   "cell:acostumbrarse:futuro"
   ],
   [
    "lemma:soltar",
@@ -40077,16 +40069,16 @@
    "cell:traer:futuro"
   ],
   [
-   "lemma:tranquilar",
-   "cell:tranquilar:futuro"
+   "lemma:tranquilizar",
+   "cell:tranquilizar:futuro"
   ],
   [
    "rule:ar:futuro",
-   "cell:tranquilar:futuro"
+   "cell:tranquilizar:futuro"
   ],
   [
-   "cell:tranquilar:presente",
-   "cell:tranquilar:futuro"
+   "cell:tranquilizar:presente",
+   "cell:tranquilizar:futuro"
   ],
   [
    "lemma:tratar",
@@ -40722,10 +40714,6 @@
   ],
   [
    "rule:ar:condicional",
-   "cell:casar:condicional"
-  ],
-  [
-   "cell:casar:futuro",
    "cell:casar:condicional"
   ],
   [
@@ -41449,10 +41437,6 @@
    "cell:enterar:condicional"
   ],
   [
-   "cell:enterar:futuro",
-   "cell:enterar:condicional"
-  ],
-  [
    "lemma:entrar",
    "cell:entrar:condicional"
   ],
@@ -41846,10 +41830,6 @@
   ],
   [
    "rule:er:condicional",
-   "cell:joder:condicional"
-  ],
-  [
-   "cell:joder:futuro",
    "cell:joder:condicional"
   ],
   [
@@ -42953,18 +42933,6 @@
    "cell:significar:condicional"
   ],
   [
-   "lemma:soler",
-   "cell:soler:condicional"
-  ],
-  [
-   "rule:er:condicional",
-   "cell:soler:condicional"
-  ],
-  [
-   "cell:soler:futuro",
-   "cell:soler:condicional"
-  ],
-  [
    "lemma:soltar",
    "cell:soltar:condicional"
   ],
@@ -43137,16 +43105,16 @@
    "cell:traer:condicional"
   ],
   [
-   "lemma:tranquilar",
-   "cell:tranquilar:condicional"
+   "lemma:tranquilizar",
+   "cell:tranquilizar:condicional"
   ],
   [
    "rule:ar:condicional",
-   "cell:tranquilar:condicional"
+   "cell:tranquilizar:condicional"
   ],
   [
-   "cell:tranquilar:futuro",
-   "cell:tranquilar:condicional"
+   "cell:tranquilizar:futuro",
+   "cell:tranquilizar:condicional"
   ],
   [
    "lemma:tratar",
@@ -43741,16 +43709,8 @@
    "cell:cantar:subjuntivo"
   ],
   [
-   "lemma:casar",
-   "cell:casar:subjuntivo"
-  ],
-  [
-   "rule:ar:subjuntivo",
-   "cell:casar:subjuntivo"
-  ],
-  [
-   "cell:casar:presente",
-   "cell:casar:subjuntivo"
+   "lemma:casarse",
+   "cell:casarse:subjuntivo"
   ],
   [
    "lemma:cerrar",
@@ -44337,6 +44297,10 @@
    "cell:enfrentar:subjuntivo"
   ],
   [
+   "lemma:enfrentarse",
+   "cell:enfrentarse:subjuntivo"
+  ],
+  [
    "lemma:engañar",
    "cell:engañar:subjuntivo"
   ],
@@ -44803,6 +44767,10 @@
   [
    "cell:levantar:presente",
    "cell:levantar:subjuntivo"
+  ],
+  [
+   "lemma:levantarse",
+   "cell:levantarse:subjuntivo"
   ],
   [
    "lemma:llamar",
@@ -45873,16 +45841,12 @@
    "cell:traer:subjuntivo"
   ],
   [
-   "lemma:tranquilar",
-   "cell:tranquilar:subjuntivo"
+   "lemma:tranquilizar",
+   "cell:tranquilizar:subjuntivo"
   ],
   [
-   "rule:ar:subjuntivo",
-   "cell:tranquilar:subjuntivo"
-  ],
-  [
-   "cell:tranquilar:presente",
-   "cell:tranquilar:subjuntivo"
+   "cell:tranquilizar:presente",
+   "cell:tranquilizar:subjuntivo"
   ],
   [
    "lemma:tratar",
@@ -46654,10 +46618,6 @@
   ],
   [
    "rule:ar:subj_imperfecto",
-   "cell:casar:subj_imperfecto"
-  ],
-  [
-   "cell:casar:subjuntivo",
    "cell:casar:subj_imperfecto"
   ],
   [
@@ -49761,20 +49721,20 @@
    "cell:traer:subj_imperfecto"
   ],
   [
-   "lemma:tranquilar",
-   "cell:tranquilar:subj_imperfecto"
+   "lemma:tranquilizar",
+   "cell:tranquilizar:subj_imperfecto"
   ],
   [
    "rule:ar:subj_imperfecto",
-   "cell:tranquilar:subj_imperfecto"
+   "cell:tranquilizar:subj_imperfecto"
   ],
   [
-   "cell:tranquilar:subjuntivo",
-   "cell:tranquilar:subj_imperfecto"
+   "cell:tranquilizar:subjuntivo",
+   "cell:tranquilizar:subj_imperfecto"
   ],
   [
-   "cell:tranquilar:puntual",
-   "cell:tranquilar:subj_imperfecto"
+   "cell:tranquilizar:puntual",
+   "cell:tranquilizar:subj_imperfecto"
   ],
   [
    "lemma:tratar",
@@ -50054,10 +50014,6 @@
   ],
   [
    "cell:acompanar:subj_imperfecto",
-   "cell:acompanar:subj_pluscuam"
-  ],
-  [
-   "cell:acompanar:anterior",
    "cell:acompanar:subj_pluscuam"
   ],
   [
@@ -51561,10 +51517,6 @@
    "cell:enganar:subj_pluscuam"
   ],
   [
-   "cell:enganar:anterior",
-   "cell:enganar:subj_pluscuam"
-  ],
-  [
    "lemma:ensenar",
    "cell:ensenar:subj_pluscuam"
   ],
@@ -51574,10 +51526,6 @@
   ],
   [
    "cell:ensenar:subj_imperfecto",
-   "cell:ensenar:subj_pluscuam"
-  ],
-  [
-   "cell:ensenar:anterior",
    "cell:ensenar:subj_pluscuam"
   ],
   [
@@ -52697,10 +52645,6 @@
    "cell:oir:subj_pluscuam"
   ],
   [
-   "cell:oir:anterior",
-   "cell:oir:subj_pluscuam"
-  ],
-  [
    "lemma:olvidar",
    "cell:olvidar:subj_pluscuam"
   ],
@@ -53337,10 +53281,6 @@
    "cell:reir:subj_pluscuam"
   ],
   [
-   "cell:reir:anterior",
-   "cell:reir:subj_pluscuam"
-  ],
-  [
    "lemma:repetir",
    "cell:repetir:subj_pluscuam"
   ],
@@ -53577,10 +53517,6 @@
    "cell:senalar:subj_pluscuam"
   ],
   [
-   "cell:senalar:anterior",
-   "cell:senalar:subj_pluscuam"
-  ],
-  [
    "lemma:sentar",
    "cell:sentar:subj_pluscuam"
   ],
@@ -53661,20 +53597,12 @@
    "cell:significar:subj_pluscuam"
   ],
   [
-   "lemma:soler",
-   "cell:soler:subj_pluscuam"
+   "lemma:acostumbrarse",
+   "cell:acostumbrarse:subj_pluscuam"
   ],
   [
-   "rule:er:subj_pluscuam",
-   "cell:soler:subj_pluscuam"
-  ],
-  [
-   "cell:soler:subj_imperfecto",
-   "cell:soler:subj_pluscuam"
-  ],
-  [
-   "cell:soler:anterior",
-   "cell:soler:subj_pluscuam"
+   "cell:acostumbrarse:anterior",
+   "cell:acostumbrarse:subj_pluscuam"
   ],
   [
    "lemma:soltar",
@@ -53913,20 +53841,20 @@
    "cell:traer:subj_pluscuam"
   ],
   [
-   "lemma:tranquilar",
-   "cell:tranquilar:subj_pluscuam"
+   "lemma:tranquilizar",
+   "cell:tranquilizar:subj_pluscuam"
   ],
   [
    "rule:ar:subj_pluscuam",
-   "cell:tranquilar:subj_pluscuam"
+   "cell:tranquilizar:subj_pluscuam"
   ],
   [
-   "cell:tranquilar:subj_imperfecto",
-   "cell:tranquilar:subj_pluscuam"
+   "cell:tranquilizar:subj_imperfecto",
+   "cell:tranquilizar:subj_pluscuam"
   ],
   [
-   "cell:tranquilar:anterior",
-   "cell:tranquilar:subj_pluscuam"
+   "cell:tranquilizar:anterior",
+   "cell:tranquilizar:subj_pluscuam"
   ],
   [
    "lemma:tratar",
@@ -54169,22 +54097,6 @@
    "cell:acompanar:habitual"
   ],
   [
-   "lemma:enganar",
-   "cell:enganar:habitual"
-  ],
-  [
-   "rule:ar:habitual",
-   "cell:enganar:habitual"
-  ],
-  [
-   "lemma:ensenar",
-   "cell:ensenar:habitual"
-  ],
-  [
-   "rule:ar:habitual",
-   "cell:ensenar:habitual"
-  ],
-  [
    "lemma:oir",
    "cell:oir:habitual"
   ],
@@ -54199,14 +54111,6 @@
   [
    "rule:ir:habitual",
    "cell:reir:habitual"
-  ],
-  [
-   "lemma:senalar",
-   "cell:senalar:habitual"
-  ],
-  [
-   "rule:ar:habitual",
-   "cell:senalar:habitual"
   ],
   [
    "lemma:acompanar",
@@ -54229,19 +54133,11 @@
    "cell:enganar:fondo"
   ],
   [
-   "cell:enganar:habitual",
-   "cell:enganar:fondo"
-  ],
-  [
    "lemma:ensenar",
    "cell:ensenar:fondo"
   ],
   [
    "rule:ar:fondo",
-   "cell:ensenar:fondo"
-  ],
-  [
-   "cell:ensenar:habitual",
    "cell:ensenar:fondo"
   ],
   [
@@ -54275,106 +54171,6 @@
   [
    "rule:ar:fondo",
    "cell:senalar:fondo"
-  ],
-  [
-   "cell:senalar:habitual",
-   "cell:senalar:fondo"
-  ],
-  [
-   "lemma:acompanar",
-   "cell:acompanar:anterior"
-  ],
-  [
-   "rule:ar:anterior",
-   "cell:acompanar:anterior"
-  ],
-  [
-   "cell:acompanar:puntual",
-   "cell:acompanar:anterior"
-  ],
-  [
-   "cell:acompanar:habitual",
-   "cell:acompanar:anterior"
-  ],
-  [
-   "lemma:enganar",
-   "cell:enganar:anterior"
-  ],
-  [
-   "rule:ar:anterior",
-   "cell:enganar:anterior"
-  ],
-  [
-   "cell:enganar:puntual",
-   "cell:enganar:anterior"
-  ],
-  [
-   "cell:enganar:habitual",
-   "cell:enganar:anterior"
-  ],
-  [
-   "lemma:ensenar",
-   "cell:ensenar:anterior"
-  ],
-  [
-   "rule:ar:anterior",
-   "cell:ensenar:anterior"
-  ],
-  [
-   "cell:ensenar:puntual",
-   "cell:ensenar:anterior"
-  ],
-  [
-   "cell:ensenar:habitual",
-   "cell:ensenar:anterior"
-  ],
-  [
-   "lemma:oir",
-   "cell:oir:anterior"
-  ],
-  [
-   "rule:ir:anterior",
-   "cell:oir:anterior"
-  ],
-  [
-   "cell:oir:puntual",
-   "cell:oir:anterior"
-  ],
-  [
-   "cell:oir:habitual",
-   "cell:oir:anterior"
-  ],
-  [
-   "lemma:reir",
-   "cell:reir:anterior"
-  ],
-  [
-   "rule:ir:anterior",
-   "cell:reir:anterior"
-  ],
-  [
-   "cell:reir:puntual",
-   "cell:reir:anterior"
-  ],
-  [
-   "cell:reir:habitual",
-   "cell:reir:anterior"
-  ],
-  [
-   "lemma:senalar",
-   "cell:senalar:anterior"
-  ],
-  [
-   "rule:ar:anterior",
-   "cell:senalar:anterior"
-  ],
-  [
-   "cell:senalar:puntual",
-   "cell:senalar:anterior"
-  ],
-  [
-   "cell:senalar:habitual",
-   "cell:senalar:anterior"
   ]
  ]
 }

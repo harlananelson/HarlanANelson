@@ -1,0 +1,9578 @@
+[
+{
+"exercise": {
+"id": "llamar-anterior-294",
+"verbo": "llamar",
+"contexto": "cuando llegué anoche, ya, yo, a su madre.",
+"respuesta": "cuando llegué anoche, ya yo había llamado a su madre.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había llamado"
+],
+[
+"a su madre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había llamado a su madre.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había llamado a su madre.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "llamar-anterior-296",
+"verbo": "llamar",
+"contexto": "cuando me llamaste anoche, ya, tú, a sus amigos.",
+"respuesta": "cuando me llamaste anoche, ya tú habías llamado a sus amigos.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias llamado"
+],
+[
+"a sus amigos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías llamado a sus amigos.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías llamado a sus amigos.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "parecer-anterior-305",
+"verbo": "parecer",
+"contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos parecido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos parecido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos parecido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos parecido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "parecer-anterior-307",
+"verbo": "parecer",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían parecido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian parecido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían parecido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían parecido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "tomar-anterior-316",
+"verbo": "tomar",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había tomado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había tomado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había tomado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había tomado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "tomar-anterior-318",
+"verbo": "tomar",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había tomado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había tomado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había tomado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había tomado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "quedar-anterior-327",
+"verbo": "quedar",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había quedado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había quedado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había quedado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había quedado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "quedar-anterior-329",
+"verbo": "quedar",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían quedado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian quedado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían quedado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían quedado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "llegar-anterior-338",
+"verbo": "llegar",
+"contexto": "cuando llegué anoche, ya, nosotros, a casa.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos llegado a casa.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos llegado"
+],
+[
+"a casa"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos llegado a casa.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos llegado a casa.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "llegar-anterior-340",
+"verbo": "llegar",
+"contexto": "cuando me llamaste anoche, ya, él, tarde.",
+"respuesta": "cuando me llamaste anoche, ya él había llegado tarde.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había llegado"
+],
+[
+"tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya él había llegado tarde.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, él ya había llegado tarde.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "poner-anterior-349",
+"verbo": "poner",
+"contexto": "cuando llegué anoche, ya, ella, la mesa.",
+"respuesta": "cuando llegué anoche, ya ella había puesto la mesa.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había puesto"
+],
+[
+"la mesa"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había puesto la mesa.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había puesto la mesa.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "poner-anterior-351",
+"verbo": "poner",
+"contexto": "cuando me llamaste anoche, ya, él, la música.",
+"respuesta": "cuando me llamaste anoche, ya él había puesto la música.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había puesto"
+],
+[
+"la música"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya él había puesto la música.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, él ya había puesto la música.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "oír-anterior-360",
+"verbo": "oír",
+"contexto": "cuando llegué anoche, ya, nosotros, un ruido.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos oír un ruido.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos oír"
+],
+[
+"un ruido"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos oír un ruido.",
+"cat": "gram",
+"fix": "cuando llegué anoche, ya nosotros habíamos oído un ruido.",
+"note": "se usó el infinitivo 'oír' en vez del participio 'oído'"
+},
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos oír un ruido.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos oír un ruido.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "oír-anterior-361",
+"verbo": "oír",
+"contexto": "hasta ese día, nunca antes, ellos, un ruido.",
+"respuesta": "hasta ese día, nunca antes ellos habían oír un ruido.",
+"pista": "La idea mira hacia un momento anterior dentro del pasado.",
+"grupos": [
+[
+"hasta ese día"
+],
+[
+"nunca antes"
+],
+[
+"ellos"
+],
+[
+"habian oír"
+],
+[
+"un ruido"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "hasta ese día, nunca antes ellos habían oír un ruido.",
+"cat": "gram",
+"fix": "hasta ese día, nunca antes ellos habían oído un ruido.",
+"note": "se usó el infinitivo 'oír' en vez del participio 'oído'"
+}
+]
+},
+{
+"exercise": {
+"id": "oír-anterior-362",
+"verbo": "oír",
+"contexto": "cuando me llamaste anoche, ya, yo, un ruido.",
+"respuesta": "cuando me llamaste anoche, ya yo había oír un ruido.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había oír"
+],
+[
+"un ruido"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había oír un ruido.",
+"cat": "gram",
+"fix": "cuando me llamaste anoche, ya yo había oído un ruido.",
+"note": "se usó el infinitivo 'oír' en vez del participio 'oído'"
+},
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había oír un ruido.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había oír un ruido.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "salir-anterior-371",
+"verbo": "salir",
+"contexto": "cuando llegué anoche, ya, yo, temprano.",
+"respuesta": "cuando llegué anoche, ya yo había salido temprano.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había salido"
+],
+[
+"temprano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había salido temprano.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había salido temprano.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "salir-anterior-373",
+"verbo": "salir",
+"contexto": "cuando me llamaste anoche, ya, ellos, con amigos.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían salido con amigos.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian salido"
+],
+[
+"con amigos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían salido con amigos.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían salido con amigos.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-anterior-382",
+"verbo": "gustar",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían gustado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian gustado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían gustado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían gustado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-anterior-384",
+"verbo": "gustar",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había gustado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había gustado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había gustado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había gustado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "seguir-anterior-393",
+"verbo": "seguir",
+"contexto": "cuando llegué anoche, ya, yo, estudiando.",
+"respuesta": "cuando llegué anoche, ya yo había seguido estudiando.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había seguido"
+],
+[
+"estudiando"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había seguido estudiando.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había seguido estudiando.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "seguir-anterior-395",
+"verbo": "seguir",
+"contexto": "cuando me llamaste anoche, ya, ellos, trabajando.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían seguido trabajando.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian seguido"
+],
+[
+"trabajando"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían seguido trabajando.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían seguido trabajando.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "conocer-anterior-404",
+"verbo": "conocer",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había conocido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había conocido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había conocido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había conocido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "conocer-anterior-406",
+"verbo": "conocer",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos conocido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos conocido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos conocido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos conocido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "escuchar-anterior-415",
+"verbo": "escuchar",
+"contexto": "cuando llegué anoche, ya, tú, la radio.",
+"respuesta": "cuando llegué anoche, ya tú habías escuchado la radio.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias escuchado"
+],
+[
+"la radio"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías escuchado la radio.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías escuchado la radio.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "escuchar-anterior-417",
+"verbo": "escuchar",
+"contexto": "cuando me llamaste anoche, ya, nosotros, la radio.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos escuchado la radio.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos escuchado"
+],
+[
+"la radio"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos escuchado la radio.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos escuchado la radio.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "matar-anterior-426",
+"verbo": "matar",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías matado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias matado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías matado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías matado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "matar-anterior-428",
+"verbo": "matar",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había matado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había matado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había matado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había matado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "buscar-anterior-437",
+"verbo": "buscar",
+"contexto": "cuando llegué anoche, ya, yo, trabajo.",
+"respuesta": "cuando llegué anoche, ya yo había buscado trabajo.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había buscado"
+],
+[
+"trabajo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había buscado trabajo.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había buscado trabajo.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "buscar-anterior-439",
+"verbo": "buscar",
+"contexto": "cuando me llamaste anoche, ya, ellos, sus llaves.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían buscado sus llaves.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian buscado"
+],
+[
+"sus llaves"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían buscado sus llaves.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían buscado sus llaves.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "ayudar-anterior-448",
+"verbo": "ayudar",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había ayudado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había ayudado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había ayudado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había ayudado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "ayudar-anterior-450",
+"verbo": "ayudar",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había ayudado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había ayudado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había ayudado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había ayudado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "perder-anterior-459",
+"verbo": "perder",
+"contexto": "cuando llegué anoche, ya, nosotros, el autobús.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos perdido el autobús.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos perdido"
+],
+[
+"el autobús"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos perdido el autobús.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos perdido el autobús.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "perder-anterior-461",
+"verbo": "perder",
+"contexto": "cuando me llamaste anoche, ya, yo, sus llaves.",
+"respuesta": "cuando me llamaste anoche, ya yo había perdido sus llaves.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había perdido"
+],
+[
+"sus llaves"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había perdido sus llaves.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había perdido sus llaves.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "entender-anterior-470",
+"verbo": "entender",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías entendido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias entendido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías entendido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías entendido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "entender-anterior-472",
+"verbo": "entender",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había entendido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había entendido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había entendido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había entendido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "acabar-anterior-481",
+"verbo": "acabar",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había acabado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había acabado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había acabado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había acabado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "acabar-anterior-483",
+"verbo": "acabar",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían acabado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian acabado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían acabado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían acabado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "tratar-anterior-492",
+"verbo": "tratar",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían tratado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian tratado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían tratado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían tratado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "tratar-anterior-494",
+"verbo": "tratar",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había tratado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había tratado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había tratado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había tratado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "trabajar-anterior-503",
+"verbo": "trabajar",
+"contexto": "cuando llegué anoche, ya, él, en casa.",
+"respuesta": "cuando llegué anoche, ya él había trabajado en casa.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había trabajado"
+],
+[
+"en casa"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había trabajado en casa.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había trabajado en casa.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "trabajar-anterior-505",
+"verbo": "trabajar",
+"contexto": "cuando me llamaste anoche, ya, nosotros, en casa.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos trabajado en casa.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos trabajado"
+],
+[
+"en casa"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos trabajado en casa.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos trabajado en casa.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "morir-anterior-514",
+"verbo": "morir",
+"contexto": "cuando llegué anoche, ya, yo, en el hospital.",
+"respuesta": "cuando llegué anoche, ya yo había muerto en el hospital.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había muerto"
+],
+[
+"en el hospital"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había muerto en el hospital.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había muerto en el hospital.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "morir-anterior-516",
+"verbo": "morir",
+"contexto": "cuando me llamaste anoche, ya, ella, en el hospital.",
+"respuesta": "cuando me llamaste anoche, ya ella había muerto en el hospital.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había muerto"
+],
+[
+"en el hospital"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había muerto en el hospital.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había muerto en el hospital.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "vivir-anterior-525",
+"verbo": "vivir",
+"contexto": "cuando llegué anoche, ya, yo, en Madrid.",
+"respuesta": "cuando llegué anoche, ya yo había vivido en Madrid.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había vivido"
+],
+[
+"en Madrid"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había vivido en Madrid.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había vivido en Madrid.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "vivir-anterior-527",
+"verbo": "vivir",
+"contexto": "cuando me llamaste anoche, ya, nosotros, en Madrid.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos vivido en Madrid.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos vivido"
+],
+[
+"en Madrid"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos vivido en Madrid.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos vivido en Madrid.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "valer-anterior-536",
+"verbo": "valer",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías valido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias valido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías valido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías valido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "valer-anterior-538",
+"verbo": "valer",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos valido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos valido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos valido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos valido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "entrar-anterior-547",
+"verbo": "entrar",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían entrado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian entrado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían entrado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían entrado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "entrar-anterior-549",
+"verbo": "entrar",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían entrado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian entrado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían entrado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían entrado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "empezar-anterior-558",
+"verbo": "empezar",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había empezado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había empezado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había empezado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había empezado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "empezar-anterior-560",
+"verbo": "empezar",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos empezado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos empezado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos empezado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos empezado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "conseguir-anterior-569",
+"verbo": "conseguir",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías conseguido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias conseguido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías conseguido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías conseguido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "conseguir-anterior-571",
+"verbo": "conseguir",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos conseguido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos conseguido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos conseguido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos conseguido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "pedir-anterior-580",
+"verbo": "pedir",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había pedido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había pedido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había pedido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había pedido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "pedir-anterior-582",
+"verbo": "pedir",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías pedido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias pedido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías pedido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías pedido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "intentar-anterior-591",
+"verbo": "intentar",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había intentado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había intentado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había intentado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había intentado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "intentar-anterior-593",
+"verbo": "intentar",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías intentado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias intentado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías intentado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías intentado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "traer-anterior-602",
+"verbo": "traer",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había traído mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había traido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había traido mucho.",
+"cat": "gram",
+"fix": "cuando llegué anoche, ya ella había traído mucho.",
+"note": "falta tilde: 'traido' debe ser 'traído'"
+},
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había traido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había traido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "traer-anterior-603",
+"verbo": "traer",
+"contexto": "hasta ese día, nunca antes, tú, mucho.",
+"respuesta": "hasta ese día, nunca antes tú habías traído mucho.",
+"pista": "La idea mira hacia un momento anterior dentro del pasado.",
+"grupos": [
+[
+"hasta ese día"
+],
+[
+"nunca antes"
+],
+[
+"tú"
+],
+[
+"habias traido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "hasta ese día, nunca antes tú habías traido mucho.",
+"cat": "gram",
+"fix": "hasta ese día, nunca antes tú habías traído mucho.",
+"note": "falta tilde: 'traido' debe ser 'traído'"
+}
+]
+},
+{
+"exercise": {
+"id": "traer-anterior-604",
+"verbo": "traer",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había traído mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había traido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había traido mucho.",
+"cat": "gram",
+"fix": "cuando me llamaste anoche, ya yo había traído mucho.",
+"note": "falta tilde: 'traido' debe ser 'traído'"
+},
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había traido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había traido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "importar-anterior-613",
+"verbo": "importar",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías importado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias importado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías importado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías importado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "importar-anterior-615",
+"verbo": "importar",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había importado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había importado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había importado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había importado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "preguntar-anterior-624",
+"verbo": "preguntar",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías preguntado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias preguntado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías preguntado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías preguntado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "preguntar-anterior-626",
+"verbo": "preguntar",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había preguntado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había preguntado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había preguntado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había preguntado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "terminar-anterior-635",
+"verbo": "terminar",
+"contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos terminado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos terminado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos terminado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos terminado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "terminar-anterior-637",
+"verbo": "terminar",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había terminado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había terminado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había terminado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había terminado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "suponer-anterior-646",
+"verbo": "suponer",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían suponido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian suponido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían suponido mucho.",
+"cat": "gram",
+"fix": "cuando llegué anoche, ya ellos habían supuesto mucho.",
+"note": "participio irregular incorrecto: 'suponido' debe ser 'supuesto'"
+},
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían suponido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían suponido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "suponer-anterior-647",
+"verbo": "suponer",
+"contexto": "hasta ese día, nunca antes, yo, mucho.",
+"respuesta": "hasta ese día, nunca antes yo había suponido mucho.",
+"pista": "La idea mira hacia un momento anterior dentro del pasado.",
+"grupos": [
+[
+"hasta ese día"
+],
+[
+"nunca antes"
+],
+[
+"yo"
+],
+[
+"había suponido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "hasta ese día, nunca antes yo había suponido mucho.",
+"cat": "gram",
+"fix": "hasta ese día, nunca antes yo había supuesto mucho.",
+"note": "participio irregular incorrecto: 'suponido' debe ser 'supuesto'"
+}
+]
+},
+{
+"exercise": {
+"id": "suponer-anterior-648",
+"verbo": "suponer",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había suponido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había suponido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había suponido mucho.",
+"cat": "gram",
+"fix": "cuando me llamaste anoche, ya yo había supuesto mucho.",
+"note": "participio irregular incorrecto: 'suponido' debe ser 'supuesto'"
+},
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había suponido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había suponido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "recordar-anterior-657",
+"verbo": "recordar",
+"contexto": "cuando llegué anoche, ya, yo, su infancia.",
+"respuesta": "cuando llegué anoche, ya yo había recordado su infancia.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había recordado"
+],
+[
+"su infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había recordado su infancia.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había recordado su infancia.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "recordar-anterior-659",
+"verbo": "recordar",
+"contexto": "cuando me llamaste anoche, ya, ella, esa historia.",
+"respuesta": "cuando me llamaste anoche, ya ella había recordado esa historia.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había recordado"
+],
+[
+"esa historia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había recordado esa historia.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había recordado esa historia.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "cambiar-anterior-668",
+"verbo": "cambiar",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían cambiado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian cambiado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían cambiado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían cambiado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "cambiar-anterior-670",
+"verbo": "cambiar",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías cambiado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias cambiado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías cambiado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías cambiado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "usar-anterior-679",
+"verbo": "usar",
+"contexto": "cuando llegué anoche, ya, él, el ordenador.",
+"respuesta": "cuando llegué anoche, ya él había usado el ordenador.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había usado"
+],
+[
+"el ordenador"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había usado el ordenador.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había usado el ordenador.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "usar-anterior-681",
+"verbo": "usar",
+"contexto": "cuando me llamaste anoche, ya, nosotros, el teléfono.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos usado el teléfono.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos usado"
+],
+[
+"el teléfono"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos usado el teléfono.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos usado el teléfono.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "comer-anterior-690",
+"verbo": "comer",
+"contexto": "cuando llegué anoche, ya, yo, tacos.",
+"respuesta": "cuando llegué anoche, ya yo había comido tacos.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había comido"
+],
+[
+"tacos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había comido tacos.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había comido tacos.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "comer-anterior-692",
+"verbo": "comer",
+"contexto": "cuando me llamaste anoche, ya, ella, la cena.",
+"respuesta": "cuando me llamaste anoche, ya ella había comido la cena.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había comido"
+],
+[
+"la cena"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había comido la cena.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había comido la cena.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "sacar-anterior-701",
+"verbo": "sacar",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había sacado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había sacado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había sacado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había sacado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "sacar-anterior-703",
+"verbo": "sacar",
+"contexto": "cuando me llamaste anoche, ya, él, mucho.",
+"respuesta": "cuando me llamaste anoche, ya él había sacado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había sacado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya él había sacado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, él ya había sacado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "mantener-anterior-712",
+"verbo": "mantener",
+"contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos mantenido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos mantenido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos mantenido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos mantenido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "mantener-anterior-714",
+"verbo": "mantener",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos mantenido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos mantenido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos mantenido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos mantenido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "contar-anterior-723",
+"verbo": "contar",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había contado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había contado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había contado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había contado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "contar-anterior-725",
+"verbo": "contar",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos contado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos contado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos contado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos contado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "olvidar-anterior-734",
+"verbo": "olvidar",
+"contexto": "cuando llegué anoche, ya, tú, su nombre.",
+"respuesta": "cuando llegué anoche, ya tú habías olvidado su nombre.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias olvidado"
+],
+[
+"su nombre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías olvidado su nombre.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías olvidado su nombre.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "olvidar-anterior-736",
+"verbo": "olvidar",
+"contexto": "cuando me llamaste anoche, ya, ellos, las llaves.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían olvidado las llaves.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian olvidado"
+],
+[
+"las llaves"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían olvidado las llaves.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían olvidado las llaves.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "preocupar-anterior-745",
+"verbo": "preocupar",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había preocupado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había preocupado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había preocupado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había preocupado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "preocupar-anterior-747",
+"verbo": "preocupar",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había preocupado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había preocupado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había preocupado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había preocupado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "ganar-anterior-756",
+"verbo": "ganar",
+"contexto": "cuando llegué anoche, ya, ellos, el partido.",
+"respuesta": "cuando llegué anoche, ya ellos habían ganado el partido.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian ganado"
+],
+[
+"el partido"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían ganado el partido.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían ganado el partido.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "ganar-anterior-758",
+"verbo": "ganar",
+"contexto": "cuando me llamaste anoche, ya, yo, el partido.",
+"respuesta": "cuando me llamaste anoche, ya yo había ganado el partido.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había ganado"
+],
+[
+"el partido"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había ganado el partido.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había ganado el partido.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "abrir-anterior-767",
+"verbo": "abrir",
+"contexto": "cuando llegué anoche, ya, ellos, la puerta.",
+"respuesta": "cuando llegué anoche, ya ellos habían abierto la puerta.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian abierto"
+],
+[
+"la puerta"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían abierto la puerta.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían abierto la puerta.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "abrir-anterior-769",
+"verbo": "abrir",
+"contexto": "cuando me llamaste anoche, ya, tú, la puerta.",
+"respuesta": "cuando me llamaste anoche, ya tú habías abierto la puerta.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias abierto"
+],
+[
+"la puerta"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías abierto la puerta.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías abierto la puerta.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "jugar-anterior-778",
+"verbo": "jugar",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían jugado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian jugado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían jugado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían jugado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "jugar-anterior-780",
+"verbo": "jugar",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías jugado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias jugado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías jugado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías jugado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "ocurrir-anterior-789",
+"verbo": "ocurrir",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había ocurrido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había ocurrido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había ocurrido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había ocurrido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "ocurrir-anterior-791",
+"verbo": "ocurrir",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había ocurrido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había ocurrido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había ocurrido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había ocurrido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "pagar-anterior-800",
+"verbo": "pagar",
+"contexto": "cuando llegué anoche, ya, ellos, mucho dinero.",
+"respuesta": "cuando llegué anoche, ya ellos habían pagado mucho dinero.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian pagado"
+],
+[
+"mucho dinero"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían pagado mucho dinero.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían pagado mucho dinero.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "pagar-anterior-802",
+"verbo": "pagar",
+"contexto": "cuando me llamaste anoche, ya, él, mucho dinero.",
+"respuesta": "cuando me llamaste anoche, ya él había pagado mucho dinero.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había pagado"
+],
+[
+"mucho dinero"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya él había pagado mucho dinero.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, él ya había pagado mucho dinero.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "permitir-anterior-811",
+"verbo": "permitir",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había permitido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había permitido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había permitido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había permitido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "permitir-anterior-813",
+"verbo": "permitir",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había permitido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había permitido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había permitido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había permitido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "recibir-anterior-822",
+"verbo": "recibir",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había recibido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había recibido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había recibido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había recibido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "recibir-anterior-824",
+"verbo": "recibir",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías recibido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias recibido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías recibido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías recibido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "leer-anterior-833",
+"verbo": "leer",
+"contexto": "cuando llegué anoche, ya, yo, un libro.",
+"respuesta": "cuando llegué anoche, ya yo había leido un libro.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había leido"
+],
+[
+"un libro"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había leido un libro.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había leido un libro.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "leer-anterior-835",
+"verbo": "leer",
+"contexto": "cuando me llamaste anoche, ya, tú, el periódico.",
+"respuesta": "cuando me llamaste anoche, ya tú habías leido el periódico.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias leido"
+],
+[
+"el periódico"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías leido el periódico.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías leido el periódico.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "significar-anterior-844",
+"verbo": "significar",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había significado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había significado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había significado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había significado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "significar-anterior-846",
+"verbo": "significar",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos significado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos significado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos significado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos significado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "suceder-anterior-855",
+"verbo": "suceder",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había sucedido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había sucedido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había sucedido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había sucedido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "suceder-anterior-857",
+"verbo": "suceder",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos sucedido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos sucedido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos sucedido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos sucedido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "dormir-anterior-866",
+"verbo": "dormir",
+"contexto": "cuando llegué anoche, ya, nosotros, bien.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos dormido bien.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos dormido"
+],
+[
+"bien"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos dormido bien.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos dormido bien.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "dormir-anterior-868",
+"verbo": "dormir",
+"contexto": "cuando me llamaste anoche, ya, ellos, bien.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían dormido bien.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian dormido"
+],
+[
+"bien"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían dormido bien.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían dormido bien.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "caer-anterior-877",
+"verbo": "caer",
+"contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos caído mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos caido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos caido mucho.",
+"cat": "gram",
+"fix": "cuando llegué anoche, ya nosotros habíamos caído mucho.",
+"note": "falta tilde: 'caido' debe ser 'caído'"
+},
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos caido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos caido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "caer-anterior-878",
+"verbo": "caer",
+"contexto": "hasta ese día, nunca antes, ella, mucho.",
+"respuesta": "hasta ese día, nunca antes ella había caído mucho.",
+"pista": "La idea mira hacia un momento anterior dentro del pasado.",
+"grupos": [
+[
+"hasta ese día"
+],
+[
+"nunca antes"
+],
+[
+"ella"
+],
+[
+"había caido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "hasta ese día, nunca antes ella había caido mucho.",
+"cat": "gram",
+"fix": "hasta ese día, nunca antes ella había caído mucho.",
+"note": "falta tilde: 'caido' debe ser 'caído'"
+}
+]
+},
+{
+"exercise": {
+"id": "caer-anterior-879",
+"verbo": "caer",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías caído mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias caido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías caido mucho.",
+"cat": "gram",
+"fix": "cuando me llamaste anoche, ya tú habías caído mucho.",
+"note": "falta tilde: 'caido' debe ser 'caído'"
+},
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías caido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías caido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "enviar-anterior-888",
+"verbo": "enviar",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había enviado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había enviado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había enviado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había enviado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "enviar-anterior-890",
+"verbo": "enviar",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había enviado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había enviado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había enviado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había enviado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "acercar-anterior-899",
+"verbo": "acercar",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había acercado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había acercado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había acercado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había acercado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "acercar-anterior-901",
+"verbo": "acercar",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos acercado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos acercado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos acercado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos acercado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "mover-anterior-910",
+"verbo": "mover",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían movido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian movido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían movido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían movido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "mover-anterior-912",
+"verbo": "mover",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había movido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había movido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había movido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había movido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "comprar-anterior-921",
+"verbo": "comprar",
+"contexto": "cuando llegué anoche, ya, ellos, un regalo.",
+"respuesta": "cuando llegué anoche, ya ellos habían comprado un regalo.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian comprado"
+],
+[
+"un regalo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían comprado un regalo.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían comprado un regalo.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "comprar-anterior-923",
+"verbo": "comprar",
+"contexto": "cuando me llamaste anoche, ya, él, un regalo.",
+"respuesta": "cuando me llamaste anoche, ya él había comprado un regalo.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había comprado"
+],
+[
+"un regalo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya él había comprado un regalo.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, él ya había comprado un regalo.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "comenzar-anterior-932",
+"verbo": "comenzar",
+"contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos comenzado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos comenzado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos comenzado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos comenzado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "comenzar-anterior-934",
+"verbo": "comenzar",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías comenzado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias comenzado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías comenzado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías comenzado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "regresar-anterior-943",
+"verbo": "regresar",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías regresado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias regresado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías regresado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías regresado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "regresar-anterior-945",
+"verbo": "regresar",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había regresado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había regresado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había regresado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había regresado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "echar-anterior-954",
+"verbo": "echar",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había echado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había echado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había echado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había echado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "echar-anterior-956",
+"verbo": "echar",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había echado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había echado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había echado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había echado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "convertir-anterior-965",
+"verbo": "convertir",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había convertido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había convertido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había convertido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había convertido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "convertir-anterior-967",
+"verbo": "convertir",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían convertido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian convertido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían convertido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían convertido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "tocar-anterior-976",
+"verbo": "tocar",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había tocado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había tocado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había tocado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había tocado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "tocar-anterior-978",
+"verbo": "tocar",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había tocado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había tocado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había tocado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había tocado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "escribir-anterior-987",
+"verbo": "escribir",
+"contexto": "cuando llegué anoche, ya, ella, un mensaje.",
+"respuesta": "cuando llegué anoche, ya ella había escrito un mensaje.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había escrito"
+],
+[
+"un mensaje"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había escrito un mensaje.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había escrito un mensaje.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "escribir-anterior-989",
+"verbo": "escribir",
+"contexto": "cuando me llamaste anoche, ya, ella, una carta.",
+"respuesta": "cuando me llamaste anoche, ya ella había escrito una carta.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había escrito"
+],
+[
+"una carta"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había escrito una carta.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había escrito una carta.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "meter-anterior-998",
+"verbo": "meter",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había metido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había metido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había metido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había metido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "meter-anterior-1000",
+"verbo": "meter",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos metido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos metido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos metido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos metido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "detener-anterior-1009",
+"verbo": "detener",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías detenido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias detenido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías detenido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías detenido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "detener-anterior-1011",
+"verbo": "detener",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos detenido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos detenido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos detenido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos detenido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "decidir-anterior-1020",
+"verbo": "decidir",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había decidido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había decidido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había decidido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había decidido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "decidir-anterior-1022",
+"verbo": "decidir",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían decidido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian decidido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían decidido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían decidido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "correr-anterior-1031",
+"verbo": "correr",
+"contexto": "cuando llegué anoche, ya, yo, en el parque.",
+"respuesta": "cuando llegué anoche, ya yo había corrido en el parque.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había corrido"
+],
+[
+"en el parque"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había corrido en el parque.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había corrido en el parque.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "correr-anterior-1033",
+"verbo": "correr",
+"contexto": "cuando me llamaste anoche, ya, tú, en el parque.",
+"respuesta": "cuando me llamaste anoche, ya tú habías corrido en el parque.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias corrido"
+],
+[
+"en el parque"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías corrido en el parque.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías corrido en el parque.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "funcionar-anterior-1042",
+"verbo": "funcionar",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había funcionado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había funcionado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había funcionado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había funcionado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "funcionar-anterior-1044",
+"verbo": "funcionar",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos funcionado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos funcionado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos funcionado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos funcionado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "presentar-anterior-1053",
+"verbo": "presentar",
+"contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos presentado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos presentado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos presentado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos presentado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "presentar-anterior-1055",
+"verbo": "presentar",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había presentado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había presentado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había presentado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había presentado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "existir-anterior-1064",
+"verbo": "existir",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había existido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había existido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había existido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había existido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "existir-anterior-1066",
+"verbo": "existir",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían existido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian existido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían existido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían existido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "mostrar-anterior-1075",
+"verbo": "mostrar",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había mostrado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había mostrado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había mostrado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había mostrado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "mostrar-anterior-1077",
+"verbo": "mostrar",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían mostrado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian mostrado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían mostrado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían mostrado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "subir-anterior-1086",
+"verbo": "subir",
+"contexto": "cuando llegué anoche, ya, tú, las escaleras.",
+"respuesta": "cuando llegué anoche, ya tú habías subido las escaleras.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias subido"
+],
+[
+"las escaleras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías subido las escaleras.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías subido las escaleras.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "subir-anterior-1088",
+"verbo": "subir",
+"contexto": "cuando me llamaste anoche, ya, tú, al autobús.",
+"respuesta": "cuando me llamaste anoche, ya tú habías subido al autobús.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias subido"
+],
+[
+"al autobús"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías subido al autobús.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías subido al autobús.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "servir-anterior-1097",
+"verbo": "servir",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había servido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había servido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había servido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había servido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "servir-anterior-1099",
+"verbo": "servir",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos servido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos servido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos servido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos servido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "sentar-anterior-1108",
+"verbo": "sentar",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías sentado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias sentado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías sentado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías sentado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "sentar-anterior-1110",
+"verbo": "sentar",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos sentado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos sentado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos sentado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos sentado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "salvar-anterior-1119",
+"verbo": "salvar",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había salvado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había salvado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había salvado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había salvado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "salvar-anterior-1121",
+"verbo": "salvar",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías salvado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias salvado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías salvado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías salvado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "explicar-anterior-1130",
+"verbo": "explicar",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían explicado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian explicado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían explicado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían explicado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "explicar-anterior-1132",
+"verbo": "explicar",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había explicado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había explicado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había explicado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había explicado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "levantar-anterior-1141",
+"verbo": "levantar",
+"contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos levantado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos levantado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos levantado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos levantado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "levantar-anterior-1143",
+"verbo": "levantar",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había levantado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había levantado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había levantado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había levantado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "considerar-anterior-1152",
+"verbo": "considerar",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había considerado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había considerado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había considerado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había considerado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "considerar-anterior-1154",
+"verbo": "considerar",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había considerado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había considerado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había considerado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había considerado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "asegurar-anterior-1163",
+"verbo": "asegurar",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías asegurado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias asegurado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías asegurado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías asegurado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "asegurar-anterior-1165",
+"verbo": "asegurar",
+"contexto": "cuando me llamaste anoche, ya, él, mucho.",
+"respuesta": "cuando me llamaste anoche, ya él había asegurado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había asegurado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya él había asegurado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, él ya había asegurado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "aceptar-anterior-1174",
+"verbo": "aceptar",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían aceptado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian aceptado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían aceptado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían aceptado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "aceptar-anterior-1176",
+"verbo": "aceptar",
+"contexto": "cuando me llamaste anoche, ya, él, mucho.",
+"respuesta": "cuando me llamaste anoche, ya él había aceptado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había aceptado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya él había aceptado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, él ya había aceptado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "quitar-anterior-1185",
+"verbo": "quitar",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había quitado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había quitado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había quitado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había quitado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "quitar-anterior-1187",
+"verbo": "quitar",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos quitado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos quitado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos quitado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos quitado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "amar-anterior-1196",
+"verbo": "amar",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían amado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian amado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían amado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían amado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "amar-anterior-1198",
+"verbo": "amar",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos amado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos amado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos amado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos amado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "coger-anterior-1207",
+"verbo": "coger",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había cogido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había cogido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había cogido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había cogido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "coger-anterior-1209",
+"verbo": "coger",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había cogido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había cogido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había cogido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había cogido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "disparar-anterior-1218",
+"verbo": "disparar",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había disparado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había disparado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había disparado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había disparado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "disparar-anterior-1220",
+"verbo": "disparar",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías disparado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias disparado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías disparado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías disparado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "disculpar-anterior-1229",
+"verbo": "disculpar",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había disculpado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había disculpado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había disculpado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había disculpado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "disculpar-anterior-1231",
+"verbo": "disculpar",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían disculpado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian disculpado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían disculpado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían disculpado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "beber-anterior-1240",
+"verbo": "beber",
+"contexto": "cuando llegué anoche, ya, ella, café.",
+"respuesta": "cuando llegué anoche, ya ella había bebido café.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había bebido"
+],
+[
+"café"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había bebido café.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había bebido café.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "beber-anterior-1242",
+"verbo": "beber",
+"contexto": "cuando me llamaste anoche, ya, ella, café.",
+"respuesta": "cuando me llamaste anoche, ya ella había bebido café.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había bebido"
+],
+[
+"café"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había bebido café.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había bebido café.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "vender-anterior-1251",
+"verbo": "vender",
+"contexto": "cuando llegué anoche, ya, ella, su coche.",
+"respuesta": "cuando llegué anoche, ya ella había vendido su coche.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había vendido"
+],
+[
+"su coche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había vendido su coche.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había vendido su coche.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "vender-anterior-1253",
+"verbo": "vender",
+"contexto": "cuando me llamaste anoche, ya, él, la casa.",
+"respuesta": "cuando me llamaste anoche, ya él había vendido la casa.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había vendido"
+],
+[
+"la casa"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya él había vendido la casa.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, él ya había vendido la casa.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "perdonar-anterior-1262",
+"verbo": "perdonar",
+"contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos perdonado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos perdonado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos perdonado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos perdonado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "perdonar-anterior-1264",
+"verbo": "perdonar",
+"contexto": "cuando me llamaste anoche, ya, él, mucho.",
+"respuesta": "cuando me llamaste anoche, ya él había perdonado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había perdonado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya él había perdonado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, él ya había perdonado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "aparecer-anterior-1273",
+"verbo": "aparecer",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían aparecido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian aparecido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían aparecido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían aparecido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "aparecer-anterior-1275",
+"verbo": "aparecer",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías aparecido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias aparecido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías aparecido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías aparecido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-anterior-1284",
+"verbo": "casar",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías casado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias casado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías casado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías casado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-anterior-1286",
+"verbo": "casar",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían casado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian casado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían casado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían casado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "lograr-anterior-1295",
+"verbo": "lograr",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había logrado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había logrado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había logrado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había logrado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "lograr-anterior-1297",
+"verbo": "lograr",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías logrado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias logrado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías logrado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías logrado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "robar-anterior-1306",
+"verbo": "robar",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían robado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian robado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían robado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían robado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "robar-anterior-1308",
+"verbo": "robar",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había robado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había robado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había robado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había robado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "prometer-anterior-1317",
+"verbo": "prometer",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había prometido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había prometido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había prometido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había prometido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "prometer-anterior-1319",
+"verbo": "prometer",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían prometido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian prometido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían prometido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían prometido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "enseñar-anterior-1328",
+"verbo": "enseñar",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían enseñado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian enseñado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían enseñado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían enseñado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "enseñar-anterior-1330",
+"verbo": "enseñar",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había enseñado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había enseñado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había enseñado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había enseñado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "descubrir-anterior-1339",
+"verbo": "descubrir",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había descubrido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había descubrido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había descubrido mucho.",
+"cat": "gram",
+"fix": "cuando llegué anoche, ya ella había descubierto mucho.",
+"note": "participio irregular incorrecto: 'descubrido' debe ser 'descubierto'"
+},
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había descubrido mucho.",
+"cat": "gram",
+"fix": "cuando llegué anoche, ya ella había descubierto mucho.",
+"note": "participio irregular incorrecto: 'cubrido' debe ser 'cubierto'"
+},
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había descubrido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había descubrido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "descubrir-anterior-1340",
+"verbo": "descubrir",
+"contexto": "hasta ese día, nunca antes, ellos, mucho.",
+"respuesta": "hasta ese día, nunca antes ellos habían descubrido mucho.",
+"pista": "La idea mira hacia un momento anterior dentro del pasado.",
+"grupos": [
+[
+"hasta ese día"
+],
+[
+"nunca antes"
+],
+[
+"ellos"
+],
+[
+"habian descubrido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "hasta ese día, nunca antes ellos habían descubrido mucho.",
+"cat": "gram",
+"fix": "hasta ese día, nunca antes ellos habían descubierto mucho.",
+"note": "participio irregular incorrecto: 'descubrido' debe ser 'descubierto'"
+},
+{
+"field": "respuesta",
+"text": "hasta ese día, nunca antes ellos habían descubrido mucho.",
+"cat": "gram",
+"fix": "hasta ese día, nunca antes ellos habían descubierto mucho.",
+"note": "participio irregular incorrecto: 'cubrido' debe ser 'cubierto'"
+}
+]
+},
+{
+"exercise": {
+"id": "descubrir-anterior-1341",
+"verbo": "descubrir",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían descubrido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian descubrido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían descubrido mucho.",
+"cat": "gram",
+"fix": "cuando me llamaste anoche, ya ellos habían descubierto mucho.",
+"note": "participio irregular incorrecto: 'descubrido' debe ser 'descubierto'"
+},
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían descubrido mucho.",
+"cat": "gram",
+"fix": "cuando me llamaste anoche, ya ellos habían descubierto mucho.",
+"note": "participio irregular incorrecto: 'cubrido' debe ser 'cubierto'"
+},
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían descubrido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían descubrido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "andar-anterior-1350",
+"verbo": "andar",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había andado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había andado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había andado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había andado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "andar-anterior-1352",
+"verbo": "andar",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían andado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian andado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían andado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían andado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "sonar-anterior-1361",
+"verbo": "sonar",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había sonado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había sonado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había sonado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había sonado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "sonar-anterior-1363",
+"verbo": "sonar",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos sonado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos sonado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos sonado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos sonado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "referir-anterior-1372",
+"verbo": "referir",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había referido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había referido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había referido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había referido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "referir-anterior-1374",
+"verbo": "referir",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías referido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias referido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías referido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías referido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "encantar-anterior-1383",
+"verbo": "encantar",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había encantado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había encantado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había encantado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había encantado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "encantar-anterior-1385",
+"verbo": "encantar",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había encantado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había encantado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había encantado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había encantado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "imaginar-anterior-1394",
+"verbo": "imaginar",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había imaginado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había imaginado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había imaginado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había imaginado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "imaginar-anterior-1396",
+"verbo": "imaginar",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había imaginado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había imaginado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había imaginado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había imaginado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "aprender-anterior-1405",
+"verbo": "aprender",
+"contexto": "cuando llegué anoche, ya, nosotros, a conducir.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos aprendido a conducir.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos aprendido"
+],
+[
+"a conducir"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos aprendido a conducir.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos aprendido a conducir.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "aprender-anterior-1407",
+"verbo": "aprender",
+"contexto": "cuando me llamaste anoche, ya, tú, a conducir.",
+"respuesta": "cuando me llamaste anoche, ya tú habías aprendido a conducir.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias aprendido"
+],
+[
+"a conducir"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías aprendido a conducir.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías aprendido a conducir.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "realizar-anterior-1416",
+"verbo": "realizar",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías realizado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias realizado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías realizado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías realizado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "realizar-anterior-1418",
+"verbo": "realizar",
+"contexto": "cuando me llamaste anoche, ya, él, mucho.",
+"respuesta": "cuando me llamaste anoche, ya él había realizado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había realizado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya él había realizado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, él ya había realizado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "confiar-anterior-1427",
+"verbo": "confiar",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había confiado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había confiado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había confiado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había confiado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "confiar-anterior-1429",
+"verbo": "confiar",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías confiado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias confiado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías confiado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías confiado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "callar-anterior-1438",
+"verbo": "callar",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había callado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había callado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había callado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había callado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "callar-anterior-1440",
+"verbo": "callar",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían callado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian callado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían callado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían callado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "cerrar-anterior-1449",
+"verbo": "cerrar",
+"contexto": "cuando llegué anoche, ya, yo, la puerta.",
+"respuesta": "cuando llegué anoche, ya yo había cerrado la puerta.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había cerrado"
+],
+[
+"la puerta"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había cerrado la puerta.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había cerrado la puerta.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "cerrar-anterior-1451",
+"verbo": "cerrar",
+"contexto": "cuando me llamaste anoche, ya, ellos, la tienda.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían cerrado la tienda.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian cerrado"
+],
+[
+"la tienda"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían cerrado la tienda.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían cerrado la tienda.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "ofrecer-anterior-1460",
+"verbo": "ofrecer",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había ofrecido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había ofrecido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había ofrecido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había ofrecido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "ofrecer-anterior-1462",
+"verbo": "ofrecer",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías ofrecido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias ofrecido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías ofrecido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías ofrecido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "bajar-anterior-1471",
+"verbo": "bajar",
+"contexto": "cuando llegué anoche, ya, nosotros, las escaleras.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos bajado las escaleras.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos bajado"
+],
+[
+"las escaleras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos bajado las escaleras.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos bajado las escaleras.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "bajar-anterior-1473",
+"verbo": "bajar",
+"contexto": "cuando me llamaste anoche, ya, ellos, las escaleras.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían bajado las escaleras.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian bajado"
+],
+[
+"las escaleras"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían bajado las escaleras.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían bajado las escaleras.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "desear-anterior-1482",
+"verbo": "desear",
+"contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos deseado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos deseado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos deseado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos deseado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "desear-anterior-1484",
+"verbo": "desear",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había deseado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había deseado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había deseado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había deseado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "cuidar-anterior-1493",
+"verbo": "cuidar",
+"contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos cuidado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos cuidado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos cuidado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos cuidado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "cuidar-anterior-1495",
+"verbo": "cuidar",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había cuidado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había cuidado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había cuidado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había cuidado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "preparar-anterior-1504",
+"verbo": "preparar",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había preparado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había preparado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había preparado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había preparado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "preparar-anterior-1506",
+"verbo": "preparar",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había preparado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había preparado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había preparado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había preparado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "elegir-anterior-1515",
+"verbo": "elegir",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había elegido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había elegido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había elegido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había elegido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "elegir-anterior-1517",
+"verbo": "elegir",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos elegido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos elegido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos elegido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos elegido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "parar-anterior-1526",
+"verbo": "parar",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías parado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias parado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías parado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías parado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "parar-anterior-1528",
+"verbo": "parar",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías parado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias parado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías parado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías parado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "desaparecer-anterior-1537",
+"verbo": "desaparecer",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había desaparecido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había desaparecido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había desaparecido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había desaparecido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "desaparecer-anterior-1539",
+"verbo": "desaparecer",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos desaparecido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos desaparecido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos desaparecido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos desaparecido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "mentir-anterior-1548",
+"verbo": "mentir",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había mentido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había mentido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había mentido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había mentido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "mentir-anterior-1550",
+"verbo": "mentir",
+"contexto": "cuando me llamaste anoche, ya, él, mucho.",
+"respuesta": "cuando me llamaste anoche, ya él había mentido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había mentido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya él había mentido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, él ya había mentido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "romper-anterior-1559",
+"verbo": "romper",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías roto mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias roto"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías roto mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías roto mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "romper-anterior-1561",
+"verbo": "romper",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había roto mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había roto"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había roto mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había roto mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "invitar-anterior-1570",
+"verbo": "invitar",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían invitado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian invitado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían invitado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían invitado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "invitar-anterior-1572",
+"verbo": "invitar",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había invitado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había invitado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había invitado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había invitado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "obtener-anterior-1581",
+"verbo": "obtener",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había obtenido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había obtenido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había obtenido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había obtenido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "obtener-anterior-1583",
+"verbo": "obtener",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había obtenido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había obtenido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había obtenido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había obtenido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "molestar-anterior-1592",
+"verbo": "molestar",
+"contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+"respuesta": "cuando llegué anoche, ya nosotros habíamos molestado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos molestado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya nosotros habíamos molestado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, nosotros ya habíamos molestado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "molestar-anterior-1594",
+"verbo": "molestar",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos molestado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos molestado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos molestado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos molestado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "utilizar-anterior-1603",
+"verbo": "utilizar",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías utilizado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias utilizado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías utilizado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías utilizado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "utilizar-anterior-1605",
+"verbo": "utilizar",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían utilizado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian utilizado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían utilizado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían utilizado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "tirar-anterior-1614",
+"verbo": "tirar",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había tirado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había tirado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había tirado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había tirado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "tirar-anterior-1616",
+"verbo": "tirar",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían tirado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian tirado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían tirado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían tirado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "despertar-anterior-1625",
+"verbo": "despertar",
+"contexto": "cuando llegué anoche, ya, yo, muy tarde.",
+"respuesta": "cuando llegué anoche, ya yo había despertado muy tarde.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había despertado"
+],
+[
+"muy tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había despertado muy tarde.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había despertado muy tarde.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "despertar-anterior-1627",
+"verbo": "despertar",
+"contexto": "cuando me llamaste anoche, ya, ella, temprano.",
+"respuesta": "cuando me llamaste anoche, ya ella había despertado temprano.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había despertado"
+],
+[
+"temprano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había despertado temprano.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había despertado temprano.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "resultar-anterior-1636",
+"verbo": "resultar",
+"contexto": "cuando llegué anoche, ya, ella, mucho.",
+"respuesta": "cuando llegué anoche, ya ella había resultado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había resultado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ella había resultado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ella ya había resultado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "resultar-anterior-1638",
+"verbo": "resultar",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había resultado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había resultado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había resultado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había resultado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "continuar-anterior-1647",
+"verbo": "continuar",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había continuado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había continuado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había continuado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había continuado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "continuar-anterior-1649",
+"verbo": "continuar",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían continuado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian continuado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían continuado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían continuado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "responder-anterior-1658",
+"verbo": "responder",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había respondido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había respondido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había respondido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había respondido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "responder-anterior-1660",
+"verbo": "responder",
+"contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+"respuesta": "cuando me llamaste anoche, ya nosotros habíamos respondido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"nosotros"
+],
+[
+"habíamos respondido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya nosotros habíamos respondido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, nosotros ya habíamos respondido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "arreglar-anterior-1669",
+"verbo": "arreglar",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían arreglado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian arreglado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían arreglado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían arreglado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "arreglar-anterior-1671",
+"verbo": "arreglar",
+"contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+"respuesta": "cuando me llamaste anoche, ya tú habías arreglado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias arreglado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya tú habías arreglado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, tú ya habías arreglado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "producir-anterior-1680",
+"verbo": "producir",
+"contexto": "cuando llegué anoche, ya, ellos, mucho.",
+"respuesta": "cuando llegué anoche, ya ellos habían producido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian producido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya ellos habían producido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, ellos ya habían producido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "producir-anterior-1682",
+"verbo": "producir",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había producido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había producido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había producido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había producido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "pesar-anterior-1691",
+"verbo": "pesar",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había pesado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había pesado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había pesado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había pesado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "pesar-anterior-1693",
+"verbo": "pesar",
+"contexto": "cuando me llamaste anoche, ya, él, mucho.",
+"respuesta": "cuando me llamaste anoche, ya él había pesado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había pesado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya él había pesado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, él ya había pesado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "probar-anterior-1702",
+"verbo": "probar",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había probado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había probado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había probado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había probado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "probar-anterior-1704",
+"verbo": "probar",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían probado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian probado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían probado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían probado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "bastar-anterior-1713",
+"verbo": "bastar",
+"contexto": "cuando llegué anoche, ya, tú, mucho.",
+"respuesta": "cuando llegué anoche, ya tú habías bastado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"tú"
+],
+[
+"habias bastado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya tú habías bastado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, tú ya habías bastado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "bastar-anterior-1715",
+"verbo": "bastar",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había bastado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había bastado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había bastado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había bastado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "evitar-anterior-1724",
+"verbo": "evitar",
+"contexto": "cuando llegué anoche, ya, yo, mucho.",
+"respuesta": "cuando llegué anoche, ya yo había evitado mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había evitado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya yo había evitado mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, yo ya había evitado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "evitar-anterior-1726",
+"verbo": "evitar",
+"contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ellos habían evitado mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ellos"
+],
+[
+"habian evitado"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ellos habían evitado mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ellos ya habían evitado mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-anterior-1735",
+"verbo": "soler",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había solido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había solido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había solido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había solido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-anterior-1737",
+"verbo": "soler",
+"contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+"respuesta": "cuando me llamaste anoche, ya ella había solido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"ella"
+],
+[
+"había solido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya ella había solido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, ella ya había solido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "reconocer-anterior-1746",
+"verbo": "reconocer",
+"contexto": "cuando llegué anoche, ya, él, mucho.",
+"respuesta": "cuando llegué anoche, ya él había reconocido mucho.",
+"pista": "Una acción ya estaba completa antes de otra.",
+"grupos": [
+[
+"cuando llegué anoche"
+],
+[
+"ya"
+],
+[
+"él"
+],
+[
+"había reconocido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando llegué anoche, ya él había reconocido mucho.",
+"cat": "unnat",
+"fix": "cuando llegué anoche, él ya había reconocido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+},
+{
+"exercise": {
+"id": "reconocer-anterior-1748",
+"verbo": "reconocer",
+"contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+"respuesta": "cuando me llamaste anoche, ya yo había reconocido mucho.",
+"pista": "Fíjate en el orden de dos acciones pasadas.",
+"grupos": [
+[
+"cuando me llamaste anoche"
+],
+[
+"ya"
+],
+[
+"yo"
+],
+[
+"había reconocido"
+],
+[
+"mucho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "cuando me llamaste anoche, ya yo había reconocido mucho.",
+"cat": "unnat",
+"fix": "cuando me llamaste anoche, yo ya había reconocido mucho.",
+"note": "orden 'ya + sujeto' antepuesto es dialectal/marcado; más natural 'sujeto ya'"
+}
+]
+}
+]

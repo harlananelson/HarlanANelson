@@ -1,0 +1,9151 @@
+[
+{
+"exercise": {
+"id": "existir-subjuntivo-5544",
+"verbo": "existir",
+"contexto": "es necesario que, usted, sin demora (subjuntivo)",
+"respuesta": "es necesario que usted exista sin demora.",
+"pista": "La expresión impersonal 'es necesario que' exige el subjuntivo.",
+"grupos": [
+[
+"es necesario que"
+],
+[
+"exista"
+],
+[
+"usted"
+],
+[
+"sin demora"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "es necesario que usted exista sin demora.",
+"cat": "sem",
+"fix": "es necesario que usted responda sin demora.",
+"note": "'existir' con plazos ('mañana', 'sin demora') sobre un sujeto animado resulta extraño/sin sentido natural"
+}
+]
+},
+{
+"exercise": {
+"id": "nacer-subjuntivo-5683",
+"verbo": "nacer",
+"contexto": "es posible que, nosotros, es posible que, nosotros, la próxima semana (subjuntivo) (subjuntivo)",
+"respuesta": "es posible que nosotros nazcamos la próxima semana.",
+"pista": "'Es posible que' expresa posibilidad y requiere el subjuntivo.",
+"grupos": [
+[
+"es posible que"
+],
+[
+"nazcamos"
+],
+[
+"nosotros"
+],
+[
+"la proxima semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "es posible que nosotros nazcamos la próxima semana.",
+"cat": "sem",
+"fix": "es posible que el bebé nazca la próxima semana.",
+"note": "'nacer' programado para un sujeto adulto ('nosotros', 'yo', 'tú') no tiene sentido natural sin contexto narrativo especial"
+}
+]
+},
+{
+"exercise": {
+"id": "nacer-subjuntivo-5684",
+"verbo": "nacer",
+"contexto": "para que, yo, sin dificultad (subjuntivo)",
+"respuesta": "para que yo nazca sin dificultad.",
+"pista": "'Para que' introduce un propósito y siempre lleva subjuntivo.",
+"grupos": [
+[
+"para que"
+],
+[
+"nazca"
+],
+[
+"yo"
+],
+[
+"sin dificultad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "para que yo nazca sin dificultad.",
+"cat": "sem",
+"fix": "para que el bebé nazca sin dificultad.",
+"note": "'nacer' programado para un sujeto adulto ('nosotros', 'yo', 'tú') no tiene sentido natural sin contexto narrativo especial"
+}
+]
+},
+{
+"exercise": {
+"id": "nacer-subjuntivo-5685",
+"verbo": "nacer",
+"contexto": "antes de que, tú, de nuevo (subjuntivo)",
+"respuesta": "antes de que tú nazcas de nuevo.",
+"pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+"grupos": [
+[
+"antes de que"
+],
+[
+"nazcas"
+],
+[
+"tu"
+],
+[
+"de nuevo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "antes de que tú nazcas de nuevo.",
+"cat": "sem",
+"fix": "antes de que vuelvas a intentarlo de nuevo.",
+"note": "'nacer' programado para un sujeto adulto ('nosotros', 'yo', 'tú') no tiene sentido natural sin contexto narrativo especial"
+}
+]
+},
+{
+"exercise": {
+"id": "acercar-subj_imperfecto-5992",
+"verbo": "acercar",
+"contexto": "me gustaria que, mi hermano, a la mesa",
+"respuesta": "me gustaria que mi hermano acercara a la mesa",
+"pista": "conditional desire triggers imperfect subjunctive",
+"grupos": [
+[
+"me gustaria que"
+],
+[
+"acercara",
+"acercase"
+],
+[
+"mi hermano"
+],
+[
+"a la mesa"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "me gustaria que mi hermano acercara a la mesa",
+"cat": "gram",
+"fix": "me gustaria que mi hermano se acercara a la mesa",
+"note": "acercar needs reflexive se for oneself approaching, missing here"
+}
+]
+},
+{
+"exercise": {
+"id": "acercar-subj_imperfecto-5993",
+"verbo": "acercar",
+"contexto": "seria bueno que, mi madre, al fuego",
+"respuesta": "seria bueno que mi madre acercara al fuego",
+"pista": "impersonal conditional triggers imperfect subjunctive",
+"grupos": [
+[
+"seria bueno que"
+],
+[
+"acercara",
+"acercase"
+],
+[
+"mi madre"
+],
+[
+"al fuego"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "seria bueno que mi madre acercara al fuego",
+"cat": "gram",
+"fix": "seria bueno que mi madre se acercara al fuego",
+"note": "transitive acercar with no object; needs reflexive se for approaching"
+}
+]
+},
+{
+"exercise": {
+"id": "acercar-subj_imperfecto-5994",
+"verbo": "acercar",
+"contexto": "no era cierto que, la gente, a la ventana",
+"respuesta": "no era cierto que la gente acercara a la ventana",
+"pista": "Negar la certeza sobre el pasado exige el subjuntivo.",
+"grupos": [
+[
+"no era cierto que"
+],
+[
+"acercara",
+"acercase"
+],
+[
+"la gente"
+],
+[
+"a la ventana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no era cierto que la gente acercara a la ventana",
+"cat": "gram",
+"fix": "no era cierto que la gente se acercara a la ventana",
+"note": "missing reflexive se; acercar alone needs a direct object"
+}
+]
+},
+{
+"exercise": {
+"id": "aforar-subj_imperfecto-6007",
+"verbo": "aforar",
+"contexto": "a menos que, mi hermano, el lugar",
+"respuesta": "a menos que mi hermano aforara el lugar",
+"pista": "a menos que always triggers subjunctive",
+"grupos": [
+[
+"a menos que"
+],
+[
+"aforara",
+"aforase"
+],
+[
+"mi hermano"
+],
+[
+"el lugar"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "a menos que mi hermano aforara el lugar",
+"cat": "unnat",
+"fix": "a menos que mi hermano midiera la capacidad del lugar",
+"note": "aforar is rare technical/legal jargon, odd for a casual brother"
+}
+]
+},
+{
+"exercise": {
+"id": "aforar-subj_imperfecto-6008",
+"verbo": "aforar",
+"contexto": "no era verdad que, mi madre, el teatro",
+"respuesta": "no era verdad que mi madre aforara el teatro",
+"pista": "Negar la verdad de algo pasado exige el subjuntivo.",
+"grupos": [
+[
+"no era verdad que"
+],
+[
+"aforara",
+"aforase"
+],
+[
+"mi madre"
+],
+[
+"el teatro"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no era verdad que mi madre aforara el teatro",
+"cat": "unnat",
+"fix": "no era verdad que mi madre calculara el aforo del teatro",
+"note": "aforar (gauge venue capacity) is bizarre casual-context verb choice"
+}
+]
+},
+{
+"exercise": {
+"id": "aforar-subj_imperfecto-6009",
+"verbo": "aforar",
+"contexto": "si tan solo, la gente, el estadio",
+"respuesta": "si tan solo la gente aforara el estadio",
+"pista": "si tan solo expresses a wish with imperfect subjunctive",
+"grupos": [
+[
+"si tan solo"
+],
+[
+"aforara",
+"aforase"
+],
+[
+"la gente"
+],
+[
+"el estadio"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "si tan solo la gente aforara el estadio",
+"cat": "unnat",
+"fix": "si tan solo la gente llenara el estadio",
+"note": "aforar is technical jargon, not natural spoken usage for ordinary people"
+}
+]
+},
+{
+"exercise": {
+"id": "alejar-subj_imperfecto-6019",
+"verbo": "alejar",
+"contexto": "para que, maria, de la ciudad",
+"respuesta": "para que maria alejara de la ciudad",
+"pista": "para que expresses purpose and triggers subjunctive",
+"grupos": [
+[
+"para que"
+],
+[
+"alejara",
+"alejase"
+],
+[
+"maria"
+],
+[
+"de la ciudad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "para que maria alejara de la ciudad",
+"cat": "gram",
+"fix": "para que maria se alejara de la ciudad",
+"note": "alejar is transitive; needs reflexive se to mean moving oneself away"
+}
+]
+},
+{
+"exercise": {
+"id": "alejar-subj_imperfecto-6020",
+"verbo": "alejar",
+"contexto": "aunque, carlos, del peligro",
+"respuesta": "aunque carlos alejara del peligro",
+"pista": "aunque with uncertainty triggers subjunctive",
+"grupos": [
+[
+"aunque"
+],
+[
+"alejara",
+"alejase"
+],
+[
+"carlos"
+],
+[
+"del peligro"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "aunque carlos alejara del peligro",
+"cat": "gram",
+"fix": "aunque carlos se alejara del peligro",
+"note": "missing reflexive se; alejar alone requires a direct object"
+}
+]
+},
+{
+"exercise": {
+"id": "alejar-subj_imperfecto-6021",
+"verbo": "alejar",
+"contexto": "no pensaba que, los ninos, de alli",
+"respuesta": "no pensaba que los ninos alejaran de alli",
+"pista": "Negar un pensamiento sobre el pasado exige el subjuntivo.",
+"grupos": [
+[
+"no pensaba que"
+],
+[
+"alejaran",
+"alejasen"
+],
+[
+"los ninos"
+],
+[
+"de alli"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no pensaba que los ninos alejaran de alli",
+"cat": "gram",
+"fix": "no pensaba que los ninos se alejaran de alli",
+"note": "missing reflexive se for children moving themselves away"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-subj_imperfecto-6103",
+"verbo": "casar",
+"contexto": "era necesario que, ella, con alguien",
+"respuesta": "era necesario que ella casara con alguien",
+"pista": "impersonal expressions of necessity trigger subjunctive",
+"grupos": [
+[
+"era necesario que"
+],
+[
+"casara",
+"casase"
+],
+[
+"ella"
+],
+[
+"con alguien"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "era necesario que ella casara con alguien",
+"cat": "gram",
+"fix": "era necesario que ella se casara con alguien",
+"note": "casarse con is the standard reflexive form, se is missing"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-subj_imperfecto-6105",
+"verbo": "casar",
+"contexto": "dudaba que, ellos, por amor",
+"respuesta": "dudaba que ellos casaran por amor",
+"pista": "La duda sobre algo pasado exige el imperfecto de subjuntivo.",
+"grupos": [
+[
+"dudaba que"
+],
+[
+"casaran",
+"casasen"
+],
+[
+"ellos"
+],
+[
+"por amor"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "dudaba que ellos casaran por amor",
+"cat": "gram",
+"fix": "dudaba que ellos se casaran por amor",
+"note": "casarse por amor is standard; missing reflexive se"
+}
+]
+},
+{
+"exercise": {
+"id": "confiar-subj_imperfecto-6133",
+"verbo": "confiar",
+"contexto": "era necesario que, ella, en ella",
+"respuesta": "era necesario que ella confiara en ella",
+"pista": "impersonal expressions of necessity trigger subjunctive",
+"grupos": [
+[
+"era necesario que"
+],
+[
+"confiara",
+"confiase"
+],
+[
+"ella"
+],
+[
+"en ella"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "era necesario que ella confiara en ella",
+"cat": "ctx",
+"fix": "era necesario que ella confiara en si misma",
+"note": "repeated pronoun ella...en ella is confusing self-reference"
+}
+]
+},
+{
+"exercise": {
+"id": "despertar-subj_imperfecto-6231",
+"verbo": "despertar",
+"contexto": "no pensaba que, los ninos, a los ninos",
+"respuesta": "no pensaba que los ninos despertaran a los ninos",
+"pista": "Negar un pensamiento sobre el pasado exige el subjuntivo.",
+"grupos": [
+[
+"no pensaba que"
+],
+[
+"despertaran",
+"despertasen"
+],
+[
+"los ninos"
+],
+[
+"a los ninos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no pensaba que los ninos despertaran a los ninos",
+"cat": "sem",
+"fix": "no pensaba que los ninos despertaran a sus hermanos",
+"note": "same group as subject and object makes the sentence nonsensical"
+}
+]
+},
+{
+"exercise": {
+"id": "encantar-subj_imperfecto-6268",
+"verbo": "encantar",
+"contexto": "era importante que, ella, la musica",
+"respuesta": "era importante que ella encantara la musica",
+"pista": "impersonal importance triggers subjunctive",
+"grupos": [
+[
+"era importante que"
+],
+[
+"encantara",
+"encantase"
+],
+[
+"ella"
+],
+[
+"la musica"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "era importante que ella encantara la musica",
+"cat": "gram",
+"fix": "era importante que a ella le encantara la musica",
+"note": "encantar is gustar-type; subject/object are backwards"
+}
+]
+},
+{
+"exercise": {
+"id": "encantar-subj_imperfecto-6269",
+"verbo": "encantar",
+"contexto": "no habia nadie que, nosotros, el viaje",
+"respuesta": "no había nadie que nosotros encantaramos el viaje",
+"pista": "negative antecedent triggers subjunctive",
+"grupos": [
+[
+"no había nadie que"
+],
+[
+"encantaramos",
+"encantasemos"
+],
+[
+"nosotros"
+],
+[
+"el viaje"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no habia nadie que nosotros encantaramos el viaje",
+"cat": "gram",
+"fix": "no habia nadie a quien le encantara el viaje",
+"note": "encantar needs dative construction, not subject+direct object"
+}
+]
+},
+{
+"exercise": {
+"id": "encantar-subj_imperfecto-6270",
+"verbo": "encantar",
+"contexto": "era posible que, ellos, la idea",
+"respuesta": "era posible que ellos encantaran la idea",
+"pista": "La posibilidad sobre algo pasado exige el subjuntivo.",
+"grupos": [
+[
+"era posible que"
+],
+[
+"encantaran",
+"encantasen"
+],
+[
+"ellos"
+],
+[
+"la idea"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "era posible que ellos encantaran la idea",
+"cat": "gram",
+"fix": "era posible que a ellos les encantara la idea",
+"note": "backwards gustar-type construction; sounds like casting a spell on the idea"
+}
+]
+},
+{
+"exercise": {
+"id": "enterar-subj_imperfecto-6286",
+"verbo": "enterar",
+"contexto": "esperaba que, ellas, de la noticia",
+"respuesta": "esperaba que ellas enteraran de la noticia",
+"pista": "esperaba que expresses past hope triggering subjunctive",
+"grupos": [
+[
+"esperaba que"
+],
+[
+"enteraran",
+"enterasen"
+],
+[
+"ellas"
+],
+[
+"de la noticia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "esperaba que ellas enteraran de la noticia",
+"cat": "gram",
+"fix": "esperaba que ellas se enteraran de la noticia",
+"note": "enterarse de is inherently reflexive; se is missing"
+}
+]
+},
+{
+"exercise": {
+"id": "enterar-subj_imperfecto-6287",
+"verbo": "enterar",
+"contexto": "como si, usted, de todo",
+"respuesta": "como si usted enterara de todo",
+"pista": "como si always requires imperfect subjunctive",
+"grupos": [
+[
+"como si"
+],
+[
+"enterara",
+"enterase"
+],
+[
+"usted"
+],
+[
+"de todo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "como si usted enterara de todo",
+"cat": "gram",
+"fix": "como si usted se enterara de todo",
+"note": "missing reflexive se; enterar alone needs an indirect object"
+}
+]
+},
+{
+"exercise": {
+"id": "enterar-subj_imperfecto-6288",
+"verbo": "enterar",
+"contexto": "antes de que, ustedes, de la verdad",
+"respuesta": "antes de que ustedes enteraran de la verdad",
+"pista": "antes de que always triggers subjunctive",
+"grupos": [
+[
+"antes de que"
+],
+[
+"enteraran",
+"enterasen"
+],
+[
+"ustedes"
+],
+[
+"de la verdad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "antes de que ustedes enteraran de la verdad",
+"cat": "gram",
+"fix": "antes de que ustedes se enteraran de la verdad",
+"note": "enterarse de is the standard reflexive form, se missing"
+}
+]
+},
+{
+"exercise": {
+"id": "estar-subj_imperfecto-6314",
+"verbo": "estar",
+"contexto": "no creia que, nosotros, preparado",
+"respuesta": "no creia que nosotros estuvieramos preparado",
+"pista": "Negar una creencia sobre el pasado exige el subjuntivo.",
+"grupos": [
+[
+"no creia que"
+],
+[
+"estuvieramos",
+"estuviesemos"
+],
+[
+"nosotros"
+],
+[
+"preparado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no creia que nosotros estuvieramos preparado",
+"cat": "gram",
+"fix": "no creia que nosotros estuvieramos preparados",
+"note": "adjective must agree in number with plural nosotros"
+}
+]
+},
+{
+"exercise": {
+"id": "estar-subj_imperfecto-6315",
+"verbo": "estar",
+"contexto": "dudaba que, ellos, mas tranquilo",
+"respuesta": "dudaba que ellos estuvieran mas tranquilo",
+"pista": "La duda sobre algo pasado exige el imperfecto de subjuntivo.",
+"grupos": [
+[
+"dudaba que"
+],
+[
+"estuvieran",
+"estuviesen"
+],
+[
+"ellos"
+],
+[
+"mas tranquilo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "dudaba que ellos estuvieran mas tranquilo",
+"cat": "gram",
+"fix": "dudaba que ellos estuvieran mas tranquilos",
+"note": "adjective must agree in number with plural ellos"
+}
+]
+},
+{
+"exercise": {
+"id": "existir-subj_imperfecto-6323",
+"verbo": "existir",
+"contexto": "seria bueno que, mi madre, una solucion",
+"respuesta": "seria bueno que mi madre existiera una solucion",
+"pista": "impersonal conditional triggers imperfect subjunctive",
+"grupos": [
+[
+"seria bueno que"
+],
+[
+"existiera",
+"existiese"
+],
+[
+"mi madre"
+],
+[
+"una solucion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "seria bueno que mi madre existiera una solucion",
+"cat": "sem",
+"fix": "seria bueno que existiera una solucion",
+"note": "existir is intransitive; cannot take mi madre as agent plus object"
+}
+]
+},
+{
+"exercise": {
+"id": "existir-subj_imperfecto-6324",
+"verbo": "existir",
+"contexto": "no era cierto que, la gente, otra opcion",
+"respuesta": "no era cierto que la gente existiera otra opcion",
+"pista": "Negar la certeza sobre el pasado exige el subjuntivo.",
+"grupos": [
+[
+"no era cierto que"
+],
+[
+"existiera",
+"existiese"
+],
+[
+"la gente"
+],
+[
+"otra opcion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no era cierto que la gente existiera otra opcion",
+"cat": "sem",
+"fix": "no era cierto que existiera otra opcion",
+"note": "existir cannot take a subject-plus-direct-object structure; nonsensical"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-subj_imperfecto-6346",
+"verbo": "gustar",
+"contexto": "esperaba que, ellas, la comida",
+"respuesta": "esperaba que ellas gustaran la comida",
+"pista": "esperaba que expresses past hope triggering subjunctive",
+"grupos": [
+[
+"esperaba que"
+],
+[
+"gustaran",
+"gustasen"
+],
+[
+"ellas"
+],
+[
+"la comida"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "esperaba que ellas gustaran la comida",
+"cat": "calque",
+"fix": "esperaba que les gustara la comida",
+"note": "English-style transitive gustar; needs dative les gustara construction"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-subj_imperfecto-6347",
+"verbo": "gustar",
+"contexto": "como si, usted, el viaje",
+"respuesta": "como si usted gustara el viaje",
+"pista": "como si always requires imperfect subjunctive",
+"grupos": [
+[
+"como si"
+],
+[
+"gustara",
+"gustase"
+],
+[
+"usted"
+],
+[
+"el viaje"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "como si usted gustara el viaje",
+"cat": "calque",
+"fix": "como si le gustara el viaje",
+"note": "gustar is never transitive in Spanish; calque of English 'you liked'"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-subj_imperfecto-6348",
+"verbo": "gustar",
+"contexto": "antes de que, ustedes, la idea",
+"respuesta": "antes de que ustedes gustaran la idea",
+"pista": "antes de que always triggers subjunctive",
+"grupos": [
+[
+"antes de que"
+],
+[
+"gustaran",
+"gustasen"
+],
+[
+"ustedes"
+],
+[
+"la idea"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "antes de que ustedes gustaran la idea",
+"cat": "calque",
+"fix": "antes de que les gustara la idea",
+"note": "transitive use of gustar is an English calque, ungrammatical"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-subj_imperfecto-6349",
+"verbo": "haber",
+"contexto": "para que, maria, mas tiempo",
+"respuesta": "para que maria hubiera mas tiempo",
+"pista": "para que expresses purpose and triggers subjunctive",
+"grupos": [
+[
+"para que"
+],
+[
+"hubiera",
+"hubiese"
+],
+[
+"maria"
+],
+[
+"mas tiempo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "para que maria hubiera mas tiempo",
+"cat": "gram",
+"fix": "para que hubiera mas tiempo",
+"note": "impersonal haber (there was) cannot take maria as a subject"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-subj_imperfecto-6350",
+"verbo": "haber",
+"contexto": "aunque, carlos, una solucion",
+"respuesta": "aunque carlos hubiera una solucion",
+"pista": "aunque with uncertainty triggers subjunctive",
+"grupos": [
+[
+"aunque"
+],
+[
+"hubiera",
+"hubiese"
+],
+[
+"carlos"
+],
+[
+"una solucion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "aunque carlos hubiera una solucion",
+"cat": "gram",
+"fix": "aunque hubiera una solucion",
+"note": "impersonal haber cannot have carlos as subject with a bare noun object"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-subj_imperfecto-6351",
+"verbo": "haber",
+"contexto": "no pensaba que, los ninos, otra opcion",
+"respuesta": "no pensaba que los ninos hubieran otra opcion",
+"pista": "Negar un pensamiento sobre el pasado exige el subjuntivo.",
+"grupos": [
+[
+"no pensaba que"
+],
+[
+"hubieran",
+"hubiesen"
+],
+[
+"los ninos"
+],
+[
+"otra opcion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no pensaba que los ninos hubieran otra opcion",
+"cat": "gram",
+"fix": "no pensaba que hubiera otra opcion",
+"note": "impersonal haber cannot take los ninos as a personal subject"
+}
+]
+},
+{
+"exercise": {
+"id": "importar-subj_imperfecto-6367",
+"verbo": "importar",
+"contexto": "a menos que, mi hermano, la opinion",
+"respuesta": "a menos que mi hermano importara la opinion",
+"pista": "a menos que always triggers subjunctive",
+"grupos": [
+[
+"a menos que"
+],
+[
+"importara",
+"importase"
+],
+[
+"mi hermano"
+],
+[
+"la opinion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "a menos que mi hermano importara la opinion",
+"cat": "gram",
+"fix": "a menos que le importara la opinion a mi hermano",
+"note": "importar (to matter) is gustar-type; subject/object are reversed"
+}
+]
+},
+{
+"exercise": {
+"id": "importar-subj_imperfecto-6368",
+"verbo": "importar",
+"contexto": "no era verdad que, mi madre, el resultado",
+"respuesta": "no era verdad que mi madre importara el resultado",
+"pista": "Negar la verdad de algo pasado exige el subjuntivo.",
+"grupos": [
+[
+"no era verdad que"
+],
+[
+"importara",
+"importase"
+],
+[
+"mi madre"
+],
+[
+"el resultado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no era verdad que mi madre importara el resultado",
+"cat": "gram",
+"fix": "no era verdad que le importara el resultado a mi madre",
+"note": "backwards dative construction for importar meaning to matter"
+}
+]
+},
+{
+"exercise": {
+"id": "interesar-subj_imperfecto-6379",
+"verbo": "interesar",
+"contexto": "para que, maria, el tema",
+"respuesta": "para que maria interesara el tema",
+"pista": "para que expresses purpose and triggers subjunctive",
+"grupos": [
+[
+"para que"
+],
+[
+"interesara",
+"interesase"
+],
+[
+"maria"
+],
+[
+"el tema"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "para que maria interesara el tema",
+"cat": "gram",
+"fix": "para que a maria le interesara el tema",
+"note": "interesar is gustar-type; the topic should be the grammatical subject"
+}
+]
+},
+{
+"exercise": {
+"id": "interesar-subj_imperfecto-6380",
+"verbo": "interesar",
+"contexto": "aunque, carlos, la propuesta",
+"respuesta": "aunque carlos interesara la propuesta",
+"pista": "aunque with uncertainty triggers subjunctive",
+"grupos": [
+[
+"aunque"
+],
+[
+"interesara",
+"interesase"
+],
+[
+"carlos"
+],
+[
+"la propuesta"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "aunque carlos interesara la propuesta",
+"cat": "gram",
+"fix": "aunque a carlos le interesara la propuesta",
+"note": "backwards construction; the proposal should be subject of interesar"
+}
+]
+},
+{
+"exercise": {
+"id": "molestar-subj_imperfecto-6451",
+"verbo": "molestar",
+"contexto": "necesitaba que, ellas, a nadie",
+"respuesta": "necesitaba que ellas molestaran a nadie",
+"pista": "past need triggers imperfect subjunctive",
+"grupos": [
+[
+"necesitaba que"
+],
+[
+"molestaran",
+"molestasen"
+],
+[
+"ellas"
+],
+[
+"a nadie"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "necesitaba que ellas molestaran a nadie",
+"cat": "gram",
+"fix": "no queria que ellas molestaran a nadie",
+"note": "nadie is a negative polarity item and needs a negated clause"
+}
+]
+},
+{
+"exercise": {
+"id": "permanecer-subj_imperfecto-6531",
+"verbo": "permanecer",
+"contexto": "no pensaba que, los ninos, tranquilo",
+"respuesta": "no pensaba que los ninos permanecieran tranquilo",
+"pista": "Negar un pensamiento sobre el pasado exige el subjuntivo.",
+"grupos": [
+[
+"no pensaba que"
+],
+[
+"permanecieran",
+"permaneciesen"
+],
+[
+"los ninos"
+],
+[
+"tranquilo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no pensaba que los ninos permanecieran tranquilo",
+"cat": "gram",
+"fix": "no pensaba que los ninos permanecieran tranquilos",
+"note": "adjective must agree in number with plural los ninos"
+}
+]
+},
+{
+"exercise": {
+"id": "pesar-subj_imperfecto-6539",
+"verbo": "pesar",
+"contexto": "no habia nadie que, nosotros, en la balanza",
+"respuesta": "no había nadie que nosotros pesaramos en la balanza",
+"pista": "negative antecedent triggers subjunctive",
+"grupos": [
+[
+"no había nadie que"
+],
+[
+"pesaramos",
+"pesasemos"
+],
+[
+"nosotros"
+],
+[
+"en la balanza"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no había nadie que nosotros pesaramos en la balanza",
+"cat": "gram",
+"fix": "no había nadie que nos pesaramos en la balanza",
+"note": "self-weighing needs reflexive nos; pesar alone reads as weighing something else"
+}
+]
+},
+{
+"exercise": {
+"id": "preocupar-subj_imperfecto-6554",
+"verbo": "preocupar",
+"contexto": "no creia que, nosotros, por el futuro",
+"respuesta": "no creia que nosotros preocuparamos por el futuro",
+"pista": "Negar una creencia sobre el pasado exige el subjuntivo.",
+"grupos": [
+[
+"no creia que"
+],
+[
+"preocuparamos",
+"preocupasemos"
+],
+[
+"nosotros"
+],
+[
+"por el futuro"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no creia que nosotros preocuparamos por el futuro",
+"cat": "gram",
+"fix": "no creia que nos preocuparamos por el futuro",
+"note": "preocuparse por is reflexive; se/nos is missing"
+}
+]
+},
+{
+"exercise": {
+"id": "quedar-subj_imperfecto-6579",
+"verbo": "quedar",
+"contexto": "si tan solo, la gente, satisfecho",
+"respuesta": "si tan solo la gente quedara satisfecho",
+"pista": "si tan solo expresses a wish with imperfect subjunctive",
+"grupos": [
+[
+"si tan solo"
+],
+[
+"quedara",
+"quedase"
+],
+[
+"la gente"
+],
+[
+"satisfecho"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "si tan solo la gente quedara satisfecho",
+"cat": "gram",
+"fix": "si tan solo la gente quedara satisfecha",
+"note": "gente is feminine; adjective must agree, not masculine satisfecho"
+}
+]
+},
+{
+"exercise": {
+"id": "sentar-subj_imperfecto-6658",
+"verbo": "sentar",
+"contexto": "era importante que, ella, a la mesa",
+"respuesta": "era importante que ella sentara a la mesa",
+"pista": "impersonal importance triggers subjunctive",
+"grupos": [
+[
+"era importante que"
+],
+[
+"sentara",
+"sentase"
+],
+[
+"ella"
+],
+[
+"a la mesa"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "era importante que ella sentara a la mesa",
+"cat": "gram",
+"fix": "era importante que ella se sentara a la mesa",
+"note": "missing reflexive se; sentar alone needs a direct object (someone seated)"
+}
+]
+},
+{
+"exercise": {
+"id": "sentar-subj_imperfecto-6659",
+"verbo": "sentar",
+"contexto": "no habia nadie que, nosotros, en el sofa",
+"respuesta": "no había nadie que nosotros sentaramos en el sofa",
+"pista": "negative antecedent triggers subjunctive",
+"grupos": [
+[
+"no había nadie que"
+],
+[
+"sentaramos",
+"sentasemos"
+],
+[
+"nosotros"
+],
+[
+"en el sofa"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "no había nadie que nosotros sentaramos en el sofa",
+"cat": "gram",
+"fix": "no había nadie que nos sentaramos en el sofa",
+"note": "missing reflexive nos for people sitting down themselves"
+}
+]
+},
+{
+"exercise": {
+"id": "sentar-subj_imperfecto-6660",
+"verbo": "sentar",
+"contexto": "era posible que, ellos, bien",
+"respuesta": "era posible que ellos sentaran bien",
+"pista": "La posibilidad sobre algo pasado exige el subjuntivo.",
+"grupos": [
+[
+"era posible que"
+],
+[
+"sentaran",
+"sentasen"
+],
+[
+"ellos"
+],
+[
+"bien"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "era posible que ellos sentaran bien",
+"cat": "gram",
+"fix": "era posible que les sentara bien",
+"note": "sentar bien (to suit/agree with) needs a dative pronoun, not bare subject"
+}
+]
+},
+{
+"exercise": {
+"id": "ser-subj_imperfecto-6666",
+"verbo": "ser",
+"contexto": "en caso de que, los ninos, diferente",
+"respuesta": "en caso de que los ninos fueran diferente",
+"pista": "en caso de que always triggers subjunctive",
+"grupos": [
+[
+"en caso de que"
+],
+[
+"fueran",
+"fuesen"
+],
+[
+"los ninos"
+],
+[
+"diferente"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "en caso de que los ninos fueran diferente",
+"cat": "gram",
+"fix": "en caso de que los ninos fueran diferentes",
+"note": "diferente must take plural -s to agree with los ninos"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-subj_imperfecto-6673",
+"verbo": "soler",
+"contexto": "era necesario que, ella, llegar tarde",
+"respuesta": "era necesario que ella soliera llegar tarde",
+"pista": "impersonal expressions of necessity trigger subjunctive",
+"grupos": [
+[
+"era necesario que"
+],
+[
+"soliera",
+"soliese"
+],
+[
+"ella"
+],
+[
+"llegar tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "era necesario que ella soliera llegar tarde",
+"cat": "sem",
+"fix": "era extrano que ella soliera llegar tarde",
+"note": "soler (habitual aspect) does not fit a necessity frame, semantically odd"
+}
+]
+},
+{
+"exercise": {
+"id": "suceder-subj_imperfecto-6685",
+"verbo": "suceder",
+"contexto": "queria que, yo, algo bueno",
+"respuesta": "queria que yo sucediera algo bueno",
+"pista": "past desire triggers imperfect subjunctive",
+"grupos": [
+[
+"queria que"
+],
+[
+"sucediera",
+"sucediese"
+],
+[
+"yo"
+],
+[
+"algo bueno"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "queria que yo sucediera algo bueno",
+"cat": "gram",
+"fix": "queria que me sucediera algo bueno",
+"note": "suceder is impersonal; yo cannot be its agentive subject with an object"
+}
+]
+},
+{
+"exercise": {
+"id": "suceder-subj_imperfecto-6686",
+"verbo": "suceder",
+"contexto": "le pedi que, tu, un milagro",
+"respuesta": "le pedi que tu sucedieras un milagro",
+"pista": "past request triggers imperfect subjunctive",
+"grupos": [
+[
+"le pedi que"
+],
+[
+"sucedieras",
+"sucedieses"
+],
+[
+"tu"
+],
+[
+"un milagro"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "le pedi que tu sucedieras un milagro",
+"cat": "gram",
+"fix": "le pedi que sucediera un milagro",
+"note": "impersonal suceder cannot take tu as a personal subject plus object"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-subj_imperfecto-6721",
+"verbo": "tranquilar",
+"contexto": "necesitaba que, ellas, a los ninos",
+"respuesta": "necesitaba que ellas tranquilaran a los ninos",
+"pista": "past need triggers imperfect subjunctive",
+"grupos": [
+[
+"necesitaba que"
+],
+[
+"tranquilaran",
+"tranquilasen"
+],
+[
+"ellas"
+],
+[
+"a los ninos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "necesitaba que ellas tranquilaran a los ninos",
+"cat": "gram",
+"fix": "necesitaba que ellas tranquilizaran a los ninos",
+"note": "verb should be tranquilizar; tranquilar is nonstandard Spanish"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-subj_imperfecto-6722",
+"verbo": "tranquilar",
+"contexto": "preferia que, usted, la situacion",
+"respuesta": "preferia que usted tranquilara la situacion",
+"pista": "past preference triggers imperfect subjunctive",
+"grupos": [
+[
+"preferia que"
+],
+[
+"tranquilara",
+"tranquilase"
+],
+[
+"usted"
+],
+[
+"la situacion"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "preferia que usted tranquilara la situacion",
+"cat": "gram",
+"fix": "preferia que usted tranquilizara la situacion",
+"note": "nonstandard verb tranquilar; correct verb is tranquilizar"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-subj_imperfecto-6723",
+"verbo": "tranquilar",
+"contexto": "temia que, ustedes, a su madre",
+"respuesta": "temia que ustedes tranquilaran a su madre",
+"pista": "past fear triggers imperfect subjunctive",
+"grupos": [
+[
+"temia que"
+],
+[
+"tranquilaran",
+"tranquilasen"
+],
+[
+"ustedes"
+],
+[
+"a su madre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "temia que ustedes tranquilaran a su madre",
+"cat": "gram",
+"fix": "temia que ustedes tranquilizaran a su madre",
+"note": "nonstandard verb tranquilar; correct verb is tranquilizar"
+}
+]
+},
+{
+"exercise": {
+"id": "acercar-subj_pluscuam-6774",
+"verbo": "acercar",
+"contexto": "Ojala nosotros, las dos familias, antes",
+"respuesta": "Ojala nosotros hubieramos acercado las dos familias antes.",
+"pista": "Ojalá expresa el deseo de que algo hubiera ocurrido de otra manera en el pasado.",
+"grupos": [
+[
+"ojala"
+],
+[
+"hubieramos",
+"hubiesemos"
+],
+[
+"acercado"
+],
+[
+"nosotros"
+],
+[
+"las dos familias"
+],
+[
+"antes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ojala nosotros hubieramos acercado las dos familias antes.",
+"cat": "gram",
+"fix": "Ojala nosotros hubieramos acercado a las dos familias antes.",
+"note": "missing personal 'a' before human direct object 'las dos familias'"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-subj_pluscuam-6883",
+"verbo": "casar",
+"contexto": "Si yo, a mi hija, en junio, habria hecho calor",
+"respuesta": "Si yo hubiera casado a mi hija en junio, habria hecho calor.",
+"pista": "Pluperfect subjunctive for hypothetical past wedding plans.",
+"grupos": [
+[
+"si"
+],
+[
+"hubiera",
+"hubiese"
+],
+[
+"casado"
+],
+[
+"yo"
+],
+[
+"a mi hija"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Si yo hubiera casado a mi hija en junio, habria hecho calor.",
+"cat": "sem",
+"fix": "Si yo hubiera casado a mi hija en junio, habria sido una boda preciosa.",
+"note": "marrying off a daughter has no sensible causal link to the weather"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-subj_pluscuam-6884",
+"verbo": "casar",
+"contexto": "No creia que ellos, tan joven, sin permiso",
+"respuesta": "No creia que ellos hubieran casado tan joven sin permiso.",
+"pista": "Disbelief about a young marriage without permission.",
+"grupos": [
+[
+"no creia que"
+],
+[
+"hubieran",
+"hubiesen"
+],
+[
+"casado"
+],
+[
+"ellos"
+],
+[
+"tan joven"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "No creia que ellos hubieran casado tan joven sin permiso.",
+"cat": "gram",
+"fix": "No creia que ellos se hubieran casado tan joven sin permiso.",
+"note": "getting married is reflexive 'casarse'; missing 'se'"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-subj_pluscuam-6885",
+"verbo": "casar",
+"contexto": "Ojala tu, con esa persona, cuando tuviste la oportunidad",
+"respuesta": "Ojala tu hubieras casado con esa persona cuando tuviste la oportunidad.",
+"pista": "El deseo de haberte casado con la persona correcta.",
+"grupos": [
+[
+"ojala"
+],
+[
+"hubieras",
+"hubieses"
+],
+[
+"casado"
+],
+[
+"tu"
+],
+[
+"con esa persona"
+],
+[
+"cuando"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ojala tu hubieras casado con esa persona cuando tuviste la oportunidad.",
+"cat": "gram",
+"fix": "Ojala tu te hubieras casado con esa persona cuando tuviste la oportunidad.",
+"note": "'casarse con alguien' is reflexive; missing 'te'"
+}
+]
+},
+{
+"exercise": {
+"id": "cuidar-subj_pluscuam-6964",
+"verbo": "cuidar",
+"contexto": "Si ella, a su salud, mejor",
+"respuesta": "Si ella hubiera cuidado a su salud mejor, no estaria enferma.",
+"pista": "Pluscuamperfecto de subjuntivo para un cuidado de salud descuidado en el pasado.",
+"grupos": [
+[
+"si"
+],
+[
+"hubiera",
+"hubiese"
+],
+[
+"cuidado"
+],
+[
+"ella"
+],
+[
+"a su salud"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Si ella hubiera cuidado a su salud mejor, no estaria enferma.",
+"cat": "gram",
+"fix": "Si ella hubiera cuidado su salud mejor, no estaria enferma.",
+"note": "personal 'a' wrongly used before non-person object 'salud'"
+}
+]
+},
+{
+"exercise": {
+"id": "demostrar-subj_pluscuam-6989",
+"verbo": "demostrar",
+"contexto": "Dudaba que tu, inocencia, ante el juez",
+"respuesta": "Dudaba que tu hubieras demostrado inocencia ante el juez.",
+"pista": "Doubt about proving innocence.",
+"grupos": [
+[
+"dudaba que"
+],
+[
+"hubieras",
+"hubieses"
+],
+[
+"demostrado"
+],
+[
+"tu"
+],
+[
+"inocencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Dudaba que tu hubieras demostrado inocencia ante el juez.",
+"cat": "unnat",
+"fix": "Dudaba que tu hubieras demostrado tu inocencia ante el juez.",
+"note": "bare noun sounds unnatural; native speech uses possessive 'tu inocencia'"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-subj_pluscuam-7501",
+"verbo": "tranquilar",
+"contexto": "Si tu, a la multitud, no habria habido panico",
+"respuesta": "Si tu hubieras tranquilado a la multitud, no habria habido panico.",
+"pista": "Pluperfect subjunctive for failure to calm a crowd.",
+"grupos": [
+[
+"si"
+],
+[
+"hubieras",
+"hubieses"
+],
+[
+"tranquilado"
+],
+[
+"tu"
+],
+[
+"a la multitud"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Si tu hubieras tranquilado a la multitud, no habria habido panico.",
+"cat": "gram",
+"fix": "Si tu hubieras tranquilizado a la multitud, no habria habido panico.",
+"note": "'tranquilar' is not standard modern Spanish; correct verb is 'tranquilizar'"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-subj_pluscuam-7502",
+"verbo": "tranquilar",
+"contexto": "Dudaba que ella, al nino, sin abrazarlo",
+"respuesta": "Dudaba que ella hubiera tranquilado al nino sin abrazarlo.",
+"pista": "Doubt about calming a child without a hug.",
+"grupos": [
+[
+"dudaba que"
+],
+[
+"hubiera",
+"hubiese"
+],
+[
+"tranquilado"
+],
+[
+"ella"
+],
+[
+"al nino"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Dudaba que ella hubiera tranquilado al nino sin abrazarlo.",
+"cat": "gram",
+"fix": "Dudaba que ella hubiera tranquilizado al nino sin abrazarlo.",
+"note": "'tranquilar' is not standard modern Spanish; correct verb is 'tranquilizar'"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-subj_pluscuam-7503",
+"verbo": "tranquilar",
+"contexto": "Era imposible que nosotros, a todos los pasajeros, durante la turbulencia",
+"respuesta": "Era imposible que nosotros hubieramos tranquilado a todos los pasajeros durante la turbulencia.",
+"pista": "Past impossibility of calming all passengers during turbulence.",
+"grupos": [
+[
+"era imposible que"
+],
+[
+"hubieramos",
+"hubiesemos"
+],
+[
+"tranquilado"
+],
+[
+"nosotros"
+],
+[
+"a todos los pasajeros"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Era imposible que nosotros hubieramos tranquilado a todos los pasajeros durante la turbulencia.",
+"cat": "gram",
+"fix": "Era imposible que nosotros hubieramos tranquilizado a todos los pasajeros durante la turbulencia.",
+"note": "'tranquilar' is not standard modern Spanish; correct verb is 'tranquilizar'"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-subj_pluscuam-7453",
+"verbo": "soler",
+"contexto": "Si tu, madrugar, habrias tenido mas tiempo",
+"respuesta": "Si tu hubieras solido madrugar, habrias tenido mas tiempo.",
+"pista": "Pluperfect subjunctive for not having had a habit.",
+"grupos": [
+[
+"si"
+],
+[
+"hubieras",
+"hubieses"
+],
+[
+"solido"
+],
+[
+"tu"
+],
+[
+"madrugar"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Si tu hubieras solido madrugar, habrias tenido mas tiempo.",
+"cat": "unnat",
+"fix": "Si te hubieras acostumbrado a madrugar, habrias tenido mas tiempo.",
+"note": "'soler' almost never appears in compound/perfect tenses in real speech"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-subj_pluscuam-7454",
+"verbo": "soler",
+"contexto": "Dudaba que nosotros, llegar tarde, a las reuniones",
+"respuesta": "Dudaba que nosotros hubieramos solido llegar tarde a las reuniones.",
+"pista": "Doubt about a habitual lateness.",
+"grupos": [
+[
+"dudaba que"
+],
+[
+"hubieramos",
+"hubiesemos"
+],
+[
+"solido"
+],
+[
+"nosotros"
+],
+[
+"llegar tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Dudaba que nosotros hubieramos solido llegar tarde a las reuniones.",
+"cat": "unnat",
+"fix": "Dudaba que nosotros hubieramos acostumbrado a llegar tarde a las reuniones.",
+"note": "'soler' almost never appears in compound/perfect tenses in real speech"
+}
+]
+},
+{
+"exercise": {
+"id": "soler-subj_pluscuam-7455",
+"verbo": "soler",
+"contexto": "No creia que ella, cocinar, para toda la familia",
+"respuesta": "No creia que ella hubiera solido cocinar para toda la familia.",
+"pista": "Disbelief about a habitual cooking practice.",
+"grupos": [
+[
+"no creia que"
+],
+[
+"hubiera",
+"hubiese"
+],
+[
+"solido"
+],
+[
+"ella"
+],
+[
+"cocinar"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "No creia que ella hubiera solido cocinar para toda la familia.",
+"cat": "unnat",
+"fix": "No creia que ella hubiera acostumbrado a cocinar para toda la familia.",
+"note": "'soler' almost never appears in compound/perfect tenses in real speech"
+}
+]
+},
+{
+"exercise": {
+"id": "estar-puntual-11",
+"verbo": "estar",
+"contexto": "nosotros, ayer por la tarde, muy cansado.",
+"respuesta": "nosotros estuvimos muy cansado ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"estuvimos"
+],
+[
+"muy cansado"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros estuvimos muy cansado ayer por la tarde.",
+"cat": "gram",
+"fix": "nosotros estuvimos muy cansados ayer por la tarde.",
+"note": "adjective must agree in plural with nosotros subject"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-puntual-22",
+"verbo": "haber",
+"contexto": "nosotros, ayer por la tarde, mucho.",
+"respuesta": "nosotros habíamos mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"habíamos"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros habíamos mucho ayer por la tarde.",
+"cat": "gram",
+"fix": "Hubo mucho ayer por la tarde.",
+"note": "existential haber is impersonal 3rd-sg only, and habíamos is wrong tense"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-puntual-23",
+"verbo": "haber",
+"contexto": "tú, anoche, mucho.",
+"respuesta": "tú hubiste mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"tú"
+],
+[
+"habiste"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú hubiste mucho anoche.",
+"cat": "gram",
+"fix": "Hubo mucho anoche.",
+"note": "existential haber cannot conjugate with tú, always impersonal hubo"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-puntual-24",
+"verbo": "haber",
+"contexto": "ella, el fin de semana pasado, mucho.",
+"respuesta": "ella hubo mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"ella"
+],
+[
+"habio"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella hubo mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "Hubo mucho el fin de semana pasado.",
+"note": "existential haber cannot take a personal subject like ella"
+}
+]
+},
+{
+"exercise": {
+"id": "oír-puntual-352",
+"verbo": "oír",
+"contexto": "ellos, ayer por la tarde, un ruido.",
+"respuesta": "ellos oieron un ruido ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"ellos"
+],
+[
+"oieron"
+],
+[
+"un ruido"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos oieron un ruido ayer por la tarde.",
+"cat": "gram",
+"fix": "ellos oyeron un ruido ayer por la tarde.",
+"note": "wrong stem spelling, must be oyeron (i->y between vowels)"
+}
+]
+},
+{
+"exercise": {
+"id": "oír-puntual-354",
+"verbo": "oír",
+"contexto": "ellos, el fin de semana pasado, esa canción.",
+"respuesta": "ellos oieron esa canción el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"ellos"
+],
+[
+"oieron"
+],
+[
+"esa canción"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos oieron esa canción el fin de semana pasado.",
+"cat": "gram",
+"fix": "ellos oyeron esa canción el fin de semana pasado.",
+"note": "wrong stem spelling, must be oyeron (i->y between vowels)"
+}
+]
+},
+{
+"exercise": {
+"id": "sentir-puntual-187",
+"verbo": "sentir",
+"contexto": "él, ayer por la tarde, mucho.",
+"respuesta": "él sentio mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"él"
+],
+[
+"sentio"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él sentio mucho ayer por la tarde.",
+"cat": "gram",
+"fix": "él sintió mucho ayer por la tarde.",
+"note": "missing e->i stem change in 3rd person preterite of sentir"
+}
+]
+},
+{
+"exercise": {
+"id": "sentir-puntual-189",
+"verbo": "sentir",
+"contexto": "él, el fin de semana pasado, mucho.",
+"respuesta": "él sentio mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"él"
+],
+[
+"sentio"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él sentio mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "él sintió mucho el fin de semana pasado.",
+"note": "missing e->i stem change in 3rd person preterite of sentir"
+}
+]
+},
+{
+"exercise": {
+"id": "leer-puntual-827",
+"verbo": "leer",
+"contexto": "ellos, el fin de semana pasado, el periódico.",
+"respuesta": "ellos leieron el periódico el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"ellos"
+],
+[
+"leieron"
+],
+[
+"el periódico"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos leieron el periódico el fin de semana pasado.",
+"cat": "gram",
+"fix": "ellos leyeron el periódico el fin de semana pasado.",
+"note": "missing y-insertion, must be leyeron not leieron"
+}
+]
+},
+{
+"exercise": {
+"id": "caer-puntual-869",
+"verbo": "caer",
+"contexto": "él, ayer por la tarde, mucho.",
+"respuesta": "él caio mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"él"
+],
+[
+"caio"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él caio mucho ayer por la tarde.",
+"cat": "gram",
+"fix": "él cayó mucho ayer por la tarde.",
+"note": "missing y-insertion, must be cayó not caio"
+}
+]
+},
+{
+"exercise": {
+"id": "seguir-puntual-385",
+"verbo": "seguir",
+"contexto": "ella, ayer por la tarde, trabajando.",
+"respuesta": "ella seguio trabajando ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"ella"
+],
+[
+"seguio"
+],
+[
+"trabajando"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella seguio trabajando ayer por la tarde.",
+"cat": "gram",
+"fix": "ella siguió trabajando ayer por la tarde.",
+"note": "missing e->i stem change in 3rd person preterite of seguir"
+}
+]
+},
+{
+"exercise": {
+"id": "seguir-puntual-386",
+"verbo": "seguir",
+"contexto": "ella, anoche, estudiando.",
+"respuesta": "ella seguio estudiando anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"ella"
+],
+[
+"seguio"
+],
+[
+"estudiando"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella seguio estudiando anoche.",
+"cat": "gram",
+"fix": "ella siguió estudiando anoche.",
+"note": "missing e->i stem change in 3rd person preterite of seguir"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-puntual-1276",
+"verbo": "casar",
+"contexto": "ella, ayer por la tarde, mucho.",
+"respuesta": "ella caso mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"ella"
+],
+[
+"caso"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella caso mucho ayer por la tarde.",
+"cat": "sem",
+"fix": "ella se casó ayer por la tarde.",
+"note": "casar needs reflexive se (get married) or an object (marry someone off); bare 'mucho' is nonsensical"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-puntual-1277",
+"verbo": "casar",
+"contexto": "tú, anoche, mucho.",
+"respuesta": "tú casaste mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"tú"
+],
+[
+"casaste"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú casaste mucho anoche.",
+"cat": "sem",
+"fix": "tú te casaste anoche.",
+"note": "casar needs reflexive se (get married) or an object; bare 'mucho' is nonsensical"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-puntual-1278",
+"verbo": "casar",
+"contexto": "tú, el fin de semana pasado, mucho.",
+"respuesta": "tú casaste mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"tú"
+],
+[
+"casaste"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú casaste mucho el fin de semana pasado.",
+"cat": "sem",
+"fix": "tú te casaste el fin de semana pasado.",
+"note": "casar needs reflexive se (get married) or an object; bare 'mucho' is nonsensical"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-puntual-7622",
+"verbo": "casar",
+"contexto": "ellos, aquel verano, en la iglesia del pueblo",
+"respuesta": "Ellos casaron en la iglesia del pueblo aquel verano.",
+"pista": "Acción puntual en el pasado: casarse en la iglesia del pueblo, aquel verano.",
+"grupos": [
+[
+"ellos"
+],
+[
+"casaron"
+],
+[
+"en la iglesia del pueblo"
+],
+[
+"aquel verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ellos casaron en la iglesia del pueblo aquel verano.",
+"cat": "gram",
+"fix": "Ellos se casaron en la iglesia del pueblo aquel verano.",
+"note": "missing reflexive pronoun se for 'to get married'"
+}
+]
+},
+{
+"exercise": {
+"id": "sentar-puntual-1100",
+"verbo": "sentar",
+"contexto": "ellos, ayer por la tarde, mucho.",
+"respuesta": "ellos sentaron mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"ellos"
+],
+[
+"sentaron"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos sentaron mucho ayer por la tarde.",
+"cat": "sem",
+"fix": "ellos sentaron mucho ayer por la tarde.",
+"note": "sentar needs an object (to seat someone) or reflexive sentarse; bare 'mucho' is nonsensical"
+}
+]
+},
+{
+"exercise": {
+"id": "sentar-puntual-1101",
+"verbo": "sentar",
+"contexto": "yo, anoche, mucho.",
+"respuesta": "yo sente mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"yo"
+],
+[
+"sente"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo sente mucho anoche.",
+"cat": "sem",
+"fix": "yo sente mucho anoche.",
+"note": "sentar needs an object (to seat someone) or reflexive sentarse; bare 'mucho' is nonsensical"
+}
+]
+},
+{
+"exercise": {
+"id": "sentar-puntual-1102",
+"verbo": "sentar",
+"contexto": "yo, el fin de semana pasado, mucho.",
+"respuesta": "yo sente mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"yo"
+],
+[
+"sente"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo sente mucho el fin de semana pasado.",
+"cat": "sem",
+"fix": "yo sente mucho el fin de semana pasado.",
+"note": "sentar needs an object (to seat someone) or reflexive sentarse; bare 'mucho' is nonsensical"
+}
+]
+},
+{
+"exercise": {
+"id": "acercar-puntual-891",
+"verbo": "acercar",
+"contexto": "ella, ayer por la tarde, mucho.",
+"respuesta": "ella acerco mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"ella"
+],
+[
+"acerco"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella acerco mucho ayer por la tarde.",
+"cat": "sem",
+"fix": "ella acercó la silla mucho ayer por la tarde.",
+"note": "acercar (transitive) needs an object; bare 'mucho' is incomplete"
+}
+]
+},
+{
+"exercise": {
+"id": "acercar-puntual-892",
+"verbo": "acercar",
+"contexto": "yo, anoche, mucho.",
+"respuesta": "yo acerce mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"yo"
+],
+[
+"acerce"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo acerce mucho anoche.",
+"cat": "gram",
+"fix": "yo acerqué algo anoche.",
+"note": "wrong spelling (c->qu before e) and missing required object"
+}
+]
+},
+{
+"exercise": {
+"id": "acercar-puntual-893",
+"verbo": "acercar",
+"contexto": "yo, el fin de semana pasado, mucho.",
+"respuesta": "yo acerce mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"yo"
+],
+[
+"acerce"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo acerce mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "yo acerqué algo el fin de semana pasado.",
+"note": "wrong spelling (c->qu before e) and missing required object"
+}
+]
+},
+{
+"exercise": {
+"id": "destruir-puntual-2068",
+"verbo": "destruir",
+"contexto": "él, ayer por la tarde, mucho.",
+"respuesta": "él destruio mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"él"
+],
+[
+"destruio"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él destruio mucho ayer por la tarde.",
+"cat": "gram",
+"fix": "él destruyó mucho ayer por la tarde.",
+"note": "missing y-insertion, must be destruyó"
+}
+]
+},
+{
+"exercise": {
+"id": "destruir-puntual-2069",
+"verbo": "destruir",
+"contexto": "ellos, anoche, mucho.",
+"respuesta": "ellos destruieron mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"ellos"
+],
+[
+"destruieron"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos destruieron mucho anoche.",
+"cat": "gram",
+"fix": "ellos destruyeron mucho anoche.",
+"note": "missing y-insertion, must be destruyeron"
+}
+]
+},
+{
+"exercise": {
+"id": "incluir-puntual-2157",
+"verbo": "incluir",
+"contexto": "él, anoche, mucho.",
+"respuesta": "él incluio mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"él"
+],
+[
+"incluio"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él incluio mucho anoche.",
+"cat": "gram",
+"fix": "él incluyó mucho anoche.",
+"note": "missing y-insertion, must be incluyó"
+}
+]
+},
+{
+"exercise": {
+"id": "incluir-puntual-2158",
+"verbo": "incluir",
+"contexto": "ellos, el fin de semana pasado, mucho.",
+"respuesta": "ellos incluieron mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"ellos"
+],
+[
+"incluieron"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos incluieron mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "ellos incluyeron mucho el fin de semana pasado.",
+"note": "missing y-insertion, must be incluyeron"
+}
+]
+},
+{
+"exercise": {
+"id": "construir-puntual-2498",
+"verbo": "construir",
+"contexto": "él, anoche, mucho.",
+"respuesta": "él construio mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"él"
+],
+[
+"construio"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él construio mucho anoche.",
+"cat": "gram",
+"fix": "él construyó mucho anoche.",
+"note": "missing y-insertion, must be construyó"
+}
+]
+},
+{
+"exercise": {
+"id": "construir-puntual-2499",
+"verbo": "construir",
+"contexto": "ellos, el fin de semana pasado, mucho.",
+"respuesta": "ellos construieron mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"ellos"
+],
+[
+"construieron"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos construieron mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "ellos construyeron mucho el fin de semana pasado.",
+"note": "missing y-insertion, must be construyeron"
+}
+]
+},
+{
+"exercise": {
+"id": "huir-puntual-2597",
+"verbo": "huir",
+"contexto": "él, anoche, mucho.",
+"respuesta": "él huio mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"él"
+],
+[
+"huio"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él huio mucho anoche.",
+"cat": "gram",
+"fix": "él huyó mucho anoche.",
+"note": "missing y-insertion, must be huyó"
+}
+]
+},
+{
+"exercise": {
+"id": "huir-puntual-2598",
+"verbo": "huir",
+"contexto": "él, el fin de semana pasado, mucho.",
+"respuesta": "él huio mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"él"
+],
+[
+"huio"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él huio mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "él huyó mucho el fin de semana pasado.",
+"note": "missing y-insertion, must be huyó"
+}
+]
+},
+{
+"exercise": {
+"id": "morir-puntual-507",
+"verbo": "morir",
+"contexto": "ella, anoche, en el hospital.",
+"respuesta": "ella morio en el hospital anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"ella"
+],
+[
+"morio"
+],
+[
+"en el hospital"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella morio en el hospital anoche.",
+"cat": "gram",
+"fix": "ella murió en el hospital anoche.",
+"note": "missing o->u stem change, must be murió"
+}
+]
+},
+{
+"exercise": {
+"id": "morir-puntual-508",
+"verbo": "morir",
+"contexto": "ellos, el fin de semana pasado, joven.",
+"respuesta": "ellos morieron joven el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"ellos"
+],
+[
+"morieron"
+],
+[
+"joven"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos morieron joven el fin de semana pasado.",
+"cat": "gram",
+"fix": "ellos murieron jóvenes el fin de semana pasado.",
+"note": "missing o->u stem change (murieron) and adjective must agree in plural (jóvenes)"
+}
+]
+},
+{
+"exercise": {
+"id": "convertir-puntual-958",
+"verbo": "convertir",
+"contexto": "él, anoche, mucho.",
+"respuesta": "él convertio mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"él"
+],
+[
+"convertio"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él convertio mucho anoche.",
+"cat": "gram",
+"fix": "él convirtió mucho anoche.",
+"note": "missing e->i stem change, must be convirtió"
+}
+]
+},
+{
+"exercise": {
+"id": "convertir-puntual-959",
+"verbo": "convertir",
+"contexto": "ella, el fin de semana pasado, mucho.",
+"respuesta": "ella convertio mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"ella"
+],
+[
+"convertio"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella convertio mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "ella convirtió mucho el fin de semana pasado.",
+"note": "missing e->i stem change, must be convirtió"
+}
+]
+},
+{
+"exercise": {
+"id": "servir-puntual-1089",
+"verbo": "servir",
+"contexto": "él, ayer por la tarde, mucho.",
+"respuesta": "él servio mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"él"
+],
+[
+"servio"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él servio mucho ayer por la tarde.",
+"cat": "gram",
+"fix": "él sirvió mucho ayer por la tarde.",
+"note": "missing e->i stem change, must be sirvió"
+}
+]
+},
+{
+"exercise": {
+"id": "referir-puntual-1366",
+"verbo": "referir",
+"contexto": "ellos, el fin de semana pasado, mucho.",
+"respuesta": "ellos referieron mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"ellos"
+],
+[
+"referieron"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos referieron mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "ellos refirieron mucho el fin de semana pasado.",
+"note": "missing e->i stem change, must be refirieron"
+}
+]
+},
+{
+"exercise": {
+"id": "elegir-puntual-1507",
+"verbo": "elegir",
+"contexto": "ella, ayer por la tarde, mucho.",
+"respuesta": "ella elegio mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"ella"
+],
+[
+"elegio"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella elegio mucho ayer por la tarde.",
+"cat": "gram",
+"fix": "ella eligió mucho ayer por la tarde.",
+"note": "missing e->i stem change, must be eligió"
+}
+]
+},
+{
+"exercise": {
+"id": "elegir-puntual-1508",
+"verbo": "elegir",
+"contexto": "ellos, anoche, mucho.",
+"respuesta": "ellos elegieron mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"ellos"
+],
+[
+"elegieron"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos elegieron mucho anoche.",
+"cat": "gram",
+"fix": "ellos eligieron mucho anoche.",
+"note": "missing e->i stem change, must be eligieron"
+}
+]
+},
+{
+"exercise": {
+"id": "mentir-puntual-1542",
+"verbo": "mentir",
+"contexto": "él, el fin de semana pasado, mucho.",
+"respuesta": "él mentio mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"él"
+],
+[
+"mentio"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él mentio mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "él mintió mucho el fin de semana pasado.",
+"note": "missing e->i stem change, must be mintió"
+}
+]
+},
+{
+"exercise": {
+"id": "despedir-puntual-2563",
+"verbo": "despedir",
+"contexto": "ella, ayer por la tarde, mucho.",
+"respuesta": "ella despedio mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"ella"
+],
+[
+"despedio"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella despedio mucho ayer por la tarde.",
+"cat": "gram",
+"fix": "ella despidió mucho ayer por la tarde.",
+"note": "missing e->i stem change, must be despidió"
+}
+]
+},
+{
+"exercise": {
+"id": "despedir-puntual-2564",
+"verbo": "despedir",
+"contexto": "ellos, anoche, mucho.",
+"respuesta": "ellos despedieron mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"ellos"
+],
+[
+"despedieron"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos despedieron mucho anoche.",
+"cat": "gram",
+"fix": "ellos despidieron mucho anoche.",
+"note": "missing e->i stem change, must be despidieron"
+}
+]
+},
+{
+"exercise": {
+"id": "repetir-puntual-2684",
+"verbo": "repetir",
+"contexto": "ellos, ayer por la tarde, mucho.",
+"respuesta": "ellos repetieron mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"ellos"
+],
+[
+"repetieron"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos repetieron mucho ayer por la tarde.",
+"cat": "gram",
+"fix": "ellos repitieron mucho ayer por la tarde.",
+"note": "missing e->i stem change, must be repitieron"
+}
+]
+},
+{
+"exercise": {
+"id": "repetir-puntual-2685",
+"verbo": "repetir",
+"contexto": "ellos, anoche, mucho.",
+"respuesta": "ellos repetieron mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"ellos"
+],
+[
+"repetieron"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos repetieron mucho anoche.",
+"cat": "gram",
+"fix": "ellos repitieron mucho anoche.",
+"note": "missing e->i stem change, must be repitieron"
+}
+]
+},
+{
+"exercise": {
+"id": "repetir-puntual-2686",
+"verbo": "repetir",
+"contexto": "ellos, el fin de semana pasado, mucho.",
+"respuesta": "ellos repetieron mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"ellos"
+],
+[
+"repetieron"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos repetieron mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "ellos repitieron mucho el fin de semana pasado.",
+"note": "missing e->i stem change, must be repitieron"
+}
+]
+},
+{
+"exercise": {
+"id": "empezar-puntual-550",
+"verbo": "empezar",
+"contexto": "yo, ayer por la tarde, mucho.",
+"respuesta": "yo empeze mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"yo"
+],
+[
+"empeze"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo empeze mucho ayer por la tarde.",
+"cat": "gram",
+"fix": "yo empecé mucho ayer por la tarde.",
+"note": "wrong spelling, empezar requires z->c before e in yo preterite"
+}
+]
+},
+{
+"exercise": {
+"id": "empezar-puntual-551",
+"verbo": "empezar",
+"contexto": "yo, anoche, mucho.",
+"respuesta": "yo empeze mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"yo"
+],
+[
+"empeze"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo empeze mucho anoche.",
+"cat": "gram",
+"fix": "yo empecé mucho anoche.",
+"note": "wrong spelling, empezar requires z->c before e in yo preterite"
+}
+]
+},
+{
+"exercise": {
+"id": "empezar-puntual-552",
+"verbo": "empezar",
+"contexto": "yo, el fin de semana pasado, mucho.",
+"respuesta": "yo empeze mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"yo"
+],
+[
+"empeze"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo empeze mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "yo empecé mucho el fin de semana pasado.",
+"note": "wrong spelling, empezar requires z->c before e in yo preterite"
+}
+]
+},
+{
+"exercise": {
+"id": "pagar-puntual-793",
+"verbo": "pagar",
+"contexto": "yo, anoche, mucho dinero.",
+"respuesta": "yo page mucho dinero anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"yo"
+],
+[
+"page"
+],
+[
+"mucho dinero"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo page mucho dinero anoche.",
+"cat": "gram",
+"fix": "yo pagué mucho dinero anoche.",
+"note": "wrong spelling, pagar requires g->gu before e in yo preterite"
+}
+]
+},
+{
+"exercise": {
+"id": "pagar-puntual-794",
+"verbo": "pagar",
+"contexto": "yo, el fin de semana pasado, mucho dinero.",
+"respuesta": "yo page mucho dinero el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"yo"
+],
+[
+"page"
+],
+[
+"mucho dinero"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo page mucho dinero el fin de semana pasado.",
+"cat": "gram",
+"fix": "yo pagué mucho dinero el fin de semana pasado.",
+"note": "wrong spelling, pagar requires g->gu before e in yo preterite"
+}
+]
+},
+{
+"exercise": {
+"id": "significar-puntual-837",
+"verbo": "significar",
+"contexto": "yo, anoche, mucho.",
+"respuesta": "yo significe mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"yo"
+],
+[
+"significe"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo significe mucho anoche.",
+"cat": "gram",
+"fix": "yo signifiqué mucho anoche.",
+"note": "wrong spelling, significar requires c->qu before e in yo preterite"
+}
+]
+},
+{
+"exercise": {
+"id": "realizar-puntual-1409",
+"verbo": "realizar",
+"contexto": "yo, anoche, mucho.",
+"respuesta": "yo realize mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"yo"
+],
+[
+"realize"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo realize mucho anoche.",
+"cat": "gram",
+"fix": "yo realicé mucho anoche.",
+"note": "wrong spelling (z->c required); also visually identical to English 'realize'"
+}
+]
+},
+{
+"exercise": {
+"id": "alcanzar-puntual-2037",
+"verbo": "alcanzar",
+"contexto": "yo, el fin de semana pasado, mucho.",
+"respuesta": "yo alcanze mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"yo"
+],
+[
+"alcanze"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo alcanze mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "yo alcancé mucho el fin de semana pasado.",
+"note": "wrong spelling, alcanzar requires z->c before e in yo preterite"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-puntual-1837",
+"verbo": "tranquilar",
+"contexto": "tú, ayer por la tarde, mucho.",
+"respuesta": "tú tranquilaste mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"tú"
+],
+[
+"tranquilaste"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú tranquilaste mucho ayer por la tarde.",
+"cat": "gram",
+"fix": "tú tranquilizaste mucho ayer por la tarde.",
+"note": "'tranquilar' is not standard Spanish; the verb is tranquilizar"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-puntual-1838",
+"verbo": "tranquilar",
+"contexto": "nosotros, anoche, mucho.",
+"respuesta": "nosotros tranquilamos mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"tranquilamos"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros tranquilamos mucho anoche.",
+"cat": "gram",
+"fix": "nosotros tranquilizamos mucho anoche.",
+"note": "'tranquilar' is not standard Spanish; the verb is tranquilizar"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-puntual-1839",
+"verbo": "tranquilar",
+"contexto": "ella, el fin de semana pasado, mucho.",
+"respuesta": "ella tranquilo mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"ella"
+],
+[
+"tranquilo"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella tranquilo mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "ella tranquilizó mucho el fin de semana pasado.",
+"note": "'tranquilar' is not standard Spanish; the verb is tranquilizar"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-puntual-8034",
+"verbo": "tranquilar",
+"contexto": "ella, justo en ese instante, al paciente",
+"respuesta": "Ella tranquilo al paciente justo en ese instante.",
+"pista": "Tranquilando al paciente justo en ese instante: acción puntual, usa el pretérito.",
+"grupos": [
+[
+"ella"
+],
+[
+"tranquilo"
+],
+[
+"al paciente"
+],
+[
+"justo en ese instante"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella tranquilo al paciente justo en ese instante.",
+"cat": "gram",
+"fix": "Ella tranquilizó al paciente justo en ese instante.",
+"note": "'tranquilar' is not standard Spanish; the verb is tranquilizar"
+}
+]
+},
+{
+"exercise": {
+"id": "tranquilar-puntual-8035",
+"verbo": "tranquilar",
+"contexto": "yo, de repente, a los ninos asustados",
+"respuesta": "Yo tranquile a los ninos asustados de repente.",
+"pista": "Tranquilando a los niños asustados de repente: acción puntual, usa el pretérito.",
+"grupos": [
+[
+"yo"
+],
+[
+"tranquile"
+],
+[
+"a los ninos asustados"
+],
+[
+"de repente"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo tranquile a los ninos asustados de repente.",
+"cat": "gram",
+"fix": "Yo tranquilicé a los ninos asustados de repente.",
+"note": "'tranquilar' is not standard Spanish; the verb is tranquilizar"
+}
+]
+},
+{
+"exercise": {
+"id": "suponer-puntual-638",
+"verbo": "suponer",
+"contexto": "yo, ayer por la tarde, mucho.",
+"respuesta": "yo suponi mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"yo"
+],
+[
+"suponi"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo suponi mucho ayer por la tarde.",
+"cat": "gram",
+"fix": "yo supuse mucho ayer por la tarde.",
+"note": "suponer is irregular like poner; must be supuse not suponi"
+}
+]
+},
+{
+"exercise": {
+"id": "suponer-puntual-639",
+"verbo": "suponer",
+"contexto": "ellos, anoche, mucho.",
+"respuesta": "ellos suponieron mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"ellos"
+],
+[
+"suponieron"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos suponieron mucho anoche.",
+"cat": "gram",
+"fix": "ellos supusieron mucho anoche.",
+"note": "suponer is irregular like poner; must be supusieron not suponieron"
+}
+]
+},
+{
+"exercise": {
+"id": "suponer-puntual-640",
+"verbo": "suponer",
+"contexto": "yo, el fin de semana pasado, mucho.",
+"respuesta": "yo suponi mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"yo"
+],
+[
+"suponi"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo suponi mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "yo supuse mucho el fin de semana pasado.",
+"note": "suponer is irregular like poner; must be supuse not suponi"
+}
+]
+},
+{
+"exercise": {
+"id": "producir-puntual-1672",
+"verbo": "producir",
+"contexto": "ellos, ayer por la tarde, mucho.",
+"respuesta": "ellos producieron mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"ellos"
+],
+[
+"producieron"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos producieron mucho ayer por la tarde.",
+"cat": "gram",
+"fix": "ellos produjeron mucho ayer por la tarde.",
+"note": "producir is irregular (j-stem like conducir); must be produjeron"
+}
+]
+},
+{
+"exercise": {
+"id": "producir-puntual-1673",
+"verbo": "producir",
+"contexto": "yo, anoche, mucho.",
+"respuesta": "yo produci mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"yo"
+],
+[
+"produci"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo produci mucho anoche.",
+"cat": "gram",
+"fix": "yo produje mucho anoche.",
+"note": "producir is irregular (j-stem); must be produje not produci"
+}
+]
+},
+{
+"exercise": {
+"id": "producir-puntual-1674",
+"verbo": "producir",
+"contexto": "él, el fin de semana pasado, mucho.",
+"respuesta": "él producio mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"él"
+],
+[
+"producio"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él producio mucho el fin de semana pasado.",
+"cat": "gram",
+"fix": "él produjo mucho el fin de semana pasado.",
+"note": "producir is irregular (j-stem); must be produjo not producio"
+}
+]
+},
+{
+"exercise": {
+"id": "bastar-puntual-1705",
+"verbo": "bastar",
+"contexto": "ella, ayer por la tarde, mucho.",
+"respuesta": "ella basto mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"ella"
+],
+[
+"basto"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella basto mucho ayer por la tarde.",
+"cat": "sem",
+"fix": "ella basto mucho ayer por la tarde.",
+"note": "bastar already means 'was enough'; pairing with degree word 'mucho' is odd/redundant"
+}
+]
+},
+{
+"exercise": {
+"id": "bastar-puntual-1706",
+"verbo": "bastar",
+"contexto": "ella, anoche, mucho.",
+"respuesta": "ella basto mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"ella"
+],
+[
+"basto"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella basto mucho anoche.",
+"cat": "sem",
+"fix": "ella basto mucho anoche.",
+"note": "bastar already means 'was enough'; pairing with degree word 'mucho' is odd/redundant"
+}
+]
+},
+{
+"exercise": {
+"id": "bastar-puntual-1707",
+"verbo": "bastar",
+"contexto": "ellos, el fin de semana pasado, mucho.",
+"respuesta": "ellos bastaron mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"ellos"
+],
+[
+"bastaron"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos bastaron mucho el fin de semana pasado.",
+"cat": "sem",
+"fix": "ellos bastaron mucho el fin de semana pasado.",
+"note": "bastar already means 'was enough'; pairing with degree word 'mucho' is odd/redundant"
+}
+]
+},
+{
+"exercise": {
+"id": "matar-puntual-418",
+"verbo": "matar",
+"contexto": "yo, ayer por la tarde, mucho.",
+"respuesta": "yo mate mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"yo"
+],
+[
+"mate"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo mate mucho ayer por la tarde.",
+"cat": "sem",
+"fix": "yo mate mucho ayer por la tarde.",
+"note": "matar needs an explicit object/victim; bare 'mucho' is odd and vague for such a specific verb"
+}
+]
+},
+{
+"exercise": {
+"id": "matar-puntual-419",
+"verbo": "matar",
+"contexto": "ellos, anoche, mucho.",
+"respuesta": "ellos mataron mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"ellos"
+],
+[
+"mataron"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos mataron mucho anoche.",
+"cat": "sem",
+"fix": "ellos mataron mucho anoche.",
+"note": "matar needs an explicit object/victim; bare 'mucho' is odd and vague for such a specific verb"
+}
+]
+},
+{
+"exercise": {
+"id": "matar-puntual-420",
+"verbo": "matar",
+"contexto": "él, el fin de semana pasado, mucho.",
+"respuesta": "él mato mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"él"
+],
+[
+"mato"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él mato mucho el fin de semana pasado.",
+"cat": "sem",
+"fix": "él mato mucho el fin de semana pasado.",
+"note": "matar needs an explicit object/victim; bare 'mucho' is odd and vague for such a specific verb"
+}
+]
+},
+{
+"exercise": {
+"id": "asesinar-puntual-1991",
+"verbo": "asesinar",
+"contexto": "tú, ayer por la tarde, mucho.",
+"respuesta": "tú asesinaste mucho ayer por la tarde.",
+"pista": "Piensa en una acción terminada en un momento concreto.",
+"grupos": [
+[
+"tú"
+],
+[
+"asesinaste"
+],
+[
+"mucho"
+],
+[
+"ayer por la tarde"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú asesinaste mucho ayer por la tarde.",
+"cat": "sem",
+"fix": "tú asesinaste mucho ayer por la tarde.",
+"note": "asesinar needs an explicit victim object; bare 'mucho' is odd and vague"
+}
+]
+},
+{
+"exercise": {
+"id": "asesinar-puntual-1992",
+"verbo": "asesinar",
+"contexto": "ella, anoche, mucho.",
+"respuesta": "ella asesino mucho anoche.",
+"pista": "Hay una referencia clara de tiempo.",
+"grupos": [
+[
+"ella"
+],
+[
+"asesino"
+],
+[
+"mucho"
+],
+[
+"anoche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella asesino mucho anoche.",
+"cat": "sem",
+"fix": "ella asesino mucho anoche.",
+"note": "asesinar needs an explicit victim object; bare 'mucho' is odd and vague"
+}
+]
+},
+{
+"exercise": {
+"id": "asesinar-puntual-1993",
+"verbo": "asesinar",
+"contexto": "yo, el fin de semana pasado, mucho.",
+"respuesta": "yo asesine mucho el fin de semana pasado.",
+"pista": "Todo ocurrió y terminó en ese momento.",
+"grupos": [
+[
+"yo"
+],
+[
+"asesine"
+],
+[
+"mucho"
+],
+[
+"el fin de semana pasado"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo asesine mucho el fin de semana pasado.",
+"cat": "sem",
+"fix": "yo asesine mucho el fin de semana pasado.",
+"note": "asesinar needs an explicit victim object; bare 'mucho' is odd and vague"
+}
+]
+},
+{
+"exercise": {
+"id": "encantar-puntual-7732",
+"verbo": "encantar",
+"contexto": "la musica, aquel verano, a todos",
+"respuesta": "La musica encanto a todos aquel verano.",
+"pista": "La música encantando a todos aquel verano: acción puntual, usa el pretérito.",
+"grupos": [
+[
+"la musica"
+],
+[
+"encanto"
+],
+[
+"a todos"
+],
+[
+"aquel verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "La musica encanto a todos aquel verano.",
+"cat": "gram",
+"fix": "La música les encantó a todos aquel verano.",
+"note": "missing obligatory clitic pronoun les with 'a todos'"
+}
+]
+},
+{
+"exercise": {
+"id": "encantar-puntual-7733",
+"verbo": "encantar",
+"contexto": "la cena, esa misma noche, a los invitados",
+"respuesta": "La cena encanto a los invitados esa misma noche.",
+"pista": "La cena encantando a los invitados esa misma noche: acción puntual, usa el pretérito.",
+"grupos": [
+[
+"la cena"
+],
+[
+"encanto"
+],
+[
+"a los invitados"
+],
+[
+"esa misma noche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "La cena encanto a los invitados esa misma noche.",
+"cat": "gram",
+"fix": "La cena les encantó a los invitados esa misma noche.",
+"note": "missing obligatory clitic pronoun les"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-puntual-7784",
+"verbo": "gustar",
+"contexto": "la pelicula, aquel verano, a todos",
+"respuesta": "La pelicula gusto a todos aquel verano.",
+"pista": "La película gustando a todos aquel verano: acción puntual, usa el pretérito.",
+"grupos": [
+[
+"la pelicula"
+],
+[
+"gusto"
+],
+[
+"a todos"
+],
+[
+"aquel verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "La pelicula gusto a todos aquel verano.",
+"cat": "gram",
+"fix": "La película les gustó a todos aquel verano.",
+"note": "missing obligatory clitic pronoun les"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-puntual-7785",
+"verbo": "gustar",
+"contexto": "la comida, al mediodia, mucho a los invitados",
+"respuesta": "La comida gusto mucho a los invitados al mediodia.",
+"pista": "La comida gustando mucho a los invitados al mediodía: acción puntual, usa el pretérito.",
+"grupos": [
+[
+"la comida"
+],
+[
+"gusto"
+],
+[
+"mucho a los invitados"
+],
+[
+"al mediodia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "La comida gusto mucho a los invitados al mediodia.",
+"cat": "gram",
+"fix": "La comida les gustó mucho a los invitados al mediodia.",
+"note": "missing obligatory clitic pronoun les"
+}
+]
+},
+{
+"exercise": {
+"id": "importar-puntual-7798",
+"verbo": "importar",
+"contexto": "eso, en aquel momento, mucho a todos",
+"respuesta": "Eso importo mucho a todos en aquel momento.",
+"pista": "Eso importando mucho a todos en aquel momento: acción puntual, usa el pretérito.",
+"grupos": [
+[
+"eso"
+],
+[
+"importo"
+],
+[
+"mucho a todos"
+],
+[
+"en aquel momento"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Eso importo mucho a todos en aquel momento.",
+"cat": "gram",
+"fix": "Eso les importó mucho a todos en aquel momento.",
+"note": "missing obligatory clitic pronoun les"
+}
+]
+},
+{
+"exercise": {
+"id": "importar-puntual-7799",
+"verbo": "importar",
+"contexto": "la decision, aquel verano, a toda la familia",
+"respuesta": "La decision importo a toda la familia aquel verano.",
+"pista": "La decisión importando a toda la familia aquel verano: acción puntual, usa el pretérito.",
+"grupos": [
+[
+"la decision"
+],
+[
+"importo"
+],
+[
+"a toda la familia"
+],
+[
+"aquel verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "La decision importo a toda la familia aquel verano.",
+"cat": "gram",
+"fix": "La decisión le importó a toda la familia aquel verano.",
+"note": "missing obligatory clitic pronoun le"
+}
+]
+},
+{
+"exercise": {
+"id": "interesar-puntual-7806",
+"verbo": "interesar",
+"contexto": "la propuesta, en aquel momento, al comite",
+"respuesta": "La propuesta intereso al comite en aquel momento.",
+"pista": "La propuesta interesando al comité en aquel momento: acción puntual, usa el pretérito.",
+"grupos": [
+[
+"la propuesta"
+],
+[
+"intereso"
+],
+[
+"al comite"
+],
+[
+"en aquel momento"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "La propuesta intereso al comite en aquel momento.",
+"cat": "gram",
+"fix": "La propuesta le interesó al comité en aquel momento.",
+"note": "missing obligatory clitic pronoun le"
+}
+]
+},
+{
+"exercise": {
+"id": "interesar-puntual-7807",
+"verbo": "interesar",
+"contexto": "el tema, durante el viaje, a todos",
+"respuesta": "El tema intereso a todos durante el viaje.",
+"pista": "El tema interesando a todos durante el viaje: acción puntual, usa el pretérito.",
+"grupos": [
+[
+"el tema"
+],
+[
+"intereso"
+],
+[
+"a todos"
+],
+[
+"durante el viaje"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El tema intereso a todos durante el viaje.",
+"cat": "gram",
+"fix": "El tema les interesó a todos durante el viaje.",
+"note": "missing obligatory clitic pronoun les"
+}
+]
+},
+{
+"exercise": {
+"id": "molestar-puntual-7854",
+"verbo": "molestar",
+"contexto": "el ruido, durante la tormenta, a los vecinos",
+"respuesta": "El ruido molesto a los vecinos durante la tormenta.",
+"pista": "El ruido molestando a los vecinos durante la tormenta: acción puntual, usa el pretérito.",
+"grupos": [
+[
+"el ruido"
+],
+[
+"molesto"
+],
+[
+"a los vecinos"
+],
+[
+"durante la tormenta"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El ruido molesto a los vecinos durante la tormenta.",
+"cat": "gram",
+"fix": "El ruido les molestó a los vecinos durante la tormenta.",
+"note": "missing obligatory clitic pronoun les"
+}
+]
+},
+{
+"exercise": {
+"id": "molestar-puntual-7855",
+"verbo": "molestar",
+"contexto": "su comentario, esa misma noche, a todos",
+"respuesta": "Su comentario molesto a todos esa misma noche.",
+"pista": "Su comentario molestando a todos esa misma noche: acción puntual, usa el pretérito.",
+"grupos": [
+[
+"su comentario"
+],
+[
+"molesto"
+],
+[
+"a todos"
+],
+[
+"esa misma noche"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Su comentario molesto a todos esa misma noche.",
+"cat": "gram",
+"fix": "Su comentario les molestó a todos esa misma noche.",
+"note": "missing obligatory clitic pronoun les"
+}
+]
+},
+{
+"exercise": {
+"id": "tener-habitual-38",
+"verbo": "tener",
+"contexto": "él, en aquella época, a menudo, un problema.",
+"respuesta": "él tenía un problema en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"tenia"
+],
+[
+"un problema"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él tenia un problema en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él tenía un problema en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ir-habitual-49",
+"verbo": "ir",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros íbamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"ibamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros ibamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros íbamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "hacer-habitual-58",
+"verbo": "hacer",
+"contexto": "él, de niño, todos los días, ejercicio.",
+"respuesta": "él hacía ejercicio de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"hacia"
+],
+[
+"ejercicio"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él hacia ejercicio de niño, todos los días.",
+"cat": "gram",
+"fix": "él hacía ejercicio de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "hacer-habitual-59",
+"verbo": "hacer",
+"contexto": "ellos, cuando era joven, siempre, la tarea.",
+"respuesta": "ellos hacían la tarea cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"hacian"
+],
+[
+"la tarea"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos hacian la tarea cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos hacían la tarea cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "hacer-habitual-60",
+"verbo": "hacer",
+"contexto": "yo, en aquella época, a menudo, ejercicio.",
+"respuesta": "yo hacía ejercicio en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"hacia"
+],
+[
+"ejercicio"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo hacia ejercicio en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo hacía ejercicio en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "poder-habitual-69",
+"verbo": "poder",
+"contexto": "yo, de niño, todos los días, mucho.",
+"respuesta": "yo podía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"podia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo podia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "yo podía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "poder-habitual-70",
+"verbo": "poder",
+"contexto": "tú, cuando era joven, siempre, mucho.",
+"respuesta": "tú podías mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"tú"
+],
+[
+"podias"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú podias mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "tú podías mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "poder-habitual-71",
+"verbo": "poder",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él podía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"podia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él podia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él podía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "decir-habitual-81",
+"verbo": "decir",
+"contexto": "nosotros, cuando era joven, siempre, algo importante.",
+"respuesta": "nosotros decíamos algo importante cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"deciamos"
+],
+[
+"algo importante"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros deciamos algo importante cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros decíamos algo importante cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "querer-habitual-91",
+"verbo": "querer",
+"contexto": "yo, de niño, todos los días, descansar.",
+"respuesta": "yo quería descansar de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"queria"
+],
+[
+"descansar"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo queria descansar de niño, todos los días.",
+"cat": "gram",
+"fix": "yo quería descansar de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "querer-habitual-92",
+"verbo": "querer",
+"contexto": "ella, cuando era joven, siempre, comprar un coche.",
+"respuesta": "ella quería comprar un coche cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ella"
+],
+[
+"queria"
+],
+[
+"comprar un coche"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella queria comprar un coche cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ella quería comprar un coche cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "querer-habitual-93",
+"verbo": "querer",
+"contexto": "nosotros, en aquella época, a menudo, comprar un coche.",
+"respuesta": "nosotros queríamos comprar un coche en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"queriamos"
+],
+[
+"comprar un coche"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros queriamos comprar un coche en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros queríamos comprar un coche en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ver-habitual-102",
+"verbo": "ver",
+"contexto": "yo, de niño, todos los días, la televisión.",
+"respuesta": "yo veía la televisión de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"veia"
+],
+[
+"la televisión"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo veia la televisión de niño, todos los días.",
+"cat": "gram",
+"fix": "yo veía la televisión de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ver-habitual-103",
+"verbo": "ver",
+"contexto": "nosotros, cuando era joven, siempre, una película.",
+"respuesta": "nosotros veíamos una película cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"veiamos"
+],
+[
+"una película"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros veiamos una película cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros veíamos una película cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ver-habitual-104",
+"verbo": "ver",
+"contexto": "yo, en aquella época, a menudo, una película.",
+"respuesta": "yo veía una película en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"veia"
+],
+[
+"una película"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo veia una película en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo veía una película en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "saber-habitual-113",
+"verbo": "saber",
+"contexto": "él, de niño, todos los días, mucho.",
+"respuesta": "él sabía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"sabia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él sabia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "él sabía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "saber-habitual-114",
+"verbo": "saber",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él sabía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"sabia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él sabia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él sabía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "saber-habitual-115",
+"verbo": "saber",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros sabíamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"sabiamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros sabiamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros sabíamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "creer-habitual-124",
+"verbo": "creer",
+"contexto": "yo, de niño, todos los días, que era posible.",
+"respuesta": "yo creía que era posible de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"creia"
+],
+[
+"que era posible"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo creia que era posible de niño, todos los días.",
+"cat": "gram",
+"fix": "yo creía que era posible de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "creer-habitual-125",
+"verbo": "creer",
+"contexto": "ellos, cuando era joven, siempre, que era posible.",
+"respuesta": "ellos creían que era posible cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"creian"
+],
+[
+"que era posible"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos creian que era posible cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos creían que era posible cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "creer-habitual-126",
+"verbo": "creer",
+"contexto": "ella, en aquella época, a menudo, esa historia.",
+"respuesta": "ella creía esa historia en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"creia"
+],
+[
+"esa historia"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella creia esa historia en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella creía esa historia en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "deber-habitual-146",
+"verbo": "deber",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú debías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"debias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú debias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú debías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "deber-habitual-147",
+"verbo": "deber",
+"contexto": "tú, cuando era joven, siempre, mucho.",
+"respuesta": "tú debías mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"tú"
+],
+[
+"debias"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú debias mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "tú debías mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "deber-habitual-148",
+"verbo": "deber",
+"contexto": "ella, en aquella época, a menudo, mucho.",
+"respuesta": "ella debía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"debia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella debia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella debía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pasar-habitual-179",
+"verbo": "pasar",
+"contexto": "nosotros, de niño, todos los días, la tarde en casa.",
+"respuesta": "nosotros pasábamos la tarde en casa de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"pasabamos"
+],
+[
+"la tarde en casa"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros pasabamos la tarde en casa de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros pasábamos la tarde en casa de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "sentir-habitual-190",
+"verbo": "sentir",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros sentíamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"sentiamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros sentiamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros sentíamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "sentir-habitual-191",
+"verbo": "sentir",
+"contexto": "tú, cuando era joven, siempre, mucho.",
+"respuesta": "tú sentías mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"tú"
+],
+[
+"sentias"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú sentias mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "tú sentías mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "sentir-habitual-192",
+"verbo": "sentir",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros sentíamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"sentiamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros sentiamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros sentíamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pensar-habitual-201",
+"verbo": "pensar",
+"contexto": "nosotros, de niño, todos los días, en su futuro.",
+"respuesta": "nosotros pensábamos en su futuro de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"pensabamos"
+],
+[
+"en su futuro"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros pensabamos en su futuro de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros pensábamos en su futuro de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pensar-habitual-202",
+"verbo": "pensar",
+"contexto": "nosotros, cuando era joven, siempre, en su futuro.",
+"respuesta": "nosotros pensábamos en su futuro cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"pensabamos"
+],
+[
+"en su futuro"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros pensabamos en su futuro cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros pensábamos en su futuro cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "esperar-habitual-212",
+"verbo": "esperar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros esperábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"esperabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros esperabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros esperábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "esperar-habitual-213",
+"verbo": "esperar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros esperábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"esperabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros esperabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros esperábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "venir-habitual-223",
+"verbo": "venir",
+"contexto": "yo, de niño, todos los días, muy temprano.",
+"respuesta": "yo venía muy temprano de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"venia"
+],
+[
+"muy temprano"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo venia muy temprano de niño, todos los días.",
+"cat": "gram",
+"fix": "yo venía muy temprano de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "venir-habitual-224",
+"verbo": "venir",
+"contexto": "él, cuando era joven, siempre, a casa.",
+"respuesta": "él venía a casa cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"venia"
+],
+[
+"a casa"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él venia a casa cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él venía a casa cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "venir-habitual-225",
+"verbo": "venir",
+"contexto": "ellos, en aquella época, a menudo, muy temprano.",
+"respuesta": "ellos venían muy temprano en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"venian"
+],
+[
+"muy temprano"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos venian muy temprano en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos venían muy temprano en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "llevar-habitual-257",
+"verbo": "llevar",
+"contexto": "nosotros, cuando era joven, siempre, a su hijo a la escuela.",
+"respuesta": "nosotros llevábamos a su hijo a la escuela cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"llevabamos"
+],
+[
+"a su hijo a la escuela"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros llevabamos a su hijo a la escuela cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros llevábamos a su hijo a la escuela cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "encontrar-habitual-269",
+"verbo": "encontrar",
+"contexto": "nosotros, en aquella época, a menudo, un trabajo.",
+"respuesta": "nosotros encontrábamos un trabajo en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"encontrabamos"
+],
+[
+"un trabajo"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros encontrabamos un trabajo en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros encontrábamos un trabajo en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "volver-habitual-278",
+"verbo": "volver",
+"contexto": "yo, de niño, todos los días, muy tarde.",
+"respuesta": "yo volvía muy tarde de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"volvia"
+],
+[
+"muy tarde"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo volvia muy tarde de niño, todos los días.",
+"cat": "gram",
+"fix": "yo volvía muy tarde de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "volver-habitual-279",
+"verbo": "volver",
+"contexto": "yo, cuando era joven, siempre, muy tarde.",
+"respuesta": "yo volvía muy tarde cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"yo"
+],
+[
+"volvia"
+],
+[
+"muy tarde"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo volvia muy tarde cuando era joven, siempre.",
+"cat": "gram",
+"fix": "yo volvía muy tarde cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "volver-habitual-280",
+"verbo": "volver",
+"contexto": "yo, en aquella época, a menudo, muy tarde.",
+"respuesta": "yo volvía muy tarde en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"volvia"
+],
+[
+"muy tarde"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo volvia muy tarde en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo volvía muy tarde en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "llamar-habitual-290",
+"verbo": "llamar",
+"contexto": "nosotros, cuando era joven, siempre, a su madre.",
+"respuesta": "nosotros llamábamos a su madre cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"llamabamos"
+],
+[
+"a su madre"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros llamabamos a su madre cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros llamábamos a su madre cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "parecer-habitual-300",
+"verbo": "parecer",
+"contexto": "ella, de niño, todos los días, mucho.",
+"respuesta": "ella parecía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"parecia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella parecia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ella parecía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "parecer-habitual-301",
+"verbo": "parecer",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos parecían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"parecian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos parecian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos parecían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "parecer-habitual-302",
+"verbo": "parecer",
+"contexto": "ella, en aquella época, a menudo, mucho.",
+"respuesta": "ella parecía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"parecia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella parecia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella parecía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "poner-habitual-344",
+"verbo": "poner",
+"contexto": "ella, de niño, todos los días, la música.",
+"respuesta": "ella ponía la música de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"ponia"
+],
+[
+"la música"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella ponia la música de niño, todos los días.",
+"cat": "gram",
+"fix": "ella ponía la música de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "poner-habitual-345",
+"verbo": "poner",
+"contexto": "nosotros, cuando era joven, siempre, la mesa.",
+"respuesta": "nosotros poníamos la mesa cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"poniamos"
+],
+[
+"la mesa"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros poniamos la mesa cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros poníamos la mesa cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "poner-habitual-346",
+"verbo": "poner",
+"contexto": "tú, en aquella época, a menudo, la mesa.",
+"respuesta": "tú ponías la mesa en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"tú"
+],
+[
+"ponias"
+],
+[
+"la mesa"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú ponias la mesa en aquella época, a menudo.",
+"cat": "gram",
+"fix": "tú ponías la mesa en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "oír-habitual-355",
+"verbo": "oír",
+"contexto": "él, de niño, todos los días, esa canción.",
+"respuesta": "él oía esa canción de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"oia"
+],
+[
+"esa canción"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él oia esa canción de niño, todos los días.",
+"cat": "gram",
+"fix": "él oía esa canción de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "oír-habitual-356",
+"verbo": "oír",
+"contexto": "tú, cuando era joven, siempre, esa canción.",
+"respuesta": "tú oías esa canción cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"tú"
+],
+[
+"oias"
+],
+[
+"esa canción"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú oias esa canción cuando era joven, siempre.",
+"cat": "gram",
+"fix": "tú oías esa canción cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "oír-habitual-357",
+"verbo": "oír",
+"contexto": "ellos, en aquella época, a menudo, un ruido.",
+"respuesta": "ellos oían un ruido en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"oian"
+],
+[
+"un ruido"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos oian un ruido en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos oían un ruido en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "salir-habitual-366",
+"verbo": "salir",
+"contexto": "ella, de niño, todos los días, temprano.",
+"respuesta": "ella salía temprano de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"salia"
+],
+[
+"temprano"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella salia temprano de niño, todos los días.",
+"cat": "gram",
+"fix": "ella salía temprano de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "salir-habitual-367",
+"verbo": "salir",
+"contexto": "ellos, cuando era joven, siempre, temprano.",
+"respuesta": "ellos salían temprano cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"salian"
+],
+[
+"temprano"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos salian temprano cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos salían temprano cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "salir-habitual-368",
+"verbo": "salir",
+"contexto": "ellos, en aquella época, a menudo, temprano.",
+"respuesta": "ellos salían temprano en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"salian"
+],
+[
+"temprano"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos salian temprano en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos salían temprano en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "seguir-habitual-388",
+"verbo": "seguir",
+"contexto": "yo, de niño, todos los días, trabajando.",
+"respuesta": "yo seguía trabajando de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"seguia"
+],
+[
+"trabajando"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo seguia trabajando de niño, todos los días.",
+"cat": "gram",
+"fix": "yo seguía trabajando de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "seguir-habitual-389",
+"verbo": "seguir",
+"contexto": "él, cuando era joven, siempre, estudiando.",
+"respuesta": "él seguía estudiando cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"seguia"
+],
+[
+"estudiando"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él seguia estudiando cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él seguía estudiando cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "seguir-habitual-390",
+"verbo": "seguir",
+"contexto": "ellos, en aquella época, a menudo, estudiando.",
+"respuesta": "ellos seguían estudiando en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"seguian"
+],
+[
+"estudiando"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos seguian estudiando en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos seguían estudiando en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conocer-habitual-399",
+"verbo": "conocer",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos conocían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"conocian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos conocian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos conocían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conocer-habitual-400",
+"verbo": "conocer",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros conocíamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"conociamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros conociamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros conocíamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conocer-habitual-401",
+"verbo": "conocer",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él conocía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"conocia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él conocia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él conocía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "escuchar-habitual-411",
+"verbo": "escuchar",
+"contexto": "nosotros, cuando era joven, siempre, la radio.",
+"respuesta": "nosotros escuchábamos la radio cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"escuchabamos"
+],
+[
+"la radio"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros escuchabamos la radio cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros escuchábamos la radio cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ayudar-habitual-445",
+"verbo": "ayudar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros ayudábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"ayudabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros ayudabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros ayudábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "perder-habitual-454",
+"verbo": "perder",
+"contexto": "tú, de niño, todos los días, sus llaves.",
+"respuesta": "tú perdías sus llaves de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"perdias"
+],
+[
+"sus llaves"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú perdias sus llaves de niño, todos los días.",
+"cat": "gram",
+"fix": "tú perdías sus llaves de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "perder-habitual-455",
+"verbo": "perder",
+"contexto": "ella, cuando era joven, siempre, sus llaves.",
+"respuesta": "ella perdía sus llaves cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ella"
+],
+[
+"perdia"
+],
+[
+"sus llaves"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella perdia sus llaves cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ella perdía sus llaves cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "perder-habitual-456",
+"verbo": "perder",
+"contexto": "tú, en aquella época, a menudo, sus llaves.",
+"respuesta": "tú perdías sus llaves en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"tú"
+],
+[
+"perdias"
+],
+[
+"sus llaves"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú perdias sus llaves en aquella época, a menudo.",
+"cat": "gram",
+"fix": "tú perdías sus llaves en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "entender-habitual-465",
+"verbo": "entender",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos entendían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"entendian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos entendian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos entendían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "entender-habitual-466",
+"verbo": "entender",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él entendía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"entendia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él entendia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él entendía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "entender-habitual-467",
+"verbo": "entender",
+"contexto": "ella, en aquella época, a menudo, mucho.",
+"respuesta": "ella entendía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"entendia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella entendia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella entendía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "tratar-habitual-487",
+"verbo": "tratar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros tratábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"tratabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros tratabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros tratábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "morir-habitual-509",
+"verbo": "morir",
+"contexto": "ella, de niño, todos los días, en el hospital.",
+"respuesta": "ella moría en el hospital de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"moria"
+],
+[
+"en el hospital"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella moria en el hospital de niño, todos los días.",
+"cat": "gram",
+"fix": "ella moría en el hospital de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "morir-habitual-510",
+"verbo": "morir",
+"contexto": "él, cuando era joven, siempre, joven.",
+"respuesta": "él moría joven cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"moria"
+],
+[
+"joven"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él moria joven cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él moría joven cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "morir-habitual-511",
+"verbo": "morir",
+"contexto": "ella, en aquella época, a menudo, en el hospital.",
+"respuesta": "ella moría en el hospital en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"moria"
+],
+[
+"en el hospital"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella moria en el hospital en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella moría en el hospital en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "vivir-habitual-520",
+"verbo": "vivir",
+"contexto": "ellos, de niño, todos los días, con su familia.",
+"respuesta": "ellos vivían con su familia de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"vivian"
+],
+[
+"con su familia"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos vivian con su familia de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos vivían con su familia de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "vivir-habitual-521",
+"verbo": "vivir",
+"contexto": "nosotros, cuando era joven, siempre, con su familia.",
+"respuesta": "nosotros vivíamos con su familia cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"viviamos"
+],
+[
+"con su familia"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros viviamos con su familia cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros vivíamos con su familia cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "vivir-habitual-522",
+"verbo": "vivir",
+"contexto": "yo, en aquella época, a menudo, en Madrid.",
+"respuesta": "yo vivía en Madrid en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"vivia"
+],
+[
+"en Madrid"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo vivia en Madrid en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo vivía en Madrid en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "valer-habitual-531",
+"verbo": "valer",
+"contexto": "ella, de niño, todos los días, mucho.",
+"respuesta": "ella valía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"valia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella valia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ella valía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "valer-habitual-532",
+"verbo": "valer",
+"contexto": "yo, cuando era joven, siempre, mucho.",
+"respuesta": "yo valía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"yo"
+],
+[
+"valia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo valia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "yo valía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "valer-habitual-533",
+"verbo": "valer",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros valíamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"valiamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros valiamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros valíamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "empezar-habitual-554",
+"verbo": "empezar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros empezábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"empezabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros empezabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros empezábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "empezar-habitual-555",
+"verbo": "empezar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros empezábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"empezabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros empezabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros empezábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conseguir-habitual-564",
+"verbo": "conseguir",
+"contexto": "él, de niño, todos los días, mucho.",
+"respuesta": "él conseguía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"conseguia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él conseguia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "él conseguía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conseguir-habitual-565",
+"verbo": "conseguir",
+"contexto": "ella, cuando era joven, siempre, mucho.",
+"respuesta": "ella conseguía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ella"
+],
+[
+"conseguia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella conseguia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ella conseguía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conseguir-habitual-566",
+"verbo": "conseguir",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él conseguía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"conseguia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él conseguia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él conseguía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pedir-habitual-575",
+"verbo": "pedir",
+"contexto": "yo, de niño, todos los días, mucho.",
+"respuesta": "yo pedía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"pedia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo pedia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "yo pedía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pedir-habitual-576",
+"verbo": "pedir",
+"contexto": "ella, cuando era joven, siempre, mucho.",
+"respuesta": "ella pedía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ella"
+],
+[
+"pedia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella pedia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ella pedía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pedir-habitual-577",
+"verbo": "pedir",
+"contexto": "ellos, en aquella época, a menudo, mucho.",
+"respuesta": "ellos pedían mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ellos"
+],
+[
+"pedian"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos pedian mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ellos pedían mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "traer-habitual-597",
+"verbo": "traer",
+"contexto": "él, de niño, todos los días, mucho.",
+"respuesta": "él traía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"traia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él traia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "él traía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "traer-habitual-598",
+"verbo": "traer",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos traían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"traian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos traian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos traían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "traer-habitual-599",
+"verbo": "traer",
+"contexto": "ella, en aquella época, a menudo, mucho.",
+"respuesta": "ella traía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"traia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella traia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella traía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "preguntar-habitual-620",
+"verbo": "preguntar",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros preguntábamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"preguntabamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros preguntabamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros preguntábamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "suponer-habitual-641",
+"verbo": "suponer",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú suponías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"suponias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú suponias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú suponías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "suponer-habitual-642",
+"verbo": "suponer",
+"contexto": "ella, cuando era joven, siempre, mucho.",
+"respuesta": "ella suponía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ella"
+],
+[
+"suponia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella suponia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ella suponía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "suponer-habitual-643",
+"verbo": "suponer",
+"contexto": "ella, en aquella época, a menudo, mucho.",
+"respuesta": "ella suponía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"suponia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella suponia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella suponía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "comer-habitual-685",
+"verbo": "comer",
+"contexto": "ellos, de niño, todos los días, la cena.",
+"respuesta": "ellos comían la cena de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"comian"
+],
+[
+"la cena"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos comian la cena de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos comían la cena de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "comer-habitual-686",
+"verbo": "comer",
+"contexto": "ellos, cuando era joven, siempre, pan.",
+"respuesta": "ellos comían pan cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"comian"
+],
+[
+"pan"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos comian pan cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos comían pan cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "comer-habitual-687",
+"verbo": "comer",
+"contexto": "él, en aquella época, a menudo, pan.",
+"respuesta": "él comía pan en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"comia"
+],
+[
+"pan"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él comia pan en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él comía pan en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mantener-habitual-707",
+"verbo": "mantener",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú mantenías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"mantenias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú mantenias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú mantenías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mantener-habitual-708",
+"verbo": "mantener",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él mantenía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"mantenia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él mantenia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él mantenía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mantener-habitual-709",
+"verbo": "mantener",
+"contexto": "él, en aquella época, a menudo, mucho.",
+"respuesta": "él mantenía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"él"
+],
+[
+"mantenia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él mantenia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "él mantenía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "olvidar-habitual-729",
+"verbo": "olvidar",
+"contexto": "nosotros, de niño, todos los días, las llaves.",
+"respuesta": "nosotros olvidábamos las llaves de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"olvidabamos"
+],
+[
+"las llaves"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros olvidabamos las llaves de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros olvidábamos las llaves de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "preocupar-habitual-740",
+"verbo": "preocupar",
+"contexto": "nosotros, de niño, todos los días, mucho.",
+"respuesta": "nosotros preocupábamos mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"preocupabamos"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros preocupabamos mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros preocupábamos mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ganar-habitual-751",
+"verbo": "ganar",
+"contexto": "nosotros, de niño, todos los días, dinero.",
+"respuesta": "nosotros ganábamos dinero de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"ganabamos"
+],
+[
+"dinero"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros ganabamos dinero de niño, todos los días.",
+"cat": "gram",
+"fix": "nosotros ganábamos dinero de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "abrir-habitual-762",
+"verbo": "abrir",
+"contexto": "yo, de niño, todos los días, la puerta.",
+"respuesta": "yo abría la puerta de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"abria"
+],
+[
+"la puerta"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo abria la puerta de niño, todos los días.",
+"cat": "gram",
+"fix": "yo abría la puerta de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "abrir-habitual-763",
+"verbo": "abrir",
+"contexto": "tú, cuando era joven, siempre, la puerta.",
+"respuesta": "tú abrías la puerta cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"tú"
+],
+[
+"abrias"
+],
+[
+"la puerta"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú abrias la puerta cuando era joven, siempre.",
+"cat": "gram",
+"fix": "tú abrías la puerta cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "abrir-habitual-764",
+"verbo": "abrir",
+"contexto": "yo, en aquella época, a menudo, la ventana.",
+"respuesta": "yo abría la ventana en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"abria"
+],
+[
+"la ventana"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo abria la ventana en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo abría la ventana en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ocurrir-habitual-784",
+"verbo": "ocurrir",
+"contexto": "ellos, de niño, todos los días, mucho.",
+"respuesta": "ellos ocurrían mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"ocurrian"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos ocurrian mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ellos ocurrían mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ocurrir-habitual-785",
+"verbo": "ocurrir",
+"contexto": "él, cuando era joven, siempre, mucho.",
+"respuesta": "él ocurría mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"él"
+],
+[
+"ocurria"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él ocurria mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "él ocurría mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ocurrir-habitual-786",
+"verbo": "ocurrir",
+"contexto": "tú, en aquella época, a menudo, mucho.",
+"respuesta": "tú ocurrías mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"tú"
+],
+[
+"ocurrias"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú ocurrias mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "tú ocurrías mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "permitir-habitual-806",
+"verbo": "permitir",
+"contexto": "él, de niño, todos los días, mucho.",
+"respuesta": "él permitía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"él"
+],
+[
+"permitia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "él permitia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "él permitía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "permitir-habitual-807",
+"verbo": "permitir",
+"contexto": "ellos, cuando era joven, siempre, mucho.",
+"respuesta": "ellos permitían mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"permitian"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos permitian mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos permitían mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "permitir-habitual-808",
+"verbo": "permitir",
+"contexto": "tú, en aquella época, a menudo, mucho.",
+"respuesta": "tú permitías mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"tú"
+],
+[
+"permitias"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú permitias mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "tú permitías mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "recibir-habitual-817",
+"verbo": "recibir",
+"contexto": "yo, de niño, todos los días, mucho.",
+"respuesta": "yo recibía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"recibia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo recibia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "yo recibía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "recibir-habitual-818",
+"verbo": "recibir",
+"contexto": "yo, cuando era joven, siempre, mucho.",
+"respuesta": "yo recibía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"yo"
+],
+[
+"recibia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo recibia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "yo recibía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "recibir-habitual-819",
+"verbo": "recibir",
+"contexto": "ella, en aquella época, a menudo, mucho.",
+"respuesta": "ella recibía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"recibia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella recibia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella recibía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "leer-habitual-828",
+"verbo": "leer",
+"contexto": "yo, de niño, todos los días, el periódico.",
+"respuesta": "yo leía el periódico de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"leia"
+],
+[
+"el periódico"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo leia el periódico de niño, todos los días.",
+"cat": "gram",
+"fix": "yo leía el periódico de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "leer-habitual-829",
+"verbo": "leer",
+"contexto": "ellos, cuando era joven, siempre, un libro.",
+"respuesta": "ellos leían un libro cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ellos"
+],
+[
+"leian"
+],
+[
+"un libro"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ellos leian un libro cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ellos leían un libro cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "leer-habitual-830",
+"verbo": "leer",
+"contexto": "tú, en aquella época, a menudo, el periódico.",
+"respuesta": "tú leías el periódico en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"tú"
+],
+[
+"leias"
+],
+[
+"el periódico"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú leias el periódico en aquella época, a menudo.",
+"cat": "gram",
+"fix": "tú leías el periódico en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "significar-habitual-841",
+"verbo": "significar",
+"contexto": "nosotros, en aquella época, a menudo, mucho.",
+"respuesta": "nosotros significábamos mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"significabamos"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros significabamos mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "nosotros significábamos mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "suceder-habitual-850",
+"verbo": "suceder",
+"contexto": "tú, de niño, todos los días, mucho.",
+"respuesta": "tú sucedías mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"tú"
+],
+[
+"sucedias"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú sucedias mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "tú sucedías mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "suceder-habitual-851",
+"verbo": "suceder",
+"contexto": "nosotros, cuando era joven, siempre, mucho.",
+"respuesta": "nosotros sucedíamos mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"sucediamos"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "nosotros sucediamos mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "nosotros sucedíamos mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "suceder-habitual-852",
+"verbo": "suceder",
+"contexto": "ella, en aquella época, a menudo, mucho.",
+"respuesta": "ella sucedía mucho en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"ella"
+],
+[
+"sucedia"
+],
+[
+"mucho"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella sucedia mucho en aquella época, a menudo.",
+"cat": "gram",
+"fix": "ella sucedía mucho en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "dormir-habitual-861",
+"verbo": "dormir",
+"contexto": "yo, de niño, todos los días, ocho horas.",
+"respuesta": "yo dormía ocho horas de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"yo"
+],
+[
+"dormia"
+],
+[
+"ocho horas"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo dormia ocho horas de niño, todos los días.",
+"cat": "gram",
+"fix": "yo dormía ocho horas de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "dormir-habitual-862",
+"verbo": "dormir",
+"contexto": "tú, cuando era joven, siempre, ocho horas.",
+"respuesta": "tú dormías ocho horas cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"tú"
+],
+[
+"dormias"
+],
+[
+"ocho horas"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "tú dormias ocho horas cuando era joven, siempre.",
+"cat": "gram",
+"fix": "tú dormías ocho horas cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "dormir-habitual-863",
+"verbo": "dormir",
+"contexto": "yo, en aquella época, a menudo, ocho horas.",
+"respuesta": "yo dormía ocho horas en aquella época, a menudo.",
+"pista": "Busca una idea repetida en el pasado.",
+"grupos": [
+[
+"yo"
+],
+[
+"dormia"
+],
+[
+"ocho horas"
+],
+[
+"en aquella época"
+],
+[
+"a menudo"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "yo dormia ocho horas en aquella época, a menudo.",
+"cat": "gram",
+"fix": "yo dormía ocho horas en aquella época, a menudo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "caer-habitual-872",
+"verbo": "caer",
+"contexto": "ella, de niño, todos los días, mucho.",
+"respuesta": "ella caía mucho de niño, todos los días.",
+"pista": "La expresión de tiempo marca una costumbre repetida.",
+"grupos": [
+[
+"ella"
+],
+[
+"caia"
+],
+[
+"mucho"
+],
+[
+"de niño"
+],
+[
+"todos los días"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella caia mucho de niño, todos los días.",
+"cat": "gram",
+"fix": "ella caía mucho de niño, todos los días.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "caer-habitual-873",
+"verbo": "caer",
+"contexto": "ella, cuando era joven, siempre, mucho.",
+"respuesta": "ella caía mucho cuando era joven, siempre.",
+"pista": "Piensa en una acción repetida en otra etapa de la vida.",
+"grupos": [
+[
+"ella"
+],
+[
+"caia"
+],
+[
+"mucho"
+],
+[
+"cuando era joven"
+],
+[
+"siempre"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "ella caia mucho cuando era joven, siempre.",
+"cat": "gram",
+"fix": "ella caía mucho cuando era joven, siempre.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+}
+]

@@ -1,0 +1,530 @@
+[
+ {
+  "id": "gustar-anterior-382",
+  "verbo": "gustar",
+  "contexto": "cuando llegué anoche, a ellos, el plan.",
+  "respuesta": "cuando llegué anoche, a ellos ya les había gustado el plan.",
+  "pista": "Algo relacionado con una idea ya provocaba agrado en ellos antes de que tú llegaras.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "a ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "les habia gustado"
+   ],
+   [
+    "el plan"
+   ]
+  ]
+ },
+ {
+  "id": "gustar-anterior-384",
+  "verbo": "gustar",
+  "contexto": "cuando me llamaste anoche, a ella, la película.",
+  "respuesta": "cuando me llamaste anoche, a ella ya le había gustado la película.",
+  "pista": "Fíjate en qué ya le agradaba a ella antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "a ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia gustado"
+   ],
+   [
+    "la pelicula"
+   ]
+  ]
+ },
+ {
+  "id": "importar-anterior-613",
+  "verbo": "importar",
+  "contexto": "cuando llegué anoche, a ti, el resultado.",
+  "respuesta": "cuando llegué anoche, a ti ya te había importado el resultado.",
+  "pista": "Algo sobre un resultado ya tenía peso para ti antes de que yo llegara.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "a ti"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "te habia importado"
+   ],
+   [
+    "el resultado"
+   ]
+  ]
+ },
+ {
+  "id": "importar-anterior-615",
+  "verbo": "importar",
+  "contexto": "cuando me llamaste anoche, a ella, esa opinión.",
+  "respuesta": "cuando me llamaste anoche, a ella ya le había importado esa opinión.",
+  "pista": "Piensa en qué ya tenía peso para ella antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "a ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia importado"
+   ],
+   [
+    "esa opinion"
+   ]
+  ]
+ },
+ {
+  "id": "preocupar-anterior-745",
+  "verbo": "preocupar",
+  "contexto": "cuando llegué anoche, a él, la noticia.",
+  "respuesta": "cuando llegué anoche, a él ya le había preocupado la noticia.",
+  "pista": "Algo sobre una noticia ya generaba inquietud en él antes de que yo llegara.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "a el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia preocupado"
+   ],
+   [
+    "la noticia"
+   ]
+  ]
+ },
+ {
+  "id": "preocupar-anterior-747",
+  "verbo": "preocupar",
+  "contexto": "cuando me llamaste anoche, a ella, el examen.",
+  "respuesta": "cuando me llamaste anoche, a ella ya le había preocupado el examen.",
+  "pista": "Fíjate en qué ya la inquietaba antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "a ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia preocupado"
+   ],
+   [
+    "el examen"
+   ]
+  ]
+ },
+ {
+  "id": "encantar-anterior-1383",
+  "verbo": "encantar",
+  "contexto": "cuando llegué anoche, a ella, la casa.",
+  "respuesta": "cuando llegué anoche, a ella ya le había encantado la casa.",
+  "pista": "Algo sobre una casa ya la había fascinado antes de que yo llegara.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "a ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia encantado"
+   ],
+   [
+    "la casa"
+   ]
+  ]
+ },
+ {
+  "id": "encantar-anterior-1385",
+  "verbo": "encantar",
+  "contexto": "cuando me llamaste anoche, a ella, el regalo.",
+  "respuesta": "cuando me llamaste anoche, a ella ya le había encantado el regalo.",
+  "pista": "Piensa en qué ya la había fascinado antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "a ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia encantado"
+   ],
+   [
+    "el regalo"
+   ]
+  ]
+ },
+ {
+  "id": "molestar-anterior-1592",
+  "verbo": "molestar",
+  "contexto": "cuando llegué anoche, a nosotros, el ruido.",
+  "respuesta": "cuando llegué anoche, a nosotros ya nos había molestado el ruido.",
+  "pista": "Algo sobre un ruido ya nos incomodaba antes de que yo llegara.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "a nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "nos habia molestado"
+   ],
+   [
+    "el ruido"
+   ]
+  ]
+ },
+ {
+  "id": "molestar-anterior-1594",
+  "verbo": "molestar",
+  "contexto": "cuando me llamaste anoche, a nosotros, el comentario.",
+  "respuesta": "cuando me llamaste anoche, a nosotros ya nos había molestado el comentario.",
+  "pista": "Fíjate en qué ya nos incomodaba antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "a nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "nos habia molestado"
+   ],
+   [
+    "el comentario"
+   ]
+  ]
+ },
+ {
+  "id": "pesar-anterior-1691",
+  "verbo": "pesar",
+  "contexto": "cuando llegué anoche, a mí, esa decisión.",
+  "respuesta": "cuando llegué anoche, a mí ya me había pesado esa decisión.",
+  "pista": "Algo sobre una decisión ya me causaba arrepentimiento antes de que yo llegara.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "a mi"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "me habia pesado"
+   ],
+   [
+    "esa decision"
+   ]
+  ]
+ },
+ {
+  "id": "pesar-anterior-1693",
+  "verbo": "pesar",
+  "contexto": "cuando me llamaste anoche, a él, esa decisión.",
+  "respuesta": "cuando me llamaste anoche, a él ya le había pesado esa decisión.",
+  "pista": "Piensa en qué decisión ya le causaba arrepentimiento antes de que me llamaras.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "a el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia pesado"
+   ],
+   [
+    "esa decision"
+   ]
+  ]
+ },
+ {
+  "id": "bastar-anterior-1713",
+  "verbo": "bastar",
+  "contexto": "cuando llegué anoche, a ti, esa explicación.",
+  "respuesta": "cuando llegué anoche, a ti ya te había bastado esa explicación.",
+  "pista": "Algo sobre una explicación ya era suficiente para ti antes de que yo llegara.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "a ti"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "te habia bastado"
+   ],
+   [
+    "esa explicacion"
+   ]
+  ]
+ },
+ {
+  "id": "bastar-anterior-1715",
+  "verbo": "bastar",
+  "contexto": "cuando me llamaste anoche, a ella, esa disculpa.",
+  "respuesta": "cuando me llamaste anoche, a ella ya le había bastado esa disculpa.",
+  "pista": "Fíjate en qué disculpa ya era suficiente para ella antes de que me llamaras.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "a ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia bastado"
+   ],
+   [
+    "esa disculpa"
+   ]
+  ]
+ },
+ {
+  "id": "ocurrir-anterior-789",
+  "verbo": "ocurrir",
+  "contexto": "cuando llegué anoche, algo extraño, en la fiesta.",
+  "respuesta": "cuando llegué anoche, algo extraño ya había ocurrido en la fiesta.",
+  "pista": "Un suceso inesperado ya se había producido antes de que tú llegaras esa noche.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "algo extrano"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia ocurrido"
+   ],
+   [
+    "en la fiesta"
+   ]
+  ]
+ },
+ {
+  "id": "ocurrir-anterior-791",
+  "verbo": "ocurrir",
+  "contexto": "cuando me llamaste anoche, algo extraño, en el barrio.",
+  "respuesta": "cuando me llamaste anoche, algo extraño ya había ocurrido en el barrio.",
+  "pista": "Piensa en qué suceso ya se había producido antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "algo extrano"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia ocurrido"
+   ],
+   [
+    "en el barrio"
+   ]
+  ]
+ },
+ {
+  "id": "suceder-anterior-855",
+  "verbo": "suceder",
+  "contexto": "cuando llegué anoche, algo grave, en la oficina.",
+  "respuesta": "cuando llegué anoche, algo grave ya había sucedido en la oficina.",
+  "pista": "Un hecho serio ya se había dado antes de que tú llegaras esa noche.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "algo grave"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia sucedido"
+   ],
+   [
+    "en la oficina"
+   ]
+  ]
+ },
+ {
+  "id": "suceder-anterior-857",
+  "verbo": "suceder",
+  "contexto": "cuando me llamaste anoche, algo grave, en el hospital.",
+  "respuesta": "cuando me llamaste anoche, algo grave ya había sucedido en el hospital.",
+  "pista": "Piensa en qué hecho ya se había dado antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "algo grave"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia sucedido"
+   ],
+   [
+    "en el hospital"
+   ]
+  ]
+ },
+ {
+  "id": "casar-anterior-1284",
+  "verbo": "casarse",
+  "contexto": "cuando llegué anoche, tú, con ella.",
+  "respuesta": "cuando llegué anoche, tú ya te habías casado con ella.",
+  "pista": "Una boda ya había ocurrido para ti antes de que yo llegara esa noche.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "te habias casado"
+   ],
+   [
+    "con ella"
+   ]
+  ]
+ },
+ {
+  "id": "casar-anterior-1286",
+  "verbo": "casarse",
+  "contexto": "cuando me llamaste anoche, ellos, en la playa.",
+  "respuesta": "cuando me llamaste anoche, ellos ya se habían casado en la playa.",
+  "pista": "Fíjate en qué pareja ya se había casado antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "se habian casado"
+   ],
+   [
+    "en la playa"
+   ]
+  ]
+ },
+ {
+  "id": "soler-anterior-1735",
+  "verbo": "acostumbrarse",
+  "contexto": "cuando llegué anoche, él, a trabajar de noche.",
+  "respuesta": "cuando llegué anoche, él ya se había acostumbrado a trabajar de noche.",
+  "pista": "Una costumbre ya se había formado en él antes de que yo llegara esa noche.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "se habia acostumbrado"
+   ],
+   [
+    "a trabajar de noche"
+   ]
+  ]
+ },
+ {
+  "id": "soler-anterior-1737",
+  "verbo": "acostumbrarse",
+  "contexto": "cuando me llamaste anoche, ella, a vivir sola.",
+  "respuesta": "cuando me llamaste anoche, ella ya se había acostumbrado a vivir sola.",
+  "pista": "Piensa en qué costumbre ya se había formado en ella antes de que me llamaras.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "se habia acostumbrado"
+   ],
+   [
+    "a vivir sola"
+   ]
+  ]
+ }
+]

@@ -1,0 +1,6506 @@
+[
+ {
+  "id": "llamar-anterior-294",
+  "verbo": "llamar",
+  "contexto": "cuando llegué anoche, ya, yo, a su madre.",
+  "respuesta": "cuando llegué anoche, yo ya había llamado a su madre.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia llamado"
+   ],
+   [
+    "a su madre"
+   ]
+  ]
+ },
+ {
+  "id": "llamar-anterior-296",
+  "verbo": "llamar",
+  "contexto": "cuando me llamaste anoche, ya, tú, a sus amigos.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías llamado a sus amigos.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias llamado"
+   ],
+   [
+    "a sus amigos"
+   ]
+  ]
+ },
+ {
+  "id": "parecer-anterior-305",
+  "verbo": "parecer",
+  "contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos parecido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos parecido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "parecer-anterior-307",
+  "verbo": "parecer",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían parecido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian parecido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "tomar-anterior-316",
+  "verbo": "tomar",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había tomado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia tomado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "tomar-anterior-318",
+  "verbo": "tomar",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había tomado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia tomado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "quedar-anterior-327",
+  "verbo": "quedar",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había quedado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia quedado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "quedar-anterior-329",
+  "verbo": "quedar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían quedado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian quedado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "llegar-anterior-338",
+  "verbo": "llegar",
+  "contexto": "cuando llegué anoche, ya, nosotros, a casa.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos llegado a casa.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos llegado"
+   ],
+   [
+    "a casa"
+   ]
+  ]
+ },
+ {
+  "id": "llegar-anterior-340",
+  "verbo": "llegar",
+  "contexto": "cuando me llamaste anoche, ya, él, tarde.",
+  "respuesta": "cuando me llamaste anoche, él ya había llegado tarde.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia llegado"
+   ],
+   [
+    "tarde"
+   ]
+  ]
+ },
+ {
+  "id": "poner-anterior-349",
+  "verbo": "poner",
+  "contexto": "cuando llegué anoche, ya, ella, la mesa.",
+  "respuesta": "cuando llegué anoche, ella ya había puesto la mesa.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia puesto"
+   ],
+   [
+    "la mesa"
+   ]
+  ]
+ },
+ {
+  "id": "poner-anterior-351",
+  "verbo": "poner",
+  "contexto": "cuando me llamaste anoche, ya, él, la música.",
+  "respuesta": "cuando me llamaste anoche, él ya había puesto la música.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia puesto"
+   ],
+   [
+    "la musica"
+   ]
+  ]
+ },
+ {
+  "id": "oír-anterior-360",
+  "verbo": "oír",
+  "contexto": "cuando llegué anoche, ya, nosotros, un ruido.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos oído un ruido.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos oido"
+   ],
+   [
+    "un ruido"
+   ]
+  ]
+ },
+ {
+  "id": "oír-anterior-361",
+  "verbo": "oír",
+  "contexto": "hasta ese día, nunca antes, ellos, un ruido.",
+  "respuesta": "hasta ese día, nunca antes ellos habían oído un ruido.",
+  "pista": "La idea mira hacia un momento anterior dentro del pasado.",
+  "grupos": [
+   [
+    "hasta ese dia"
+   ],
+   [
+    "nunca antes"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "habian oido"
+   ],
+   [
+    "un ruido"
+   ]
+  ]
+ },
+ {
+  "id": "oír-anterior-362",
+  "verbo": "oír",
+  "contexto": "cuando me llamaste anoche, ya, yo, un ruido.",
+  "respuesta": "cuando me llamaste anoche, yo ya había oído un ruido.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia oido"
+   ],
+   [
+    "un ruido"
+   ]
+  ]
+ },
+ {
+  "id": "salir-anterior-371",
+  "verbo": "salir",
+  "contexto": "cuando llegué anoche, ya, yo, temprano.",
+  "respuesta": "cuando llegué anoche, yo ya había salido temprano.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia salido"
+   ],
+   [
+    "temprano"
+   ]
+  ]
+ },
+ {
+  "id": "salir-anterior-373",
+  "verbo": "salir",
+  "contexto": "cuando me llamaste anoche, ya, ellos, con amigos.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían salido con amigos.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian salido"
+   ],
+   [
+    "con amigos"
+   ]
+  ]
+ },
+ {
+  "id": "gustar-anterior-382",
+  "verbo": "gustar",
+  "contexto": "cuando llegué anoche, a ellos, el plan.",
+  "respuesta": "cuando llegué anoche, a ellos ya les había gustado el plan.",
+  "pista": "Algo relacionado con una idea ya provocaba agrado en ellos antes de que tú llegaras.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "a ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "les habia gustado"
+   ],
+   [
+    "el plan"
+   ]
+  ]
+ },
+ {
+  "id": "gustar-anterior-384",
+  "verbo": "gustar",
+  "contexto": "cuando me llamaste anoche, a ella, la película.",
+  "respuesta": "cuando me llamaste anoche, a ella ya le había gustado la película.",
+  "pista": "Fíjate en qué ya le agradaba a ella antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "a ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia gustado"
+   ],
+   [
+    "la pelicula"
+   ]
+  ]
+ },
+ {
+  "id": "seguir-anterior-393",
+  "verbo": "seguir",
+  "contexto": "cuando llegué anoche, ya, yo, estudiando.",
+  "respuesta": "cuando llegué anoche, yo ya había seguido estudiando.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia seguido"
+   ],
+   [
+    "estudiando"
+   ]
+  ]
+ },
+ {
+  "id": "seguir-anterior-395",
+  "verbo": "seguir",
+  "contexto": "cuando me llamaste anoche, ya, ellos, trabajando.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían seguido trabajando.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian seguido"
+   ],
+   [
+    "trabajando"
+   ]
+  ]
+ },
+ {
+  "id": "conocer-anterior-404",
+  "verbo": "conocer",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había conocido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia conocido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "conocer-anterior-406",
+  "verbo": "conocer",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos conocido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos conocido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "escuchar-anterior-415",
+  "verbo": "escuchar",
+  "contexto": "cuando llegué anoche, ya, tú, la radio.",
+  "respuesta": "cuando llegué anoche, tú ya habías escuchado la radio.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias escuchado"
+   ],
+   [
+    "la radio"
+   ]
+  ]
+ },
+ {
+  "id": "escuchar-anterior-417",
+  "verbo": "escuchar",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, la radio.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos escuchado la radio.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos escuchado"
+   ],
+   [
+    "la radio"
+   ]
+  ]
+ },
+ {
+  "id": "matar-anterior-426",
+  "verbo": "matar",
+  "contexto": "cuando llegué anoche, ya, tú, mucho.",
+  "respuesta": "cuando llegué anoche, tú ya habías matado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias matado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "matar-anterior-428",
+  "verbo": "matar",
+  "contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+  "respuesta": "cuando me llamaste anoche, ella ya había matado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia matado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "buscar-anterior-437",
+  "verbo": "buscar",
+  "contexto": "cuando llegué anoche, ya, yo, trabajo.",
+  "respuesta": "cuando llegué anoche, yo ya había buscado trabajo.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia buscado"
+   ],
+   [
+    "trabajo"
+   ]
+  ]
+ },
+ {
+  "id": "buscar-anterior-439",
+  "verbo": "buscar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, sus llaves.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían buscado sus llaves.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian buscado"
+   ],
+   [
+    "sus llaves"
+   ]
+  ]
+ },
+ {
+  "id": "ayudar-anterior-448",
+  "verbo": "ayudar",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había ayudado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia ayudado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "ayudar-anterior-450",
+  "verbo": "ayudar",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había ayudado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia ayudado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "perder-anterior-459",
+  "verbo": "perder",
+  "contexto": "cuando llegué anoche, ya, nosotros, el autobús.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos perdido el autobús.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos perdido"
+   ],
+   [
+    "el autobus"
+   ]
+  ]
+ },
+ {
+  "id": "perder-anterior-461",
+  "verbo": "perder",
+  "contexto": "cuando me llamaste anoche, ya, yo, sus llaves.",
+  "respuesta": "cuando me llamaste anoche, yo ya había perdido sus llaves.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia perdido"
+   ],
+   [
+    "sus llaves"
+   ]
+  ]
+ },
+ {
+  "id": "entender-anterior-470",
+  "verbo": "entender",
+  "contexto": "cuando llegué anoche, ya, tú, mucho.",
+  "respuesta": "cuando llegué anoche, tú ya habías entendido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias entendido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "entender-anterior-472",
+  "verbo": "entender",
+  "contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+  "respuesta": "cuando me llamaste anoche, ella ya había entendido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia entendido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "acabar-anterior-481",
+  "verbo": "acabar",
+  "contexto": "cuando llegué anoche, ya, él, mucho.",
+  "respuesta": "cuando llegué anoche, él ya había acabado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia acabado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "acabar-anterior-483",
+  "verbo": "acabar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían acabado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian acabado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "tratar-anterior-492",
+  "verbo": "tratar",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían tratado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian tratado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "tratar-anterior-494",
+  "verbo": "tratar",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había tratado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia tratado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "trabajar-anterior-503",
+  "verbo": "trabajar",
+  "contexto": "cuando llegué anoche, ya, él, en casa.",
+  "respuesta": "cuando llegué anoche, él ya había trabajado en casa.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia trabajado"
+   ],
+   [
+    "en casa"
+   ]
+  ]
+ },
+ {
+  "id": "trabajar-anterior-505",
+  "verbo": "trabajar",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, en casa.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos trabajado en casa.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos trabajado"
+   ],
+   [
+    "en casa"
+   ]
+  ]
+ },
+ {
+  "id": "morir-anterior-514",
+  "verbo": "morir",
+  "contexto": "cuando llegué anoche, ya, yo, en el hospital.",
+  "respuesta": "cuando llegué anoche, yo ya había muerto en el hospital.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia muerto"
+   ],
+   [
+    "en el hospital"
+   ]
+  ]
+ },
+ {
+  "id": "morir-anterior-516",
+  "verbo": "morir",
+  "contexto": "cuando me llamaste anoche, ya, ella, en el hospital.",
+  "respuesta": "cuando me llamaste anoche, ella ya había muerto en el hospital.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia muerto"
+   ],
+   [
+    "en el hospital"
+   ]
+  ]
+ },
+ {
+  "id": "vivir-anterior-525",
+  "verbo": "vivir",
+  "contexto": "cuando llegué anoche, ya, yo, en Madrid.",
+  "respuesta": "cuando llegué anoche, yo ya había vivido en Madrid.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia vivido"
+   ],
+   [
+    "en madrid"
+   ]
+  ]
+ },
+ {
+  "id": "vivir-anterior-527",
+  "verbo": "vivir",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, en Madrid.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos vivido en Madrid.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos vivido"
+   ],
+   [
+    "en madrid"
+   ]
+  ]
+ },
+ {
+  "id": "valer-anterior-536",
+  "verbo": "valer",
+  "contexto": "cuando llegué anoche, ya, tú, mucho.",
+  "respuesta": "cuando llegué anoche, tú ya habías valido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias valido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "valer-anterior-538",
+  "verbo": "valer",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos valido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos valido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "entrar-anterior-547",
+  "verbo": "entrar",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían entrado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian entrado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "entrar-anterior-549",
+  "verbo": "entrar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían entrado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian entrado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "empezar-anterior-558",
+  "verbo": "empezar",
+  "contexto": "cuando llegué anoche, ya, él, mucho.",
+  "respuesta": "cuando llegué anoche, él ya había empezado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia empezado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "empezar-anterior-560",
+  "verbo": "empezar",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos empezado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos empezado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "conseguir-anterior-569",
+  "verbo": "conseguir",
+  "contexto": "cuando llegué anoche, ya, tú, mucho.",
+  "respuesta": "cuando llegué anoche, tú ya habías conseguido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias conseguido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "conseguir-anterior-571",
+  "verbo": "conseguir",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos conseguido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos conseguido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "pedir-anterior-580",
+  "verbo": "pedir",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había pedido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia pedido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "pedir-anterior-582",
+  "verbo": "pedir",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías pedido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias pedido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "intentar-anterior-591",
+  "verbo": "intentar",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había intentado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia intentado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "intentar-anterior-593",
+  "verbo": "intentar",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías intentado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias intentado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "traer-anterior-602",
+  "verbo": "traer",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había traído mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia traido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "traer-anterior-603",
+  "verbo": "traer",
+  "contexto": "hasta ese día, nunca antes, tú, mucho.",
+  "respuesta": "hasta ese día, nunca antes tú habías traído mucho.",
+  "pista": "La idea mira hacia un momento anterior dentro del pasado.",
+  "grupos": [
+   [
+    "hasta ese dia"
+   ],
+   [
+    "nunca antes"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "habias traido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "traer-anterior-604",
+  "verbo": "traer",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había traído mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia traido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "importar-anterior-613",
+  "verbo": "importar",
+  "contexto": "cuando llegué anoche, a ti, el resultado.",
+  "respuesta": "cuando llegué anoche, a ti ya te había importado el resultado.",
+  "pista": "Algo sobre un resultado ya tenía peso para ti antes de que yo llegara.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "a ti"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "te habia importado"
+   ],
+   [
+    "el resultado"
+   ]
+  ]
+ },
+ {
+  "id": "importar-anterior-615",
+  "verbo": "importar",
+  "contexto": "cuando me llamaste anoche, a ella, esa opinión.",
+  "respuesta": "cuando me llamaste anoche, a ella ya le había importado esa opinión.",
+  "pista": "Piensa en qué ya tenía peso para ella antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "a ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia importado"
+   ],
+   [
+    "esa opinion"
+   ]
+  ]
+ },
+ {
+  "id": "preguntar-anterior-624",
+  "verbo": "preguntar",
+  "contexto": "cuando llegué anoche, ya, tú, mucho.",
+  "respuesta": "cuando llegué anoche, tú ya habías preguntado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias preguntado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "preguntar-anterior-626",
+  "verbo": "preguntar",
+  "contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+  "respuesta": "cuando me llamaste anoche, ella ya había preguntado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia preguntado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "terminar-anterior-635",
+  "verbo": "terminar",
+  "contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos terminado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos terminado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "terminar-anterior-637",
+  "verbo": "terminar",
+  "contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+  "respuesta": "cuando me llamaste anoche, ella ya había terminado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia terminado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "suponer-anterior-646",
+  "verbo": "suponer",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían supuesto mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian supuesto"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "suponer-anterior-647",
+  "verbo": "suponer",
+  "contexto": "hasta ese día, nunca antes, yo, mucho.",
+  "respuesta": "hasta ese día, nunca antes yo había supuesto mucho.",
+  "pista": "La idea mira hacia un momento anterior dentro del pasado.",
+  "grupos": [
+   [
+    "hasta ese dia"
+   ],
+   [
+    "nunca antes"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "habia supuesto"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "suponer-anterior-648",
+  "verbo": "suponer",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había supuesto mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia supuesto"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "recordar-anterior-657",
+  "verbo": "recordar",
+  "contexto": "cuando llegué anoche, ya, yo, su infancia.",
+  "respuesta": "cuando llegué anoche, yo ya había recordado su infancia.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia recordado"
+   ],
+   [
+    "su infancia"
+   ]
+  ]
+ },
+ {
+  "id": "recordar-anterior-659",
+  "verbo": "recordar",
+  "contexto": "cuando me llamaste anoche, ya, ella, esa historia.",
+  "respuesta": "cuando me llamaste anoche, ella ya había recordado esa historia.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia recordado"
+   ],
+   [
+    "esa historia"
+   ]
+  ]
+ },
+ {
+  "id": "cambiar-anterior-668",
+  "verbo": "cambiar",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían cambiado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian cambiado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "cambiar-anterior-670",
+  "verbo": "cambiar",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías cambiado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias cambiado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "usar-anterior-679",
+  "verbo": "usar",
+  "contexto": "cuando llegué anoche, ya, él, el ordenador.",
+  "respuesta": "cuando llegué anoche, él ya había usado el ordenador.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia usado"
+   ],
+   [
+    "el ordenador"
+   ]
+  ]
+ },
+ {
+  "id": "usar-anterior-681",
+  "verbo": "usar",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, el teléfono.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos usado el teléfono.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos usado"
+   ],
+   [
+    "el telefono"
+   ]
+  ]
+ },
+ {
+  "id": "comer-anterior-690",
+  "verbo": "comer",
+  "contexto": "cuando llegué anoche, ya, yo, tacos.",
+  "respuesta": "cuando llegué anoche, yo ya había comido tacos.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia comido"
+   ],
+   [
+    "tacos"
+   ]
+  ]
+ },
+ {
+  "id": "comer-anterior-692",
+  "verbo": "comer",
+  "contexto": "cuando me llamaste anoche, ya, ella, la cena.",
+  "respuesta": "cuando me llamaste anoche, ella ya había comido la cena.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia comido"
+   ],
+   [
+    "la cena"
+   ]
+  ]
+ },
+ {
+  "id": "sacar-anterior-701",
+  "verbo": "sacar",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había sacado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia sacado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "sacar-anterior-703",
+  "verbo": "sacar",
+  "contexto": "cuando me llamaste anoche, ya, él, mucho.",
+  "respuesta": "cuando me llamaste anoche, él ya había sacado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia sacado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "mantener-anterior-712",
+  "verbo": "mantener",
+  "contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos mantenido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos mantenido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "mantener-anterior-714",
+  "verbo": "mantener",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos mantenido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos mantenido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "contar-anterior-723",
+  "verbo": "contar",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había contado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia contado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "contar-anterior-725",
+  "verbo": "contar",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos contado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos contado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "olvidar-anterior-734",
+  "verbo": "olvidar",
+  "contexto": "cuando llegué anoche, ya, tú, su nombre.",
+  "respuesta": "cuando llegué anoche, tú ya habías olvidado su nombre.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias olvidado"
+   ],
+   [
+    "su nombre"
+   ]
+  ]
+ },
+ {
+  "id": "olvidar-anterior-736",
+  "verbo": "olvidar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, las llaves.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían olvidado las llaves.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian olvidado"
+   ],
+   [
+    "las llaves"
+   ]
+  ]
+ },
+ {
+  "id": "preocupar-anterior-745",
+  "verbo": "preocupar",
+  "contexto": "cuando llegué anoche, a él, la noticia.",
+  "respuesta": "cuando llegué anoche, a él ya le había preocupado la noticia.",
+  "pista": "Algo sobre una noticia ya generaba inquietud en él antes de que yo llegara.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "a el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia preocupado"
+   ],
+   [
+    "la noticia"
+   ]
+  ]
+ },
+ {
+  "id": "preocupar-anterior-747",
+  "verbo": "preocupar",
+  "contexto": "cuando me llamaste anoche, a ella, el examen.",
+  "respuesta": "cuando me llamaste anoche, a ella ya le había preocupado el examen.",
+  "pista": "Fíjate en qué ya la inquietaba antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "a ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia preocupado"
+   ],
+   [
+    "el examen"
+   ]
+  ]
+ },
+ {
+  "id": "ganar-anterior-756",
+  "verbo": "ganar",
+  "contexto": "cuando llegué anoche, ya, ellos, el partido.",
+  "respuesta": "cuando llegué anoche, ellos ya habían ganado el partido.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian ganado"
+   ],
+   [
+    "el partido"
+   ]
+  ]
+ },
+ {
+  "id": "ganar-anterior-758",
+  "verbo": "ganar",
+  "contexto": "cuando me llamaste anoche, ya, yo, el partido.",
+  "respuesta": "cuando me llamaste anoche, yo ya había ganado el partido.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia ganado"
+   ],
+   [
+    "el partido"
+   ]
+  ]
+ },
+ {
+  "id": "abrir-anterior-767",
+  "verbo": "abrir",
+  "contexto": "cuando llegué anoche, ya, ellos, la puerta.",
+  "respuesta": "cuando llegué anoche, ellos ya habían abierto la puerta.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian abierto"
+   ],
+   [
+    "la puerta"
+   ]
+  ]
+ },
+ {
+  "id": "abrir-anterior-769",
+  "verbo": "abrir",
+  "contexto": "cuando me llamaste anoche, ya, tú, la puerta.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías abierto la puerta.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias abierto"
+   ],
+   [
+    "la puerta"
+   ]
+  ]
+ },
+ {
+  "id": "jugar-anterior-778",
+  "verbo": "jugar",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían jugado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian jugado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "jugar-anterior-780",
+  "verbo": "jugar",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías jugado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias jugado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "ocurrir-anterior-789",
+  "verbo": "ocurrir",
+  "contexto": "cuando llegué anoche, algo extraño, en la fiesta.",
+  "respuesta": "cuando llegué anoche, algo extraño ya había ocurrido en la fiesta.",
+  "pista": "Un suceso inesperado ya se había producido antes de que tú llegaras esa noche.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "algo extrano"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia ocurrido"
+   ],
+   [
+    "en la fiesta"
+   ]
+  ]
+ },
+ {
+  "id": "ocurrir-anterior-791",
+  "verbo": "ocurrir",
+  "contexto": "cuando me llamaste anoche, algo extraño, en el barrio.",
+  "respuesta": "cuando me llamaste anoche, algo extraño ya había ocurrido en el barrio.",
+  "pista": "Piensa en qué suceso ya se había producido antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "algo extrano"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia ocurrido"
+   ],
+   [
+    "en el barrio"
+   ]
+  ]
+ },
+ {
+  "id": "pagar-anterior-800",
+  "verbo": "pagar",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho dinero.",
+  "respuesta": "cuando llegué anoche, ellos ya habían pagado mucho dinero.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian pagado"
+   ],
+   [
+    "mucho dinero"
+   ]
+  ]
+ },
+ {
+  "id": "pagar-anterior-802",
+  "verbo": "pagar",
+  "contexto": "cuando me llamaste anoche, ya, él, mucho dinero.",
+  "respuesta": "cuando me llamaste anoche, él ya había pagado mucho dinero.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia pagado"
+   ],
+   [
+    "mucho dinero"
+   ]
+  ]
+ },
+ {
+  "id": "permitir-anterior-811",
+  "verbo": "permitir",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había permitido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia permitido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "permitir-anterior-813",
+  "verbo": "permitir",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había permitido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia permitido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "recibir-anterior-822",
+  "verbo": "recibir",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había recibido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia recibido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "recibir-anterior-824",
+  "verbo": "recibir",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías recibido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias recibido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "leer-anterior-833",
+  "verbo": "leer",
+  "contexto": "cuando llegué anoche, ya, yo, un libro.",
+  "respuesta": "cuando llegué anoche, yo ya había leido un libro.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia leido"
+   ],
+   [
+    "un libro"
+   ]
+  ]
+ },
+ {
+  "id": "leer-anterior-835",
+  "verbo": "leer",
+  "contexto": "cuando me llamaste anoche, ya, tú, el periódico.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías leido el periódico.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias leido"
+   ],
+   [
+    "el periodico"
+   ]
+  ]
+ },
+ {
+  "id": "significar-anterior-844",
+  "verbo": "significar",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había significado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia significado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "significar-anterior-846",
+  "verbo": "significar",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos significado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos significado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "suceder-anterior-855",
+  "verbo": "suceder",
+  "contexto": "cuando llegué anoche, algo grave, en la oficina.",
+  "respuesta": "cuando llegué anoche, algo grave ya había sucedido en la oficina.",
+  "pista": "Un hecho serio ya se había dado antes de que tú llegaras esa noche.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "algo grave"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia sucedido"
+   ],
+   [
+    "en la oficina"
+   ]
+  ]
+ },
+ {
+  "id": "suceder-anterior-857",
+  "verbo": "suceder",
+  "contexto": "cuando me llamaste anoche, algo grave, en el hospital.",
+  "respuesta": "cuando me llamaste anoche, algo grave ya había sucedido en el hospital.",
+  "pista": "Piensa en qué hecho ya se había dado antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "algo grave"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia sucedido"
+   ],
+   [
+    "en el hospital"
+   ]
+  ]
+ },
+ {
+  "id": "dormir-anterior-866",
+  "verbo": "dormir",
+  "contexto": "cuando llegué anoche, ya, nosotros, bien.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos dormido bien.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos dormido"
+   ],
+   [
+    "bien"
+   ]
+  ]
+ },
+ {
+  "id": "dormir-anterior-868",
+  "verbo": "dormir",
+  "contexto": "cuando me llamaste anoche, ya, ellos, bien.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían dormido bien.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian dormido"
+   ],
+   [
+    "bien"
+   ]
+  ]
+ },
+ {
+  "id": "caer-anterior-877",
+  "verbo": "caer",
+  "contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos caído mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos caido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "caer-anterior-878",
+  "verbo": "caer",
+  "contexto": "hasta ese día, nunca antes, ella, mucho.",
+  "respuesta": "hasta ese día, nunca antes ella había caído mucho.",
+  "pista": "La idea mira hacia un momento anterior dentro del pasado.",
+  "grupos": [
+   [
+    "hasta ese dia"
+   ],
+   [
+    "nunca antes"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "habia caido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "caer-anterior-879",
+  "verbo": "caer",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías caído mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias caido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "enviar-anterior-888",
+  "verbo": "enviar",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había enviado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia enviado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "enviar-anterior-890",
+  "verbo": "enviar",
+  "contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+  "respuesta": "cuando me llamaste anoche, ella ya había enviado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia enviado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "acercar-anterior-899",
+  "verbo": "acercar",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había acercado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia acercado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "acercar-anterior-901",
+  "verbo": "acercar",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos acercado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos acercado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "mover-anterior-910",
+  "verbo": "mover",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían movido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian movido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "mover-anterior-912",
+  "verbo": "mover",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había movido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia movido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "comprar-anterior-921",
+  "verbo": "comprar",
+  "contexto": "cuando llegué anoche, ya, ellos, un regalo.",
+  "respuesta": "cuando llegué anoche, ellos ya habían comprado un regalo.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian comprado"
+   ],
+   [
+    "un regalo"
+   ]
+  ]
+ },
+ {
+  "id": "comprar-anterior-923",
+  "verbo": "comprar",
+  "contexto": "cuando me llamaste anoche, ya, él, un regalo.",
+  "respuesta": "cuando me llamaste anoche, él ya había comprado un regalo.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia comprado"
+   ],
+   [
+    "un regalo"
+   ]
+  ]
+ },
+ {
+  "id": "comenzar-anterior-932",
+  "verbo": "comenzar",
+  "contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos comenzado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos comenzado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "comenzar-anterior-934",
+  "verbo": "comenzar",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías comenzado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias comenzado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "regresar-anterior-943",
+  "verbo": "regresar",
+  "contexto": "cuando llegué anoche, ya, tú, mucho.",
+  "respuesta": "cuando llegué anoche, tú ya habías regresado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias regresado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "regresar-anterior-945",
+  "verbo": "regresar",
+  "contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+  "respuesta": "cuando me llamaste anoche, ella ya había regresado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia regresado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "echar-anterior-954",
+  "verbo": "echar",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había echado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia echado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "echar-anterior-956",
+  "verbo": "echar",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había echado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia echado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "convertir-anterior-965",
+  "verbo": "convertir",
+  "contexto": "cuando llegué anoche, ya, él, mucho.",
+  "respuesta": "cuando llegué anoche, él ya había convertido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia convertido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "convertir-anterior-967",
+  "verbo": "convertir",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían convertido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian convertido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "tocar-anterior-976",
+  "verbo": "tocar",
+  "contexto": "cuando llegué anoche, ya, él, mucho.",
+  "respuesta": "cuando llegué anoche, él ya había tocado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia tocado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "tocar-anterior-978",
+  "verbo": "tocar",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había tocado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia tocado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "escribir-anterior-987",
+  "verbo": "escribir",
+  "contexto": "cuando llegué anoche, ya, ella, un mensaje.",
+  "respuesta": "cuando llegué anoche, ella ya había escrito un mensaje.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia escrito"
+   ],
+   [
+    "un mensaje"
+   ]
+  ]
+ },
+ {
+  "id": "escribir-anterior-989",
+  "verbo": "escribir",
+  "contexto": "cuando me llamaste anoche, ya, ella, una carta.",
+  "respuesta": "cuando me llamaste anoche, ella ya había escrito una carta.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia escrito"
+   ],
+   [
+    "una carta"
+   ]
+  ]
+ },
+ {
+  "id": "meter-anterior-998",
+  "verbo": "meter",
+  "contexto": "cuando llegué anoche, ya, él, mucho.",
+  "respuesta": "cuando llegué anoche, él ya había metido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia metido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "meter-anterior-1000",
+  "verbo": "meter",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos metido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos metido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "detener-anterior-1009",
+  "verbo": "detener",
+  "contexto": "cuando llegué anoche, ya, tú, mucho.",
+  "respuesta": "cuando llegué anoche, tú ya habías detenido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias detenido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "detener-anterior-1011",
+  "verbo": "detener",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos detenido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos detenido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "decidir-anterior-1020",
+  "verbo": "decidir",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había decidido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia decidido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "decidir-anterior-1022",
+  "verbo": "decidir",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían decidido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian decidido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "correr-anterior-1031",
+  "verbo": "correr",
+  "contexto": "cuando llegué anoche, ya, yo, en el parque.",
+  "respuesta": "cuando llegué anoche, yo ya había corrido en el parque.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia corrido"
+   ],
+   [
+    "en el parque"
+   ]
+  ]
+ },
+ {
+  "id": "correr-anterior-1033",
+  "verbo": "correr",
+  "contexto": "cuando me llamaste anoche, ya, tú, en el parque.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías corrido en el parque.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias corrido"
+   ],
+   [
+    "en el parque"
+   ]
+  ]
+ },
+ {
+  "id": "funcionar-anterior-1042",
+  "verbo": "funcionar",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había funcionado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia funcionado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "funcionar-anterior-1044",
+  "verbo": "funcionar",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos funcionado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos funcionado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "presentar-anterior-1053",
+  "verbo": "presentar",
+  "contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos presentado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos presentado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "presentar-anterior-1055",
+  "verbo": "presentar",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había presentado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia presentado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "existir-anterior-1064",
+  "verbo": "existir",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había existido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia existido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "existir-anterior-1066",
+  "verbo": "existir",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían existido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian existido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "mostrar-anterior-1075",
+  "verbo": "mostrar",
+  "contexto": "cuando llegué anoche, ya, él, mucho.",
+  "respuesta": "cuando llegué anoche, él ya había mostrado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia mostrado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "mostrar-anterior-1077",
+  "verbo": "mostrar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían mostrado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian mostrado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "subir-anterior-1086",
+  "verbo": "subir",
+  "contexto": "cuando llegué anoche, ya, tú, las escaleras.",
+  "respuesta": "cuando llegué anoche, tú ya habías subido las escaleras.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias subido"
+   ],
+   [
+    "las escaleras"
+   ]
+  ]
+ },
+ {
+  "id": "subir-anterior-1088",
+  "verbo": "subir",
+  "contexto": "cuando me llamaste anoche, ya, tú, al autobús.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías subido al autobús.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias subido"
+   ],
+   [
+    "al autobus"
+   ]
+  ]
+ },
+ {
+  "id": "servir-anterior-1097",
+  "verbo": "servir",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había servido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia servido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "servir-anterior-1099",
+  "verbo": "servir",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos servido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos servido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "sentar-anterior-1108",
+  "verbo": "sentar",
+  "contexto": "cuando llegué anoche, ya, tú, mucho.",
+  "respuesta": "cuando llegué anoche, tú ya habías sentado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias sentado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "sentar-anterior-1110",
+  "verbo": "sentar",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos sentado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos sentado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "salvar-anterior-1119",
+  "verbo": "salvar",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había salvado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia salvado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "salvar-anterior-1121",
+  "verbo": "salvar",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías salvado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias salvado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "explicar-anterior-1130",
+  "verbo": "explicar",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían explicado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian explicado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "explicar-anterior-1132",
+  "verbo": "explicar",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había explicado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia explicado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "levantar-anterior-1141",
+  "verbo": "levantar",
+  "contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos levantado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos levantado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "levantar-anterior-1143",
+  "verbo": "levantar",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había levantado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia levantado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "considerar-anterior-1152",
+  "verbo": "considerar",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había considerado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia considerado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "considerar-anterior-1154",
+  "verbo": "considerar",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había considerado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia considerado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "asegurar-anterior-1163",
+  "verbo": "asegurar",
+  "contexto": "cuando llegué anoche, ya, tú, mucho.",
+  "respuesta": "cuando llegué anoche, tú ya habías asegurado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias asegurado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "asegurar-anterior-1165",
+  "verbo": "asegurar",
+  "contexto": "cuando me llamaste anoche, ya, él, mucho.",
+  "respuesta": "cuando me llamaste anoche, él ya había asegurado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia asegurado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "aceptar-anterior-1174",
+  "verbo": "aceptar",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían aceptado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian aceptado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "aceptar-anterior-1176",
+  "verbo": "aceptar",
+  "contexto": "cuando me llamaste anoche, ya, él, mucho.",
+  "respuesta": "cuando me llamaste anoche, él ya había aceptado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia aceptado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "quitar-anterior-1185",
+  "verbo": "quitar",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había quitado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia quitado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "quitar-anterior-1187",
+  "verbo": "quitar",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos quitado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos quitado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "amar-anterior-1196",
+  "verbo": "amar",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían amado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian amado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "amar-anterior-1198",
+  "verbo": "amar",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos amado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos amado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "coger-anterior-1207",
+  "verbo": "coger",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había cogido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia cogido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "coger-anterior-1209",
+  "verbo": "coger",
+  "contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+  "respuesta": "cuando me llamaste anoche, ella ya había cogido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia cogido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "disparar-anterior-1218",
+  "verbo": "disparar",
+  "contexto": "cuando llegué anoche, ya, él, mucho.",
+  "respuesta": "cuando llegué anoche, él ya había disparado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia disparado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "disparar-anterior-1220",
+  "verbo": "disparar",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías disparado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias disparado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "disculpar-anterior-1229",
+  "verbo": "disculpar",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había disculpado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia disculpado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "disculpar-anterior-1231",
+  "verbo": "disculpar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían disculpado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian disculpado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "beber-anterior-1240",
+  "verbo": "beber",
+  "contexto": "cuando llegué anoche, ya, ella, café.",
+  "respuesta": "cuando llegué anoche, ella ya había bebido café.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia bebido"
+   ],
+   [
+    "cafe"
+   ]
+  ]
+ },
+ {
+  "id": "beber-anterior-1242",
+  "verbo": "beber",
+  "contexto": "cuando me llamaste anoche, ya, ella, café.",
+  "respuesta": "cuando me llamaste anoche, ella ya había bebido café.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia bebido"
+   ],
+   [
+    "cafe"
+   ]
+  ]
+ },
+ {
+  "id": "vender-anterior-1251",
+  "verbo": "vender",
+  "contexto": "cuando llegué anoche, ya, ella, su coche.",
+  "respuesta": "cuando llegué anoche, ella ya había vendido su coche.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia vendido"
+   ],
+   [
+    "su coche"
+   ]
+  ]
+ },
+ {
+  "id": "vender-anterior-1253",
+  "verbo": "vender",
+  "contexto": "cuando me llamaste anoche, ya, él, la casa.",
+  "respuesta": "cuando me llamaste anoche, él ya había vendido la casa.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia vendido"
+   ],
+   [
+    "la casa"
+   ]
+  ]
+ },
+ {
+  "id": "perdonar-anterior-1262",
+  "verbo": "perdonar",
+  "contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos perdonado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos perdonado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "perdonar-anterior-1264",
+  "verbo": "perdonar",
+  "contexto": "cuando me llamaste anoche, ya, él, mucho.",
+  "respuesta": "cuando me llamaste anoche, él ya había perdonado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia perdonado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "aparecer-anterior-1273",
+  "verbo": "aparecer",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían aparecido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian aparecido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "aparecer-anterior-1275",
+  "verbo": "aparecer",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías aparecido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias aparecido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "casar-anterior-1284",
+  "verbo": "casarse",
+  "contexto": "cuando llegué anoche, tú, con ella.",
+  "respuesta": "cuando llegué anoche, tú ya te habías casado con ella.",
+  "pista": "Una boda ya había ocurrido para ti antes de que yo llegara esa noche.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "te habias casado"
+   ],
+   [
+    "con ella"
+   ]
+  ]
+ },
+ {
+  "id": "casar-anterior-1286",
+  "verbo": "casarse",
+  "contexto": "cuando me llamaste anoche, ellos, en la playa.",
+  "respuesta": "cuando me llamaste anoche, ellos ya se habían casado en la playa.",
+  "pista": "Fíjate en qué pareja ya se había casado antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "se habian casado"
+   ],
+   [
+    "en la playa"
+   ]
+  ]
+ },
+ {
+  "id": "lograr-anterior-1295",
+  "verbo": "lograr",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había logrado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia logrado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "lograr-anterior-1297",
+  "verbo": "lograr",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías logrado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias logrado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "robar-anterior-1306",
+  "verbo": "robar",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían robado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian robado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "robar-anterior-1308",
+  "verbo": "robar",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había robado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia robado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "prometer-anterior-1317",
+  "verbo": "prometer",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había prometido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia prometido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "prometer-anterior-1319",
+  "verbo": "prometer",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían prometido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian prometido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "enseñar-anterior-1328",
+  "verbo": "enseñar",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían enseñado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian ensenado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "enseñar-anterior-1330",
+  "verbo": "enseñar",
+  "contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+  "respuesta": "cuando me llamaste anoche, ella ya había enseñado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia ensenado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "descubrir-anterior-1339",
+  "verbo": "descubrir",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había descubierto mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia descubierto"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "descubrir-anterior-1340",
+  "verbo": "descubrir",
+  "contexto": "hasta ese día, nunca antes, ellos, mucho.",
+  "respuesta": "hasta ese día, nunca antes ellos habían descubierto mucho.",
+  "pista": "La idea mira hacia un momento anterior dentro del pasado.",
+  "grupos": [
+   [
+    "hasta ese dia"
+   ],
+   [
+    "nunca antes"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "habian descubierto"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "descubrir-anterior-1341",
+  "verbo": "descubrir",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían descubierto mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian descubierto"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "andar-anterior-1350",
+  "verbo": "andar",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había andado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia andado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "andar-anterior-1352",
+  "verbo": "andar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían andado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian andado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "sonar-anterior-1361",
+  "verbo": "sonar",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había sonado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia sonado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "sonar-anterior-1363",
+  "verbo": "sonar",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos sonado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos sonado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "referir-anterior-1372",
+  "verbo": "referir",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había referido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia referido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "referir-anterior-1374",
+  "verbo": "referir",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías referido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias referido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "encantar-anterior-1383",
+  "verbo": "encantar",
+  "contexto": "cuando llegué anoche, a ella, la casa.",
+  "respuesta": "cuando llegué anoche, a ella ya le había encantado la casa.",
+  "pista": "Algo sobre una casa ya la había fascinado antes de que yo llegara.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "a ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia encantado"
+   ],
+   [
+    "la casa"
+   ]
+  ]
+ },
+ {
+  "id": "encantar-anterior-1385",
+  "verbo": "encantar",
+  "contexto": "cuando me llamaste anoche, a ella, el regalo.",
+  "respuesta": "cuando me llamaste anoche, a ella ya le había encantado el regalo.",
+  "pista": "Piensa en qué ya la había fascinado antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "a ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia encantado"
+   ],
+   [
+    "el regalo"
+   ]
+  ]
+ },
+ {
+  "id": "imaginar-anterior-1394",
+  "verbo": "imaginar",
+  "contexto": "cuando llegué anoche, ya, él, mucho.",
+  "respuesta": "cuando llegué anoche, él ya había imaginado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia imaginado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "imaginar-anterior-1396",
+  "verbo": "imaginar",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había imaginado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia imaginado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "aprender-anterior-1405",
+  "verbo": "aprender",
+  "contexto": "cuando llegué anoche, ya, nosotros, a conducir.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos aprendido a conducir.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos aprendido"
+   ],
+   [
+    "a conducir"
+   ]
+  ]
+ },
+ {
+  "id": "aprender-anterior-1407",
+  "verbo": "aprender",
+  "contexto": "cuando me llamaste anoche, ya, tú, a conducir.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías aprendido a conducir.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias aprendido"
+   ],
+   [
+    "a conducir"
+   ]
+  ]
+ },
+ {
+  "id": "realizar-anterior-1416",
+  "verbo": "realizar",
+  "contexto": "cuando llegué anoche, ya, tú, mucho.",
+  "respuesta": "cuando llegué anoche, tú ya habías realizado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias realizado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "realizar-anterior-1418",
+  "verbo": "realizar",
+  "contexto": "cuando me llamaste anoche, ya, él, mucho.",
+  "respuesta": "cuando me llamaste anoche, él ya había realizado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia realizado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "confiar-anterior-1427",
+  "verbo": "confiar",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había confiado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia confiado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "confiar-anterior-1429",
+  "verbo": "confiar",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías confiado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias confiado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "callar-anterior-1438",
+  "verbo": "callar",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había callado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia callado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "callar-anterior-1440",
+  "verbo": "callar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían callado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian callado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "cerrar-anterior-1449",
+  "verbo": "cerrar",
+  "contexto": "cuando llegué anoche, ya, yo, la puerta.",
+  "respuesta": "cuando llegué anoche, yo ya había cerrado la puerta.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia cerrado"
+   ],
+   [
+    "la puerta"
+   ]
+  ]
+ },
+ {
+  "id": "cerrar-anterior-1451",
+  "verbo": "cerrar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, la tienda.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían cerrado la tienda.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian cerrado"
+   ],
+   [
+    "la tienda"
+   ]
+  ]
+ },
+ {
+  "id": "ofrecer-anterior-1460",
+  "verbo": "ofrecer",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había ofrecido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia ofrecido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "ofrecer-anterior-1462",
+  "verbo": "ofrecer",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías ofrecido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias ofrecido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "bajar-anterior-1471",
+  "verbo": "bajar",
+  "contexto": "cuando llegué anoche, ya, nosotros, las escaleras.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos bajado las escaleras.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos bajado"
+   ],
+   [
+    "las escaleras"
+   ]
+  ]
+ },
+ {
+  "id": "bajar-anterior-1473",
+  "verbo": "bajar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, las escaleras.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían bajado las escaleras.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian bajado"
+   ],
+   [
+    "las escaleras"
+   ]
+  ]
+ },
+ {
+  "id": "desear-anterior-1482",
+  "verbo": "desear",
+  "contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos deseado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos deseado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "desear-anterior-1484",
+  "verbo": "desear",
+  "contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+  "respuesta": "cuando me llamaste anoche, ella ya había deseado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia deseado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "cuidar-anterior-1493",
+  "verbo": "cuidar",
+  "contexto": "cuando llegué anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando llegué anoche, nosotros ya habíamos cuidado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos cuidado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "cuidar-anterior-1495",
+  "verbo": "cuidar",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había cuidado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia cuidado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "preparar-anterior-1504",
+  "verbo": "preparar",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había preparado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia preparado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "preparar-anterior-1506",
+  "verbo": "preparar",
+  "contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+  "respuesta": "cuando me llamaste anoche, ella ya había preparado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia preparado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "elegir-anterior-1515",
+  "verbo": "elegir",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había elegido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia elegido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "elegir-anterior-1517",
+  "verbo": "elegir",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos elegido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos elegido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "parar-anterior-1526",
+  "verbo": "parar",
+  "contexto": "cuando llegué anoche, ya, tú, mucho.",
+  "respuesta": "cuando llegué anoche, tú ya habías parado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias parado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "parar-anterior-1528",
+  "verbo": "parar",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías parado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias parado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "desaparecer-anterior-1537",
+  "verbo": "desaparecer",
+  "contexto": "cuando llegué anoche, ya, él, mucho.",
+  "respuesta": "cuando llegué anoche, él ya había desaparecido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia desaparecido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "desaparecer-anterior-1539",
+  "verbo": "desaparecer",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos desaparecido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos desaparecido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "mentir-anterior-1548",
+  "verbo": "mentir",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había mentido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia mentido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "mentir-anterior-1550",
+  "verbo": "mentir",
+  "contexto": "cuando me llamaste anoche, ya, él, mucho.",
+  "respuesta": "cuando me llamaste anoche, él ya había mentido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia mentido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "romper-anterior-1559",
+  "verbo": "romper",
+  "contexto": "cuando llegué anoche, ya, tú, mucho.",
+  "respuesta": "cuando llegué anoche, tú ya habías roto mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias roto"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "romper-anterior-1561",
+  "verbo": "romper",
+  "contexto": "cuando me llamaste anoche, ya, ella, mucho.",
+  "respuesta": "cuando me llamaste anoche, ella ya había roto mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia roto"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "invitar-anterior-1570",
+  "verbo": "invitar",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían invitado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian invitado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "invitar-anterior-1572",
+  "verbo": "invitar",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había invitado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia invitado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "obtener-anterior-1581",
+  "verbo": "obtener",
+  "contexto": "cuando llegué anoche, ya, él, mucho.",
+  "respuesta": "cuando llegué anoche, él ya había obtenido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia obtenido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "obtener-anterior-1583",
+  "verbo": "obtener",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había obtenido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia obtenido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "molestar-anterior-1592",
+  "verbo": "molestar",
+  "contexto": "cuando llegué anoche, a nosotros, el ruido.",
+  "respuesta": "cuando llegué anoche, a nosotros ya nos había molestado el ruido.",
+  "pista": "Algo sobre un ruido ya nos incomodaba antes de que yo llegara.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "a nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "nos habia molestado"
+   ],
+   [
+    "el ruido"
+   ]
+  ]
+ },
+ {
+  "id": "molestar-anterior-1594",
+  "verbo": "molestar",
+  "contexto": "cuando me llamaste anoche, a nosotros, el comentario.",
+  "respuesta": "cuando me llamaste anoche, a nosotros ya nos había molestado el comentario.",
+  "pista": "Fíjate en qué ya nos incomodaba antes de que me llamaras esa noche.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "a nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "nos habia molestado"
+   ],
+   [
+    "el comentario"
+   ]
+  ]
+ },
+ {
+  "id": "utilizar-anterior-1603",
+  "verbo": "utilizar",
+  "contexto": "cuando llegué anoche, ya, tú, mucho.",
+  "respuesta": "cuando llegué anoche, tú ya habías utilizado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias utilizado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "utilizar-anterior-1605",
+  "verbo": "utilizar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían utilizado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian utilizado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "tirar-anterior-1614",
+  "verbo": "tirar",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había tirado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia tirado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "tirar-anterior-1616",
+  "verbo": "tirar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían tirado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian tirado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "despertar-anterior-1625",
+  "verbo": "despertar",
+  "contexto": "cuando llegué anoche, ya, yo, muy tarde.",
+  "respuesta": "cuando llegué anoche, yo ya había despertado muy tarde.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia despertado"
+   ],
+   [
+    "muy tarde"
+   ]
+  ]
+ },
+ {
+  "id": "despertar-anterior-1627",
+  "verbo": "despertar",
+  "contexto": "cuando me llamaste anoche, ya, ella, temprano.",
+  "respuesta": "cuando me llamaste anoche, ella ya había despertado temprano.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia despertado"
+   ],
+   [
+    "temprano"
+   ]
+  ]
+ },
+ {
+  "id": "resultar-anterior-1636",
+  "verbo": "resultar",
+  "contexto": "cuando llegué anoche, ya, ella, mucho.",
+  "respuesta": "cuando llegué anoche, ella ya había resultado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia resultado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "resultar-anterior-1638",
+  "verbo": "resultar",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había resultado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia resultado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "continuar-anterior-1647",
+  "verbo": "continuar",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había continuado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia continuado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "continuar-anterior-1649",
+  "verbo": "continuar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían continuado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian continuado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "responder-anterior-1658",
+  "verbo": "responder",
+  "contexto": "cuando llegué anoche, ya, él, mucho.",
+  "respuesta": "cuando llegué anoche, él ya había respondido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia respondido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "responder-anterior-1660",
+  "verbo": "responder",
+  "contexto": "cuando me llamaste anoche, ya, nosotros, mucho.",
+  "respuesta": "cuando me llamaste anoche, nosotros ya habíamos respondido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habiamos respondido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "arreglar-anterior-1669",
+  "verbo": "arreglar",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían arreglado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian arreglado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "arreglar-anterior-1671",
+  "verbo": "arreglar",
+  "contexto": "cuando me llamaste anoche, ya, tú, mucho.",
+  "respuesta": "cuando me llamaste anoche, tú ya habías arreglado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habias arreglado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "producir-anterior-1680",
+  "verbo": "producir",
+  "contexto": "cuando llegué anoche, ya, ellos, mucho.",
+  "respuesta": "cuando llegué anoche, ellos ya habían producido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian producido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "producir-anterior-1682",
+  "verbo": "producir",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había producido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia producido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "pesar-anterior-1691",
+  "verbo": "pesar",
+  "contexto": "cuando llegué anoche, a mí, esa decisión.",
+  "respuesta": "cuando llegué anoche, a mí ya me había pesado esa decisión.",
+  "pista": "Algo sobre una decisión ya me causaba arrepentimiento antes de que yo llegara.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "a mi"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "me habia pesado"
+   ],
+   [
+    "esa decision"
+   ]
+  ]
+ },
+ {
+  "id": "pesar-anterior-1693",
+  "verbo": "pesar",
+  "contexto": "cuando me llamaste anoche, a él, esa decisión.",
+  "respuesta": "cuando me llamaste anoche, a él ya le había pesado esa decisión.",
+  "pista": "Piensa en qué decisión ya le causaba arrepentimiento antes de que me llamaras.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "a el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia pesado"
+   ],
+   [
+    "esa decision"
+   ]
+  ]
+ },
+ {
+  "id": "probar-anterior-1702",
+  "verbo": "probar",
+  "contexto": "cuando llegué anoche, ya, él, mucho.",
+  "respuesta": "cuando llegué anoche, él ya había probado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia probado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "probar-anterior-1704",
+  "verbo": "probar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían probado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian probado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "bastar-anterior-1713",
+  "verbo": "bastar",
+  "contexto": "cuando llegué anoche, a ti, esa explicación.",
+  "respuesta": "cuando llegué anoche, a ti ya te había bastado esa explicación.",
+  "pista": "Algo sobre una explicación ya era suficiente para ti antes de que yo llegara.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "a ti"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "te habia bastado"
+   ],
+   [
+    "esa explicacion"
+   ]
+  ]
+ },
+ {
+  "id": "bastar-anterior-1715",
+  "verbo": "bastar",
+  "contexto": "cuando me llamaste anoche, a ella, esa disculpa.",
+  "respuesta": "cuando me llamaste anoche, a ella ya le había bastado esa disculpa.",
+  "pista": "Fíjate en qué disculpa ya era suficiente para ella antes de que me llamaras.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "a ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "le habia bastado"
+   ],
+   [
+    "esa disculpa"
+   ]
+  ]
+ },
+ {
+  "id": "evitar-anterior-1724",
+  "verbo": "evitar",
+  "contexto": "cuando llegué anoche, ya, yo, mucho.",
+  "respuesta": "cuando llegué anoche, yo ya había evitado mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia evitado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "evitar-anterior-1726",
+  "verbo": "evitar",
+  "contexto": "cuando me llamaste anoche, ya, ellos, mucho.",
+  "respuesta": "cuando me llamaste anoche, ellos ya habían evitado mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habian evitado"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "soler-anterior-1735",
+  "verbo": "acostumbrarse",
+  "contexto": "cuando llegué anoche, él, a trabajar de noche.",
+  "respuesta": "cuando llegué anoche, él ya se había acostumbrado a trabajar de noche.",
+  "pista": "Una costumbre ya se había formado en él antes de que yo llegara esa noche.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "se habia acostumbrado"
+   ],
+   [
+    "a trabajar de noche"
+   ]
+  ]
+ },
+ {
+  "id": "soler-anterior-1737",
+  "verbo": "acostumbrarse",
+  "contexto": "cuando me llamaste anoche, ella, a vivir sola.",
+  "respuesta": "cuando me llamaste anoche, ella ya se había acostumbrado a vivir sola.",
+  "pista": "Piensa en qué costumbre ya se había formado en ella antes de que me llamaras.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "se habia acostumbrado"
+   ],
+   [
+    "a vivir sola"
+   ]
+  ]
+ },
+ {
+  "id": "reconocer-anterior-1746",
+  "verbo": "reconocer",
+  "contexto": "cuando llegué anoche, ya, él, mucho.",
+  "respuesta": "cuando llegué anoche, él ya había reconocido mucho.",
+  "pista": "Una acción ya estaba completa antes de otra.",
+  "grupos": [
+   [
+    "cuando llegue anoche"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia reconocido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "reconocer-anterior-1748",
+  "verbo": "reconocer",
+  "contexto": "cuando me llamaste anoche, ya, yo, mucho.",
+  "respuesta": "cuando me llamaste anoche, yo ya había reconocido mucho.",
+  "pista": "Fíjate en el orden de dos acciones pasadas.",
+  "grupos": [
+   [
+    "cuando me llamaste anoche"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "ya"
+   ],
+   [
+    "habia reconocido"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ }
+]

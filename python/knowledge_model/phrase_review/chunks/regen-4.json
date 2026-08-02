@@ -1,0 +1,8674 @@
+[
+{
+"exercise": {
+"id": "aparecer-habitual-8092",
+"verbo": "aparecer",
+"contexto": "el gato, cada verano, en el jardín de la vecina",
+"respuesta": "Cada verano, el gato aparecía en el jardín de la vecina.",
+"pista": "Cada verano, el gato apareciendo en el jardín de la vecina: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el gato"
+],
+[
+"aparecia"
+],
+[
+"en el jardin de la vecina"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, el gato aparecia en el jardin de la vecina.",
+"cat": "gram",
+"fix": "Cada verano, el gato aparecía en el jardín de la vecina.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "aparecer-habitual-8093",
+"verbo": "aparecer",
+"contexto": "nuevas flores, semana tras semana, en el campo",
+"respuesta": "Semana tras semana, nuevas flores aparecían en el campo.",
+"pista": "Semana tras semana, nuevas flores apareciendo en el campo: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nuevas flores"
+],
+[
+"aparecian"
+],
+[
+"en el campo"
+],
+[
+"semana tras semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Semana tras semana, nuevas flores aparecian en el campo.",
+"cat": "gram",
+"fix": "Semana tras semana, nuevas flores aparecían en el campo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "apartar-habitual-8095",
+"verbo": "apartar",
+"contexto": "yo, durante la infancia, la mirada cuando tenía miedo",
+"respuesta": "Durante la infancia, yo apartaba la mirada cuando tenía miedo.",
+"pista": "Durante la infancia apartando la mirada cuando tenía miedo: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"apartaba"
+],
+[
+"la mirada cuando tenia miedo"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, yo apartaba la mirada cuando tenia miedo.",
+"cat": "gram",
+"fix": "Durante la infancia, yo apartaba la mirada cuando tenía miedo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "apostar-habitual-8096",
+"verbo": "apostar",
+"contexto": "mi tío, los fines de semana, en las carreras de caballos",
+"respuesta": "Los fines de semana, mi tío apostaba en las carreras de caballos.",
+"pista": "Los fines de semana, mi tío apostando en las carreras de caballos: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi tio"
+],
+[
+"apostaba"
+],
+[
+"en las carreras de caballos"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, mi tio apostaba en las carreras de caballos.",
+"cat": "gram",
+"fix": "Los fines de semana, mi tío apostaba en las carreras de caballos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "apostar-habitual-8097",
+"verbo": "apostar",
+"contexto": "nosotros, en aquellos tiempos, por nuestro equipo favorito",
+"respuesta": "En aquellos tiempos, nosotros apostábamos por nuestro equipo favorito.",
+"pista": "En aquellos tiempos apostando por nuestro equipo favorito: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"apostabamos"
+],
+[
+"por nuestro equipo favorito"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, nosotros apostabamos por nuestro equipo favorito.",
+"cat": "gram",
+"fix": "En aquellos tiempos, nosotros apostábamos por nuestro equipo favorito.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "apoyar-habitual-8099",
+"verbo": "apoyar",
+"contexto": "yo, cuando vivía en Madrid, a los artistas locales",
+"respuesta": "Cuando vivía en Madrid, yo apoyaba a los artistas locales.",
+"pista": "Cuando vivía en Madrid apoyando a los artistas locales: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"apoyaba"
+],
+[
+"a los artistas locales"
+],
+[
+"cuando vivia en madrid"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando vivia en Madrid, yo apoyaba a los artistas locales.",
+"cat": "gram",
+"fix": "Cuando vivía en Madrid, yo apoyaba a los artistas locales.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "aprender-habitual-8100",
+"verbo": "aprender",
+"contexto": "yo, en mis años de universidad, algo nuevo cada día",
+"respuesta": "En mis años de universidad, yo aprendía algo nuevo cada día.",
+"pista": "En mis años de universidad aprendiendo algo nuevo cada día: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"aprendia"
+],
+[
+"algo nuevo cada dia"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, yo aprendia algo nuevo cada dia.",
+"cat": "gram",
+"fix": "En mis años de universidad, yo aprendía algo nuevo cada día.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "aprender-habitual-8101",
+"verbo": "aprender",
+"contexto": "los niños, durante la infancia, canciones populares",
+"respuesta": "Durante la infancia, los niños aprendían canciones populares.",
+"pista": "Durante la infancia, los niños aprendiendo canciones populares: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"los ninos"
+],
+[
+"aprendian"
+],
+[
+"canciones populares"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, los ninos aprendian canciones populares.",
+"cat": "gram",
+"fix": "Durante la infancia, los niños aprendían canciones populares.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "arreglar-habitual-8103",
+"verbo": "arreglar",
+"contexto": "ella, por las tardes, las flores del jardín",
+"respuesta": "Por las tardes, ella arreglaba las flores del jardín.",
+"pista": "Por las tardes arreglando las flores del jardín: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"arreglaba"
+],
+[
+"las flores del jardin"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, ella arreglaba las flores del jardin.",
+"cat": "gram",
+"fix": "Por las tardes, ella arreglaba las flores del jardín.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "asegurar-habitual-8105",
+"verbo": "asegurar",
+"contexto": "nosotros, antes del accidente, que todo estaba en orden",
+"respuesta": "Antes del accidente, nosotros asegurábamos que todo estaba en orden.",
+"pista": "Antes del accidente asegurando que todo estaba en orden: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"asegurabamos"
+],
+[
+"que todo estaba en orden"
+],
+[
+"antes del accidente"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Antes del accidente, nosotros asegurabamos que todo estaba en orden.",
+"cat": "gram",
+"fix": "Antes del accidente, nosotros asegurábamos que todo estaba en orden.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "asustar-habitual-8108",
+"verbo": "asustar",
+"contexto": "los truenos, durante la infancia, a mi hermana pequeña",
+"respuesta": "Durante la infancia, los truenos asustaban a mi hermana pequeña.",
+"pista": "Durante la infancia, los truenos asustando a mi hermana pequeña: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"los truenos"
+],
+[
+"asustaban"
+],
+[
+"a mi hermana pequena"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, los truenos asustaban a mi hermana pequena.",
+"cat": "gram",
+"fix": "Durante la infancia, los truenos asustaban a mi hermana pequeña.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "atrapar-habitual-8113",
+"verbo": "atrapar",
+"contexto": "nosotros, los fines de semana, mariposas en el campo",
+"respuesta": "Los fines de semana, nosotros atrapábamos mariposas en el campo.",
+"pista": "Los fines de semana atrapando mariposas en el campo: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"atrapabamos"
+],
+[
+"mariposas en el campo"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, nosotros atrapabamos mariposas en el campo.",
+"cat": "gram",
+"fix": "Los fines de semana, nosotros atrapábamos mariposas en el campo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ayudar-habitual-8117",
+"verbo": "ayudar",
+"contexto": "nosotros, durante la infancia, a los vecinos con las compras",
+"respuesta": "Durante la infancia, nosotros ayudábamos a los vecinos con las compras.",
+"pista": "Durante la infancia ayudando a los vecinos con las compras: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"ayudabamos"
+],
+[
+"a los vecinos con las compras"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, nosotros ayudabamos a los vecinos con las compras.",
+"cat": "gram",
+"fix": "Durante la infancia, nosotros ayudábamos a los vecinos con las compras.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "bajar-habitual-8120",
+"verbo": "bajar",
+"contexto": "yo, por las tardes, al río a pescar",
+"respuesta": "Por las tardes, yo bajaba al río a pescar.",
+"pista": "Por las tardes bajando al río a pescar: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"bajaba"
+],
+[
+"al rio a pescar"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, yo bajaba al rio a pescar.",
+"cat": "gram",
+"fix": "Por las tardes, yo bajaba al río a pescar.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "beber-habitual-8124",
+"verbo": "beber",
+"contexto": "nosotros, los domingos, limonada en el porche",
+"respuesta": "Los domingos, nosotros bebíamos limonada en el porche.",
+"pista": "Los domingos bebiendo limonada en el porche: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"bebiamos"
+],
+[
+"limonada en el porche"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, nosotros bebiamos limonada en el porche.",
+"cat": "gram",
+"fix": "Los domingos, nosotros bebíamos limonada en el porche.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "beber-habitual-8125",
+"verbo": "beber",
+"contexto": "mi abuelo, por las tardes, café con leche",
+"respuesta": "Por las tardes, mi abuelo bebía café con leche.",
+"pista": "Por las tardes, mi abuelo bebiendo café con leche: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi abuelo"
+],
+[
+"bebia"
+],
+[
+"cafe con leche"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, mi abuelo bebia cafe con leche.",
+"cat": "gram",
+"fix": "Por las tardes, mi abuelo bebía café con leche.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "besar-habitual-8126",
+"verbo": "besar",
+"contexto": "mi madre, cada verano, a los niños antes de dormir",
+"respuesta": "Cada verano, mi madre besaba a los niños antes de dormir.",
+"pista": "Cada verano, mi madre besando a los niños antes de dormir: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi madre"
+],
+[
+"besaba"
+],
+[
+"a los ninos antes de dormir"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, mi madre besaba a los ninos antes de dormir.",
+"cat": "gram",
+"fix": "Cada verano, mi madre besaba a los niños antes de dormir.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "caer-habitual-8130",
+"verbo": "caer",
+"contexto": "las hojas, cada verano, de los árboles del parque",
+"respuesta": "Cada verano, las hojas caían de los árboles del parque.",
+"pista": "Cada verano, las hojas cayendo de los árboles del parque: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"las hojas"
+],
+[
+"caian"
+],
+[
+"de los arboles del parque"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, las hojas caian de los arboles del parque.",
+"cat": "gram",
+"fix": "Cada verano, las hojas caían de los árboles del parque.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "caer-habitual-8131",
+"verbo": "caer",
+"contexto": "yo, durante la infancia, al suelo jugando en el patio",
+"respuesta": "Durante la infancia, yo caía al suelo jugando en el patio.",
+"pista": "Durante la infancia cayendo al suelo jugando en el patio: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"caia"
+],
+[
+"al suelo jugando en el patio"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, yo caia al suelo jugando en el patio.",
+"cat": "gram",
+"fix": "Durante la infancia, yo caía al suelo jugando en el patio.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "callar-habitual-8132",
+"verbo": "callar",
+"contexto": "los niños, en aquellos tiempos, cuando entraba el profesor",
+"respuesta": "En aquellos tiempos, los niños callaban cuando entraba el profesor.",
+"pista": "En aquellos tiempos, los niños callando cuando entraba el profesor: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"los ninos"
+],
+[
+"callaban"
+],
+[
+"cuando entraba el profesor"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, los ninos callaban cuando entraba el profesor.",
+"cat": "gram",
+"fix": "En aquellos tiempos, los niños callaban cuando entraba el profesor.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "calmar-habitual-8135",
+"verbo": "calmar",
+"contexto": "la música, los domingos, mis nervios después del trabajo",
+"respuesta": "Los domingos, la música calmaba mis nervios después del trabajo.",
+"pista": "Los domingos, la música calmando mis nervios después del trabajo: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"la musica"
+],
+[
+"calmaba"
+],
+[
+"mis nervios despues del trabajo"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, la musica calmaba mis nervios despues del trabajo.",
+"cat": "gram",
+"fix": "Los domingos, la música calmaba mis nervios después del trabajo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cambiar-habitual-8137",
+"verbo": "cambiar",
+"contexto": "el clima, cuando vivía en Madrid, de forma impredecible",
+"respuesta": "Cuando vivía en Madrid, el clima cambiaba de forma impredecible.",
+"pista": "Cuando vivía en Madrid, el clima cambiando de forma impredecible: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el clima"
+],
+[
+"cambiaba"
+],
+[
+"de forma impredecible"
+],
+[
+"cuando vivia en madrid"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando vivia en Madrid, el clima cambiaba de forma impredecible.",
+"cat": "gram",
+"fix": "Cuando vivía en Madrid, el clima cambiaba de forma impredecible.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "caminar-habitual-8139",
+"verbo": "caminar",
+"contexto": "nosotros, en mis años de universidad, por el campus al atardecer",
+"respuesta": "En mis años de universidad, nosotros caminábamos por el campus al atardecer.",
+"pista": "En mis años de universidad caminando por el campus al atardecer: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"caminabamos"
+],
+[
+"por el campus al atardecer"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, nosotros caminabamos por el campus al atardecer.",
+"cat": "gram",
+"fix": "En mis años de universidad, nosotros caminábamos por el campus al atardecer.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-habitual-8142",
+"verbo": "casar",
+"contexto": "el cura del pueblo, con frecuencia, a las parejas jóvenes",
+"respuesta": "El cura del pueblo casaba a las parejas jóvenes con frecuencia.",
+"pista": "El cura del pueblo casando a las parejas jóvenes con frecuencia: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el cura del pueblo"
+],
+[
+"casaba"
+],
+[
+"a las parejas jovenes"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El cura del pueblo casaba a las parejas jovenes con frecuencia.",
+"cat": "gram",
+"fix": "El cura del pueblo casaba a las parejas jóvenes con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "casar-habitual-8143",
+"verbo": "casar",
+"contexto": "mi abuela, en aquellos tiempos, a todos sus hijos muy jóvenes",
+"respuesta": "En aquellos tiempos, mi abuela casaba a todos sus hijos muy jóvenes.",
+"pista": "En aquellos tiempos, mi abuela casando a todos sus hijos muy jóvenes: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi abuela"
+],
+[
+"casaba"
+],
+[
+"a todos sus hijos muy jovenes"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, mi abuela casaba a todos sus hijos muy jovenes.",
+"cat": "gram",
+"fix": "En aquellos tiempos, mi abuela casaba a todos sus hijos muy jóvenes.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "coger-habitual-8146",
+"verbo": "coger",
+"contexto": "yo, los martes y jueves, el autobús de las ocho",
+"respuesta": "Los martes y jueves, yo cogía el autobús de las ocho.",
+"pista": "Los martes y jueves cogiendo el autobús de las ocho: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"cogia"
+],
+[
+"el autobus de las ocho"
+],
+[
+"los martes y jueves"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los martes y jueves, yo cogia el autobus de las ocho.",
+"cat": "gram",
+"fix": "Los martes y jueves, yo cogía el autobús de las ocho.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "coger-habitual-8147",
+"verbo": "coger",
+"contexto": "los niños, cada verano, fresas del huerto",
+"respuesta": "Cada verano, los niños cogían fresas del huerto.",
+"pista": "Cada verano, los niños cogiendo fresas del huerto: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"los ninos"
+],
+[
+"cogian"
+],
+[
+"fresas del huerto"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, los ninos cogian fresas del huerto.",
+"cat": "gram",
+"fix": "Cada verano, los niños cogían fresas del huerto.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "comenzar-habitual-8149",
+"verbo": "comenzar",
+"contexto": "yo, los fines de semana, el día con un paseo",
+"respuesta": "Los fines de semana, yo comenzaba el día con un paseo.",
+"pista": "Los fines de semana comenzando el día con un paseo: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"comenzaba"
+],
+[
+"el dia con un paseo"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, yo comenzaba el dia con un paseo.",
+"cat": "gram",
+"fix": "Los fines de semana, yo comenzaba el día con un paseo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "comer-habitual-8150",
+"verbo": "comer",
+"contexto": "nosotros, los domingos, paella en casa de la abuela",
+"respuesta": "Los domingos, nosotros comíamos paella en casa de la abuela.",
+"pista": "Los domingos comiendo paella en casa de la abuela: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"comiamos"
+],
+[
+"paella en casa de la abuela"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, nosotros comiamos paella en casa de la abuela.",
+"cat": "gram",
+"fix": "Los domingos, nosotros comíamos paella en casa de la abuela.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "comer-habitual-8151",
+"verbo": "comer",
+"contexto": "yo, cuando vivía en Madrid, tapas después del trabajo",
+"respuesta": "Cuando vivía en Madrid, yo comía tapas después del trabajo.",
+"pista": "Cuando vivía en Madrid comiendo tapas después del trabajo: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"comia"
+],
+[
+"tapas despues del trabajo"
+],
+[
+"cuando vivia en madrid"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando vivia en Madrid, yo comia tapas despues del trabajo.",
+"cat": "gram",
+"fix": "Cuando vivía en Madrid, yo comía tapas después del trabajo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cometer-habitual-8152",
+"verbo": "cometer",
+"contexto": "yo, durante la infancia, errores por no prestar atención",
+"respuesta": "Durante la infancia, yo cometía errores por no prestar atención.",
+"pista": "Durante la infancia cometiendo errores por no prestar atención: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"cometia"
+],
+[
+"errores por no prestar atencion"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, yo cometia errores por no prestar atencion.",
+"cat": "gram",
+"fix": "Durante la infancia, yo cometía errores por no prestar atención.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cometer-habitual-8153",
+"verbo": "cometer",
+"contexto": "el equipo, con frecuencia, faltas en los partidos",
+"respuesta": "El equipo cometía faltas en los partidos con frecuencia.",
+"pista": "El equipo cometiendo faltas en los partidos con frecuencia: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el equipo"
+],
+[
+"cometia"
+],
+[
+"faltas en los partidos"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El equipo cometia faltas en los partidos con frecuencia.",
+"cat": "gram",
+"fix": "El equipo cometía faltas en los partidos con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "compartir-habitual-8154",
+"verbo": "compartir",
+"contexto": "nosotros, en mis años de universidad, apuntes con los compañeros",
+"respuesta": "En mis años de universidad, nosotros compartíamos apuntes con los compañeros.",
+"pista": "En mis años de universidad compartiendo apuntes con los compañeros: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"compartiamos"
+],
+[
+"apuntes con los companeros"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, nosotros compartiamos apuntes con los companeros.",
+"cat": "gram",
+"fix": "En mis años de universidad, nosotros compartíamos apuntes con los compañeros.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "compartir-habitual-8155",
+"verbo": "compartir",
+"contexto": "mi hermana, por las tardes, sus galletas conmigo",
+"respuesta": "Por las tardes, mi hermana compartía sus galletas conmigo.",
+"pista": "Por las tardes, mi hermana compartiendo sus galletas conmigo: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi hermana"
+],
+[
+"compartia"
+],
+[
+"sus galletas conmigo"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, mi hermana compartia sus galletas conmigo.",
+"cat": "gram",
+"fix": "Por las tardes, mi hermana compartía sus galletas conmigo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "comprender-habitual-8158",
+"verbo": "comprender",
+"contexto": "ella, en aquellos tiempos, mis problemas mejor que nadie",
+"respuesta": "En aquellos tiempos, ella comprendía mis problemas mejor que nadie.",
+"pista": "En aquellos tiempos comprendiendo mis problemas mejor que nadie: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"comprendia"
+],
+[
+"mis problemas mejor que nadie"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, ella comprendia mis problemas mejor que nadie.",
+"cat": "gram",
+"fix": "En aquellos tiempos, ella comprendía mis problemas mejor que nadie.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "comprender-habitual-8159",
+"verbo": "comprender",
+"contexto": "los alumnos, con frecuencia, la lección sin dificultad",
+"respuesta": "Los alumnos comprendían la lección sin dificultad con frecuencia.",
+"pista": "Los alumnos comprendiendo la lección sin dificultad con frecuencia: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"los alumnos"
+],
+[
+"comprendian"
+],
+[
+"la leccion sin dificultad"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los alumnos comprendian la leccion sin dificultad con frecuencia.",
+"cat": "gram",
+"fix": "Los alumnos comprendían la lección sin dificultad con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conducir-habitual-8160",
+"verbo": "conducir",
+"contexto": "mi padre, los martes y jueves, el camión por la autopista",
+"respuesta": "Los martes y jueves, mi padre conducía el camión por la autopista.",
+"pista": "Los martes y jueves, mi padre conduciendo el camión por la autopista: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi padre"
+],
+[
+"conducia"
+],
+[
+"el camion por la autopista"
+],
+[
+"los martes y jueves"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los martes y jueves, mi padre conducia el camion por la autopista.",
+"cat": "gram",
+"fix": "Los martes y jueves, mi padre conducía el camión por la autopista.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conducir-habitual-8161",
+"verbo": "conducir",
+"contexto": "yo, cuando trabajaba allí, dos horas cada mañana",
+"respuesta": "Cuando trabajaba allí, yo conducía dos horas cada mañana.",
+"pista": "Cuando trabajaba allí conduciendo dos horas cada mañana: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"conducia"
+],
+[
+"dos horas cada manana"
+],
+[
+"cuando trabajaba alli"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando trabajaba alli, yo conducia dos horas cada manana.",
+"cat": "gram",
+"fix": "Cuando trabajaba allí, yo conducía dos horas cada mañana.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "confiar-habitual-8163",
+"verbo": "confiar",
+"contexto": "mis padres, semana tras semana, en el médico del pueblo",
+"respuesta": "Semana tras semana, mis padres confiaban en el médico del pueblo.",
+"pista": "Semana tras semana, mis padres confiando en el médico del pueblo: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mis padres"
+],
+[
+"confiaban"
+],
+[
+"en el medico del pueblo"
+],
+[
+"semana tras semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Semana tras semana, mis padres confiaban en el medico del pueblo.",
+"cat": "gram",
+"fix": "Semana tras semana, mis padres confiaban en el médico del pueblo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conocer-habitual-8164",
+"verbo": "conocer",
+"contexto": "mi abuelo, en aquellos tiempos, a todos en el pueblo",
+"respuesta": "En aquellos tiempos, mi abuelo conocía a todos en el pueblo.",
+"pista": "En aquellos tiempos, mi abuelo conociendo a todos en el pueblo: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi abuelo"
+],
+[
+"conocia"
+],
+[
+"a todos en el pueblo"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, mi abuelo conocia a todos en el pueblo.",
+"cat": "gram",
+"fix": "En aquellos tiempos, mi abuelo conocía a todos en el pueblo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conocer-habitual-8165",
+"verbo": "conocer",
+"contexto": "yo, cuando vivía en Madrid, los mejores restaurantes",
+"respuesta": "Cuando vivía en Madrid, yo conocía los mejores restaurantes.",
+"pista": "Cuando vivía en Madrid conociendo los mejores restaurantes: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"conocia"
+],
+[
+"los mejores restaurantes"
+],
+[
+"cuando vivia en madrid"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando vivia en Madrid, yo conocia los mejores restaurantes.",
+"cat": "gram",
+"fix": "Cuando vivía en Madrid, yo conocía los mejores restaurantes.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conseguir-habitual-8166",
+"verbo": "conseguir",
+"contexto": "ella, con frecuencia, entradas para el teatro",
+"respuesta": "Ella conseguía entradas para el teatro con frecuencia.",
+"pista": "Conseguiendo entradas para el teatro con frecuencia: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"conseguia"
+],
+[
+"entradas para el teatro"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella conseguia entradas para el teatro con frecuencia.",
+"cat": "gram",
+"fix": "Ella conseguía entradas para el teatro con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "conseguir-habitual-8167",
+"verbo": "conseguir",
+"contexto": "nosotros, los fines de semana, buenas ofertas en el mercado",
+"respuesta": "Los fines de semana, nosotros conseguíamos buenas ofertas en el mercado.",
+"pista": "Los fines de semana conseguiendo buenas ofertas en el mercado: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"conseguiamos"
+],
+[
+"buenas ofertas en el mercado"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, nosotros conseguiamos buenas ofertas en el mercado.",
+"cat": "gram",
+"fix": "Los fines de semana, nosotros conseguíamos buenas ofertas en el mercado.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "considerar-habitual-8168",
+"verbo": "considerar",
+"contexto": "yo, en mis años de universidad, cada opción con cuidado",
+"respuesta": "En mis años de universidad, yo consideraba cada opción con cuidado.",
+"pista": "En mis años de universidad considerando cada opción con cuidado: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"consideraba"
+],
+[
+"cada opcion con cuidado"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, yo consideraba cada opcion con cuidado.",
+"cat": "gram",
+"fix": "En mis años de universidad, yo consideraba cada opción con cuidado.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "construir-habitual-8170",
+"verbo": "construir",
+"contexto": "mi abuelo, cada verano, muebles de madera en el taller",
+"respuesta": "Cada verano, mi abuelo construía muebles de madera en el taller.",
+"pista": "Cada verano, mi abuelo construyendo muebles de madera en el taller: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi abuelo"
+],
+[
+"construia"
+],
+[
+"muebles de madera en el taller"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, mi abuelo construia muebles de madera en el taller.",
+"cat": "gram",
+"fix": "Cada verano, mi abuelo construía muebles de madera en el taller.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "construir-habitual-8171",
+"verbo": "construir",
+"contexto": "los niños, durante la infancia, castillos de arena en la playa",
+"respuesta": "Durante la infancia, los niños construían castillos de arena en la playa.",
+"pista": "Durante la infancia, los niños construyendo castillos de arena en la playa: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"los ninos"
+],
+[
+"construian"
+],
+[
+"castillos de arena en la playa"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, los ninos construian castillos de arena en la playa.",
+"cat": "gram",
+"fix": "Durante la infancia, los niños construían castillos de arena en la playa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "contestar-habitual-8174",
+"verbo": "contestar",
+"contexto": "ella, con frecuencia, el teléfono antes que nadie",
+"respuesta": "Ella contestaba el teléfono antes que nadie con frecuencia.",
+"pista": "Contestando el teléfono antes que nadie con frecuencia: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"contestaba"
+],
+[
+"el telefono antes que nadie"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ella contestaba el telefono antes que nadie con frecuencia.",
+"cat": "gram",
+"fix": "Ella contestaba el teléfono antes que nadie con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "controlar-habitual-8179",
+"verbo": "controlar",
+"contexto": "el jefe, cuando trabajaba allí, cada detalle del proyecto",
+"respuesta": "Cuando trabajaba allí, el jefe controlaba cada detalle del proyecto.",
+"pista": "Cuando trabajaba allí, el jefe controlando cada detalle del proyecto: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el jefe"
+],
+[
+"controlaba"
+],
+[
+"cada detalle del proyecto"
+],
+[
+"cuando trabajaba alli"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando trabajaba alli, el jefe controlaba cada detalle del proyecto.",
+"cat": "gram",
+"fix": "Cuando trabajaba allí, el jefe controlaba cada detalle del proyecto.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "convertir-habitual-8180",
+"verbo": "convertir",
+"contexto": "mi abuela, los domingos, las sobras en platos deliciosos",
+"respuesta": "Los domingos, mi abuela convertía las sobras en platos deliciosos.",
+"pista": "Los domingos, mi abuela convertiendo las sobras en platos deliciosos: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi abuela"
+],
+[
+"convertia"
+],
+[
+"las sobras en platos deliciosos"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, mi abuela convertia las sobras en platos deliciosos.",
+"cat": "gram",
+"fix": "Los domingos, mi abuela convertía las sobras en platos deliciosos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "convertir-habitual-8181",
+"verbo": "convertir",
+"contexto": "el artista, en mis ratos libres, basura en arte",
+"respuesta": "En mis ratos libres, el artista convertía basura en arte.",
+"pista": "En mis ratos libres, el artista convertiendo basura en arte: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el artista"
+],
+[
+"convertia"
+],
+[
+"basura en arte"
+],
+[
+"en mis ratos libres"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis ratos libres, el artista convertia basura en arte.",
+"cat": "gram",
+"fix": "En mis ratos libres, el artista convertía basura en arte.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "correr-habitual-8182",
+"verbo": "correr",
+"contexto": "yo, por las tardes, cinco kilometros en el parque",
+"respuesta": "Por las tardes, yo corría cinco kilometros en el parque.",
+"pista": "Por las tardes corriendo cinco kilómetros en el parque: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"corria"
+],
+[
+"cinco kilometros en el parque"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, yo corria cinco kilometros en el parque.",
+"cat": "gram",
+"fix": "Por las tardes, yo corría cinco kilometros en el parque.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "correr-habitual-8183",
+"verbo": "correr",
+"contexto": "los niños, durante la infancia, por los pasillos del colegio",
+"respuesta": "Durante la infancia, los niños corrían por los pasillos del colegio.",
+"pista": "Durante la infancia, los niños corriendo por los pasillos del colegio: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"los ninos"
+],
+[
+"corrian"
+],
+[
+"por los pasillos del colegio"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, los ninos corrian por los pasillos del colegio.",
+"cat": "gram",
+"fix": "Durante la infancia, los niños corrían por los pasillos del colegio.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cortar-habitual-8184",
+"verbo": "cortar",
+"contexto": "mi padre, los fines de semana, el cesped del jardín",
+"respuesta": "Los fines de semana, mi padre cortaba el cesped del jardín.",
+"pista": "Los fines de semana, mi padre cortando el césped del jardín: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi padre"
+],
+[
+"cortaba"
+],
+[
+"el cesped del jardin"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, mi padre cortaba el cesped del jardin.",
+"cat": "gram",
+"fix": "Los fines de semana, mi padre cortaba el cesped del jardín.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cortar-habitual-8185",
+"verbo": "cortar",
+"contexto": "ella, cada verano, rosas del jardín para la mesa",
+"respuesta": "Cada verano, ella cortaba rosas del jardín para la mesa.",
+"pista": "Cada verano cortando rosas del jardín para la mesa: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"cortaba"
+],
+[
+"rosas del jardin para la mesa"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, ella cortaba rosas del jardin para la mesa.",
+"cat": "gram",
+"fix": "Cada verano, ella cortaba rosas del jardín para la mesa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "crear-habitual-8189",
+"verbo": "crear",
+"contexto": "nosotros, los fines de semana, historias para los niños",
+"respuesta": "Los fines de semana, nosotros creábamos historias para los niños.",
+"pista": "Los fines de semana creando historias para los niños: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"creabamos"
+],
+[
+"historias para los ninos"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, nosotros creabamos historias para los ninos.",
+"cat": "gram",
+"fix": "Los fines de semana, nosotros creábamos historias para los niños.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "crecer-habitual-8190",
+"verbo": "crecer",
+"contexto": "las flores, cada verano, en el jardín de la abuela",
+"respuesta": "Cada verano, las flores crecían en el jardín de la abuela.",
+"pista": "Cada verano, las flores creciendo en el jardín de la abuela: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"las flores"
+],
+[
+"crecian"
+],
+[
+"en el jardin de la abuela"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, las flores crecian en el jardin de la abuela.",
+"cat": "gram",
+"fix": "Cada verano, las flores crecían en el jardín de la abuela.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "crecer-habitual-8191",
+"verbo": "crecer",
+"contexto": "los niños, año tras año, más fuertes y altos",
+"respuesta": "Año tras año, los niños crecían más fuertes y altos.",
+"pista": "Año tras año, los niños creciendo más fuertes y altos: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"los ninos"
+],
+[
+"crecian"
+],
+[
+"mas fuertes y altos"
+],
+[
+"ano tras ano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Ano tras ano, los ninos crecian mas fuertes y altos.",
+"cat": "gram",
+"fix": "Año tras año, los niños crecían más fuertes y altos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "creer-habitual-8192",
+"verbo": "creer",
+"contexto": "yo, durante la infancia, en los cuentos de hadas",
+"respuesta": "Durante la infancia, yo creía en los cuentos de hadas.",
+"pista": "Durante la infancia creyendo en los cuentos de hadas: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"creia"
+],
+[
+"en los cuentos de hadas"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, yo creia en los cuentos de hadas.",
+"cat": "gram",
+"fix": "Durante la infancia, yo creía en los cuentos de hadas.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "creer-habitual-8193",
+"verbo": "creer",
+"contexto": "mis abuelos, en aquellos tiempos, en la bondad de la gente",
+"respuesta": "En aquellos tiempos, mis abuelos creían en la bondad de la gente.",
+"pista": "En aquellos tiempos, mis abuelos creyendo en la bondad de la gente: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mis abuelos"
+],
+[
+"creian"
+],
+[
+"en la bondad de la gente"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, mis abuelos creian en la bondad de la gente.",
+"cat": "gram",
+"fix": "En aquellos tiempos, mis abuelos creían en la bondad de la gente.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cubrir-habitual-8194",
+"verbo": "cubrir",
+"contexto": "la nieve, cada verano, las montañas del norte",
+"respuesta": "Cada verano, la nieve cubría las montañas del norte.",
+"pista": "Cada verano, la nieve cubriendo las montañas del norte: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"la nieve"
+],
+[
+"cubria"
+],
+[
+"las montanas del norte"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, la nieve cubria las montanas del norte.",
+"cat": "gram",
+"fix": "Cada verano, la nieve cubría las montañas del norte.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cubrir-habitual-8195",
+"verbo": "cubrir",
+"contexto": "mi madre, por las tardes, las plantas con una tela",
+"respuesta": "Por las tardes, mi madre cubría las plantas con una tela.",
+"pista": "Por las tardes, mi madre cubriendo las plantas con una tela: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi madre"
+],
+[
+"cubria"
+],
+[
+"las plantas con una tela"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, mi madre cubria las plantas con una tela.",
+"cat": "gram",
+"fix": "Por las tardes, mi madre cubría las plantas con una tela.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cuidar-habitual-8196",
+"verbo": "cuidar",
+"contexto": "mi hermana, los fines de semana, a los niños del vecino",
+"respuesta": "Los fines de semana, mi hermana cuidaba a los niños del vecino.",
+"pista": "Los fines de semana, mi hermana cuidando a los niños del vecino: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi hermana"
+],
+[
+"cuidaba"
+],
+[
+"a los ninos del vecino"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, mi hermana cuidaba a los ninos del vecino.",
+"cat": "gram",
+"fix": "Los fines de semana, mi hermana cuidaba a los niños del vecino.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cuidar-habitual-8197",
+"verbo": "cuidar",
+"contexto": "nosotros, durante la infancia, un jardín lleno de flores",
+"respuesta": "Durante la infancia, nosotros cuidábamos un jardín lleno de flores.",
+"pista": "Durante la infancia cuidando un jardín lleno de flores: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"cuidabamos"
+],
+[
+"un jardin lleno de flores"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, nosotros cuidabamos un jardin lleno de flores.",
+"cat": "gram",
+"fix": "Durante la infancia, nosotros cuidábamos un jardín lleno de flores.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cumplir-habitual-8198",
+"verbo": "cumplir",
+"contexto": "yo, semana tras semana, con mis responsabilidades",
+"respuesta": "Semana tras semana, yo cumplía con mis responsabilidades.",
+"pista": "Semana tras semana cumpliendo con mis responsabilidades: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"cumplia"
+],
+[
+"con mis responsabilidades"
+],
+[
+"semana tras semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Semana tras semana, yo cumplia con mis responsabilidades.",
+"cat": "gram",
+"fix": "Semana tras semana, yo cumplía con mis responsabilidades.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "cumplir-habitual-8199",
+"verbo": "cumplir",
+"contexto": "ella, en aquellos tiempos, todas sus promesas",
+"respuesta": "En aquellos tiempos, ella cumplía todas sus promesas.",
+"pista": "En aquellos tiempos cumpliendo todas sus promesas: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"cumplia"
+],
+[
+"todas sus promesas"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, ella cumplia todas sus promesas.",
+"cat": "gram",
+"fix": "En aquellos tiempos, ella cumplía todas sus promesas.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "dar-habitual-8200",
+"verbo": "dar",
+"contexto": "mi abuela, los domingos, dulces a los niños",
+"respuesta": "Los domingos, mi abuela daba dulces a los niños.",
+"pista": "Los domingos, mi abuela dando dulces a los niños: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi abuela"
+],
+[
+"daba"
+],
+[
+"dulces a los ninos"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, mi abuela daba dulces a los ninos.",
+"cat": "gram",
+"fix": "Los domingos, mi abuela daba dulces a los niños.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "deber-habitual-8202",
+"verbo": "deber",
+"contexto": "yo, en mis años de universidad, estudiar más",
+"respuesta": "En mis años de universidad, yo debía estudiar más.",
+"pista": "En mis años de universidad debiendo estudiar más: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"debia"
+],
+[
+"estudiar mas"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, yo debia estudiar mas.",
+"cat": "gram",
+"fix": "En mis años de universidad, yo debía estudiar más.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "deber-habitual-8203",
+"verbo": "deber",
+"contexto": "nosotros, en aquellos tiempos, dinero al banco",
+"respuesta": "En aquellos tiempos, nosotros debíamos dinero al banco.",
+"pista": "En aquellos tiempos debiendo dinero al banco: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"debiamos"
+],
+[
+"dinero al banco"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, nosotros debiamos dinero al banco.",
+"cat": "gram",
+"fix": "En aquellos tiempos, nosotros debíamos dinero al banco.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "decidir-habitual-8204",
+"verbo": "decidir",
+"contexto": "mi padre, los fines de semana, a donde íbamos de excursion",
+"respuesta": "Los fines de semana, mi padre decidía a donde íbamos de excursion.",
+"pista": "Los fines de semana, mi padre decidiendo a donde íbamos de excursión: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi padre"
+],
+[
+"decidia"
+],
+[
+"a donde ibamos de excursion"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, mi padre decidia a donde ibamos de excursion.",
+"cat": "gram",
+"fix": "Los fines de semana, mi padre decidía a donde íbamos de excursion.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "decidir-habitual-8205",
+"verbo": "decidir",
+"contexto": "yo, por las tardes, que libro leer antes de dormir",
+"respuesta": "Por las tardes, yo decidía que libro leer antes de dormir.",
+"pista": "Por las tardes decidiendo que libro leer antes de dormir: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"decidia"
+],
+[
+"que libro leer antes de dormir"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, yo decidia que libro leer antes de dormir.",
+"cat": "gram",
+"fix": "Por las tardes, yo decidía que libro leer antes de dormir.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "decir-habitual-8206",
+"verbo": "decir",
+"contexto": "mi madre, cada verano, que tuvieras cuidado con el sol",
+"respuesta": "Cada verano, mi madre decía que tuvieras cuidado con el sol.",
+"pista": "Cada verano, mi madre diciendo que tuvieras cuidado con el sol: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi madre"
+],
+[
+"decia"
+],
+[
+"que tuvieras cuidado con el sol"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, mi madre decia que tuvieras cuidado con el sol.",
+"cat": "gram",
+"fix": "Cada verano, mi madre decía que tuvieras cuidado con el sol.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "defender-habitual-8208",
+"verbo": "defender",
+"contexto": "mi hermano mayor, durante la infancia, a los más pequeños",
+"respuesta": "Durante la infancia, mi hermano mayor defendía a los más pequeños.",
+"pista": "Durante la infancia, mi hermano mayor defendiendo a los más pequeños: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi hermano mayor"
+],
+[
+"defendia"
+],
+[
+"a los mas pequenos"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, mi hermano mayor defendia a los mas pequenos.",
+"cat": "gram",
+"fix": "Durante la infancia, mi hermano mayor defendía a los más pequeños.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "defender-habitual-8209",
+"verbo": "defender",
+"contexto": "ella, en aquellos tiempos, sus ideas con pasion",
+"respuesta": "En aquellos tiempos, ella defendía sus ideas con pasion.",
+"pista": "En aquellos tiempos defendiendo sus ideas con pasión: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"defendia"
+],
+[
+"sus ideas con pasion"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, ella defendia sus ideas con pasion.",
+"cat": "gram",
+"fix": "En aquellos tiempos, ella defendía sus ideas con pasion.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "demostrar-habitual-8212",
+"verbo": "demostrar",
+"contexto": "el cientifico, en mis años de universidad, sus teorías en clase",
+"respuesta": "En mis años de universidad, el cientifico demostraba sus teorías en clase.",
+"pista": "En mis años de universidad, el científico demostrando sus teorías en clase: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el cientifico"
+],
+[
+"demostraba"
+],
+[
+"sus teorias en clase"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, el cientifico demostraba sus teorias en clase.",
+"cat": "gram",
+"fix": "En mis años de universidad, el cientifico demostraba sus teorías en clase.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "depender-habitual-8214",
+"verbo": "depender",
+"contexto": "nosotros, durante la infancia, de nuestros padres para todo",
+"respuesta": "Durante la infancia, nosotros dependíamos de nuestros padres para todo.",
+"pista": "Durante la infancia dependiendo de nuestros padres para todo: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"dependiamos"
+],
+[
+"de nuestros padres para todo"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, nosotros dependiamos de nuestros padres para todo.",
+"cat": "gram",
+"fix": "Durante la infancia, nosotros dependíamos de nuestros padres para todo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "depender-habitual-8215",
+"verbo": "depender",
+"contexto": "el negocio, en aquellos tiempos, del turismo local",
+"respuesta": "En aquellos tiempos, el negocio dependía del turismo local.",
+"pista": "En aquellos tiempos, el negocio dependiendo del turismo local: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el negocio"
+],
+[
+"dependia"
+],
+[
+"del turismo local"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, el negocio dependia del turismo local.",
+"cat": "gram",
+"fix": "En aquellos tiempos, el negocio dependía del turismo local.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "desaparecer-habitual-8216",
+"verbo": "desaparecer",
+"contexto": "el sol, por las tardes, detrás de las montañas",
+"respuesta": "Por las tardes, el sol desaparecía detrás de las montañas.",
+"pista": "Por las tardes, el sol desapareciendo detrás de las montañas: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el sol"
+],
+[
+"desaparecia"
+],
+[
+"detras de las montanas"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, el sol desaparecia detras de las montanas.",
+"cat": "gram",
+"fix": "Por las tardes, el sol desaparecía detrás de las montañas.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "desaparecer-habitual-8217",
+"verbo": "desaparecer",
+"contexto": "mis calcetines, con frecuencia, en la lavadora",
+"respuesta": "Mis calcetines desaparecían en la lavadora con frecuencia.",
+"pista": "Mis calcetines desapareciendo en la lavadora con frecuencia: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mis calcetines"
+],
+[
+"desaparecian"
+],
+[
+"en la lavadora"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mis calcetines desaparecian en la lavadora con frecuencia.",
+"cat": "gram",
+"fix": "Mis calcetines desaparecían en la lavadora con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "desarrollar-habitual-8218",
+"verbo": "desarrollar",
+"contexto": "el equipo, cuando trabajaba allí, nuevos productos cada mes",
+"respuesta": "Cuando trabajaba allí, el equipo desarrollaba nuevos productos cada mes.",
+"pista": "Cuando trabajaba allí, el equipo desarrollando nuevos productos cada mes: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el equipo"
+],
+[
+"desarrollaba"
+],
+[
+"nuevos productos cada mes"
+],
+[
+"cuando trabajaba alli"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando trabajaba alli, el equipo desarrollaba nuevos productos cada mes.",
+"cat": "gram",
+"fix": "Cuando trabajaba allí, el equipo desarrollaba nuevos productos cada mes.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "descubrir-habitual-8220",
+"verbo": "descubrir",
+"contexto": "nosotros, cada verano, nuevos lugares en la costa",
+"respuesta": "Cada verano, nosotros descubríamos nuevos lugares en la costa.",
+"pista": "Cada verano descubriendo nuevos lugares en la costa: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"descubriamos"
+],
+[
+"nuevos lugares en la costa"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, nosotros descubriamos nuevos lugares en la costa.",
+"cat": "gram",
+"fix": "Cada verano, nosotros descubríamos nuevos lugares en la costa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "descubrir-habitual-8221",
+"verbo": "descubrir",
+"contexto": "yo, en mis años de universidad, autores interesantes en la biblioteca",
+"respuesta": "En mis años de universidad, yo descubría autores interesantes en la biblioteca.",
+"pista": "En mis años de universidad descubriendo autores interesantes en la biblioteca: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"descubria"
+],
+[
+"autores interesantes en la biblioteca"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, yo descubria autores interesantes en la biblioteca.",
+"cat": "gram",
+"fix": "En mis años de universidad, yo descubría autores interesantes en la biblioteca.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "despedir-habitual-8224",
+"verbo": "despedir",
+"contexto": "mi madre, los domingos, a los invitados con un abrazo",
+"respuesta": "Los domingos, mi madre despedía a los invitados con un abrazo.",
+"pista": "Los domingos, mi madre despidiendo a los invitados con un abrazo: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi madre"
+],
+[
+"despedia"
+],
+[
+"a los invitados con un abrazo"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, mi madre despedia a los invitados con un abrazo.",
+"cat": "gram",
+"fix": "Los domingos, mi madre despedía a los invitados con un abrazo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "despedir-habitual-8225",
+"verbo": "despedir",
+"contexto": "el jefe, con frecuencia, a los empleados nuevos",
+"respuesta": "El jefe despedía a los empleados nuevos con frecuencia.",
+"pista": "El jefe despidiendo a los empleados nuevos con frecuencia: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el jefe"
+],
+[
+"despedia"
+],
+[
+"a los empleados nuevos"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El jefe despedia a los empleados nuevos con frecuencia.",
+"cat": "gram",
+"fix": "El jefe despedía a los empleados nuevos con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "despertar-habitual-8227",
+"verbo": "despertar",
+"contexto": "los niños, cada verano, muy temprano para ir a la playa",
+"respuesta": "Cada verano, los niños despertaban muy temprano para ir a la playa.",
+"pista": "Cada verano, los niños despertando muy temprano para ir a la playa: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"los ninos"
+],
+[
+"despertaban"
+],
+[
+"muy temprano para ir a la playa"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, los ninos despertaban muy temprano para ir a la playa.",
+"cat": "gram",
+"fix": "Cada verano, los niños despertaban muy temprano para ir a la playa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "destruir-habitual-8228",
+"verbo": "destruir",
+"contexto": "las tormentas, cada verano, los cultivos de la región",
+"respuesta": "Cada verano, las tormentas destruían los cultivos de la región.",
+"pista": "Cada verano, las tormentas destruyendo los cultivos de la región: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"las tormentas"
+],
+[
+"destruian"
+],
+[
+"los cultivos de la region"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, las tormentas destruian los cultivos de la region.",
+"cat": "gram",
+"fix": "Cada verano, las tormentas destruían los cultivos de la región.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "destruir-habitual-8229",
+"verbo": "destruir",
+"contexto": "el perro, con frecuencia, los zapatos de mi padre",
+"respuesta": "El perro destruía los zapatos de mi padre con frecuencia.",
+"pista": "El perro destruyendo los zapatos de mi padre con frecuencia: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el perro"
+],
+[
+"destruia"
+],
+[
+"los zapatos de mi padre"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El perro destruia los zapatos de mi padre con frecuencia.",
+"cat": "gram",
+"fix": "El perro destruía los zapatos de mi padre con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "detener-habitual-8230",
+"verbo": "detener",
+"contexto": "la policía, los fines de semana, a los conductores ebrios",
+"respuesta": "Los fines de semana, la policía detenía a los conductores ebrios.",
+"pista": "Los fines de semana, la policía deteniendo a los conductores ebrios: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"la policia"
+],
+[
+"detenia"
+],
+[
+"a los conductores ebrios"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, la policia detenia a los conductores ebrios.",
+"cat": "gram",
+"fix": "Los fines de semana, la policía detenía a los conductores ebrios.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "detener-habitual-8231",
+"verbo": "detener",
+"contexto": "yo, por las tardes, mi trabajo para tomar un descanso",
+"respuesta": "Por las tardes, yo detenía mi trabajo para tomar un descanso.",
+"pista": "Por las tardes deteniendo mi trabajo para tomar un descanso: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"detenia"
+],
+[
+"mi trabajo para tomar un descanso"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, yo detenia mi trabajo para tomar un descanso.",
+"cat": "gram",
+"fix": "Por las tardes, yo detenía mi trabajo para tomar un descanso.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "devolver-habitual-8232",
+"verbo": "devolver",
+"contexto": "yo, semana tras semana, los libros a la biblioteca",
+"respuesta": "Semana tras semana, yo devolvía los libros a la biblioteca.",
+"pista": "Semana tras semana devolviendo los libros a la biblioteca: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"devolvia"
+],
+[
+"los libros a la biblioteca"
+],
+[
+"semana tras semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Semana tras semana, yo devolvia los libros a la biblioteca.",
+"cat": "gram",
+"fix": "Semana tras semana, yo devolvía los libros a la biblioteca.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "devolver-habitual-8233",
+"verbo": "devolver",
+"contexto": "la tienda, en aquellos tiempos, el dinero sin problemas",
+"respuesta": "En aquellos tiempos, la tienda devolvía el dinero sin problemas.",
+"pista": "En aquellos tiempos, la tienda devolviendo el dinero sin problemas: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"la tienda"
+],
+[
+"devolvia"
+],
+[
+"el dinero sin problemas"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, la tienda devolvia el dinero sin problemas.",
+"cat": "gram",
+"fix": "En aquellos tiempos, la tienda devolvía el dinero sin problemas.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "dirigir-habitual-8234",
+"verbo": "dirigir",
+"contexto": "el abuelo, en aquellos tiempos, la empresa familiar",
+"respuesta": "En aquellos tiempos, el abuelo dirigía la empresa familiar.",
+"pista": "En aquellos tiempos, el abuelo dirigiendo la empresa familiar: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el abuelo"
+],
+[
+"dirigia"
+],
+[
+"la empresa familiar"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, el abuelo dirigia la empresa familiar.",
+"cat": "gram",
+"fix": "En aquellos tiempos, el abuelo dirigía la empresa familiar.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "dirigir-habitual-8235",
+"verbo": "dirigir",
+"contexto": "ella, los martes y jueves, el coro de la iglesia",
+"respuesta": "Los martes y jueves, ella dirigía el coro de la iglesia.",
+"pista": "Los martes y jueves dirigiendo el coro de la iglesia: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"dirigia"
+],
+[
+"el coro de la iglesia"
+],
+[
+"los martes y jueves"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los martes y jueves, ella dirigia el coro de la iglesia.",
+"cat": "gram",
+"fix": "Los martes y jueves, ella dirigía el coro de la iglesia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "discutir-habitual-8238",
+"verbo": "discutir",
+"contexto": "mis padres, los fines de semana, sobre politica en la cena",
+"respuesta": "Los fines de semana, mis padres discutían sobre politica en la cena.",
+"pista": "Los fines de semana, mis padres discutiendo sobre política en la cena: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mis padres"
+],
+[
+"discutian"
+],
+[
+"sobre politica en la cena"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, mis padres discutian sobre politica en la cena.",
+"cat": "gram",
+"fix": "Los fines de semana, mis padres discutían sobre politica en la cena.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "discutir-habitual-8239",
+"verbo": "discutir",
+"contexto": "nosotros, en mis años de universidad, las teorías en clase",
+"respuesta": "En mis años de universidad, nosotros discutíamos las teorías en clase.",
+"pista": "En mis años de universidad discutiendo las teorías en clase: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"discutiamos"
+],
+[
+"las teorias en clase"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, nosotros discutiamos las teorias en clase.",
+"cat": "gram",
+"fix": "En mis años de universidad, nosotros discutíamos las teorías en clase.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "disfrutar-habitual-8240",
+"verbo": "disfrutar",
+"contexto": "nosotros, cada verano, de las vacaciones en el campo",
+"respuesta": "Cada verano, nosotros disfrutábamos de las vacaciones en el campo.",
+"pista": "Cada verano disfrutando de las vacaciones en el campo: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"disfrutabamos"
+],
+[
+"de las vacaciones en el campo"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, nosotros disfrutabamos de las vacaciones en el campo.",
+"cat": "gram",
+"fix": "Cada verano, nosotros disfrutábamos de las vacaciones en el campo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "dormir-habitual-8244",
+"verbo": "dormir",
+"contexto": "yo, durante la infancia, con la luz encendida",
+"respuesta": "Durante la infancia, yo dormía con la luz encendida.",
+"pista": "Durante la infancia durmiendo con la luz encendida: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"dormia"
+],
+[
+"con la luz encendida"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, yo dormia con la luz encendida.",
+"cat": "gram",
+"fix": "Durante la infancia, yo dormía con la luz encendida.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "dormir-habitual-8245",
+"verbo": "dormir",
+"contexto": "el gato, por las tardes, en el sillon del salon",
+"respuesta": "Por las tardes, el gato dormía en el sillon del salon.",
+"pista": "Por las tardes, el gato durmiendo en el sillón del salón: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el gato"
+],
+[
+"dormia"
+],
+[
+"en el sillon del salon"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, el gato dormia en el sillon del salon.",
+"cat": "gram",
+"fix": "Por las tardes, el gato dormía en el sillon del salon.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "elegir-habitual-8248",
+"verbo": "elegir",
+"contexto": "yo, los fines de semana, peliculas de terror para la noche",
+"respuesta": "Los fines de semana, yo elegía peliculas de terror para la noche.",
+"pista": "Los fines de semana eligiendo películas de terror para la noche: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"elegia"
+],
+[
+"peliculas de terror para la noche"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, yo elegia peliculas de terror para la noche.",
+"cat": "gram",
+"fix": "Los fines de semana, yo elegía peliculas de terror para la noche.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "elegir-habitual-8249",
+"verbo": "elegir",
+"contexto": "ella, semana tras semana, la ropa con mucho cuidado",
+"respuesta": "Semana tras semana, ella elegía la ropa con mucho cuidado.",
+"pista": "Semana tras semana eligiendo la ropa con mucho cuidado: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"elegia"
+],
+[
+"la ropa con mucho cuidado"
+],
+[
+"semana tras semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Semana tras semana, ella elegia la ropa con mucho cuidado.",
+"cat": "gram",
+"fix": "Semana tras semana, ella elegía la ropa con mucho cuidado.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "empezar-habitual-8250",
+"verbo": "empezar",
+"contexto": "las clases, en aquellos tiempos, a las ocho de la mañana",
+"respuesta": "En aquellos tiempos, las clases empezaban a las ocho de la mañana.",
+"pista": "En aquellos tiempos, las clases empezando a las ocho de la mañana: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"las clases"
+],
+[
+"empezaban"
+],
+[
+"a las ocho de la manana"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, las clases empezaban a las ocho de la manana.",
+"cat": "gram",
+"fix": "En aquellos tiempos, las clases empezaban a las ocho de la mañana.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "empezar-habitual-8251",
+"verbo": "empezar",
+"contexto": "yo, por las tardes, a estudiar después de merendar",
+"respuesta": "Por las tardes, yo empezaba a estudiar después de merendar.",
+"pista": "Por las tardes empezando a estudiar después de merendar: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"empezaba"
+],
+[
+"a estudiar despues de merendar"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, yo empezaba a estudiar despues de merendar.",
+"cat": "gram",
+"fix": "Por las tardes, yo empezaba a estudiar después de merendar.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "encontrar-habitual-8255",
+"verbo": "encontrar",
+"contexto": "nosotros, los domingos, buen ambiente en el mercado",
+"respuesta": "Los domingos, nosotros encontrábamos buen ambiente en el mercado.",
+"pista": "Los domingos encontrando buen ambiente en el mercado: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"encontrabamos"
+],
+[
+"buen ambiente en el mercado"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, nosotros encontrabamos buen ambiente en el mercado.",
+"cat": "gram",
+"fix": "Los domingos, nosotros encontrábamos buen ambiente en el mercado.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "enganar-habitual-8258",
+"verbo": "enganar",
+"contexto": "el vendedor, con frecuencia, a los clientes con precios falsos",
+"respuesta": "El vendedor engañaba a los clientes con precios falsos con frecuencia.",
+"pista": "El vendedor engañando a los clientes con precios falsos con frecuencia: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el vendedor"
+],
+[
+"enganaba"
+],
+[
+"a los clientes con precios falsos"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El vendedor enganaba a los clientes con precios falsos con frecuencia.",
+"cat": "gram",
+"fix": "El vendedor engañaba a los clientes con precios falsos con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "enganar-habitual-8259",
+"verbo": "enganar",
+"contexto": "mi hermano, durante la infancia, a mis padres con excusas",
+"respuesta": "Durante la infancia, mi hermano engañaba a mis padres con excusas.",
+"pista": "Durante la infancia, mi hermano engañando a mis padres con excusas: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi hermano"
+],
+[
+"enganaba"
+],
+[
+"a mis padres con excusas"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, mi hermano enganaba a mis padres con excusas.",
+"cat": "gram",
+"fix": "Durante la infancia, mi hermano engañaba a mis padres con excusas.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ensenar-habitual-8260",
+"verbo": "ensenar",
+"contexto": "mi abuela, por las tardes, a tejer a las ninas del barrio",
+"respuesta": "Por las tardes, mi abuela enseñaba a tejer a las ninas del barrio.",
+"pista": "Por las tardes, mi abuela enseñando a tejer a las niñas del barrio: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi abuela"
+],
+[
+"ensenaba"
+],
+[
+"a tejer a las ninas del barrio"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, mi abuela ensenaba a tejer a las ninas del barrio.",
+"cat": "gram",
+"fix": "Por las tardes, mi abuela enseñaba a tejer a las ninas del barrio.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ensenar-habitual-8261",
+"verbo": "ensenar",
+"contexto": "el profesor, los martes y jueves, matemáticas avanzadas",
+"respuesta": "Los martes y jueves, el profesor enseñaba matemáticas avanzadas.",
+"pista": "Los martes y jueves, el profesor enseñando matemáticas avanzadas: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"el profesor"
+],
+[
+"ensenaba"
+],
+[
+"matematicas avanzadas"
+],
+[
+"los martes y jueves"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los martes y jueves, el profesor ensenaba matematicas avanzadas.",
+"cat": "gram",
+"fix": "Los martes y jueves, el profesor enseñaba matemáticas avanzadas.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "entender-habitual-8262",
+"verbo": "entender",
+"contexto": "yo, en mis años de universidad, muy poco de economía",
+"respuesta": "En mis años de universidad, yo entendía muy poco de economía.",
+"pista": "En mis años de universidad entendiendo muy poco de economía: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"entendia"
+],
+[
+"muy poco de economia"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, yo entendia muy poco de economia.",
+"cat": "gram",
+"fix": "En mis años de universidad, yo entendía muy poco de economía.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "entender-habitual-8263",
+"verbo": "entender",
+"contexto": "ella, en aquellos tiempos, mis sentimientos sin que yo hablara",
+"respuesta": "En aquellos tiempos, ella entendía mis sentimientos sin que yo hablara.",
+"pista": "En aquellos tiempos entendiendo mis sentimientos sin que yo hablara: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"entendia"
+],
+[
+"mis sentimientos sin que yo hablara"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, ella entendia mis sentimientos sin que yo hablara.",
+"cat": "gram",
+"fix": "En aquellos tiempos, ella entendía mis sentimientos sin que yo hablara.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "enterar-habitual-8265",
+"verbo": "enterar",
+"contexto": "nosotros, los domingos, de los chismes del barrio",
+"respuesta": "Los domingos, nosotros nos enterábamos de los chismes del barrio.",
+"pista": "Los domingos, nos enterando de los chismes del barrio: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"enterabamos"
+],
+[
+"de los chismes del barrio"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, nosotros nos enterabamos de los chismes del barrio.",
+"cat": "gram",
+"fix": "Los domingos, nosotros nos enterábamos de los chismes del barrio.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "entrar-habitual-8267",
+"verbo": "entrar",
+"contexto": "los niños, durante la infancia, corriendo a la casa",
+"respuesta": "Durante la infancia, los niños entraban corriendo a la casa.",
+"pista": "Durante la infancia, los niños entrando corriendo a la casa: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"los ninos"
+],
+[
+"entraban"
+],
+[
+"corriendo a la casa"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, los ninos entraban corriendo a la casa.",
+"cat": "gram",
+"fix": "Durante la infancia, los niños entraban corriendo a la casa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "enviar-habitual-8271",
+"verbo": "enviar",
+"contexto": "nosotros, con frecuencia, postales desde nuestros viajes",
+"respuesta": "Nosotros enviábamos postales desde nuestros viajes con frecuencia.",
+"pista": "Enviando postales desde nuestros viajes con frecuencia: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"enviabamos"
+],
+[
+"postales desde nuestros viajes"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros enviabamos postales desde nuestros viajes con frecuencia.",
+"cat": "gram",
+"fix": "Nosotros enviábamos postales desde nuestros viajes con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "escapar-habitual-8273",
+"verbo": "escapar",
+"contexto": "yo, durante la infancia, al jardín secreto detrás de la casa",
+"respuesta": "Durante la infancia, yo escapaba al jardín secreto detrás de la casa.",
+"pista": "Durante la infancia escapando al jardín secreto detrás de la casa: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"escapaba"
+],
+[
+"al jardin secreto detras de la casa"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, yo escapaba al jardin secreto detras de la casa.",
+"cat": "gram",
+"fix": "Durante la infancia, yo escapaba al jardín secreto detrás de la casa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "esconder-habitual-8274",
+"verbo": "esconder",
+"contexto": "mi hermano, los domingos, los dulces debajo de la cama",
+"respuesta": "Los domingos, mi hermano escondía los dulces debajo de la cama.",
+"pista": "Los domingos, mi hermano escondiendo los dulces debajo de la cama: acción habitual, usa el imperfecto.",
+"grupos": [
+[
+"mi hermano"
+],
+[
+"escondia"
+],
+[
+"los dulces debajo de la cama"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, mi hermano escondia los dulces debajo de la cama.",
+"cat": "gram",
+"fix": "Los domingos, mi hermano escondía los dulces debajo de la cama.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "esconder-habitual-8275",
+"verbo": "esconder",
+"contexto": "el perro, en aquellos tiempos, los huesos en el jardín",
+"respuesta": "En aquellos tiempos, el perro escondía los huesos en el jardín.",
+"pista": "Se trata de comportamiento animal habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"el perro"
+],
+[
+"escondia"
+],
+[
+"los huesos en el jardin"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, el perro escondia los huesos en el jardin.",
+"cat": "gram",
+"fix": "En aquellos tiempos, el perro escondía los huesos en el jardín.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "escribir-habitual-8276",
+"verbo": "escribir",
+"contexto": "yo, por las tardes, poemas en mi cuaderno",
+"respuesta": "Por las tardes, yo escribía poemas en mi cuaderno.",
+"pista": "Se trata de costumbre creativa diario/a de la tarde: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"escribia"
+],
+[
+"poemas en mi cuaderno"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, yo escribia poemas en mi cuaderno.",
+"cat": "gram",
+"fix": "Por las tardes, yo escribía poemas en mi cuaderno.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "escribir-habitual-8277",
+"verbo": "escribir",
+"contexto": "mi abuelo, los domingos, cartas a sus viejos amigos",
+"respuesta": "Los domingos, mi abuelo escribía cartas a sus viejos amigos.",
+"pista": "Se trata de costumbre de escribir habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"mi abuelo"
+],
+[
+"escribia"
+],
+[
+"cartas a sus viejos amigos"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, mi abuelo escribia cartas a sus viejos amigos.",
+"cat": "gram",
+"fix": "Los domingos, mi abuelo escribía cartas a sus viejos amigos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "escuchar-habitual-8278",
+"verbo": "escuchar",
+"contexto": "nosotros, en aquellos tiempos, música clasica en la radio",
+"respuesta": "En aquellos tiempos, nosotros escuchábamos música clasica en la radio.",
+"pista": "Se trata de costumbre de escuchar habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"escuchabamos"
+],
+[
+"musica clasica en la radio"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, nosotros escuchabamos musica clasica en la radio.",
+"cat": "gram",
+"fix": "En aquellos tiempos, nosotros escuchábamos música clasica en la radio.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "esperar-habitual-8280",
+"verbo": "esperar",
+"contexto": "yo, los martes y jueves, el autobús en la esquina",
+"respuesta": "Los martes y jueves, yo esperaba el autobús en la esquina.",
+"pista": "Se trata de espera: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"esperaba"
+],
+[
+"el autobus en la esquina"
+],
+[
+"los martes y jueves"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los martes y jueves, yo esperaba el autobus en la esquina.",
+"cat": "gram",
+"fix": "Los martes y jueves, yo esperaba el autobús en la esquina.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "esperar-habitual-8281",
+"verbo": "esperar",
+"contexto": "nosotros, con frecuencia, buenas noticias del médico",
+"respuesta": "Nosotros esperábamos buenas noticias del médico con frecuencia.",
+"pista": "Se trata de esperanza que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"esperabamos"
+],
+[
+"buenas noticias del medico"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Nosotros esperabamos buenas noticias del medico con frecuencia.",
+"cat": "gram",
+"fix": "Nosotros esperábamos buenas noticias del médico con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "estar-habitual-8283",
+"verbo": "estar",
+"contexto": "la casa, en aquellos tiempos, llena de risas y música",
+"respuesta": "En aquellos tiempos, la casa estaba llena de risas y música.",
+"pista": "Se trata de estado habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"la casa"
+],
+[
+"estaba"
+],
+[
+"llena de risas y musica"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, la casa estaba llena de risas y musica.",
+"cat": "gram",
+"fix": "En aquellos tiempos, la casa estaba llena de risas y música.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "estudiar-habitual-8284",
+"verbo": "estudiar",
+"contexto": "yo, en mis años de universidad, hasta las tres de la mañana",
+"respuesta": "En mis años de universidad, yo estudiaba hasta las tres de la mañana.",
+"pista": "Se trata de patrón de estudio habitual en la universidad: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"estudiaba"
+],
+[
+"hasta las tres de la manana"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, yo estudiaba hasta las tres de la manana.",
+"cat": "gram",
+"fix": "En mis años de universidad, yo estudiaba hasta las tres de la mañana.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "estudiar-habitual-8285",
+"verbo": "estudiar",
+"contexto": "nosotros, los fines de semana, en la biblioteca del barrio",
+"respuesta": "Los fines de semana, nosotros estudiábamos en la biblioteca del barrio.",
+"pista": "Se trata de estudio habitual de fin de semana: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"estudiabamos"
+],
+[
+"en la biblioteca del barrio"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, nosotros estudiabamos en la biblioteca del barrio.",
+"cat": "gram",
+"fix": "Los fines de semana, nosotros estudiábamos en la biblioteca del barrio.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "evitar-habitual-8287",
+"verbo": "evitar",
+"contexto": "ella, cuando vivía en Madrid, el metro en hora punta",
+"respuesta": "Cuando vivía en Madrid, ella evitaba el metro en hora punta.",
+"pista": "Se trata de una evasión habitual durante su estancia en Madrid: usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"evitaba"
+],
+[
+"el metro en hora punta"
+],
+[
+"cuando vivia en madrid"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando vivia en Madrid, ella evitaba el metro en hora punta.",
+"cat": "gram",
+"fix": "Cuando vivía en Madrid, ella evitaba el metro en hora punta.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "existir-habitual-8288",
+"verbo": "existir",
+"contexto": "en aquellos tiempos, muchas tiendas pequeñas en el barrio",
+"respuesta": "En aquellos tiempos, existían muchas tiendas pequeñas en el barrio.",
+"pista": "Se trata de existencia habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"muchas tiendas pequenas"
+],
+[
+"existian"
+],
+[
+"en el barrio"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, existian muchas tiendas pequenas en el barrio.",
+"cat": "gram",
+"fix": "En aquellos tiempos, existían muchas tiendas pequeñas en el barrio.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "existir-habitual-8289",
+"verbo": "existir",
+"contexto": "durante la infancia, un bosque magico cerca de mi casa",
+"respuesta": "Durante la infancia, existía un bosque magico cerca de mi casa.",
+"pista": "Se trata de percepción continuo/a durante la infancia: usa el imperfecto.",
+"grupos": [
+[
+"un bosque magico"
+],
+[
+"existia"
+],
+[
+"cerca de mi casa"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, existia un bosque magico cerca de mi casa.",
+"cat": "gram",
+"fix": "Durante la infancia, existía un bosque magico cerca de mi casa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "formar-habitual-8292",
+"verbo": "formar",
+"contexto": "los soldados, en aquellos tiempos, filas perfectas cada mañana",
+"respuesta": "En aquellos tiempos, los soldados formaban filas perfectas cada mañana.",
+"pista": "Se trata de una rutina militar diaria y habitual: usa el imperfecto.",
+"grupos": [
+[
+"los soldados"
+],
+[
+"formaban"
+],
+[
+"filas perfectas cada manana"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, los soldados formaban filas perfectas cada manana.",
+"cat": "gram",
+"fix": "En aquellos tiempos, los soldados formaban filas perfectas cada mañana.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "formar-habitual-8293",
+"verbo": "formar",
+"contexto": "nosotros, los fines de semana, equipos para jugar al futbol",
+"respuesta": "Los fines de semana, nosotros formábamos equipos para jugar al futbol.",
+"pista": "Se trata de actividad habitual de fin de semana: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"formabamos"
+],
+[
+"equipos para jugar al futbol"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, nosotros formabamos equipos para jugar al futbol.",
+"cat": "gram",
+"fix": "Los fines de semana, nosotros formábamos equipos para jugar al futbol.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ganar-habitual-8297",
+"verbo": "ganar",
+"contexto": "yo, cuando trabajaba allí, un buen salario",
+"respuesta": "Cuando trabajaba allí, yo ganaba un buen salario.",
+"pista": "Se trata de ingreso continuo/a en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"ganaba"
+],
+[
+"un buen salario"
+],
+[
+"cuando trabajaba alli"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando trabajaba alli, yo ganaba un buen salario.",
+"cat": "gram",
+"fix": "Cuando trabajaba allí, yo ganaba un buen salario.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "gritar-habitual-8300",
+"verbo": "gritar",
+"contexto": "los niños, durante la infancia, en el patio del colegio",
+"respuesta": "Durante la infancia, los niños gritaban en el patio del colegio.",
+"pista": "Se trata de comportamiento habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"los ninos"
+],
+[
+"gritaban"
+],
+[
+"en el patio del colegio"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, los ninos gritaban en el patio del colegio.",
+"cat": "gram",
+"fix": "Durante la infancia, los niños gritaban en el patio del colegio.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "gustar-habitual-8305",
+"verbo": "gustar",
+"contexto": "a nosotros, cuando vivía en Madrid, pasear por el Retiro",
+"respuesta": "Cuando vivía en Madrid, a nosotros nos gustaba pasear por el Retiro.",
+"pista": "Se trata de un placer habitual durante su estancia en Madrid: usa el imperfecto.",
+"grupos": [
+[
+"a nosotros"
+],
+[
+"gustaba"
+],
+[
+"pasear por el retiro"
+],
+[
+"cuando vivia en madrid"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando vivia en Madrid, a nosotros nos gustaba pasear por el Retiro.",
+"cat": "gram",
+"fix": "Cuando vivía en Madrid, a nosotros nos gustaba pasear por el Retiro.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-habitual-8306",
+"verbo": "haber",
+"contexto": "en aquellos tiempos, muchos árboles en la plaza del pueblo",
+"respuesta": "En aquellos tiempos, había muchos árboles en la plaza del pueblo.",
+"pista": "Se trata de existencia habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"muchos arboles"
+],
+[
+"había"
+],
+[
+"en la plaza del pueblo"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, había muchos arboles en la plaza del pueblo.",
+"cat": "gram",
+"fix": "En aquellos tiempos, había muchos árboles en la plaza del pueblo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "haber-habitual-8307",
+"verbo": "haber",
+"contexto": "los domingos, fiestas en el barrio con música y comida",
+"respuesta": "Los domingos, había fiestas en el barrio con música y comida.",
+"pista": "Se trata de suceso habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"fiestas"
+],
+[
+"había"
+],
+[
+"en el barrio con musica y comida"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, había fiestas en el barrio con musica y comida.",
+"cat": "gram",
+"fix": "Los domingos, había fiestas en el barrio con música y comida.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "hablar-habitual-8309",
+"verbo": "hablar",
+"contexto": "nosotros, en mis años de universidad, de nuestros sueños",
+"respuesta": "En mis años de universidad, nosotros hablábamos de nuestros sueños.",
+"pista": "Se trata de conversaciones habitual en la universidad: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"hablabamos"
+],
+[
+"de nuestros suenos"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, nosotros hablabamos de nuestros suenos.",
+"cat": "gram",
+"fix": "En mis años de universidad, nosotros hablábamos de nuestros sueños.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "hacer-habitual-8310",
+"verbo": "hacer",
+"contexto": "mi madre, los domingos, una tortilla espanola enorme",
+"respuesta": "Los domingos, mi madre hacía una tortilla espanola enorme.",
+"pista": "Se trata de costumbre de cocinar habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"mi madre"
+],
+[
+"hacia"
+],
+[
+"una tortilla espanola enorme"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, mi madre hacia una tortilla espanola enorme.",
+"cat": "gram",
+"fix": "Los domingos, mi madre hacía una tortilla espanola enorme.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "hacer-habitual-8311",
+"verbo": "hacer",
+"contexto": "nosotros, cada verano, excursiones a la montaña",
+"respuesta": "Cada verano, nosotros hacíamos excursiones a la montaña.",
+"pista": "Se trata de actividad que se repetía cada verano: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"haciamos"
+],
+[
+"excursiones a la montana"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, nosotros haciamos excursiones a la montana.",
+"cat": "gram",
+"fix": "Cada verano, nosotros hacíamos excursiones a la montaña.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "huir-habitual-8314",
+"verbo": "huir",
+"contexto": "los conejos, por las tardes, al escuchar pasos",
+"respuesta": "Por las tardes, los conejos huían al escuchar pasos.",
+"pista": "Se trata de comportamiento diario/a y recurrente: usa el imperfecto.",
+"grupos": [
+[
+"los conejos"
+],
+[
+"huian"
+],
+[
+"al escuchar pasos"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, los conejos huian al escuchar pasos.",
+"cat": "gram",
+"fix": "Por las tardes, los conejos huían al escuchar pasos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "huir-habitual-8315",
+"verbo": "huir",
+"contexto": "yo, durante la infancia, de los perros grandes del barrio",
+"respuesta": "Durante la infancia, yo huía de los perros grandes del barrio.",
+"pista": "Se trata de miedo habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"huia"
+],
+[
+"de los perros grandes del barrio"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, yo huia de los perros grandes del barrio.",
+"cat": "gram",
+"fix": "Durante la infancia, yo huía de los perros grandes del barrio.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "imaginar-habitual-8317",
+"verbo": "imaginar",
+"contexto": "nosotros, en aquellos tiempos, un futuro mejor",
+"respuesta": "En aquellos tiempos, nosotros imaginábamos un futuro mejor.",
+"pista": "Se trata de costumbre de soñar habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"imaginabamos"
+],
+[
+"un futuro mejor"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, nosotros imaginabamos un futuro mejor.",
+"cat": "gram",
+"fix": "En aquellos tiempos, nosotros imaginábamos un futuro mejor.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "importar-habitual-8318",
+"verbo": "importar",
+"contexto": "a mi padre, en aquellos tiempos, la opinión de los demas",
+"respuesta": "En aquellos tiempos, a mi padre le importaba la opinión de los demas.",
+"pista": "Se trata de preocupación habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"a mi padre"
+],
+[
+"importaba"
+],
+[
+"la opinion de los demas"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, a mi padre le importaba la opinion de los demas.",
+"cat": "gram",
+"fix": "En aquellos tiempos, a mi padre le importaba la opinión de los demas.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "incluir-habitual-8320",
+"verbo": "incluir",
+"contexto": "el menu, los domingos, un postre especial",
+"respuesta": "Los domingos, el menu incluía un postre especial.",
+"pista": "Se trata de característica habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"el menu"
+],
+[
+"incluia"
+],
+[
+"un postre especial"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, el menu incluia un postre especial.",
+"cat": "gram",
+"fix": "Los domingos, el menu incluía un postre especial.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "incluir-habitual-8321",
+"verbo": "incluir",
+"contexto": "la profesora, semana tras semana, actividades divertidas en la clase",
+"respuesta": "Semana tras semana, la profesora incluía actividades divertidas en la clase.",
+"pista": "Se trata de inclusión que se repetía cada semana: usa el imperfecto.",
+"grupos": [
+[
+"la profesora"
+],
+[
+"incluia"
+],
+[
+"actividades divertidas en la clase"
+],
+[
+"semana tras semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Semana tras semana, la profesora incluia actividades divertidas en la clase.",
+"cat": "gram",
+"fix": "Semana tras semana, la profesora incluía actividades divertidas en la clase.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "informar-habitual-8322",
+"verbo": "informar",
+"contexto": "el periódico, por las tardes, de los eventos locales",
+"respuesta": "Por las tardes, el periódico informaba de los eventos locales.",
+"pista": "Se trata de informe diario/a de la tarde: usa el imperfecto.",
+"grupos": [
+[
+"el periodico"
+],
+[
+"informaba"
+],
+[
+"de los eventos locales"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, el periodico informaba de los eventos locales.",
+"cat": "gram",
+"fix": "Por las tardes, el periódico informaba de los eventos locales.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "informar-habitual-8323",
+"verbo": "informar",
+"contexto": "yo, cuando trabajaba allí, al jefe de los avances",
+"respuesta": "Cuando trabajaba allí, yo informaba al jefe de los avances.",
+"pista": "Se trata de informe habitual en el trabajo: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"informaba"
+],
+[
+"al jefe de los avances"
+],
+[
+"cuando trabajaba alli"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando trabajaba alli, yo informaba al jefe de los avances.",
+"cat": "gram",
+"fix": "Cuando trabajaba allí, yo informaba al jefe de los avances.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "intentar-habitual-8324",
+"verbo": "intentar",
+"contexto": "yo, semana tras semana, mejorar mi español",
+"respuesta": "Semana tras semana, yo intentaba mejorar mi español.",
+"pista": "Se trata de esfuerzo que se repetía cada semana: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"intentaba"
+],
+[
+"mejorar mi espanol"
+],
+[
+"semana tras semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Semana tras semana, yo intentaba mejorar mi espanol.",
+"cat": "gram",
+"fix": "Semana tras semana, yo intentaba mejorar mi español.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "interesar-habitual-8326",
+"verbo": "interesar",
+"contexto": "a mi, en mis años de universidad, la filosofía y el arte",
+"respuesta": "En mis años de universidad, a mi me interesaba la filosofía y el arte.",
+"pista": "Se trata de interés habitual en la universidad: usa el imperfecto.",
+"grupos": [
+[
+"a mi"
+],
+[
+"interesaba"
+],
+[
+"la filosofia y el arte"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, a mi me interesaba la filosofia y el arte.",
+"cat": "gram",
+"fix": "En mis años de universidad, a mi me interesaba la filosofía y el arte.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "interesar-habitual-8327",
+"verbo": "interesar",
+"contexto": "a los niños, durante la infancia, los cuentos de aventuras",
+"respuesta": "Durante la infancia, a los niños les interesaban los cuentos de aventuras.",
+"pista": "Se trata de interés habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"a los ninos"
+],
+[
+"interesaban"
+],
+[
+"los cuentos de aventuras"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, a los ninos les interesaban los cuentos de aventuras.",
+"cat": "gram",
+"fix": "Durante la infancia, a los niños les interesaban los cuentos de aventuras.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "invitar-habitual-8329",
+"verbo": "invitar",
+"contexto": "mi tía, cada verano, a toda la familia a su casa",
+"respuesta": "Cada verano, mi tía invitaba a toda la familia a su casa.",
+"pista": "Se trata de tradición que se repetía cada verano: usa el imperfecto.",
+"grupos": [
+[
+"mi tia"
+],
+[
+"invitaba"
+],
+[
+"a toda la familia a su casa"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, mi tia invitaba a toda la familia a su casa.",
+"cat": "gram",
+"fix": "Cada verano, mi tía invitaba a toda la familia a su casa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ir-habitual-8330",
+"verbo": "ir",
+"contexto": "nosotros, los domingos, a la iglesia del pueblo",
+"respuesta": "Los domingos, nosotros íbamos a la iglesia del pueblo.",
+"pista": "Se trata de salida habitual de los domingos: usa el imperfecto. (verbo irregular ir (iba/iban))",
+"grupos": [
+[
+"nosotros"
+],
+[
+"ibamos"
+],
+[
+"a la iglesia del pueblo"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, nosotros ibamos a la iglesia del pueblo.",
+"cat": "gram",
+"fix": "Los domingos, nosotros íbamos a la iglesia del pueblo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "joder-habitual-8332",
+"verbo": "joder",
+"contexto": "el ruido, por las tardes, a todos los vecinos del edificio",
+"respuesta": "Por las tardes, el ruido jodía a todos los vecinos del edificio.",
+"pista": "Se trata de molestia diario/a de la tarde: usa el imperfecto.",
+"grupos": [
+[
+"el ruido"
+],
+[
+"jodia"
+],
+[
+"a todos los vecinos del edificio"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, el ruido jodia a todos los vecinos del edificio.",
+"cat": "gram",
+"fix": "Por las tardes, el ruido jodía a todos los vecinos del edificio.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "joder-habitual-8333",
+"verbo": "joder",
+"contexto": "mi hermano, con frecuencia, a los compañeros de clase",
+"respuesta": "Mi hermano jodía a los compañeros de clase con frecuencia.",
+"pista": "Se trata de molestia que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"mi hermano"
+],
+[
+"jodia"
+],
+[
+"a los companeros de clase"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mi hermano jodia a los companeros de clase con frecuencia.",
+"cat": "gram",
+"fix": "Mi hermano jodía a los compañeros de clase con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "jugar-habitual-8334",
+"verbo": "jugar",
+"contexto": "nosotros, durante la infancia, al escondite en el parque",
+"respuesta": "Durante la infancia, nosotros jugábamos al escondite en el parque.",
+"pista": "Se trata de juego habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"jugabamos"
+],
+[
+"al escondite en el parque"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, nosotros jugabamos al escondite en el parque.",
+"cat": "gram",
+"fix": "Durante la infancia, nosotros jugábamos al escondite en el parque.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "jurar-habitual-8337",
+"verbo": "jurar",
+"contexto": "el, en aquellos tiempos, que decía la verdad",
+"respuesta": "En aquellos tiempos, el juraba que decía la verdad.",
+"pista": "Se trata de afirmación habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"el"
+],
+[
+"juraba"
+],
+[
+"que decia la verdad"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, el juraba que decia la verdad.",
+"cat": "gram",
+"fix": "En aquellos tiempos, el juraba que decía la verdad.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "leer-habitual-8338",
+"verbo": "leer",
+"contexto": "yo, por las tardes, novelas de aventuras en el jardín",
+"respuesta": "Por las tardes, yo leía novelas de aventuras en el jardín.",
+"pista": "Se trata de lectura diario/a de la tarde: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"leia"
+],
+[
+"novelas de aventuras en el jardin"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, yo leia novelas de aventuras en el jardin.",
+"cat": "gram",
+"fix": "Por las tardes, yo leía novelas de aventuras en el jardín.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "leer-habitual-8339",
+"verbo": "leer",
+"contexto": "mi abuelo, los domingos, el periódico en la terraza",
+"respuesta": "Los domingos, mi abuelo leía el periódico en la terraza.",
+"pista": "Se trata de lectura habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"mi abuelo"
+],
+[
+"leia"
+],
+[
+"el periodico en la terraza"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, mi abuelo leia el periodico en la terraza.",
+"cat": "gram",
+"fix": "Los domingos, mi abuelo leía el periódico en la terraza.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "llamar-habitual-8342",
+"verbo": "llamar",
+"contexto": "mi madre, los domingos, a la abuela por teléfono",
+"respuesta": "Los domingos, mi madre llamaba a la abuela por teléfono.",
+"pista": "Se trata de llamada telefónica habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"mi madre"
+],
+[
+"llamaba"
+],
+[
+"a la abuela por telefono"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, mi madre llamaba a la abuela por telefono.",
+"cat": "gram",
+"fix": "Los domingos, mi madre llamaba a la abuela por teléfono.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "llamar-habitual-8343",
+"verbo": "llamar",
+"contexto": "yo, semana tras semana, al médico para pedir cita",
+"respuesta": "Semana tras semana, yo llamaba al médico para pedir cita.",
+"pista": "Se trata de acción que se repetía cada semana: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"llamaba"
+],
+[
+"al medico para pedir cita"
+],
+[
+"semana tras semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Semana tras semana, yo llamaba al medico para pedir cita.",
+"cat": "gram",
+"fix": "Semana tras semana, yo llamaba al médico para pedir cita.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "llegar-habitual-8345",
+"verbo": "llegar",
+"contexto": "el autobús, con frecuencia, con retraso a la parada",
+"respuesta": "El autobús llegaba con retraso a la parada con frecuencia.",
+"pista": "Se trata de suceso que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"el autobus"
+],
+[
+"llegaba"
+],
+[
+"con retraso a la parada"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El autobus llegaba con retraso a la parada con frecuencia.",
+"cat": "gram",
+"fix": "El autobús llegaba con retraso a la parada con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "llorar-habitual-8349",
+"verbo": "llorar",
+"contexto": "yo, durante la infancia, cuando veía peliculas tristes",
+"respuesta": "Durante la infancia, yo lloraba cuando veía peliculas tristes.",
+"pista": "Se trata de reacción habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"lloraba"
+],
+[
+"cuando veia peliculas tristes"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, yo lloraba cuando veia peliculas tristes.",
+"cat": "gram",
+"fix": "Durante la infancia, yo lloraba cuando veía peliculas tristes.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "lograr-habitual-8351",
+"verbo": "lograr",
+"contexto": "nosotros, en mis años de universidad, buenas notas con esfuerzo",
+"respuesta": "En mis años de universidad, nosotros lográbamos buenas notas con esfuerzo.",
+"pista": "Se trata de logro habitual en la universidad: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"lograbamos"
+],
+[
+"buenas notas con esfuerzo"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, nosotros lograbamos buenas notas con esfuerzo.",
+"cat": "gram",
+"fix": "En mis años de universidad, nosotros lográbamos buenas notas con esfuerzo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "luchar-habitual-8353",
+"verbo": "luchar",
+"contexto": "yo, con frecuencia, contra el sueño durante las clases",
+"respuesta": "Yo luchaba contra el sueño durante las clases con frecuencia.",
+"pista": "Se trata de lucha que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"luchaba"
+],
+[
+"contra el sueno durante las clases"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo luchaba contra el sueno durante las clases con frecuencia.",
+"cat": "gram",
+"fix": "Yo luchaba contra el sueño durante las clases con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "manejar-habitual-8357",
+"verbo": "manejar",
+"contexto": "ella, cuando trabajaba allí, las finanzas de la empresa",
+"respuesta": "Cuando trabajaba allí, ella manejaba las finanzas de la empresa.",
+"pista": "Se trata de responsabilidad habitual en el trabajo: usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"manejaba"
+],
+[
+"las finanzas de la empresa"
+],
+[
+"cuando trabajaba alli"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando trabajaba alli, ella manejaba las finanzas de la empresa.",
+"cat": "gram",
+"fix": "Cuando trabajaba allí, ella manejaba las finanzas de la empresa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mantener-habitual-8358",
+"verbo": "mantener",
+"contexto": "mi abuela, en aquellos tiempos, la casa impecable",
+"respuesta": "En aquellos tiempos, mi abuela mantenía la casa impecable.",
+"pista": "Se trata de cuidado habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"mi abuela"
+],
+[
+"mantenia"
+],
+[
+"la casa impecable"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, mi abuela mantenia la casa impecable.",
+"cat": "gram",
+"fix": "En aquellos tiempos, mi abuela mantenía la casa impecable.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mantener-habitual-8359",
+"verbo": "mantener",
+"contexto": "nosotros, semana tras semana, el jardín bien cuidado",
+"respuesta": "Semana tras semana, nosotros manteníamos el jardín bien cuidado.",
+"pista": "Se trata de mantenimiento que se repetía cada semana: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"manteniamos"
+],
+[
+"el jardin bien cuidado"
+],
+[
+"semana tras semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Semana tras semana, nosotros manteniamos el jardin bien cuidado.",
+"cat": "gram",
+"fix": "Semana tras semana, nosotros manteníamos el jardín bien cuidado.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "matar-habitual-8363",
+"verbo": "matar",
+"contexto": "el aburrimiento, los domingos, a los jóvenes del pueblo",
+"respuesta": "Los domingos, el aburrimiento mataba a los jóvenes del pueblo.",
+"pista": "Se trata de aburrimiento (en sentido figurado) habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"el aburrimiento"
+],
+[
+"mataba"
+],
+[
+"a los jovenes del pueblo"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, el aburrimiento mataba a los jovenes del pueblo.",
+"cat": "gram",
+"fix": "Los domingos, el aburrimiento mataba a los jóvenes del pueblo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mentir-habitual-8366",
+"verbo": "mentir",
+"contexto": "mi hermano, durante la infancia, sobre sus notas del colegio",
+"respuesta": "Durante la infancia, mi hermano mentía sobre sus notas del colegio.",
+"pista": "Se trata de engaño habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"mi hermano"
+],
+[
+"mentia"
+],
+[
+"sobre sus notas del colegio"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, mi hermano mentia sobre sus notas del colegio.",
+"cat": "gram",
+"fix": "Durante la infancia, mi hermano mentía sobre sus notas del colegio.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mentir-habitual-8367",
+"verbo": "mentir",
+"contexto": "el politico, en aquellos tiempos, a la gente sin verguenza",
+"respuesta": "En aquellos tiempos, el politico mentía a la gente sin verguenza.",
+"pista": "Se trata de engaño habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"el politico"
+],
+[
+"mentia"
+],
+[
+"a la gente sin verguenza"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, el politico mentia a la gente sin verguenza.",
+"cat": "gram",
+"fix": "En aquellos tiempos, el politico mentía a la gente sin verguenza.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "merecer-habitual-8368",
+"verbo": "merecer",
+"contexto": "ella, en aquellos tiempos, más reconocimiento por su trabajo",
+"respuesta": "En aquellos tiempos, ella merecía más reconocimiento por su trabajo.",
+"pista": "Se trata de estado continuo/a en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"merecia"
+],
+[
+"mas reconocimiento por su trabajo"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, ella merecia mas reconocimiento por su trabajo.",
+"cat": "gram",
+"fix": "En aquellos tiempos, ella merecía más reconocimiento por su trabajo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "merecer-habitual-8369",
+"verbo": "merecer",
+"contexto": "los estudiantes, semana tras semana, mejores oportunidades",
+"respuesta": "Semana tras semana, los estudiantes merecían mejores oportunidades.",
+"pista": "Se trata de un estado continuo y repetido: usa el imperfecto.",
+"grupos": [
+[
+"los estudiantes"
+],
+[
+"merecian"
+],
+[
+"mejores oportunidades"
+],
+[
+"semana tras semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Semana tras semana, los estudiantes merecian mejores oportunidades.",
+"cat": "gram",
+"fix": "Semana tras semana, los estudiantes merecían mejores oportunidades.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "meter-habitual-8370",
+"verbo": "meter",
+"contexto": "yo, los domingos, la ropa sucia en la lavadora",
+"respuesta": "Los domingos, yo metía la ropa sucia en la lavadora.",
+"pista": "Se trata de tarea doméstica habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"metia"
+],
+[
+"la ropa sucia en la lavadora"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, yo metia la ropa sucia en la lavadora.",
+"cat": "gram",
+"fix": "Los domingos, yo metía la ropa sucia en la lavadora.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "meter-habitual-8371",
+"verbo": "meter",
+"contexto": "el niño, con frecuencia, la mano en el tarro de galletas",
+"respuesta": "El niño metía la mano en el tarro de galletas con frecuencia.",
+"pista": "Se trata de travesura que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"el nino"
+],
+[
+"metia"
+],
+[
+"la mano en el tarro de galletas"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El nino metia la mano en el tarro de galletas con frecuencia.",
+"cat": "gram",
+"fix": "El niño metía la mano en el tarro de galletas con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mirar-habitual-8373",
+"verbo": "mirar",
+"contexto": "nosotros, cada verano, el atardecer desde la playa",
+"respuesta": "Cada verano, nosotros mirábamos el atardecer desde la playa.",
+"pista": "Se trata de experiencia que se repetía cada verano: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"mirabamos"
+],
+[
+"el atardecer desde la playa"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, nosotros mirabamos el atardecer desde la playa.",
+"cat": "gram",
+"fix": "Cada verano, nosotros mirábamos el atardecer desde la playa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "morir-habitual-8376",
+"verbo": "morir",
+"contexto": "las plantas, cada verano, por falta de agua",
+"respuesta": "Cada verano, las plantas morían por falta de agua.",
+"pista": "Se trata de pérdida que se repetía cada temporada: usa el imperfecto.",
+"grupos": [
+[
+"las plantas"
+],
+[
+"morian"
+],
+[
+"por falta de agua"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, las plantas morian por falta de agua.",
+"cat": "gram",
+"fix": "Cada verano, las plantas morían por falta de agua.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "morir-habitual-8377",
+"verbo": "morir",
+"contexto": "yo, en aquellos tiempos, de risa con sus chistes",
+"respuesta": "En aquellos tiempos, yo moría de risa con sus chistes.",
+"pista": "Se trata de diversión (en sentido figurado) habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"moria"
+],
+[
+"de risa con sus chistes"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, yo moria de risa con sus chistes.",
+"cat": "gram",
+"fix": "En aquellos tiempos, yo moría de risa con sus chistes.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mover-habitual-8380",
+"verbo": "mover",
+"contexto": "el viento, por las tardes, las ramas de los árboles",
+"respuesta": "Por las tardes, el viento movía las ramas de los árboles.",
+"pista": "Se trata de suceso diario/a y recurrente: usa el imperfecto.",
+"grupos": [
+[
+"el viento"
+],
+[
+"movia"
+],
+[
+"las ramas de los arboles"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, el viento movia las ramas de los arboles.",
+"cat": "gram",
+"fix": "Por las tardes, el viento movía las ramas de los árboles.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "mover-habitual-8381",
+"verbo": "mover",
+"contexto": "yo, los fines de semana, los muebles para limpiar",
+"respuesta": "Los fines de semana, yo movía los muebles para limpiar.",
+"pista": "Se trata de limpieza habitual de fin de semana: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"movia"
+],
+[
+"los muebles para limpiar"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, yo movia los muebles para limpiar.",
+"cat": "gram",
+"fix": "Los fines de semana, yo movía los muebles para limpiar.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "nacer-habitual-8382",
+"verbo": "nacer",
+"contexto": "los corderos, cada verano, en los campos del pueblo",
+"respuesta": "Cada verano, los corderos nacían en los campos del pueblo.",
+"pista": "Se trata de nacimiento que se repetía cada temporada: usa el imperfecto.",
+"grupos": [
+[
+"los corderos"
+],
+[
+"nacian"
+],
+[
+"en los campos del pueblo"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, los corderos nacian en los campos del pueblo.",
+"cat": "gram",
+"fix": "Cada verano, los corderos nacían en los campos del pueblo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "nacer-habitual-8383",
+"verbo": "nacer",
+"contexto": "nuevas ideas, en aquellos tiempos, en las tertulias del café",
+"respuesta": "En aquellos tiempos, nuevas ideas nacían en las tertulias del café.",
+"pista": "Se trata de un surgimiento habitual de la creatividad: usa el imperfecto.",
+"grupos": [
+[
+"nuevas ideas"
+],
+[
+"nacian"
+],
+[
+"en las tertulias del cafe"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, nuevas ideas nacian en las tertulias del cafe.",
+"cat": "gram",
+"fix": "En aquellos tiempos, nuevas ideas nacían en las tertulias del café.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "necesitar-habitual-8384",
+"verbo": "necesitar",
+"contexto": "yo, en mis años de universidad, más horas de sueño",
+"respuesta": "En mis años de universidad, yo necesitaba más horas de sueño.",
+"pista": "Se trata de necesidad continuo/a en la universidad: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"necesitaba"
+],
+[
+"mas horas de sueno"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, yo necesitaba mas horas de sueno.",
+"cat": "gram",
+"fix": "En mis años de universidad, yo necesitaba más horas de sueño.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "necesitar-habitual-8385",
+"verbo": "necesitar",
+"contexto": "la empresa, cuando trabajaba allí, más empleados",
+"respuesta": "Cuando trabajaba allí, la empresa necesitaba más empleados.",
+"pista": "Se trata de necesidad continuo/a en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"la empresa"
+],
+[
+"necesitaba"
+],
+[
+"mas empleados"
+],
+[
+"cuando trabajaba alli"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando trabajaba alli, la empresa necesitaba mas empleados.",
+"cat": "gram",
+"fix": "Cuando trabajaba allí, la empresa necesitaba más empleados.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "obtener-habitual-8390",
+"verbo": "obtener",
+"contexto": "nosotros, los fines de semana, fruta fresca del mercado",
+"respuesta": "Los fines de semana, nosotros obteníamos fruta fresca del mercado.",
+"pista": "Se trata de compra habitual de fin de semana: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"obteniamos"
+],
+[
+"fruta fresca del mercado"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, nosotros obteniamos fruta fresca del mercado.",
+"cat": "gram",
+"fix": "Los fines de semana, nosotros obteníamos fruta fresca del mercado.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "obtener-habitual-8391",
+"verbo": "obtener",
+"contexto": "ella, en mis años de universidad, las mejores notas de la clase",
+"respuesta": "En mis años de universidad, ella obtenía las mejores notas de la clase.",
+"pista": "Se trata de logro habitual en la universidad: usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"obtenia"
+],
+[
+"las mejores notas de la clase"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, ella obtenia las mejores notas de la clase.",
+"cat": "gram",
+"fix": "En mis años de universidad, ella obtenía las mejores notas de la clase.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ocupar-habitual-8392",
+"verbo": "ocupar",
+"contexto": "nosotros, cada verano, la misma casa en la playa",
+"respuesta": "Cada verano, nosotros ocupábamos la misma casa en la playa.",
+"pista": "Se trata de tradición que se repetía cada verano: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"ocupabamos"
+],
+[
+"la misma casa en la playa"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, nosotros ocupabamos la misma casa en la playa.",
+"cat": "gram",
+"fix": "Cada verano, nosotros ocupábamos la misma casa en la playa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ocupar-habitual-8393",
+"verbo": "ocupar",
+"contexto": "el trabajo, en aquellos tiempos, la mayor parte de mi día",
+"respuesta": "En aquellos tiempos, el trabajo ocupaba la mayor parte de mi día.",
+"pista": "Se trata de forma de ocupar el tiempo habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"el trabajo"
+],
+[
+"ocupaba"
+],
+[
+"la mayor parte de mi dia"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, el trabajo ocupaba la mayor parte de mi dia.",
+"cat": "gram",
+"fix": "En aquellos tiempos, el trabajo ocupaba la mayor parte de mi día.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ocurrir-habitual-8394",
+"verbo": "ocurrir",
+"contexto": "cosas extranas, con frecuencia, en aquella casa vieja",
+"respuesta": "Cosas extranas ocurrían en aquella casa vieja con frecuencia.",
+"pista": "Se trata de suceso que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"cosas extranas"
+],
+[
+"ocurrian"
+],
+[
+"en aquella casa vieja"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cosas extranas ocurrian en aquella casa vieja con frecuencia.",
+"cat": "gram",
+"fix": "Cosas extranas ocurrían en aquella casa vieja con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ocurrir-habitual-8395",
+"verbo": "ocurrir",
+"contexto": "a mi, durante la infancia, ideas locas para jugar",
+"respuesta": "Durante la infancia, a mi se me ocurrían ideas locas para jugar.",
+"pista": "Se trata de creatividad habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"a mi"
+],
+[
+"ocurrian"
+],
+[
+"ideas locas para jugar"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, a mi se me ocurrian ideas locas para jugar.",
+"cat": "gram",
+"fix": "Durante la infancia, a mi se me ocurrían ideas locas para jugar.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ofrecer-habitual-8398",
+"verbo": "ofrecer",
+"contexto": "mi abuela, los domingos, café y galletas a las visitas",
+"respuesta": "Los domingos, mi abuela ofrecía café y galletas a las visitas.",
+"pista": "Se trata de hospitalidad habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"mi abuela"
+],
+[
+"ofrecia"
+],
+[
+"cafe y galletas a las visitas"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, mi abuela ofrecia cafe y galletas a las visitas.",
+"cat": "gram",
+"fix": "Los domingos, mi abuela ofrecía café y galletas a las visitas.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ofrecer-habitual-8399",
+"verbo": "ofrecer",
+"contexto": "la empresa, cuando trabajaba allí, cursos de formacion gratuitos",
+"respuesta": "Cuando trabajaba allí, la empresa ofrecía cursos de formacion gratuitos.",
+"pista": "Se trata de beneficio habitual en el trabajo: usa el imperfecto.",
+"grupos": [
+[
+"la empresa"
+],
+[
+"ofrecia"
+],
+[
+"cursos de formacion gratuitos"
+],
+[
+"cuando trabajaba alli"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando trabajaba alli, la empresa ofrecia cursos de formacion gratuitos.",
+"cat": "gram",
+"fix": "Cuando trabajaba allí, la empresa ofrecía cursos de formacion gratuitos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "oir-habitual-8400",
+"verbo": "oir",
+"contexto": "yo, por las tardes, el canto de los pajaros en el jardín",
+"respuesta": "Por las tardes, yo oía el canto de los pajaros en el jardín.",
+"pista": "Se trata de experiencia diario/a de la tarde: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"oia"
+],
+[
+"el canto de los pajaros en el jardin"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, yo oia el canto de los pajaros en el jardin.",
+"cat": "gram",
+"fix": "Por las tardes, yo oía el canto de los pajaros en el jardín.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "oir-habitual-8401",
+"verbo": "oir",
+"contexto": "nosotros, durante la infancia, historias de miedo antes de dormir",
+"respuesta": "Durante la infancia, nosotros oíamos historias de miedo antes de dormir.",
+"pista": "Se trata de costumbre de escuchar habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"oiamos"
+],
+[
+"historias de miedo antes de dormir"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, nosotros oiamos historias de miedo antes de dormir.",
+"cat": "gram",
+"fix": "Durante la infancia, nosotros oíamos historias de miedo antes de dormir.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pagar-habitual-8405",
+"verbo": "pagar",
+"contexto": "nosotros, los fines de semana, la cuenta entre todos",
+"respuesta": "Los fines de semana, nosotros pagábamos la cuenta entre todos.",
+"pista": "Se trata de costumbre habitual de fin de semana: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"pagabamos"
+],
+[
+"la cuenta entre todos"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, nosotros pagabamos la cuenta entre todos.",
+"cat": "gram",
+"fix": "Los fines de semana, nosotros pagábamos la cuenta entre todos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "parar-habitual-8406",
+"verbo": "parar",
+"contexto": "el autobús, los martes y jueves, en la esquina de mi casa",
+"respuesta": "Los martes y jueves, el autobús paraba en la esquina de mi casa.",
+"pista": "Se trata de parada: usa el imperfecto.",
+"grupos": [
+[
+"el autobus"
+],
+[
+"paraba"
+],
+[
+"en la esquina de mi casa"
+],
+[
+"los martes y jueves"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los martes y jueves, el autobus paraba en la esquina de mi casa.",
+"cat": "gram",
+"fix": "Los martes y jueves, el autobús paraba en la esquina de mi casa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "parecer-habitual-8408",
+"verbo": "parecer",
+"contexto": "todo, en aquellos tiempos, más sencillo y tranquilo",
+"respuesta": "En aquellos tiempos, todo parecía más sencillo y tranquilo.",
+"pista": "Se trata de impresión habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"todo"
+],
+[
+"parecia"
+],
+[
+"mas sencillo y tranquilo"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, todo parecia mas sencillo y tranquilo.",
+"cat": "gram",
+"fix": "En aquellos tiempos, todo parecía más sencillo y tranquilo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "parecer-habitual-8409",
+"verbo": "parecer",
+"contexto": "ella, durante la infancia, una princesa con su vestido blanco",
+"respuesta": "Durante la infancia, ella parecía una princesa con su vestido blanco.",
+"pista": "Se trata de apariencia habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"parecia"
+],
+[
+"una princesa con su vestido blanco"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, ella parecia una princesa con su vestido blanco.",
+"cat": "gram",
+"fix": "Durante la infancia, ella parecía una princesa con su vestido blanco.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "partir-habitual-8410",
+"verbo": "partir",
+"contexto": "los barcos, cada verano, del puerto al amanecer",
+"respuesta": "Cada verano, los barcos partían del puerto al amanecer.",
+"pista": "Se trata de partida que se repetía cada verano: usa el imperfecto.",
+"grupos": [
+[
+"los barcos"
+],
+[
+"partian"
+],
+[
+"del puerto al amanecer"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, los barcos partian del puerto al amanecer.",
+"cat": "gram",
+"fix": "Cada verano, los barcos partían del puerto al amanecer.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "partir-habitual-8411",
+"verbo": "partir",
+"contexto": "mi padre, los domingos, el pan con las manos",
+"respuesta": "Los domingos, mi padre partía el pan con las manos.",
+"pista": "Se trata de tradición habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"mi padre"
+],
+[
+"partia"
+],
+[
+"el pan con las manos"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, mi padre partia el pan con las manos.",
+"cat": "gram",
+"fix": "Los domingos, mi padre partía el pan con las manos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pasar-habitual-8412",
+"verbo": "pasar",
+"contexto": "nosotros, cada verano, las vacaciones en el pueblo",
+"respuesta": "Cada verano, nosotros pasábamos las vacaciones en el pueblo.",
+"pista": "Se trata de tradición que se repetía cada verano: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"pasabamos"
+],
+[
+"las vacaciones en el pueblo"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, nosotros pasabamos las vacaciones en el pueblo.",
+"cat": "gram",
+"fix": "Cada verano, nosotros pasábamos las vacaciones en el pueblo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pedir-habitual-8414",
+"verbo": "pedir",
+"contexto": "yo, los domingos, helado de fresa en la heladería",
+"respuesta": "Los domingos, yo pedía helado de fresa en la heladería.",
+"pista": "Se trata de orden habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"pedia"
+],
+[
+"helado de fresa en la heladeria"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, yo pedia helado de fresa en la heladeria.",
+"cat": "gram",
+"fix": "Los domingos, yo pedía helado de fresa en la heladería.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pedir-habitual-8415",
+"verbo": "pedir",
+"contexto": "los niños, con frecuencia, permiso para salir a jugar",
+"respuesta": "Los niños pedían permiso para salir a jugar con frecuencia.",
+"pista": "Se trata de petición que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"los ninos"
+],
+[
+"pedian"
+],
+[
+"permiso para salir a jugar"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los ninos pedian permiso para salir a jugar con frecuencia.",
+"cat": "gram",
+"fix": "Los niños pedían permiso para salir a jugar con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pegar-habitual-8416",
+"verbo": "pegar",
+"contexto": "el sol, cada verano, con mucha fuerza al mediodía",
+"respuesta": "Cada verano, el sol pegaba con mucha fuerza al mediodía.",
+"pista": "Se trata de intensidad que se repetía cada verano: usa el imperfecto.",
+"grupos": [
+[
+"el sol"
+],
+[
+"pegaba"
+],
+[
+"con mucha fuerza al mediodia"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, el sol pegaba con mucha fuerza al mediodia.",
+"cat": "gram",
+"fix": "Cada verano, el sol pegaba con mucha fuerza al mediodía.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "perder-habitual-8422",
+"verbo": "perder",
+"contexto": "yo, con frecuencia, el autobús por llegar tarde",
+"respuesta": "Yo perdía el autobús por llegar tarde con frecuencia.",
+"pista": "Se trata de desgracia que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"perdia"
+],
+[
+"el autobus por llegar tarde"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Yo perdia el autobus por llegar tarde con frecuencia.",
+"cat": "gram",
+"fix": "Yo perdía el autobús por llegar tarde con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "perder-habitual-8423",
+"verbo": "perder",
+"contexto": "mi equipo, los fines de semana, los partidos importantes",
+"respuesta": "Los fines de semana, mi equipo perdía los partidos importantes.",
+"pista": "Se trata de pérdidas habitual de fin de semana: usa el imperfecto.",
+"grupos": [
+[
+"mi equipo"
+],
+[
+"perdia"
+],
+[
+"los partidos importantes"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, mi equipo perdia los partidos importantes.",
+"cat": "gram",
+"fix": "Los fines de semana, mi equipo perdía los partidos importantes.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "permanecer-habitual-8426",
+"verbo": "permanecer",
+"contexto": "el perro, por las tardes, junto a la puerta esperando",
+"respuesta": "Por las tardes, el perro permanecía junto a la puerta esperando.",
+"pista": "Se trata de comportamiento diario/a de la tarde: usa el imperfecto.",
+"grupos": [
+[
+"el perro"
+],
+[
+"permanecia"
+],
+[
+"junto a la puerta esperando"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, el perro permanecia junto a la puerta esperando.",
+"cat": "gram",
+"fix": "Por las tardes, el perro permanecía junto a la puerta esperando.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "permanecer-habitual-8427",
+"verbo": "permanecer",
+"contexto": "nosotros, los domingos, en casa descansando todo el día",
+"respuesta": "Los domingos, nosotros permanecíamos en casa descansando todo el día.",
+"pista": "Se trata de descanso habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"permaneciamos"
+],
+[
+"en casa descansando todo el dia"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, nosotros permaneciamos en casa descansando todo el dia.",
+"cat": "gram",
+"fix": "Los domingos, nosotros permanecíamos en casa descansando todo el día.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "permitir-habitual-8428",
+"verbo": "permitir",
+"contexto": "mis padres, los fines de semana, que nos acostaramos tarde",
+"respuesta": "Los fines de semana, mis padres permitían que nos acostaramos tarde.",
+"pista": "Se trata de permiso habitual de fin de semana: usa el imperfecto.",
+"grupos": [
+[
+"mis padres"
+],
+[
+"permitian"
+],
+[
+"que nos acostaramos tarde"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, mis padres permitian que nos acostaramos tarde.",
+"cat": "gram",
+"fix": "Los fines de semana, mis padres permitían que nos acostaramos tarde.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "permitir-habitual-8429",
+"verbo": "permitir",
+"contexto": "el colegio, en aquellos tiempos, jugar en el patio hasta tarde",
+"respuesta": "En aquellos tiempos, el colegio permitía jugar en el patio hasta tarde.",
+"pista": "Se trata de permiso habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"el colegio"
+],
+[
+"permitia"
+],
+[
+"jugar en el patio hasta tarde"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, el colegio permitia jugar en el patio hasta tarde.",
+"cat": "gram",
+"fix": "En aquellos tiempos, el colegio permitía jugar en el patio hasta tarde.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pertenecer-habitual-8430",
+"verbo": "pertenecer",
+"contexto": "yo, en mis años de universidad, al club de debate",
+"respuesta": "En mis años de universidad, yo pertenecía al club de debate.",
+"pista": "Se trata de membresía continuo/a en la universidad: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"pertenecia"
+],
+[
+"al club de debate"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, yo pertenecia al club de debate.",
+"cat": "gram",
+"fix": "En mis años de universidad, yo pertenecía al club de debate.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "pertenecer-habitual-8431",
+"verbo": "pertenecer",
+"contexto": "esta tierra, en aquellos tiempos, a una familia noble",
+"respuesta": "En aquellos tiempos, esta tierra pertenecía a una familia noble.",
+"pista": "Se trata de posesión habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"esta tierra"
+],
+[
+"pertenecia"
+],
+[
+"a una familia noble"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, esta tierra pertenecia a una familia noble.",
+"cat": "gram",
+"fix": "En aquellos tiempos, esta tierra pertenecía a una familia noble.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "poder-habitual-8434",
+"verbo": "poder",
+"contexto": "yo, durante la infancia, correr durante horas sin cansarme",
+"respuesta": "Durante la infancia, yo podía correr durante horas sin cansarme.",
+"pista": "Se trata de habilidad habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"podia"
+],
+[
+"correr durante horas sin cansarme"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, yo podia correr durante horas sin cansarme.",
+"cat": "gram",
+"fix": "Durante la infancia, yo podía correr durante horas sin cansarme.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "poder-habitual-8435",
+"verbo": "poder",
+"contexto": "nosotros, en aquellos tiempos, pasear sin preocupaciones",
+"respuesta": "En aquellos tiempos, nosotros podíamos pasear sin preocupaciones.",
+"pista": "Se trata de habilidad habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"podiamos"
+],
+[
+"pasear sin preocupaciones"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, nosotros podiamos pasear sin preocupaciones.",
+"cat": "gram",
+"fix": "En aquellos tiempos, nosotros podíamos pasear sin preocupaciones.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "poner-habitual-8436",
+"verbo": "poner",
+"contexto": "mi madre, los domingos, flores frescas en la mesa",
+"respuesta": "Los domingos, mi madre ponía flores frescas en la mesa.",
+"pista": "Se trata de tradición habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"mi madre"
+],
+[
+"ponia"
+],
+[
+"flores frescas en la mesa"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, mi madre ponia flores frescas en la mesa.",
+"cat": "gram",
+"fix": "Los domingos, mi madre ponía flores frescas en la mesa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "poner-habitual-8437",
+"verbo": "poner",
+"contexto": "yo, por las tardes, música suave para relajarme",
+"respuesta": "Por las tardes, yo ponía música suave para relajarme.",
+"pista": "Se trata de costumbre diario/a de la tarde: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"ponia"
+],
+[
+"musica suave para relajarme"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, yo ponia musica suave para relajarme.",
+"cat": "gram",
+"fix": "Por las tardes, yo ponía música suave para relajarme.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "preferir-habitual-8438",
+"verbo": "preferir",
+"contexto": "yo, en aquellos tiempos, el campo a la ciudad",
+"respuesta": "En aquellos tiempos, yo prefería el campo a la ciudad.",
+"pista": "Se trata de preferencia habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"preferia"
+],
+[
+"el campo a la ciudad"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, yo preferia el campo a la ciudad.",
+"cat": "gram",
+"fix": "En aquellos tiempos, yo prefería el campo a la ciudad.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "preferir-habitual-8439",
+"verbo": "preferir",
+"contexto": "mis hijos, durante la infancia, los dulces a la fruta",
+"respuesta": "Durante la infancia, mis hijos preferían los dulces a la fruta.",
+"pista": "Se trata de preferencia habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"mis hijos"
+],
+[
+"preferian"
+],
+[
+"los dulces a la fruta"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, mis hijos preferian los dulces a la fruta.",
+"cat": "gram",
+"fix": "Durante la infancia, mis hijos preferían los dulces a la fruta.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "preguntar-habitual-8440",
+"verbo": "preguntar",
+"contexto": "los niños, con frecuencia, por que el cielo era azul",
+"respuesta": "Los niños preguntaban por que el cielo era azul con frecuencia.",
+"pista": "Se trata de pregunta que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"los ninos"
+],
+[
+"preguntaban"
+],
+[
+"por que el cielo era azul"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los ninos preguntaban por que el cielo era azul con frecuencia.",
+"cat": "gram",
+"fix": "Los niños preguntaban por que el cielo era azul con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "preocupar-habitual-8443",
+"verbo": "preocupar",
+"contexto": "a nosotros, en aquellos tiempos, el futuro del país",
+"respuesta": "En aquellos tiempos, a nosotros nos preocupaba el futuro del país.",
+"pista": "Se trata de preocupación habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"a nosotros"
+],
+[
+"preocupaba"
+],
+[
+"el futuro del pais"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, a nosotros nos preocupaba el futuro del pais.",
+"cat": "gram",
+"fix": "En aquellos tiempos, a nosotros nos preocupaba el futuro del país.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "presentar-habitual-8447",
+"verbo": "presentar",
+"contexto": "yo, cuando trabajaba allí, informes cada lunes",
+"respuesta": "Cuando trabajaba allí, yo presentaba informes cada lunes.",
+"pista": "Se trata de tarea habitual en el trabajo: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"presentaba"
+],
+[
+"informes cada lunes"
+],
+[
+"cuando trabajaba alli"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando trabajaba alli, yo presentaba informes cada lunes.",
+"cat": "gram",
+"fix": "Cuando trabajaba allí, yo presentaba informes cada lunes.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "prestar-habitual-8449",
+"verbo": "prestar",
+"contexto": "yo, en mis años de universidad, atención a cada detalle",
+"respuesta": "En mis años de universidad, yo prestaba atención a cada detalle.",
+"pista": "Se trata de comportamiento habitual en la universidad: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"prestaba"
+],
+[
+"atencion a cada detalle"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, yo prestaba atencion a cada detalle.",
+"cat": "gram",
+"fix": "En mis años de universidad, yo prestaba atención a cada detalle.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "probar-habitual-8450",
+"verbo": "probar",
+"contexto": "nosotros, cada verano, platos nuevos en los restaurantes locales",
+"respuesta": "Cada verano, nosotros probábamos platos nuevos en los restaurantes locales.",
+"pista": "Se trata de aventura que se repetía cada verano: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"probabamos"
+],
+[
+"platos nuevos en los restaurantes locales"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, nosotros probabamos platos nuevos en los restaurantes locales.",
+"cat": "gram",
+"fix": "Cada verano, nosotros probábamos platos nuevos en los restaurantes locales.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "producir-habitual-8452",
+"verbo": "producir",
+"contexto": "la fabrica, en aquellos tiempos, cientos de zapatos al día",
+"respuesta": "En aquellos tiempos, la fabrica producía cientos de zapatos al día.",
+"pista": "Se trata de producción habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"la fabrica"
+],
+[
+"producia"
+],
+[
+"cientos de zapatos al dia"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, la fabrica producia cientos de zapatos al dia.",
+"cat": "gram",
+"fix": "En aquellos tiempos, la fabrica producía cientos de zapatos al día.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "producir-habitual-8453",
+"verbo": "producir",
+"contexto": "el huerto, cada verano, tomates enormes y sabrosos",
+"respuesta": "Cada verano, el huerto producía tomates enormes y sabrosos.",
+"pista": "Se trata de producción que se repetía cada verano: usa el imperfecto.",
+"grupos": [
+[
+"el huerto"
+],
+[
+"producia"
+],
+[
+"tomates enormes y sabrosos"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, el huerto producia tomates enormes y sabrosos.",
+"cat": "gram",
+"fix": "Cada verano, el huerto producía tomates enormes y sabrosos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "prometer-habitual-8454",
+"verbo": "prometer",
+"contexto": "mi padre, con frecuencia, llevarnos al cine el sabado",
+"respuesta": "Mi padre prometía llevarnos al cine el sabado con frecuencia.",
+"pista": "Se trata de promesa que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"mi padre"
+],
+[
+"prometia"
+],
+[
+"llevarnos al cine el sabado"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mi padre prometia llevarnos al cine el sabado con frecuencia.",
+"cat": "gram",
+"fix": "Mi padre prometía llevarnos al cine el sabado con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "prometer-habitual-8455",
+"verbo": "prometer",
+"contexto": "ella, semana tras semana, que cambiaría de actitud",
+"respuesta": "Semana tras semana, ella prometía que cambiaría de actitud.",
+"pista": "Se trata de promesa que se repetía cada semana: usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"prometia"
+],
+[
+"que cambiaria de actitud"
+],
+[
+"semana tras semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Semana tras semana, ella prometia que cambiaria de actitud.",
+"cat": "gram",
+"fix": "Semana tras semana, ella prometía que cambiaría de actitud.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "proteger-habitual-8456",
+"verbo": "proteger",
+"contexto": "mi padre, durante la infancia, a toda la familia",
+"respuesta": "Durante la infancia, mi padre protegía a toda la familia.",
+"pista": "Se trata de protección continuo/a durante la infancia: usa el imperfecto.",
+"grupos": [
+[
+"mi padre"
+],
+[
+"protegia"
+],
+[
+"a toda la familia"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, mi padre protegia a toda la familia.",
+"cat": "gram",
+"fix": "Durante la infancia, mi padre protegía a toda la familia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "proteger-habitual-8457",
+"verbo": "proteger",
+"contexto": "los árboles, cada verano, a los animales del calor",
+"respuesta": "Cada verano, los árboles protegían a los animales del calor.",
+"pista": "Se trata de protección que se repetía cada temporada: usa el imperfecto.",
+"grupos": [
+[
+"los arboles"
+],
+[
+"protegian"
+],
+[
+"a los animales del calor"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, los arboles protegian a los animales del calor.",
+"cat": "gram",
+"fix": "Cada verano, los árboles protegían a los animales del calor.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "quedar-habitual-8458",
+"verbo": "quedar",
+"contexto": "nosotros, los fines de semana, en el bar de la esquina",
+"respuesta": "Los fines de semana, nosotros quedábamos en el bar de la esquina.",
+"pista": "Se trata de encuentro habitual de fin de semana: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"quedabamos"
+],
+[
+"en el bar de la esquina"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, nosotros quedabamos en el bar de la esquina.",
+"cat": "gram",
+"fix": "Los fines de semana, nosotros quedábamos en el bar de la esquina.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "querer-habitual-8460",
+"verbo": "querer",
+"contexto": "yo, durante la infancia, ser astronauta de mayor",
+"respuesta": "Durante la infancia, yo quería ser astronauta de mayor.",
+"pista": "Se trata de deseo habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"queria"
+],
+[
+"ser astronauta de mayor"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, yo queria ser astronauta de mayor.",
+"cat": "gram",
+"fix": "Durante la infancia, yo quería ser astronauta de mayor.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "querer-habitual-8461",
+"verbo": "querer",
+"contexto": "nosotros, en aquellos tiempos, cambiar el mundo",
+"respuesta": "En aquellos tiempos, nosotros queríamos cambiar el mundo.",
+"pista": "Se trata de deseo habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"queriamos"
+],
+[
+"cambiar el mundo"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, nosotros queriamos cambiar el mundo.",
+"cat": "gram",
+"fix": "En aquellos tiempos, nosotros queríamos cambiar el mundo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "quitar-habitual-8462",
+"verbo": "quitar",
+"contexto": "yo, cada verano, las malas hierbas del jardín",
+"respuesta": "Cada verano, yo quitaba las malas hierbas del jardín.",
+"pista": "Se trata de tarea doméstica que se repetía cada verano: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"quitaba"
+],
+[
+"las malas hierbas del jardin"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, yo quitaba las malas hierbas del jardin.",
+"cat": "gram",
+"fix": "Cada verano, yo quitaba las malas hierbas del jardín.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "realizar-habitual-8465",
+"verbo": "realizar",
+"contexto": "nosotros, cuando trabajaba allí, encuestas a los clientes",
+"respuesta": "Cuando trabajaba allí, nosotros realizábamos encuestas a los clientes.",
+"pista": "Se trata de actividad habitual en el trabajo: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"realizabamos"
+],
+[
+"encuestas a los clientes"
+],
+[
+"cuando trabajaba alli"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando trabajaba alli, nosotros realizabamos encuestas a los clientes.",
+"cat": "gram",
+"fix": "Cuando trabajaba allí, nosotros realizábamos encuestas a los clientes.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "recibir-habitual-8466",
+"verbo": "recibir",
+"contexto": "yo, los domingos, cartas de mi amigo por correspondencia",
+"respuesta": "Los domingos, yo recibía cartas de mi amigo por correspondencia.",
+"pista": "Se trata de correo habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"recibia"
+],
+[
+"cartas de mi amigo por correspondencia"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, yo recibia cartas de mi amigo por correspondencia.",
+"cat": "gram",
+"fix": "Los domingos, yo recibía cartas de mi amigo por correspondencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "recibir-habitual-8467",
+"verbo": "recibir",
+"contexto": "nosotros, cada verano, visitas de los primos del campo",
+"respuesta": "Cada verano, nosotros recibíamos visitas de los primos del campo.",
+"pista": "Se trata de las visitas que se repetía cada verano: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"recibiamos"
+],
+[
+"visitas de los primos del campo"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, nosotros recibiamos visitas de los primos del campo.",
+"cat": "gram",
+"fix": "Cada verano, nosotros recibíamos visitas de los primos del campo.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "recoger-habitual-8468",
+"verbo": "recoger",
+"contexto": "mi padre, por las tardes, a los niños del colegio",
+"respuesta": "Por las tardes, mi padre recogía a los niños del colegio.",
+"pista": "Se trata de rutina diario/a de la tarde: usa el imperfecto.",
+"grupos": [
+[
+"mi padre"
+],
+[
+"recogia"
+],
+[
+"a los ninos del colegio"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, mi padre recogia a los ninos del colegio.",
+"cat": "gram",
+"fix": "Por las tardes, mi padre recogía a los niños del colegio.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "recoger-habitual-8469",
+"verbo": "recoger",
+"contexto": "nosotros, los fines de semana, conchas en la playa",
+"respuesta": "Los fines de semana, nosotros recogíamos conchas en la playa.",
+"pista": "Se trata de actividad habitual de fin de semana: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"recogiamos"
+],
+[
+"conchas en la playa"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, nosotros recogiamos conchas en la playa.",
+"cat": "gram",
+"fix": "Los fines de semana, nosotros recogíamos conchas en la playa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reconocer-habitual-8470",
+"verbo": "reconocer",
+"contexto": "yo, en aquellos tiempos, a todos los vecinos del barrio",
+"respuesta": "En aquellos tiempos, yo reconocía a todos los vecinos del barrio.",
+"pista": "Se trata de familiaridad habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"reconocia"
+],
+[
+"a todos los vecinos del barrio"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, yo reconocia a todos los vecinos del barrio.",
+"cat": "gram",
+"fix": "En aquellos tiempos, yo reconocía a todos los vecinos del barrio.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reconocer-habitual-8471",
+"verbo": "reconocer",
+"contexto": "el profesor, con frecuencia, el esfuerzo de sus alumnos",
+"respuesta": "El profesor reconocía el esfuerzo de sus alumnos con frecuencia.",
+"pista": "Se trata de reconocimiento que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"el profesor"
+],
+[
+"reconocia"
+],
+[
+"el esfuerzo de sus alumnos"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El profesor reconocia el esfuerzo de sus alumnos con frecuencia.",
+"cat": "gram",
+"fix": "El profesor reconocía el esfuerzo de sus alumnos con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "recuperar-habitual-8475",
+"verbo": "recuperar",
+"contexto": "yo, los fines de semana, las fuerzas después de la semana",
+"respuesta": "Los fines de semana, yo recuperaba las fuerzas después de la semana.",
+"pista": "Se trata de recuperación habitual de fin de semana: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"recuperaba"
+],
+[
+"las fuerzas despues de la semana"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, yo recuperaba las fuerzas despues de la semana.",
+"cat": "gram",
+"fix": "Los fines de semana, yo recuperaba las fuerzas después de la semana.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "referir-habitual-8476",
+"verbo": "referir",
+"contexto": "el profesor, en aquellos tiempos, a los clasicos de la literatura",
+"respuesta": "En aquellos tiempos, el profesor refería a los clasicos de la literatura.",
+"pista": "Se trata de referencia en el aula habitual en el aula: usa el imperfecto.",
+"grupos": [
+[
+"el profesor"
+],
+[
+"referia"
+],
+[
+"a los clasicos de la literatura"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, el profesor referia a los clasicos de la literatura.",
+"cat": "gram",
+"fix": "En aquellos tiempos, el profesor refería a los clasicos de la literatura.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "referir-habitual-8477",
+"verbo": "referir",
+"contexto": "mi abuelo, con frecuencia, anecdotas de la guerra",
+"respuesta": "Mi abuelo refería anecdotas de la guerra con frecuencia.",
+"pista": "Se trata de narración de historias que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"mi abuelo"
+],
+[
+"referia"
+],
+[
+"anecdotas de la guerra"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mi abuelo referia anecdotas de la guerra con frecuencia.",
+"cat": "gram",
+"fix": "Mi abuelo refería anecdotas de la guerra con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reir-habitual-8480",
+"verbo": "reir",
+"contexto": "nosotros, durante la infancia, con los chistes de mi tío",
+"respuesta": "Durante la infancia, nosotros reíamos con los chistes de mi tío.",
+"pista": "Se trata de risa habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"reiamos"
+],
+[
+"con los chistes de mi tio"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, nosotros reiamos con los chistes de mi tio.",
+"cat": "gram",
+"fix": "Durante la infancia, nosotros reíamos con los chistes de mi tío.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reir-habitual-8481",
+"verbo": "reir",
+"contexto": "ella, los fines de semana, hasta llorar con sus amigas",
+"respuesta": "Los fines de semana, ella reía hasta llorar con sus amigas.",
+"pista": "Se trata de alegría habitual de fin de semana: usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"reia"
+],
+[
+"hasta llorar con sus amigas"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, ella reia hasta llorar con sus amigas.",
+"cat": "gram",
+"fix": "Los fines de semana, ella reía hasta llorar con sus amigas.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "repetir-habitual-8482",
+"verbo": "repetir",
+"contexto": "el profesor, con frecuencia, las instrucciones a los alumnos",
+"respuesta": "El profesor repetía las instrucciones a los alumnos con frecuencia.",
+"pista": "Se trata de acción que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"el profesor"
+],
+[
+"repetia"
+],
+[
+"las instrucciones a los alumnos"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El profesor repetia las instrucciones a los alumnos con frecuencia.",
+"cat": "gram",
+"fix": "El profesor repetía las instrucciones a los alumnos con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "repetir-habitual-8483",
+"verbo": "repetir",
+"contexto": "mi abuela, en aquellos tiempos, los mismos consejos a todos",
+"respuesta": "En aquellos tiempos, mi abuela repetía los mismos consejos a todos.",
+"pista": "Se trata de repetición habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"mi abuela"
+],
+[
+"repetia"
+],
+[
+"los mismos consejos a todos"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, mi abuela repetia los mismos consejos a todos.",
+"cat": "gram",
+"fix": "En aquellos tiempos, mi abuela repetía los mismos consejos a todos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "representar-habitual-8484",
+"verbo": "representar",
+"contexto": "ella, en mis años de universidad, papeles importantes en las obras",
+"respuesta": "En mis años de universidad, ella representaba papeles importantes en las obras.",
+"pista": "Se trata de teatro habitual en la universidad: usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"representaba"
+],
+[
+"papeles importantes en las obras"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, ella representaba papeles importantes en las obras.",
+"cat": "gram",
+"fix": "En mis años de universidad, ella representaba papeles importantes en las obras.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "representar-habitual-8485",
+"verbo": "representar",
+"contexto": "el abogado, en aquellos tiempos, a los más necesitados",
+"respuesta": "En aquellos tiempos, el abogado representaba a los más necesitados.",
+"pista": "Se trata de defensa de una causa habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"el abogado"
+],
+[
+"representaba"
+],
+[
+"a los mas necesitados"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, el abogado representaba a los mas necesitados.",
+"cat": "gram",
+"fix": "En aquellos tiempos, el abogado representaba a los más necesitados.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "resolver-habitual-8486",
+"verbo": "resolver",
+"contexto": "mi padre, con frecuencia, los problemas de los vecinos",
+"respuesta": "Mi padre resolvía los problemas de los vecinos con frecuencia.",
+"pista": "Se trata de ayuda que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"mi padre"
+],
+[
+"resolvia"
+],
+[
+"los problemas de los vecinos"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Mi padre resolvia los problemas de los vecinos con frecuencia.",
+"cat": "gram",
+"fix": "Mi padre resolvía los problemas de los vecinos con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "resolver-habitual-8487",
+"verbo": "resolver",
+"contexto": "nosotros, los fines de semana, crucigramas en el periódico",
+"respuesta": "Los fines de semana, nosotros resolvíamos crucigramas en el periódico.",
+"pista": "Se trata de actividad habitual de fin de semana: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"resolviamos"
+],
+[
+"crucigramas en el periodico"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, nosotros resolviamos crucigramas en el periodico.",
+"cat": "gram",
+"fix": "Los fines de semana, nosotros resolvíamos crucigramas en el periódico.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "responder-habitual-8488",
+"verbo": "responder",
+"contexto": "ella, semana tras semana, a todas las cartas que recibía",
+"respuesta": "Semana tras semana, ella respondía a todas las cartas que recibía.",
+"pista": "Se trata de correspondencia que se repetía cada semana: usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"respondia"
+],
+[
+"a todas las cartas que recibia"
+],
+[
+"semana tras semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Semana tras semana, ella respondia a todas las cartas que recibia.",
+"cat": "gram",
+"fix": "Semana tras semana, ella respondía a todas las cartas que recibía.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "responder-habitual-8489",
+"verbo": "responder",
+"contexto": "los alumnos, en aquellos tiempos, con respeto al profesor",
+"respuesta": "En aquellos tiempos, los alumnos respondían con respeto al profesor.",
+"pista": "Se trata de comportamiento en el aula habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"los alumnos"
+],
+[
+"respondian"
+],
+[
+"con respeto al profesor"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, los alumnos respondian con respeto al profesor.",
+"cat": "gram",
+"fix": "En aquellos tiempos, los alumnos respondían con respeto al profesor.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "resultar-habitual-8491",
+"verbo": "resultar",
+"contexto": "los exámenes, en aquellos tiempos, muy dificiles para todos",
+"respuesta": "En aquellos tiempos, los exámenes resultaban muy dificiles para todos.",
+"pista": "Se trata de dificultad habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"los examenes"
+],
+[
+"resultaban"
+],
+[
+"muy dificiles para todos"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, los examenes resultaban muy dificiles para todos.",
+"cat": "gram",
+"fix": "En aquellos tiempos, los exámenes resultaban muy dificiles para todos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reunir-habitual-8492",
+"verbo": "reunir",
+"contexto": "la familia, los domingos, en casa de los abuelos",
+"respuesta": "Los domingos, la familia reunía en casa de los abuelos.",
+"pista": "Se trata de reunión habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"la familia"
+],
+[
+"reunia"
+],
+[
+"en casa de los abuelos"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, la familia reunia en casa de los abuelos.",
+"cat": "gram",
+"fix": "Los domingos, la familia reunía en casa de los abuelos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "reunir-habitual-8493",
+"verbo": "reunir",
+"contexto": "el director, los martes y jueves, al equipo para planificar",
+"respuesta": "Los martes y jueves, el director reunía al equipo para planificar.",
+"pista": "Se trata de reunión: usa el imperfecto.",
+"grupos": [
+[
+"el director"
+],
+[
+"reunia"
+],
+[
+"al equipo para planificar"
+],
+[
+"los martes y jueves"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los martes y jueves, el director reunia al equipo para planificar.",
+"cat": "gram",
+"fix": "Los martes y jueves, el director reunía al equipo para planificar.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "romper-habitual-8498",
+"verbo": "romper",
+"contexto": "las olas, cada verano, contra las rocas de la costa",
+"respuesta": "Cada verano, las olas rompían contra las rocas de la costa.",
+"pista": "Se trata de suceso que se repetía cada temporada: usa el imperfecto.",
+"grupos": [
+[
+"las olas"
+],
+[
+"rompian"
+],
+[
+"contra las rocas de la costa"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, las olas rompian contra las rocas de la costa.",
+"cat": "gram",
+"fix": "Cada verano, las olas rompían contra las rocas de la costa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "romper-habitual-8499",
+"verbo": "romper",
+"contexto": "mi hermano, durante la infancia, los juguetes el mismo día",
+"respuesta": "Durante la infancia, mi hermano rompía los juguetes el mismo día.",
+"pista": "Se trata de destrucción habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"mi hermano"
+],
+[
+"rompia"
+],
+[
+"los juguetes el mismo dia"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, mi hermano rompia los juguetes el mismo dia.",
+"cat": "gram",
+"fix": "Durante la infancia, mi hermano rompía los juguetes el mismo día.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "saber-habitual-8500",
+"verbo": "saber",
+"contexto": "mi abuela, en aquellos tiempos, el remedio para cada enfermedad",
+"respuesta": "En aquellos tiempos, mi abuela sabía el remedio para cada enfermedad.",
+"pista": "Se trata de conocimiento habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"mi abuela"
+],
+[
+"sabia"
+],
+[
+"el remedio para cada enfermedad"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, mi abuela sabia el remedio para cada enfermedad.",
+"cat": "gram",
+"fix": "En aquellos tiempos, mi abuela sabía el remedio para cada enfermedad.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "saber-habitual-8501",
+"verbo": "saber",
+"contexto": "yo, durante la infancia, muy poco del mundo real",
+"respuesta": "Durante la infancia, yo sabía muy poco del mundo real.",
+"pista": "Se trata de estado continuo/a durante la infancia: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"sabia"
+],
+[
+"muy poco del mundo real"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, yo sabia muy poco del mundo real.",
+"cat": "gram",
+"fix": "Durante la infancia, yo sabía muy poco del mundo real.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "sacar-habitual-8503",
+"verbo": "sacar",
+"contexto": "ella, en mis años de universidad, las mejores notas de la clase",
+"respuesta": "En mis años de universidad, ella sacaba las mejores notas de la clase.",
+"pista": "Se trata de logro habitual en la universidad: usa el imperfecto.",
+"grupos": [
+[
+"ella"
+],
+[
+"sacaba"
+],
+[
+"las mejores notas de la clase"
+],
+[
+"en mis anos de universidad"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En mis anos de universidad, ella sacaba las mejores notas de la clase.",
+"cat": "gram",
+"fix": "En mis años de universidad, ella sacaba las mejores notas de la clase.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "salir-habitual-8504",
+"verbo": "salir",
+"contexto": "nosotros, los fines de semana, a cenar a un restaurante",
+"respuesta": "Los fines de semana, nosotros salíamos a cenar a un restaurante.",
+"pista": "Se trata de salida habitual de fin de semana: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"saliamos"
+],
+[
+"a cenar a un restaurante"
+],
+[
+"los fines de semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los fines de semana, nosotros saliamos a cenar a un restaurante.",
+"cat": "gram",
+"fix": "Los fines de semana, nosotros salíamos a cenar a un restaurante.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "salir-habitual-8505",
+"verbo": "salir",
+"contexto": "el sol, cada verano, muy temprano por la mañana",
+"respuesta": "Cada verano, el sol salía muy temprano por la mañana.",
+"pista": "Se trata de suceso que se repetía cada temporada: usa el imperfecto.",
+"grupos": [
+[
+"el sol"
+],
+[
+"salia"
+],
+[
+"muy temprano por la manana"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, el sol salia muy temprano por la manana.",
+"cat": "gram",
+"fix": "Cada verano, el sol salía muy temprano por la mañana.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "salvar-habitual-8506",
+"verbo": "salvar",
+"contexto": "los bomberos, con frecuencia, a gatos atrapados en los árboles",
+"respuesta": "Los bomberos salvaban a gatos atrapados en los árboles con frecuencia.",
+"pista": "Se trata de rescate que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"los bomberos"
+],
+[
+"salvaban"
+],
+[
+"a gatos atrapados en los arboles"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los bomberos salvaban a gatos atrapados en los arboles con frecuencia.",
+"cat": "gram",
+"fix": "Los bomberos salvaban a gatos atrapados en los árboles con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "salvar-habitual-8507",
+"verbo": "salvar",
+"contexto": "el heroe de la película, en aquellos tiempos, a los inocentes",
+"respuesta": "En aquellos tiempos, el heroe de la película salvaba a los inocentes.",
+"pista": "Se trata de heroísmo: usa el imperfecto.",
+"grupos": [
+[
+"el heroe de la pelicula"
+],
+[
+"salvaba"
+],
+[
+"a los inocentes"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, el heroe de la pelicula salvaba a los inocentes.",
+"cat": "gram",
+"fix": "En aquellos tiempos, el heroe de la película salvaba a los inocentes.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "seguir-habitual-8508",
+"verbo": "seguir",
+"contexto": "yo, semana tras semana, la misma rutina de ejercicios",
+"respuesta": "Semana tras semana, yo seguía la misma rutina de ejercicios.",
+"pista": "Se trata de rutina que se repetía cada semana: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"seguia"
+],
+[
+"la misma rutina de ejercicios"
+],
+[
+"semana tras semana"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Semana tras semana, yo seguia la misma rutina de ejercicios.",
+"cat": "gram",
+"fix": "Semana tras semana, yo seguía la misma rutina de ejercicios.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "seguir-habitual-8509",
+"verbo": "seguir",
+"contexto": "el perro, por las tardes, a mi padre por toda la casa",
+"respuesta": "Por las tardes, el perro seguía a mi padre por toda la casa.",
+"pista": "Se trata de comportamiento diario/a de la tarde: usa el imperfecto.",
+"grupos": [
+[
+"el perro"
+],
+[
+"seguia"
+],
+[
+"a mi padre por toda la casa"
+],
+[
+"por las tardes"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Por las tardes, el perro seguia a mi padre por toda la casa.",
+"cat": "gram",
+"fix": "Por las tardes, el perro seguía a mi padre por toda la casa.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "senalar-habitual-8510",
+"verbo": "senalar",
+"contexto": "el profesor, con frecuencia, los errores en la pizarra",
+"respuesta": "El profesor señalaba los errores en la pizarra con frecuencia.",
+"pista": "Se trata de acción de enseñar que se repetía con frecuencia: usa el imperfecto.",
+"grupos": [
+[
+"el profesor"
+],
+[
+"senalaba"
+],
+[
+"los errores en la pizarra"
+],
+[
+"con frecuencia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "El profesor senalaba los errores en la pizarra con frecuencia.",
+"cat": "gram",
+"fix": "El profesor señalaba los errores en la pizarra con frecuencia.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "senalar-habitual-8511",
+"verbo": "senalar",
+"contexto": "mi abuela, durante la infancia, las estrellas en el cielo nocturno",
+"respuesta": "Durante la infancia, mi abuela señalaba las estrellas en el cielo nocturno.",
+"pista": "Se trata de asombro habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"mi abuela"
+],
+[
+"senalaba"
+],
+[
+"las estrellas en el cielo nocturno"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, mi abuela senalaba las estrellas en el cielo nocturno.",
+"cat": "gram",
+"fix": "Durante la infancia, mi abuela señalaba las estrellas en el cielo nocturno.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "sentar-habitual-8513",
+"verbo": "sentar",
+"contexto": "nosotros, los domingos, a la mesa todos juntos",
+"respuesta": "Los domingos, nosotros sentábamos a la mesa todos juntos.",
+"pista": "Se trata de reunión familiar habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"sentabamos"
+],
+[
+"a la mesa todos juntos"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, nosotros sentabamos a la mesa todos juntos.",
+"cat": "gram",
+"fix": "Los domingos, nosotros sentábamos a la mesa todos juntos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "sentir-habitual-8514",
+"verbo": "sentir",
+"contexto": "yo, cada verano, el calor del sol en la piel",
+"respuesta": "Cada verano, yo sentía el calor del sol en la piel.",
+"pista": "Se trata de sensación que se repetía cada verano: usa el imperfecto.",
+"grupos": [
+[
+"yo"
+],
+[
+"sentia"
+],
+[
+"el calor del sol en la piel"
+],
+[
+"cada verano"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cada verano, yo sentia el calor del sol en la piel.",
+"cat": "gram",
+"fix": "Cada verano, yo sentía el calor del sol en la piel.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "sentir-habitual-8515",
+"verbo": "sentir",
+"contexto": "nosotros, en aquellos tiempos, nostalgia por nuestra tierra",
+"respuesta": "En aquellos tiempos, nosotros sentíamos nostalgia por nuestra tierra.",
+"pista": "Se trata de sentimiento habitual en el pasado: usa el imperfecto.",
+"grupos": [
+[
+"nosotros"
+],
+[
+"sentiamos"
+],
+[
+"nostalgia por nuestra tierra"
+],
+[
+"en aquellos tiempos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "En aquellos tiempos, nosotros sentiamos nostalgia por nuestra tierra.",
+"cat": "gram",
+"fix": "En aquellos tiempos, nosotros sentíamos nostalgia por nuestra tierra.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "ser-habitual-8516",
+"verbo": "ser",
+"contexto": "yo, durante la infancia, muy tímido con los desconocidos",
+"respuesta": "Durante la infancia, yo era muy tímido con los desconocidos.",
+"pista": "Se trata de característica continuo/a durante la infancia: usa el imperfecto. (verbo irregular ser (era/eran))",
+"grupos": [
+[
+"yo"
+],
+[
+"era"
+],
+[
+"muy timido con los desconocidos"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, yo era muy timido con los desconocidos.",
+"cat": "gram",
+"fix": "Durante la infancia, yo era muy tímido con los desconocidos.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "servir-habitual-8518",
+"verbo": "servir",
+"contexto": "mi abuela, los domingos, la sopa en platos de porcelana",
+"respuesta": "Los domingos, mi abuela servía la sopa en platos de porcelana.",
+"pista": "Se trata de tradición habitual de los domingos: usa el imperfecto.",
+"grupos": [
+[
+"mi abuela"
+],
+[
+"servia"
+],
+[
+"la sopa en platos de porcelana"
+],
+[
+"los domingos"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Los domingos, mi abuela servia la sopa en platos de porcelana.",
+"cat": "gram",
+"fix": "Los domingos, mi abuela servía la sopa en platos de porcelana.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "servir-habitual-8519",
+"verbo": "servir",
+"contexto": "el restaurante, cuando vivía en Madrid, tapas hasta medianoche",
+"respuesta": "Cuando vivía en Madrid, el restaurante servía tapas hasta medianoche.",
+"pista": "Se trata de un servicio habitual durante su estancia en Madrid: usa el imperfecto.",
+"grupos": [
+[
+"el restaurante"
+],
+[
+"servia"
+],
+[
+"tapas hasta medianoche"
+],
+[
+"cuando vivia en madrid"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Cuando vivia en Madrid, el restaurante servia tapas hasta medianoche.",
+"cat": "gram",
+"fix": "Cuando vivía en Madrid, el restaurante servía tapas hasta medianoche.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+},
+{
+"exercise": {
+"id": "significar-habitual-8521",
+"verbo": "significar",
+"contexto": "la Navidad, durante la infancia, regalos y alegría",
+"respuesta": "Durante la infancia, la Navidad significaba regalos y alegría.",
+"pista": "Se trata de significado habitual de la infancia: usa el imperfecto.",
+"grupos": [
+[
+"la navidad"
+],
+[
+"significaba"
+],
+[
+"regalos y alegria"
+],
+[
+"durante la infancia"
+]
+]
+},
+"findings": [
+{
+"field": "respuesta",
+"text": "Durante la infancia, la Navidad significaba regalos y alegria.",
+"cat": "gram",
+"fix": "Durante la infancia, la Navidad significaba regalos y alegría.",
+"note": "missing accent/diacritic (spelling error, affects TTS pronunciation)"
+}
+]
+}
+]

@@ -1,0 +1,5618 @@
+[
+ {
+  "id": "acercar-presente-2873",
+  "verbo": "acercar",
+  "contexto": "ella, mientras tanto, el vaso",
+  "respuesta": "Ella acerca el vaso mientras tanto.",
+  "pista": "Narra sucesos actuales.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "acerca"
+   ],
+   [
+    "el vaso"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "acordar-presente-2878",
+  "verbo": "acordar",
+  "contexto": "nosotros, mientras tanto, los términos del contrato",
+  "respuesta": "Nosotros acordamos los términos del contrato mientras tanto.",
+  "pista": "Describe cómo se llega a un acuerdo.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "acordamos"
+   ],
+   [
+    "los terminos del contrato"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "admitir-presente-2884",
+  "verbo": "admitir",
+  "contexto": "yo, cada vez, mi error",
+  "respuesta": "Cada vez, yo admito mi error.",
+  "pista": "Confiesa algo en este momento.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "admito"
+   ],
+   [
+    "mi error"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "alegrar-presente-2898",
+  "verbo": "alegrar",
+  "contexto": "tú, cada vez, a tus amigos",
+  "respuesta": "Tú alegras a tus amigos cada vez.",
+  "pista": "Habla de la personalidad de alguien.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "alegras"
+   ],
+   [
+    "a tus amigos"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "amar-presente-2904",
+  "verbo": "amar",
+  "contexto": "nosotros, cada vez, la naturaleza",
+  "respuesta": "Nosotros amamos la naturaleza cada vez.",
+  "pista": "Expresa una pasión compartida.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "amamos"
+   ],
+   [
+    "la naturaleza"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "apoyar-presente-2918",
+  "verbo": "apoyar",
+  "contexto": "nosotros, mientras tanto, el proyecto",
+  "respuesta": "Nosotros apoyamos el proyecto mientras tanto.",
+  "pista": "Describe la acción de un equipo.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "apoyamos"
+   ],
+   [
+    "el proyecto"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "apoyar-presente-2919",
+  "verbo": "apoyar",
+  "contexto": "tú, mientras tanto, a tus compañeros",
+  "respuesta": "Mientras tanto, tú apoyas a tus compañeros.",
+  "pista": "Habla de ayudar a los demás.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "apoyas"
+   ],
+   [
+    "a tus companeros"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "asegurar-presente-2927",
+  "verbo": "asegurar",
+  "contexto": "ella, cada vez, el éxito del evento",
+  "respuesta": "Ella asegura el éxito del evento cada vez.",
+  "pista": "Narra el esfuerzo de ella.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "asegura"
+   ],
+   [
+    "el exito del evento"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "asesinar-presente-2929",
+  "verbo": "asesinar",
+  "contexto": "él, cada vez, al personaje en la novela",
+  "respuesta": "Cada vez, él asesina al personaje en la novela.",
+  "pista": "Narra una trama de ficción.",
+  "grupos": [
+   [
+    "el"
+   ],
+   [
+    "asesina"
+   ],
+   [
+    "al personaje en la novela"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "asustar-presente-2933",
+  "verbo": "asustar",
+  "contexto": "él, mientras tanto, a su hermana",
+  "respuesta": "Mientras tanto, él asusta a su hermana.",
+  "pista": "Narra una broma.",
+  "grupos": [
+   [
+    "el"
+   ],
+   [
+    "asusta"
+   ],
+   [
+    "a su hermana"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "atacar-presente-2935",
+  "verbo": "atacar",
+  "contexto": "ellos, mientras tanto, al enemigo",
+  "respuesta": "Mientras tanto, ellos atacan al enemigo.",
+  "pista": "Describe un conflicto.",
+  "grupos": [
+   [
+    "ellos"
+   ],
+   [
+    "atacan"
+   ],
+   [
+    "al enemigo"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "atacar-presente-2937",
+  "verbo": "atacar",
+  "contexto": "nosotros, mientras tanto, la tarea difícil",
+  "respuesta": "Nosotros atacamos la tarea difícil mientras tanto.",
+  "pista": "Describe cómo se afronta un reto.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "atacamos"
+   ],
+   [
+    "la tarea dificil"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "buscar-presente-2963",
+  "verbo": "buscar",
+  "contexto": "tú, mientras tanto, trabajo",
+  "respuesta": "Mientras tanto, tú buscas trabajo.",
+  "pista": "Habla de la búsqueda de empleo.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "buscas"
+   ],
+   [
+    "trabajo"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "caer-presente-2966",
+  "verbo": "caer",
+  "contexto": "ella, cada vez, de la silla",
+  "respuesta": "Cada vez, ella cae de la silla.",
+  "pista": "Narra un percance.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "cae"
+   ],
+   [
+    "de la silla"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "casar-presente-2983",
+  "verbo": "casar",
+  "contexto": "ella, cada vez, a las parejas en la iglesia",
+  "respuesta": "Cada vez, ella casa a las parejas en la iglesia.",
+  "pista": "Describe el deber de un sacerdote.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "casa"
+   ],
+   [
+    "a las parejas en la iglesia"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "coger-presente-2991",
+  "verbo": "coger",
+  "contexto": "nosotros, cada vez, las maletas",
+  "respuesta": "Cada vez, nosotros cogemos las maletas.",
+  "pista": "Describe los preparativos de un viaje.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "cogemos"
+   ],
+   [
+    "las maletas"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "comenzar-presente-2992",
+  "verbo": "comenzar",
+  "contexto": "nosotros, cada vez, el proyecto",
+  "respuesta": "Nosotros comenzamos el proyecto cada vez.",
+  "pista": "Expresa un nuevo comienzo.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "comenzamos"
+   ],
+   [
+    "el proyecto"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "comer-presente-2997",
+  "verbo": "comer",
+  "contexto": "nosotros, cada vez, juntos en familia",
+  "respuesta": "Cada vez, nosotros comemos juntos en familia.",
+  "pista": "Expresa una tradición familiar.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "comemos"
+   ],
+   [
+    "juntos en familia"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "cometer-presente-2998",
+  "verbo": "cometer",
+  "contexto": "yo, mientras tanto, un error",
+  "respuesta": "Mientras tanto, yo cometo un error.",
+  "pista": "Expresa un error.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "cometo"
+   ],
+   [
+    "un error"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "comprar-presente-3005",
+  "verbo": "comprar",
+  "contexto": "nosotros, cada vez, comida para la cena",
+  "respuesta": "Cada vez, nosotros compramos comida para la cena.",
+  "pista": "Habla de la planificación de comidas.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "compramos"
+   ],
+   [
+    "comida para la cena"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "conocer-presente-3018",
+  "verbo": "conocer",
+  "contexto": "ellos, cada vez, el camino",
+  "respuesta": "Cada vez, ellos conocen el camino.",
+  "pista": "Narra el conocimiento de ellos.",
+  "grupos": [
+   [
+    "ellos"
+   ],
+   [
+    "conocen"
+   ],
+   [
+    "el camino"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "conseguir-presente-3021",
+  "verbo": "conseguir",
+  "contexto": "tú, mientras tanto, lo que quieres",
+  "respuesta": "Mientras tanto, tú consigues lo que quieres.",
+  "pista": "Habla de la determinación.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "consigues"
+   ],
+   [
+    "lo que quieres"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "considerar-presente-3022",
+  "verbo": "considerar",
+  "contexto": "yo, cada vez, todas las opciones",
+  "respuesta": "Cada vez, yo considero todas las opciones.",
+  "pista": "Expresa una reflexión cuidadosa.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "considero"
+   ],
+   [
+    "todas las opciones"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "controlar-presente-3038",
+  "verbo": "controlar",
+  "contexto": "él, mientras tanto, la situación",
+  "respuesta": "Mientras tanto, él controla la situación.",
+  "pista": "Describe el liderazgo.",
+  "grupos": [
+   [
+    "el"
+   ],
+   [
+    "controla"
+   ],
+   [
+    "la situacion"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "cortar-presente-3048",
+  "verbo": "cortar",
+  "contexto": "tú, mientras tanto, el papel",
+  "respuesta": "Tú cortas el papel mientras tanto.",
+  "pista": "Describe una manualidad.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "cortas"
+   ],
+   [
+    "el papel"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "cumplir-presente-3069",
+  "verbo": "cumplir",
+  "contexto": "nosotros, mientras, los requisitos",
+  "respuesta": "Mientras tanto, nosotros cumplimos los requisitos.",
+  "pista": "Describe el cumplimiento de una norma.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "cumplimos"
+   ],
+   [
+    "los requisitos"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "deber-presente-3074",
+  "verbo": "deber",
+  "contexto": "tú, cada vez, mucho a tus padres",
+  "respuesta": "Cada vez, tú debes mucho a tus padres.",
+  "pista": "Describe una deuda de gratitud.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "debes"
+   ],
+   [
+    "mucho a tus padres"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "decidir-presente-3078",
+  "verbo": "decidir",
+  "contexto": "tú, cada vez, rápidamente",
+  "respuesta": "Cada vez, tú decides rápidamente.",
+  "pista": "Comenta sobre la rapidez de una decisión.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "decides"
+   ],
+   [
+    "rapidamente"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "decir-presente-3081",
+  "verbo": "decir",
+  "contexto": "ellos, mientras tanto, muchas mentiras",
+  "respuesta": "Ellos dicen muchas mentiras mientras tanto.",
+  "pista": "Narra una deshonestidad.",
+  "grupos": [
+   [
+    "ellos"
+   ],
+   [
+    "dicen"
+   ],
+   [
+    "muchas mentiras"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "defender-presente-3084",
+  "verbo": "defender",
+  "contexto": "nosotros, cada vez, nuestra posición",
+  "respuesta": "Nosotros defendemos nuestra posición cada vez.",
+  "pista": "Expresa la postura de un equipo.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "defendemos"
+   ],
+   [
+    "nuestra posicion"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "despedir-presente-3108",
+  "verbo": "despedir",
+  "contexto": "nosotros, cada vez, el año viejo",
+  "respuesta": "Cada vez, nosotros despedimos el año viejo.",
+  "pista": "Habla de las tradiciones de Año Nuevo.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "despedimos"
+   ],
+   [
+    "el ano viejo"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "despertar-presente-3109",
+  "verbo": "despertar",
+  "contexto": "yo, cada vez, a las seis de la mañana",
+  "respuesta": "Cada vez, yo despierto a las seis de la mañana.",
+  "pista": "Describe una rutina matutina.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "despierto"
+   ],
+   [
+    "a las seis de la manana"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "devolver-presente-3119",
+  "verbo": "devolver",
+  "contexto": "tú, mientras tanto, el dinero",
+  "respuesta": "Tú devuelves el dinero mientras tanto.",
+  "pista": "Habla de la devolución de un pago.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "devuelves"
+   ],
+   [
+    "el dinero"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "disfrutar-presente-3131",
+  "verbo": "disfrutar",
+  "contexto": "tú, mientras tanto, cada momento",
+  "respuesta": "Mientras tanto, tú disfrutas cada momento.",
+  "pista": "Da un consejo sobre la vida.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "disfrutas"
+   ],
+   [
+    "cada momento"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "enviar-presente-3176",
+  "verbo": "enviar",
+  "contexto": "tú, mientras tanto, un correo electrónico",
+  "respuesta": "Mientras tanto, tú envías un correo electrónico.",
+  "pista": "Habla de un correo electrónico.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "envias"
+   ],
+   [
+    "un correo electronico"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "evitar-presente-3200",
+  "verbo": "evitar",
+  "contexto": "tú, mientras tanto, la comida chatarra",
+  "respuesta": "Mientras tanto, tú evitas la comida chatarra.",
+  "pista": "Da un consejo de salud.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "evitas"
+   ],
+   [
+    "la comida chatarra"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "formar-presente-3210",
+  "verbo": "formar",
+  "contexto": "ella, cada vez, a los nuevos empleados",
+  "respuesta": "Cada vez, ella forma a los nuevos empleados.",
+  "pista": "Narra un entrenamiento.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "forma"
+   ],
+   [
+    "a los nuevos empleados"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "golpear-presente-3218",
+  "verbo": "golpear",
+  "contexto": "él, mientras tanto, la pelota con fuerza",
+  "respuesta": "Él golpea la pelota con fuerza mientras tanto.",
+  "pista": "Describe un deporte.",
+  "grupos": [
+   [
+    "el"
+   ],
+   [
+    "golpea"
+   ],
+   [
+    "la pelota con fuerza"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "gritar-presente-3220",
+  "verbo": "gritar",
+  "contexto": "yo, cada vez, de alegría",
+  "respuesta": "Yo grito de alegría cada vez.",
+  "pista": "Expresa alegría.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "grito"
+   ],
+   [
+    "de alegria"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "guardar-presente-3223",
+  "verbo": "guardar",
+  "contexto": "yo, mientras tanto, los documentos importantes",
+  "respuesta": "Yo guardo los documentos importantes mientras tanto.",
+  "pista": "Describe la organización de algo.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "guardo"
+   ],
+   [
+    "los documentos importantes"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "gustar-presente-3226",
+  "verbo": "gustar",
+  "contexto": "yo, cada vez, a mis vecinos",
+  "respuesta": "Cada vez, les gusto a mis vecinos.",
+  "pista": "Expresa que a alguien le agrada una persona.",
+  "grupos": [
+   [
+    "les gusto"
+   ],
+   [
+    "a mis vecinos"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "gustar-presente-3227",
+  "verbo": "gustar",
+  "contexto": "ella, mientras tanto, a todo el mundo",
+  "respuesta": "Ella le gusta a todo el mundo mientras tanto.",
+  "pista": "Describe la popularidad de alguien.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "le gusta"
+   ],
+   [
+    "a todo el mundo"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "haber-presente-3229",
+  "verbo": "haber",
+  "contexto": "yo, mientras tanto, terminado el trabajo",
+  "respuesta": "Yo he terminado el trabajo mientras tanto.",
+  "pista": "Expresa una acción ya terminada.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "he"
+   ],
+   [
+    "terminado el trabajo"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "hallar-presente-3238",
+  "verbo": "hallar",
+  "contexto": "yo, mientras tanto, la respuesta",
+  "respuesta": "Yo hallo la respuesta mientras tanto.",
+  "pista": "Expresa un descubrimiento.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "hallo"
+   ],
+   [
+    "la respuesta"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "imaginar-presente-3245",
+  "verbo": "imaginar",
+  "contexto": "tú, cada vez, las posibilidades",
+  "respuesta": "Tú imaginas las posibilidades cada vez.",
+  "pista": "Anima a alguien a ser creativo.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "imaginas"
+   ],
+   [
+    "las posibilidades"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "imaginar-presente-3246",
+  "verbo": "imaginar",
+  "contexto": "nosotros, cada vez, el futuro",
+  "respuesta": "Nosotros imaginamos el futuro cada vez.",
+  "pista": "Describe una visión de futuro.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "imaginamos"
+   ],
+   [
+    "el futuro"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "intentar-presente-3256",
+  "verbo": "intentar",
+  "contexto": "yo, mientras tanto, algo nuevo",
+  "respuesta": "Mientras tanto, yo intento algo nuevo.",
+  "pista": "Expresa disposición a intentarlo.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "intento"
+   ],
+   [
+    "algo nuevo"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "joder-presente-3268",
+  "verbo": "joder",
+  "contexto": "eso, cada vez, todo el plan",
+  "respuesta": "Cada vez, eso jode todo el plan.",
+  "pista": "Expresa frustración por unos planes arruinados.",
+  "grupos": [
+   [
+    "eso"
+   ],
+   [
+    "jode"
+   ],
+   [
+    "todo el plan"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "jurar-presente-3276",
+  "verbo": "jurar",
+  "contexto": "nosotros, cada vez, proteger a nuestra familia",
+  "respuesta": "Nosotros juramos proteger a nuestra familia cada vez.",
+  "pista": "Expresa dedicación.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "juramos"
+   ],
+   [
+    "proteger a nuestra familia"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "llamar-presente-3284",
+  "verbo": "llamar",
+  "contexto": "tú, mientras tanto, al doctor",
+  "respuesta": "Tú llamas al doctor mientras tanto.",
+  "pista": "Sugiere pedir una cita.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "llamas"
+   ],
+   [
+    "al doctor"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "llamar-presente-3285",
+  "verbo": "llamar",
+  "contexto": "ella, cada vez, a sus amigos",
+  "respuesta": "Cada vez, ella llama a sus amigos.",
+  "pista": "Narra un contacto social.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "llama"
+   ],
+   [
+    "a sus amigos"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "llegar-presente-3288",
+  "verbo": "llegar",
+  "contexto": "tú, mientras tanto, tarde a clase",
+  "respuesta": "Mientras tanto, tú llegas tarde a clase.",
+  "pista": "Comenta sobre la impuntualidad de alguien.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "llegas"
+   ],
+   [
+    "tarde a clase"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "llorar-presente-3292",
+  "verbo": "llorar",
+  "contexto": "ella, cada vez, de felicidad",
+  "respuesta": "Cada vez, ella llora de felicidad.",
+  "pista": "Expresa lágrimas de felicidad.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "llora"
+   ],
+   [
+    "de felicidad"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "mandar-presente-3303",
+  "verbo": "mandar",
+  "contexto": "ella, cada vez, flores a su amiga",
+  "respuesta": "Ella manda flores a su amiga cada vez.",
+  "pista": "Narra un gesto amable.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "manda"
+   ],
+   [
+    "flores a su amiga"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "manejar-presente-3304",
+  "verbo": "manejar",
+  "contexto": "yo, cada vez, la situación con calma",
+  "respuesta": "Cada vez, yo manejo la situación con calma.",
+  "pista": "Expresa serenidad.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "manejo"
+   ],
+   [
+    "la situacion con calma"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "manejar-presente-3306",
+  "verbo": "manejar",
+  "contexto": "nosotros, mientras tanto, el presupuesto",
+  "respuesta": "Nosotros manejamos el presupuesto mientras tanto.",
+  "pista": "Habla de la gestión de algo.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "manejamos"
+   ],
+   [
+    "el presupuesto"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "marchar-presente-3310",
+  "verbo": "marchar",
+  "contexto": "ellos, mientras tanto, por la calle principal",
+  "respuesta": "Ellos marchan por la calle principal mientras tanto.",
+  "pista": "Describe una marcha.",
+  "grupos": [
+   [
+    "ellos"
+   ],
+   [
+    "marchan"
+   ],
+   [
+    "por la calle principal"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "matar-presente-3313",
+  "verbo": "matar",
+  "contexto": "él, mientras tanto, el tiempo leyendo",
+  "respuesta": "Él mata el tiempo leyendo mientras tanto.",
+  "pista": "Describe el tiempo libre.",
+  "grupos": [
+   [
+    "el"
+   ],
+   [
+    "mata"
+   ],
+   [
+    "el tiempo leyendo"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "mencionar-presente-3316",
+  "verbo": "mencionar",
+  "contexto": "yo, cada vez, el tema en la reunión",
+  "respuesta": "Yo menciono el tema en la reunión cada vez.",
+  "pista": "Describe un acto de comunicación.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "menciono"
+   ],
+   [
+    "el tema en la reunion"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "meter-presente-3326",
+  "verbo": "meter",
+  "contexto": "tú, cada vez, las manos en los bolsillos",
+  "respuesta": "Tú metes las manos en los bolsillos cada vez.",
+  "pista": "Narra un gesto.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "metes"
+   ],
+   [
+    "las manos en los bolsillos"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "molestar-presente-3331",
+  "verbo": "molestar",
+  "contexto": "yo, cada vez, a mi hermano",
+  "respuesta": "Yo molesto a mi hermano cada vez.",
+  "pista": "Describe la dinámica entre hermanos.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "molesto"
+   ],
+   [
+    "a mi hermano"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "molestar-presente-3332",
+  "verbo": "molestar",
+  "contexto": "tú, mientras tanto, a los vecinos con la música",
+  "respuesta": "Tú molestas a los vecinos con la música mientras tanto.",
+  "pista": "Habla del ruido.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "molestas"
+   ],
+   [
+    "a los vecinos con la musica"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "morir-presente-3335",
+  "verbo": "morir",
+  "contexto": "yo, mientras tanto, de hambre",
+  "respuesta": "Mientras tanto, yo muero de hambre.",
+  "pista": "Expresa hambre extrema de forma figurada.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "muero"
+   ],
+   [
+    "de hambre"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "mostrar-presente-3338",
+  "verbo": "mostrar",
+  "contexto": "ella, mientras tanto, su nuevo diseño",
+  "respuesta": "Ella muestra su nuevo diseño mientras tanto.",
+  "pista": "Narra una presentación.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "muestra"
+   ],
+   [
+    "su nuevo diseno"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "nacer-presente-3345",
+  "verbo": "nacer",
+  "contexto": "los bebés, cada vez, en primavera",
+  "respuesta": "Cada vez, los bebés nacen en primavera.",
+  "pista": "Narra la temporada de nacimientos.",
+  "grupos": [
+   [
+    "los bebes"
+   ],
+   [
+    "nacen"
+   ],
+   [
+    "en primavera"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "necesitar-presente-3347",
+  "verbo": "necesitar",
+  "contexto": "nosotros, cada vez, ayuda",
+  "respuesta": "Nosotros necesitamos ayuda cada vez.",
+  "pista": "Pide ayuda.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "necesitamos"
+   ],
+   [
+    "ayuda"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "observar-presente-3352",
+  "verbo": "observar",
+  "contexto": "yo, cada vez, las aves en el parque",
+  "respuesta": "Cada vez, yo observo las aves en el parque.",
+  "pista": "Describe la observación de aves.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "observo"
+   ],
+   [
+    "las aves en el parque"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "ocupar-presente-3358",
+  "verbo": "ocupar",
+  "contexto": "yo, cada vez, el primer lugar",
+  "respuesta": "Yo ocupo el primer lugar cada vez.",
+  "pista": "Expresa una clasificación.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "ocupo"
+   ],
+   [
+    "el primer lugar"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "ocurrir-presente-3361",
+  "verbo": "ocurrir",
+  "contexto": "eso, mientras tanto, con frecuencia",
+  "respuesta": "Eso ocurre con frecuencia mientras tanto.",
+  "pista": "Expresa la frecuencia de algo.",
+  "grupos": [
+   [
+    "eso"
+   ],
+   [
+    "ocurre"
+   ],
+   [
+    "con frecuencia"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "odiar-presente-3366",
+  "verbo": "odiar",
+  "contexto": "nosotros, mientras tanto, la violencia",
+  "respuesta": "Nosotros odiamos la violencia mientras tanto.",
+  "pista": "Expresa valores compartidos.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "odiamos"
+   ],
+   [
+    "la violencia"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "pagar-presente-3377",
+  "verbo": "pagar",
+  "contexto": "nosotros, mientras tanto, el alquiler",
+  "respuesta": "Nosotros pagamos el alquiler mientras tanto.",
+  "pista": "Habla del costo de la vivienda.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "pagamos"
+   ],
+   [
+    "el alquiler"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "pasar-presente-3389",
+  "verbo": "pasar",
+  "contexto": "tú, mientras tanto, mucho tiempo en el teléfono",
+  "respuesta": "Mientras tanto, tú pasas mucho tiempo en el teléfono.",
+  "pista": "Comenta sobre el uso del teléfono.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "pasas"
+   ],
+   [
+    "mucho tiempo en el telefono"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "permanecer-presente-3409",
+  "verbo": "permanecer",
+  "contexto": "yo, mientras tanto, en silencio",
+  "respuesta": "Yo permanezco en silencio mientras tanto.",
+  "pista": "Expresa contención.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "permanezco"
+   ],
+   [
+    "en silencio"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "pesar-presente-3418",
+  "verbo": "pesar",
+  "contexto": "yo, mientras tanto, los ingredientes antes de cocinar",
+  "respuesta": "Yo peso los ingredientes antes de cocinar mientras tanto.",
+  "pista": "Describe una medición.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "peso"
+   ],
+   [
+    "los ingredientes antes de cocinar"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "preferir-presente-3429",
+  "verbo": "preferir",
+  "contexto": "tú, cada vez, la comida casera",
+  "respuesta": "Tú prefieres la comida casera cada vez.",
+  "pista": "Habla de preferencias de comida.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "prefieres"
+   ],
+   [
+    "la comida casera"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "preparar-presente-3438",
+  "verbo": "preparar",
+  "contexto": "tú, cada vez, la maleta para el viaje",
+  "respuesta": "Cada vez, tú preparas la maleta para el viaje.",
+  "pista": "Describe los preparativos de un viaje.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "preparas"
+   ],
+   [
+    "la maleta para el viaje"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "producir-presente-3449",
+  "verbo": "producir",
+  "contexto": "nosotros, mientras tanto, resultados excelentes",
+  "respuesta": "Mientras tanto, nosotros producimos resultados excelentes.",
+  "pista": "Expresa el resultado de un equipo.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "producimos"
+   ],
+   [
+    "resultados excelentes"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "prometer-presente-3451",
+  "verbo": "prometer",
+  "contexto": "yo, mientras tanto, llegar a tiempo",
+  "respuesta": "Mientras tanto, yo prometo llegar a tiempo.",
+  "pista": "Expresa un compromiso.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "prometo"
+   ],
+   [
+    "llegar a tiempo"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "querer-presente-3460",
+  "verbo": "querer",
+  "contexto": "yo, cada vez, aprender a bailar",
+  "respuesta": "Yo quiero aprender a bailar cada vez.",
+  "pista": "Expresa un deseo.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "quiero"
+   ],
+   [
+    "aprender a bailar"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "recoger-presente-3474",
+  "verbo": "recoger",
+  "contexto": "nosotros, cada vez, los resultados del análisis",
+  "respuesta": "Nosotros recogemos los resultados del análisis cada vez.",
+  "pista": "Describe la recolección de datos.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "recogemos"
+   ],
+   [
+    "los resultados del analisis"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "representar-presente-3497",
+  "verbo": "representar",
+  "contexto": "ella, mientras tanto, a los trabajadores",
+  "respuesta": "Mientras tanto, ella representa a los trabajadores.",
+  "pista": "Narra el papel de un sindicato.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "representa"
+   ],
+   [
+    "a los trabajadores"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "resolver-presente-3500",
+  "verbo": "resolver",
+  "contexto": "nosotros, mientras tanto, el conflicto",
+  "respuesta": "Mientras tanto, nosotros resolvemos el conflicto.",
+  "pista": "Describe una mediación.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "resolvemos"
+   ],
+   [
+    "el conflicto"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "reunir-presente-3509",
+  "verbo": "reunir",
+  "contexto": "nosotros, cada vez, los fondos necesarios",
+  "respuesta": "Nosotros reunimos los fondos necesarios cada vez.",
+  "pista": "Expresa una recaudación de fondos.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "reunimos"
+   ],
+   [
+    "los fondos necesarios"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "reunir-presente-3510",
+  "verbo": "reunir",
+  "contexto": "ella, mientras tanto, la información para el proyecto",
+  "respuesta": "Ella reúne la información para el proyecto mientras tanto.",
+  "pista": "Narra una investigación.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "reune"
+   ],
+   [
+    "la informacion para el proyecto"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "romper-presente-3518",
+  "verbo": "romper",
+  "contexto": "tú, mientras tanto, las reglas",
+  "respuesta": "Tú rompes las reglas mientras tanto.",
+  "pista": "Describe el incumplimiento de una regla.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "rompes"
+   ],
+   [
+    "las reglas"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "romper-presente-3519",
+  "verbo": "romper",
+  "contexto": "ella, mientras tanto, el récord mundial",
+  "respuesta": "Ella rompe el récord mundial mientras tanto.",
+  "pista": "Narra un logro.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "rompe"
+   ],
+   [
+    "el record mundial"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "salvar-presente-3529",
+  "verbo": "salvar",
+  "contexto": "él, mientras tanto, vidas como médico",
+  "respuesta": "Él salva vidas como médico mientras tanto.",
+  "pista": "Describe el papel de un médico.",
+  "grupos": [
+   [
+    "el"
+   ],
+   [
+    "salva"
+   ],
+   [
+    "vidas como medico"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "seguir-presente-3533",
+  "verbo": "seguir",
+  "contexto": "tú, cada vez, las instrucciones",
+  "respuesta": "Cada vez, tú sigues las instrucciones.",
+  "pista": "Describe el cumplimiento de una norma.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "sigues"
+   ],
+   [
+    "las instrucciones"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "señalar-presente-3537",
+  "verbo": "señalar",
+  "contexto": "nosotros, mientras tanto, los puntos importantes",
+  "respuesta": "Mientras tanto, nosotros señalamos los puntos importantes.",
+  "pista": "Describe cómo se resalta algo.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "senalamos"
+   ],
+   [
+    "los puntos importantes"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "ser-presente-3546",
+  "verbo": "ser",
+  "contexto": "nosotros, mientras tanto, un equipo fuerte",
+  "respuesta": "Mientras tanto, nosotros somos un equipo fuerte.",
+  "pista": "Expresa la identidad de un equipo.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "somos"
+   ],
+   [
+    "un equipo fuerte"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "servir-presente-3548",
+  "verbo": "servir",
+  "contexto": "ella, cada vez, café a los clientes",
+  "respuesta": "Ella sirve café a los clientes cada vez.",
+  "pista": "Narra un servicio prestado.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "sirve"
+   ],
+   [
+    "cafe a los clientes"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "sonar-presente-3559",
+  "verbo": "sonar",
+  "contexto": "el teléfono, cada vez, durante la reunión",
+  "respuesta": "Cada vez, el teléfono suena durante la reunión.",
+  "pista": "Describe una interrupción.",
+  "grupos": [
+   [
+    "el telefono"
+   ],
+   [
+    "suena"
+   ],
+   [
+    "durante la reunion"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "temer-presente-3577",
+  "verbo": "temer",
+  "contexto": "yo, mientras tanto, lo peor",
+  "respuesta": "Yo temo lo peor mientras tanto.",
+  "pista": "Expresa miedo.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "temo"
+   ],
+   [
+    "lo peor"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "terminar-presente-3585",
+  "verbo": "terminar",
+  "contexto": "tú, mientras tanto, tus tareas",
+  "respuesta": "Tú terminas tus tareas mientras tanto.",
+  "pista": "Habla de las responsabilidades.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "terminas"
+   ],
+   [
+    "tus tareas"
+   ],
+   [
+    "mientras tanto"
+   ]
+  ]
+ },
+ {
+  "id": "tocar-presente-3591",
+  "verbo": "tocar",
+  "contexto": "nosotros, cada vez, en una banda",
+  "respuesta": "Nosotros tocamos en una banda cada vez.",
+  "pista": "Describe música en grupo.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "tocamos"
+   ],
+   [
+    "en una banda"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "tomar-presente-3592",
+  "verbo": "tomar",
+  "contexto": "yo, cada vez, una decisión importante",
+  "respuesta": "Yo tomo una decisión importante cada vez.",
+  "pista": "Expresa la toma de una decisión.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "tomo"
+   ],
+   [
+    "una decision importante"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "utilizar-presente-3615",
+  "verbo": "utilizar",
+  "contexto": "ella, cada vez, métodos innovadores",
+  "respuesta": "Cada vez, ella utiliza métodos innovadores.",
+  "pista": "Narra enfoques creativos.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "utiliza"
+   ],
+   [
+    "metodos innovadores"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "vender-presente-3621",
+  "verbo": "vender",
+  "contexto": "nosotros, cada vez, servicios de consultoría",
+  "respuesta": "Nosotros vendemos servicios de consultoría cada vez.",
+  "pista": "Describe una oferta profesional.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "vendemos"
+   ],
+   [
+    "servicios de consultoria"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "viajar-presente-3628",
+  "verbo": "viajar",
+  "contexto": "yo, cada vez, por Europa",
+  "respuesta": "Cada vez, yo viajo por Europa.",
+  "pista": "Describe un viaje.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "viajo"
+   ],
+   [
+    "por Europa"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "vivir-presente-3631",
+  "verbo": "vivir",
+  "contexto": "yo, cada vez, en una ciudad grande",
+  "respuesta": "Yo vivo en una ciudad grande cada vez.",
+  "pista": "Expresa dónde vive alguien.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "vivo"
+   ],
+   [
+    "en una ciudad grande"
+   ],
+   [
+    "cada vez"
+   ]
+  ]
+ },
+ {
+  "id": "tranquilar-presente-3601",
+  "verbo": "tranquilizar",
+  "contexto": "yo, esta tarde, a los pasajeros nerviosos",
+  "respuesta": "Yo tranquilizo a los pasajeros nerviosos esta tarde.",
+  "pista": "Expresa cómo alguien calma a otros.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "tranquilizo"
+   ],
+   [
+    "a los pasajeros nerviosos"
+   ],
+   [
+    "esta tarde"
+   ]
+  ]
+ },
+ {
+  "id": "tranquilar-presente-3602",
+  "verbo": "tranquilizar",
+  "contexto": "ella, siempre, a su hijo antes de dormir",
+  "respuesta": "Ella tranquiliza a su hijo antes de dormir siempre.",
+  "pista": "Narra una rutina antes de dormir.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "tranquiliza"
+   ],
+   [
+    "a su hijo antes de dormir"
+   ],
+   [
+    "siempre"
+   ]
+  ]
+ },
+ {
+  "id": "tranquilar-presente-3603",
+  "verbo": "tranquilizar",
+  "contexto": "nosotros, ahora, a los vecinos preocupados",
+  "respuesta": "Ahora, nosotros tranquilizamos a los vecinos preocupados.",
+  "pista": "Describe cómo se tranquiliza a la comunidad.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "tranquilizamos"
+   ],
+   [
+    "a los vecinos preocupados"
+   ],
+   [
+    "ahora"
+   ]
+  ]
+ },
+ {
+  "id": "bastar-presente-2954",
+  "verbo": "bastar",
+  "contexto": "a todos, normalmente, con su presencia",
+  "respuesta": "Normalmente, a todos les basta con su presencia.",
+  "pista": "Describe que algo es suficiente.",
+  "grupos": [
+   [
+    "a todos"
+   ],
+   [
+    "les basta"
+   ],
+   [
+    "con su presencia"
+   ],
+   [
+    "normalmente"
+   ]
+  ]
+ },
+ {
+  "id": "bastar-presente-2955",
+  "verbo": "bastar",
+  "contexto": "ellos, ahora, con poco dinero",
+  "respuesta": "A ellos les basta con poco dinero ahora.",
+  "pista": "Expresa que algo es suficiente.",
+  "grupos": [
+   [
+    "a ellos"
+   ],
+   [
+    "les basta"
+   ],
+   [
+    "con poco dinero"
+   ],
+   [
+    "ahora"
+   ]
+  ]
+ },
+ {
+  "id": "gustar-presente-3228",
+  "verbo": "gustar",
+  "contexto": "nosotros, normalmente, a nuestros profesores",
+  "respuesta": "Les gustamos a nuestros profesores normalmente.",
+  "pista": "Expresa la aprobación de un profesor.",
+  "grupos": [
+   [
+    "les"
+   ],
+   [
+    "gustamos"
+   ],
+   [
+    "a nuestros profesores"
+   ],
+   [
+    "normalmente"
+   ]
+  ]
+ },
+ {
+  "id": "engañar-presente-3158",
+  "verbo": "engañar",
+  "contexto": "yo, a nadie",
+  "respuesta": "Yo no engaño a nadie.",
+  "pista": "Expresa honestidad.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "no engano"
+   ],
+   [
+    "a nadie"
+   ]
+  ]
+ },
+ {
+  "id": "mentir-presente-3320",
+  "verbo": "mentir",
+  "contexto": "yo, esta tarde, nunca a mis amigos",
+  "respuesta": "Esta tarde, nunca miento a mis amigos.",
+  "pista": "Expresa honestidad.",
+  "grupos": [
+   [
+    "nunca"
+   ],
+   [
+    "miento"
+   ],
+   [
+    "a mis amigos"
+   ],
+   [
+    "esta tarde"
+   ]
+  ]
+ },
+ {
+  "id": "haber-presente-3230",
+  "verbo": "haber",
+  "contexto": "tú, en este momento, mucho",
+  "respuesta": "Tú has estudiado mucho en este momento.",
+  "pista": "Describe un esfuerzo.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "has estudiado"
+   ],
+   [
+    "mucho"
+   ],
+   [
+    "en este momento"
+   ]
+  ]
+ },
+ {
+  "id": "haber-presente-3231",
+  "verbo": "haber",
+  "contexto": "nosotros, esta noche, llegado temprano",
+  "respuesta": "Esta noche, nosotros hemos llegado temprano.",
+  "pista": "Narra una llegada puntual.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "hemos"
+   ],
+   [
+    "llegado temprano"
+   ],
+   [
+    "esta noche"
+   ]
+  ]
+ },
+ {
+  "id": "morir-presente-3334",
+  "verbo": "morir",
+  "contexto": "las plantas, a veces, sin agua",
+  "respuesta": "Las plantas mueren sin agua a veces.",
+  "pista": "Describe las consecuencias del descuido.",
+  "grupos": [
+   [
+    "las plantas"
+   ],
+   [
+    "mueren"
+   ],
+   [
+    "sin agua"
+   ],
+   [
+    "a veces"
+   ]
+  ]
+ },
+ {
+  "id": "costar-presente-3050",
+  "verbo": "costar",
+  "contexto": "los zapatos, siempre, cien dólares",
+  "respuesta": "Los zapatos cuestan cien dólares siempre.",
+  "pista": "Describe un costo.",
+  "grupos": [
+   [
+    "los zapatos"
+   ],
+   [
+    "cuestan"
+   ],
+   [
+    "cien dolares"
+   ],
+   [
+    "siempre"
+   ]
+  ]
+ },
+ {
+  "id": "crecer-presente-3056",
+  "verbo": "crecer",
+  "contexto": "los niños, cada semana, muy rápido",
+  "respuesta": "Los niños crecen muy rápido cada semana.",
+  "pista": "Describe el desarrollo infantil.",
+  "grupos": [
+   [
+    "los ninos"
+   ],
+   [
+    "crecen"
+   ],
+   [
+    "muy rapido"
+   ],
+   [
+    "cada semana"
+   ]
+  ]
+ },
+ {
+  "id": "ocurrir-presente-3362",
+  "verbo": "ocurrir",
+  "contexto": "los accidentes, hoy, en esa esquina",
+  "respuesta": "Los accidentes ocurren en esa esquina hoy.",
+  "pista": "Describe una zona de peligro.",
+  "grupos": [
+   [
+    "los accidentes"
+   ],
+   [
+    "ocurren"
+   ],
+   [
+    "en esa esquina"
+   ],
+   [
+    "hoy"
+   ]
+  ]
+ },
+ {
+  "id": "suceder-presente-3567",
+  "verbo": "suceder",
+  "contexto": "los problemas, cada semana, cuando menos lo esperas",
+  "respuesta": "Cada semana, los problemas suceden cuando menos lo esperas.",
+  "pista": "Describe un problema inesperado.",
+  "grupos": [
+   [
+    "los problemas"
+   ],
+   [
+    "suceden"
+   ],
+   [
+    "cuando menos lo esperas"
+   ],
+   [
+    "cada semana"
+   ]
+  ]
+ },
+ {
+  "id": "nacer-presente-3344",
+  "verbo": "nacer",
+  "contexto": "los bebés, actualmente, en el hospital",
+  "respuesta": "Los bebés nacen en el hospital actualmente.",
+  "pista": "Describe el nacimiento de un bebé.",
+  "grupos": [
+   [
+    "los bebes"
+   ],
+   [
+    "nacen"
+   ],
+   [
+    "en el hospital"
+   ],
+   [
+    "actualmente"
+   ]
+  ]
+ },
+ {
+  "id": "cometer-presente-2999",
+  "verbo": "cometer",
+  "contexto": "tú, esta noche, errores a veces",
+  "respuesta": "Esta noche, tú cometes errores a veces.",
+  "pista": "Habla de la condición humana.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "cometes"
+   ],
+   [
+    "errores a veces"
+   ],
+   [
+    "esta noche"
+   ]
+  ]
+ },
+ {
+  "id": "cometer-presente-3000",
+  "verbo": "cometer",
+  "contexto": "ellos, siempre, faltas graves",
+  "respuesta": "Siempre, ellos cometen faltas graves.",
+  "pista": "Describe un asunto serio.",
+  "grupos": [
+   [
+    "ellos"
+   ],
+   [
+    "cometen"
+   ],
+   [
+    "faltas graves"
+   ],
+   [
+    "siempre"
+   ]
+  ]
+ },
+ {
+  "id": "cumplir-presente-3068",
+  "verbo": "cumplir",
+  "contexto": "ella, ahora, con sus obligaciones",
+  "respuesta": "Ahora, ella cumple con sus obligaciones.",
+  "pista": "Narra una responsabilidad.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "cumple"
+   ],
+   [
+    "con sus obligaciones"
+   ],
+   [
+    "ahora"
+   ]
+  ]
+ },
+ {
+  "id": "discutir-presente-3127",
+  "verbo": "discutir",
+  "contexto": "nosotros, actualmente, el tema en la reunión",
+  "respuesta": "Nosotros discutimos el tema en la reunión actualmente.",
+  "pista": "Describe una reunión.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "discutimos"
+   ],
+   [
+    "el tema en la reunion"
+   ],
+   [
+    "actualmente"
+   ]
+  ]
+ },
+ {
+  "id": "discutir-presente-3129",
+  "verbo": "discutir",
+  "contexto": "ellos, cada semana, sobre política",
+  "respuesta": "Cada semana, ellos discuten sobre política.",
+  "pista": "Narra un debate.",
+  "grupos": [
+   [
+    "ellos"
+   ],
+   [
+    "discuten"
+   ],
+   [
+    "sobre politica"
+   ],
+   [
+    "cada semana"
+   ]
+  ]
+ },
+ {
+  "id": "esconder-presente-3182",
+  "verbo": "esconder",
+  "contexto": "tú, normalmente, tus emociones",
+  "respuesta": "Tú escondes tus emociones normalmente.",
+  "pista": "Habla del control emocional.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "escondes"
+   ],
+   [
+    "tus emociones"
+   ],
+   [
+    "normalmente"
+   ]
+  ]
+ },
+ {
+  "id": "esconder-presente-3183",
+  "verbo": "esconder",
+  "contexto": "ella, hoy, las galletas de los niños",
+  "respuesta": "Hoy, ella esconde las galletas de los niños.",
+  "pista": "Narra un acto juguetón.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "esconde"
+   ],
+   [
+    "las galletas de los ninos"
+   ],
+   [
+    "hoy"
+   ]
+  ]
+ },
+ {
+  "id": "prometer-presente-3452",
+  "verbo": "prometer",
+  "contexto": "tú, a veces, no decir nada",
+  "respuesta": "Tú prometes no decir nada a veces.",
+  "pista": "Describe una promesa.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "prometes"
+   ],
+   [
+    "no decir nada"
+   ],
+   [
+    "a veces"
+   ]
+  ]
+ },
+ {
+  "id": "prometer-presente-3453",
+  "verbo": "prometer",
+  "contexto": "nosotros, esta noche, hacer nuestro mejor esfuerzo",
+  "respuesta": "Esta noche, nosotros prometemos hacer nuestro mejor esfuerzo.",
+  "pista": "Expresa la dedicación de un equipo.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "prometemos"
+   ],
+   [
+    "hacer nuestro mejor esfuerzo"
+   ],
+   [
+    "esta noche"
+   ]
+  ]
+ },
+ {
+  "id": "unir-presente-3607",
+  "verbo": "unir",
+  "contexto": "nosotros, en este momento, fuerzas para el proyecto",
+  "respuesta": "Nosotros unimos fuerzas para el proyecto en este momento.",
+  "pista": "Expresa una colaboración.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "unimos"
+   ],
+   [
+    "fuerzas para el proyecto"
+   ],
+   [
+    "en este momento"
+   ]
+  ]
+ },
+ {
+  "id": "unir-presente-3609",
+  "verbo": "unir",
+  "contexto": "ella, esta tarde, a la familia en momentos difíciles",
+  "respuesta": "Esta tarde, ella une a la familia en momentos difíciles.",
+  "pista": "Narra la unión familiar.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "une"
+   ],
+   [
+    "a la familia en momentos dificiles"
+   ],
+   [
+    "esta tarde"
+   ]
+  ]
+ },
+ {
+  "id": "dejar-presente-3085",
+  "verbo": "dejar",
+  "contexto": "yo, ahora mismo, el café sobre la mesa",
+  "respuesta": "Ahora mismo, yo dejo el café sobre la mesa.",
+  "pista": "Describe una acción sencilla.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "dejo"
+   ],
+   [
+    "el cafe sobre la mesa"
+   ],
+   [
+    "ahora mismo"
+   ]
+  ]
+ },
+ {
+  "id": "hablar-presente-3232",
+  "verbo": "hablar",
+  "contexto": "yo, por lo general, con mi amigo",
+  "respuesta": "Yo hablo con mi amigo por lo general.",
+  "pista": "Describe una conversación.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "hablo"
+   ],
+   [
+    "con mi amigo"
+   ],
+   [
+    "por lo general"
+   ]
+  ]
+ },
+ {
+  "id": "nacer-presente-3343",
+  "verbo": "nacer",
+  "contexto": "en una ciudad pequeña",
+  "respuesta": "Nazco en una ciudad pequeña.",
+  "pista": "Expresa un origen.",
+  "grupos": [
+   [
+    "nazco"
+   ],
+   [
+    "en una ciudad pequena"
+   ]
+  ]
+ },
+ {
+  "id": "enviar-presente-3175",
+  "verbo": "enviar",
+  "contexto": "yo, esta noche, un mensaje",
+  "respuesta": "Yo envío un mensaje esta noche.",
+  "pista": "Describe un acto de comunicación.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "envio"
+   ],
+   [
+    "un mensaje"
+   ],
+   [
+    "esta noche"
+   ]
+  ]
+ },
+ {
+  "id": "enviar-presente-3177",
+  "verbo": "enviar",
+  "contexto": "ella, esta noche, flores a su madre",
+  "respuesta": "Ella envía flores a su madre esta noche.",
+  "pista": "Narra un gesto considerado.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "envia"
+   ],
+   [
+    "flores a su madre"
+   ],
+   [
+    "esta noche"
+   ]
+  ]
+ },
+ {
+  "id": "actuar-presente-2881",
+  "verbo": "actuar",
+  "contexto": "él, actualmente, en la película",
+  "respuesta": "Actualmente, él actúa en la película.",
+  "pista": "Describe el papel actual de él.",
+  "grupos": [
+   [
+    "el"
+   ],
+   [
+    "actua"
+   ],
+   [
+    "en la pelicula"
+   ],
+   [
+    "actualmente"
+   ]
+  ]
+ },
+ {
+  "id": "actuar-presente-2882",
+  "verbo": "actuar",
+  "contexto": "yo, ahora, con responsabilidad",
+  "respuesta": "Ahora, yo actúo con responsabilidad.",
+  "pista": "Expresa cómo se comporta alguien.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "actuo"
+   ],
+   [
+    "con responsabilidad"
+   ],
+   [
+    "ahora"
+   ]
+  ]
+ },
+ {
+  "id": "actuar-presente-2883",
+  "verbo": "actuar",
+  "contexto": "ellas, a veces, en el teatro",
+  "respuesta": "A veces, ellas actúan en el teatro.",
+  "pista": "Narra actividades actuales.",
+  "grupos": [
+   [
+    "ellas"
+   ],
+   [
+    "actuan"
+   ],
+   [
+    "en el teatro"
+   ],
+   [
+    "a veces"
+   ]
+  ]
+ },
+ {
+  "id": "confiar-presente-3013",
+  "verbo": "confiar",
+  "contexto": "yo, hoy, en mi equipo",
+  "respuesta": "Hoy, yo confío en mi equipo.",
+  "pista": "Expresa confianza.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "confio"
+   ],
+   [
+    "en mi equipo"
+   ],
+   [
+    "hoy"
+   ]
+  ]
+ },
+ {
+  "id": "confiar-presente-3014",
+  "verbo": "confiar",
+  "contexto": "ella, todos los días, en sus amigos",
+  "respuesta": "Ella confía en sus amigos todos los días.",
+  "pista": "Describe las relaciones de ella.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "confia"
+   ],
+   [
+    "en sus amigos"
+   ],
+   [
+    "todos los dias"
+   ]
+  ]
+ },
+ {
+  "id": "continuar-presente-3035",
+  "verbo": "continuar",
+  "contexto": "yo, por lo general, mi camino",
+  "respuesta": "Yo continúo mi camino por lo general.",
+  "pista": "Describe un movimiento hacia adelante.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "continuo"
+   ],
+   [
+    "mi camino"
+   ],
+   [
+    "por lo general"
+   ]
+  ]
+ },
+ {
+  "id": "continuar-presente-3036",
+  "verbo": "continuar",
+  "contexto": "ella, en este momento, sus estudios",
+  "respuesta": "Ella continúa sus estudios en este momento.",
+  "pista": "Narra la dedicación de ella.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "continua"
+   ],
+   [
+    "sus estudios"
+   ],
+   [
+    "en este momento"
+   ]
+  ]
+ },
+ {
+  "id": "existir-presente-3203",
+  "verbo": "existir",
+  "contexto": "esa tradición, todavía, en otro continente",
+  "respuesta": "Esa tradición todavía existe en otro continente.",
+  "pista": "Describe dónde se encuentran unos seres.",
+  "grupos": [
+   [
+    "esa tradicion"
+   ],
+   [
+    "existe"
+   ],
+   [
+    "todavia"
+   ],
+   [
+    "en otro continente"
+   ]
+  ]
+ },
+ {
+  "id": "existir-presente-3204",
+  "verbo": "existir",
+  "contexto": "yo, para ayudar",
+  "respuesta": "Yo existo para ayudar.",
+  "pista": "Expresa un propósito.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "existo"
+   ],
+   [
+    "para ayudar"
+   ]
+  ]
+ },
+ {
+  "id": "tener-presente-3580",
+  "verbo": "tener",
+  "contexto": "yo, dos hermanos",
+  "respuesta": "Yo tengo dos hermanos.",
+  "pista": "Describe a la familia.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "tengo"
+   ],
+   [
+    "dos hermanos"
+   ]
+  ]
+ },
+ {
+  "id": "ser-presente-3544",
+  "verbo": "ser",
+  "contexto": "yo, profesor de historia",
+  "respuesta": "Yo soy profesor de historia.",
+  "pista": "Expresa una identidad.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "soy"
+   ],
+   [
+    "profesor de historia"
+   ]
+  ]
+ },
+ {
+  "id": "soler-presente-3554",
+  "verbo": "soler",
+  "contexto": "ella, cocinar los domingos",
+  "respuesta": "Ella suele cocinar los domingos.",
+  "pista": "Narra una rutina.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "suele"
+   ],
+   [
+    "cocinar los domingos"
+   ]
+  ]
+ },
+ {
+  "id": "soler-presente-3555",
+  "verbo": "soler",
+  "contexto": "nosotros, ir al cine los sábados",
+  "respuesta": "Nosotros solemos ir al cine los sábados.",
+  "pista": "Describe un hábito de fin de semana.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "solemos"
+   ],
+   [
+    "ir al cine los sabados"
+   ]
+  ]
+ },
+ {
+  "id": "casar-futuro-3763",
+  "verbo": "casarse",
+  "contexto": "ellos, en junio",
+  "respuesta": "Ellos se casarán en junio.",
+  "pista": "El futuro simple es uno de los tiempos más regulares del español",
+  "grupos": [
+   [
+    "ellos"
+   ],
+   [
+    "se casaran"
+   ],
+   [
+    "en junio"
+   ]
+  ]
+ },
+ {
+  "id": "casar-futuro-3764",
+  "verbo": "casarse",
+  "contexto": "yo, el año que viene, con mi pareja",
+  "respuesta": "Yo me casaré con mi pareja el año que viene.",
+  "pista": "El futuro simple se forma con el infinitivo + terminación",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "me casare"
+   ],
+   [
+    "con mi pareja"
+   ],
+   [
+    "el ano que viene"
+   ]
+  ]
+ },
+ {
+  "id": "casar-futuro-3765",
+  "verbo": "casarse",
+  "contexto": "mi hermana, el año que viene, en la iglesia",
+  "respuesta": "Mi hermana se casará en la iglesia el año que viene.",
+  "pista": "El futuro simple se forma con el infinitivo + terminación",
+  "grupos": [
+   [
+    "mi hermana"
+   ],
+   [
+    "se casara"
+   ],
+   [
+    "en la iglesia"
+   ],
+   [
+    "el ano que viene"
+   ]
+  ]
+ },
+ {
+  "id": "asesinar-futuro-3709",
+  "verbo": "asesinar",
+  "contexto": "el villano, en la novela, al rey, dentro de una hora",
+  "respuesta": "En la novela, el villano asesinará al rey dentro de una hora.",
+  "pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+  "grupos": [
+   [
+    "el villano"
+   ],
+   [
+    "asesinara"
+   ],
+   [
+    "al rey"
+   ],
+   [
+    "en la novela"
+   ],
+   [
+    "dentro de una hora"
+   ]
+  ]
+ },
+ {
+  "id": "asesinar-futuro-3710",
+  "verbo": "asesinar",
+  "contexto": "él, en la película, al personaje, dentro de una hora",
+  "respuesta": "En la película, él asesinará al personaje dentro de una hora.",
+  "pista": "El futuro simple indica una acción posterior al momento de hablar",
+  "grupos": [
+   [
+    "el"
+   ],
+   [
+    "asesinara"
+   ],
+   [
+    "al personaje"
+   ],
+   [
+    "en la pelicula"
+   ],
+   [
+    "dentro de una hora"
+   ]
+  ]
+ },
+ {
+  "id": "engañar-futuro-3938",
+  "verbo": "engañar",
+  "contexto": "yo, el lunes, a nadie",
+  "respuesta": "Yo no engañaré a nadie el lunes.",
+  "pista": "El futuro simple es uno de los tiempos más regulares del español",
+  "grupos": [
+   [
+    "yo no"
+   ],
+   [
+    "enganare"
+   ],
+   [
+    "a nadie"
+   ],
+   [
+    "el lunes"
+   ]
+  ]
+ },
+ {
+  "id": "enterar-futuro-3946",
+  "verbo": "enterarse",
+  "contexto": "yo, en unos minutos, de la noticia",
+  "respuesta": "Yo me enteraré de la noticia en unos minutos.",
+  "pista": "Usa el futuro para hablar de planes y proyectos",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "me enterare"
+   ],
+   [
+    "de la noticia"
+   ],
+   [
+    "en unos minutos"
+   ]
+  ]
+ },
+ {
+  "id": "enterar-futuro-3947",
+  "verbo": "enterarse",
+  "contexto": "tú, el año que viene, de la verdad",
+  "respuesta": "Tú te enterarás de la verdad el año que viene.",
+  "pista": "El futuro simple se forma con el infinitivo + terminación",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "te enteraras"
+   ],
+   [
+    "de la verdad"
+   ],
+   [
+    "el ano que viene"
+   ]
+  ]
+ },
+ {
+  "id": "enterar-futuro-3948",
+  "verbo": "enterarse",
+  "contexto": "mis padres, el próximo mes, de todo",
+  "respuesta": "Mis padres se enterarán de todo el próximo mes.",
+  "pista": "Usa el futuro para hablar de planes y proyectos",
+  "grupos": [
+   [
+    "mis padres"
+   ],
+   [
+    "se enteraran"
+   ],
+   [
+    "de todo"
+   ],
+   [
+    "el proximo mes"
+   ]
+  ]
+ },
+ {
+  "id": "mentir-futuro-4099",
+  "verbo": "mentir",
+  "contexto": "yo, nunca más",
+  "respuesta": "Yo no mentiré nunca más.",
+  "pista": "Usa el futuro para expresar acciones que ocurrirán",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "no mentire"
+   ],
+   [
+    "nunca mas"
+   ]
+  ]
+ },
+ {
+  "id": "molestar-futuro-4112",
+  "verbo": "molestar",
+  "contexto": "yo, en unos minutos, a nadie",
+  "respuesta": "Yo no molestaré a nadie en unos minutos.",
+  "pista": "Las terminaciones del futuro son iguales para las tres conjugaciones",
+  "grupos": [
+   [
+    "yo no"
+   ],
+   [
+    "molestare"
+   ],
+   [
+    "a nadie"
+   ],
+   [
+    "en unos minutos"
+   ]
+  ]
+ },
+ {
+  "id": "preocupar-futuro-4215",
+  "verbo": "preocupar",
+  "contexto": "yo, el año que viene, por mi familia",
+  "respuesta": "Yo me preocuparé por mi familia el año que viene.",
+  "pista": "Las terminaciones del futuro son iguales para las tres conjugaciones",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "me preocupare"
+   ],
+   [
+    "por mi familia"
+   ],
+   [
+    "el ano que viene"
+   ]
+  ]
+ },
+ {
+  "id": "soler-futuro-4333",
+  "verbo": "acostumbrarse",
+  "contexto": "yo, dentro de poco, a estudiar por la noche",
+  "respuesta": "Yo me acostumbraré a estudiar por la noche dentro de poco.",
+  "pista": "El futuro simple se forma con el infinitivo + terminación",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "me acostumbrare"
+   ],
+   [
+    "a estudiar por la noche"
+   ],
+   [
+    "dentro de poco"
+   ]
+  ]
+ },
+ {
+  "id": "soler-futuro-4334",
+  "verbo": "acostumbrarse",
+  "contexto": "tú, la próxima vez, a correr por las mañanas",
+  "respuesta": "Tú te acostumbrarás a correr por las mañanas la próxima vez.",
+  "pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "te acostumbraras"
+   ],
+   [
+    "a correr por las mananas"
+   ],
+   [
+    "la proxima vez"
+   ]
+  ]
+ },
+ {
+  "id": "soler-futuro-4335",
+  "verbo": "acostumbrarse",
+  "contexto": "nosotros, la semana que viene, a cenar a las ocho",
+  "respuesta": "Nosotros nos acostumbraremos a cenar a las ocho la semana que viene.",
+  "pista": "El futuro simple indica una acción posterior al momento de hablar",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "nos acostumbraremos"
+   ],
+   [
+    "a cenar a las ocho"
+   ],
+   [
+    "la semana que viene"
+   ]
+  ]
+ },
+ {
+  "id": "tranquilar-futuro-4381",
+  "verbo": "tranquilizar",
+  "contexto": "yo, pasado mañana, a los pasajeros",
+  "respuesta": "Yo tranquilizaré a los pasajeros pasado mañana.",
+  "pista": "Las terminaciones del futuro son iguales para las tres conjugaciones",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "tranquilizare"
+   ],
+   [
+    "a los pasajeros"
+   ],
+   [
+    "pasado manana"
+   ]
+  ]
+ },
+ {
+  "id": "tranquilar-futuro-4382",
+  "verbo": "tranquilizar",
+  "contexto": "la música, dentro de poco, el ambiente",
+  "respuesta": "La música tranquilizará el ambiente dentro de poco.",
+  "pista": "El futuro simple puede expresar probabilidad en el presente",
+  "grupos": [
+   [
+    "la musica"
+   ],
+   [
+    "tranquilizara"
+   ],
+   [
+    "el ambiente"
+   ],
+   [
+    "dentro de poco"
+   ]
+  ]
+ },
+ {
+  "id": "tranquilar-futuro-4383",
+  "verbo": "tranquilizar",
+  "contexto": "tú, el próximo mes, a los niños",
+  "respuesta": "Tú tranquilizarás a los niños el próximo mes.",
+  "pista": "Usa el futuro para hablar de planes y proyectos",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "tranquilizaras"
+   ],
+   [
+    "a los ninos"
+   ],
+   [
+    "el proximo mes"
+   ]
+  ]
+ },
+ {
+  "id": "joder-futuro-4048",
+  "verbo": "arruinar",
+  "contexto": "la lluvia, esta noche, nuestros planes",
+  "respuesta": "La lluvia arruinará nuestros planes esta noche.",
+  "pista": "El futuro simple se forma con el infinitivo + terminación",
+  "grupos": [
+   [
+    "la lluvia"
+   ],
+   [
+    "arruinara"
+   ],
+   [
+    "nuestros planes"
+   ],
+   [
+    "esta noche"
+   ]
+  ]
+ },
+ {
+  "id": "joder-futuro-4049",
+  "verbo": "arruinar",
+  "contexto": "el ruido, la semana que viene, la concentración",
+  "respuesta": "El ruido arruinará la concentración la semana que viene.",
+  "pista": "El futuro simple indica una acción posterior al momento de hablar",
+  "grupos": [
+   [
+    "el ruido"
+   ],
+   [
+    "arruinara"
+   ],
+   [
+    "la concentracion"
+   ],
+   [
+    "la semana que viene"
+   ]
+  ]
+ },
+ {
+  "id": "joder-futuro-4050",
+  "verbo": "arruinar",
+  "contexto": "el retraso, en el futuro, el horario",
+  "respuesta": "El retraso arruinará el horario en el futuro.",
+  "pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+  "grupos": [
+   [
+    "el retraso"
+   ],
+   [
+    "arruinara"
+   ],
+   [
+    "el horario"
+   ],
+   [
+    "en el futuro"
+   ]
+  ]
+ },
+ {
+  "id": "importar-futuro-4028",
+  "verbo": "importar",
+  "contexto": "tu opinión, siempre",
+  "respuesta": "Tu opinión siempre importará.",
+  "pista": "Recuerda: infinitivo + é, ás, á, emos, éis, án",
+  "grupos": [
+   [
+    "tu opinion"
+   ],
+   [
+    "importara"
+   ],
+   [
+    "siempre"
+   ]
+  ]
+ },
+ {
+  "id": "asesinar-condicional-4489",
+  "verbo": "asesinar",
+  "contexto": "él, con más tiempo, al villano de la historia",
+  "respuesta": "Él asesinaría al villano de la historia con más tiempo.",
+  "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+  "grupos": [
+   [
+    "el"
+   ],
+   [
+    "asesinaria"
+   ],
+   [
+    "al villano de la historia"
+   ],
+   [
+    "con mas tiempo"
+   ]
+  ]
+ },
+ {
+  "id": "besar-condicional-4520",
+  "verbo": "besar",
+  "contexto": "ella, en esa situación, a su pareja",
+  "respuesta": "Ella besaría a su pareja en esa situación.",
+  "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "besaria"
+   ],
+   [
+    "a su pareja"
+   ],
+   [
+    "en esa situacion"
+   ]
+  ]
+ },
+ {
+  "id": "caer-condicional-4525",
+  "verbo": "caer",
+  "contexto": "él, con más tiempo, de pie",
+  "respuesta": "Él caería de pie con más tiempo.",
+  "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+  "grupos": [
+   [
+    "el"
+   ],
+   [
+    "caeria"
+   ],
+   [
+    "de pie"
+   ],
+   [
+    "con mas tiempo"
+   ]
+  ]
+ },
+ {
+  "id": "cometer-condicional-4558",
+  "verbo": "cometer",
+  "contexto": "tú, si pudieras, con entusiasmo",
+  "respuesta": "Tú cometerías el mismo error con entusiasmo si pudieras.",
+  "pista": "Expresa una acción hipotética que depende de una condición.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "cometerias el mismo error"
+   ],
+   [
+    "con entusiasmo"
+   ],
+   [
+    "si pudieras"
+   ]
+  ]
+ },
+ {
+  "id": "cometer-condicional-4559",
+  "verbo": "cometer",
+  "contexto": "nosotros, si fuera posible, de buena gana",
+  "respuesta": "Nosotros cometeríamos el mismo error de buena gana si fuera posible.",
+  "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "cometeriamos el mismo error"
+   ],
+   [
+    "de buena gana"
+   ],
+   [
+    "si fuera posible"
+   ]
+  ]
+ },
+ {
+  "id": "cometer-condicional-4560",
+  "verbo": "cometer",
+  "contexto": "ustedes, de ser posible, mejor",
+  "respuesta": "Ustedes cometerían menos errores de ser posible.",
+  "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+  "grupos": [
+   [
+    "ustedes"
+   ],
+   [
+    "cometerian"
+   ],
+   [
+    "menos errores"
+   ],
+   [
+    "de ser posible"
+   ]
+  ]
+ },
+ {
+  "id": "costar-condicional-4609",
+  "verbo": "costar",
+  "contexto": "yo, en tu lugar, menos esfuerzo",
+  "respuesta": "Me costaría menos esfuerzo en tu lugar.",
+  "pista": "Expresa lo que harías en la situación de otra persona.",
+  "grupos": [
+   [
+    "me"
+   ],
+   [
+    "costaria"
+   ],
+   [
+    "menos esfuerzo"
+   ],
+   [
+    "en tu lugar"
+   ]
+  ]
+ },
+ {
+  "id": "costar-condicional-4610",
+  "verbo": "costar",
+  "contexto": "ella, en esa situación, menos esfuerzo",
+  "respuesta": "Le costaría menos esfuerzo en esa situación.",
+  "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+  "grupos": [
+   [
+    "le"
+   ],
+   [
+    "costaria"
+   ],
+   [
+    "menos esfuerzo"
+   ],
+   [
+    "en esa situacion"
+   ]
+  ]
+ },
+ {
+  "id": "costar-condicional-4611",
+  "verbo": "costar",
+  "contexto": "ellos, en un mundo ideal, menos esfuerzo",
+  "respuesta": "Les costaría menos esfuerzo en un mundo ideal.",
+  "pista": "Describe una situación ideal e imaginaria.",
+  "grupos": [
+   [
+    "les costaria"
+   ],
+   [
+    "menos esfuerzo"
+   ],
+   [
+    "en un mundo ideal"
+   ]
+  ]
+ },
+ {
+  "id": "dejar-condicional-4645",
+  "verbo": "dejar",
+  "contexto": "yo, en tu lugar, mejor",
+  "respuesta": "Yo lo dejaría mejor en tu lugar.",
+  "pista": "Expresa lo que harías en la situación de otra persona.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "lo dejaria"
+   ],
+   [
+    "mejor"
+   ],
+   [
+    "en tu lugar"
+   ]
+  ]
+ },
+ {
+  "id": "dejar-condicional-4646",
+  "verbo": "dejar",
+  "contexto": "ella, en esa situación, con serenidad",
+  "respuesta": "Ella lo dejaría con serenidad en esa situación.",
+  "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "lo dejaria"
+   ],
+   [
+    "con serenidad"
+   ],
+   [
+    "en esa situacion"
+   ]
+  ]
+ },
+ {
+  "id": "dejar-condicional-4647",
+  "verbo": "dejar",
+  "contexto": "ellos, en un mundo ideal, sin límites",
+  "respuesta": "Ellos lo dejarían pasar sin límites en un mundo ideal.",
+  "pista": "Describe una situación ideal e imaginaria.",
+  "grupos": [
+   [
+    "ellos"
+   ],
+   [
+    "lo dejarian pasar"
+   ],
+   [
+    "sin limites"
+   ],
+   [
+    "en un mundo ideal"
+   ]
+  ]
+ },
+ {
+  "id": "ganar-condicional-4776",
+  "verbo": "ganar",
+  "contexto": "ustedes, de ser posible, mejor",
+  "respuesta": "Ustedes ganarían más de ser posible.",
+  "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+  "grupos": [
+   [
+    "ustedes"
+   ],
+   [
+    "ganarian"
+   ],
+   [
+    "mas"
+   ],
+   [
+    "de ser posible"
+   ]
+  ]
+ },
+ {
+  "id": "obtener-condicional-4915",
+  "verbo": "obtener",
+  "contexto": "yo, en tu lugar, de otra manera",
+  "respuesta": "Yo lo obtendría de otra manera en tu lugar.",
+  "pista": "Expresa lo que harías en la situación de otra persona.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "lo obtendria"
+   ],
+   [
+    "de otra manera"
+   ],
+   [
+    "en tu lugar"
+   ]
+  ]
+ },
+ {
+  "id": "obtener-condicional-4917",
+  "verbo": "obtener",
+  "contexto": "ellos, en un mundo ideal, sin preocupaciones",
+  "respuesta": "Ellos lo obtendrían sin preocupaciones en un mundo ideal.",
+  "pista": "Describe una situación ideal e imaginaria.",
+  "grupos": [
+   [
+    "ellos"
+   ],
+   [
+    "lo obtendrian"
+   ],
+   [
+    "sin preocupaciones"
+   ],
+   [
+    "en un mundo ideal"
+   ]
+  ]
+ },
+ {
+  "id": "poner-condicional-4984",
+  "verbo": "poner",
+  "contexto": "él, con más tiempo, con más detalle",
+  "respuesta": "Él lo pondría con más detalle con más tiempo.",
+  "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+  "grupos": [
+   [
+    "el"
+   ],
+   [
+    "lo pondria"
+   ],
+   [
+    "con mas detalle"
+   ],
+   [
+    "con mas tiempo"
+   ]
+  ]
+ },
+ {
+  "id": "poner-condicional-4986",
+  "verbo": "poner",
+  "contexto": "yo, con más experiencia, mejor",
+  "respuesta": "Yo lo pondría mejor con más experiencia.",
+  "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "lo pondria"
+   ],
+   [
+    "mejor"
+   ],
+   [
+    "con mas experiencia"
+   ]
+  ]
+ },
+ {
+  "id": "saber-condicional-5082",
+  "verbo": "saber",
+  "contexto": "ustedes, de ser posible, la respuesta sin demora",
+  "respuesta": "Ustedes sabrían la respuesta sin demora, de ser posible.",
+  "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+  "grupos": [
+   [
+    "ustedes"
+   ],
+   [
+    "sabrian"
+   ],
+   [
+    "la respuesta sin demora"
+   ],
+   [
+    "de ser posible"
+   ]
+  ]
+ },
+ {
+  "id": "estar-condicional-4754",
+  "verbo": "estar",
+  "contexto": "ella, en esa situación, más tranquilo",
+  "respuesta": "Ella estaría más tranquila en esa situación.",
+  "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "estaria"
+   ],
+   [
+    "mas tranquila"
+   ],
+   [
+    "en esa situacion"
+   ]
+  ]
+ },
+ {
+  "id": "estar-condicional-4755",
+  "verbo": "estar",
+  "contexto": "ellos, en un mundo ideal, más tranquilo",
+  "respuesta": "Ellos estarían más tranquilos en un mundo ideal.",
+  "pista": "Describe una situación ideal e imaginaria.",
+  "grupos": [
+   [
+    "ellos"
+   ],
+   [
+    "estarian"
+   ],
+   [
+    "mas tranquilos"
+   ],
+   [
+    "en un mundo ideal"
+   ]
+  ]
+ },
+ {
+  "id": "gustar-condicional-4786",
+  "verbo": "gustar",
+  "contexto": "eso, con más tiempo, mucho",
+  "respuesta": "Eso le gustaría mucho con más tiempo.",
+  "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+  "grupos": [
+   [
+    "eso"
+   ],
+   [
+    "le gustaria"
+   ],
+   [
+    "mucho"
+   ],
+   [
+    "con mas tiempo"
+   ]
+  ]
+ },
+ {
+  "id": "gustar-condicional-4787",
+  "verbo": "gustar",
+  "contexto": "eso, a usted, con más dinero, mucho",
+  "respuesta": "Eso le gustaría mucho a usted con más dinero.",
+  "pista": "Habla de lo que haría alguien con más recursos.",
+  "grupos": [
+   [
+    "eso"
+   ],
+   [
+    "le gustaria"
+   ],
+   [
+    "mucho"
+   ],
+   [
+    "a usted"
+   ],
+   [
+    "con mas dinero"
+   ]
+  ]
+ },
+ {
+  "id": "gustar-condicional-4788",
+  "verbo": "gustar",
+  "contexto": "eso, con más experiencia, mucho",
+  "respuesta": "Eso me gustaría mucho con más experiencia.",
+  "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+  "grupos": [
+   [
+    "eso"
+   ],
+   [
+    "me gustaria"
+   ],
+   [
+    "mucho"
+   ],
+   [
+    "con mas experiencia"
+   ]
+  ]
+ },
+ {
+  "id": "haber-condicional-4789",
+  "verbo": "haber",
+  "contexto": "en tu lugar, más oportunidades",
+  "respuesta": "Habría más oportunidades en tu lugar.",
+  "pista": "Expresa lo que harías en la situación de otra persona.",
+  "grupos": [
+   [
+    "habria"
+   ],
+   [
+    "mas oportunidades"
+   ],
+   [
+    "en tu lugar"
+   ]
+  ]
+ },
+ {
+  "id": "haber-condicional-4790",
+  "verbo": "haber",
+  "contexto": "en esa situación, más oportunidades",
+  "respuesta": "Habría más oportunidades en esa situación.",
+  "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+  "grupos": [
+   [
+    "habria"
+   ],
+   [
+    "mas oportunidades"
+   ],
+   [
+    "en esa situacion"
+   ]
+  ]
+ },
+ {
+  "id": "haber-condicional-4791",
+  "verbo": "haber",
+  "contexto": "en un mundo ideal, más oportunidades",
+  "respuesta": "Habría más oportunidades en un mundo ideal.",
+  "pista": "Describe una situación ideal e imaginaria.",
+  "grupos": [
+   [
+    "habria"
+   ],
+   [
+    "mas oportunidades"
+   ],
+   [
+    "en un mundo ideal"
+   ]
+  ]
+ },
+ {
+  "id": "importar-condicional-4807",
+  "verbo": "importar",
+  "contexto": "la opinión, en tu lugar",
+  "respuesta": "La opinión me importaría en tu lugar.",
+  "pista": "Expresa lo que harías en la situación de otra persona.",
+  "grupos": [
+   [
+    "la opinion"
+   ],
+   [
+    "me importaria"
+   ],
+   [
+    "en tu lugar"
+   ]
+  ]
+ },
+ {
+  "id": "importar-condicional-4808",
+  "verbo": "importar",
+  "contexto": "la opinión, en esa situación",
+  "respuesta": "La opinión le importaría en esa situación.",
+  "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+  "grupos": [
+   [
+    "la opinion"
+   ],
+   [
+    "le importaria"
+   ],
+   [
+    "en esa situacion"
+   ]
+  ]
+ },
+ {
+  "id": "importar-condicional-4809",
+  "verbo": "importar",
+  "contexto": "la opinión, en un mundo ideal",
+  "respuesta": "La opinión les importaría en un mundo ideal.",
+  "pista": "Describe una situación ideal e imaginaria.",
+  "grupos": [
+   [
+    "la opinion"
+   ],
+   [
+    "les importaria"
+   ],
+   [
+    "en un mundo ideal"
+   ]
+  ]
+ },
+ {
+  "id": "mantener-condicional-4867",
+  "verbo": "mantener",
+  "contexto": "él, con más tiempo, sin prisa",
+  "respuesta": "Él lo mantendría sin prisa con más tiempo.",
+  "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+  "grupos": [
+   [
+    "el"
+   ],
+   [
+    "lo mantendria"
+   ],
+   [
+    "sin prisa"
+   ],
+   [
+    "con mas tiempo"
+   ]
+  ]
+ },
+ {
+  "id": "mantener-condicional-4868",
+  "verbo": "mantener",
+  "contexto": "usted, con más dinero, con más libertad",
+  "respuesta": "Usted lo mantendría con más libertad con más dinero.",
+  "pista": "Habla de lo que haría alguien con más recursos.",
+  "grupos": [
+   [
+    "usted"
+   ],
+   [
+    "lo mantendria"
+   ],
+   [
+    "con mas libertad"
+   ],
+   [
+    "con mas dinero"
+   ]
+  ]
+ },
+ {
+  "id": "ocurrir-condicional-4921",
+  "verbo": "ocurrir",
+  "contexto": "a él, con más tiempo, algo diferente",
+  "respuesta": "A él le ocurriría algo diferente con más tiempo.",
+  "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+  "grupos": [
+   [
+    "a el"
+   ],
+   [
+    "le ocurriria"
+   ],
+   [
+    "algo diferente"
+   ],
+   [
+    "con mas tiempo"
+   ]
+  ]
+ },
+ {
+  "id": "ocurrir-condicional-4922",
+  "verbo": "ocurrir",
+  "contexto": "a usted, con más dinero, algo diferente",
+  "respuesta": "A usted le ocurriría algo diferente con más dinero.",
+  "pista": "Habla de lo que haría alguien con más recursos.",
+  "grupos": [
+   [
+    "a usted"
+   ],
+   [
+    "le ocurriria"
+   ],
+   [
+    "algo diferente"
+   ],
+   [
+    "con mas dinero"
+   ]
+  ]
+ },
+ {
+  "id": "ocurrir-condicional-4923",
+  "verbo": "ocurrir",
+  "contexto": "yo, con más experiencia, algo diferente",
+  "respuesta": "Me ocurriría algo diferente con más experiencia.",
+  "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+  "grupos": [
+   [
+    "me"
+   ],
+   [
+    "ocurriria"
+   ],
+   [
+    "algo diferente"
+   ],
+   [
+    "con mas experiencia"
+   ]
+  ]
+ },
+ {
+  "id": "oír-condicional-4930",
+  "verbo": "oír",
+  "contexto": "él, con más tiempo, algo nuevo",
+  "respuesta": "Él oiría algo nuevo con más tiempo.",
+  "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+  "grupos": [
+   [
+    "el"
+   ],
+   [
+    "oiria"
+   ],
+   [
+    "algo nuevo"
+   ],
+   [
+    "con mas tiempo"
+   ]
+  ]
+ },
+ {
+  "id": "oír-condicional-4931",
+  "verbo": "oír",
+  "contexto": "usted, con más dinero, con más comodidad",
+  "respuesta": "Usted oiría con más comodidad con más dinero.",
+  "pista": "Habla de lo que haría alguien con más recursos.",
+  "grupos": [
+   [
+    "usted"
+   ],
+   [
+    "oiria"
+   ],
+   [
+    "con mas comodidad"
+   ],
+   [
+    "con mas dinero"
+   ]
+  ]
+ },
+ {
+  "id": "oír-condicional-4932",
+  "verbo": "oír",
+  "contexto": "yo, con más experiencia, sin tantas dudas",
+  "respuesta": "Yo oiría sin tantas dudas con más experiencia.",
+  "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "oiria"
+   ],
+   [
+    "sin tantas dudas"
+   ],
+   [
+    "con mas experiencia"
+   ]
+  ]
+ },
+ {
+  "id": "parecer-condicional-4944",
+  "verbo": "parecer",
+  "contexto": "ellos, en un mundo ideal, más joven",
+  "respuesta": "Ellos parecerían más jóvenes en un mundo ideal.",
+  "pista": "Describe una situación ideal e imaginaria.",
+  "grupos": [
+   [
+    "ellos"
+   ],
+   [
+    "parecerian"
+   ],
+   [
+    "mas jovenes"
+   ],
+   [
+    "en un mundo ideal"
+   ]
+  ]
+ },
+ {
+  "id": "preocupar-condicional-4993",
+  "verbo": "preocupar",
+  "contexto": "la situación, con más tiempo",
+  "respuesta": "La situación le preocuparía con más tiempo.",
+  "pista": "Describe lo que alguien haría si tuviera más tiempo.",
+  "grupos": [
+   [
+    "la situacion"
+   ],
+   [
+    "le preocuparia"
+   ],
+   [
+    "con mas tiempo"
+   ]
+  ]
+ },
+ {
+  "id": "preocupar-condicional-4994",
+  "verbo": "preocupar",
+  "contexto": "la situación, a usted, con más dinero",
+  "respuesta": "La situación le preocuparía a usted con más dinero.",
+  "pista": "Habla de lo que haría alguien con más recursos.",
+  "grupos": [
+   [
+    "la situacion"
+   ],
+   [
+    "le preocuparia"
+   ],
+   [
+    "a usted"
+   ],
+   [
+    "con mas dinero"
+   ]
+  ]
+ },
+ {
+  "id": "preocupar-condicional-4995",
+  "verbo": "preocupar",
+  "contexto": "la situación, con más experiencia",
+  "respuesta": "La situación me preocuparía con más experiencia.",
+  "pista": "Reflexiona sobre lo que harías con más conocimiento.",
+  "grupos": [
+   [
+    "la situacion"
+   ],
+   [
+    "me preocuparia"
+   ],
+   [
+    "con mas experiencia"
+   ]
+  ]
+ },
+ {
+  "id": "reír-condicional-5050",
+  "verbo": "reír",
+  "contexto": "yo, en tu lugar, más seguido",
+  "respuesta": "Yo reíría más seguido en tu lugar.",
+  "pista": "Expresa lo que harías en la situación de otra persona.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "reiria"
+   ],
+   [
+    "mas seguido"
+   ],
+   [
+    "en tu lugar"
+   ]
+  ]
+ },
+ {
+  "id": "reír-condicional-5051",
+  "verbo": "reír",
+  "contexto": "ella, en esa situación, más seguido",
+  "respuesta": "Ella reíría más seguido en esa situación.",
+  "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "reiria"
+   ],
+   [
+    "mas seguido"
+   ],
+   [
+    "en esa situacion"
+   ]
+  ]
+ },
+ {
+  "id": "ser-condicional-5106",
+  "verbo": "ser",
+  "contexto": "ellos, en un mundo ideal, más paciente",
+  "respuesta": "Ellos serían más pacientes en un mundo ideal.",
+  "pista": "Describe una situación ideal e imaginaria.",
+  "grupos": [
+   [
+    "ellos"
+   ],
+   [
+    "serian"
+   ],
+   [
+    "mas pacientes"
+   ],
+   [
+    "en un mundo ideal"
+   ]
+  ]
+ },
+ {
+  "id": "soler-condicional-5113",
+  "verbo": "ir",
+  "contexto": "yo, en tu lugar, normalmente al parque",
+  "respuesta": "Yo iría normalmente al parque en tu lugar.",
+  "pista": "Expresa lo que harías en la situación de otra persona.",
+  "grupos": [
+   [
+    "yo"
+   ],
+   [
+    "iria"
+   ],
+   [
+    "normalmente al parque"
+   ],
+   [
+    "en tu lugar"
+   ]
+  ]
+ },
+ {
+  "id": "soler-condicional-5114",
+  "verbo": "ir",
+  "contexto": "ella, en esa situación, normalmente al parque",
+  "respuesta": "Ella iría normalmente al parque en esa situación.",
+  "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+  "grupos": [
+   [
+    "ella"
+   ],
+   [
+    "iria"
+   ],
+   [
+    "normalmente al parque"
+   ],
+   [
+    "en esa situacion"
+   ]
+  ]
+ },
+ {
+  "id": "soler-condicional-5115",
+  "verbo": "ir",
+  "contexto": "ellos, en un mundo ideal, normalmente al parque",
+  "respuesta": "Ellos irían normalmente al parque en un mundo ideal.",
+  "pista": "Describe una situación ideal e imaginaria.",
+  "grupos": [
+   [
+    "ellos"
+   ],
+   [
+    "irian"
+   ],
+   [
+    "normalmente al parque"
+   ],
+   [
+    "en un mundo ideal"
+   ]
+  ]
+ },
+ {
+  "id": "suceder-condicional-5125",
+  "verbo": "suceder",
+  "contexto": "si pudieras, lo mismo",
+  "respuesta": "Te sucedería lo mismo si pudieras.",
+  "pista": "Expresa una acción hipotética que depende de una condición.",
+  "grupos": [
+   [
+    "te sucederia"
+   ],
+   [
+    "lo mismo"
+   ],
+   [
+    "si pudieras"
+   ]
+  ]
+ },
+ {
+  "id": "suceder-condicional-5126",
+  "verbo": "suceder",
+  "contexto": "si fuera posible, lo mismo",
+  "respuesta": "Nos sucedería lo mismo si fuera posible.",
+  "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+  "grupos": [
+   [
+    "nos sucederia"
+   ],
+   [
+    "lo mismo"
+   ],
+   [
+    "si fuera posible"
+   ]
+  ]
+ },
+ {
+  "id": "suceder-condicional-5127",
+  "verbo": "suceder",
+  "contexto": "de ser posible, lo mismo",
+  "respuesta": "Les sucedería lo mismo de ser posible.",
+  "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+  "grupos": [
+   [
+    "les sucederia"
+   ],
+   [
+    "lo mismo"
+   ],
+   [
+    "de ser posible"
+   ]
+  ]
+ },
+ {
+  "id": "tranquilar-condicional-5161",
+  "verbo": "tranquilizar",
+  "contexto": "tú, si pudieras, la situación",
+  "respuesta": "Tú tranquilizarías la situación si pudieras.",
+  "pista": "Expresa una acción hipotética que depende de una condición.",
+  "grupos": [
+   [
+    "tu"
+   ],
+   [
+    "tranquilizarias"
+   ],
+   [
+    "la situacion"
+   ],
+   [
+    "si pudieras"
+   ]
+  ]
+ },
+ {
+  "id": "tranquilar-condicional-5162",
+  "verbo": "tranquilizar",
+  "contexto": "nosotros, si fuera posible, la situación",
+  "respuesta": "Nosotros tranquilizaríamos la situación si fuera posible.",
+  "pista": "Expresa un deseo grupal condicionado a una posibilidad.",
+  "grupos": [
+   [
+    "nosotros"
+   ],
+   [
+    "tranquilizariamos"
+   ],
+   [
+    "la situacion"
+   ],
+   [
+    "si fuera posible"
+   ]
+  ]
+ },
+ {
+  "id": "tranquilar-condicional-5163",
+  "verbo": "tranquilizar",
+  "contexto": "ustedes, de ser posible, la situación",
+  "respuesta": "Ustedes tranquilizarían la situación de ser posible.",
+  "pista": "Presenta una acción cortés condicionada a la posibilidad.",
+  "grupos": [
+   [
+    "ustedes"
+   ],
+   [
+    "tranquilizarian"
+   ],
+   [
+    "la situacion"
+   ],
+   [
+    "de ser posible"
+   ]
+  ]
+ },
+ {
+  "id": "valer-condicional-5176",
+  "verbo": "valer",
+  "contexto": "en tu lugar, la pena",
+  "respuesta": "Valdría la pena en tu lugar.",
+  "pista": "Expresa lo que harías en la situación de otra persona.",
+  "grupos": [
+   [
+    "valdria"
+   ],
+   [
+    "la pena"
+   ],
+   [
+    "en tu lugar"
+   ]
+  ]
+ },
+ {
+  "id": "valer-condicional-5177",
+  "verbo": "valer",
+  "contexto": "en esa situación, la pena",
+  "respuesta": "Valdría la pena en esa situación.",
+  "pista": "Imagina cómo reaccionaría alguien en una situación específica.",
+  "grupos": [
+   [
+    "valdria"
+   ],
+   [
+    "la pena"
+   ],
+   [
+    "en esa situacion"
+   ]
+  ]
+ },
+ {
+  "id": "valer-condicional-5178",
+  "verbo": "valer",
+  "contexto": "en un mundo ideal, la pena",
+  "respuesta": "Valdría la pena en un mundo ideal.",
+  "pista": "Describe una situación ideal e imaginaria.",
+  "grupos": [
+   [
+    "valdria"
+   ],
+   [
+    "la pena"
+   ],
+   [
+    "en un mundo ideal"
+   ]
+  ]
+ },
+ {
+  "id": "amar-subjuntivo-5243",
+  "verbo": "amar",
+  "contexto": "quiero que, él, todo correctamente",
+  "respuesta": "Quiero que él ame todo correctamente.",
+  "pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+  "grupos": [
+   [
+    "quiero que"
+   ],
+   [
+    "el"
+   ],
+   [
+    "ame"
+   ],
+   [
+    "todo correctamente"
+   ]
+  ]
+ },
+ {
+  "id": "asesinar-subjuntivo-5270",
+  "verbo": "asesinar",
+  "contexto": "espero que, él, a tiempo",
+  "respuesta": "Espero que él asesine a tiempo.",
+  "pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+  "grupos": [
+   [
+    "espero que"
+   ],
+   [
+    "el"
+   ],
+   [
+    "asesine"
+   ],
+   [
+    "a tiempo"
+   ]
+  ]
+ },
+ {
+  "id": "contar-subjuntivo-5369",
+  "verbo": "contar",
+  "contexto": "quiero que, él, de manera diferente",
+  "respuesta": "Quiero que él cuente de manera diferente.",
+  "pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+  "grupos": [
+   [
+    "quiero que"
+   ],
+   [
+    "el"
+   ],
+   [
+    "cuente"
+   ],
+   [
+    "de manera diferente"
+   ]
+  ]
+ },
+ {
+  "id": "crecer-subjuntivo-5396",
+  "verbo": "crecer",
+  "contexto": "espero que, él, sin problemas",
+  "respuesta": "Espero que él crezca sin problemas.",
+  "pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+  "grupos": [
+   [
+    "espero que"
+   ],
+   [
+    "el"
+   ],
+   [
+    "crezca"
+   ],
+   [
+    "sin problemas"
+   ]
+  ]
+ },
+ {
+  "id": "enfrentar-subjuntivo-5495",
+  "verbo": "enfrentarse",
+  "contexto": "quiero que, él, con nosotros",
+  "respuesta": "Quiero que él se enfrente con nosotros.",
+  "pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+  "grupos": [
+   [
+    "quiero que"
+   ],
+   [
+    "el"
+   ],
+   [
+    "se enfrente"
+   ],
+   [
+    "con nosotros"
+   ]
+  ]
+ },
+ {
+  "id": "esconder-subjuntivo-5522",
+  "verbo": "esconder",
+  "contexto": "espero que, él, algo con cuidado",
+  "respuesta": "Espero que él esconda algo con cuidado.",
+  "pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+  "grupos": [
+   [
+    "espero que"
+   ],
+   [
+    "el"
+   ],
+   [
+    "esconda"
+   ],
+   [
+    "algo con cuidado"
+   ]
+  ]
+ },
+ {
+  "id": "levantar-subjuntivo-5621",
+  "verbo": "levantarse",
+  "contexto": "quiero que, él, lo antes posible",
+  "respuesta": "Quiero que él se levante lo antes posible.",
+  "pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+  "grupos": [
+   [
+    "quiero que"
+   ],
+   [
+    "el"
+   ],
+   [
+    "se levante"
+   ],
+   [
+    "lo antes posible"
+   ]
+  ]
+ },
+ {
+  "id": "mantener-subjuntivo-5648",
+  "verbo": "mantener",
+  "contexto": "espero que, él, la verdad pronto",
+  "respuesta": "Espero que él mantenga la verdad pronto.",
+  "pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+  "grupos": [
+   [
+    "espero que"
+   ],
+   [
+    "el"
+   ],
+   [
+    "mantenga"
+   ],
+   [
+    "la verdad pronto"
+   ]
+  ]
+ },
+ {
+  "id": "perdonar-subjuntivo-5747",
+  "verbo": "perdonar",
+  "contexto": "quiero que, él, en este momento",
+  "respuesta": "Quiero que él me perdone en este momento.",
+  "pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+  "grupos": [
+   [
+    "quiero que"
+   ],
+   [
+    "el"
+   ],
+   [
+    "me perdone"
+   ],
+   [
+    "en este momento"
+   ]
+  ]
+ },
+ {
+  "id": "preocupar-subjuntivo-5774",
+  "verbo": "preocupar",
+  "contexto": "espero que, eso, demasiado esta semana",
+  "respuesta": "Espero que eso no le preocupe demasiado esta semana.",
+  "pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+  "grupos": [
+   [
+    "espero que"
+   ],
+   [
+    "eso"
+   ],
+   [
+    "no le preocupe"
+   ],
+   [
+    "demasiado esta semana"
+   ]
+  ]
+ },
+ {
+  "id": "seguir-subjuntivo-5873",
+  "verbo": "seguir",
+  "contexto": "quiero que, él, todo correctamente",
+  "respuesta": "Quiero que él siga todo correctamente.",
+  "pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+  "grupos": [
+   [
+    "quiero que"
+   ],
+   [
+    "el"
+   ],
+   [
+    "siga"
+   ],
+   [
+    "todo correctamente"
+   ]
+  ]
+ },
+ {
+  "id": "sonar-subjuntivo-5900",
+  "verbo": "sonar",
+  "contexto": "espero que, el teléfono, a tiempo",
+  "respuesta": "Espero que el teléfono suene a tiempo.",
+  "pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+  "grupos": [
+   [
+    "espero que"
+   ],
+   [
+    "el telefono"
+   ],
+   [
+    "suene"
+   ],
+   [
+    "a tiempo"
+   ]
+  ]
+ },
+ {
+  "id": "tranquilar-subjuntivo-5941",
+  "verbo": "tranquilizar",
+  "contexto": "antes de que, él, sin permiso (subjuntivo)",
+  "respuesta": "Antes de que él tranquilice sin permiso.",
+  "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+  "grupos": [
+   [
+    "antes de que"
+   ],
+   [
+    "tranquilice"
+   ],
+   [
+    "el"
+   ],
+   [
+    "sin permiso"
+   ]
+  ]
+ },
+ {
+  "id": "tranquilar-subjuntivo-5942",
+  "verbo": "tranquilizar",
+  "contexto": "espero que, ellos, con cuidado (subjuntivo)",
+  "respuesta": "Espero que ellos tranquilicen con cuidado.",
+  "pista": "El verbo 'esperar' expresa un deseo, lo cual requiere el subjuntivo.",
+  "grupos": [
+   [
+    "espero que"
+   ],
+   [
+    "tranquilicen"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "con cuidado"
+   ]
+  ]
+ },
+ {
+  "id": "tranquilar-subjuntivo-5943",
+  "verbo": "tranquilizar",
+  "contexto": "aunque, ustedes, solo una vez (subjuntivo)",
+  "respuesta": "Aunque ustedes tranquilicen solo una vez.",
+  "pista": "'Aunque' con subjuntivo indica una situación hipotética o no confirmada.",
+  "grupos": [
+   [
+    "aunque"
+   ],
+   [
+    "tranquilicen"
+   ],
+   [
+    "ustedes"
+   ],
+   [
+    "solo una vez"
+   ]
+  ]
+ },
+ {
+  "id": "bastar-subjuntivo-5293",
+  "verbo": "bastar",
+  "contexto": "es necesario que, él, sin demora (subjuntivo)",
+  "respuesta": "Es necesario que eso baste sin demora.",
+  "pista": "La expresión impersonal 'es necesario que' exige el subjuntivo.",
+  "grupos": [
+   [
+    "es necesario que"
+   ],
+   [
+    "baste"
+   ],
+   [
+    "eso"
+   ],
+   [
+    "sin demora"
+   ]
+  ]
+ },
+ {
+  "id": "bastar-subjuntivo-5294",
+  "verbo": "bastar",
+  "contexto": "aunque, eso, tarde",
+  "respuesta": "Aunque eso baste tarde.",
+  "pista": "'Aunque' con subjuntivo indica una situación hipotética o no confirmada.",
+  "grupos": [
+   [
+    "aunque"
+   ],
+   [
+    "eso"
+   ],
+   [
+    "baste"
+   ],
+   [
+    "tarde"
+   ]
+  ]
+ },
+ {
+  "id": "bastar-subjuntivo-5295",
+  "verbo": "bastar",
+  "contexto": "antes de que, eso, de nuevo",
+  "respuesta": "Antes de que eso baste de nuevo.",
+  "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+  "grupos": [
+   [
+    "antes de que"
+   ],
+   [
+    "eso"
+   ],
+   [
+    "baste"
+   ],
+   [
+    "de nuevo"
+   ]
+  ]
+ },
+ {
+  "id": "gustar-subjuntivo-5566",
+  "verbo": "gustar",
+  "contexto": "aunque, eso, tarde",
+  "respuesta": "Aunque eso nos guste tarde.",
+  "pista": "'Aunque' con subjuntivo indica una situación hipotética o no confirmada.",
+  "grupos": [
+   [
+    "aunque"
+   ],
+   [
+    "eso"
+   ],
+   [
+    "nos guste"
+   ],
+   [
+    "tarde"
+   ]
+  ]
+ },
+ {
+  "id": "gustar-subjuntivo-5567",
+  "verbo": "gustar",
+  "contexto": "es necesario que, eso, de inmediato",
+  "respuesta": "Es necesario que eso me guste de inmediato.",
+  "pista": "La expresión impersonal 'es necesario que' exige el subjuntivo.",
+  "grupos": [
+   [
+    "es necesario que"
+   ],
+   [
+    "eso"
+   ],
+   [
+    "me guste"
+   ],
+   [
+    "de inmediato"
+   ]
+  ]
+ },
+ {
+  "id": "gustar-subjuntivo-5568",
+  "verbo": "gustar",
+  "contexto": "ojalá, eso, este fin de semana",
+  "respuesta": "Ojalá eso te guste este fin de semana.",
+  "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+  "grupos": [
+   [
+    "ojala"
+   ],
+   [
+    "eso"
+   ],
+   [
+    "te guste"
+   ],
+   [
+    "este fin de semana"
+   ]
+  ]
+ },
+ {
+  "id": "resultar-subjuntivo-5845",
+  "verbo": "resultar",
+  "contexto": "dudo que, esto, a tiempo",
+  "respuesta": "Dudo que esto resulte a tiempo.",
+  "pista": "El verbo 'dudar' expresa incertidumbre y requiere el subjuntivo.",
+  "grupos": [
+   [
+    "dudo que"
+   ],
+   [
+    "esto"
+   ],
+   [
+    "resulte"
+   ],
+   [
+    "a tiempo"
+   ]
+  ]
+ },
+ {
+  "id": "resultar-subjuntivo-5846",
+  "verbo": "resultar",
+  "contexto": "ojalá, yo, pronto (subjuntivo)",
+  "respuesta": "Ojalá esto resulte bien pronto.",
+  "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+  "grupos": [
+   [
+    "ojala"
+   ],
+   [
+    "resulte bien"
+   ],
+   [
+    "esto"
+   ],
+   [
+    "pronto"
+   ]
+  ]
+ },
+ {
+  "id": "resultar-subjuntivo-5847",
+  "verbo": "resultar",
+  "contexto": "antes de que, esto, sin permiso",
+  "respuesta": "Antes de que esto resulte sin permiso.",
+  "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+  "grupos": [
+   [
+    "antes de que"
+   ],
+   [
+    "esto"
+   ],
+   [
+    "resulte"
+   ],
+   [
+    "sin permiso"
+   ]
+  ]
+ },
+ {
+  "id": "significar-subjuntivo-5890",
+  "verbo": "significar",
+  "contexto": "no creo que, esto, nada esta vez",
+  "respuesta": "No creo que esto signifique nada esta vez.",
+  "pista": "'No creo que' expresa duda y necesita el subjuntivo.",
+  "grupos": [
+   [
+    "no creo que"
+   ],
+   [
+    "esto"
+   ],
+   [
+    "signifique"
+   ],
+   [
+    "nada esta vez"
+   ]
+  ]
+ },
+ {
+  "id": "significar-subjuntivo-5891",
+  "verbo": "significar",
+  "contexto": "dudo que, yo, sin ayuda (subjuntivo)",
+  "respuesta": "Dudo que esto signifique algo sin ayuda.",
+  "pista": "El verbo 'dudar' expresa incertidumbre y requiere el subjuntivo.",
+  "grupos": [
+   [
+    "dudo que"
+   ],
+   [
+    "signifique algo"
+   ],
+   [
+    "esto"
+   ],
+   [
+    "sin ayuda"
+   ]
+  ]
+ },
+ {
+  "id": "significar-subjuntivo-5892",
+  "verbo": "significar",
+  "contexto": "ojalá, esto, algo mañana",
+  "respuesta": "Ojalá esto signifique algo mañana.",
+  "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+  "grupos": [
+   [
+    "ojala"
+   ],
+   [
+    "esto"
+   ],
+   [
+    "signifique"
+   ],
+   [
+    "algo manana"
+   ]
+  ]
+ },
+ {
+  "id": "soler-subjuntivo-5893",
+  "verbo": "soler",
+  "contexto": "es posible que, tú, es posible que, tú, la próxima semana (subjuntivo) (subjuntivo)",
+  "respuesta": "Es posible que tú suelas hacerlo la próxima semana.",
+  "pista": "'Es posible que' expresa posibilidad y requiere el subjuntivo.",
+  "grupos": [
+   [
+    "es posible que"
+   ],
+   [
+    "suelas hacerlo"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "la proxima semana"
+   ]
+  ]
+ },
+ {
+  "id": "soler-subjuntivo-5894",
+  "verbo": "soler",
+  "contexto": "para que, ella, sin dificultad (subjuntivo)",
+  "respuesta": "Para que ella suela hacerlo sin dificultad.",
+  "pista": "'Para que' introduce un propósito y siempre lleva subjuntivo.",
+  "grupos": [
+   [
+    "para que"
+   ],
+   [
+    "suela hacerlo"
+   ],
+   [
+    "ella"
+   ],
+   [
+    "sin dificultad"
+   ]
+  ]
+ },
+ {
+  "id": "soler-subjuntivo-5895",
+  "verbo": "soler",
+  "contexto": "antes de que, usted, de nuevo (subjuntivo)",
+  "respuesta": "Antes de que usted suela hacerlo de nuevo.",
+  "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+  "grupos": [
+   [
+    "antes de que"
+   ],
+   [
+    "suela hacerlo"
+   ],
+   [
+    "usted"
+   ],
+   [
+    "de nuevo"
+   ]
+  ]
+ },
+ {
+  "id": "haber-subjuntivo-5569",
+  "verbo": "haber",
+  "contexto": "hasta que, tú, de verdad (subjuntivo)",
+  "respuesta": "Hasta que lo hayas hecho de verdad.",
+  "pista": "'Hasta que' con una acción futura requiere el subjuntivo.",
+  "grupos": [
+   [
+    "hasta que"
+   ],
+   [
+    "hayas hecho"
+   ],
+   [
+    "lo"
+   ],
+   [
+    "de verdad"
+   ]
+  ]
+ },
+ {
+  "id": "haber-subjuntivo-5570",
+  "verbo": "haber",
+  "contexto": "no creo que, clase hoy",
+  "respuesta": "No creo que haya clase hoy.",
+  "pista": "'No creo que' expresa duda y necesita el subjuntivo.",
+  "grupos": [
+   [
+    "no creo que"
+   ],
+   [
+    "haya"
+   ],
+   [
+    "clase hoy"
+   ]
+  ]
+ },
+ {
+  "id": "haber-subjuntivo-5571",
+  "verbo": "haber",
+  "contexto": "antes de que, usted, demasiado tarde (subjuntivo)",
+  "respuesta": "Antes de que lo haya hecho, demasiado tarde.",
+  "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+  "grupos": [
+   [
+    "antes de que"
+   ],
+   [
+    "haya hecho"
+   ],
+   [
+    "lo"
+   ],
+   [
+    "demasiado tarde"
+   ]
+  ]
+ },
+ {
+  "id": "casar-subjuntivo-5323",
+  "verbo": "casarse",
+  "contexto": "sin que, nosotros, mucho",
+  "respuesta": "Sin que nosotros nos casemos mucho.",
+  "pista": "'Sin que' expresa una acción que no ocurre y necesita el subjuntivo.",
+  "grupos": [
+   [
+    "sin que"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "nos casemos"
+   ],
+   [
+    "mucho"
+   ]
+  ]
+ },
+ {
+  "id": "casar-subjuntivo-5324",
+  "verbo": "casarse",
+  "contexto": "a menos que, yo, con tiempo",
+  "respuesta": "A menos que yo me case con tiempo.",
+  "pista": "'A menos que' introduce una condición y siempre lleva subjuntivo.",
+  "grupos": [
+   [
+    "a menos que"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "me case"
+   ],
+   [
+    "con tiempo"
+   ]
+  ]
+ },
+ {
+  "id": "casar-subjuntivo-5325",
+  "verbo": "casarse",
+  "contexto": "antes de que, tú, de nuevo",
+  "respuesta": "Antes de que tú te cases de nuevo.",
+  "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+  "grupos": [
+   [
+    "antes de que"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "te cases"
+   ],
+   [
+    "de nuevo"
+   ]
+  ]
+ },
+ {
+  "id": "deber-subjuntivo-5413",
+  "verbo": "deber",
+  "contexto": "quiero que, nosotros, menos dinero lo antes posible",
+  "respuesta": "Quiero que nosotros debamos menos dinero lo antes posible.",
+  "pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+  "grupos": [
+   [
+    "quiero que"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "debamos"
+   ],
+   [
+    "menos dinero lo antes posible"
+   ]
+  ]
+ },
+ {
+  "id": "deber-subjuntivo-5414",
+  "verbo": "deber",
+  "contexto": "es importante que, yo, nada a nadie",
+  "respuesta": "Es importante que yo no deba nada a nadie.",
+  "pista": "'Es importante que' expresa una valoración y necesita el subjuntivo.",
+  "grupos": [
+   [
+    "es importante que"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "no deba"
+   ],
+   [
+    "nada a nadie"
+   ]
+  ]
+ },
+ {
+  "id": "deber-subjuntivo-5415",
+  "verbo": "deber",
+  "contexto": "antes de que, tú, dinero de nuevo",
+  "respuesta": "Antes de que tú debas dinero de nuevo.",
+  "pista": "'Antes de que' indica un evento futuro e incierto, por eso lleva subjuntivo.",
+  "grupos": [
+   [
+    "antes de que"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "debas"
+   ],
+   [
+    "dinero de nuevo"
+   ]
+  ]
+ },
+ {
+  "id": "bailar-subjuntivo-5287",
+  "verbo": "bailar",
+  "contexto": "quiero que, nosotros, con nosotros (subjuntivo)",
+  "respuesta": "Quiero que nosotros bailemos juntos.",
+  "pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+  "grupos": [
+   [
+    "quiero que"
+   ],
+   [
+    "bailemos"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "juntos"
+   ]
+  ]
+ },
+ {
+  "id": "temer-subjuntivo-5917",
+  "verbo": "temer",
+  "contexto": "quiero que, nosotros, con nosotros (subjuntivo)",
+  "respuesta": "Quiero que nosotros temamos juntos.",
+  "pista": "El verbo 'querer' con un sujeto diferente exige el subjuntivo.",
+  "grupos": [
+   [
+    "quiero que"
+   ],
+   [
+    "temamos"
+   ],
+   [
+    "nosotros"
+   ],
+   [
+    "juntos"
+   ]
+  ]
+ },
+ {
+  "id": "morir-subjuntivo-5675",
+  "verbo": "morir",
+  "contexto": "sin que, yo, algo (subjuntivo)",
+  "respuesta": "Sin que yo muera antes de tiempo.",
+  "pista": "'Sin que' expresa una acción que no ocurre y necesita el subjuntivo.",
+  "grupos": [
+   [
+    "sin que"
+   ],
+   [
+    "muera"
+   ],
+   [
+    "yo"
+   ],
+   [
+    "antes de tiempo"
+   ]
+  ]
+ },
+ {
+  "id": "ser-subjuntivo-5884",
+  "verbo": "ser",
+  "contexto": "es importante que, tú, un buen compañero de equipo",
+  "respuesta": "Es importante que tú seas un buen compañero de equipo.",
+  "pista": "'Es importante que' expresa una valoración y necesita el subjuntivo.",
+  "grupos": [
+   [
+    "es importante que"
+   ],
+   [
+    "tu"
+   ],
+   [
+    "seas"
+   ],
+   [
+    "un buen companero de equipo"
+   ]
+  ]
+ },
+ {
+  "id": "ser-subjuntivo-5886",
+  "verbo": "ser",
+  "contexto": "ojalá, usted, puntual hoy",
+  "respuesta": "Ojalá usted sea puntual hoy.",
+  "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+  "grupos": [
+   [
+    "ojala"
+   ],
+   [
+    "usted"
+   ],
+   [
+    "sea"
+   ],
+   [
+    "puntual hoy"
+   ]
+  ]
+ },
+ {
+  "id": "tener-subjuntivo-5922",
+  "verbo": "tener",
+  "contexto": "es necesario que, usted, es necesario que, usted, con atención (subjuntivo) (subjuntivo)",
+  "respuesta": "Es necesario que usted actúe con atención.",
+  "pista": "La expresión impersonal 'es necesario que' exige el subjuntivo.",
+  "grupos": [
+   [
+    "es necesario que"
+   ],
+   [
+    "actue"
+   ],
+   [
+    "usted"
+   ],
+   [
+    "con atencion"
+   ]
+  ]
+ },
+ {
+  "id": "escapar-subjuntivo-5519",
+  "verbo": "escapar",
+  "contexto": "hasta que, ellos, todo (subjuntivo)",
+  "respuesta": "Hasta que ellos escapen del todo.",
+  "pista": "'Hasta que' con una acción futura requiere el subjuntivo.",
+  "grupos": [
+   [
+    "hasta que"
+   ],
+   [
+    "escapen del"
+   ],
+   [
+    "ellos"
+   ],
+   [
+    "todo"
+   ]
+  ]
+ },
+ {
+  "id": "existir-subjuntivo-5542",
+  "verbo": "existir",
+  "contexto": "ojalá, una manera de resolverlo, este fin de semana",
+  "respuesta": "Ojalá exista una manera de resolverlo este fin de semana.",
+  "pista": "'Ojalá' siempre requiere el subjuntivo para expresar un deseo.",
+  "grupos": [
+   [
+    "ojala"
+   ],
+   [
+    "exista"
+   ],
+   [
+    "una manera de resolverlo"
+   ],
+   [
+    "este fin de semana"
+   ]
+  ]
+ },
+ {
+  "id": "existir-subjuntivo-5543",
+  "verbo": "existir",
+  "contexto": "es posible que, una solución, mañana",
+  "respuesta": "Es posible que exista una solución mañana.",
+  "pista": "'Es posible que' expresa posibilidad y requiere el subjuntivo.",
+  "grupos": [
+   [
+    "es posible que"
+   ],
+   [
+    "exista"
+   ],
+   [
+    "una solucion"
+   ],
+   [
+    "manana"
+   ]
+  ]
+ }
+]
