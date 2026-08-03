@@ -547,14 +547,43 @@
     analysisUnseen = 0;
     paintAnalyzeBtn();
   }
+  // Second-tier retranscription: while listening, ask the bridge (on a slow
+  // timer) to redo saved clips with the big context-aware model. Fast text
+  // shows instantly; the refined transcript accumulates server-side and is
+  // what analyses prefer. Fire-and-forget — never touches the capture flow.
+  var refineTimer = null;
+  function triggerRefine() {
+    api("/api/refine", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ session: cfg.session })
+    }).catch(function () { /* background nicety — silent */ });
+  }
+  function syncRefineTimer() {
+    if (continuousMode && !refineTimer) {
+      refineTimer = setInterval(triggerRefine, 90000);
+    } else if (!continuousMode && refineTimer) {
+      clearInterval(refineTimer); refineTimer = null;
+      triggerRefine();   // one last pass to pick up the tail of the session
+    }
+  }
+
   function analyzeTranscript() {
     // Unseen result waiting and nothing running? The tap means "show me".
     if (analysisUnseen && !analysisRunning) { showAnalysisPane(); return; }
     if (analysisRunning) { showAnalysisPane(); return; }  // peek while it runs
-    var text = contTranscript.join(" ").trim();
-    if (!text) { setStatus("Nothing transcribed yet.", true); return; }
+    var live = contTranscript.join(" ").trim();
+    if (!live) { setStatus("Nothing transcribed yet.", true); return; }
     analysisRunning = true;
     paintAnalyzeBtn();
+    // Prefer the refined (large-model, context-corrected) transcript when the
+    // bridge has one; fall back to the fast live text.
+    api("/api/transcript?session=" + encodeURIComponent(cfg.session + "-refined"))
+      .then(function (r) { return r.json(); })
+      .then(function (d) { return (d && d.text && d.text.trim()) || live; })
+      .catch(function () { return live; })
+      .then(function (text) { runAnalysis(text); });
+  }
+  function runAnalysis(text) {
     api("/api/chat", {
       method: "POST", headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -1024,6 +1053,7 @@
         continuousMode = !continuousMode;
         setContBtn();
         syncWakeLock();
+        syncRefineTimer();
         document.body.classList.toggle("continuous", continuousMode);  // give transcript the screen
         if (continuousMode) {
           $("talkBtn").disabled = true;             // tap-to-talk is off in this mode
