@@ -106,10 +106,22 @@
   <h1>Home AI</h1>
   <span id="connDot" class="dot"></span>
   <button id="soundBtn" class="secondary">🔇 Sound off</button>
+  <button id="transcriptsBtn" class="secondary">📁</button>
   <button id="agentsBtn" class="secondary">🤖 Agents</button>
   <button id="micModeBtn" class="secondary" style="display:none">🎤 Phone mic</button>
   <button id="settingsBtn" class="secondary">⚙ Settings</button>
 </header>
+<div id="transcriptsPane" style="display:none; position:fixed; inset:0; z-index:30; background:rgba(0,0,0,.55); padding:20px;">
+  <div style="max-width:640px; margin:0 auto; max-height:100%; display:flex; flex-direction:column; background:#161b22; border:1px solid #30363d; border-radius:12px; overflow:hidden;">
+    <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; border-bottom:1px solid #30363d;">
+      <strong style="flex:1">📁 Transcripts on the workstation</strong>
+      <button id="transcriptsBack" class="secondary" style="margin:0; display:none">← List</button>
+      <button id="transcriptsClose" class="secondary" style="margin:0">Close</button>
+    </div>
+    <div id="transcriptsList" style="overflow-y:auto; padding:12px 14px;"></div>
+    <div id="transcriptView" style="display:none; overflow-y:auto; padding:12px 14px; white-space:pre-wrap; font-size:14px; line-height:1.5;"></div>
+  </div>
+</div>
 
 <div id="status">Loading…</div>
 
@@ -545,7 +557,9 @@
       body: JSON.stringify({
         session: cfg.session + "-analyze",
         message: "Analyze this transcript and respond with text only:\n\n" + text,
-        backend: cfg.backend
+        backend: cfg.backend,
+        save_as: cfg.session,        // persist the analysis on the workstation,
+        save_label: "analysis"       // alongside the utterances it analyzed
       })
     }).then(function (r) { return r.json(); })
       .then(function (data) {
@@ -878,6 +892,53 @@
     if (e.key === "Enter") sendTyped();
   });
 
+  // ---- workstation transcript browser (📁) — the files live on the Ubuntu
+  //      box (~/.config/tesla-bridge/transcripts), never on this device ----
+  function showTranscriptList() {
+    $("transcriptsBack").style.display = "none";
+    $("transcriptView").style.display = "none";
+    var list = $("transcriptsList");
+    list.style.display = "block";
+    list.textContent = "Loading…";
+    api("/api/transcripts").then(function (r) { return r.json(); })
+      .then(function (data) {
+        list.textContent = "";
+        var items = (data.transcripts || []);
+        if (!items.length) { list.textContent = "No transcripts saved yet."; return; }
+        items.forEach(function (t) {
+          var b = document.createElement("button");
+          b.className = "secondary";
+          b.style.cssText = "display:block; width:100%; text-align:left; margin:0 0 8px;";
+          b.textContent = "📄 " + t.session + " — " + t.date +
+            "  (" + Math.max(1, Math.round((t.bytes || 0) / 1024)) + " KB)";
+          b.onclick = function () { showTranscriptFile(t.session, t.date); };
+          list.appendChild(b);
+        });
+      })
+      .catch(function (e) { list.textContent = "Load failed: " + e.message; });
+  }
+  function showTranscriptFile(session, date) {
+    $("transcriptsList").style.display = "none";
+    $("transcriptsBack").style.display = "inline-block";
+    var v = $("transcriptView");
+    v.style.display = "block";
+    v.textContent = "Loading…";
+    api("/api/transcript?session=" + encodeURIComponent(session) +
+        "&date=" + encodeURIComponent(date))
+      .then(function (r) { return r.json(); })
+      .then(function (data) { v.textContent = data.text || "(empty)"; })
+      .catch(function (e) { v.textContent = "Load failed: " + e.message; });
+  }
+  $("transcriptsBtn").addEventListener("click", function () {
+    $("transcriptsPane").style.display = "block";
+    showTranscriptList();
+  });
+  $("transcriptsBack").addEventListener("click", showTranscriptList);
+  $("transcriptsClose").addEventListener("click", function () {
+    $("transcriptsPane").style.display = "none";
+  });
+
+
   if (cfg.mode === "mic") {
     // phone: giant push-to-talk, no composer
     $("composer").style.display = "none";
@@ -928,6 +989,8 @@
       $("analysisClose").addEventListener("click", function () {
         $("analysisPane").style.display = "none";
       });
+
+
       // Reply never arrived (backend error, no audio) — don't wait forever.
       setInterval(function () {
         if (handsFree && awaitingReply && Date.now() - awaitingReply > 90000) {
