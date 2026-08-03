@@ -157,6 +157,7 @@
   <button id="talkBtn">Tap to talk</button>
   <button id="convoBtn" class="secondary">🔁 Hands-free conversation: off</button>
   <button id="contBtn" class="secondary">⏺ Continuous transcription: off</button>
+  <button id="speakerToggle" class="secondary" style="display:none">🗣 Tagging: me</button>
   <button id="analyzeBtn" class="secondary" style="display:none">🧠 Analyze transcript</button>
   <div id="analysisPane" style="display:none; position:fixed; inset:0; z-index:30; background:rgba(0,0,0,.55); padding:20px;">
     <div style="max-width:640px; margin:0 auto; max-height:100%; display:flex; flex-direction:column; background:#161b22; border:1px solid #30363d; border-radius:12px; overflow:hidden;">
@@ -502,14 +503,16 @@
     fd.append("chat", "0");            // transcribe only — no AI reply per utterance
     fd.append("save", "1");            // persist each utterance on the workstation
     fd.append("backend", cfg.backend);
+    fd.append("speaker", contSpeaker); // dual input: whose voice this utterance is
+    var spokenBy = contSpeaker;        // capture — the toggle may flip mid-flight
     api("/api/transcribe", { method: "POST", body: fd })
       .then(function (r) { return r.json(); })
       .then(function (data) {
         setInterim("");   // clear the live line; the final text takes its place
         // chat=0 emits no server event, so render it here (device-local transcript)
         if (data && data.text) {
-          contTranscript.push(data.text);
-          addMsg("user", data.text);
+          contTranscript.push("[" + spokenBy + "] " + data.text);
+          addMsg("user", (spokenBy === "source" ? "📻 " : "🗣 ") + data.text);
           setStatus("Continuous transcription on — just talk.");
         }
       })
@@ -556,7 +559,11 @@
       method: "POST", headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         session: cfg.session + "-analyze",
-        message: "Analyze this transcript and respond with text only:\n\n" + text,
+        message: "Analyze this transcript and respond with text only. Lines " +
+                 "tagged [source] are audio the listener was playing (e.g. a " +
+                 "podcast); lines tagged [me] are the listener's own comments " +
+                 "and questions — treat [me] lines as the voice to answer and " +
+                 "relate them to the [source] content:\n\n" + text,
         backend: cfg.backend,
         save_as: cfg.session,        // persist the analysis on the workstation,
         save_label: "analysis"       // alongside the utterances it analyzed
@@ -637,6 +644,21 @@
     }
     var a = $("analyzeBtn");
     if (a) a.style.display = continuousMode ? "inline-block" : "none";
+    var sp = $("speakerToggle");
+    if (sp) sp.style.display = continuousMode ? "inline-block" : "none";
+  }
+  // Dual input: tag each utterance as the listener's own voice ("me") or the
+  // audio being listened to ("source" — a podcast, a sermon, a video), so the
+  // saved transcript and the analysis can tell the two apart.
+  var contSpeaker = "me";
+  function paintSpeakerToggle() {
+    var sp = $("speakerToggle");
+    if (!sp) return;
+    sp.textContent = contSpeaker === "me" ? "🗣 Tagging: me" : "📻 Tagging: source";
+    sp.className = contSpeaker === "me" ? "secondary" : "";
+    sp.title = contSpeaker === "me"
+      ? "Utterances are tagged as YOUR comments. Tap to tag as the audio you're listening to."
+      : "Utterances are tagged as the SOURCE audio (podcast etc.). Tap to tag as your own comments.";
   }
 
   function startRec() {
@@ -986,6 +1008,11 @@
         }
       });
       $("analyzeBtn").addEventListener("click", analyzeTranscript);
+      $("speakerToggle").addEventListener("click", function () {
+        contSpeaker = contSpeaker === "me" ? "source" : "me";
+        paintSpeakerToggle();
+      });
+      paintSpeakerToggle();
       $("analysisClose").addEventListener("click", function () {
         $("analysisPane").style.display = "none";
       });
