@@ -606,6 +606,28 @@
     }
     if (cvad.speaking && (cvad.total / 16000) * 1000 >= CMAX_MS) contEndUtterance();
   }
+  // Keep the phone awake while a listening mode is active — iOS suspends the
+  // page (and the mic) when the screen sleeps. The screen may dim but won't
+  // lock; the lock is dropped whenever no mode needs the mic.
+  var wakeLock = null;
+  function syncWakeLock() {
+    var need = continuousMode || handsFree;
+    if (need && !wakeLock && "wakeLock" in navigator) {
+      navigator.wakeLock.request("screen").then(function (l) {
+        wakeLock = l;
+        l.addEventListener("release", function () { wakeLock = null; });
+      }).catch(function () { /* not fatal — listening still works while awake */ });
+    } else if (!need && wakeLock) {
+      try { wakeLock.release(); } catch (e) {}
+      wakeLock = null;
+    }
+  }
+  // The OS silently releases wake locks when the app is backgrounded; take it
+  // back the moment the page is visible again.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "visible") syncWakeLock();
+  });
+
   function startContinuous() {
     navigator.mediaDevices.getUserMedia({
       audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 }
@@ -981,6 +1003,7 @@
         if (continuousMode) $("contBtn").click();   // the two modes are exclusive
         handsFree = !handsFree;
         setConvoBtn();
+        syncWakeLock();
         if (handsFree) {
           ensureSound();   // must hear the reply to know when to listen again
           if (!(recorder && recorder.state === "recording")) startRec();
@@ -996,6 +1019,7 @@
         if (handsFree) $("convoBtn").click();       // exclusive with hands-free
         continuousMode = !continuousMode;
         setContBtn();
+        syncWakeLock();
         document.body.classList.toggle("continuous", continuousMode);  // give transcript the screen
         if (continuousMode) {
           $("talkBtn").disabled = true;             // tap-to-talk is off in this mode
