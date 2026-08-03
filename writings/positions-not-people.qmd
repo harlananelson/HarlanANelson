@@ -1,0 +1,173 @@
+---
+title: "Positions, Not People"
+description: "What James C. Scott's Seeing Like a State reveals about enterprise HR systems -- and why the org chart can't see the organization."
+node-type: writing
+topic: essay
+audience: general
+date: 2026-08-03
+categories: [essay, organizations, data]
+---
+
+# Positions, Not People
+
+I was listening to a corporate town hall recently -- the kind every large
+organization holds, with dashboards and values statements and a Q&A at the
+end -- when a familiar phrase went by. Leadership was describing a new
+workplace policy. The goal, they explained, was a formalized standard:
+clear, consistent, with *minimal variability*, moving away from
+*individual arrangements*.
+
+Nobody in the room would have flagged the sentence as remarkable. It is
+how responsible administrators talk. But I had been rereading James C.
+Scott, and through that lens the sentence stopped being administrative
+boilerplate and became a thesis statement. The individually negotiated
+arrangement -- this person, this manager, this commute, this caregiving
+schedule, this odd but productive rhythm -- was about to be replaced by
+something a system could see. And the reason had nothing to do with
+whether the individual arrangements worked. Many of them worked
+beautifully. The problem was that they were *illegible*.
+
+## The state's eye
+
+Scott's *Seeing Like a State* (1998) is about what happens when a
+governing center needs to comprehend something vast and organic -- a
+forest, a city, a language, a population -- and comprehends it by
+simplifying it. The state cannot see the peasant's tangled strip-farming,
+so it draws a cadastral map. It cannot tax what it cannot name, so
+surnames are imposed. It cannot administer a medieval city's accreted
+alleys, so the new district is a grid.
+
+His most durable example is the scientific forest. Eighteenth-century
+Prussian foresters, needing predictable timber yields, replaced the messy
+old-growth forest with the *Normalbaum*: same species, same age, planted
+in rows, inventoried to the tree. For one rotation it was a triumph. Then
+yields collapsed. The mess that had been cleared away -- the underbrush,
+the fungi, the deadwood, the species interactions nobody had thought to
+record -- turned out to be the fertility of the forest. The simplification
+did not merely *describe* the forest poorly; imposed on the forest, it
+*destroyed* what it could not describe.
+
+Scott gives the discarded remainder a name: *metis* -- the local,
+practical, relationship-embedded knowledge that cannot be centralized
+because it does not survive being written down in standard categories.
+
+## The cadastral map of the org chart
+
+Enterprise HR systems are cadastral maps of organizations. The unit of
+account is not the person but the *position*: a requisition number, a
+job code, a grade, a cost center, an FTE fraction. Positions are
+everything people are not -- fungible, comparable, aggregable,
+budgetable. You can sum positions, benchmark them against industry
+tables, mark them on-site or remote, and eliminate 3.0 of them from a
+spreadsheet without meeting anyone.
+
+This is not a design flaw. It is the design. An organization of tens of
+thousands cannot be administered as tens of thousands of individual
+stories, any more than Prussia could tax a forest it hadn't inventoried.
+The position abstraction is what makes central decisions *possible* --
+which is precisely Scott's point about maps. The question is never
+whether to have the map. The question is whether the people holding it
+remember that it is one.
+
+Because here is what the position cannot see. It cannot see that one
+analyst is the person three other teams quietly route their hardest
+questions through. It cannot see which nurse is the reason a fragile
+scheduling truce holds. It cannot see whose institutional memory spans
+the last two system migrations, or which "redundant" role was actually
+the connective tissue between two departments that only cooperate
+because those two individuals trust each other. These interrelations are
+the organization's underbrush -- its actual fertility -- and they are
+invisible in the system of record *by construction*, because the system
+records positions, and interrelations are properties of people.
+
+So when decisions run on positions -- this role is now on-site, that
+grade is eliminated, these arrangements are non-standard -- the
+interrelations are ripped out the way the underbrush was, not out of
+malice but out of the honest inability of the instrument to register
+their existence. And as in the forest, the first harvest looks fine. The
+org chart after the reorganization is cleaner than before. The yield
+collapse comes one or two rotations later, in attrition and slowed
+projects and decisions that mysteriously take longer -- damage the
+system's own instruments cannot attribute to its cause, because the
+cause was never in the data.
+
+## A statistician's confession
+
+I should be careful here, because I am not an innocent bystander. I
+build legibility instruments for a living. My current work joins census
+population grids to healthcare facility service areas -- estimating the
+communities around hospitals and clinics from exactly the kind of
+standardized aggregates Scott writes about. The census is the founding
+example of state legibility. County population by age band is a
+Normalbaum of people.
+
+So the lesson I take from Scott is not that grids are evil. Denominators
+require grids; you cannot ask "is this rural community underserved?"
+without an estimate of the community, and an estimate means categories,
+boundaries, aggregation. The lesson is about *rank*: the grid is an
+estimate of the territory and must never be promoted to being the
+territory. In my own field the discipline shows up in small rules --
+knowing what an aggregate can and cannot re-identify, distrusting a
+tidy table until you know what was thrown away to make it tidy,
+treating a model of demand as a hypothesis about a community rather
+than a description of it. The statistical tradition at its best is a
+kind of institutionalized humility about maps. High modernism, in
+Scott's telling, is what happens when that humility is deleted.
+
+And that yields a testable claim about the HR case, because a
+Scott-style failure is not just a mood -- it has a signature. If the
+system sees positions and the organization runs on people, then
+position-level data should *systematically underpredict* the disruption
+of specific departures. Two identical job codes; wildly different
+network centrality; identical severance math; utterly different
+consequences. Any organization could measure this -- exit events joined
+to the informal network, predicted versus realized disruption. Almost
+none do. The instrument that would be indicted is the one that would
+have to fund the study.
+
+## Administering without blinding
+
+Scott's own prescription was never to abolish maps but to keep them
+answerable to metis -- to design systems that leave room for the local
+knowledge they cannot contain. Translated to the enterprise, that looks
+less like a software purchase and more like a set of habits:
+
+- **Let variability be data, not noise.** A hundred individual
+  arrangements are a hundred observations about what actually lets work
+  happen. "Minimal variability" throws the sample away before analysis.
+- **Give managers standing to represent what the system can't see.**
+  The supervisor who says "the org chart says these roles are
+  equivalent, and I am telling you they are not" is not obstructing the
+  process. She is the process's only error-correction channel.
+- **Measure the aftermath, attribute honestly.** If a position-based
+  decision is followed by a slow-motion yield collapse, the postmortem
+  should be allowed to name the decision -- otherwise the map is
+  unfalsifiable, which is another way of saying it has become a
+  religion.
+- **Distinguish the two questions.** "What does the budget require?" is
+  a positions question. "What will this do to us?" is a people question.
+  Answering the second with the instrument built for the first is the
+  whole error, compressed.
+
+The town hall that started this essay was, to be fair, full of people
+sincerely trying to do right by a workforce -- and in the same meeting,
+leadership spoke about wanting to genuinely understand the communities
+around their rural facilities, which is the *opposite* instinct: a
+request for exactly the local knowledge the dashboards don't carry. Both
+impulses live in every large organization. Scott's warning is simply
+about which one wins by default. The grid always wins by default. It is
+visible, and the underbrush is not -- until the second rotation, when
+the forest quietly stops growing, and every instrument in the building
+agrees that nothing is wrong.
+
+## Further reading
+
+- James C. Scott, *Seeing Like a State: How Certain Schemes to Improve
+  the Human Condition Have Failed* (Yale, 1998) -- especially chs. 1
+  ("Nature and Space") and 9 ("Thin Simplifications and Practical
+  Knowledge: Metis").
+- Friedrich Hayek, "The Use of Knowledge in Society" (1945) -- the
+  economist's version of the same argument about dispersed, local
+  knowledge.
+- Elinor Ostrom, *Governing the Commons* (1990) -- what
+  metis-respecting institutions look like when they work.
