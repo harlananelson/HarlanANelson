@@ -156,6 +156,7 @@
   <pre id="agentOut">Pick a session above — its recent output shows here.</pre>
   <div id="agentBar">
     <button id="agentRefreshBtn" class="secondary">↻</button>
+    <button id="agentMicBtn" class="secondary" title="Dictate a directive (needs sound on)">🎤</button>
     <input id="agentInput" placeholder="Directive to send to the selected session…" autocomplete="off">
     <button id="agentSendBtn">Send</button>
   </div>
@@ -861,6 +862,7 @@
     $("agentInput").placeholder = agentSendable
       ? "Directive to send to " + (agentSel || "the selected session") + "…"
       : (agentSel ? agentSel + " is read-only (not in tmux-allow)" : "Pick a session above…");
+    if (typeof paintAgentMic === "function") paintAgentMic();
   }
 
   function agentSend() {
@@ -885,8 +887,81 @@
     }).catch(function (e) { resetAgentSend(); setStatus(e.message, true); });
   }
 
+  // ---- dictate a directive into the selected tmux session ------------------
+  // Gated on sound being ON: talking to a terminal only makes sense when you
+  // can hear the agent's reply, and it keeps dictation from firing into a
+  // coding session during a silent meeting. Speech fills the box — it never
+  // auto-sends; the existing two-tap confirm still guards execution.
+  var agentRec = null, agentChunks = [], agentRecording = false;
+
+  function paintAgentMic() {
+    var b = $("agentMicBtn");
+    if (!b) return;
+    var ok = soundOn && agentSendable;
+    b.disabled = !ok || agentRecording === "busy";
+    b.textContent = agentRecording === true ? "⏹" : "🎤";
+    b.className = agentRecording === true ? "confirm" : "secondary";
+    b.title = !soundOn
+      ? "Turn sound on to dictate directives"
+      : (!agentSendable ? "Select a sendable session first"
+                        : "Dictate a directive — tap, speak, tap to stop");
+  }
+
+  function agentDictate() {
+    if (!soundOn || !agentSendable) return;
+    if (agentRecording === true) {                 // second tap: stop + send up
+      try { agentRec.stop(); } catch (e) {}
+      return;
+    }
+    navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+      agentChunks = [];
+      var mime = "";
+      ["audio/webm;codecs=opus", "audio/webm", "audio/mp4"].some(function (m) {
+        if (MediaRecorder.isTypeSupported(m)) { mime = m; return true; }
+        return false;
+      });
+      agentRec = new MediaRecorder(stream, mime ? { mimeType: mime } : undefined);
+      agentRec.ondataavailable = function (e) { if (e.data.size) agentChunks.push(e.data); };
+      agentRec.onstop = function () {
+        stream.getTracks().forEach(function (t) { t.stop(); });
+        agentRecording = "busy"; paintAgentMic();
+        var blob = new Blob(agentChunks, { type: agentRec.mimeType || "audio/webm" });
+        if (!blob || blob.size < 1200) {
+          agentRecording = false; paintAgentMic();
+          setStatus("Didn't catch that — tap 🎤 and speak.", true);
+          return;
+        }
+        var fd = new FormData();
+        fd.append("audio", blob, "clip." + (blob.type.indexOf("mp4") >= 0 ? "m4a" : "webm"));
+        fd.append("session", cfg.session);
+        fd.append("chat", "0");        // transcribe only — this is a directive, not a question
+        api("/api/transcribe", { method: "POST", body: fd })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            agentRecording = false; paintAgentMic();
+            if (!data.text) { setStatus("Heard nothing — try again.", true); return; }
+            var box = $("agentInput");
+            box.value = (box.value ? box.value.trim() + " " : "") + data.text;
+            resetAgentSend();          // any edit invalidates a pending confirm
+            setStatus("Dictated — review, then Send to " + agentSel + ".");
+            speak("Directive: " + data.text + ". Tap send to run it.");
+          })
+          .catch(function (e) {
+            agentRecording = false; paintAgentMic();
+            setStatus("Dictation failed: " + e.message, true);
+          });
+      };
+      agentRec.start();
+      agentRecording = true; paintAgentMic();
+      setStatus("Listening — tap ⏹ when done.");
+    }).catch(function (e) {
+      setStatus("Microphone unavailable: " + e.message, true);
+    });
+  }
+
   $("agentsBtn").onclick = function () { agentsView(!agentsOpen); };
   $("agentRefreshBtn").onclick = function () { loadAgents(); refreshAgentOut(); };
+  $("agentMicBtn").onclick = agentDictate;
   $("agentSendBtn").onclick = agentSend;
   $("agentInput").addEventListener("input", function () { if (agentConfirm) resetAgentSend(); });
 
@@ -958,6 +1033,7 @@
   $("soundBtn").onclick = function () {
     soundOn = !soundOn;
     $("soundBtn").textContent = soundOn ? "🔊 Sound on" : "🔇 Sound off";
+    if (typeof paintAgentMic === "function") paintAgentMic();   // dictation is sound-gated
     if (soundOn) { unlockAudio(); }      // unlock <audio> inside this tap gesture
     else {
       try { audioEl.pause(); audioEl.removeAttribute("src"); audioEl.load(); } catch (e) {}
