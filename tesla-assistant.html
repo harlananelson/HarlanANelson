@@ -987,6 +987,10 @@
     // phone: giant push-to-talk, no composer
     $("composer").style.display = "none";
     $("micPane").style.display = "flex";
+    // The backend picker lives in the (hidden) composer — move the element
+    // itself into the mic pane so Voice + AI can choose which AI answers
+    // and runs 🧠 analyses. Same element, same saved preference.
+    $("micPane").insertBefore($("backendSel"), $("micText"));
     if (!micSupported()) {
       $("micText").textContent = "This browser has no microphone access. " +
         "Open this page on a phone (Safari/Chrome) instead.";
