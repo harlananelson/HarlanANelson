@@ -316,8 +316,21 @@
 
   // ---- spoken replies (server TTS -> <audio>; tap on the sound button
   //      doubles as the autoplay-unlock gesture) ----
-  function speak(text) {
-    if (!soundOn || continuousMode) return;   // continuous mode is text-only
+  // onDone (optional) fires once when this utterance finishes playing — used by
+  // the agent-dictation confirm so listening starts the moment speech ends.
+  function speak(text, onDone) {
+    if (!soundOn || continuousMode) { if (onDone) onDone(); return; }
+    if (onDone) {
+      var fired = false;
+      var fire = function () {
+        if (fired) return;
+        fired = true;
+        audioEl.removeEventListener("ended", fire);
+        onDone();
+      };
+      audioEl.addEventListener("ended", fire);
+      setTimeout(fire, 20000);   // never strand the caller on a stalled clip
+    }
     api("/api/tts", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -333,9 +346,13 @@
       // fall back to the browser's own voice if server TTS is unavailable
       try {
         var u = new SpeechSynthesisUtterance(text);
-        u.onend = onSpeakEnd;   // keep the hands-free loop going on this path too
+        u.onend = function () { onSpeakEnd(); if (onDone) onDone(); };
         speechSynthesis.speak(u);
-      } catch (e2) { setStatus("Speech failed: " + e.message, true); onSpeakEnd(); }
+      } catch (e2) {
+        setStatus("Speech failed: " + e.message, true);
+        onSpeakEnd();
+        if (onDone) onDone();
+      }
     });
   }
 
@@ -892,7 +909,95 @@
   // can hear the agent's reply, and it keeps dictation from firing into a
   // coding session during a silent meeting. Speech fills the box — it never
   // auto-sends; the existing two-tap confirm still guards execution.
-  var agentRec = null, agentChunks = [], agentRecording = false;
+  // Capture uses the SAME 16 kHz WAV path as continuous mode, not MediaRecorder:
+  // a WebM/MP4 clip forces the server to shell out to ffmpeg before Whisper can
+  // see it, which is most of the round-trip delay. WAV goes straight in.
+  var agentAudio = null;   // {stream, ctx, src, proc}
+  var agentVad = null, agentRecording = false, agentPhase = "idle";  // idle|dictate|confirm
+  var AG_HANG_MS = 1200, AG_MIN_MS = 300, AG_MAX_MS = 20000;
+  var AG_CONFIRM_HANG_MS = 700, AG_CONFIRM_MAX_MS = 6000;
+
+  function agentAudioStop() {
+    if (!agentAudio) return;
+    try { agentAudio.proc.disconnect(); agentAudio.proc.onaudioprocess = null; } catch (e) {}
+    try { agentAudio.src.disconnect(); } catch (e) {}
+    try { agentAudio.stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
+    try { agentAudio.ctx.close(); } catch (e) {}
+    agentAudio = null;
+  }
+
+  function agentListen(phase, onText) {
+    agentPhase = phase;
+    var hang = phase === "confirm" ? AG_CONFIRM_HANG_MS : AG_HANG_MS;
+    var maxMs = phase === "confirm" ? AG_CONFIRM_MAX_MS : AG_MAX_MS;
+    navigator.mediaDevices.getUserMedia({
+      audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 }
+    }).then(function (stream) {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      var ctx = new AC();
+      if (ctx.resume) ctx.resume();
+      var rate = ctx.sampleRate;
+      var src = ctx.createMediaStreamSource(stream);
+      var proc = ctx.createScriptProcessor(CFRAME, 1, 1);
+      agentAudio = { stream: stream, ctx: ctx, src: src, proc: proc };
+      agentVad = { speaking: false, silenceMs: 0, frames: [], total: 0, elapsed: 0 };
+      agentRecording = true; paintAgentMic();
+
+      proc.onaudioprocess = function (e) {
+        if (!agentAudio) return;
+        var frame = downsampleTo16k(new Float32Array(e.inputBuffer.getChannelData(0)), rate);
+        var n = frame.length, sum = 0, i;
+        for (i = 0; i < n; i++) sum += frame[i] * frame[i];
+        var rms = Math.sqrt(sum / n), ms = (n / 16000) * 1000;
+        agentVad.elapsed += ms;
+        if (rms >= 0.02) {
+          agentVad.speaking = true; agentVad.silenceMs = 0;
+          agentVad.frames.push(frame); agentVad.total += n;
+        } else if (agentVad.speaking) {
+          agentVad.frames.push(frame); agentVad.total += n;
+          agentVad.silenceMs += ms;
+          if (agentVad.silenceMs >= hang) { agentFinish(onText); return; }   // auto-stop on silence
+        }
+        if (agentVad.elapsed >= maxMs) { agentFinish(onText); }
+      };
+      src.connect(proc);
+      proc.connect(ctx.destination);
+      setStatus(phase === "confirm" ? "Say “send” to run it, or “cancel”."
+                                    : "Listening — just speak, it stops on its own.");
+    }).catch(function (e) {
+      agentRecording = false; agentPhase = "idle"; paintAgentMic();
+      setStatus("Microphone unavailable: " + (e && e.message || e), true);
+    });
+  }
+
+  function agentFinish(onText) {
+    var frames = agentVad ? agentVad.frames : [], total = agentVad ? agentVad.total : 0;
+    agentAudioStop();
+    agentRecording = false;
+    if (!frames.length || (total / 16000) * 1000 < AG_MIN_MS) {
+      agentPhase = "idle"; paintAgentMic();
+      setStatus("Didn't catch that — tap 🎤 and speak.", true);
+      return;
+    }
+    var merged = new Float32Array(total), off = 0;
+    frames.forEach(function (f) { merged.set(f, off); off += f.length; });
+    paintAgentMic();
+    setStatus("Transcribing…");
+    var fd = new FormData();
+    fd.append("audio", encodeWav16k(merged), "clip.wav");
+    fd.append("session", cfg.session);
+    fd.append("chat", "0");
+    api("/api/transcribe", { method: "POST", body: fd })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        agentPhase = "idle"; paintAgentMic();
+        onText((data && data.text) || "");
+      })
+      .catch(function (e) {
+        agentPhase = "idle"; paintAgentMic();
+        setStatus("Dictation failed: " + e.message, true);
+      });
+  }
 
   function paintAgentMic() {
     var b = $("agentMicBtn");
@@ -907,56 +1012,55 @@
                         : "Dictate a directive — tap, speak, tap to stop");
   }
 
+  function normWord(s) {
+    return (s || "").toLowerCase().replace(/[^a-z ]/g, " ").replace(/\s+/g, " ").trim();
+  }
+
   function agentDictate() {
     if (!soundOn || !agentSendable) return;
-    if (agentRecording === true) {                 // second tap: stop + send up
-      try { agentRec.stop(); } catch (e) {}
-      return;
-    }
-    navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
-      agentChunks = [];
-      var mime = "";
-      ["audio/webm;codecs=opus", "audio/webm", "audio/mp4"].some(function (m) {
-        if (MediaRecorder.isTypeSupported(m)) { mime = m; return true; }
-        return false;
-      });
-      agentRec = new MediaRecorder(stream, mime ? { mimeType: mime } : undefined);
-      agentRec.ondataavailable = function (e) { if (e.data.size) agentChunks.push(e.data); };
-      agentRec.onstop = function () {
-        stream.getTracks().forEach(function (t) { t.stop(); });
-        agentRecording = "busy"; paintAgentMic();
-        var blob = new Blob(agentChunks, { type: agentRec.mimeType || "audio/webm" });
-        if (!blob || blob.size < 1200) {
-          agentRecording = false; paintAgentMic();
-          setStatus("Didn't catch that — tap 🎤 and speak.", true);
-          return;
-        }
-        var fd = new FormData();
-        fd.append("audio", blob, "clip." + (blob.type.indexOf("mp4") >= 0 ? "m4a" : "webm"));
-        fd.append("session", cfg.session);
-        fd.append("chat", "0");        // transcribe only — this is a directive, not a question
-        api("/api/transcribe", { method: "POST", body: fd })
-          .then(function (r) { return r.json(); })
-          .then(function (data) {
-            agentRecording = false; paintAgentMic();
-            if (!data.text) { setStatus("Heard nothing — try again.", true); return; }
-            var box = $("agentInput");
-            box.value = (box.value ? box.value.trim() + " " : "") + data.text;
-            resetAgentSend();          // any edit invalidates a pending confirm
-            setStatus("Dictated — review, then Send to " + agentSel + ".");
-            speak("Directive: " + data.text + ". Tap send to run it.");
-          })
-          .catch(function (e) {
-            agentRecording = false; paintAgentMic();
-            setStatus("Dictation failed: " + e.message, true);
-          });
-      };
-      agentRec.start();
-      agentRecording = true; paintAgentMic();
-      setStatus("Listening — tap ⏹ when done.");
-    }).catch(function (e) {
-      setStatus("Microphone unavailable: " + e.message, true);
+    if (agentRecording) { agentFinishNow(); return; }   // tap again = stop early
+    agentListen("dictate", function (text) {
+      if (!text) { setStatus("Heard nothing — try again.", true); return; }
+      var box = $("agentInput");
+      box.value = (box.value ? box.value.trim() + " " : "") + text;
+      resetAgentSend();
+      setStatus("Say “send” to run it on " + agentSel + ", or “cancel”.");
+      // Read it back, then listen for the spoken decision — hands never needed.
+      speakThenConfirm(text);
     });
+  }
+
+  function agentFinishNow() {
+    if (agentAudio && agentVad) { agentVad.silenceMs = 1e9; }   // next frame flushes
+  }
+
+  // Read the captured directive back, then open a short confirm listen.
+  // The readback IS the safety step: you hear exactly what would run.
+  function speakThenConfirm(text) {
+    var started = false;
+    function begin() {
+      if (started) return;
+      started = true;
+      agentListen("confirm", function (heard) {
+        var w = normWord(heard);
+        var yes = /\b(send|send it|yes|go|run it|do it|confirm)\b/.test(w);
+        var no = /\b(cancel|no|stop|scratch that|never mind|nevermind|clear)\b/.test(w);
+        if (yes) {
+          agentConfirm = true;      // skip the tap-confirm: the voice WAS the confirm
+          agentSend();
+          speak("Sent.");
+        } else if (no) {
+          $("agentInput").value = "";
+          resetAgentSend();
+          setStatus("Cancelled.");
+          speak("Cancelled.");
+        } else {
+          setStatus("Didn't hear send or cancel — review and tap Send.", true);
+        }
+      });
+    }
+    speak(text + ". Send?", begin);
+    setTimeout(begin, 9000);   // TTS silent or failed: confirm anyway, don't strand
   }
 
   $("agentsBtn").onclick = function () { agentsView(!agentsOpen); };
