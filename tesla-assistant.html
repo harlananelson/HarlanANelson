@@ -124,6 +124,7 @@
       <input id="exportLabel" placeholder="label (e.g. insurance-call)" autocomplete="off"
              style="flex:1; min-width:120px; font-size:16px; padding:8px 10px; border-radius:8px; border:1px solid #444; background:#222; color:#eee;">
       <button id="exportBtn" class="secondary" style="margin:0">Save</button>
+      <button id="diarizeBtn" class="secondary" style="margin:0" title="Label who spoke, from the audio">🗣 Who spoke</button>
     </div>
     <div id="exportStatus" style="display:none; padding:6px 14px; font-size:14px; color:#8fd19e;"></div>
     <div id="transcriptsList" style="overflow-y:auto; padding:12px 14px;"></div>
@@ -1206,6 +1207,27 @@
         }).catch(function () { /* pane still works read-only */ });
     }
   });
+  // Speaker diarization: the workstation embeds each saved utterance and
+  // clusters the voices, so attribution is corrected from the audio instead
+  // of relying on the live 🗣/📻 toggle. Result is a separate transcript
+  // (<session>-diarized-<date>) — originals are untouched.
+  $("diarizeBtn").addEventListener("click", function () {
+    var st = $("exportStatus");
+    st.style.display = "block"; st.style.color = "#8fd19e";
+    st.textContent = "Labelling speakers on the workstation… (a minute or two)";
+    api("/api/diarize", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ session: cfg.session })
+    }).then(function (r) { return r.json().then(function (d) { return r.ok ? d : Promise.reject(new Error(d.detail || r.status)); }); })
+      .then(function (d) {
+        if (d.running) { st.textContent = "Already running — try again shortly."; return; }
+        st.textContent = "Labelled " + d.labelled + " utterances, " +
+          d.speakers + " speaker(s). Open the " + cfg.session + "-diarized file below.";
+        showTranscriptList();
+      })
+      .catch(function (e) { st.style.color = "#ffb4a8"; st.textContent = "Diarize failed: " + e.message; });
+  });
+
   $("exportBtn").addEventListener("click", function () {
     var st = $("exportStatus");
     st.style.display = "block"; st.style.color = "#8fd19e";
