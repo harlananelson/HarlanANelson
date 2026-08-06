@@ -100,6 +100,17 @@
   #settings input { width: 100%; font-size: 19px; padding: 12px; border-radius: 10px; border: 1px solid #444; background: #222; color: #eee; }
   #settings .row { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
   .hint { font-size: 15px; color: #888; margin-top: 10px; line-height: 1.4; }
+  /* Console pass: the car screen is the SAME layout scaled up (principle 6),
+     not a different design. Coarse pointer + wide viewport ⇒ arm's length. */
+  @media (pointer: coarse) and (min-width: 1100px) {
+    body { font-size: 24px; }
+    button { font-size: 24px; padding: 18px 26px; }
+    #talkBtn { min-height: 104px; font-size: 28px; }
+    .chip { font-size: 20px; padding: 10px 18px; }
+    #agentOut { font-size: 17px; }
+    .sheet-body button.row { font-size: 22px; }
+  }
+  .msg.notice { align-self: center; background: #23303a; color: #9cc4e0; font-size: 16px; }
   /* One reusable sheet — every overlay in the app is this, not a bespoke
      inline-styled pane (see documents/assistant-design-philosophy.md). */
   .sheet { position: fixed; inset: 0; z-index: 30; background: rgba(0,0,0,.55); padding: 20px; }
@@ -192,15 +203,6 @@
   </div>
 </div>
 
-  <div id="analysisPane" style="display:none; position:fixed; inset:0; z-index:30; background:rgba(0,0,0,.55); padding:20px;">
-    <div style="max-width:640px; margin:0 auto; max-height:100%; display:flex; flex-direction:column; background:#161b22; border:1px solid #30363d; border-radius:12px; overflow:hidden;">
-      <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; border-bottom:1px solid #30363d;">
-        <strong style="flex:1">🧠 Transcript analyses</strong>
-        <button id="analysisClose" class="secondary" style="margin:0">Close</button>
-      </div>
-      <div id="analysisList" style="overflow-y:auto; padding:12px 14px; white-space:pre-wrap; font-size:15px; line-height:1.5;"></div>
-    </div>
-  </div>
 <!-- Persistent bottom bar: context row (target + mode + mode-specific
      chips), then the one primary action, then the type-instead row. The
      stream above is NEVER replaced — selecting phone mic no longer swaps
@@ -572,11 +574,13 @@
     }
   }
   function showAnalysisPane() {
-    var list = $("analysisList");
-    list.textContent = analysisResults.length
+    var body = analysisResults.length
       ? analysisResults.map(function (r) { return "— " + r.at + " —\n" + r.text; }).join("\n\n")
       : "No analyses yet.";
-    $("analysisPane").style.display = "block";
+    openSheet("🧠 Transcript analyses", [{
+      html: '<div style="white-space:pre-wrap; font-size:15px; line-height:1.5"></div>'
+    }]);
+    $("sheetBody").firstChild.firstChild.textContent = body;
     analysisUnseen = 0;
     paintAnalyzeBtn();
   }
@@ -637,6 +641,7 @@
           text: data.reply || "(no analysis returned)"
         });
         analysisUnseen += 1;
+        addMsg("assistant", "🧠 analysis ready — tap 🧠 to read it", "notice");
       })
       .catch(function (e) {
         analysisResults.unshift({ at: new Date().toLocaleTimeString(),
@@ -1575,9 +1580,6 @@
       });
       paintSpeakerToggle();
       paintMode();
-      $("analysisClose").addEventListener("click", function () {
-        $("analysisPane").style.display = "none";
-      });
 
       // Reply never arrived (backend error, no audio) — don't wait forever.
       setInterval(function () {
