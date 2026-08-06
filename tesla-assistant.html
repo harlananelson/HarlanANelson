@@ -59,9 +59,9 @@
   }
   /* Agents panel (tmux sessions on the workstation) */
   #agents { display: none; flex: 1; flex-direction: column; overflow: hidden; }
-  #agentList { display: flex; gap: 8px; padding: 10px 18px; overflow-x: auto; flex-wrap: wrap; }
-  #agentList button { font-size: 17px; padding: 10px 14px; background: #333; }
-  #agentList button.sel { background: #2b6cb0; }
+  #agentList { display: flex; gap: 10px; padding: 10px 18px; align-items: center; }
+  #agentList select { flex: 1; min-width: 0; }
+  #agentMode { white-space: nowrap; }
   #agentOut {
     flex: 1; overflow: auto; margin: 0 18px; padding: 12px;
     background: #000; border: 1px solid #333; border-radius: 10px;
@@ -153,7 +153,10 @@
 <div id="transcript"></div>
 
 <div id="agents">
-  <div id="agentList"></div>
+  <div id="agentList">
+    <select id="agentSelect" title="tmux session on the workstation"></select>
+    <span id="agentMode" class="hint" style="margin:0"></span>
+  </div>
   <pre id="agentOut">Pick a session above — its recent output shows here.</pre>
   <div id="agentBar">
     <button id="agentRefreshBtn" class="secondary">↻</button>
@@ -835,27 +838,48 @@
     else if (agentTimer) { clearInterval(agentTimer); agentTimer = null; }
   }
 
+  // The session list is a LIVE survey — `tmux list-sessions` on the
+  // workstation each time this runs (on opening Agents and on ↻), never a
+  // fixed list. A dropdown rather than a button per session: there are often
+  // a dozen-plus, and on a phone they wrapped into several rows of chrome
+  // above the output pane.
+  var agentSessions = [];
   function loadAgents() {
     api("/api/tmux/sessions").then(function (r) { return r.json(); })
       .then(function (data) {
-        var list = $("agentList");
-        list.innerHTML = "";
-        data.sessions.forEach(function (s) {
-          var b = document.createElement("button");
-          b.textContent = (s.sendable ? "✏️ " : "👁 ") + s.name;
-          b.className = s.name === agentSel ? "sel" : "";
-          b.onclick = function () {
-            agentSel = s.name;
-            agentSendable = s.sendable;
-            resetAgentSend();
-            loadAgents();
-            refreshAgentOut();
-          };
-          list.appendChild(b);
+        agentSessions = data.sessions || [];
+        var sel = $("agentSelect");
+        sel.innerHTML = "";
+        if (!agentSessions.length) {
+          $("agentOut").textContent = "No tmux sessions on the host.";
+          $("agentMode").textContent = "";
+          return;
+        }
+        // Keep the current pick if it still exists; else take the first.
+        if (!agentSessions.some(function (s) { return s.name === agentSel; })) {
+          agentSel = agentSessions[0].name;
+        }
+        agentSessions.forEach(function (s) {
+          var o = document.createElement("option");
+          o.value = s.name;
+          o.textContent = (s.sendable ? "✏️ " : "👁 ") + s.name +
+            (s.attached ? " •" : "");
+          sel.appendChild(o);
         });
-        if (!data.sessions.length) $("agentOut").textContent = "No tmux sessions on the host.";
+        sel.value = agentSel;
+        applyAgentSelection();
       })
       .catch(function (e) { setStatus(e.message, true); });
+  }
+
+  function applyAgentSelection() {
+    var s = agentSessions.filter(function (x) { return x.name === agentSel; })[0];
+    agentSendable = !!(s && s.sendable);
+    $("agentMode").textContent = s
+      ? (s.sendable ? "can type into this session" : "read-only (not in tmux-allow)")
+      : "";
+    resetAgentSend();
+    refreshAgentOut();
   }
 
   function refreshAgentOut() {
@@ -1066,6 +1090,10 @@
 
   $("agentsBtn").onclick = function () { agentsView(!agentsOpen); };
   $("agentRefreshBtn").onclick = function () { loadAgents(); refreshAgentOut(); };
+  $("agentSelect").addEventListener("change", function () {
+    agentSel = this.value;
+    applyAgentSelection();
+  });
   $("agentMicBtn").onclick = agentDictate;
   $("agentSendBtn").onclick = agentSend;
   $("agentInput").addEventListener("input", function () { if (agentConfirm) resetAgentSend(); });
