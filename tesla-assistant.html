@@ -215,7 +215,7 @@
 <div id="bar">
   <div id="barContext">
     <button id="targetChip" class="chip">🤖 AI</button>
-    <button id="modeChip" class="chip">🎤 Tap to talk</button>
+    <button id="modeChip" class="chip">⌨️ Desk</button>
     <button id="speakerToggle" class="chip" style="display:none">🗣 me</button>
     <button id="analyzeBtn" class="chip" style="display:none">🧠 Analyze</button>
   </div>
@@ -1551,8 +1551,8 @@
       // a desk. Choosing one sets everything it implies, so you can never end
       // up in "recording a meeting but the app talks out loud".
       var MODES = {
-        tap:        { chip: "🎤 Tap to talk",  action: "Tap to talk",
-                      note: "Tap once, speak, tap again to send." },
+        tap:        { chip: "⌨️ Desk",         action: "Tap to talk",
+                      note: "Tap once, speak, tap again to send — or type below." },
         handsfree:  { chip: "🚗 Driving",      action: "Tap to start talking",
                       note: "Speak and it answers out loud, then listens again. Sound on." },
         continuous: { chip: "🎙 Meeting",      action: "⏹ Stop recording",
