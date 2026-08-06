@@ -77,6 +77,11 @@
   /* Persistent input bar (replaces the full-screen mic pane) */
   #bar { display: none; flex-direction: column; gap: 10px; padding: 10px 14px 14px; background: #1b1b1b; }
   #barContext { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  #barType { display: flex; gap: 8px; }
+  #barType input {
+    flex: 1; min-width: 0; font-size: 18px; padding: 12px 14px; border-radius: 12px;
+    border: 1px solid #444; background: #222; color: #eee;
+  }
   .chip {
     background: #333; font-size: 16px; padding: 8px 14px; border-radius: 999px;
   }
@@ -215,6 +220,10 @@
     <button id="analyzeBtn" class="chip" style="display:none">🧠 Analyze</button>
   </div>
   <button id="talkBtn">Tap to talk</button>
+  <div id="barType">
+    <input id="barInput" placeholder="…or type instead" autocomplete="off">
+    <button id="barSend">Send</button>
+  </div>
 </div>
 
 <div id="composer">
@@ -355,7 +364,12 @@
   // onDone (optional) fires once when this utterance finishes playing — used by
   // the agent-dictation confirm so listening starts the moment speech ends.
   function speak(text, onDone) {
-    if (!soundOn || continuousMode) { if (onDone) onDone(); return; }
+    // Meeting situation (continuous) is silent by construction — belt and
+    // braces so nothing can interrupt a room.
+    if (!soundOn || continuousMode || micMode === "continuous") {
+      if (onDone) onDone();
+      return;
+    }
     if (onDone) {
       var fired = false;
       var fire = function () {
@@ -1203,6 +1217,12 @@
     }
     var box = $("msgInput");
     if (box) { box.value = ""; }   // retargeting clears the field (mis-target guard)
+    if ($("barInput")) {
+      $("barInput").value = "";
+      $("barInput").placeholder = target.kind === "tmux"
+        ? "Directive for " + target.name + " — needs confirming"
+        : "…or type instead";
+    }
     paintTargetChip();
     paintAgentsBtn();
   }
@@ -1266,6 +1286,24 @@
 
   var micModeOffered = false;
   if ($("targetChip")) $("targetChip").onclick = openTargetSheet;
+
+  // Typing is available in every situation — hand the text to the same
+  // sendTyped() the desktop composer uses, so target routing (AI vs tmux)
+  // and the shell's two-tap confirm apply identically.
+  function barTypeSend() {
+    var box = $("barInput");
+    var text = box.value.trim();
+    if (!text) return;
+    $("msgInput").value = text;
+    box.value = "";
+    sendTyped();
+  }
+  if ($("barSend")) {
+    $("barSend").onclick = barTypeSend;
+    $("barInput").addEventListener("keydown", function (e) {
+      if (e.key === "Enter") barTypeSend();
+    });
+  }
 
   $("overflowBtn").onclick = function () {
     var rows = [
@@ -1508,14 +1546,29 @@
       // Modes: tap | handsfree | continuous. Exclusivity is structural —
       // setMicMode ends whatever was running — instead of one button
       // programmatically clicking another (the old convoBtn/contBtn dance).
+      // A SITUATION is a named combination of mic mode + sound, because that
+      // is how the app is actually used: driving, sitting in a meeting, or at
+      // a desk. Choosing one sets everything it implies, so you can never end
+      // up in "recording a meeting but the app talks out loud".
       var MODES = {
         tap:        { chip: "🎤 Tap to talk",  action: "Tap to talk",
                       note: "Tap once, speak, tap again to send." },
-        handsfree:  { chip: "🔁 Hands-free",   action: "Tap to start talking",
-                      note: "Talks and listens in a loop; needs sound on." },
-        continuous: { chip: "⏺ Continuous",    action: "⏹ Stop listening",
-                      note: "Always-on transcription. Never speaks; tap 🧠 any time." }
+        handsfree:  { chip: "🚗 Driving",      action: "Tap to start talking",
+                      note: "Speak and it answers out loud, then listens again. Sound on." },
+        continuous: { chip: "🎙 Meeting",      action: "⏹ Stop recording",
+                      note: "Records and transcribes silently. Never speaks. Tap 🧠 any time." }
       };
+      var SITUATIONS = [
+        { key: "handsfree", label: "🚗 Driving — talk, hear answers",
+          note: "Hands-free loop with spoken replies; screen stays awake.",
+          sound: true },
+        { key: "continuous", label: "🎙 Meeting — record silently",
+          note: "Continuous transcription, audio output forced off so nothing interrupts.",
+          sound: false },
+        { key: "tap", label: "⌨️ Desk — tap to talk or type",
+          note: "Tap to speak a question, or use the type box below. Sound as you leave it.",
+          sound: null }
+      ];
       micMode = "tap";
 
       function paintMode() {
@@ -1558,12 +1611,20 @@
       window.__setMicMode = setMicMode;        // used by the mode sheet
 
       $("modeChip").addEventListener("click", function () {
-        openSheet("Microphone mode", Object.keys(MODES).map(function (k) {
-          return { label: (micMode === k ? "● " : "○ ") + MODES[k].chip,
-                   note: MODES[k].note,
-                   onClick: function () { setMicMode(k); } };
+        openSheet("How are you using it?", SITUATIONS.map(function (sit) {
+          return { label: (micMode === sit.key ? "● " : "○ ") + sit.label,
+                   note: sit.note,
+                   onClick: function () { setSituation(sit); } };
         }));
       });
+
+      function setSituation(sit) {
+        // Sound first: a meeting must be silent BEFORE recording starts, and
+        // driving must be audible before the loop begins.
+        if (sit.sound === true) { ensureSound(); }
+        else if (sit.sound === false && soundOn) { $("soundBtn").click(); }
+        setMicMode(sit.key);
+      }
 
       // Primary action: meaning depends on the mode, position never moves.
       $("talkBtn").addEventListener("click", function () {
