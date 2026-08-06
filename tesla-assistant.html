@@ -106,6 +106,7 @@
   <h1>Home AI</h1>
   <span id="connDot" class="dot"></span>
   <button id="soundBtn" class="secondary">🔇 Sound off</button>
+  <button id="clearBtn" class="secondary" title="Clear the conversation shown here">🧹</button>
   <button id="transcriptsBtn" class="secondary">📁</button>
   <button id="agentsBtn" class="secondary">🤖 Agents</button>
   <button id="micModeBtn" class="secondary" style="display:none">🎤 Phone mic</button>
@@ -1087,6 +1088,16 @@
     speak(text + ". Send?", begin);
     setTimeout(begin, 9000);   // TTS silent or failed: confirm anyway, don't strand
   }
+
+  // Clear the on-screen conversation. Display only: saved transcripts on the
+  // workstation are untouched, and polling continues from the current event
+  // cursor so cleared messages don't come back.
+  $("clearBtn").onclick = function () {
+    $("transcript").innerHTML = "";
+    contTranscript = [];        // analyses start fresh from here too
+    setInterim("");
+    setStatus("Cleared.");
+  };
 
   $("agentsBtn").onclick = function () { agentsView(!agentsOpen); };
   $("agentRefreshBtn").onclick = function () { loadAgents(); refreshAgentOut(); };
