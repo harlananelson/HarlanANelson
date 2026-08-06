@@ -207,6 +207,7 @@
      the screen for a different set of buttons. -->
 <div id="bar">
   <div id="barContext">
+    <button id="targetChip" class="chip">🤖 AI</button>
     <button id="modeChip" class="chip">🎤 Tap to talk</button>
     <button id="speakerToggle" class="chip" style="display:none">🗣 me</button>
     <button id="analyzeBtn" class="chip" style="display:none">🧠 Analyze</button>
@@ -332,7 +333,8 @@
   function fillBackends(list) {
     var sel = $("backendSel");
     if (sel.options.length || !list || !list.length) return;
-    var opts = [""].concat(list);
+    window.__backends = [""].concat(list);
+    var opts = window.__backends;
     opts.forEach(function (b) {
       var o = document.createElement("option");
       o.value = b;
@@ -422,6 +424,12 @@
     var input = $("msgInput");
     var text = input.value.trim();
     if (!text) return;
+    if (target.kind === "tmux") {          // same box, different verb + safety
+      $("agentInput").value = text;
+      input.value = "";
+      agentSend();
+      return;
+    }
     input.value = "";
     setStatus("Thinking…");
     $("sendBtn").disabled = true;
@@ -924,6 +932,7 @@
       ? (s.sendable ? "can type into this session" : "read-only (not in tmux-allow)")
       : "";
     paintAgentsBtn();
+    if (target.kind === "tmux") { target.name = agentSel; paintTargetChip(); }
     resetAgentSend();
     refreshAgentOut();
   }
@@ -1134,6 +1143,67 @@
     setTimeout(begin, 9000);   // TTS silent or failed: confirm anyway, don't strand
   }
 
+  // ---- Target: the one thing your words go to -----------------------------
+  // An AI backend (safe) or a tmux session (confirm-required). Selecting one
+  // changes the stage, the placeholder and the safety rules — it does not
+  // swap in a parallel UI. Merges #backendSel, #agentSelect and #agentsBtn.
+  var target = { kind: "ai", name: "" };   // kind: ai | tmux
+
+  function targetLabel() {
+    if (target.kind === "tmux") return "🖥 " + target.name;
+    return "🤖 " + (target.name || cfg.backend || "AI");
+  }
+
+  function paintTargetChip() {
+    var c = $("targetChip");
+    if (!c) return;
+    c.textContent = targetLabel();
+    c.className = "chip" + (target.kind === "tmux" ? " on" : "");
+    c.title = target.kind === "tmux"
+      ? "Talking to tmux session " + target.name + " — sends need confirming"
+      : "Talking to the AI — tap to choose another target";
+  }
+
+  function setTarget(kind, name) {
+    target = { kind: kind, name: name || "" };
+    if (kind === "ai") {
+      cfg.backend = name || "";
+      try { localStorage.setItem("tb_backend", cfg.backend); } catch (e) {}
+      if ($("backendSel")) $("backendSel").value = cfg.backend;
+      agentsView(false);
+    } else {
+      agentSel = name;
+      agentsView(true);
+      applyAgentSelection();
+    }
+    var box = $("msgInput");
+    if (box) { box.value = ""; }   // retargeting clears the field (mis-target guard)
+    paintTargetChip();
+    paintAgentsBtn();
+  }
+
+  function openTargetSheet() {
+    var rows = [];
+    (window.__backends || []).forEach(function (b) {
+      rows.push({ label: (target.kind === "ai" && cfg.backend === b ? "● " : "○ ") + "🤖 " + (b || "auto"),
+                  note: b ? "" : "server default",
+                  onClick: function () { setTarget("ai", b); } });
+    });
+    api("/api/tmux/sessions").then(function (r) { return r.json(); })
+      .then(function (d) {
+        agentSessions = d.sessions || [];
+        agentSessions.forEach(function (sn) {
+          rows.push({
+            label: (target.kind === "tmux" && agentSel === sn.name ? "● " : "○ ") +
+                   (sn.sendable ? "✏️ " : "👁 ") + "🖥 " + sn.name + (sn.attached ? " •" : ""),
+            note: sn.sendable ? "can type into this session" : "read-only",
+            onClick: function () { setTarget("tmux", sn.name); } });
+        });
+        openSheet("Talk to…", rows);
+      })
+      .catch(function () { openSheet("Talk to…", rows); });
+  }
+
   // ---- the one sheet ------------------------------------------------------
   // openSheet(title, rows) where each row is {label, note, onClick} — or
   // {html} for a custom body. Everything that used to be its own overlay
@@ -1170,6 +1240,8 @@
   });
 
   var micModeOffered = false;
+  if ($("targetChip")) $("targetChip").onclick = openTargetSheet;
+
   $("overflowBtn").onclick = function () {
     var rows = [
       { label: "📁 Library — transcripts on the workstation",
@@ -1202,7 +1274,13 @@
     setStatus("Cleared.");
   };
 
-  $("agentsBtn").onclick = function () { agentsView(!agentsOpen); };
+  // The header button is now a shortcut into the same target chooser; the
+  // "Agents view" is just what the stage looks like when a tmux target is
+  // selected, not a separate app.
+  $("agentsBtn").onclick = function () {
+    if (agentsOpen) { setTarget("ai", cfg.backend); return; }   // back to chat
+    openTargetSheet();
+  };
   $("agentRefreshBtn").onclick = function () { loadAgents(); refreshAgentOut(); };
   $("agentSelect").addEventListener("change", function () {
     agentSel = this.value;
@@ -1504,6 +1582,7 @@
     loadAgents();
   }
   paintAgentsBtn();
+  paintTargetChip();
   poll();
   setInterval(poll, 2500);
 })();
