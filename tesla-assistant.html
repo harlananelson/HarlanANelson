@@ -516,6 +516,10 @@
     t.scrollTop = t.scrollHeight;
   }
 
+  // VAD tuning shared by every capture path (tap, hands-free, continuous,
+  // agent dictation). CFRAME is the ScriptProcessor buffer size.
+  var CFRAME = 4096, CHANG_MS = 1400, CMIN_MS = 350, CMAX_MS = 22000, CPREROLL = 4;
+
   function downsampleTo16k(frame, rate) {
     if (rate === 16000) return frame;
     var ratio = rate / 16000, n = Math.floor(frame.length / ratio), out = new Float32Array(n);
