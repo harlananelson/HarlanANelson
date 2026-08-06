@@ -74,20 +74,21 @@
     border: 1px solid #444; background: #222; color: #eee;
   }
   #agentSendBtn.confirm { background: #c0392b; }
-  /* Phone mic mode */
-  #micPane { flex: 1; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 24px; padding: 20px; }
+  /* Persistent input bar (replaces the full-screen mic pane) */
+  #bar { display: none; flex-direction: column; gap: 10px; padding: 10px 14px 14px; background: #1b1b1b; }
+  #barContext { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .chip {
+    background: #333; font-size: 16px; padding: 8px 14px; border-radius: 999px;
+  }
+  .chip.on { background: #2b6cb0; }
   #talkBtn {
-    width: 240px; height: 240px; border-radius: 50%; font-size: 26px;
+    width: 100%; min-height: 88px; font-size: 24px; border-radius: 16px;
     background: #2b6cb0; user-select: none; -webkit-user-select: none;
   }
   #talkBtn.rec { background: #c0392b; }
-  #micText { font-size: 18px; color: #bbb; text-align: center; max-width: 480px; }
   /* Continuous mode: the transcript is the point — give it the screen, drop the
      big talk button, and compact the controls into a bar under it. */
-  body.continuous #transcript { display: flex; }
-  body.continuous #micPane { flex: 0 0 auto; padding: 10px 12px; gap: 10px; }
-  body.continuous #talkBtn { display: none; }
-  body.continuous #micText { display: none; }
+  body.continuous #talkBtn { background: #c0392b; }
   /* live interim line (speech being captured / transcribed) */
   .msg.interim { align-self: flex-start; background: #23303a; color: #9cc4e0;
     font-style: italic; opacity: .9; }
@@ -191,12 +192,6 @@
   </div>
 </div>
 
-<div id="micPane">
-  <button id="talkBtn">Tap to talk</button>
-  <button id="convoBtn" class="secondary">🔁 Hands-free conversation: off</button>
-  <button id="contBtn" class="secondary">⏺ Continuous transcription: off</button>
-  <button id="speakerToggle" class="secondary" style="display:none">🗣 Tagging: me</button>
-  <button id="analyzeBtn" class="secondary" style="display:none">🧠 Analyze transcript</button>
   <div id="analysisPane" style="display:none; position:fixed; inset:0; z-index:30; background:rgba(0,0,0,.55); padding:20px;">
     <div style="max-width:640px; margin:0 auto; max-height:100%; display:flex; flex-direction:column; background:#161b22; border:1px solid #30363d; border-radius:12px; overflow:hidden;">
       <div style="display:flex; align-items:center; gap:8px; padding:10px 14px; border-bottom:1px solid #30363d;">
@@ -206,10 +201,17 @@
       <div id="analysisList" style="overflow-y:auto; padding:12px 14px; white-space:pre-wrap; font-size:15px; line-height:1.5;"></div>
     </div>
   </div>
-  <div id="micText">Tap to talk: tap once, speak, tap again to send. Hands-free:
-    tap once and just talk; it replies out loud, then listens again. Continuous:
-    always-on listening that just keeps transcribing — no spoken replies, nothing
-    interrupts the transcript; tap 🧠 when you want a text analysis of it.</div>
+<!-- Persistent bottom bar: context row (target + mode + mode-specific
+     chips), then the one primary action, then the type-instead row. The
+     stream above is NEVER replaced — selecting phone mic no longer swaps
+     the screen for a different set of buttons. -->
+<div id="bar">
+  <div id="barContext">
+    <button id="modeChip" class="chip">🎤 Tap to talk</button>
+    <button id="speakerToggle" class="chip" style="display:none">🗣 me</button>
+    <button id="analyzeBtn" class="chip" style="display:none">🧠 Analyze</button>
+  </div>
+  <button id="talkBtn">Tap to talk</button>
 </div>
 
 <div id="composer">
@@ -261,6 +263,7 @@
   // Continuous transcription: always-on listening, VAD-segmented, never speaks —
   // the transcript just keeps filling as you talk (like the translator app).
   var continuousMode = false;
+  var micMode = "tap";   // tap | handsfree | continuous (see setMicMode)
   // After a spoken reply finishes, resume listening (the other half of the loop).
   audioEl.addEventListener("ended", function () {
     awaitingReply = 0;
@@ -455,7 +458,7 @@
     unlockAudio();
   }
   function setConvoBtn() {
-    var b = $("convoBtn");
+    var b = $("convoBtn");   // retired by the bar redesign
     if (!b) return;
     b.textContent = handsFree ? "⏹ Hands-free conversation: on"
                               : "🔁 Hands-free conversation: off";
@@ -742,7 +745,7 @@
     contStream = contCtx = contProc = contSrc = null;
   }
   function setContBtn() {
-    var b = $("contBtn");
+    var b = $("contBtn");   // retired by the bar redesign; guarded for safety
     if (b) {
       b.textContent = continuousMode ? "⏹ Continuous transcription: on"
                                      : "⏺ Continuous transcription: off";
@@ -857,7 +860,9 @@
     $("agents").style.display = show ? "flex" : "none";
     $("transcript").style.display = show ? "none" : "flex";
     $("composer").style.display = (show || cfg.mode === "mic") ? "none" : "flex";
-    if (cfg.mode === "mic") $("micPane").style.display = show ? "none" : "flex";
+    // The bar is the input surface in mic mode; the agents view brings its
+    // own input row, so hide the bar while it's open. (Step 3 merges them.)
+    if (cfg.mode === "mic") $("bar").style.display = show ? "none" : "flex";
     paintAgentsBtn();
     if (show) { loadAgents(); agentTimer = setInterval(refreshAgentOut, 5000); }
     else if (agentTimer) { clearInterval(agentTimer); agentTimer = null; }
@@ -1278,7 +1283,8 @@
       try { audioEl.pause(); audioEl.removeAttribute("src"); audioEl.load(); } catch (e) {}
       if ("speechSynthesis" in window) { try { speechSynthesis.cancel(); } catch (e) {} }
       awaitingReply = 0;
-      if (handsFree) $("convoBtn").click();   // no sound -> can't loop; end it
+      // hands-free needs to hear replies to know when to listen again
+      if (handsFree && window.__setMicMode) window.__setMicMode("tap");
     }
   };
 
@@ -1385,68 +1391,95 @@
 
 
   if (cfg.mode === "mic") {
-    // phone: giant push-to-talk, no composer
+    // Voice-first: the bar is the input surface. The composer's backend
+    // picker moves into the context row; the stream stays visible always.
     $("composer").style.display = "none";
-    $("micPane").style.display = "flex";
-    // The backend picker lives in the (hidden) composer — move the element
-    // itself into the mic pane so Voice + AI can choose which AI answers
-    // and runs 🧠 analyses. Same element, same saved preference.
-    $("micPane").insertBefore($("backendSel"), $("micText"));
+    $("bar").style.display = "flex";
+    $("barContext").insertBefore($("backendSel"), $("modeChip"));
     if (!micSupported()) {
-      $("micText").textContent = "This browser has no microphone access. " +
-        "Open this page on a phone (Safari/Chrome) instead.";
       $("talkBtn").disabled = true;
+      $("talkBtn").textContent = "No microphone in this browser";
+      $("modeChip").style.display = "none";
     } else {
-      // Tap-to-toggle (not press-and-hold): the driver must be hands-free
-      // while speaking. Tap starts listening, tap again stops and sends.
-      $("talkBtn").addEventListener("click", function () {
-        if (recorder && recorder.state === "recording") stopRec();
-        else startRec();
-      });
-      // Hands-free conversation: tap once, then it loops talk↔listen on its own.
-      $("convoBtn").addEventListener("click", function () {
-        if (continuousMode) $("contBtn").click();   // the two modes are exclusive
-        handsFree = !handsFree;
-        setConvoBtn();
-        syncWakeLock();
-        if (handsFree) {
-          ensureSound();   // must hear the reply to know when to listen again
-          if (!(recorder && recorder.state === "recording")) startRec();
-        } else if (recorder && recorder.state === "recording") {
-          recorder.stop();
-        } else {
-          cleanupAudio();
-          $("talkBtn").className = ""; $("talkBtn").textContent = "Tap to talk";
+      // ---- one mic-mode state machine -----------------------------------
+      // Modes: tap | handsfree | continuous. Exclusivity is structural —
+      // setMicMode ends whatever was running — instead of one button
+      // programmatically clicking another (the old convoBtn/contBtn dance).
+      var MODES = {
+        tap:        { chip: "🎤 Tap to talk",  action: "Tap to talk",
+                      note: "Tap once, speak, tap again to send." },
+        handsfree:  { chip: "🔁 Hands-free",   action: "Tap to start talking",
+                      note: "Talks and listens in a loop; needs sound on." },
+        continuous: { chip: "⏺ Continuous",    action: "⏹ Stop listening",
+                      note: "Always-on transcription. Never speaks; tap 🧠 any time." }
+      };
+      micMode = "tap";
+
+      function paintMode() {
+        var m = MODES[micMode];
+        $("modeChip").textContent = m.chip;
+        $("modeChip").className = "chip" + (micMode === "tap" ? "" : " on");
+        $("talkBtn").textContent = (recorder && recorder.state === "recording")
+          ? "⏹ Stop and send" : m.action;
+        $("talkBtn").disabled = false;
+        $("speakerToggle").style.display = micMode === "continuous" ? "" : "none";
+        $("analyzeBtn").style.display = micMode === "continuous" ? "" : "none";
+        document.body.classList.toggle("continuous", micMode === "continuous");
+      }
+
+      function setMicMode(next) {
+        if (next === micMode) return;
+        // tear down the outgoing mode
+        if (micMode === "continuous") { stopContinuous(); setInterim(""); }
+        if (micMode === "handsfree") {
+          handsFree = false;
+          if (recorder && recorder.state === "recording") recorder.stop();
+          else cleanupAudio();
         }
-      });
-      // Continuous transcription: always-on, VAD-segmented, text-only.
-      $("contBtn").addEventListener("click", function () {
-        if (handsFree) $("convoBtn").click();       // exclusive with hands-free
-        continuousMode = !continuousMode;
-        setContBtn();
+        micMode = next;
+        continuousMode = (next === "continuous");
+        // bring up the incoming mode
+        if (next === "handsfree") {
+          handsFree = true;
+          ensureSound();                       // must hear replies to loop
+          if (!(recorder && recorder.state === "recording")) startRec();
+        } else if (next === "continuous") {
+          startContinuous();
+        }
         syncWakeLock();
         syncRefineTimer();
-        document.body.classList.toggle("continuous", continuousMode);  // give transcript the screen
-        if (continuousMode) {
-          $("talkBtn").disabled = true;             // tap-to-talk is off in this mode
-          startContinuous();
-        } else {
-          stopContinuous();
-          setInterim("");
-          $("talkBtn").disabled = false;
-          setStatus("Continuous transcription off.");
-        }
+        setConvoBtn(); setContBtn();           // legacy painters, now no-ops-ish
+        paintMode();
+        setStatus(MODES[next].note);
+      }
+      window.__setMicMode = setMicMode;        // used by the mode sheet
+
+      $("modeChip").addEventListener("click", function () {
+        openSheet("Microphone mode", Object.keys(MODES).map(function (k) {
+          return { label: (micMode === k ? "● " : "○ ") + MODES[k].chip,
+                   note: MODES[k].note,
+                   onClick: function () { setMicMode(k); } };
+        }));
       });
+
+      // Primary action: meaning depends on the mode, position never moves.
+      $("talkBtn").addEventListener("click", function () {
+        if (micMode === "continuous") { setMicMode("tap"); return; }
+        if (recorder && recorder.state === "recording") stopRec();
+        else startRec();
+        paintMode();
+      });
+
       $("analyzeBtn").addEventListener("click", analyzeTranscript);
       $("speakerToggle").addEventListener("click", function () {
         contSpeaker = contSpeaker === "me" ? "source" : "me";
         paintSpeakerToggle();
       });
       paintSpeakerToggle();
+      paintMode();
       $("analysisClose").addEventListener("click", function () {
         $("analysisPane").style.display = "none";
       });
-
 
       // Reply never arrived (backend error, no audio) — don't wait forever.
       setInterval(function () {
