@@ -444,7 +444,7 @@
   }
 
   // ---- phone microphone mode (?mode=mic) ----
-  var recorder = null, chunks = [], micStarting = false;
+  var micStarting = false;   // recorder/chunks retired with the MediaRecorder path
   var audioCtx = null, silenceTimer = null;   // for hands-free auto-stop
   function micSupported() {
     return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia &&
@@ -479,7 +479,7 @@
   // Resume listening — the second half of the hands-free loop.
   function relisten() {
     if (!handsFree || micStarting) return;
-    if (recorder && recorder.state === "recording") return;
+    if (captureRunning()) return;
     startRec();
   }
   function onSpeakEnd() { awaitingReply = 0; if (handsFree) relisten(); }
@@ -487,39 +487,6 @@
   // Watch the mic level and auto-stop after a beat of silence — this is what
   // makes it hands-free (no tap to end each turn). WebAudio only; if absent,
   // the manual tap-to-stop still works.
-  function attachSilenceDetector(stream) {
-    try {
-      var AC = window.AudioContext || window.webkitAudioContext;
-      if (!AC) return;
-      audioCtx = new AC();
-      var an = audioCtx.createAnalyser();
-      an.fftSize = 512;
-      audioCtx.createMediaStreamSource(stream).connect(an);
-      var buf = new Uint8Array(an.fftSize);
-      var spoke = false, started = Date.now(), lastLoud = started;
-      silenceTimer = setInterval(function () {
-        an.getByteTimeDomainData(buf);
-        var sum = 0;
-        for (var i = 0; i < buf.length; i++) { var d = (buf[i] - 128) / 128; sum += d * d; }
-        var rms = Math.sqrt(sum / buf.length), now = Date.now();
-        if (rms > 0.045) { spoke = true; lastLoud = now; }
-        // stop ~1.4s after speech ends, or a 20s hard cap either way
-        if ((spoke && now - lastLoud > 1400) || now - started > 20000) {
-          if (recorder && recorder.state === "recording") recorder.stop();
-        }
-      }, 150);
-    } catch (e) { /* auto-stop unavailable; manual stop still works */ }
-  }
-
-  // ---- continuous transcription (always-on, VAD-segmented, text-only) ----
-  // Same approach as the translator app: keep one mic stream open, run a
-  // ScriptProcessor VAD over it (pre-roll so the first word isn't clipped,
-  // ~1.4s silence hangover to end an utterance), and POST each finished
-  // utterance to /api/transcribe as a 16 kHz WAV. Never speaks; never pauses.
-  var contStream = null, contCtx = null, contProc = null, contSrc = null, contRate = 16000;
-  var CFRAME = 4096, CHANG_MS = 1400, CMIN_MS = 350, CMAX_MS = 22000, CPREROLL = 4;
-  var cvad = null;
-  var contTranscript = [];   // accumulated utterance text, for on-demand analysis
   function resetCvad() { cvad = { speaking: false, silenceMs: 0, frames: [], preRoll: [], total: 0 }; }
 
   // A live line pinned to the bottom of the transcript so you can watch it work
@@ -778,66 +745,119 @@
       : "Utterances are tagged as the SOURCE audio (podcast etc.). Tap to tag as your own comments.";
   }
 
-  function startRec() {
-    if (micStarting) return;   // tap while getUserMedia is pending would open
-    micStarting = true;        // a second stream and leak the first (mic stays hot)
-    navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+  // ---- the one capture engine ---------------------------------------------
+  // WAV @16k straight from WebAudio, never MediaRecorder: a webm/mp4 clip
+  // makes the bridge shell out to ffmpeg before Whisper can start, which was
+  // most of the round-trip delay. Continuous mode and agent dictation already
+  // used this path; tap-to-talk and hands-free now share it.
+  //   capture({hangMs, maxMs, onDone}) -> starts; capture.stop() finishes early.
+  var capState = null;   // {stream, ctx, src, proc, vad, opts}
+
+  function captureRunning() { return !!capState; }
+
+  function captureStop() {
+    if (capState && capState.vad) capState.vad.silenceMs = 1e9;   // flush next frame
+  }
+
+  function captureTeardown() {
+    if (!capState) return;
+    try { capState.proc.disconnect(); capState.proc.onaudioprocess = null; } catch (e) {}
+    try { capState.src.disconnect(); } catch (e) {}
+    try { capState.stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
+    try { capState.ctx.close(); } catch (e) {}
+    capState = null;
+  }
+
+  function capture(opts) {
+    if (capState || micStarting) return;
+    micStarting = true;
+    navigator.mediaDevices.getUserMedia({
+      audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 }
+    }).then(function (stream) {
       micStarting = false;
-      chunks = [];
-      var mime = "";
-      ["audio/webm;codecs=opus", "audio/webm", "audio/mp4"].some(function (m) {
-        if (MediaRecorder.isTypeSupported(m)) { mime = m; return true; }
-        return false;
-      });
-      recorder = new MediaRecorder(stream, mime ? { mimeType: mime } : undefined);
-      recorder.ondataavailable = function (e) { if (e.data.size) chunks.push(e.data); };
-      recorder.onstop = function () {
-        cleanupAudio();
-        stream.getTracks().forEach(function (t) { t.stop(); });
-        $("talkBtn").className = "";
-        $("talkBtn").textContent = handsFree ? "Listening will resume…" : "Tap to talk";
-        uploadClip(new Blob(chunks, { type: recorder.mimeType || "audio/webm" }));
+      var AC = window.AudioContext || window.webkitAudioContext;
+      var ctx = new AC();
+      if (ctx.resume) ctx.resume();          // iOS starts contexts suspended
+      var rate = ctx.sampleRate;
+      var src = ctx.createMediaStreamSource(stream);
+      var proc = ctx.createScriptProcessor(CFRAME, 1, 1);
+      capState = { stream: stream, ctx: ctx, src: src, proc: proc, opts: opts,
+                   vad: { speaking: false, silenceMs: 0, frames: [], total: 0, elapsed: 0 } };
+      proc.onaudioprocess = function (e) {
+        if (!capState) return;
+        var v = capState.vad;
+        var frame = downsampleTo16k(new Float32Array(e.inputBuffer.getChannelData(0)), rate);
+        var n = frame.length, sum = 0, i;
+        for (i = 0; i < n; i++) sum += frame[i] * frame[i];
+        var rms = Math.sqrt(sum / n), ms = (n / 16000) * 1000;
+        v.elapsed += ms;
+        if (rms >= 0.02) { v.speaking = true; v.silenceMs = 0; v.frames.push(frame); v.total += n; }
+        else if (v.speaking) {
+          v.frames.push(frame); v.total += n; v.silenceMs += ms;
+          if (v.silenceMs >= (opts.hangMs || 1400)) { captureFinish(); return; }
+        }
+        if (v.elapsed >= (opts.maxMs || 22000)) captureFinish();
       };
-      recorder.start(250);   // flush a chunk every 250ms so brief taps still
-                             // produce a valid, non-empty clip (no headerless webm)
-      if (handsFree) attachSilenceDetector(stream);
-      $("talkBtn").className = "rec";
-      $("talkBtn").textContent = handsFree ? "Listening… (auto)" : "Listening… tap to stop";
+      src.connect(proc);
+      proc.connect(ctx.destination);         // required for onaudioprocess to fire
+      if (opts.onStart) opts.onStart();
     }).catch(function (e) {
       micStarting = false;
       // The Tesla console reports mic hardware but never grants getUserMedia
-      // (no permission UI) — so this rejects with NotAllowedError there. Give
-      // the phone-only guidance instead of a cryptic "Permission denied".
+      // (no permission UI) — so this rejects with NotAllowedError there.
       var denied = e && (e.name === "NotAllowedError" ||
         /denied|permission|not ?allowed/i.test(e.message || ""));
-      if (denied) {
+      setStatus(denied
+        ? "This browser won't grant microphone access. The Tesla console has no " +
+          "mic — open this page on your phone (add ?mode=mic) and talk there; the " +
+          "question and answer still appear and speak on the car."
+        : "Mic error: " + e.message, true);
+      if (opts.onFail) opts.onFail(e);
+    });
+  }
+
+  function captureFinish() {
+    if (!capState) return;
+    var v = capState.vad, opts = capState.opts;
+    captureTeardown();
+    if (!v.frames.length || (v.total / 16000) * 1000 < 300) { opts.onDone(null); return; }
+    var merged = new Float32Array(v.total), off = 0;
+    v.frames.forEach(function (f) { merged.set(f, off); off += f.length; });
+    opts.onDone(encodeWav16k(merged));
+  }
+
+  // Tap-to-talk / hands-free both run through the same engine.
+  function startRec() {
+    capture({
+      hangMs: handsFree ? 1400 : 60000,   // hands-free auto-ends; tap ends on tap
+      maxMs: 60000,
+      onStart: function () {
+        $("talkBtn").className = "rec";
+        $("talkBtn").textContent = handsFree ? "Listening… (auto)" : "⏹ Stop and send";
+      },
+      onFail: function () { $("talkBtn").className = ""; $("talkBtn").textContent = "Tap to talk"; },
+      onDone: function (wav) {
         $("talkBtn").className = "";
-        $("talkBtn").textContent = "Tap to talk";
-        setStatus("This browser won't grant microphone access. The Tesla console " +
-          "has no mic — open this page on your phone (add ?mode=mic) and hold to " +
-          "talk there; the question and answer still appear and speak on the car.", true);
-      } else {
-        setStatus("Mic error: " + e.message, true);
+        $("talkBtn").textContent = handsFree ? "Listening will resume…" : "Tap to talk";
+        uploadClip(wav);
       }
     });
   }
   function stopRec() {
-    if (recorder && recorder.state === "recording") recorder.stop();  // onstop cleans up
-    else { cleanupAudio(); $("talkBtn").className = ""; $("talkBtn").textContent = "Tap to talk"; }
+    if (captureRunning()) captureStop();
+    else { $("talkBtn").className = ""; $("talkBtn").textContent = "Tap to talk"; }
   }
   function uploadClip(blob) {
-    // A too-short/empty recording is a headerless clip ffmpeg can't decode —
-    // don't send it (it would come back as a server error). Ask for a real hold.
-    if (!blob || blob.size < 1200) {
+    // null = nothing above the noise floor.
+    if (!blob) {
       setStatus(handsFree ? "Listening…" : "Didn't catch that — tap and speak.",
                 !handsFree);
       if (handsFree) relisten();   // empty clip: just keep listening, don't stall
       return;
     }
     setStatus("Transcribing…");
-    var ext = (blob.type.indexOf("mp4") >= 0) ? "m4a" : "webm";
     var fd = new FormData();
-    fd.append("audio", blob, "clip." + ext);
+    fd.append("audio", blob, "clip.wav");
     fd.append("session", cfg.session);
     fd.append("chat", "1");
     fd.append("backend", cfg.backend);
@@ -1497,7 +1517,7 @@
         var m = MODES[micMode];
         $("modeChip").textContent = m.chip;
         $("modeChip").className = "chip" + (micMode === "tap" ? "" : " on");
-        $("talkBtn").textContent = (recorder && recorder.state === "recording")
+        $("talkBtn").textContent = captureRunning()
           ? "⏹ Stop and send" : m.action;
         $("talkBtn").disabled = false;
         $("speakerToggle").style.display = micMode === "continuous" ? "" : "none";
@@ -1511,7 +1531,7 @@
         if (micMode === "continuous") { stopContinuous(); setInterim(""); }
         if (micMode === "handsfree") {
           handsFree = false;
-          if (recorder && recorder.state === "recording") recorder.stop();
+          if (captureRunning()) captureStop();
           else cleanupAudio();
         }
         micMode = next;
@@ -1520,7 +1540,7 @@
         if (next === "handsfree") {
           handsFree = true;
           ensureSound();                       // must hear replies to loop
-          if (!(recorder && recorder.state === "recording")) startRec();
+          if (!captureRunning()) startRec();
         } else if (next === "continuous") {
           startContinuous();
         }
@@ -1543,7 +1563,7 @@
       // Primary action: meaning depends on the mode, position never moves.
       $("talkBtn").addEventListener("click", function () {
         if (micMode === "continuous") { setMicMode("tap"); return; }
-        if (recorder && recorder.state === "recording") stopRec();
+        if (captureRunning()) stopRec();
         else startRec();
         paintMode();
       });
