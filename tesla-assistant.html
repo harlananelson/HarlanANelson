@@ -834,7 +834,7 @@
     $("transcript").style.display = show ? "none" : "flex";
     $("composer").style.display = (show || cfg.mode === "mic") ? "none" : "flex";
     if (cfg.mode === "mic") $("micPane").style.display = show ? "none" : "flex";
-    $("agentsBtn").textContent = show ? "💬 Chat" : "🤖 Agents";
+    paintAgentsBtn();
     if (show) { loadAgents(); agentTimer = setInterval(refreshAgentOut, 5000); }
     else if (agentTimer) { clearInterval(agentTimer); agentTimer = null; }
   }
@@ -873,12 +873,28 @@
       .catch(function (e) { setStatus(e.message, true); });
   }
 
+  // The header button names the CURRENT agent rather than the generic word
+  // "Agents" — tapping it opens the view where you choose a different one.
+  function paintAgentsBtn() {
+    var b = $("agentsBtn");
+    if (!b) return;
+    if (agentsOpen) {
+      b.textContent = "💬 Chat";
+      b.title = "Back to the conversation";
+    } else {
+      b.textContent = "🤖 " + (agentSel || "Agents");
+      b.title = agentSel ? "Agent: " + agentSel + " — tap to choose another"
+                         : "Choose a tmux session to work with";
+    }
+  }
+
   function applyAgentSelection() {
     var s = agentSessions.filter(function (x) { return x.name === agentSel; })[0];
     agentSendable = !!(s && s.sendable);
     $("agentMode").textContent = s
       ? (s.sendable ? "can type into this session" : "read-only (not in tmux-allow)")
       : "";
+    paintAgentsBtn();
     resetAgentSend();
     refreshAgentOut();
   }
@@ -1373,7 +1389,11 @@
     setStatus("First-time setup: enter the Bridge URL and token.", true);
   } else {
     setStatus("Connecting…");
+    // Learn the current agent up front so the header button can name it
+    // before the Agents view has ever been opened.
+    loadAgents();
   }
+  paintAgentsBtn();
   poll();
   setInterval(poll, 2500);
 })();
