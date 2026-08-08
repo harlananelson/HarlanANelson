@@ -1136,7 +1136,16 @@
           if (ev.type === 'ready') {
             if (!settled) {
               settled = true; clearTimeout(timer);
-              pushLog('', 'Home GPU connected — asr=' + ev.asr + ' llm=' + ev.llm);
+              // Name the recording so the server files it as <name>-<date>.
+              // Reuses the export filename root the user already sets, so the
+              // saved transcript matches what a download would have been called.
+              try {
+                var nm = (state.fileRoot || 'sermon').trim()
+                  .toLowerCase().replace(/[^a-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '');
+                hgWs.send(JSON.stringify({ type: 'session', name: nm || 'sermon' }));
+              } catch (e) { /* saving is the server's business; never block the stream */ }
+              pushLog('', 'Home GPU connected — asr=' + ev.asr + ' llm=' + ev.llm +
+                          ' — saving on the workstation');
               resolve(true);
             }
             return;
