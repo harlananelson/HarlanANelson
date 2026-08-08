@@ -200,7 +200,14 @@
           <label for="homeGpuUrl">Home GPU server URL &mdash; your streaming server, exposed with <code>tailscale serve</code></label>
           <input type="text" id="homeGpuUrl" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="wss://machine.tailnet.ts.net:8443/ws" />
         </div>
-        <p class="note">Audio streams to your own machine over your tailnet; transcription (Whisper large-v3) and translation (local LLM) run there. No API keys needed. The device must be connected to Tailscale.</p>
+        <div class="field">
+          <label for="speakerProfile">Speaker profile &mdash; primes the recognizer with this preacher's names and vocabulary</label>
+          <select id="speakerProfile">
+            <option value="">None &mdash; general Spanish</option>
+            <option value="jean-petit">Jean Petit (Sunday)</option>
+          </select>
+        </div>
+        <p class="note">Audio streams to your own machine over your tailnet; transcription (Whisper large-v3) and translation (local LLM) run there. No API keys needed. The device must be connected to Tailscale. A speaker profile is built from that preacher's past sermons, so names like Ezequías, Eliseo and Namán are recognised instead of guessed.</p>
       </div>
       <div class="field">
         <label for="fileRoot">Export filename root &mdash; the downloaded file is named <em>root</em>-YYYYMMDD-HHMM.md</label>
@@ -648,7 +655,7 @@
       whisperModel: $('whisperModel'), whisperCustom: $('whisperCustom'), webgpu: $('webgpu'),
       preloadBtn: $('preloadBtn'), sens: $('sens'), modelStatus: $('modelStatus'),
       engine: $('engine'), localOpts: $('localOpts'), cloudOpts: $('cloudOpts'),
-      homegpuOpts: $('homegpuOpts'), homeGpuUrl: $('homeGpuUrl'),
+      homegpuOpts: $('homegpuOpts'), homeGpuUrl: $('homeGpuUrl'), speakerProfile: $('speakerProfile'),
       cloudModel: $('cloudModel'), cloudModelCustom: $('cloudModelCustom'), vocab: $('vocab'), fileRoot: $('fileRoot'), openaiKey: $('openaiKey'),
       startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), downloadBtn: $('downloadBtn'), diarizeBtn: $('diarizeBtn'), fsBtn: $('fsBtn'),
       fontDown: $('fontDown'), fontUp: $('fontUp'), statusDot: $('statusDot'), statusText: $('statusText'),
@@ -679,6 +686,7 @@
       vocab: '',
       fileRoot: 'transcript',
       homeGpuUrl: '',
+      speakerProfile: '',
       logEndpoint: '',
       direction: 'es-en',
       theme: 'light', scale: 1, view: 'both'
@@ -726,6 +734,7 @@
           vocab: typeof s.vocab === 'string' ? s.vocab : '',
           fileRoot: typeof s.fileRoot === 'string' ? s.fileRoot : DEFAULTS.fileRoot,
           homeGpuUrl: typeof s.homeGpuUrl === 'string' ? s.homeGpuUrl : '',
+          speakerProfile: typeof s.speakerProfile === 'string' ? s.speakerProfile : '',
           logEndpoint: s.logEndpoint || '',
           direction: ['es-en', 'en-es', 'auto'].indexOf(s.direction) >= 0 ? s.direction : 'es-en',
           theme: s.theme === 'dark' ? 'dark' : 'light',
@@ -1094,6 +1103,19 @@
         maybeScroll();
         updateStatus();
         pushLog('', 'passage: ' + ev.ref_en);
+      } else if (ev.type === 'correction') {
+        // The rolling QC pass re-read this line with the context that arrived
+        // after it and found a recognition error. Replace the text in place;
+        // a corrected translation follows as a normal 'en' event.
+        var cseg = hgMap[ev.id];
+        if (cseg) {
+          cseg.es = ev.text;
+          cseg.heard = ev.text;
+          cseg.corrected = true;
+          cseg.enState = 'translating';   // a corrected translation follows
+          paintRow(cseg);
+          pushLog('', 'corrected #' + ev.id + ': ' + ev.text);
+        }
       } else if (ev.type === 'es') {
         setInterim('');
         var seg = { id: nextId++, es: ev.text, esState: 'done', en: '', enState: 'translating', error: '', t: Date.now(), heard: ev.text, dir: 'es-en' };
@@ -1143,6 +1165,9 @@
                 var nm = (state.fileRoot || 'sermon').trim()
                   .toLowerCase().replace(/[^a-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '');
                 hgWs.send(JSON.stringify({ type: 'session', name: nm || 'sermon' }));
+                if (state.speakerProfile) {
+                  hgWs.send(JSON.stringify({ type: 'profile', name: state.speakerProfile }));
+                }
               } catch (e) { /* saving is the server's business; never block the stream */ }
               pushLog('', 'Home GPU connected — asr=' + ev.asr + ' llm=' + ev.llm +
                           ' — saving on the workstation');
@@ -1857,6 +1882,7 @@
       els.vocab.value = state.vocab || '';
       els.fileRoot.value = state.fileRoot || '';
       els.homeGpuUrl.value = state.homeGpuUrl || '';
+      els.speakerProfile.value = state.speakerProfile || '';
       applyEngine();
       applyView();
       applyScale();
@@ -1930,6 +1956,7 @@
       });
       els.homeGpuUrl.addEventListener('input', function () {
         state.homeGpuUrl = els.homeGpuUrl.value.trim();
+        state.speakerProfile = els.speakerProfile.value;
         saveState(); updateControls();
       });
       els.openaiKey.addEventListener('input', function () {
