@@ -1373,9 +1373,25 @@
       vad.speaking = false; vad.silenceMs = 0; vad.frames = []; vad.preRoll = []; vad.totalSamples = 0;
     }
 
+    // Profiles that listen to a ROOM — a preacher through a PA, a meeting
+    // across a table — rather than to a phone held at your face.
+    var ROOM_PROFILES = { 'jean-petit': 1, 'bible-study': 1, 'meeting': 1 };
+
+    function captureConstraints() {
+      // The browser's three voice-call processors assume one near talker and
+      // treat everything else as noise to remove. That is right for a call and
+      // wrong for a sanctuary: sustained music and a loud PA read as noise, so
+      // noiseSuppression gates real speech and autoGainControl clamps down on
+      // the sound pressure, leaving the recogniser a signal it cannot use.
+      // Close-conversation profiles (clinic, attorney meeting) still want them.
+      var room = !!ROOM_PROFILES[state.speakerProfile || ''];
+      return { channelCount: 1,
+               echoCancellation: !room, noiseSuppression: !room, autoGainControl: !room };
+    }
+
     function startCapture() {
       return navigator.mediaDevices.getUserMedia({
-        audio: { channelCount: 1, echoCancellation: true, noiseSuppression: true, autoGainControl: true }
+        audio: captureConstraints()
       }).then(function (stream) {
         micStream = stream;
         var Ctx = window.AudioContext || window.webkitAudioContext;
