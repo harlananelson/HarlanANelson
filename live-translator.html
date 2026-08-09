@@ -227,6 +227,7 @@
       <button id="copyBtn" class="btn" type="button">Copy</button>
       <button id="downloadBtn" class="btn" type="button">Download .md</button>
       <button id="diarizeBtn" class="btn" type="button">Diarize speakers</button>
+      <button id="analyzeBtn" class="btn" type="button" title="Analyse what has been said, through the selected profile's lens">🧠 Analyze</button>
       <span class="spacer"></span>
       <div class="seg-toggle" role="group" aria-label="Which panes to show">
         <button data-view="both" type="button">Both</button>
@@ -657,7 +658,7 @@
       engine: $('engine'), localOpts: $('localOpts'), cloudOpts: $('cloudOpts'),
       homegpuOpts: $('homegpuOpts'), homeGpuUrl: $('homeGpuUrl'), speakerProfile: $('speakerProfile'),
       cloudModel: $('cloudModel'), cloudModelCustom: $('cloudModelCustom'), vocab: $('vocab'), fileRoot: $('fileRoot'), openaiKey: $('openaiKey'),
-      startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), downloadBtn: $('downloadBtn'), diarizeBtn: $('diarizeBtn'), fsBtn: $('fsBtn'),
+      startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), downloadBtn: $('downloadBtn'), diarizeBtn: $('diarizeBtn'), analyzeBtn: $('analyzeBtn'), fsBtn: $('fsBtn'),
       fontDown: $('fontDown'), fontUp: $('fontUp'), statusDot: $('statusDot'), statusText: $('statusText'),
       levelFill: $('levelFill'), transcript: $('transcript'), rows: $('rows'), startHint: $('startHint'),
       diagBox: $('diagBox'), diagCount: $('diagCount'), diagLog: $('diagLog'),
@@ -1103,6 +1104,20 @@
         maybeScroll();
         updateStatus();
         pushLog('', 'passage: ' + ev.ref_en);
+      } else if (ev.type === 'analysis') {
+        var aseg = {
+          id: nextId++,
+          es: '🧠 ' + ev.text,
+          en: '🧠 ' + ev.text,
+          esState: 'done', enState: 'done', error: '', t: Date.now(),
+          heard: '', dir: 'es-en', passage: true
+        };
+        segments.push(aseg);
+        removePlaceholder();
+        addRow(aseg);
+        paintRow(aseg);
+        maybeScroll();
+        setStatus('ok', 'Analysis ready');
       } else if (ev.type === 'correction') {
         // The rolling QC pass re-read this line with the context that arrived
         // after it and found a recognition error. Replace the text in place;
@@ -1981,6 +1996,21 @@
       els.copyBtn.addEventListener('click', copyTranscript);
       els.downloadBtn.addEventListener('click', downloadTranscript);
       els.diarizeBtn.addEventListener('click', diarizeSession);
+      // Analyse through the profile's lens. Only the Home GPU path has a
+      // server to ask; it runs in the background and never pauses capture.
+      els.analyzeBtn.addEventListener('click', function () {
+        if (!hgWs || hgWs.readyState !== 1) {
+          setStatus('err', 'Analyze needs the Home GPU engine connected.');
+          return;
+        }
+        try {
+          hgWs.send(JSON.stringify({ type: 'analyze' }));
+          setStatus('', 'Analyzing…');
+          pushLog('', 'analysis requested');
+        } catch (e) {
+          setStatus('err', 'Could not request analysis: ' + ((e && e.message) || e));
+        }
+      });
       els.copyDiag.addEventListener('click', copyDiagnostics);
       els.sendDiag.addEventListener('click', function () { sendLog(true); });
       els.logUrl.addEventListener('input', function () {
