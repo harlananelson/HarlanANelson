@@ -204,6 +204,7 @@
           <label for="speakerProfile">Speaker profile &mdash; primes the recognizer with this preacher's names and vocabulary</label>
           <select id="speakerProfile">
             <option value="">None &mdash; general Spanish</option>
+            <option value="bible-study">Bible study (theological)</option>
             <option value="jean-petit">Jean Petit (Sunday)</option>
             <option value="medical">Medical interpreting</option>
             <option value="immigration">Immigration law</option>
@@ -1107,6 +1108,21 @@
         maybeScroll();
         updateStatus();
         pushLog('', 'passage: ' + ev.ref_en);
+      } else if (ev.type === 'lexicon') {
+        // a Greek/Hebrew word was mentioned: show it with its script and sense
+        var tseg = {
+          id: nextId++,
+          es: '📜 ' + ev.word + ' (' + ev.script + ', ' + ev.lang + ') — ' + ev.gloss,
+          en: '📜 ' + ev.word + ' (' + ev.script + ', ' + ev.lang + ') — ' + ev.gloss,
+          esState: 'done', enState: 'done', error: '', t: Date.now(),
+          heard: '', dir: 'es-en', passage: true
+        };
+        segments.push(tseg);
+        removePlaceholder();
+        addRow(tseg);
+        paintRow(tseg);
+        maybeScroll();
+        pushLog('', 'term: ' + ev.word);
       } else if (ev.type === 'analysis') {
         var aseg = {
           id: nextId++,
