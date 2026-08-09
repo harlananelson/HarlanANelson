@@ -156,11 +156,15 @@
   var DEFAULTS = [
     {
       id: "sermon",
-      label: "Sermon",
-      icon: "📖",
+      label: "Interpret",
+      icon: "🌐",
       url: "./live-translator.html",
       kind: "iframe",
-      hint: "Home GPU translator. On iPad prefer the tailnet page if WebSocket fails."
+      // One surface, many domains: the PROFILE decides what this is — a sermon
+      // with its preacher's vocabulary and a doctrine lens, a medical
+      // appointment with clinical vocabulary and a plain-language summary.
+      // Naming the tab "Sermon" hid the rest.
+      hint: "Live translation and transcription on the home GPU. Pick a profile inside — sermon or medical. On iPad prefer the tailnet page if WebSocket fails."
     },
     {
       id: "voice",
