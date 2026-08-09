@@ -180,9 +180,21 @@ be evaluated offline against transcripts we already have.
 
 ## 8. Open questions for the owner
 
-- Should the meeting profile default to **no saved audio**? Meetings are more
-  sensitive than sermons, and the audio is only needed for the large-v3 refine
-  pass. Text-only saving is a one-line change and a meaningful privacy posture.
+- ~~Should the meeting profile default to no saved audio?~~ **Decided
+  2026-08-09: yes, text-only.** Meetings are more sensitive than sermons and
+  the room has not consented to being recorded merely because one participant
+  wanted a transcript. Consequences to build with:
+  * the profile carries `save_audio: false`, and `save_line` skips the clip;
+  * **the large-v3 refine tier cannot run** on a meeting — there is no audio to
+    re-read. Rolling QC still works (it reasons over text), but the acoustic
+    second pass is gone, so the first pass is the only hearing. That is the
+    price of the privacy posture and it should be stated in the UI, not
+    discovered later when a refined file never appears;
+  * **diarization cannot run either** — speaker labelling embeds the audio.
+    Meeting mode therefore has no speaker attribution unless the manual
+    🗣/📻 tag is used;
+  * the audio directory should not be created at all for these sessions, so
+    "no audio" is visible on disk rather than a claim.
 - Should CHANGED annotations be **spoken** in a driving context, or is this a
   screen-only feature? (Leaning screen-only: interrupting to say "that date
   moved" during a live meeting is worse than useless.)
