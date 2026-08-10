@@ -931,14 +931,17 @@
         agentSessions = data.sessions || [];
         var sel = $("agentSelect");
         sel.innerHTML = "";
-        if (!agentSessions.length) {
-          $("agentOut").textContent = "No tmux sessions on the host.";
-          $("agentMode").textContent = "";
-          return;
-        }
-        // Keep the current pick if it still exists; else take the first.
+        // "No shell" is always offered and is the default. Auto-selecting the
+        // first session used to mean the app always had SOME terminal armed —
+        // whichever happened to sort first — so a dictated line was one
+        // confirm away from a shell nobody chose. Talking to a terminal should
+        // be something you pick, not the state you land in.
+        var none = document.createElement("option");
+        none.value = "";
+        none.textContent = agentSessions.length ? "— no shell —" : "— no shells running —";
+        sel.appendChild(none);
         if (!agentSessions.some(function (s) { return s.name === agentSel; })) {
-          agentSel = agentSessions[0].name;
+          agentSel = "";
         }
         agentSessions.forEach(function (s) {
           var o = document.createElement("option");
@@ -973,15 +976,30 @@
     agentSendable = !!(s && s.sendable);
     $("agentMode").textContent = s
       ? (s.sendable ? "can type into this session" : "read-only (not in tmux-allow)")
-      : "";
+      : (agentSessions.length ? "no shell selected — pick one to type into it" : "");
     paintAgentsBtn();
-    if (target.kind === "tmux") { target.name = agentSel; paintTargetChip(); }
+    // A tmux target with nothing selected would leave the chip pointing at a
+    // shell that no longer exists (or never did). Fall back to the AI backend,
+    // which is the safe direction: it cannot execute anything.
+    if (target.kind === "tmux") {
+      if (agentSel) { target.name = agentSel; }
+      else { target = { kind: "ai", name: cfg.backend || "" }; }
+      paintTargetChip();
+    }
     resetAgentSend();
     refreshAgentOut();
   }
 
   function refreshAgentOut() {
-    if (!agentSel) return;
+    if (!agentSel) {
+      // Say why the pane is empty. Returning silently left the previous
+      // session's output on screen, which reads as live and is not.
+      $("agentOut").textContent = agentSessions.length
+        ? "No shell selected. Pick one above to watch it, or leave this as it is —\n" +
+          "everything else in the app works without a shell."
+        : "No tmux sessions on the host.";
+      return;
+    }
     api("/api/tmux/capture?name=" + encodeURIComponent(agentSel) + "&lines=60")
       .then(function (r) { return r.json(); })
       .then(function (data) {
@@ -1000,8 +1018,9 @@
     b.textContent = "Send";
     b.disabled = !agentSendable;
     $("agentInput").placeholder = agentSendable
-      ? "Directive to send to " + (agentSel || "the selected session") + "…"
-      : (agentSel ? agentSel + " is read-only (not in tmux-allow)" : "Pick a session above…");
+      ? "Directive to send to " + agentSel + "…"
+      : (agentSel ? agentSel + " is read-only (not in tmux-allow)"
+                  : "No shell selected — pick one above to type into it");
     if (typeof paintAgentMic === "function") paintAgentMic();
   }
 
@@ -1401,6 +1420,10 @@
     setStatus("Saved.");
     firstPoll = true; lastEventId = 0;
     $("transcript").innerHTML = "";
+    // Boot skips the session survey when there is no bridge yet, so on a
+    // first-time setup this is the first moment the host can be asked. Without
+    // it the shell list stays empty until the Agents view is opened by hand.
+    loadAgents();
   };
   $("testBtn").onclick = function () {
     cfg.bridge = cleanBridge($("cfgBridge").value);
@@ -1664,8 +1687,9 @@
     setStatus("First-time setup: enter the Bridge URL and token.", true);
   } else {
     setStatus("Connecting…");
-    // Learn the current agent up front so the header button can name it
-    // before the Agents view has ever been opened.
+    // Survey the host's shells on every load, so the picker is populated and
+    // current before the Agents view has ever been opened. Nothing is selected
+    // as a result — the list is offered, not armed.
     loadAgents();
   }
   paintAgentsBtn();
