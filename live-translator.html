@@ -1373,9 +1373,27 @@
       vad.speaking = false; vad.silenceMs = 0; vad.frames = []; vad.preRoll = []; vad.totalSamples = 0;
     }
 
+    // Profiles recorded in a HIGH SOUND PRESSURE room. Only the Spanish
+    // service qualifies: the English service and ordinary rooms are normal
+    // volume, and there the browser's processing helps rather than hurts.
+    var LOUD_ROOM_PROFILES = { 'jean-petit': 1 };
+
+    function captureConstraints() {
+      // echoCancellation / noiseSuppression / autoGainControl assume one near
+      // talker on a phone call and treat everything else as noise to remove.
+      // In a loud sanctuary that is backwards — the PA and the music are the
+      // signal — so suppression gates real speech and AGC clamps down on the
+      // sound pressure. Everywhere else they earn their keep: a distant, quiet
+      // speaker is exactly what AGC is for. Hence loud rooms only, not all
+      // rooms.
+      var loud = !!LOUD_ROOM_PROFILES[state.speakerProfile || ''];
+      return { channelCount: 1,
+               echoCancellation: !loud, noiseSuppression: !loud, autoGainControl: !loud };
+    }
+
     function startCapture() {
       return navigator.mediaDevices.getUserMedia({
-        audio: { channelCount: 1, echoCancellation: true, noiseSuppression: true, autoGainControl: true }
+        audio: captureConstraints()
       }).then(function (stream) {
         micStream = stream;
         var Ctx = window.AudioContext || window.webkitAudioContext;
