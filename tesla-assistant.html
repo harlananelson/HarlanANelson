@@ -62,7 +62,7 @@
   .msg.error { align-self: center; background: #4a1f1c; color: #ffb4a8; font-size: 17px; }
   .msg .tag { display: block; font-size: 13px; color: #7fb3e8; margin-bottom: 4px; }
   #composer {
-    display: flex; gap: 10px; background: #1b1b1b; flex: 0 0 auto;
+    display: flex; flex-wrap: wrap; gap: 10px; background: #1b1b1b; flex: 0 0 auto;
     /* Safe-area pad only when top-level. Inside Maat the shell's tab bar
        already owns the home-indicator strip; padding again just wastes height. */
     padding: 12px 18px 18px;
@@ -70,9 +70,22 @@
   html.top-level #composer {
     padding-bottom: calc(18px + env(safe-area-inset-bottom, 0px));
   }
+  /* Phone: backend on its own row; message + Send share the next. Send must
+     never sit off the right edge (nowrap + large type used to hide it). */
+  #composer #backendSel {
+    flex: 1 1 100%; min-width: 0; max-width: 100%;
+  }
   #composer input {
-    flex: 1; font-size: 22px; padding: 14px 16px; border-radius: 12px;
-    border: 1px solid #444; background: #222; color: #eee;
+    flex: 1 1 12rem; min-width: 0; font-size: 22px; padding: 14px 16px;
+    border-radius: 12px; border: 1px solid #444; background: #222; color: #eee;
+  }
+  #composer #sendBtn {
+    flex: 0 0 auto; min-width: 5.5rem;
+  }
+  /* Narrow phones: Send full-width on the line under the input so it can't
+     be clipped horizontally either. */
+  @media (max-width: 420px) {
+    #composer #sendBtn { flex: 1 1 100%; }
   }
   select {
     font-size: 19px; padding: 12px; border-radius: 12px;
@@ -90,17 +103,21 @@
     font-size: 14px; line-height: 1.35; white-space: pre; color: #cde;
   }
   #agentBar {
-    display: flex; gap: 10px; background: #1b1b1b; flex: 0 0 auto;
+    display: flex; flex-wrap: wrap; gap: 10px; background: #1b1b1b; flex: 0 0 auto;
     padding: 12px 18px 12px;
   }
   html.top-level #agentBar {
     padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
   }
   #agentBar input {
-    flex: 1; font-size: 19px; padding: 12px 14px; border-radius: 12px;
-    border: 1px solid #444; background: #222; color: #eee;
+    flex: 1 1 12rem; min-width: 0; font-size: 19px; padding: 12px 14px;
+    border-radius: 12px; border: 1px solid #444; background: #222; color: #eee;
   }
+  #agentSendBtn { flex: 0 0 auto; min-width: 5.5rem; }
   #agentSendBtn.confirm { background: #c0392b; }
+  @media (max-width: 420px) {
+    #agentSendBtn { flex: 1 1 100%; }
+  }
   /* Persistent input bar (replaces the full-screen mic pane) */
   #bar {
     display: none; flex-direction: column; gap: 10px; background: #1b1b1b;
@@ -111,10 +128,14 @@
     padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
   }
   #barContext { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-  #barType { display: flex; gap: 8px; }
+  #barType { display: flex; flex-wrap: wrap; gap: 8px; }
   #barType input {
-    flex: 1; min-width: 0; font-size: 18px; padding: 12px 14px; border-radius: 12px;
-    border: 1px solid #444; background: #222; color: #eee;
+    flex: 1 1 12rem; min-width: 0; font-size: 18px; padding: 12px 14px;
+    border-radius: 12px; border: 1px solid #444; background: #222; color: #eee;
+  }
+  #barSend { flex: 0 0 auto; min-width: 5.5rem; }
+  @media (max-width: 420px) {
+    #barSend { flex: 1 1 100%; }
   }
   .chip {
     background: #333; font-size: 16px; padding: 8px 14px; border-radius: 999px;
