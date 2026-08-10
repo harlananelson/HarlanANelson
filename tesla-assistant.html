@@ -17,7 +17,11 @@
   /* Tesla console: Chromium ~109, touch only, viewed at arm's length.
      Big targets, big type, dark theme, zero external assets. */
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { height: 100%; }
+  /* Fill the *frame*, not the phone's full visual viewport. When this page is
+     loaded alone, that is the screen. When Maat embeds it in an iframe above
+     a tab bar, 100dvh is taller than the iframe and the Send row is clipped
+     under the shell's tabs — the bug that made Send unreachable on a phone. */
+  html { height: 100%; }
   body {
     background: #111; color: #eee;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -25,8 +29,9 @@
     /* Nothing may scroll the page itself: the bottom row is pinned by layout,
        and a page that can scroll can strand it above the fold instead. */
     overflow: hidden;
-    /* Overridden in px by fitToVisualViewport() when the keyboard is up. */
-    height: 100dvh;
+    height: 100%;
+    max-height: 100%;
+    /* JS fitLayoutHeight() sets an explicit px height for keyboard / embed. */
   }
   header {
     display: flex; align-items: center; gap: 12px;
@@ -58,9 +63,12 @@
   .msg .tag { display: block; font-size: 13px; color: #7fb3e8; margin-bottom: 4px; }
   #composer {
     display: flex; gap: 10px; background: #1b1b1b; flex: 0 0 auto;
-    /* The Maat shell sets viewport-fit=cover, so the iframe extends into the
-       home-indicator strip. Without this the Send button sits under it. */
-    padding: 12px 18px calc(18px + env(safe-area-inset-bottom, 0px));
+    /* Safe-area pad only when top-level. Inside Maat the shell's tab bar
+       already owns the home-indicator strip; padding again just wastes height. */
+    padding: 12px 18px 18px;
+  }
+  html.top-level #composer {
+    padding-bottom: calc(18px + env(safe-area-inset-bottom, 0px));
   }
   #composer input {
     flex: 1; font-size: 22px; padding: 14px 16px; border-radius: 12px;
@@ -83,7 +91,10 @@
   }
   #agentBar {
     display: flex; gap: 10px; background: #1b1b1b; flex: 0 0 auto;
-    padding: 12px 18px calc(12px + env(safe-area-inset-bottom, 0px));
+    padding: 12px 18px 12px;
+  }
+  html.top-level #agentBar {
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
   }
   #agentBar input {
     flex: 1; font-size: 19px; padding: 12px 14px; border-radius: 12px;
@@ -94,7 +105,10 @@
   #bar {
     display: none; flex-direction: column; gap: 10px; background: #1b1b1b;
     flex: 0 0 auto;
-    padding: 10px 14px calc(14px + env(safe-area-inset-bottom, 0px));
+    padding: 10px 14px 14px;
+  }
+  html.top-level #bar {
+    padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
   }
   #barContext { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
   #barType { display: flex; gap: 8px; }
@@ -1702,25 +1716,40 @@
     micModeOffered = true;
   }
 
-  // ---- keep the bottom row reachable when the keyboard opens ---------------
-  // iOS shrinks the VISUAL viewport for the keyboard but leaves the LAYOUT
-  // viewport (what height:100%/100dvh measure) at full height. A bottom-anchored
-  // composer therefore sits behind the keyboard — and inside the Maat shell,
-  // whose body is overflow:hidden, there is no way to scroll to it. Typing a
-  // message is exactly when the keyboard is up, so Send became unreachable
-  // precisely when it was needed. Sizing the body to visualViewport.height
-  // gives the flex column the real space and re-pins the row above the keyboard.
-  function fitToVisualViewport() {
-    var vv = window.visualViewport;
-    if (!vv) return;                       // older browsers keep the CSS height
-    document.body.style.height = vv.height + "px";
+  // ---- keep the bottom row (Send) inside the visible frame -----------------
+  // Three cases that used to strand Send off-screen:
+  //  1. Maat iframe: height:100dvh / visualViewport alone measure the *phone*,
+  //     not the iframe above Maat's tab bar → composer sits under the tabs.
+  //  2. iOS keyboard: layout viewport stays tall; visual viewport shrinks →
+  //     composer sits behind the keyboard (and Maat's overflow:hidden blocks
+  //     scrolling to it).
+  //  3. long chat: flex:1 without min-height:0 grows past the frame (fixed in CSS).
+  //
+  // Always size to min(innerHeight, visualViewport.height). In an iframe
+  // innerHeight is the frame; when the keyboard opens visualViewport is
+  // smaller. Never use bare 100dvh.
+  var embedded = false;
+  try { embedded = window.self !== window.top; } catch (e) { embedded = true; }
+  if (!embedded) {
+    try { document.documentElement.classList.add("top-level"); } catch (e) {}
   }
+
+  function fitLayoutHeight() {
+    var h = window.innerHeight || 0;
+    var vv = window.visualViewport;
+    if (vv && vv.height > 0) {
+      h = h > 0 ? Math.min(h, vv.height) : vv.height;
+    }
+    if (h < 1) return;
+    document.documentElement.style.height = h + "px";
+    document.body.style.height = h + "px";
+  }
+  fitLayoutHeight();
+  window.addEventListener("resize", fitLayoutHeight);
   if (window.visualViewport) {
-    window.visualViewport.addEventListener("resize", fitToVisualViewport);
-    // Scroll too: iOS shifts the visual viewport when a focused field is
-    // revealed, which changes the usable height without a resize event.
-    window.visualViewport.addEventListener("scroll", fitToVisualViewport);
-    fitToVisualViewport();
+    window.visualViewport.addEventListener("resize", fitLayoutHeight);
+    // iOS shifts the visual viewport when a focused field is revealed.
+    window.visualViewport.addEventListener("scroll", fitLayoutHeight);
   }
 
   if (!cfg.bridge || !cfg.token) {

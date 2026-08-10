@@ -19,7 +19,9 @@
   /* Maat: one installable shell. Modes load existing apps in iframes — no
      backend change. Sermon + Voice/AI need Tailscale and home services. */
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { height: 100%; }
+  /* 100dvh so the shell fills the phone; #views (flex:1 + min-height:0) then
+     leaves a real iframe height *above* the tab bar for Assistant/Sermon. */
+  html, body { height: 100%; height: 100dvh; max-height: 100dvh; }
   body {
     background: #0f1419; color: #e8e6e1;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
