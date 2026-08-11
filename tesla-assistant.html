@@ -1283,8 +1283,13 @@
   // channel is open a tap mid-transmission just ends that transmission early.
   function agentDictate() {
     if (!dictateReady()) return;
-    if (agentRecording) { agentFinishNow(); return; }   // tap = stop this one early
-    if (dictateLoop) { endDictateLoop("Channel closed."); return; }
+    // Closing the channel comes FIRST. With the channel open the mic is
+    // almost always recording, so testing agentRecording first meant a tap
+    // only ended that transmission — and the loop immediately reopened it.
+    // There was then no way to turn the microphone off by tapping, which is
+    // the one thing this button must always be able to do.
+    if (dictateLoop) { endDictateLoop("Channel closed. Microphone off."); return; }
+    if (agentRecording) { agentFinishNow(); return; }   // one-shot: end it early
     dictateLoop = true;
     startDictate();
   }
