@@ -1206,7 +1206,7 @@
       ? "Turn sound on to dictate"
       : (target.kind === "tmux" && !agentSendable
            ? "Select a sendable session first"
-           : "Dictate — tap, speak, then say “send” or “cancel”");
+           : "Dictate — tap, speak, then say “over” to send");
   }
 
   function normWord(s) {
@@ -1224,10 +1224,12 @@
     return target.kind === "tmux" ? agentSendable : true;
   }
 
-  // A dictation ending in "send" IS the send. Saying it is what people do
-  // unprompted, and the word then landed in the message as text. Strip the
-  // trailing command and act on it; anything else is left in the box.
-  var _TAIL_SEND = /[\s,.]*\b(send it|send|go ahead|do it)\b[\s.!]*$/i;
+  // "over" — the radio procedure word — ends a dictation and sends it. It is
+  // deliberately a word you say TO a machine rather than one you say to a
+  // person, so it does not collide with ordinary phrasing the way "send" does
+  // ("send the report to Ana"). It only counts as the final word of an
+  // utterance, which the capture's silence detection already defines.
+  var _TAIL_SEND = /[\s,.]*\bover\b[\s.!]*$/i;
   var _TAIL_KILL = /[\s,.]*\b(cancel|scratch that|never mind|nevermind|discard)\b[\s.!]*$/i;
 
   function dictateBox() {
@@ -1278,14 +1280,14 @@
         return;
       }
       if (soundOn) {
-        setStatus("Say “send” to send it to " +
+        setStatus("Say “over” to send it to " +
                   (target.kind === "tmux" ? agentSel : (cfg.backend || "the assistant")) +
                   ", or “cancel”.");
         speakThenConfirm(body);      // read it back, then listen for the decision
       } else {
         // Quiet room: no spoken prompt is possible, so say plainly that the
         // text is waiting rather than leaving it looking sent.
-        setStatus("Ready — tap Send, or end with “send” next time.");
+        setStatus("Ready — tap Send, or end with “over” next time.");
       }
     });
   }
@@ -1303,7 +1305,7 @@
       started = true;
       agentListen("confirm", function (heard) {
         var w = normWord(heard);
-        var yes = /\b(send|send it|yes|go|run it|do it|confirm)\b/.test(w);
+        var yes = /\b(over|send|send it|yes|go|run it|do it|confirm)\b/.test(w);
         var no = /\b(cancel|no|stop|scratch that|never mind|nevermind|clear)\b/.test(w);
         if (yes) {
           dispatchDictated();
