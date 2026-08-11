@@ -1199,31 +1199,94 @@
   function paintAgentMic() {
     var b = $("agentMicBtn");
     if (!b) return;
-    var ok = soundOn && agentSendable;
-    b.disabled = !ok || agentRecording === "busy";
+    b.disabled = !dictateReady() || agentRecording === "busy";
     b.textContent = agentRecording === true ? "⏹" : "🎤";
     b.className = agentRecording === true ? "confirm" : "secondary";
     b.title = !soundOn
-      ? "Turn sound on to dictate directives"
-      : (!agentSendable ? "Select a sendable session first"
-                        : "Dictate a directive — tap, speak, tap to stop");
+      ? "Turn sound on to dictate"
+      : (target.kind === "tmux" && !agentSendable
+           ? "Select a sendable session first"
+           : "Dictate — tap, speak, then say “send” or “cancel”");
   }
 
   function normWord(s) {
     return (s || "").toLowerCase().replace(/[^a-z ]/g, " ").replace(/\s+/g, " ").trim();
   }
 
+  // Can we dictate right now? Talking to a TERMINAL still requires a sendable
+  // session — that is remote execution. Talking to an AI backend requires only
+  // that sound is on, so hands-free works with no shell selected, which is now
+  // the default state.
+  // Sound is NOT required. The spoken confirm ("Send?" read aloud, then
+  // listen) needs it, but the trailing-word form below does not — and
+  // requiring sound meant no hands-free send at all in a quiet room.
+  function dictateReady() {
+    return target.kind === "tmux" ? agentSendable : true;
+  }
+
+  // A dictation ending in "send" IS the send. Saying it is what people do
+  // unprompted, and the word then landed in the message as text. Strip the
+  // trailing command and act on it; anything else is left in the box.
+  var _TAIL_SEND = /[\s,.]*\b(send it|send|go ahead|do it)\b[\s.!]*$/i;
+  var _TAIL_KILL = /[\s,.]*\b(cancel|scratch that|never mind|nevermind|discard)\b[\s.!]*$/i;
+
+  function dictateBox() {
+    return target.kind === "tmux" ? $("agentInput")
+                                  : ($("barInput") || $("msgInput"));
+  }
+
+  // One send path for both targets, used by the trailing word and by the
+  // spoken confirm, so a voice send behaves exactly like a tapped one.
+  function dispatchDictated() {
+    if (target.kind === "tmux") {
+      agentConfirm = true;          // the voice WAS the confirm
+      agentSend();
+    } else {
+      var box = dictateBox(), t = box ? box.value.trim() : "";
+      if (!t) return;
+      if ($("msgInput")) $("msgInput").value = t;
+      if (box && box !== $("msgInput")) box.value = "";
+      sendTyped();
+    }
+    if (soundOn) speak("Sent.");
+  }
+
   function agentDictate() {
-    if (!soundOn || !agentSendable) return;
+    if (!dictateReady()) return;
     if (agentRecording) { agentFinishNow(); return; }   // tap again = stop early
     agentListen("dictate", function (text) {
       if (!text) { setStatus("Heard nothing — try again.", true); return; }
-      var box = $("agentInput");
-      box.value = (box.value ? box.value.trim() + " " : "") + text;
-      resetAgentSend();
-      setStatus("Say “send” to run it on " + agentSel + ", or “cancel”.");
-      // Read it back, then listen for the spoken decision — hands never needed.
-      speakThenConfirm(text);
+      var box = dictateBox();
+      var kill = _TAIL_KILL.test(text);
+      var go = !kill && _TAIL_SEND.test(text);
+      var body = text.replace(_TAIL_SEND, "").replace(_TAIL_KILL, "").trim();
+
+      if (kill) {
+        if (box) box.value = "";
+        if (target.kind === "tmux") resetAgentSend();
+        setStatus("Cancelled.");
+        return;
+      }
+      if (box) box.value = (box.value ? box.value.trim() + " " : "") + body;
+      if (target.kind === "tmux") resetAgentSend();
+
+      if (go) {
+        // The trailing word was the decision. Don't ask again — asking after
+        // someone has already said "send" is the opposite of hands-free.
+        if (!body) { setStatus("Nothing to send.", true); return; }
+        dispatchDictated();
+        return;
+      }
+      if (soundOn) {
+        setStatus("Say “send” to send it to " +
+                  (target.kind === "tmux" ? agentSel : (cfg.backend || "the assistant")) +
+                  ", or “cancel”.");
+        speakThenConfirm(body);      // read it back, then listen for the decision
+      } else {
+        // Quiet room: no spoken prompt is possible, so say plainly that the
+        // text is waiting rather than leaving it looking sent.
+        setStatus("Ready — tap Send, or end with “send” next time.");
+      }
     });
   }
 
@@ -1243,12 +1306,11 @@
         var yes = /\b(send|send it|yes|go|run it|do it|confirm)\b/.test(w);
         var no = /\b(cancel|no|stop|scratch that|never mind|nevermind|clear)\b/.test(w);
         if (yes) {
-          agentConfirm = true;      // skip the tap-confirm: the voice WAS the confirm
-          agentSend();
-          speak("Sent.");
+          dispatchDictated();
         } else if (no) {
-          $("agentInput").value = "";
-          resetAgentSend();
+          var b2 = dictateBox();
+          if (b2) b2.value = "";
+          if (target.kind === "tmux") resetAgentSend();
           setStatus("Cancelled.");
           speak("Cancelled.");
         } else {
