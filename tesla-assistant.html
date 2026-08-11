@@ -1200,8 +1200,10 @@
     var b = $("agentMicBtn");
     if (!b) return;
     b.disabled = !dictateReady() || agentRecording === "busy";
-    b.textContent = agentRecording === true ? "⏹" : "🎤";
-    b.className = agentRecording === true ? "confirm" : "secondary";
+    // Three states, because "am I still being heard?" is the question this
+    // button has to answer at a glance: idle, transmitting, channel open.
+    b.textContent = agentRecording === true ? "⏹" : (dictateLoop ? "📻" : "🎤");
+    b.className = (agentRecording === true || dictateLoop) ? "confirm" : "secondary";
     b.title = !soundOn
       ? "Turn sound on to dictate"
       : (target.kind === "tmux" && !agentSendable
@@ -1230,11 +1232,34 @@
   // ("send the report to Ana"). It only counts as the final word of an
   // utterance, which the capture's silence detection already defines.
   var _TAIL_SEND = /[\s,.]*\bover\b[\s.!]*$/i;
+  // "out" = finished, no reply expected. Checked BEFORE _TAIL_SEND so the
+  // Hollywood "over and out" closes the channel rather than reopening it.
+  var _TAIL_OUT = /[\s,.]*\b(over and out|out)\b[\s.!]*$/i;
   var _TAIL_KILL = /[\s,.]*\b(cancel|scratch that|never mind|nevermind|discard)\b[\s.!]*$/i;
 
   function dictateBox() {
     return target.kind === "tmux" ? $("agentInput")
                                   : ($("barInput") || $("msgInput"));
+  }
+
+  // Hands-free means the mic is tapped ONCE, not once per transmission. While
+  // this is on, sending resumes listening for the next one, the way a radio
+  // returns to receive after "over".
+  var dictateLoop = false;
+
+  function endDictateLoop(why) {
+    dictateLoop = false;
+    if (agentRecording) agentFinishNow();
+    setStatus(why || "Listening stopped.");
+    paintAgentMic();
+  }
+
+  function resumeDictate() {
+    if (!dictateLoop || !dictateReady()) { paintAgentMic(); return; }
+    // Wait for our own "Sent." to finish, or the mic hears the phone speaking
+    // and transcribes it back as the next transmission.
+    var go = function () { if (dictateLoop) startDictate(); };
+    if (soundOn) speak("", go); else setTimeout(go, 400);
   }
 
   // One send path for both targets, used by the trailing word and by the
@@ -1251,13 +1276,29 @@
       sendTyped();
     }
     if (soundOn) speak("Sent.");
+    resumeDictate();       // back to receive, if the channel is open
   }
 
+  // The button: first tap opens the channel, second tap closes it. While the
+  // channel is open a tap mid-transmission just ends that transmission early.
   function agentDictate() {
     if (!dictateReady()) return;
-    if (agentRecording) { agentFinishNow(); return; }   // tap again = stop early
+    if (agentRecording) { agentFinishNow(); return; }   // tap = stop this one early
+    if (dictateLoop) { endDictateLoop("Channel closed."); return; }
+    dictateLoop = true;
+    startDictate();
+  }
+
+  function startDictate() {
+    if (!dictateReady()) { dictateLoop = false; paintAgentMic(); return; }
+    paintAgentMic();
     agentListen("dictate", function (text) {
-      if (!text) { setStatus("Heard nothing — try again.", true); return; }
+      if (!text) {
+        // Silence is not a reason to close the channel — it is a pause.
+        if (dictateLoop) { setStatus("Listening…"); resumeDictate(); }
+        else setStatus("Heard nothing — try again.", true);
+        return;
+      }
       var box = dictateBox();
       var kill = _TAIL_KILL.test(text);
       var go = !kill && _TAIL_SEND.test(text);
@@ -1267,6 +1308,20 @@
         if (box) box.value = "";
         if (target.kind === "tmux") resetAgentSend();
         setStatus("Cancelled.");
+        resumeDictate();          // discard that one, keep the channel open
+        return;
+      }
+      // "out" is the ham word for finished, no reply expected: send whatever
+      // was said and close the channel, rather than returning to receive.
+      if (_TAIL_OUT.test(text)) {
+        var last = text.replace(_TAIL_OUT, "").trim();
+        if (box) box.value = (box.value ? box.value.trim() + " " : "") + last;
+        if (target.kind === "tmux") resetAgentSend();
+        // Close FIRST: dispatchDictated() resumes listening, so closing
+        // afterwards would race with the channel it just reopened.
+        dictateLoop = false;
+        if ((box && box.value.trim()) || last) dispatchDictated();
+        endDictateLoop("Channel closed.");
         return;
       }
       if (box) box.value = (box.value ? box.value.trim() + " " : "") + body;
@@ -1318,8 +1373,10 @@
           if (target.kind === "tmux") resetAgentSend();
           setStatus("Cancelled.");
           speak("Cancelled.");
+          resumeDictate();
         } else {
-          setStatus("Didn't hear send or cancel — review and tap Send.", true);
+          setStatus("Didn't hear “over” — review and tap Send.", true);
+          resumeDictate();
         }
       });
     }
