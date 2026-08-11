@@ -1305,7 +1305,10 @@
       started = true;
       agentListen("confirm", function (heard) {
         var w = normWord(heard);
-        var yes = /\b(over|send|send it|yes|go|run it|do it|confirm)\b/.test(w);
+        // ONE word, and only one: "over", the ham procedure word for "I have
+        // finished, go ahead". A list of synonyms means guessing which one the
+        // machine wants; a single agreed word is a protocol.
+        var yes = /\bover\b/.test(w);
         var no = /\b(cancel|no|stop|scratch that|never mind|nevermind|clear)\b/.test(w);
         if (yes) {
           dispatchDictated();
