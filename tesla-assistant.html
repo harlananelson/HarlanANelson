@@ -1275,7 +1275,9 @@
       if (box && box !== $("msgInput")) box.value = "";
       sendTyped();
     }
-    if (soundOn) speak("Sent.");
+    // No spoken "Sent." and no readback of the user's words — status is enough.
+    // The AI reply (if any) is still spoken via poll when Sound is on.
+    setStatus("Sent.");
     resumeDictate();       // back to receive, if the channel is open
   }
 
@@ -1339,15 +1341,18 @@
         dispatchDictated();
         return;
       }
-      if (soundOn) {
-        setStatus("Say “over” to send it to " +
-                  (target.kind === "tmux" ? agentSel : (cfg.backend || "the assistant")) +
-                  ", or “cancel”.");
-        speakThenConfirm(body);      // read it back, then listen for the decision
+      // Do NOT speak the user's words back. Readback felt like the app
+      // "repeating everything" and is useless for AI chat (you already know
+      // what you said). For tmux (remote code), a short confirm prompt is
+      // enough — still no full readback of the directive.
+      if (target.kind === "tmux" && soundOn) {
+        setStatus("Say “over” to send to " + (agentSel || "tmux") + ", or “cancel”.");
+        speakThenConfirm(body);
       } else {
-        // Quiet room: no spoken prompt is possible, so say plainly that the
-        // text is waiting rather than leaving it looking sent.
-        setStatus("Ready — tap Send, or end with “over” next time.");
+        setStatus("Ready — end with “over” to send" +
+                  (target.kind === "tmux" ? "" : " to the assistant") +
+                  ", or keep talking.");
+        if (dictateLoop) resumeDictate();
       }
     });
   }
@@ -1356,8 +1361,8 @@
     if (agentAudio && agentVad) { agentVad.silenceMs = 1e9; }   // next frame flushes
   }
 
-  // Read the captured directive back, then open a short confirm listen.
-  // The readback IS the safety step: you hear exactly what would run.
+  // Confirm listen for tmux only. Do not speak the captured text — that
+  // "repeated everything" on the iPad. A short cue is enough safety.
   function speakThenConfirm(text) {
     var started = false;
     function begin() {
@@ -1377,7 +1382,6 @@
           if (b2) b2.value = "";
           if (target.kind === "tmux") resetAgentSend();
           setStatus("Cancelled.");
-          speak("Cancelled.");
           resumeDictate();
         } else {
           setStatus("Didn't hear “over” — review and tap Send.", true);
@@ -1385,7 +1389,8 @@
         }
       });
     }
-    speak(text + ". Send?", begin);
+    // Short cue only — never read back `text` (user already said it).
+    speak("Say over to send, or cancel.", begin);
     setTimeout(begin, 9000);   // TTS silent or failed: confirm anyway, don't strand
   }
 
