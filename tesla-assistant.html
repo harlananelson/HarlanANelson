@@ -414,6 +414,24 @@
     };
   }
 
+  // What may be read aloud. User content must never be spoken back.
+  // Tmux used to emit "Sent to <session>: <full user text>" as an assistant
+  // event, which the poll path then TTS'd — that is the "repeats everything"
+  // / "Sent to grok harlan …" the owner heard.
+  function shouldSpeakAssistant(ev) {
+    if (!ev || !ev.text) return false;
+    var t = String(ev.text).trim();
+    if (!t) return false;
+    if (/^Sent to\b/i.test(t)) return false;          // tmux receipt
+    if (/^Sent\.?$/i.test(t)) return false;
+    if (/\. Send\?$/i.test(t)) return false;          // old confirm readback shape
+    // Errors are status-line material; don't orate a 502 JSON blob.
+    if (/^AI backend failed/i.test(t)) return false;
+    if (/^grok CLI failed/i.test(t)) return false;
+    if (t.charAt(0) === "{") return false;
+    return true;
+  }
+
   // ---- spoken replies (server TTS -> <audio>; tap on the sound button
   //      doubles as the autoplay-unlock gesture) ----
   // onDone (optional) fires once when this utterance finishes playing — used by
@@ -475,7 +493,9 @@
           addMsg(ev.role, ev.text, ev.backend);
           if (ev.role === "assistant" && !firstPoll && ev.id > lastSpokenId) {
             lastSpokenId = ev.id;
-            speak(ev.text);
+            // Speak only real AI answers. Never speak "Sent to …: <user text>"
+            // (tmux receipt) or other receipts that repeat what the user said.
+            if (shouldSpeakAssistant(ev)) speak(ev.text);
           }
         });
         if (firstPoll) {
@@ -1275,7 +1295,8 @@
       if (box && box !== $("msgInput")) box.value = "";
       sendTyped();
     }
-    if (soundOn) speak("Sent.");
+    // Status only — do not TTS "Sent." or the user's words.
+    setStatus(target.kind === "tmux" ? ("Sent to " + (agentSel || "session") + ".") : "Sent.");
     resumeDictate();       // back to receive, if the channel is open
   }
 
@@ -1339,15 +1360,16 @@
         dispatchDictated();
         return;
       }
-      if (soundOn) {
-        setStatus("Say “over” to send it to " +
-                  (target.kind === "tmux" ? agentSel : (cfg.backend || "the assistant")) +
-                  ", or “cancel”.");
-        speakThenConfirm(body);      // read it back, then listen for the decision
+      // Never speak the user's words back. AI: silent status until "over".
+      // tmux: short cue only (remote code) — not a full readback of the body.
+      if (target.kind === "tmux" && soundOn) {
+        setStatus("Say “over” to send to " + (agentSel || "tmux") + ", or “cancel”.");
+        speakThenConfirm(body);
       } else {
-        // Quiet room: no spoken prompt is possible, so say plainly that the
-        // text is waiting rather than leaving it looking sent.
-        setStatus("Ready — tap Send, or end with “over” next time.");
+        setStatus("Ready — end with “over” to send" +
+                  (target.kind === "tmux" ? "" : " to the assistant") +
+                  ", or keep talking.");
+        if (dictateLoop) resumeDictate();
       }
     });
   }
@@ -1356,8 +1378,7 @@
     if (agentAudio && agentVad) { agentVad.silenceMs = 1e9; }   // next frame flushes
   }
 
-  // Read the captured directive back, then open a short confirm listen.
-  // The readback IS the safety step: you hear exactly what would run.
+  // tmux confirm listen only. Do not speak `text` (that repeated everything).
   function speakThenConfirm(text) {
     var started = false;
     function begin() {
@@ -1377,7 +1398,6 @@
           if (b2) b2.value = "";
           if (target.kind === "tmux") resetAgentSend();
           setStatus("Cancelled.");
-          speak("Cancelled.");
           resumeDictate();
         } else {
           setStatus("Didn't hear “over” — review and tap Send.", true);
@@ -1385,7 +1405,7 @@
         }
       });
     }
-    speak(text + ". Send?", begin);
+    speak("Say over to send, or cancel.", begin);
     setTimeout(begin, 9000);   // TTS silent or failed: confirm anyway, don't strand
   }
 
