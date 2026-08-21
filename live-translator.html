@@ -1411,6 +1411,7 @@
         processor.connect(muteGain);
         muteGain.connect(audioCtx.destination);
         capturing = true;
+        resetMicWatch();   // a new session starts with a clean slate
         resetVad();
         if (audioCtx.resume) { audioCtx.resume(); }
         pushLog('', 'microphone capture started (sampleRate=' + srcRate + ')');
@@ -1424,6 +1425,7 @@
 
     function stopCapture() {
       capturing = false;
+      resetMicWatch();     // do not carry a stale warning into the next run
       if (processor) { try { processor.disconnect(); processor.onaudioprocess = null; } catch (e) {} }
       if (micSource) { try { micSource.disconnect(); } catch (e) {} }
       if (muteGain) { try { muteGain.disconnect(); } catch (e) {} }
@@ -1432,6 +1434,41 @@
       audioCtx = micStream = micSource = processor = muteGain = null;
       resetVad();
       setLevel(0);
+    }
+
+    // ---- silent-microphone detector -----------------------------------------
+    // A muted mic, a device held by another app, or the wrong input selected all
+    // stream perfectly valid digital silence. Nothing errors, the socket stays
+    // open, and the failure is invisible until you look for a transcript that
+    // does not exist — a 24-minute meeting was lost exactly this way.
+    //
+    // The floor is deliberately far BELOW the speech threshold: a real room
+    // always has a noise floor, so anything genuinely acoustic clears 0.002.
+    // Sustained readings under it mean no signal at all, not a quiet room.
+    var MIC_FLOOR = 0.002;
+    var MIC_SILENT_MS = 20000;      // ~20s of nothing before we say so
+    var micSilentMs = 0, micWarned = false;
+
+    function resetMicWatch() { micSilentMs = 0; micWarned = false; }
+
+    function checkMicAlive(rms, frameMs) {
+      if (rms >= MIC_FLOOR) {
+        if (micWarned) {
+          micWarned = false;
+          setStatus('ok', 'Microphone is picking up sound again.');
+        }
+        micSilentMs = 0;
+        return;
+      }
+      micSilentMs += frameMs;
+      if (!micWarned && micSilentMs >= MIC_SILENT_MS) {
+        micWarned = true;
+        setStatus('err',
+          'No sound from the microphone for ' + Math.round(micSilentMs / 1000) +
+          's — recording, but capturing nothing. Check that the mic is not muted, ' +
+          'that the right input is selected, and that another app (Teams, Zoom) ' +
+          'is not holding it.');
+      }
     }
 
     function onAudio(e) {
@@ -1444,6 +1481,7 @@
       var rms = Math.sqrt(sum / n);
       var frameMs = (n / srcRate) * 1000;
       setLevel(rms);
+      checkMicAlive(rms, frameMs);
       if (state.transcribeEngine === 'homegpu') {
         // continuous streaming: the server does its own VAD and chunking
         if (hgWs && hgWs.readyState === 1) {
