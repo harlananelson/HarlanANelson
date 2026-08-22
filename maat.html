@@ -21,11 +21,11 @@
 <title>Maat</title>
 <style>
   /* Maat: one installable shell. Modes load existing apps in iframes — no
-     backend change. Listen + Voice/AI need Tailscale and home services.
+     backend change. Listen + Converse + Tools need Tailscale where noted.
      Practice embeds public languages.html (shareable; no Tailscale). */
   * { box-sizing: border-box; margin: 0; padding: 0; }
   /* 100dvh so the shell fills the phone; #views (flex:1 + min-height:0) then
-     leaves a real iframe height *above* the tab bar for Assistant/Sermon. */
+     leaves a real iframe height *above* the tab bar. */
   html, body { height: 100%; height: 100dvh; max-height: 100dvh; }
   body {
     background: #0f1419; color: #e8e6e1;
@@ -70,6 +70,7 @@
     flex: 1; background: none; border: 0; color: #7a8490; cursor: pointer;
     padding: 10px 4px 12px; font-size: 11px; display: flex; flex-direction: column;
     align-items: center; gap: 3px; touch-action: manipulation;
+    -webkit-user-select: none; user-select: none;
   }
   #tabs button .ic { font-size: 22px; line-height: 1; }
   #tabs button.sel { color: #c8a36c; }
@@ -104,6 +105,56 @@
     background: #c8a36c; color: #0f1419; border: 0; border-radius: 12px;
     font-size: 16px; padding: 12px 18px; cursor: pointer; font-weight: 600;
   }
+  /* Tools destination: chip bar + stacked iframes (last tool shown immediately) */
+  .tools-wrap {
+    display: none; flex-direction: column; position: absolute; inset: 0;
+    background: #0f1419;
+  }
+  .tools-wrap.active { display: flex; }
+  .tools-bar {
+    display: flex; gap: 8px; padding: 8px 10px;
+    background: #151c24; border-bottom: 1px solid #2a3540;
+    flex-shrink: 0; align-items: center;
+  }
+  .tools-bar button {
+    flex: 1; background: #1a222c; border: 1px solid #2a3540; color: #9aa3ad;
+    border-radius: 10px; padding: 10px 8px; font-size: 14px; font-weight: 500;
+    cursor: pointer; touch-action: manipulation;
+  }
+  .tools-bar button.sel {
+    color: #0f1419; background: #c8a36c; border-color: #c8a36c; font-weight: 600;
+  }
+  .tools-note {
+    font-size: 11px; color: #6a7380; padding: 4px 10px 6px;
+    background: #151c24; border-bottom: 1px solid #2a3540; flex-shrink: 0;
+  }
+  .tools-frames { position: relative; flex: 1; min-height: 0; }
+  .tools-frames iframe {
+    position: absolute; inset: 0; border: 0; width: 100%; height: 100%;
+    background: #0f1419; display: none;
+  }
+  .tools-frames iframe.active { display: block; }
+  #toolPicker {
+    display: none; position: absolute; inset: 0; z-index: 20;
+    background: rgba(0,0,0,.55); align-items: flex-end; justify-content: center;
+    padding: 16px; padding-bottom: calc(16px + env(safe-area-inset-bottom, 0));
+  }
+  #toolPicker.open { display: flex; }
+  #toolPicker .card {
+    width: 100%; max-width: 420px; background: #161b22; border: 1px solid #30363d;
+    border-radius: 16px; padding: 14px; color: #e8e6e1;
+  }
+  #toolPicker .card h2 { font-size: 17px; margin-bottom: 10px; }
+  #toolPicker .card button.row {
+    display: block; width: 100%; text-align: left; margin: 0 0 10px;
+    background: #1a222c; border: 1px solid #2a3540; color: #e8e6e1;
+    border-radius: 12px; padding: 14px 16px; font-size: 17px; cursor: pointer;
+  }
+  #toolPicker .card .row-note { font-size: 13px; color: #8a939e; margin: -4px 0 12px 4px; }
+  #toolPicker .card button.cancel {
+    width: 100%; background: #2a3540; border: 0; color: #e8e6e1;
+    border-radius: 12px; padding: 12px; font-size: 16px; cursor: pointer; margin-top: 4px;
+  }
 </style>
 </head>
 <body>
@@ -111,11 +162,19 @@
 <div id="banner"></div>
 <div id="views"></div>
 
+<div id="toolPicker" role="dialog" aria-label="Choose tool">
+  <div class="card">
+    <h2>Tools</h2>
+    <div id="toolPickerBody"></div>
+    <button type="button" class="cancel" id="toolPickerClose">Cancel</button>
+  </div>
+</div>
+
 <div id="settings">
   <h1>Maat</h1>
-  <p class="note">Each mode loads an existing tool. Listen and Converse need
+  <p class="note">Each mode loads an existing tool. Listen, Converse, and Tools need
     Tailscale and the matching home service. Practice is public (no Tailscale).
-    Blank a URL to hide that mode. Saved in this browser only.</p>
+    Blank a URL to hide that tool. Saved in this browser only.</p>
   <div id="settingsFields"></div>
   <div class="row">
     <button id="saveModes" type="button">Save</button>
@@ -162,8 +221,27 @@
   // Public Practice languages (allowlisted for deep links — never pass raw lang through).
   var PRACTICE_LANGS = { es: 1, en: 1, ja: 1, sw: 1 };
 
-  // Modes: existing pages in iframes (+ About panel). Editable URLs.
-  // Practice added in PR1 (Maat IA): languages stay public/shareable at languages.html.
+  // PR3: Music + reMarkable fold under Tools (last-tool memory + long-press).
+  var TOOL_DEFS = [
+    {
+      id: "music",
+      label: "Music",
+      icon: "🎵",
+      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:8444/",
+      hint: "Record or upload music — levels, clipping, spectrum, tempo, key (tailnet :8444). Full-rate capture; not the 16 kHz speech path."
+    },
+    {
+      id: "remarkable",
+      label: "reMarkable",
+      icon: "📝",
+      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443/",
+      hint: "Phone → reMarkable bridge (tailnet :9443). Needs Tailscale and the phone-bridge on the workstation."
+    }
+  ];
+  var TOOL_IDS = { music: 1, remarkable: 1 };
+  var LAST_TOOL_KEY = "maat.tools.lastTool";
+
+  // Modes: existing pages in iframes (+ Tools hub + About). Editable URLs.
   var DEFAULTS = [
     {
       id: "sermon",
@@ -171,10 +249,6 @@
       icon: "🌐",
       url: "./live-translator.html",
       kind: "iframe",
-      // One surface, many domains: the PROFILE decides what this is — a sermon
-      // with its preacher's vocabulary and a doctrine lens, a medical
-      // appointment with clinical vocabulary and a plain-language summary.
-      // Naming the tab "Sermon" hid the rest.
       hint: "Listen to a service, a meeting or an appointment: transcription, translation when the profile calls for it, and analysis. Pick a profile inside. On iPad prefer the tailnet page if WebSocket fails."
     },
     {
@@ -192,25 +266,15 @@
       icon: "💬",
       url: "./assistant.html",
       kind: "iframe",
-      // PR2: Voice + AI and Assistant were the same utility (input modality differs).
-      // Mic vs type is UI state inside assistant.html (?mode=mic / More → Switch).
       hint: "Talk to the home AI — type or speak. Deep link: #converse or #converse?input=mic. Needs Tailscale + tesla-bridge."
     },
     {
-      id: "remarkable",
-      label: "reMarkable",
-      icon: "📝",
-      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443/",
-      kind: "iframe",
-      hint: "Phone → reMarkable bridge (tailnet :9443). Needs Tailscale and the phone-bridge running on the workstation."
-    },
-    {
-      id: "music",
-      label: "Music",
-      icon: "🎵",
-      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:8444/",
-      kind: "iframe",
-      hint: "Record or upload music, get levels, clipping, spectral balance, tempo and key (tailnet :8444). Full-rate capture with the browser's speech processing OFF — not the 16 kHz speech path."
+      id: "tools",
+      label: "Tools",
+      icon: "🛠️",
+      url: "",
+      kind: "tools",
+      hint: "Music analyzer + reMarkable bridge. Opens last tool. Long-press this tab to jump. Needs Tailscale. Deep link: #tools?tool=music"
     },
     {
       id: "about",
@@ -221,8 +285,6 @@
     }
   ];
 
-  // When Maat itself is opened from the tailnet host (no port), Listen's
-  // WebSocket is more reliable same-origin on :8443 than via the Netlify page.
   function defaultUrl(mode) {
     var onTailnet = location.hostname.indexOf(".ts.net") >= 0 && location.port === "";
     if (onTailnet && mode.id === "sermon") {
@@ -242,6 +304,17 @@
     return "./assistant.html";
   }
 
+  function getLastTool() {
+    var t = null;
+    try { t = localStorage.getItem(LAST_TOOL_KEY); } catch (e) {}
+    if (t && TOOL_IDS[t]) return t;
+    return "music";
+  }
+  function setLastTool(id) {
+    if (!TOOL_IDS[id]) return;
+    try { localStorage.setItem(LAST_TOOL_KEY, id); } catch (e) {}
+  }
+
   function loadModes() {
     var saved = {};
     try { saved = JSON.parse(localStorage.getItem("maat_urls") || "{}"); } catch (e) {}
@@ -258,23 +331,47 @@
       return {
         id: a.id, label: a.label, icon: a.icon, kind: a.kind, hint: a.hint,
         public: !!a.public,
-        url: (u === undefined ? defaultUrl(a) : u)
+        url: a.kind === "tools" ? "" : (u === undefined ? defaultUrl(a) : u)
       };
     });
   }
-  function saveModes(modes) {
+
+  function loadTools() {
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem("maat_urls") || "{}"); } catch (e) {}
+    return TOOL_DEFS.map(function (t) {
+      return {
+        id: t.id, label: t.label, icon: t.icon, hint: t.hint,
+        url: (saved[t.id] === undefined ? t.url : saved[t.id])
+      };
+    });
+  }
+
+  function saveModes(modes, tools) {
     var m = {};
-    modes.forEach(function (a) { m[a.id] = a.url; });
+    modes.forEach(function (a) {
+      if (a.kind === "about" || a.kind === "tools") return;
+      m[a.id] = a.url;
+    });
+    (tools || []).forEach(function (t) { m[t.id] = t.url; });
     try { localStorage.setItem("maat_urls", JSON.stringify(m)); } catch (e) {}
   }
 
   var modes = loadModes();
+  var tools = loadTools();
+  var activeTool = getLastTool();
   var active = null;
   try { active = localStorage.getItem("maat_active"); } catch (e) {}
-  // Migrate last-tab preference from pre-PR2 Voice / Assistant tabs.
+  // Migrate last-tab preference from pre-PR2 / pre-PR3 tabs.
   if (active === "voice" || active === "assistant") {
     active = "converse";
     try { localStorage.setItem("maat_active", "converse"); } catch (e) {}
+  }
+  if (active === "music" || active === "remarkable") {
+    activeTool = active;
+    setLastTool(activeTool);
+    active = "tools";
+    try { localStorage.setItem("maat_active", "tools"); } catch (e) {}
   }
 
   function aboutHtml() {
@@ -290,27 +387,138 @@
       '<li><strong>Listen</strong> — transcription / translation / analysis (profiles; home GPU when available)</li>' +
       '<li><strong>Practice</strong> — language speech drills (ES/EN/JA/SW); last language remembered; public and shareable</li>' +
       '<li><strong>Converse</strong> — talk to the home AI (type or mic — same surface; “over” sends on the open channel)</li>' +
-      '<li><strong>reMarkable</strong> / <strong>Music</strong> — Tailscale utilities</li>' +
+      '<li><strong>Tools</strong> — Music analyzer + reMarkable (last tool remembered; long-press tab to jump)</li>' +
       '</ul>' +
       '<p>Practice embeds the public <a href="./languages.html" style="color:#c8a36c">Languages</a> hub — ' +
       'direct drill URLs stay shareable for learners who should not see private tools.</p>' +
       '<div class="note">' +
       '<strong style="color:#e8e6e1">Deep links</strong><br>' +
       '<code>maat.html#practice</code> · <code>?mode=practice&amp;lang=es</code><br>' +
-      '<code>#converse</code> · <code>#converse?input=mic</code> (aliases: <code>?mode=voice</code>, <code>?mode=assistant</code>)<br>' +
-      '<code>?mode=sermon</code> · <code>?mode=listen</code>' +
+      '<code>#converse</code> · <code>#converse?input=mic</code><br>' +
+      '<code>#tools</code> · <code>#tools?tool=music</code> · <code>#tools?tool=remarkable</code><br>' +
+      'Aliases: <code>?mode=voice</code>, <code>?mode=assistant</code>, <code>?mode=music</code>, <code>?mode=remarkable</code>' +
       '</div>' +
       '<div class="note">' +
       '<strong style="color:#e8e6e1">To test modes that use the home workstation</strong><br>' +
       '1. Connect Tailscale on this device<br>' +
       '2. Listen: <code>cd ~/projects/biblestudy && bash server/run.sh</code><br>' +
       '3. Converse: tesla-bridge <code>bin/serve</code> + token in the page Settings<br>' +
-      '4. On iPad, Listen WebSockets work best from the tailnet origin if this page cannot open <code>wss://</code><br>' +
-      '5. Practice needs no Tailscale' +
+      '4. Tools → Music: musiclab on <code>:8444</code> · Tools → reMarkable: phone-bridge on <code>:9443</code><br>' +
+      '5. On iPad, Listen WebSockets work best from the tailnet origin if this page cannot open <code>wss://</code><br>' +
+      '6. Practice needs no Tailscale' +
       '</div>' +
       '<p style="margin-top:18px;font-size:13px;color:#6a7380">Existing tools are unchanged — Maat only launches them. ' +
       'Direct links: languages, live-translator, assistant, apps hub still work.</p>'
     );
+  }
+
+  function toolById(id) {
+    for (var i = 0; i < tools.length; i++) if (tools[i].id === id) return tools[i];
+    return tools[0];
+  }
+
+  function paintToolsBar() {
+    var bar = $("toolsBar");
+    if (!bar) return;
+    bar.innerHTML = "";
+    tools.forEach(function (t) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.id = "tool-chip-" + t.id;
+      b.textContent = t.icon + " " + t.label;
+      if (t.id === activeTool) b.className = "sel";
+      b.onclick = function () { selectTool(t.id); };
+      bar.appendChild(b);
+    });
+  }
+
+  function selectTool(id, opts) {
+    opts = opts || {};
+    if (!TOOL_IDS[id]) return;
+    activeTool = id;
+    setLastTool(id);
+    paintToolsBar();
+    tools.forEach(function (t) {
+      var f = $("tool-frame-" + t.id);
+      if (!f) return;
+      var on = t.id === id;
+      if (on && t.url && !f.getAttribute("src")) {
+        watchIframeLoad(f, { id: "tools/" + t.id, label: t.label, url: t.url });
+        f.src = t.url;
+      }
+      f.classList.toggle("active", on);
+    });
+    var note = $("toolsNote");
+    if (note) {
+      var t = toolById(id);
+      note.textContent = "Tailscale required · " + (t.hint || t.label);
+    }
+    if (opts.showTools !== false) show("tools");
+  }
+
+  function openToolPicker() {
+    var body = $("toolPickerBody");
+    body.innerHTML = "";
+    tools.forEach(function (t) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "row";
+      b.textContent = (t.id === activeTool ? "● " : "○ ") + t.icon + " " + t.label;
+      b.onclick = function () {
+        closeToolPicker();
+        selectTool(t.id);
+      };
+      body.appendChild(b);
+      var n = document.createElement("div");
+      n.className = "row-note";
+      n.textContent = t.hint || "";
+      body.appendChild(n);
+    });
+    $("toolPicker").classList.add("open");
+  }
+  function closeToolPicker() {
+    $("toolPicker").classList.remove("open");
+  }
+  $("toolPickerClose").onclick = closeToolPicker;
+  $("toolPicker").addEventListener("click", function (e) {
+    if (e.target === $("toolPicker")) closeToolPicker();
+  });
+
+  function bindLongPress(el, onLong, onShort) {
+    var timer = null;
+    var longFired = false;
+    var ignoreUntil = 0;
+    var start = function () {
+      longFired = false;
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(function () {
+        timer = null;
+        longFired = true;
+        ignoreUntil = Date.now() + 600;
+        onLong();
+      }, 480);
+    };
+    var cancel = function () {
+      if (timer) { clearTimeout(timer); timer = null; }
+    };
+    var end = function () {
+      if (timer) { clearTimeout(timer); timer = null; }
+      if (longFired) { longFired = false; return; }
+      if (Date.now() < ignoreUntil) return;
+      onShort();
+    };
+    el.addEventListener("touchstart", start, { passive: true });
+    el.addEventListener("touchend", end);
+    el.addEventListener("touchcancel", cancel);
+    el.addEventListener("mousedown", function (e) {
+      if (e.button !== 0) return;
+      start();
+    });
+    el.addEventListener("mouseup", end);
+    el.addEventListener("mouseleave", cancel);
+    el.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
   }
 
   function build() {
@@ -322,13 +530,31 @@
         p.className = "panel"; p.id = "view-" + a.id;
         p.innerHTML = aboutHtml();
         views.appendChild(p);
+      } else if (a.kind === "tools") {
+        var wrap = document.createElement("div");
+        wrap.className = "tools-wrap";
+        wrap.id = "view-tools";
+        wrap.innerHTML =
+          '<div class="tools-bar" id="toolsBar"></div>' +
+          '<div class="tools-note" id="toolsNote">Tailscale required for Tools</div>' +
+          '<div class="tools-frames" id="toolsFrames"></div>';
+        views.appendChild(wrap);
+        var frames = $("toolsFrames");
+        tools.forEach(function (t) {
+          var f = document.createElement("iframe");
+          f.id = "tool-frame-" + t.id;
+          f.setAttribute("allow", "microphone; autoplay; clipboard-write; clipboard-read; fullscreen");
+          f.setAttribute("title", t.label);
+          f.dataset.src = t.url || "";
+          frames.appendChild(f);
+        });
+        paintToolsBar();
       } else if (a.url) {
         var f = document.createElement("iframe");
         f.className = "view"; f.id = "view-" + a.id;
         f.setAttribute("allow", "microphone; autoplay; clipboard-write; clipboard-read; fullscreen");
         f.setAttribute("title", a.label);
         // Public Practice: sandbox without top-navigation so drills cannot navigate the shell away.
-        // allow-scripts + allow-same-origin required for nested drill iframes + localStorage.
         if (a.public || a.id === "practice") {
           f.setAttribute(
             "sandbox",
@@ -352,7 +578,11 @@
       t.type = "button";
       t.id = "tab-" + a.id;
       t.innerHTML = '<span class="ic">' + a.icon + '</span>' + a.label;
-      t.onclick = function () { show(a.id); };
+      if (a.kind === "tools") {
+        bindLongPress(t, function () { openToolPicker(); }, function () { show("tools"); });
+      } else {
+        t.onclick = function () { show(a.id); };
+      }
       tabs.appendChild(t);
     });
     var gear = document.createElement("button");
@@ -390,11 +620,16 @@
       var v = $("view-" + a.id), t = $("tab-" + a.id);
       var on = a.id === id;
       if (v) {
-        if (on && v.tagName === "IFRAME" && !v.getAttribute("src") && v.dataset.src) {
-          watchIframeLoad(v, a);
-          v.src = v.dataset.src;
+        if (a.kind === "tools") {
+          v.classList.toggle("active", on);
+          if (on) selectTool(activeTool || getLastTool(), { showTools: false });
+        } else {
+          if (on && v.tagName === "IFRAME" && !v.getAttribute("src") && v.dataset.src) {
+            watchIframeLoad(v, a);
+            v.src = v.dataset.src;
+          }
+          v.classList.toggle("active", on);
         }
-        v.classList.toggle("active", on);
       }
       if (t) t.classList.toggle("sel", on);
     });
@@ -405,6 +640,30 @@
       var wrap = $("settingsFields"); wrap.innerHTML = "";
       modes.forEach(function (a) {
         if (a.kind === "about") return;
+        if (a.kind === "tools") {
+          var head = document.createElement("p");
+          head.className = "note";
+          head.style.marginTop = "16px";
+          head.textContent = "Tools (Tailscale) — Music and reMarkable URLs";
+          wrap.appendChild(head);
+          tools.forEach(function (t) {
+            var lab = document.createElement("label");
+            lab.textContent = t.label + " URL";
+            lab.htmlFor = "url-" + t.id;
+            var inp = document.createElement("input");
+            inp.id = "url-" + t.id; inp.value = t.url || "";
+            inp.autocapitalize = "off"; inp.spellcheck = false;
+            inp.placeholder = t.hint || "https://…";
+            wrap.appendChild(lab); wrap.appendChild(inp);
+            if (t.hint) {
+              var h = document.createElement("p");
+              h.className = "note"; h.style.margin = "4px 0 0";
+              h.style.fontSize = "12px"; h.textContent = t.hint;
+              wrap.appendChild(h);
+            }
+          });
+          return;
+        }
         var lab = document.createElement("label");
         lab.textContent = a.label + " URL";
         lab.htmlFor = "url-" + a.id;
@@ -425,31 +684,34 @@
   }
   $("saveModes").onclick = function () {
     modes.forEach(function (a) {
-      if (a.kind === "about") return;
+      if (a.kind === "about" || a.kind === "tools") return;
       var el = $("url-" + a.id);
       if (!el) return;
       a.url = (el.value || "").trim().replace(/\s+/g, "");
     });
-    saveModes(modes);
+    tools.forEach(function (t) {
+      var el = $("url-" + t.id);
+      if (!el) return;
+      t.url = (el.value || "").trim().replace(/\s+/g, "");
+    });
+    saveModes(modes, tools);
     openSettings(false);
     build();
   };
   $("closeSettings").onclick = function () { openSettings(false); };
 
   // Deep links (allowlisted). Prefer hash for installable shortcuts; query still works.
-  //   maat.html#practice / #practice?lang=es / ?mode=practice&lang=es
-  //   maat.html#converse / #converse?input=mic
-  //   Aliases: ?mode=voice → converse+mic, ?mode=assistant → converse
-  //   maat.html?mode=sermon|listen|about|practice|languages|converse
   function applyDeepLink() {
     var mode = null;
     var lang = null;
     var input = null;
+    var tool = null;
     try {
       var qs = new URLSearchParams(location.search);
       mode = qs.get("mode");
       lang = qs.get("lang");
       input = qs.get("input");
+      tool = qs.get("tool");
     } catch (e) {}
     try {
       var raw = (location.hash || "").replace(/^#/, "");
@@ -462,19 +724,28 @@
           var hp = new URLSearchParams(hParams);
           if (hp.get("lang")) lang = hp.get("lang");
           if (hp.get("input")) input = hp.get("input");
+          if (hp.get("tool")) tool = hp.get("tool");
         }
       }
     } catch (e) {}
 
-    // Allowlisted aliases (old Voice / Assistant tabs + naming variants).
+    // Allowlisted aliases.
     if (mode === "languages") mode = "practice";
     if (mode === "listen") mode = "sermon";
     if (mode === "voice") { mode = "converse"; if (!input) input = "mic"; }
     if (mode === "assistant") { mode = "converse"; }
+    if (mode === "music" || mode === "remarkable") {
+      tool = mode;
+      mode = "tools";
+    }
 
     if (input) {
       input = String(input).toLowerCase();
       if (input !== "mic" && input !== "type") input = null;
+    }
+    if (tool) {
+      tool = String(tool).toLowerCase();
+      if (!TOOL_IDS[tool]) tool = null;
     }
 
     var ids = modes.map(function (a) { return a.id; });
@@ -487,7 +758,6 @@
     if (lang) {
       modes.forEach(function (a) {
         if (a.id !== "practice") return;
-        // Only rewrite the default languages.html URL (do not clobber a Settings override).
         if (!a.url || a.url.indexOf("languages.html") >= 0) {
           a.url = practiceUrl(lang);
         }
@@ -503,6 +773,13 @@
         }
       });
       if (!mode) active = "converse";
+    }
+
+    if (tool) {
+      activeTool = tool;
+      setLastTool(tool);
+      if (!mode) active = "tools";
+      else if (mode === "tools") active = "tools";
     }
   }
   applyDeepLink();
