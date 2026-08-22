@@ -488,6 +488,8 @@
     if (!t) return false;
     if (/^Sent to\b/i.test(t)) return false;          // tmux receipt
     if (/^Sent\.?$/i.test(t)) return false;
+    if (/[│┃╭╮]/.test(t)) return false;               // TUI chrome, not prose
+    if (t.length > 800) return false;                 // don't orate a pane dump
     if (/\. Send\?$/i.test(t)) return false;          // old confirm readback shape
     // Errors are status-line material; don't orate a 502 JSON blob.
     if (/^AI backend failed/i.test(t)) return false;
