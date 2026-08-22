@@ -1288,7 +1288,7 @@
     b.className = (agentRecording === true || dictateLoop) ? "confirm" : "secondary";
     b.title = (target.kind === "tmux" && !agentSendable)
       ? "Select a sendable session first (tmux-allow)"
-      : "Hands-free channel — tap once, speak, say “over” to send, “out” to close";
+      : "Hands-free channel — tap once, speak (sends on pause); say “out” to close";
     // Keep the big Talk button in Voice + AI in sync when the target is tmux.
     paintTalkForTarget();
   }
@@ -1308,7 +1308,7 @@
     if (dictateLoop) {
       b.className = agentRecording === true ? "rec" : "";
       b.textContent = agentRecording === true
-        ? "Listening… say “over” to send"
+        ? "Listening… sends when you pause"
         : "📻 Channel open — tap to close";
     } else {
       b.className = "";
@@ -1331,14 +1331,10 @@
     return target.kind === "tmux" ? agentSendable : true;
   }
 
-  // "over" — the radio procedure word — ends a dictation and sends it. It is
-  // deliberately a word you say TO a machine rather than one you say to a
-  // person, so it does not collide with ordinary phrasing the way "send" does
-  // ("send the report to Ana"). It only counts as the final word of an
-  // utterance, which the capture's silence detection already defines.
+  // Auto-send on pause (silence ends the utterance). Optional trailing "over"
+  // is still stripped if spoken out of habit. "out" / "over and out" closes the
+  // channel after sending any buffered text. Cancel words discard.
   var _TAIL_SEND = /[\s,.]*\bover\b[\s.!]*$/i;
-  // "out" = finished, no reply expected. Checked BEFORE _TAIL_SEND so the
-  // Hollywood "over and out" closes the channel rather than reopening it.
   var _TAIL_OUT = /[\s,.]*\b(over and out|out)\b[\s.!]*$/i;
   var _TAIL_KILL = /[\s,.]*\b(cancel|scratch that|never mind|nevermind|discard)\b[\s.!]*$/i;
 
@@ -1371,11 +1367,10 @@
     setTimeout(go, soundOn ? 450 : 200);
   }
 
-  // One send path for both targets, used by the trailing word and by the
-  // spoken confirm, so a voice send behaves exactly like a tapped one.
+  // One send path for both targets so a voice send behaves like a tapped one.
   function dispatchDictated() {
     if (target.kind === "tmux") {
-      agentConfirm = true;          // the voice "over" WAS the confirm
+      agentConfirm = true;          // voice pause WAS the confirm
       agentSend();
       // agentSend is async; keep the channel open for the next directive.
       setStatus("Sent to " + (agentSel || "session") + " — listening…");
@@ -1408,7 +1403,7 @@
     if (agentRecording) { agentFinishNow(); return; }   // one-shot: end it early
     dictateLoop = true;
     setStatus("Channel open → " + (agentSel || "session") +
-              " — speak, then say “over” to send. “out” closes.");
+              " — speak; it sends when you pause. “out” closes.");
     startDictate();
   }
 
@@ -1417,27 +1412,28 @@
     paintAgentMic();
     agentListen("dictate", function (text) {
       if (!text) {
-        // Silence is not a reason to close the channel — it is a pause.
+        // Empty capture (noise only): keep the channel open, do not send.
         if (dictateLoop) { setStatus("Listening…"); resumeDictate(); }
         else setStatus("Heard nothing — try again.", true);
         return;
       }
       var box = dictateBox();
       var kill = _TAIL_KILL.test(text);
-      var go = !kill && _TAIL_SEND.test(text);
+      var closing = _TAIL_OUT.test(text);
+      // Strip protocol words; the remaining words are the payload.
       var body = text.replace(_TAIL_SEND, "").replace(_TAIL_KILL, "").replace(_TAIL_OUT, "").trim();
 
       if (kill) {
         if (box) box.value = "";
         if (target.kind === "tmux") resetAgentSend();
         setStatus("Cancelled — still listening.");
-        resumeDictate();          // discard that one, keep the channel open
+        resumeDictate();
         return;
       }
-      // "out" = send whatever is buffered and close the channel.
-      if (_TAIL_OUT.test(text)) {
-        var last = text.replace(_TAIL_OUT, "").trim();
-        if (box && last) box.value = (box.value ? box.value.trim() + " " : "") + last;
+
+      // "out" / "over and out": send any payload then close the channel.
+      if (closing) {
+        if (box && body) box.value = body;
         var had = box && box.value.trim();
         dictateLoop = false;
         if (agentRecording) agentFinishNow();
@@ -1447,6 +1443,7 @@
           setStatus("Sent to " + (agentSel || "session") + ". Channel closed.");
         } else if (had) {
           if ($("msgInput")) $("msgInput").value = box.value.trim();
+          if (box && box !== $("msgInput")) box.value = "";
           sendTyped();
           setStatus("Sent. Channel closed.");
         } else {
@@ -1456,23 +1453,17 @@
         paintTalkForTarget();
         return;
       }
-      if (box && body) box.value = (box.value ? box.value.trim() + " " : "") + body;
-      if (target.kind === "tmux") resetAgentSend();
 
-      if (go) {
-        // "over" is the decision — hands-free, no second confirm, no readback.
-        if (!box || !box.value.trim()) {
-          setStatus("Nothing to send — still listening.");
-          resumeDictate();
-          return;
-        }
-        dispatchDictated();
+      // Auto-send on pause: each finished utterance is one send (does not
+      // accumulate across pauses — that left text stuck in the Send box).
+      if (!body) {
+        setStatus("Nothing to send — still listening.");
+        resumeDictate();
         return;
       }
-      // Incomplete utterance: keep the buffer, keep listening. No spoken echo.
-      setStatus((target.kind === "tmux" ? ("→ " + (agentSel || "tmux") + ": ") : "") +
-                "…end with “over” to send, or keep talking.");
-      if (dictateLoop) resumeDictate();
+      if (box) box.value = body;
+      if (target.kind === "tmux") resetAgentSend();
+      dispatchDictated();
     });
   }
 
@@ -1528,7 +1519,7 @@
     c.textContent = targetLabel();
     c.className = "chip" + (target.kind === "tmux" ? " on" : "");
     c.title = target.kind === "tmux"
-      ? "tmux " + target.name + " — voice: open channel, say “over” to send"
+      ? "tmux " + target.name + " — voice: open channel; sends on pause"
       : "Talking to the AI — tap to choose another target";
   }
 
@@ -1551,20 +1542,20 @@
     if ($("barInput")) {
       $("barInput").value = "";
       $("barInput").placeholder = target.kind === "tmux"
-        ? "For " + target.name + " — speak + “over”, or type + Send"
+        ? "For " + target.name + " — speak (sends on pause), or type + Send"
         : "…or type instead";
     }
     if ($("agentInput")) {
       $("agentInput").value = "";
       $("agentInput").placeholder = target.kind === "tmux" && agentSendable
-        ? "Hands-free: open channel, speak, say “over” — or type here"
+        ? "Hands-free: open channel, speak (sends on pause) — or type here"
         : $("agentInput").placeholder;
     }
     paintTargetChip();
     paintAgentsBtn();
     paintTalkForTarget();
     if (kind === "tmux" && agentSendable) {
-      setStatus("Target 🖥 " + name + " — tap Talk once for hands-free channel. “over” sends, “out” closes.");
+      setStatus("Target 🖥 " + name + " — tap Talk once for hands-free channel. Pause sends; “out” closes.");
     }
   }
 
