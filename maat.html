@@ -270,7 +270,7 @@
       label: "Converse",
       icon: "💬",
       // Mic-first + cache-bust after one-interface layout.
-      url: "./assistant.html?v=83&mode=mic",
+      url: "./assistant.html?v=84&mode=mic",
       kind: "iframe",
       hint: "Talk to a model or a workstation shell — type or speak. Deep link: #converse or #converse?input=mic. Needs Tailscale + tesla-bridge."
     },
@@ -594,6 +594,12 @@
     });
   }
 
+  function srcHasCacheToken(cur, want) {
+    var m = String(want || "").match(/[?&](v=[^&]+)/);
+    if (!m) return !!cur;
+    return String(cur).indexOf(m[1]) >= 0;
+  }
+
   function show(id) {
     if (!MODE_IDS[id]) id = "converse";
     active = id;
@@ -608,7 +614,7 @@
           if (on && v.tagName === "IFRAME") {
             var want = a.url || v.dataset.src;
             var cur = v.getAttribute("src") || "";
-            if (want && (!cur || (a.id === "converse" && cur.indexOf("v=83") < 0))) {
+            if (want && (!cur || (a.id === "converse" && !srcHasCacheToken(cur, want)))) {
               watchIframeLoad(v, a);
               v.src = want;
             }
