@@ -323,6 +323,15 @@
   var lastSpokenId = 0;   // don't re-speak history on page load
   var firstPoll = true;
   var audioEl = new Audio();
+  // iOS/iPadOS: without playsInline, <audio> can refuse to play (or go
+  // full-screen and stall), so TTS replies never finish and the voice loop
+  // never re-opens the mic.
+  try {
+    audioEl.setAttribute("playsinline", "true");
+    audioEl.setAttribute("webkit-playsinline", "true");
+    audioEl.playsInline = true;
+    audioEl.preload = "auto";
+  } catch (e) {}
 
   // Hands-free conversation: talk↔listen loops on its own (Driving situation).
   var handsFree = false;      // whether the loop is active
@@ -426,10 +435,9 @@
     };
   }
 
-  // ---- spoken replies (server TTS -> <audio>; tap on the sound button
-  //      doubles as the autoplay-unlock gesture) ----
-  // onDone (optional) fires once when this utterance finishes playing — used by
-  // the agent-dictation confirm so listening starts the moment speech ends.
+  // ---- spoken replies (server TTS -> <audio>; Sound button unlocks autoplay) ----
+  // onDone fires once when speech is done OR skipped OR failed — callers
+  // (channel resume, confirm listen) must not hang when TTS dies on iPad.
   function speak(text, onDone) {
     // Meeting situation (continuous) is silent by construction.
     // ALWAYS complete: if TTS/play fails, hands-free must still re-listen.
@@ -547,12 +555,15 @@
               window.MediaRecorder);
   }
 
-  // Play a moment of silence inside a user gesture to satisfy the browser's
-  // autoplay policy, so spoken replies can play without a tap each time.
+  // Play a moment of near-silence inside a user gesture so later TTS play()
+  // calls are allowed (iOS/iPad autoplay policy). Must run from a tap
+  // (Sound on / first mic tap).
   function unlockAudio() {
     try {
+      // Minimal valid WAV (tiny, not empty — some WebKit builds ignore 0-data).
       audioEl.src = "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAAAAA=";
-      audioEl.play().catch(function () {});
+      var p = audioEl.play();
+      if (p && p.catch) p.catch(function () {});
     } catch (e) {}
   }
   function ensureSound() {
@@ -1303,10 +1314,11 @@
 
   function resumeDictate() {
     if (!dictateLoop || !dictateReady()) { paintAgentMic(); return; }
-    // Wait for our own "Sent." to finish, or the mic hears the phone speaking
-    // and transcribes it back as the next transmission.
+    // Re-open the mic after a short gap so we don't capture our own TTS.
+    // (Do NOT call speak("") — /api/tts rejects empty text with 400 and the
+    // old path stranded onDone on iPad, so the channel never returned to receive.)
     var go = function () { if (dictateLoop) startDictate(); };
-    if (soundOn) speak("", go); else setTimeout(go, 400);
+    setTimeout(go, soundOn ? 450 : 200);
   }
 
   // One send path for both targets, used by the trailing word and by the
@@ -1322,8 +1334,10 @@
       if (box && box !== $("msgInput")) box.value = "";
       sendTyped();
     }
-    if (soundOn) speak("Sent.");
-    resumeDictate();       // back to receive, if the channel is open
+    // Speak "Sent." then re-open the channel. Previously resumeDictate ran
+    // immediately (and spoke ""), which raced TTS and often never re-listened.
+    if (soundOn) speak("Sent.", function () { resumeDictate(); });
+    else resumeDictate();
   }
 
   // The button: first tap opens the channel, second tap closes it. While the
