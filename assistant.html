@@ -75,16 +75,19 @@
     font-size: 19px; padding: 12px; border-radius: 12px;
     border: 1px solid #444; background: #222; color: #eee;
   }
-  /* Pane is a monitor, not a mode. Handle always sits under the transcript;
-     opening it shrinks chat instead of covering it. */
+  /* Thin handle in-flow; drawer overlays the transcript so it cannot push
+     Talk/Send off the bottom of the Maat iframe. */
   #paneBtn.pane-handle {
-    flex: 0 1 auto; width: 100%; background: #151b23; color: #9cc4e8;
-    font-size: 14px; padding: 8px 12px; border-radius: 0; min-height: 0;
+    flex: 0 0 32px; width: 100%; height: 32px; padding: 0;
+    font-size: 13px; line-height: 32px; border-radius: 0;
+    background: #151b23; color: #9cc4e8; min-height: 0;
   }
   #agents {
-    display: none; flex-direction: column; overflow: hidden;
-    max-height: 48%; min-height: 0; flex: 0 1 auto;
-    background: #0d1117; border-top: 1px solid #2b6cb0;
+    display: none; position: absolute; left: 0; right: 0; bottom: 32px;
+    z-index: 8; flex-direction: column; overflow: hidden;
+    max-height: 48%; min-height: 120px;
+    background: #0d1117; border-top: 2px solid #2b6cb0;
+    box-shadow: 0 -8px 24px rgba(0,0,0,.45);
   }
   #agents.open { display: flex; }
   #agentList {
@@ -105,29 +108,27 @@
   /* One instrument for every address (AI or shell). Talk hides when there is
      no usable mic; type + Send always remain. */
   #bar {
-    display: flex; flex-direction: column; gap: 10px; background: #1b1b1b;
+    display: flex; flex-direction: column; gap: 8px; background: #1b1b1b;
     flex: 0 0 auto;
-    padding: 10px 14px 14px;
+    padding: 8px 12px 10px;
   }
   html.top-level #bar {
-    padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
   }
   #barContext { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-  #barType { display: flex; flex-wrap: wrap; gap: 8px; }
+  #barType { display: flex; flex-wrap: nowrap; gap: 8px; align-items: stretch; }
   #barType input {
-    flex: 1 1 12rem; min-width: 0; font-size: 18px; padding: 12px 14px;
+    flex: 1 1 auto; min-width: 0; font-size: 16px; padding: 10px 12px;
     border-radius: 12px; border: 1px solid #444; background: #222; color: #eee;
   }
-  #barSend { flex: 0 0 auto; min-width: 5.5rem; }
-  @media (max-width: 420px) {
-    #barSend { flex: 1 1 100%; }
-  }
+  #barSend { flex: 0 0 auto; min-width: 4.5rem; padding: 10px 16px; }
   .chip {
     background: #333; font-size: 16px; padding: 8px 14px; border-radius: 999px;
   }
   .chip.on { background: #2b6cb0; }
   #talkBtn {
-    width: 100%; min-height: 88px; font-size: 24px; border-radius: 16px;
+    width: 100%; min-height: 56px; font-size: 20px; padding: 12px 16px;
+    border-radius: 14px;
     background: #2b6cb0; user-select: none; -webkit-user-select: none;
   }
   #talkBtn.rec { background: #c0392b; }
@@ -137,9 +138,11 @@
   /* live interim line (speech being captured / transcribed) */
   .msg.interim { align-self: flex-start; background: #23303a; color: #9cc4e0;
     font-style: italic; opacity: .9; }
-  /* Settings */
+  /* Settings is an overlay — in-flow it stole the transcript and pushed
+     Talk/Send under the Maat tab bar (taps hit the tabs: "non-responsive"). */
   #settings {
-    display: none; padding: 18px; background: #1b1b1b; border-top: 1px solid #333;
+    display: none; position: fixed; inset: 0; z-index: 25;
+    padding: 18px; background: #1b1b1b; overflow-y: auto;
   }
   #settings label { display: block; font-size: 16px; color: #aaa; margin: 12px 0 4px; }
   #settings input { width: 100%; font-size: 19px; padding: 12px; border-radius: 10px; border: 1px solid #444; background: #222; color: #eee; }
@@ -229,6 +232,7 @@
   <div class="row">
     <button id="saveBtn">Save</button>
     <button id="testBtn" class="secondary">Test connection</button>
+    <button id="settingsClose" class="secondary" type="button">Close</button>
   </div>
   <p class="hint">Tip: you can pre-fill this by opening the page as
     …/assistant.html?bridge=URL&amp;token=TOKEN — handy the first time,
@@ -1797,6 +1801,7 @@
     // it the shell list stays empty until the pane is opened by hand.
     loadAgents();
   };
+  if ($("settingsClose")) $("settingsClose").onclick = function () { openSettings(false); };
   $("testBtn").onclick = function () {
     cfg.bridge = cleanBridge($("cfgBridge").value);
     $("cfgBridge").value = cfg.bridge;
@@ -1976,6 +1981,7 @@
     }
     window.__setMicMode = setMicMode;
     $("talkBtn").addEventListener("click", function () {
+      ensureSound();   // user gesture — iOS will not unlock audio on page load
       if (micMode === "continuous") {
         setMicMode("tap");
         return;
@@ -1995,7 +2001,6 @@
   applyTalkVisibility();
   if (showTalkUi()) {
     ensureMicUi();
-    ensureSound();
     paintTalkForTarget();
     paintSendModeChip();
     setStatus("Tap Talk to open the channel, then speak. Pause sends.");
@@ -2023,10 +2028,14 @@
 
   function fitLayoutHeight() {
     var h = window.innerHeight || 0;
+    // Maat iframe: innerHeight/visualViewport can be the *phone*, so the bar
+    // paints under the shell's tab bar and taps hit the tabs (looks dead).
+    try {
+      if (window.frameElement && window.frameElement.clientHeight > 0)
+        h = window.frameElement.clientHeight;
+    } catch (e) {}
     var vv = window.visualViewport;
-    if (vv && vv.height > 0) {
-      h = h > 0 ? Math.min(h, vv.height) : vv.height;
-    }
+    if (vv && vv.height > 0) h = Math.min(h, vv.height);
     if (h < 1) return;
     document.documentElement.style.height = h + "px";
     document.body.style.height = h + "px";
