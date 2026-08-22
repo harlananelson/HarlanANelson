@@ -193,7 +193,7 @@
   <h1>Home AI</h1>
   <span id="connDot" class="dot"></span>
   <button id="soundBtn" class="secondary">🔇 Sound off</button>
-  <button id="agentsBtn" class="secondary">🤖 Agents</button>
+  <button id="agentsBtn" class="secondary" title="Show tmux pane or pick a target">🖥 Pane</button>
   <button id="overflowBtn" class="secondary" title="Library, clear, settings">⋯ More</button>
 </header>
 
@@ -252,12 +252,13 @@
 <div id="agents">
   <div id="agentList">
     <select id="agentSelect" title="tmux session on the workstation"></select>
+    <button id="agentRefreshBtn" class="secondary" title="Refresh pane — reload what the tmux session is showing">↻</button>
     <span id="agentMode" class="hint" style="margin:0"></span>
   </div>
   <pre id="agentOut">Pick a session above — its recent output shows here.</pre>
+  <!-- Typed directive row — used in type mode only. Mic mode uses the shared
+       Talk channel bar below (same pause/over design for AI and tmux). -->
   <div id="agentBar">
-    <button id="agentRefreshBtn" class="secondary">↻</button>
-    <button id="agentMicBtn" class="secondary" title="Dictate a directive (needs sound on)">🎤</button>
     <input id="agentInput" placeholder="Directive to send to the selected session…" autocomplete="off">
     <button id="agentSendBtn">Send</button>
   </div>
@@ -1065,9 +1066,14 @@
     $("agents").style.display = show ? "flex" : "none";
     $("transcript").style.display = show ? "none" : "flex";
     $("composer").style.display = (show || cfg.mode === "mic") ? "none" : "flex";
-    // The bar is the input surface in mic mode; the agents view brings its
-    // own input row, so hide the bar while it's open. (Step 3 merges them.)
-    if (cfg.mode === "mic") $("bar").style.display = show ? "none" : "flex";
+    // Mic mode: keep the shared Talk channel bar — do not swap in a second mic.
+    // Type mode: show the agent typed-input row while the pane is open.
+    if (cfg.mode === "mic") {
+      $("bar").style.display = "flex";
+      if ($("agentBar")) $("agentBar").style.display = "none";
+    } else if ($("agentBar")) {
+      $("agentBar").style.display = show ? "flex" : "none";
+    }
     paintAgentsBtn();
     if (show) { loadAgents(); agentTimer = setInterval(refreshAgentOut, 5000); }
     else if (agentTimer) { clearInterval(agentTimer); agentTimer = null; }
@@ -1110,18 +1116,23 @@
       .catch(function (e) { setStatus(e.message, true); });
   }
 
-  // The header button names the CURRENT agent rather than the generic word
-  // "Agents" — tapping it opens the view where you choose a different one.
+  // Header button: toggle pane vs chat transcript when a tmux target is armed.
+  // Picking Claude/gemma/grok/tmux shells is the target chip ("Talk to…"), not
+  // this button — that was the confusing dual menu.
   function paintAgentsBtn() {
     var b = $("agentsBtn");
     if (!b) return;
+    if (target.kind !== "tmux") {
+      b.style.display = "none";
+      return;
+    }
+    b.style.display = "";
     if (agentsOpen) {
       b.textContent = "💬 Chat";
-      b.title = "Back to the conversation";
+      b.title = "Show the conversation transcript (keep talking to " + (agentSel || "tmux") + ")";
     } else {
-      b.textContent = "🤖 " + (agentSel || "Agents");
-      b.title = agentSel ? "Agent: " + agentSel + " — tap to choose another"
-                         : "Choose a tmux session to work with";
+      b.textContent = "🖥 Pane";
+      b.title = "Show the live tmux pane for " + (agentSel || "session");
     }
   }
 
@@ -1395,6 +1406,8 @@
   }
 
   function dictateBox() {
+    // Mic mode always uses the shared channel bar — one Send box, one mic.
+    if (cfg.mode === "mic") return $("barInput") || $("msgInput");
     return target.kind === "tmux" ? $("agentInput")
                                   : ($("barInput") || $("msgInput"));
   }
@@ -1650,7 +1663,11 @@
     paintAgentsBtn();
     paintTalkForTarget();
     if (kind === "tmux" && agentSendable) {
-      setStatus("Target 🖥 " + name + " — tap Talk once. " + channelOpenHint());
+      setStatus("Target 🖥 " + name + " — tap Talk for the channel. " +
+                channelOpenHint() + " Header 🖥 Pane shows the live shell (↻ refreshes it).");
+    } else if (kind === "ai") {
+      setStatus("Target 🤖 " + backendLabel(name || cfg.backend || "AI") +
+                " — tap Talk for the channel. " + channelOpenHint());
     }
   }
 
@@ -1799,19 +1816,22 @@
     setStatus("Cleared.");
   };
 
-  // The header button is now a shortcut into the same target chooser; the
-  // "Agents view" is just what the stage looks like when a tmux target is
-  // selected, not a separate app.
+  // Pane ↔ Chat only — never changes the talk target (that was the bug:
+  // "Chat" switched you back to AI and dropped the shell + channel mic).
   $("agentsBtn").onclick = function () {
-    if (agentsOpen) { setTarget("ai", cfg.backend); return; }   // back to chat
-    openTargetSheet();
+    if (target.kind !== "tmux") { openTargetSheet(); return; }
+    agentsView(!agentsOpen);
   };
-  $("agentRefreshBtn").onclick = function () { loadAgents(); refreshAgentOut(); };
+  $("agentRefreshBtn").onclick = function () {
+    loadAgents();
+    refreshAgentOut();
+    setStatus("Pane refreshed.");
+  };
   $("agentSelect").addEventListener("change", function () {
     agentSel = this.value;
-    applyAgentSelection();
+    if (agentSel) setTarget("tmux", agentSel);
+    else applyAgentSelection();
   });
-  $("agentMicBtn").onclick = agentDictate;
   $("agentSendBtn").onclick = agentSend;
   $("agentInput").addEventListener("input", function () { if (agentConfirm) resetAgentSend(); });
 
