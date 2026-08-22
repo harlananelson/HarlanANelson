@@ -113,7 +113,7 @@
 
 <div id="settings">
   <h1>Maat</h1>
-  <p class="note">Each mode loads an existing tool. Listen and Voice need
+  <p class="note">Each mode loads an existing tool. Listen and Converse need
     Tailscale and the matching home service. Practice is public (no Tailscale).
     Blank a URL to hide that mode. Saved in this browser only.</p>
   <div id="settingsFields"></div>
@@ -187,20 +187,14 @@
       hint: "Speech drills (ES/EN/JA/SW). Opens last language. Public and shareable — no Tailscale. Deep link: #practice or ?mode=practice&lang=es"
     },
     {
-      id: "voice",
-      label: "Voice + AI",
-      icon: "🎙️",
-      url: "./assistant.html?mode=mic",
-      kind: "iframe",
-      hint: "Transcribe on the workstation, answer with Ollama/Claude/Grok, speak back."
-    },
-    {
-      id: "assistant",
-      label: "Assistant",
+      id: "converse",
+      label: "Converse",
       icon: "💬",
       url: "./assistant.html",
       kind: "iframe",
-      hint: "Full chat + agents UI (same bridge as Voice)."
+      // PR2: Voice + AI and Assistant were the same utility (input modality differs).
+      // Mic vs type is UI state inside assistant.html (?mode=mic / More → Switch).
+      hint: "Talk to the home AI — type or speak. Deep link: #converse or #converse?input=mic. Needs Tailscale + tesla-bridge."
     },
     {
       id: "remarkable",
@@ -243,9 +237,22 @@
     return base;
   }
 
+  function converseUrl(input) {
+    if (input === "mic") return "./assistant.html?mode=mic";
+    return "./assistant.html";
+  }
+
   function loadModes() {
     var saved = {};
     try { saved = JSON.parse(localStorage.getItem("maat_urls") || "{}"); } catch (e) {}
+    // Migrate pre-PR2 Voice/Assistant URL prefs into Converse (typed default).
+    if (saved.converse === undefined) {
+      if (saved.assistant) saved.converse = saved.assistant;
+      else if (saved.voice) {
+        saved.converse = String(saved.voice).replace(/([?&])mode=mic(&|$)/, "$1").replace(/[?&]$/, "");
+        if (!saved.converse) saved.converse = "./assistant.html";
+      }
+    }
     return DEFAULTS.map(function (a) {
       var u = saved[a.id];
       return {
@@ -264,6 +271,11 @@
   var modes = loadModes();
   var active = null;
   try { active = localStorage.getItem("maat_active"); } catch (e) {}
+  // Migrate last-tab preference from pre-PR2 Voice / Assistant tabs.
+  if (active === "voice" || active === "assistant") {
+    active = "converse";
+    try { localStorage.setItem("maat_active", "converse"); } catch (e) {}
+  }
 
   function aboutHtml() {
     return (
@@ -277,8 +289,7 @@
       '<ul>' +
       '<li><strong>Listen</strong> — transcription / translation / analysis (profiles; home GPU when available)</li>' +
       '<li><strong>Practice</strong> — language speech drills (ES/EN/JA/SW); last language remembered; public and shareable</li>' +
-      '<li><strong>Voice + AI</strong> — speak → transcribe on your machine → answer → hear the reply</li>' +
-      '<li><strong>Assistant</strong> — same bridge: chat, agents, continuous dictation</li>' +
+      '<li><strong>Converse</strong> — talk to the home AI (type or mic — same surface; “over” sends on the open channel)</li>' +
       '<li><strong>reMarkable</strong> / <strong>Music</strong> — Tailscale utilities</li>' +
       '</ul>' +
       '<p>Practice embeds the public <a href="./languages.html" style="color:#c8a36c">Languages</a> hub — ' +
@@ -286,13 +297,14 @@
       '<div class="note">' +
       '<strong style="color:#e8e6e1">Deep links</strong><br>' +
       '<code>maat.html#practice</code> · <code>?mode=practice&amp;lang=es</code><br>' +
-      '<code>?mode=sermon</code> · <code>?mode=voice</code> · <code>?mode=assistant</code>' +
+      '<code>#converse</code> · <code>#converse?input=mic</code> (aliases: <code>?mode=voice</code>, <code>?mode=assistant</code>)<br>' +
+      '<code>?mode=sermon</code> · <code>?mode=listen</code>' +
       '</div>' +
       '<div class="note">' +
       '<strong style="color:#e8e6e1">To test modes that use the home workstation</strong><br>' +
       '1. Connect Tailscale on this device<br>' +
       '2. Listen: <code>cd ~/projects/biblestudy && bash server/run.sh</code><br>' +
-      '3. Voice / Assistant: tesla-bridge <code>bin/serve</code> + token in the page Settings<br>' +
+      '3. Converse: tesla-bridge <code>bin/serve</code> + token in the page Settings<br>' +
       '4. On iPad, Listen WebSockets work best from the tailnet origin if this page cannot open <code>wss://</code><br>' +
       '5. Practice needs no Tailscale' +
       '</div>' +
@@ -425,17 +437,19 @@
   $("closeSettings").onclick = function () { openSettings(false); };
 
   // Deep links (allowlisted). Prefer hash for installable shortcuts; query still works.
-  //   maat.html#practice
-  //   maat.html#practice?lang=es
-  //   maat.html?mode=practice&lang=es
-  //   maat.html?mode=sermon|voice|assistant|about|practice|languages
+  //   maat.html#practice / #practice?lang=es / ?mode=practice&lang=es
+  //   maat.html#converse / #converse?input=mic
+  //   Aliases: ?mode=voice → converse+mic, ?mode=assistant → converse
+  //   maat.html?mode=sermon|listen|about|practice|languages|converse
   function applyDeepLink() {
     var mode = null;
     var lang = null;
+    var input = null;
     try {
       var qs = new URLSearchParams(location.search);
       mode = qs.get("mode");
       lang = qs.get("lang");
+      input = qs.get("input");
     } catch (e) {}
     try {
       var raw = (location.hash || "").replace(/^#/, "");
@@ -447,12 +461,21 @@
         if (hParams) {
           var hp = new URLSearchParams(hParams);
           if (hp.get("lang")) lang = hp.get("lang");
+          if (hp.get("input")) input = hp.get("input");
         }
       }
     } catch (e) {}
 
+    // Allowlisted aliases (old Voice / Assistant tabs + naming variants).
     if (mode === "languages") mode = "practice";
     if (mode === "listen") mode = "sermon";
+    if (mode === "voice") { mode = "converse"; if (!input) input = "mic"; }
+    if (mode === "assistant") { mode = "converse"; }
+
+    if (input) {
+      input = String(input).toLowerCase();
+      if (input !== "mic" && input !== "type") input = null;
+    }
 
     var ids = modes.map(function (a) { return a.id; });
     if (mode && ids.indexOf(mode) >= 0) active = mode;
@@ -470,6 +493,16 @@
         }
       });
       if (!mode) active = "practice";
+    }
+
+    if (input === "mic" || (mode === "converse" && input === "type")) {
+      modes.forEach(function (a) {
+        if (a.id !== "converse") return;
+        if (!a.url || a.url.indexOf("assistant.html") >= 0) {
+          a.url = converseUrl(input === "mic" ? "mic" : "");
+        }
+      });
+      if (!mode) active = "converse";
     }
   }
   applyDeepLink();
