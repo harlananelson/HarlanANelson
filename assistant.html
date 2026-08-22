@@ -420,22 +420,39 @@
     t.scrollTop = t.scrollHeight;
   }
 
-  // ---- backend picker (which AI answers: server default / ollama / claude / grok) ----
+  // ---- backend picker (which AI answers: gemma / claude / grok / …) ----
+  function backendLabel(b) {
+    if (!b) return "auto";
+    if (b === "ollama") return "gemma (ollama)";  // legacy id before server rename
+    return b;
+  }
   function fillBackends(list) {
     var sel = $("backendSel");
     if (sel.options.length || !list || !list.length) return;
-    window.__backends = [""].concat(list);
-    var opts = window.__backends;
-    opts.forEach(function (b) {
+    // Prefer gemma over legacy ollama when the bridge advertises both.
+    var cleaned = list.filter(function (b) {
+      return !(b === "ollama" && list.indexOf("gemma") >= 0);
+    });
+    window.__backends = [""].concat(cleaned);
+    window.__backends.forEach(function (b) {
       var o = document.createElement("option");
       o.value = b;
-      o.textContent = b || "auto";
+      o.textContent = backendLabel(b);
       sel.appendChild(o);
     });
-    sel.value = cfg.backend && list.indexOf(cfg.backend) >= 0 ? cfg.backend : "";
+    // Migrate saved preference ollama → gemma when gemma exists.
+    if (cfg.backend === "ollama" && list.indexOf("gemma") >= 0) {
+      cfg.backend = "gemma";
+      try { localStorage.setItem("tb_backend", "gemma"); } catch (e) {}
+    }
+    if (cfg.backend && cleaned.indexOf(cfg.backend) >= 0) sel.value = cfg.backend;
+    else sel.value = "";
     sel.onchange = function () {
       cfg.backend = sel.value;
       try { localStorage.setItem("tb_backend", cfg.backend); } catch (e) {}
+      if (target.kind === "ai") target.name = cfg.backend;
+      paintTalkForTarget();
+      paintTargetChip();
     };
   }
 
@@ -1295,27 +1312,35 @@
     paintTalkForTarget();
   }
 
-  // Big Talk button: AI modes use startRec; tmux uses the open-channel dictate loop.
+  // Big Talk button: open-channel dictate (pause/over) for BOTH AI backends and
+  // tmux. Driving/Meeting situations still use startRec via the mode chip path
+  // when not in an open channel.
   function paintTalkForTarget() {
     var b = $("talkBtn");
     if (!b || cfg.mode !== "mic") return;
-    if (target.kind !== "tmux") return;   // paintMode owns AI/continuous labels
-    if (!agentSendable) {
+    if (target.kind === "tmux" && !agentSendable) {
       b.disabled = true;
       b.textContent = "Pick a sendable tmux session";
       b.className = "";
       return;
     }
-    b.disabled = false;
+    // While a channel is open, own the Talk label (AI or tmux).
     if (dictateLoop) {
+      b.disabled = false;
       b.className = agentRecording === true ? "rec" : "";
       b.textContent = agentRecording === true
         ? (sendMode === "pause" ? "Listening… sends when you pause" : "Listening… say “over” to send")
         : "📻 Channel open — tap to close";
-    } else {
-      b.className = "";
-      b.textContent = "Tap to open channel → " + (agentSel || "tmux");
+      return;
     }
+    // AI + continuous/handsfree without channel: paintMode owns the label.
+    if (target.kind !== "tmux" && micMode !== "tap") return;
+    b.disabled = false;
+    b.className = "";
+    var dest = target.kind === "tmux"
+      ? (agentSel || "tmux")
+      : backendLabel(target.name || cfg.backend || "AI");
+    b.textContent = "Tap to open channel → " + dest;
   }
 
   function normWord(s) {
@@ -1375,6 +1400,8 @@
     if (agentRecording) agentFinishNow();
     setStatus(why || "Listening stopped.");
     paintAgentMic();
+    paintTalkForTarget();
+    if (paintModeFn && target.kind !== "tmux") paintModeFn();
   }
 
   function resumeDictate() {
@@ -1423,8 +1450,19 @@
     // only ended that transmission — and the loop immediately reopened it.
     if (dictateLoop) { endDictateLoop("Channel closed. Microphone off."); return; }
     if (agentRecording) { agentFinishNow(); return; }   // one-shot: end it early
+    // Suspend Driving hands-free capture so it doesn't fight the channel mic.
+    if (handsFree) {
+      handsFree = false;
+      awaitingReply = 0;
+      if (relistenTimer) { clearTimeout(relistenTimer); relistenTimer = null; }
+      if (captureRunning()) captureStop();
+      else cleanupAudio();
+    }
     dictateLoop = true;
-    setStatus("Channel open → " + (agentSel || "session") + " — " + channelOpenHint());
+    var dest = target.kind === "tmux"
+      ? (agentSel || "session")
+      : backendLabel(target.name || cfg.backend || "AI");
+    setStatus("Channel open → " + dest + " — " + channelOpenHint());
     startDictate();
   }
 
@@ -1611,7 +1649,7 @@
   function openTargetSheet() {
     var rows = [];
     (window.__backends || []).forEach(function (b) {
-      rows.push({ label: (target.kind === "ai" && cfg.backend === b ? "● " : "○ ") + "🤖 " + (b || "auto"),
+      rows.push({ label: (target.kind === "ai" && cfg.backend === b ? "● " : "○ ") + "🤖 " + backendLabel(b),
                   note: b ? "" : "server default",
                   onClick: function () { setTarget("ai", b); } });
     });
@@ -2049,17 +2087,19 @@
         setMicMode(sit.key);
       }
 
-      // Primary action: tmux → hands-free channel; AI → desk/driving/meeting modes.
+      // Primary action: open-channel (pause/over) for AI backends AND tmux.
+      // Continuous meeting mode still uses its own start/stop. Driving can be
+      // re-entered from the mode chip (starts startRec); Talk opens a channel.
       $("talkBtn").addEventListener("click", function () {
-        if (target.kind === "tmux") {
-          agentDictate();
-          paintTalkForTarget();
+        if (micMode === "continuous" && target.kind !== "tmux" && !dictateLoop) {
+          if (captureRunning()) { setMicMode("tap"); return; }
+          startContinuous();
+          paintMode();
           return;
         }
-        if (micMode === "continuous") { setMicMode("tap"); return; }
-        if (captureRunning()) stopRec();
-        else startRec();
-        paintMode();
+        // AI or tmux: same channel mic options (send on pause / say “over”).
+        agentDictate();
+        paintTalkForTarget();
       });
 
       $("analyzeBtn").addEventListener("click", analyzeTranscript);
