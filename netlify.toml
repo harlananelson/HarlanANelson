@@ -4,3 +4,12 @@
 
 [functions]
   directory = "netlify/functions"
+
+[[headers]]
+  for = "/maat.html"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+[[headers]]
+  for = "/assistant.html"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"

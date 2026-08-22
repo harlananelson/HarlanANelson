@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#111111">
 <meta name="mobile-web-app-capable" content="yes">
@@ -374,12 +375,28 @@
     if (paneWatch && paneWatch.timer) clearTimeout(paneWatch.timer);
     paneWatch = null;
   }
+  function paneReplyText(raw) {
+    var lines = String(raw || "").split("\n"), keep = [], i, L;
+    for (i = 0; i < lines.length; i++) {
+      L = lines[i].replace(/\s+$/, "");
+      if (!L.trim()) continue;
+      if (/Enter:queue|Alt\+Enter|Shift\+Tab|Ctrl\+[lx]|always-approve/.test(L)) continue;
+      if (/Grok 4|Thought for \d/.test(L)) continue;
+      if (/^[│┃╭╮╰╯─┄━═▀▄█░\s]+$/.test(L)) continue;
+      L = L.replace(/^\s*[│┃]\s*/, "").trim();
+      if (L) keep.push(L);
+    }
+    if (keep.length > 20) keep = keep.slice(-20);
+    return keep.join("\n");
+  }
   function followPane(name) {
     stopPaneWatch();
     paneWatch = { name: name, last: "", same: 0, el: null, ticks: 0 };
+    paneWatch.el = addMsg("assistant", "Waiting for a reply from " + name + "…", "← " + name);
     function paint(text) {
-      var lines = text.split("\n");
-      var shown = lines.length > 24 ? lines.slice(-24).join("\n") : text;
+      var shown = paneReplyText(text) || text;
+      var lines = shown.split("\n");
+      if (lines.length > 24) shown = lines.slice(-24).join("\n");
       if (!paneWatch.el || !paneWatch.el.parentNode) {
         paneWatch.el = addMsg("assistant", shown, "← " + name);
         return;
@@ -422,7 +439,7 @@
           if (paneWatch) paneWatch.timer = setTimeout(tick, 2500);
         });
     }
-    paneWatch.timer = setTimeout(tick, 1200);
+    paneWatch.timer = setTimeout(tick, 400);
   }
 
   // ---- backend picker (which AI answers: gemma / claude / grok / …) ----

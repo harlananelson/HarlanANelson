@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#0f1419">
 <meta name="mobile-web-app-capable" content="yes">
@@ -269,7 +270,7 @@
       label: "Converse",
       icon: "💬",
       // Mic-first + cache-bust after one-interface layout.
-      url: "./assistant.html?v=80&mode=mic",
+      url: "./assistant.html?v=81&mode=mic",
       kind: "iframe",
       hint: "Talk to a model or a workstation shell — type or speak. Deep link: #converse or #converse?input=mic. Needs Tailscale + tesla-bridge."
     },
@@ -339,7 +340,7 @@
       var url = a.kind === "tools" ? "" : (u === undefined ? defaultUrl(a) : u);
       // Bust Safari/PWA cache for Converse after UI changes (Talk to… header).
       if (a.id === "converse" && url && url.indexOf("assistant.html") >= 0) {
-        url = withQueryParam(url, "v", "80");
+        url = withQueryParam(url, "v", "81");
         if (url.indexOf("mode=") < 0) url = withQueryParam(url, "mode", "mic");
       }
       return {
@@ -604,9 +605,13 @@
           v.classList.toggle("active", on);
           if (on) selectTool(activeTool || getLastTool(), { showTools: false });
         } else {
-          if (on && v.tagName === "IFRAME" && !v.getAttribute("src") && v.dataset.src) {
-            watchIframeLoad(v, a);
-            v.src = v.dataset.src;
+          if (on && v.tagName === "IFRAME") {
+            var want = a.url || v.dataset.src;
+            var cur = v.getAttribute("src") || "";
+            if (want && (!cur || (a.id === "converse" && cur.indexOf("v=81") < 0))) {
+              watchIframeLoad(v, a);
+              v.src = want;
+            }
           }
           v.classList.toggle("active", on);
         }
