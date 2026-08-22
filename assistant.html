@@ -1312,9 +1312,7 @@
     paintTalkForTarget();
   }
 
-  // Big Talk button: open-channel dictate (pause/over) for BOTH AI backends and
-  // tmux. Driving/Meeting situations still use startRec via the mode chip path
-  // when not in an open channel.
+  // Big Talk button: ONE design for AI backends and tmux — open/close channel.
   function paintTalkForTarget() {
     var b = $("talkBtn");
     if (!b || cfg.mode !== "mic") return;
@@ -1324,23 +1322,33 @@
       b.className = "";
       return;
     }
-    // While a channel is open, own the Talk label (AI or tmux).
+    b.disabled = false;
     if (dictateLoop) {
-      b.disabled = false;
       b.className = agentRecording === true ? "rec" : "";
       b.textContent = agentRecording === true
         ? (sendMode === "pause" ? "Listening… sends when you pause" : "Listening… say “over” to send")
         : "📻 Channel open — tap to close";
       return;
     }
-    // AI + continuous/handsfree without channel: paintMode owns the label.
-    if (target.kind !== "tmux" && micMode !== "tap") return;
-    b.disabled = false;
     b.className = "";
     var dest = target.kind === "tmux"
       ? (agentSel || "tmux")
       : backendLabel(target.name || cfg.backend || "AI");
     b.textContent = "Tap to open channel → " + dest;
+  }
+
+  function paintSendModeChip() {
+    var c = $("modeChip");
+    if (!c || cfg.mode !== "mic") return;
+    if (sendMode === "pause") {
+      c.textContent = "⏸ pause";
+      c.className = "chip on";
+      c.title = "Send mode: pause — tap to switch to “over”";
+    } else {
+      c.textContent = "📻 over";
+      c.className = "chip on";
+      c.title = "Send mode: over — tap to switch to pause";
+    }
   }
 
   function normWord(s) {
@@ -1374,6 +1382,7 @@
     sendMode = next;
     try { localStorage.setItem("tb_send_mode", sendMode); } catch (e) {}
     paintTalkForTarget();
+    paintSendModeChip();
     if (typeof paintAgentMic === "function") paintAgentMic();
     setStatus(sendMode === "pause"
       ? "Send mode: pause — speak; it sends when you pause. “out” closes."
@@ -1401,7 +1410,6 @@
     setStatus(why || "Listening stopped.");
     paintAgentMic();
     paintTalkForTarget();
-    if (paintModeFn && target.kind !== "tmux") paintModeFn();
   }
 
   function resumeDictate() {
@@ -1736,16 +1744,23 @@
         note: "Bridge URL, token, session name",
         onClick: function () { openSettings(true); } }
     ];
-    // Send-mode toggle first when in mic/channel UI — easy to flip mid-session.
-    rows.splice(1, 0, sendMode === "pause"
-      ? { label: "📻 Switch to “over” to send",
-          note: "Buffer speech in the Send box until you say “over” (radio style)",
-          onClick: function () { setSendMode("over"); } }
-      : { label: "⏸ Switch to send on pause",
-          note: "Each spoken phrase sends when you pause — no “over” needed",
-          onClick: function () { setSendMode("pause"); } });
     if (cfg.mode === "mic") {
-      rows.splice(2, 0, { label: "⌨️ Switch to type mode",
+      // Send-mode also on the ⏸/📻 chip; More keeps an explicit switch + rare continuous.
+      rows.splice(1, 0, sendMode === "pause"
+        ? { label: "📻 Switch to “over” to send",
+            note: "Same as tapping the ⏸ chip — buffer until you say “over”",
+            onClick: function () { setSendMode("over"); } }
+        : { label: "⏸ Switch to send on pause",
+            note: "Same as tapping the 📻 chip — each pause sends",
+            onClick: function () { setSendMode("pause"); } });
+      rows.splice(2, 0, continuousMode
+        ? { label: "📻 Back to channel mic",
+            note: "Leave silent continuous; return to Talk channel",
+            onClick: function () { if (window.__setMicMode) window.__setMicMode("tap"); } }
+        : { label: "🎙 Continuous transcription (rare)",
+            note: "Silent always-on notes — Meeting-style. Prefer the Listen tab for meetings.",
+            onClick: function () { if (window.__setMicMode) window.__setMicMode("continuous"); } });
+      rows.splice(3, 0, { label: "⌨️ Switch to type mode",
         note: "Same Converse surface — reloads without the voice-first layout",
         onClick: function () {
           try {
@@ -1758,8 +1773,8 @@
           }
         } });
     } else if (micModeOffered) {
-      rows.splice(2, 0, { label: "🎤 Switch to mic mode",
-        note: "Same Converse surface — voice-first (Driving / Desk / Meeting)",
+      rows.splice(1, 0, { label: "🎤 Switch to mic mode",
+        note: "Same Converse surface — channel mic (AI or tmux)",
         onClick: function () {
           try {
             var u = new URL(location.href);
@@ -1983,121 +1998,65 @@
 
 
   if (cfg.mode === "mic") {
-    // Voice-first: the bar is the input surface. The composer's backend
-    // picker moves into the context row; the stream stays visible always.
+    // Voice-first: ONE channel design for AI backends and tmux (the tmux UX).
+    // Driving/Desk/Meeting situation fork is gone from Converse — Meeting
+    // continuous lives on the Listen tab; optional continuous stays in ⋯ More.
     $("composer").style.display = "none";
     $("bar").style.display = "flex";
     $("barContext").insertBefore($("backendSel"), $("modeChip"));
+    $("speakerToggle").style.display = "none";
+    $("analyzeBtn").style.display = "none";
+    document.body.classList.remove("continuous");
     if (!micSupported()) {
       $("talkBtn").disabled = true;
       $("talkBtn").textContent = "No microphone in this browser";
       $("modeChip").style.display = "none";
     } else {
-      // ---- one mic-mode state machine -----------------------------------
-      // Modes: tap | handsfree | continuous. Exclusivity is structural —
-      // setMicMode ends whatever was running — instead of one button
-      // programmatically clicking another (the old convoBtn/contBtn dance).
-      // A SITUATION is a named combination of mic mode + sound, because that
-      // is how the app is actually used: driving, sitting in a meeting, or at
-      // a desk. Choosing one sets everything it implies, so you can never end
-      // up in "recording a meeting but the app talks out loud".
-      var MODES = {
-        tap:        { chip: "⌨️ Desk",         action: "Tap to talk",
-                      note: "Tap once, speak, tap again to send — or type below." },
-        handsfree:  { chip: "🚗 Driving",      action: "Tap to start talking",
-                      note: "Speak and it answers out loud, then listens again. Sound on." },
-        continuous: { chip: "🎙 Meeting",      action: "⏹ Stop recording",
-                      note: "Records and transcribes silently. Never speaks. Tap 🧠 any time." }
-      };
-      var SITUATIONS = [
-        { key: "handsfree", label: "🚗 Driving — talk, hear answers",
-          note: "Hands-free loop with spoken replies; screen stays awake.",
-          sound: true },
-        { key: "continuous", label: "🎙 Meeting — record silently",
-          note: "Continuous transcription, audio output forced off so nothing interrupts.",
-          sound: false },
-        { key: "tap", label: "⌨️ Desk — tap to talk or type",
-          note: "Tap to speak a question, or use the type box below. Sound as you leave it.",
-          sound: null }
-      ];
-      // Voice + AI (mode=mic) is for talking: default to Driving (hands-free).
-      // Desk (tap) still available from the mode chip — one shot then stop.
       micMode = "tap";
+      handsFree = false;
+      continuousMode = false;
 
-      function paintMode() {
-        var m = MODES[micMode];
-        $("modeChip").textContent = m.chip;
-        $("modeChip").className = "chip" + (micMode === "tap" ? "" : " on");
-        if (captureRunning()) {
-          $("talkBtn").textContent = handsFree ? "Listening… (auto)" : "⏹ Stop and send";
-        } else if (handsFree && awaitingReply) {
-          $("talkBtn").textContent = "Thinking…";
-        } else {
-          $("talkBtn").textContent = m.action;
-        }
-        $("talkBtn").disabled = false;
-        $("speakerToggle").style.display = micMode === "continuous" ? "" : "none";
-        $("analyzeBtn").style.display = micMode === "continuous" ? "" : "none";
-        document.body.classList.toggle("continuous", micMode === "continuous");
-      }
-      paintModeFn = paintMode;
-
-      function setMicMode(next) {
-        if (next === micMode) return;
-        // tear down the outgoing mode
-        if (micMode === "continuous") { stopContinuous(); setInterim(""); }
-        if (micMode === "handsfree") {
-          handsFree = false;
-          awaitingReply = 0;
-          if (relistenTimer) { clearTimeout(relistenTimer); relistenTimer = null; }
-          if (captureRunning()) captureStop();
-          else cleanupAudio();
-        }
-        micMode = next;
-        continuousMode = (next === "continuous");
-        // bring up the incoming mode
-        if (next === "handsfree") {
-          handsFree = true;
-          ensureSound();                       // must hear replies to loop
-          if (!captureRunning()) startRec();
-        } else if (next === "continuous") {
-          startContinuous();
-        }
-        syncWakeLock();
-        syncRefineTimer();
-        setConvoBtn(); setContBtn();           // legacy painters, now no-ops-ish
-        paintMode();
-        setStatus(MODES[next].note);
-      }
-      window.__setMicMode = setMicMode;        // used by the mode sheet
-
+      // modeChip = send-mode toggle (pause ↔ over), not Driving/Desk/Meeting.
+      paintSendModeChip();
       $("modeChip").addEventListener("click", function () {
-        openSheet("How are you using it?", SITUATIONS.map(function (sit) {
-          return { label: (micMode === sit.key ? "● " : "○ ") + sit.label,
-                   note: sit.note,
-                   onClick: function () { setSituation(sit); } };
-        }));
+        setSendMode(sendMode === "pause" ? "over" : "pause");
       });
 
-      function setSituation(sit) {
-        // Sound first: a meeting must be silent BEFORE recording starts, and
-        // driving must be audible before the loop begins.
-        if (sit.sound === true) { ensureSound(); }
-        else if (sit.sound === false && soundOn) { $("soundBtn").click(); }
-        setMicMode(sit.key);
-      }
-
-      // Primary action: open-channel (pause/over) for AI backends AND tmux.
-      // Continuous meeting mode still uses its own start/stop. Driving can be
-      // re-entered from the mode chip (starts startRec); Talk opens a channel.
-      $("talkBtn").addEventListener("click", function () {
-        if (micMode === "continuous" && target.kind !== "tmux" && !dictateLoop) {
-          if (captureRunning()) { setMicMode("tap"); return; }
+      // Keep setMicMode for rare continuous entry from ⋯ More.
+      function setMicMode(next) {
+        if (next === "continuous") {
+          if (dictateLoop) endDictateLoop("Channel closed — starting continuous.");
+          micMode = "continuous";
+          continuousMode = true;
+          handsFree = false;
           startContinuous();
-          paintMode();
+          $("speakerToggle").style.display = "";
+          $("analyzeBtn").style.display = "";
+          document.body.classList.add("continuous");
+          setStatus("🎙 Continuous — silent transcription. Tap Talk to stop / return to channel.");
+          syncWakeLock();
+          syncRefineTimer();
           return;
         }
-        // AI or tmux: same channel mic options (send on pause / say “over”).
+        if (micMode === "continuous") { stopContinuous(); setInterim(""); }
+        micMode = "tap";
+        continuousMode = false;
+        handsFree = false;
+        $("speakerToggle").style.display = "none";
+        $("analyzeBtn").style.display = "none";
+        document.body.classList.remove("continuous");
+        syncWakeLock();
+        syncRefineTimer();
+        paintTalkForTarget();
+        paintSendModeChip();
+      }
+      window.__setMicMode = setMicMode;
+
+      $("talkBtn").addEventListener("click", function () {
+        if (micMode === "continuous") {
+          setMicMode("tap");
+          return;
+        }
         agentDictate();
         paintTalkForTarget();
       });
@@ -2109,38 +2068,10 @@
       });
       paintSpeakerToggle();
 
-      // Default for Voice + AI: Driving (hands-free loop) — but do NOT start
-      // getUserMedia until the first tap (browsers require a user gesture).
-      // After that first tap, the loop keeps going without another toggle.
-      micMode = "handsfree";
-      handsFree = true;
-      continuousMode = false;
       ensureSound();
-      paintMode();
-      setStatus("🚗 Driving — tap once to start; it keeps listening after each reply. " +
-                "Mode chip: Desk (one shot) or Meeting (silent).");
-
-      // Recovery watchdogs — do not leave the loop dead after one turn.
-      setInterval(function () {
-        if (!handsFree) return;
-        // Spoken reply never arrived / TTS never finished
-        if (awaitingReply && Date.now() - awaitingReply > 15000) {
-          setStatus("No spoken reply — listening again…");
-          scheduleRelisten(0);
-          return;
-        }
-        // Idle with nothing capturing (e.g. missed ended event). Skip while
-        // transcribe/chat is still in flight — that is not "stuck", it is busy.
-        if (!awaitingReply && !pipelineBusy && !captureRunning() && !micStarting) {
-          if (!window.__hfIdleSince) window.__hfIdleSince = Date.now();
-          if (Date.now() - window.__hfIdleSince > 2500) {
-            window.__hfIdleSince = 0;
-            scheduleRelisten(0);
-          }
-        } else {
-          window.__hfIdleSince = 0;
-        }
-      }, 1500);
+      paintTalkForTarget();
+      setStatus("Converse channel — pick Claude / gemma / tmux, tap Talk. " +
+                "Chip toggles pause vs “over”. Meeting continuous is on the Listen tab.");
     }
   } else if (micSupported()) {
     // Console build that does support a mic: offer the switch from the sheet
