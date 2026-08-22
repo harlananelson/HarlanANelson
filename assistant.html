@@ -303,12 +303,16 @@
     if (v) { try { localStorage.setItem("tb_" + k, v); } catch (e) {} return v; }
     try { return localStorage.getItem("tb_" + k) || dflt; } catch (e) { return dflt; }
   }
+  // mode=mic (legacy) or input=mic (Maat Converse deep link) → voice-first UI.
+  var inputParam = (params.get("input") || "").toLowerCase();
+  var modeParam = (params.get("mode") || "").toLowerCase();
+  if (!modeParam && inputParam === "mic") modeParam = "mic";
   var cfg = {
     bridge: (cfgGet("bridge", "") || "").replace(/\/+$/, ""),
     token: cfgGet("token", ""),
     session: cfgGet("session", "car") || "car",
     backend: cfgGet("backend", "") || "",   // "" = server default
-    mode: params.get("mode") || ""   // "" = console, "mic" = phone microphone
+    mode: modeParam === "mic" ? "mic" : ""   // "" = console, "mic" = phone microphone
   };
   // ?token= is saved to localStorage above — scrub it from the visible URL
   // and browser history (keep the other params, e.g. mode=mic).
@@ -1654,11 +1658,31 @@
         note: "Bridge URL, token, session name",
         onClick: function () { openSettings(true); } }
     ];
-    if (micModeOffered) {
-      rows.splice(1, 0, { label: "🎤 Switch to phone-mic mode",
-        note: "Reloads this page in voice-first mode",
+    if (cfg.mode === "mic") {
+      rows.splice(1, 0, { label: "⌨️ Switch to type mode",
+        note: "Same Converse surface — reloads without the voice-first layout",
         onClick: function () {
-          location.search = location.search ? location.search + "&mode=mic" : "?mode=mic";
+          try {
+            var u = new URL(location.href);
+            u.searchParams.delete("mode");
+            u.searchParams.delete("input");
+            location.replace(u.pathname + (u.searchParams.toString() ? "?" + u.searchParams.toString() : "") + u.hash);
+          } catch (e) {
+            location.search = "";
+          }
+        } });
+    } else if (micModeOffered) {
+      rows.splice(1, 0, { label: "🎤 Switch to mic mode",
+        note: "Same Converse surface — voice-first (Driving / Desk / Meeting)",
+        onClick: function () {
+          try {
+            var u = new URL(location.href);
+            u.searchParams.delete("input");
+            u.searchParams.set("mode", "mic");
+            location.replace(u.pathname + "?" + u.searchParams.toString() + u.hash);
+          } catch (e) {
+            location.search = location.search ? location.search + "&mode=mic" : "?mode=mic";
+          }
         } });
     }
     openSheet("More", rows);
