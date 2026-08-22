@@ -79,11 +79,11 @@
   html.top-level #composer {
     padding-bottom: calc(18px + env(safe-area-inset-bottom, 0px));
   }
-  /* Phone: backend on its own row; message + Send share the next. Send must
-     never sit off the right edge (nowrap + large type used to hide it). */
-  #composer #backendSel {
+  /* Mic entry above the type field (AI/tmux pick lives in the header). */
+  #composer #composerMicBtn {
     flex: 1 1 100%; min-width: 0; max-width: 100%;
   }
+  #composer #backendSel { display: none !important; }
   #composer input {
     flex: 1 1 12rem; min-width: 0; font-size: 22px; padding: 14px 16px;
     border-radius: 12px; border: 1px solid #444; background: #222; color: #eee;
@@ -296,7 +296,9 @@
 </div>
 
 <div id="composer">
-  <select id="backendSel" title="AI backend"></select>
+  <!-- Hidden: still filled by JS for preference sync; picking is header Talk to… -->
+  <select id="backendSel" title="AI backend" aria-hidden="true"></select>
+  <button id="composerMicBtn" class="secondary" type="button">🎤 Mic channel</button>
   <input id="msgInput" placeholder="Type a question…" autocomplete="off">
   <button id="sendBtn">Send</button>
 </div>
@@ -1355,10 +1357,10 @@
       return;
     }
     b.className = "";
-    var dest = target.kind === "tmux"
-      ? (agentSel || "tmux")
-      : backendLabel(target.name || cfg.backend || "AI");
-    b.textContent = "Tap to open channel → " + dest;
+    // Do not repeat the AI/tmux name here — that belongs on header Talk to…
+    b.textContent = sendMode === "pause"
+      ? "🎤 Tap to open mic (sends on pause)"
+      : "🎤 Tap to open mic (say “over” to send)";
   }
 
   function paintSendModeChip() {
@@ -1936,6 +1938,21 @@
   $("msgInput").addEventListener("keydown", function (e) {
     if (e.key === "Enter") sendTyped();
   });
+  // Above "Type a question" — mic entry, not another AI/tmux picker.
+  if ($("composerMicBtn")) {
+    $("composerMicBtn").onclick = function () {
+      try {
+        var u = new URL(location.href);
+        u.searchParams.delete("input");
+        u.searchParams.set("mode", "mic");
+        // Keep / bump cache-bust so Maat iframe reloads into mic cleanly.
+        if (!u.searchParams.get("v")) u.searchParams.set("v", "68");
+        location.replace(u.pathname + "?" + u.searchParams.toString() + u.hash);
+      } catch (e) {
+        location.search = (location.search ? location.search + "&" : "?") + "mode=mic";
+      }
+    };
+  }
 
   // ---- workstation transcript browser (📁) — the files live on the Ubuntu
   //      box (~/.config/tesla-bridge/transcripts), never on this device ----
@@ -2039,9 +2056,7 @@
     // continuous lives on the Listen tab; optional continuous stays in ⋯ More.
     $("composer").style.display = "none";
     $("bar").style.display = "flex";
-    // Backend / shell pick is the header targetBtn — keep the mic row clean.
-    if ($("backendSel")) $("backendSel").style.display = "none";
-    $("speakerToggle").style.display = "none";
+      $("speakerToggle").style.display = "none";
     $("analyzeBtn").style.display = "none";
     document.body.classList.remove("continuous");
     if (!micSupported()) {
