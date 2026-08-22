@@ -11,8 +11,9 @@
 <meta name="apple-mobile-web-app-title" content="Maat">
 <meta name="description" content="Maat — right order for a whole digital life. One app under your control.">
 <meta name="referrer" content="no-referrer">
+<meta http-equiv="Permissions-Policy" content="microphone=(self), camera=(), geolocation=()">
 <!-- frame-src: public drills + same-origin tools on 'self'; private backends on the known tailnet host.
-     Custom Settings URLs outside this list will be blocked until CSP is widened (PR4). -->
+     Custom Settings URLs outside this allowlist will be blocked by the browser. -->
 <meta http-equiv="Content-Security-Policy" content="frame-src 'self' https://harlan-b550-aorus-pro-ac.taila21a91.ts.net https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:8443 https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:8444 https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443 blob: data:;">
 <!-- PWA: name Maat, standalone, feather icon -->
 <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiTWFhdCIsInNob3J0X25hbWUiOiJNYWF0IiwiZGVzY3JpcHRpb24iOiJSaWdodCBvcmRlciBmb3IgYSB3aG9sZSBkaWdpdGFsIGxpZmUuIE9uZSBhcHAgdW5kZXIgeW91ciBjb250cm9sLiIsInN0YXJ0X3VybCI6Ii4vbWFhdC5odG1sIiwic2NvcGUiOiIuLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwib3JpZW50YXRpb24iOiJhbnkiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiIzBmMTQxOSIsInRoZW1lX2NvbG9yIjoiIzBmMTQxOSIsImljb25zIjpbeyJzcmMiOiJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0OGNtVmpkQ0IzYVdSMGFEMGlOVEV5SWlCb1pXbG5hSFE5SWpVeE1pSWdjbmc5SWpFeE1pSWdabWxzYkQwaUl6Qm1NVFF4T1NJdlBqeHdZWFJvSUdROUlrMHlOVFlnT1RaakxUSTBJREF0TkRRZ01qQXRORFFnTkRSMk1UYzJZekFnTmpBZ05EZ2dNVEE0SURFd09DQXhNRGdnTWpRZ01DQTBOQzB5TUNBME5DMDBOSE10TWpBdE5EUXRORFF0TkRSakxUSTBJREF0TkRRdE1qQXRORFF0TkRSV01UUXdZekF0TWpRdE1qQXRORFF0TkRRdE5EUjZJaUJtYVd4c1BTSWpZemhoTXpaaklpOCtQSEJoZEdnZ1pEMGlUVEl5TUNBek9EQm9OekoyTXpKb0xUY3llaUlnWm1sc2JEMGlJMk00WVRNMll5SXZQanh3WVhSb0lHUTlJazB4T1RJZ05ESTBhREV5T0hZeU5FZ3hPVEo2SWlCbWFXeHNQU0lqWXpoaE16WmpJaUJ2Y0dGamFYUjVQU0l1TnlJdlBqd3ZjM1puUGc9PSIsInNpemVzIjoiYW55IiwidHlwZSI6ImltYWdlL3N2Zyt4bWwiLCJwdXJwb3NlIjoiYW55IG1hc2thYmxlIn1dfQ=="
@@ -172,9 +173,9 @@
 
 <div id="settings">
   <h1>Maat</h1>
-  <p class="note">Each mode loads an existing tool. Listen, Converse, and Tools need
-    Tailscale and the matching home service. Practice is public (no Tailscale).
-    Blank a URL to hide that tool. Saved in this browser only.</p>
+  <div id="aboutPanel" class="note" style="margin-bottom:14px"></div>
+  <p class="note">URL overrides (this browser only). Listen, Converse, and Tools need
+    Tailscale. Practice is public. Blank a URL to hide that surface.</p>
   <div id="settingsFields"></div>
   <div class="row">
     <button id="saveModes" type="button">Save</button>
@@ -241,7 +242,9 @@
   var TOOL_IDS = { music: 1, remarkable: 1 };
   var LAST_TOOL_KEY = "maat.tools.lastTool";
 
-  // Modes: existing pages in iframes (+ Tools hub + About). Editable URLs.
+  // Peer destinations ≤4. About lives in gear (PR4), not the thumb bar.
+  var MODE_IDS = { sermon: 1, practice: 1, converse: 1, tools: 1 };
+  var PRIVATE_MODES = { sermon: 1, converse: 1, tools: 1 };
   var DEFAULTS = [
     {
       id: "sermon",
@@ -275,15 +278,12 @@
       url: "",
       kind: "tools",
       hint: "Music analyzer + reMarkable bridge. Opens last tool. Long-press this tab to jump. Needs Tailscale. Deep link: #tools?tool=music"
-    },
-    {
-      id: "about",
-      label: "About",
-      icon: "🪶",
-      url: "",
-      kind: "about"
     }
   ];
+
+  function onTailnet() {
+    return location.hostname.indexOf(".ts.net") >= 0;
+  }
 
   function defaultUrl(mode) {
     var onTailnet = location.hostname.indexOf(".ts.net") >= 0 && location.port === "";
@@ -360,56 +360,29 @@
   var modes = loadModes();
   var tools = loadTools();
   var activeTool = getLastTool();
-  var active = null;
-  try { active = localStorage.getItem("maat_active"); } catch (e) {}
-  // Migrate last-tab preference from pre-PR2 / pre-PR3 tabs.
-  if (active === "voice" || active === "assistant") {
-    active = "converse";
-    try { localStorage.setItem("maat_active", "converse"); } catch (e) {}
-  }
-  if (active === "music" || active === "remarkable") {
-    activeTool = active;
-    setLastTool(activeTool);
-    active = "tools";
-    try { localStorage.setItem("maat_active", "tools"); } catch (e) {}
-  }
+  // PR4: cold open always Converse (predictable). Deep links override below.
+  // Do not restore last destination from localStorage.
+  var active = "converse";
+  var deepLinkApplied = false;
 
   function aboutHtml() {
     return (
-      '<h1>Maat</h1>' +
-      '<p class="tagline">Right order for a whole digital life.</p>' +
-      '<p>One app under <strong style="color:#e8e6e1">your</strong> control — ' +
-      'work and data held together, not scattered across silos that each own a fragment of your life.</p>' +
-      '<p>Maat is an ancient word for right order and balance. We use it for a simple idea: ' +
-      'one place for the work of a life, with the data under the person who lives it.</p>' +
-      '<p><strong style="color:#e8e6e1">Modes</strong></p>' +
-      '<ul>' +
-      '<li><strong>Listen</strong> — transcription / translation / analysis (profiles; home GPU when available)</li>' +
-      '<li><strong>Practice</strong> — language speech drills (ES/EN/JA/SW); last language remembered; public and shareable</li>' +
-      '<li><strong>Converse</strong> — talk to the home AI (type or mic — same surface; “over” sends on the open channel)</li>' +
-      '<li><strong>Tools</strong> — Music analyzer + reMarkable (last tool remembered; long-press tab to jump)</li>' +
-      '</ul>' +
-      '<p>Practice embeds the public <a href="./languages.html" style="color:#c8a36c">Languages</a> hub — ' +
-      'direct drill URLs stay shareable for learners who should not see private tools.</p>' +
-      '<div class="note">' +
-      '<strong style="color:#e8e6e1">Deep links</strong><br>' +
-      '<code>maat.html#practice</code> · <code>?mode=practice&amp;lang=es</code><br>' +
-      '<code>#converse</code> · <code>#converse?input=mic</code><br>' +
-      '<code>#tools</code> · <code>#tools?tool=music</code> · <code>#tools?tool=remarkable</code><br>' +
-      'Aliases: <code>?mode=voice</code>, <code>?mode=assistant</code>, <code>?mode=music</code>, <code>?mode=remarkable</code>' +
-      '</div>' +
-      '<div class="note">' +
-      '<strong style="color:#e8e6e1">To test modes that use the home workstation</strong><br>' +
-      '1. Connect Tailscale on this device<br>' +
-      '2. Listen: <code>cd ~/projects/biblestudy && bash server/run.sh</code><br>' +
-      '3. Converse: tesla-bridge <code>bin/serve</code> + token in the page Settings<br>' +
-      '4. Tools → Music: musiclab on <code>:8444</code> · Tools → reMarkable: phone-bridge on <code>:9443</code><br>' +
-      '5. On iPad, Listen WebSockets work best from the tailnet origin if this page cannot open <code>wss://</code><br>' +
-      '6. Practice needs no Tailscale' +
-      '</div>' +
-      '<p style="margin-top:18px;font-size:13px;color:#6a7380">Existing tools are unchanged — Maat only launches them. ' +
-      'Direct links: languages, live-translator, assistant, apps hub still work.</p>'
+      '<p class="tagline" style="margin:0 0 8px;color:#c8a36c">Right order for a whole digital life.</p>' +
+      '<p style="margin:0 0 10px">One shell: <strong style="color:#e8e6e1">Listen</strong>, ' +
+      '<strong style="color:#e8e6e1">Practice</strong>, <strong style="color:#e8e6e1">Converse</strong>, ' +
+      '<strong style="color:#e8e6e1">Tools</strong>. Practice is public; the rest need Tailscale home backends.</p>' +
+      '<p style="margin:0 0 6px"><strong style="color:#e8e6e1">Deep links</strong> — ' +
+      '<code>#practice?lang=es</code> · <code>#converse?input=mic</code> · ' +
+      '<code>#tools?tool=music</code> · <code>?mode=sermon</code></p>' +
+      '<p style="margin:0;font-size:12px">Aliases: voice→Converse+mic, assistant→Converse, music/remarkable→Tools. ' +
+      'Public drills stay at languages.html / *-speech-drill.html.</p>'
     );
+  }
+
+  function maybeDegradeBanner(id) {
+    if (!PRIVATE_MODES[id] || onTailnet()) return;
+    var label = id === "sermon" ? "Listen" : (id === "converse" ? "Converse" : "Tools");
+    showBanner("Connect Tailscale for " + label + " (home backends). Practice works without it.");
   }
 
   function toolById(id) {
@@ -525,12 +498,7 @@
     var views = $("views"); views.innerHTML = "";
     var tabs = $("tabs"); tabs.innerHTML = "";
     modes.forEach(function (a) {
-      if (a.kind === "about") {
-        var p = document.createElement("div");
-        p.className = "panel"; p.id = "view-" + a.id;
-        p.innerHTML = aboutHtml();
-        views.appendChild(p);
-      } else if (a.kind === "tools") {
+      if (a.kind === "tools") {
         var wrap = document.createElement("div");
         wrap.className = "tools-wrap";
         wrap.id = "view-tools";
@@ -594,7 +562,7 @@
     tabs.appendChild(gear);
 
     var ids = modes.map(function (a) { return a.id; });
-    if (ids.indexOf(active) < 0) active = ids[0] || "about";
+    if (ids.indexOf(active) < 0) active = "converse";
     show(active);
   }
 
@@ -614,8 +582,9 @@
   }
 
   function show(id) {
+    if (!MODE_IDS[id]) id = "converse";
     active = id;
-    try { localStorage.setItem("maat_active", id); } catch (e) {}
+    maybeDegradeBanner(id);
     modes.forEach(function (a) {
       var v = $("view-" + a.id), t = $("tab-" + a.id);
       var on = a.id === id;
@@ -637,9 +606,10 @@
 
   function openSettings(open) {
     if (open) {
+      var about = $("aboutPanel");
+      if (about) about.innerHTML = aboutHtml();
       var wrap = $("settingsFields"); wrap.innerHTML = "";
       modes.forEach(function (a) {
-        if (a.kind === "about") return;
         if (a.kind === "tools") {
           var head = document.createElement("p");
           head.className = "note";
@@ -729,7 +699,8 @@
       }
     } catch (e) {}
 
-    // Allowlisted aliases.
+    // Allowlisted aliases only — unknown mode/lang/input/tool values are dropped.
+    if (mode === "about") { mode = null; window.__maatOpenSettings = true; }
     if (mode === "languages") mode = "practice";
     if (mode === "listen") mode = "sermon";
     if (mode === "voice") { mode = "converse"; if (!input) input = "mic"; }
@@ -738,6 +709,7 @@
       tool = mode;
       mode = "tools";
     }
+    if (mode && !MODE_IDS[mode]) mode = null;
 
     if (input) {
       input = String(input).toLowerCase();
@@ -748,8 +720,10 @@
       if (!TOOL_IDS[tool]) tool = null;
     }
 
-    var ids = modes.map(function (a) { return a.id; });
-    if (mode && ids.indexOf(mode) >= 0) active = mode;
+    if (mode && MODE_IDS[mode]) {
+      active = mode;
+      deepLinkApplied = true;
+    }
 
     if (lang) {
       lang = String(lang).toLowerCase();
@@ -762,7 +736,7 @@
           a.url = practiceUrl(lang);
         }
       });
-      if (!mode) active = "practice";
+      if (!mode) { active = "practice"; deepLinkApplied = true; }
     }
 
     if (input === "mic" || (mode === "converse" && input === "type")) {
@@ -772,19 +746,25 @@
           a.url = converseUrl(input === "mic" ? "mic" : "");
         }
       });
-      if (!mode) active = "converse";
+      if (!mode) { active = "converse"; deepLinkApplied = true; }
     }
 
     if (tool) {
       activeTool = tool;
       setLastTool(tool);
-      if (!mode) active = "tools";
-      else if (mode === "tools") active = "tools";
+      if (!mode || mode === "tools") {
+        active = "tools";
+        deepLinkApplied = true;
+      }
     }
   }
   applyDeepLink();
 
   build();
+  if (window.__maatOpenSettings) {
+    window.__maatOpenSettings = false;
+    openSettings(true);
+  }
 })();
 </script>
 </body>
