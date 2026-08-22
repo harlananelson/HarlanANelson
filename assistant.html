@@ -78,12 +78,12 @@
   /* Pane is a monitor, not a mode. Handle always sits under the transcript;
      opening it shrinks chat instead of covering it. */
   #paneBtn.pane-handle {
-    flex: 0 0 auto; width: 100%; background: #151b23; color: #9cc4e8;
+    flex: 0 1 auto; width: 100%; background: #151b23; color: #9cc4e8;
     font-size: 14px; padding: 8px 12px; border-radius: 0; min-height: 0;
   }
   #agents {
     display: none; flex-direction: column; overflow: hidden;
-    max-height: 48%; min-height: 160px; flex: 0 1 auto;
+    max-height: 48%; min-height: 0; flex: 0 1 auto;
     background: #0d1117; border-top: 1px solid #2b6cb0;
   }
   #agents.open { display: flex; }
@@ -99,7 +99,7 @@
     font-family: ui-monospace, Menlo, Consolas, monospace;
     font-size: 13px; line-height: 1.35; white-space: pre; color: #cde;
   }
-  #views-wrap { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; }
+  #views-wrap { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
   .msg.user .tag { color: #9cc4e0; }
   .msg.tmux-send { align-self: flex-end; background: #1a3a2a; border: 1px solid #2d6a4f; }
   /* One instrument for every address (AI or shell). Talk hides when there is
@@ -279,7 +279,8 @@
     if (v) { try { localStorage.setItem("tb_" + k, v); } catch (e) {} return v; }
     try { return localStorage.getItem("tb_" + k) || dflt; } catch (e) { return dflt; }
   }
-  // mode=mic (legacy) or input=mic (Maat Converse deep link) → voice-first UI.
+  // mode=mic / input=mic: Maat Converse hint that this device should offer Talk
+  // if the browser can capture. Not a second layout.
   var inputParam = (params.get("input") || "").toLowerCase();
   var modeParam = (params.get("mode") || "").toLowerCase();
   if (!modeParam && inputParam === "mic") modeParam = "mic";
@@ -288,7 +289,7 @@
     token: cfgGet("token", ""),
     session: cfgGet("session", "car") || "car",
     backend: cfgGet("backend", "") || "",   // "" = server default
-    mode: modeParam === "mic" ? "mic" : ""   // "" = console, "mic" = phone microphone
+    mode: modeParam === "mic" ? "mic" : ""   // URL compat; Talk visibility is showTalkUi()
   };
   // ?token= is saved to localStorage above — scrub it from the visible URL
   // and browser history (keep the other params, e.g. mode=mic).
@@ -324,7 +325,6 @@
   // Resume listening after a spoken reply (or if speech never started).
   // Debounced so ended + error + timeout cannot start two captures.
   var relistenTimer = null;
-  var paintModeFn = null;   // set when mic-mode UI is wired (?mode=mic)
   function scheduleRelisten(delayMs) {
     awaitingReply = 0;
     if (relistenTimer) { clearTimeout(relistenTimer); relistenTimer = null; }
@@ -332,7 +332,6 @@
     relistenTimer = setTimeout(function () {
       relistenTimer = null;
       relisten();
-      if (paintModeFn) paintModeFn();
     }, delayMs == null ? 200 : delayMs);
   }
   audioEl.addEventListener("ended", function () { scheduleRelisten(250); });
@@ -568,7 +567,7 @@
       body: JSON.stringify({ session: cfg.session, message: text, backend: cfg.backend })
     }).then(function () { setStatus(""); })
       .catch(function (e) { setStatus(e.message, true); })
-      .then(function () { if ($("barSend")) $("barSend").disabled = false; });
+      .then(function () { paintTalkForTarget(); });
     // the message + reply arrive through polling, so car and phone both see them
   }
 
@@ -579,18 +578,27 @@
     return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia &&
               window.MediaRecorder);
   }
-  // Talk is a capability, not a layout mode. Maat passes ?mode=mic. Phones
-  // without that param still get Talk if the browser can capture. The Tesla
-  // console reports getUserMedia but never grants it — hide Talk there
-  // (coarse pointer + wide screen), even if the API exists.
-  function showTalkUi() {
-    if (cfg.mode === "mic") return true;
-    if (!micSupported()) return false;
+  // Talk is a capability, not a layout mode. Hide it when capture cannot
+  // work. Tesla's 2026 firmware dropped the "Tesla" UA marker, so do not
+  // rely on that alone. iPad Pro landscape is also coarse+wide — exclude
+  // iOS before using the media query, or Maat-on-iPad would lose Talk.
+  function isIosLike() {
+    var ua = navigator.userAgent || "";
+    return /iPad|iPhone|iPod/i.test(ua) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  }
+  function isTeslaConsole() {
+    var ua = navigator.userAgent || "";
+    if (/Tesla/i.test(ua)) return true;
+    if (isIosLike()) return false;
     try {
-      if (window.matchMedia &&
-          window.matchMedia("(pointer: coarse) and (min-width: 1100px)").matches)
-        return false;
-    } catch (e) {}
+      return !!(window.matchMedia &&
+        window.matchMedia("(pointer: coarse) and (min-width: 1100px)").matches);
+    } catch (e) { return false; }
+  }
+  function showTalkUi() {
+    if (!micSupported()) return false;
+    if (isTeslaConsole()) return false;
     return true;
   }
   function applyTalkVisibility() {
@@ -629,13 +637,6 @@
     soundOn = true;
     $("soundBtn").textContent = "🔊 Sound on";
     unlockAudio();
-  }
-  function setConvoBtn() {
-    var b = $("convoBtn");   // retired by the bar redesign
-    if (!b) return;
-    b.textContent = handsFree ? "⏹ Hands-free conversation: on"
-                              : "🔁 Hands-free conversation: off";
-    b.className = handsFree ? "" : "secondary";
   }
   function cleanupAudio() {
     if (silenceTimer) { clearInterval(silenceTimer); silenceTimer = null; }
@@ -1115,7 +1116,10 @@
         none.value = "";
         none.textContent = agentSessions.length ? "— no shell —" : "— no shells running —";
         sel.appendChild(none);
-        if (!agentSessions.some(function (s) { return s.name === agentSel; })) {
+        if (target.kind === "tmux" && target.name &&
+            agentSessions.some(function (s) { return s.name === target.name; })) {
+          agentSel = target.name;
+        } else if (!agentSessions.some(function (s) { return s.name === agentSel; })) {
           agentSel = "";
         }
         agentSessions.forEach(function (s) {
@@ -1188,35 +1192,36 @@
   }
 
   function agentSend() {
-    // Prefer Talk-to shell name; fall back to pane watch selection.
-    var dest = (target.kind === "tmux" && target.name) ? target.name : agentSel;
+    if (target.kind !== "tmux" || !target.name) return;
+    if (!agentSendable) {
+      setStatus("That session is read-only (not in tmux-allow).", true);
+      return;
+    }
     var box = dictateBox();
     var text = (box && box.value.trim()) || "";
-    if (!dest || !text) return;
-    // Pause / Send already confirmed the send; keep the flag for the POST.
-    agentConfirm = true;
-    var sendName = dest;
+    if (!text) return;
+    var sendName = target.name;
+    if (box) box.value = "";
     api("/api/tmux/send", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: sendName, text: text, session: cfg.session })
     }).then(function () {
-      if (box) box.value = "";
       addTmuxSendAck(sendName, text);
       resetAgentSend();
       setStatus("Sent to " + sendName + ".");
       if (agentsOpen) setTimeout(refreshAgentOut, 800);
-    }).catch(function (e) { resetAgentSend(); setStatus(e.message, true); });
+    }).catch(function (e) {
+      if (box && !(box.value || "").trim()) box.value = text;
+      resetAgentSend();
+      setStatus(e.message, true);
+    });
   }
 
-  // ---- dictate a directive into the selected tmux session ------------------
-  // Gated on sound being ON: talking to a terminal only makes sense when you
-  // can hear the agent's reply, and it keeps dictation from firing into a
-  // coding session during a silent meeting. Speech fills the box — it never
-  // auto-sends; the existing two-tap confirm still guards execution.
-  // Capture uses the SAME 16 kHz WAV path as continuous mode, not MediaRecorder:
-  // a WebM/MP4 clip forces the server to shell out to ffmpeg before Whisper can
-  // see it, which is most of the round-trip delay. WAV goes straight in.
+  // ---- dictate into the current Talk-to address --------------------------
+  // Same 16 kHz WAV path as continuous mode, not MediaRecorder: a WebM/MP4
+  // clip forces ffmpeg on the server before Whisper; WAV goes straight in.
+  // Pause / Send is the confirm. Talk is a capability (showTalkUi), not a mode.
   var agentAudio = null;   // {stream, ctx, src, proc}
   var agentVad = null, agentRecording = false, agentPhase = "idle";  // idle|dictate|confirm
   var AG_HANG_MS = 1200, AG_MIN_MS = 300, AG_MAX_MS = 20000;
@@ -1305,19 +1310,6 @@
   }
 
   function paintAgentMic() {
-    var b = $("agentMicBtn");
-    if (!b) return;
-    b.disabled = !dictateReady() || agentRecording === "busy";
-    // Three states, because "am I still being heard?" is the question this
-    // button has to answer at a glance: idle, transmitting, channel open.
-    b.textContent = agentRecording === true ? "⏹" : (dictateLoop ? "📻" : "🎤");
-    b.className = (agentRecording === true || dictateLoop) ? "confirm" : "secondary";
-    b.title = (target.kind === "tmux" && !agentSendable)
-      ? "Select a sendable session first (tmux-allow)"
-      : (sendMode === "pause"
-        ? "Hands-free channel — tap once, speak (sends on pause); “out” closes"
-        : "Hands-free channel — tap once, speak, say “over” to send; “out” closes");
-    // Keep the big Talk button in Voice + AI in sync when the target is tmux.
     paintTalkForTarget();
   }
 
@@ -1549,7 +1541,7 @@
           dispatchDictated();
           return;
         }
-        setStatus((target.kind === "tmux" ? ("→ " + (agentSel || "tmux") + ": ") : "") +
+        setStatus((target.kind === "tmux" ? ("→ " + (target.name || "shell") + ": ") : "") +
                   "…end with “over” to send, or keep talking.");
         if (dictateLoop) resumeDictate();
         return;
@@ -1569,37 +1561,6 @@
 
   function agentFinishNow() {
     if (agentAudio && agentVad) { agentVad.silenceMs = 1e9; }   // next frame flushes
-  }
-
-  // tmux confirm listen only. Do not speak `text` (that repeated everything).
-  function speakThenConfirm(text) {
-    var started = false;
-    function begin() {
-      if (started) return;
-      started = true;
-      agentListen("confirm", function (heard) {
-        var w = normWord(heard);
-        // ONE word, and only one: "over", the ham procedure word for "I have
-        // finished, go ahead". A list of synonyms means guessing which one the
-        // machine wants; a single agreed word is a protocol.
-        var yes = /\bover\b/.test(w);
-        var no = /\b(cancel|no|stop|scratch that|never mind|nevermind|clear)\b/.test(w);
-        if (yes) {
-          dispatchDictated();
-        } else if (no) {
-          var b2 = dictateBox();
-          if (b2) b2.value = "";
-          if (target.kind === "tmux") resetAgentSend();
-          setStatus("Cancelled.");
-          resumeDictate();
-        } else {
-          setStatus("Didn't hear “over” — review and tap Send.", true);
-          resumeDictate();
-        }
-      });
-    }
-    speak("Say over to send, or cancel.", begin);
-    setTimeout(begin, 9000);   // TTS silent or failed: confirm anyway, don't strand
   }
 
   // ---- Target: the one thing your words go to -----------------------------
@@ -1633,12 +1594,19 @@
       var s = agentSessions.filter(function (x) { return x.name === name; })[0];
       agentSendable = !!(s && s.sendable);
       if (!agentSessions.length) loadAgents();
+      else applyAgentSelection();
     }
     if ($("barInput")) $("barInput").value = "";
     paintTargetChip();
     paintPaneBtn();
     paintTalkForTarget();
-    var hint = showTalkUi() ? channelOpenHint() : "type and Send.";
+    var known = (kind === "tmux" && name)
+      ? agentSessions.filter(function (x) { return x.name === name; })[0]
+      : null;
+    var hint;
+    if (known && !known.sendable) hint = "read-only — watch it via the pane.";
+    else if (showTalkUi()) hint = channelOpenHint();
+    else hint = "type and Send.";
     setStatus("Talk to " + targetLabel() + " — " + hint);
   }
 
@@ -1821,7 +1789,7 @@
     $("transcript").innerHTML = "";
     // Boot skips the session survey when there is no bridge yet, so on a
     // first-time setup this is the first moment the host can be asked. Without
-    // it the shell list stays empty until the Agents view is opened by hand.
+    // it the shell list stays empty until the pane is opened by hand.
     loadAgents();
   };
   $("testBtn").onclick = function () {
@@ -2019,28 +1987,6 @@
     return true;
   }
 
-  function enterMicMode(opts) {
-    opts = opts || {};
-    cfg.mode = "mic";
-    try {
-      var u = new URL(location.href);
-      u.searchParams.set("mode", "mic");
-      if (!u.searchParams.get("v")) u.searchParams.set("v", "71");
-      history.replaceState(null, "", u.pathname + "?" + u.searchParams.toString() + u.hash);
-    } catch (e) {}
-    applyTalkVisibility();
-    if (!ensureMicUi()) return;
-    ensureSound();
-    paintTalkForTarget();
-    paintSendModeChip();
-    if (opts.openChannel) {
-      agentDictate();
-      paintTalkForTarget();
-    } else {
-      setStatus("Tap Talk once to open the channel, then speak. Pause sends.");
-    }
-  }
-
   applyTalkVisibility();
   if (showTalkUi()) {
     ensureMicUi();
@@ -2094,7 +2040,7 @@
   } else {
     setStatus("Connecting…");
     // Survey the host's shells on every load, so the picker is populated and
-    // current before the Agents view has ever been opened. Nothing is selected
+    // current before the pane has ever been opened. Nothing is selected
     // as a result — the list is offered, not armed.
     loadAgents();
   }
