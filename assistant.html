@@ -34,10 +34,19 @@
     /* JS fitLayoutHeight() sets an explicit px height for keyboard / embed. */
   }
   header {
-    display: flex; align-items: center; gap: 12px;
-    padding: 12px 18px; background: #1b1b1b; flex-wrap: wrap;
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 12px; background: #1b1b1b; flex-wrap: wrap;
   }
-  header h1 { font-size: 22px; font-weight: 600; margin-right: auto; }
+  header h1 { font-size: 18px; font-weight: 600; flex: 1 1 auto; min-width: 4rem; }
+  header .hdr-actions {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    margin-left: auto; justify-content: flex-end;
+  }
+  header .hdr-actions button {
+    font-size: 16px; padding: 10px 14px; white-space: nowrap;
+  }
+  /* Target must stay visible — this is how you pick Claude/gemma/tmux. */
+  #targetBtn { background: #2b6cb0; }
   .dot { width: 14px; height: 14px; border-radius: 50%; background: #666; display: inline-block; }
   .dot.ok { background: #2ecc71; }
   .dot.bad { background: #e74c3c; }
@@ -190,14 +199,15 @@
 </head>
 <body>
 <header>
-  <h1>Home AI</h1>
-  <span id="connDot" class="dot"></span>
-  <button id="soundBtn" class="secondary">🔇 Sound off</button>
-  <!-- Who you're talking to (AI or tmux) — next to Sound, not down by the mic. -->
-  <button id="targetBtn" class="secondary" title="Pick Claude, gemma, grok, or a tmux shell">🤖 AI</button>
-  <!-- Only when a tmux shell is armed: show/hide the live pane. -->
-  <button id="paneBtn" class="secondary" style="display:none" title="Show or hide the live tmux pane">🖥 Pane</button>
-  <button id="overflowBtn" class="secondary" title="Library, clear, settings">⋯ More</button>
+  <h1>Home AI <span id="connDot" class="dot"></span></h1>
+  <div class="hdr-actions">
+    <button id="soundBtn" class="secondary">🔇 Sound</button>
+    <!-- Who you're talking to — always visible next to Sound. -->
+    <button id="targetBtn" title="Pick Claude, gemma, grok, or a tmux shell">Talk to…</button>
+    <!-- Only when a tmux shell is armed: show/hide the live pane. -->
+    <button id="paneBtn" class="secondary" style="display:none" title="Show or hide the live tmux pane">🖥 Pane</button>
+    <button id="overflowBtn" class="secondary" title="Library, clear, settings">⋯ More</button>
+  </div>
 </header>
 
 <!-- One sheet for set-and-forget actions. Principle: chrome earns its place by
@@ -1620,14 +1630,14 @@
   }
 
   function paintTargetChip() {
-    // Header button next to Sound — not the mic row.
+    // Header "Talk to…" — always visible; label shows current target.
     var b = $("targetBtn");
     if (!b) return;
-    b.textContent = targetLabel();
-    b.title = target.kind === "tmux"
-      ? ("Talking to tmux " + target.name + " — tap to switch (AI or another shell)")
-      : ("Talking to " + backendLabel(target.name || cfg.backend || "AI") +
-         " — tap to switch (Claude / gemma / grok / tmux shell)");
+    var who = target.kind === "tmux"
+      ? ("🖥 " + target.name)
+      : ("🤖 " + backendLabel(target.name || cfg.backend || "AI"));
+    b.textContent = "Talk to: " + who;
+    b.title = "Tap to pick Claude, gemma, grok, or a tmux shell";
   }
 
   function setTarget(kind, name) {
@@ -1764,23 +1774,27 @@
         note: "Bridge URL, token, session name",
         onClick: function () { openSettings(true); } }
     ];
+    // Always available — backup if the header Talk-to button is off-screen.
+    rows.splice(1, 0, { label: "🎯 Talk to… (AI or tmux shell)",
+      note: "Claude, gemma, grok, or a workstation tmux session",
+      onClick: openTargetSheet });
     if (cfg.mode === "mic") {
       // Send-mode also on the ⏸/📻 chip; More keeps an explicit switch + rare continuous.
-      rows.splice(1, 0, sendMode === "pause"
+      rows.splice(2, 0, sendMode === "pause"
         ? { label: "📻 Switch to “over” to send",
             note: "Same as tapping the ⏸ chip — buffer until you say “over”",
             onClick: function () { setSendMode("over"); } }
         : { label: "⏸ Switch to send on pause",
             note: "Same as tapping the 📻 chip — each pause sends",
             onClick: function () { setSendMode("pause"); } });
-      rows.splice(2, 0, continuousMode
+      rows.splice(3, 0, continuousMode
         ? { label: "📻 Back to channel mic",
             note: "Leave silent continuous; return to Talk channel",
             onClick: function () { if (window.__setMicMode) window.__setMicMode("tap"); } }
         : { label: "🎙 Continuous transcription (rare)",
             note: "Silent always-on notes — Meeting-style. Prefer the Listen tab for meetings.",
             onClick: function () { if (window.__setMicMode) window.__setMicMode("continuous"); } });
-      rows.splice(3, 0, { label: "⌨️ Switch to type mode",
+      rows.splice(4, 0, { label: "⌨️ Switch to type mode",
         note: "Same Converse surface — reloads without the voice-first layout",
         onClick: function () {
           try {

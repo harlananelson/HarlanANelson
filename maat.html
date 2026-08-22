@@ -268,7 +268,8 @@
       id: "converse",
       label: "Converse",
       icon: "💬",
-      url: "./assistant.html",
+      // v=67 busts iPad/Safari cache after header Talk-to control landed.
+      url: "./assistant.html?v=67",
       kind: "iframe",
       hint: "Talk to the home AI — type or speak. Deep link: #converse or #converse?input=mic. Needs Tailscale + tesla-bridge."
     },
@@ -335,10 +336,15 @@
     }
     return DEFAULTS.map(function (a) {
       var u = saved[a.id];
+      var url = a.kind === "tools" ? "" : (u === undefined ? defaultUrl(a) : u);
+      // Bust Safari/PWA cache for Converse after UI changes (Talk to… header).
+      if (a.id === "converse" && url && url.indexOf("assistant.html") >= 0) {
+        url = withQueryParam(url, "v", "67");
+      }
       return {
         id: a.id, label: a.label, icon: a.icon, kind: a.kind, hint: a.hint,
         public: !!a.public,
-        url: a.kind === "tools" ? "" : (u === undefined ? defaultUrl(a) : u)
+        url: url
       };
     });
   }
