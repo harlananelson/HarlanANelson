@@ -421,21 +421,111 @@
   }
 
   // ---- spoken replies (server TTS -> <audio>; Sound button unlocks autoplay) ----
-  // onDone fires once when speech is done OR skipped OR failed — callers
-  // (channel resume, confirm listen) must not hang when TTS dies on iPad.
+  // Channel + Sound: speak one sentence at a time. Between sentences, peek the
+  // mic for ~400ms (energy only — not Whisper). If you started talking, you
+  // take the floor; if not, the next sentence plays. iOS ducks TTS whenever
+  // getUserMedia is live, so we never peek while a sentence is playing.
+  var ttsGen = 0, ttsPeeking = false, peekCtl = null;
+
+  function splitSentences(text) {
+    var t = String(text || "").replace(/\s+/g, " ").trim();
+    if (!t) return [];
+    var bits = t.split(/([.!?]+["')\]]*)\s+/);
+    var out = [], i;
+    for (i = 0; i < bits.length; i += 2) {
+      var s = ((bits[i] || "") + (bits[i + 1] || "")).trim();
+      if (!s) continue;
+      if (out.length && s.length < 16) out[out.length - 1] += " " + s;
+      else out.push(s);
+    }
+    return out.length ? out : [t];
+  }
+  function stopPeek() {
+    if (peekCtl) { try { peekCtl.stop(); } catch (e) {} peekCtl = null; }
+    ttsPeeking = false;
+  }
+  function cancelSpokenReply() {
+    ttsGen++;
+    stopPeek();
+    try { audioEl.pause(); } catch (e) {}
+    ttsPlaying = false;
+    ttsPeeking = false;
+  }
+  function fetchTtsBlob(sentence) {
+    return api("/api/tts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: sentence })
+    }).then(function (r) {
+      if (!r.ok) throw new Error("TTS HTTP " + r.status);
+      return r.blob();
+    });
+  }
+  // Energy-only barge-in. High threshold + short window so echo tail of the
+  // last sentence does not steal the next one.
+  function peekBargeIn(done) {
+    var settled = false;
+    function settle(hit) {
+      if (settled) return;
+      settled = true;
+      ttsPeeking = false;
+      peekCtl = null;
+      paintTalkForTarget();
+      done(!!hit);
+    }
+    if (!dictateLoop || !micSupported()) { settle(false); return; }
+    ttsPeeking = true;
+    paintTalkForTarget();
+    var decay = setTimeout(function () {
+      navigator.mediaDevices.getUserMedia({
+        audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 }
+      }).then(function (stream) {
+        var AC = window.AudioContext || window.webkitAudioContext;
+        var ctx = new AC();
+        if (ctx.resume) ctx.resume();
+        var src = ctx.createMediaStreamSource(stream);
+        var proc = ctx.createScriptProcessor(2048, 1, 1);
+        var speechMs = 0, elapsed = 0;
+        function stop() {
+          try { proc.disconnect(); proc.onaudioprocess = null; } catch (e) {}
+          try { src.disconnect(); } catch (e) {}
+          try { stream.getTracks().forEach(function (tr) { tr.stop(); }); } catch (e) {}
+          try { ctx.close(); } catch (e) {}
+        }
+        peekCtl = { stop: function () { stop(); settle(false); } };
+        proc.onaudioprocess = function (e) {
+          var buf = e.inputBuffer.getChannelData(0);
+          var n = buf.length, sum = 0, j;
+          for (j = 0; j < n; j++) sum += buf[j] * buf[j];
+          var rms = Math.sqrt(sum / n);
+          var ms = (n / ctx.sampleRate) * 1000;
+          elapsed += ms;
+          if (rms >= 0.05) speechMs += ms; else speechMs = 0;
+          if (speechMs >= 90) { stop(); settle(true); return; }
+          if (elapsed >= 380) { stop(); settle(false); }
+        };
+        src.connect(proc);
+        proc.connect(ctx.destination);
+      }).catch(function () { settle(false); });
+    }, 180);
+    peekCtl = { stop: function () { clearTimeout(decay); settle(false); } };
+  }
+
   function speak(text, onDone) {
     // Meeting situation (continuous) is silent by construction.
     // ALWAYS complete: if TTS/play fails, hands-free must still re-listen.
-    // Stuck on "Listening will resume…" was why a manual mic off/on was needed.
     var finished = false;
+    var gen = ++ttsGen;
     function finish() {
       if (finished) return;
       finished = true;
+      if (gen !== ttsGen) return;
       ttsPlaying = false;
+      ttsPeeking = false;
+      stopPeek();
       if (onDone) {
         try { onDone(); } catch (e) {}
       }
-      // If playback never started, audio "ended" won't fire — recover here.
       if (handsFree && awaitingReply) scheduleRelisten(250);
       maybeResumeAfterTts();
     }
@@ -444,19 +534,14 @@
       return;
     }
     ttsPlaying = true;
-    hushMic();   // iOS ducks TTS if getUserMedia is live; also would hear itself
-    // Long Claude replies exceed 20s of audio — that timeout used to fire
-    // mid-sentence, reopen the mic, and kill the speaker.
-    setTimeout(finish, 120000);
-    api("/api/tts", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: text })
-    }).then(function (r) {
-      if (!r.ok) throw new Error("TTS HTTP " + r.status);
-      return r.blob();
-    }).then(function (blob) {
-      if (!soundOn) { finish(); return; }
+    hushMic();
+    var parts = (dictateLoop && target.kind !== "tmux") ? splitSentences(text) : [text];
+    var blobs = [];
+    var idx = 0;
+    setTimeout(function () { if (gen === ttsGen && !finished) finish(); }, 120000);
+
+    function playBlob(blob, then) {
+      if (gen !== ttsGen) return;
       if (audioEl.src && audioEl.src.indexOf("blob:") === 0) {
         URL.revokeObjectURL(audioEl.src);
       }
@@ -464,25 +549,59 @@
       var onPlayDone = function () {
         audioEl.removeEventListener("ended", onPlayDone);
         audioEl.removeEventListener("error", onPlayDone);
-        finish();
+        then();
       };
       audioEl.addEventListener("ended", onPlayDone);
       audioEl.addEventListener("error", onPlayDone);
       var p = audioEl.play();
-      if (p && p.then) return p;
-    }).catch(function (e) {
-      try {
-        if ("speechSynthesis" in window) {
-          var u = new SpeechSynthesisUtterance(text);
-          u.onend = function () { finish(); };
-          u.onerror = function () { finish(); };
-          speechSynthesis.speak(u);
-          return;
-        }
-      } catch (e2) {}
-      setStatus("Speech failed: " + ((e && e.message) || e), true);
-      finish();
-    });
+      if (p && p.catch) p.catch(function () { then(); });
+    }
+    function prefetch(k) {
+      if (k >= parts.length || blobs[k]) return;
+      fetchTtsBlob(parts[k]).then(function (b) { blobs[k] = b; })
+        .catch(function () { blobs[k] = null; });
+    }
+    function playIndex(i) {
+      if (gen !== ttsGen || finished) return;
+      if (i >= parts.length) { finish(); return; }
+      idx = i;
+      ttsPeeking = false;
+      paintTalkForTarget();
+      var go = function (blob) {
+        if (gen !== ttsGen) return;
+        if (!blob) { playIndex(i + 1); return; }
+        playBlob(blob, function () {
+          if (gen !== ttsGen || finished) return;
+          var last = i >= parts.length - 1;
+          if (last) { finish(); return; }
+          prefetch(i + 2);
+          if (dictateLoop && soundOn) {
+            peekBargeIn(function (hit) {
+              if (gen !== ttsGen) return;
+              if (hit) {
+                cancelSpokenReply();
+                resumeAfterTts = false;
+                clearReplyWait();
+                setStatus("You have the floor.");
+                if (dictateLoop) startDictate();
+                paintTalkForTarget();
+                return;
+              }
+              playIndex(i + 1);
+            });
+          } else playIndex(i + 1);
+        });
+        prefetch(i + 1);
+      };
+      if (blobs[i]) go(blobs[i]);
+      else fetchTtsBlob(parts[i]).then(go).catch(function (e) {
+        if (i === 0) {
+          setStatus("Speech failed: " + ((e && e.message) || e), true);
+          finish();
+        } else playIndex(i + 1);
+      });
+    }
+    playIndex(0);
   }
 
   // ---- polling (console mode keeps the car screen in sync with the phone) ----
@@ -1220,10 +1339,15 @@
     }
     b.disabled = false;
     if (dictateLoop) {
+      if (ttsPeeking) {
+        b.className = "rec";
+        b.textContent = "Listening for you… (tap to close)";
+        return;
+      }
       if (ttsPlaying || resumeAfterTts) {
         b.className = "";
         b.textContent = ttsPlaying
-          ? "🔊 Speaking — mic paused (tap to close)"
+          ? "🔊 Speaking — mic pauses between sentences (tap to close)"
           : "Waiting for reply — mic paused (tap to close)";
         return;
       }
@@ -1342,6 +1466,7 @@
     dictateLoop = false;
     resumeAfterTts = false;
     clearReplyWait();
+    cancelSpokenReply();
     if (agentRecording) agentFinishNow();
     setStatus(why || "Listening stopped.");
     paintAgentMic();
