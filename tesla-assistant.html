@@ -333,22 +333,30 @@
     audioEl.preload = "auto";
   } catch (e) {}
 
-  // Hands-free conversation: tap once, then talk↔listen loops on its own.
+  // Hands-free conversation: talk↔listen loops on its own (Driving situation).
   var handsFree = false;      // whether the loop is active
-  var awaitingReply = 0;      // timestamp we sent a clip and expect a spoken reply
+  var awaitingReply = 0;      // timestamp we expect a spoken reply before re-listening
+  var pipelineBusy = false;   // true while transcribe/chat is in flight (not idle)
   // Continuous transcription: always-on listening, VAD-segmented, never speaks —
   // the transcript just keeps filling as you talk (like the translator app).
   var continuousMode = false;
   var micMode = "tap";   // tap | handsfree | continuous (see setMicMode)
-  // After a spoken reply finishes, resume listening (the other half of the loop).
-  audioEl.addEventListener("ended", function () {
+  // Resume listening after a spoken reply (or if speech never started).
+  // Debounced so ended + error + timeout cannot start two captures.
+  var relistenTimer = null;
+  var paintModeFn = null;   // set when mic-mode UI is wired (?mode=mic)
+  function scheduleRelisten(delayMs) {
     awaitingReply = 0;
-    if (handsFree) relisten();
-  });
-  audioEl.addEventListener("error", function () {
-    awaitingReply = 0;
-    if (handsFree) relisten();
-  });
+    if (relistenTimer) { clearTimeout(relistenTimer); relistenTimer = null; }
+    if (!handsFree) return;
+    relistenTimer = setTimeout(function () {
+      relistenTimer = null;
+      relisten();
+      if (paintModeFn) paintModeFn();
+    }, delayMs == null ? 200 : delayMs);
+  }
+  audioEl.addEventListener("ended", function () { scheduleRelisten(250); });
+  audioEl.addEventListener("error", function () { scheduleRelisten(250); });
 
   function setStatus(text, isErr) {
     var s = $("status");
@@ -431,7 +439,9 @@
   // onDone fires once when speech is done OR skipped OR failed — callers
   // (channel resume, confirm listen) must not hang when TTS dies on iPad.
   function speak(text, onDone) {
-    var said = (text == null ? "" : String(text)).trim();
+    // Meeting situation (continuous) is silent by construction.
+    // ALWAYS complete: if TTS/play fails, hands-free must still re-listen.
+    // Stuck on "Listening will resume…" was why a manual mic off/on was needed.
     var finished = false;
     function finish() {
       if (finished) return;
@@ -439,35 +449,25 @@
       if (onDone) {
         try { onDone(); } catch (e) {}
       }
-      // Driving hands-free: re-listen even when we fell back to speechSynthesis
-      // (no audioEl "ended") or TTS failed. relisten() is a no-op if already
-      // capturing or handsFree is off.
-      if (handsFree) {
-        awaitingReply = 0;
-        setTimeout(function () { if (handsFree) relisten(); }, 120);
-      }
+      // If playback never started, audio "ended" won't fire — recover here.
+      if (handsFree && awaitingReply) scheduleRelisten(250);
     }
-
-    // Silent situations: no audio, but still complete the callback chain.
-    if (!soundOn || continuousMode || micMode === "continuous") {
+    if (!soundOn || continuousMode || micMode === "continuous" || !text) {
       finish();
       return;
     }
-    // Empty text is not a TTS request. The open-channel loop used to call
-    // speak("", go) as a "wait then re-listen" delay — the server returns
-    // HTTP 400 Empty text, Safari often never runs onDone, and the mic
-    // never re-opens. Skip the network and finish after a short gap.
-    if (!said) {
-      setTimeout(finish, 350);
-      return;
-    }
-
-    setTimeout(finish, 20000);   // never strand the caller on a stalled clip
-
-    function playBlob(blob) {
-      if (!soundOn) { finish(); return Promise.resolve(); }
+    setTimeout(finish, 20000);   // never strand agent dictation / callers
+    api("/api/tts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: text })
+    }).then(function (r) {
+      if (!r.ok) throw new Error("TTS HTTP " + r.status);
+      return r.blob();
+    }).then(function (blob) {
+      if (!soundOn) { finish(); return; }
       if (audioEl.src && audioEl.src.indexOf("blob:") === 0) {
-        try { URL.revokeObjectURL(audioEl.src); } catch (e) {}
+        URL.revokeObjectURL(audioEl.src);
       }
       audioEl.src = URL.createObjectURL(blob);
       var onPlayDone = function () {
@@ -478,47 +478,19 @@
       audioEl.addEventListener("ended", onPlayDone);
       audioEl.addEventListener("error", onPlayDone);
       var p = audioEl.play();
-      if (p && p.then) {
-        return p.catch(function (err) {
-          audioEl.removeEventListener("ended", onPlayDone);
-          audioEl.removeEventListener("error", onPlayDone);
-          throw err;
-        });
-      }
-      return Promise.resolve();
-    }
-
-    function browserVoice() {
-      try {
-        if (!("speechSynthesis" in window)) throw new Error("no speechSynthesis");
-        var u = new SpeechSynthesisUtterance(said);
-        u.onend = function () { finish(); };
-        u.onerror = function () { finish(); };
-        // iOS sometimes needs cancel before a new utterance will start.
-        try { speechSynthesis.cancel(); } catch (e) {}
-        speechSynthesis.speak(u);
-        // Some WebKit builds never fire onend for short phrases — backup.
-        setTimeout(finish, Math.min(20000, 800 + said.length * 80));
-      } catch (e2) {
-        setStatus("Speech failed: " + ((e2 && e2.message) || e2), true);
-        finish();
-      }
-    }
-
-    api("/api/tts", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: said })
-    }).then(function (r) {
-      if (!r.ok) throw new Error("TTS HTTP " + r.status);
-      return r.blob();
-    }).then(function (blob) {
-      if (!blob || !blob.size) throw new Error("empty TTS audio");
-      return playBlob(blob);
+      if (p && p.then) return p;
     }).catch(function (e) {
-      // Server TTS unavailable / autoplay blocked → browser voice, then finish.
-      reportError("tesla-assistant/tts", (e && e.message) || String(e));
-      browserVoice();
+      try {
+        if ("speechSynthesis" in window) {
+          var u = new SpeechSynthesisUtterance(text);
+          u.onend = function () { finish(); };
+          u.onerror = function () { finish(); };
+          speechSynthesis.speak(u);
+          return;
+        }
+      } catch (e2) {}
+      setStatus("Speech failed: " + ((e && e.message) || e), true);
+      finish();
     });
   }
 
@@ -615,9 +587,10 @@
   function relisten() {
     if (!handsFree || micStarting) return;
     if (captureRunning()) return;
+    setStatus("Listening…");
     startRec();
   }
-  function onSpeakEnd() { awaitingReply = 0; if (handsFree) relisten(); }
+  function onSpeakEnd() { scheduleRelisten(250); }
 
   // Watch the mic level and auto-stop after a beat of silence — this is what
   // makes it hands-free (no tap to end each turn). WebAudio only; if absent,
@@ -969,18 +942,31 @@
   }
 
   // Tap-to-talk / hands-free both run through the same engine.
+  // Hands-free hangMs ~2s of silence ends a turn (1.4s was cutting mid-thought).
+  // maxMs is the longest single utterance before a forced end.
   function startRec() {
     capture({
-      hangMs: handsFree ? 1400 : 60000,   // hands-free auto-ends; tap ends on tap
-      maxMs: 60000,
+      hangMs: handsFree ? 2000 : 60000,   // hands-free auto-ends; tap ends on tap
+      maxMs: handsFree ? 90000 : 60000,
       onStart: function () {
         $("talkBtn").className = "rec";
         $("talkBtn").textContent = handsFree ? "Listening… (auto)" : "⏹ Stop and send";
+        // iOS can leave the AudioContext suspended after TTS; nudge it awake
+        // so VAD frames actually arrive for the next turn.
+        try {
+          if (capState && capState.ctx && capState.ctx.resume) capState.ctx.resume();
+        } catch (e) {}
       },
-      onFail: function () { $("talkBtn").className = ""; $("talkBtn").textContent = "Tap to talk"; },
+      onFail: function () {
+        $("talkBtn").className = "";
+        $("talkBtn").textContent = handsFree ? "Tap to start talking" : "Tap to talk";
+        // Permission / device glitch: keep the mode on, let the user tap again
+        // rather than silently dying for the rest of the session.
+        if (handsFree) setStatus("Mic paused — tap the big button to listen again.", true);
+      },
       onDone: function (wav) {
         $("talkBtn").className = "";
-        $("talkBtn").textContent = handsFree ? "Listening will resume…" : "Tap to talk";
+        $("talkBtn").textContent = handsFree ? "Thinking…" : "Tap to talk";
         uploadClip(wav);
       }
     });
@@ -992,11 +978,13 @@
   function uploadClip(blob) {
     // null = nothing above the noise floor.
     if (!blob) {
+      pipelineBusy = false;
       setStatus(handsFree ? "Listening…" : "Didn't catch that — tap and speak.",
                 !handsFree);
-      if (handsFree) relisten();   // empty clip: just keep listening, don't stall
+      if (handsFree) scheduleRelisten(300);   // empty clip: keep the loop alive
       return;
     }
+    pipelineBusy = true;
     setStatus("Transcribing…");
     var fd = new FormData();
     fd.append("audio", blob, "clip.wav");
@@ -1006,18 +994,24 @@
     api("/api/transcribe", { method: "POST", body: fd })
       .then(function (r) { return r.json(); })
       .then(function (data) {
-        setStatus(data.text ? "" : "Heard nothing — try again.", !data.text);
+        pipelineBusy = false;
+        setStatus(data.text ? "Answering…" : "Heard nothing — try again.", !data.text);
         if (handsFree) {
-          if (data.text) awaitingReply = Date.now();  // reply → spoken → onSpeakEnd relistens
-          else relisten();                            // nothing heard → listen again
+          if (data.text) {
+            // Poll will speak the assistant event; scheduleRelisten runs when
+            // audio ends (or this backup timer if speech never starts).
+            awaitingReply = Date.now();
+          } else {
+            scheduleRelisten(300);
+          }
         }
       })
       .catch(function (e) {
+        pipelineBusy = false;
         setStatus(e.message, true);
-        if (handsFree) {   // stop the loop on error rather than spin on it
-          handsFree = false; cleanupAudio(); setConvoBtn();
-          $("talkBtn").className = ""; $("talkBtn").textContent = "Tap to talk";
-        }
+        // Keep hands-free alive on a transient network error — killing the
+        // whole loop is what made "mic off then on again" feel necessary.
+        if (handsFree) scheduleRelisten(800);
       });
   }
 
@@ -1847,19 +1841,27 @@
           note: "Tap to speak a question, or use the type box below. Sound as you leave it.",
           sound: null }
       ];
+      // Voice + AI (mode=mic) is for talking: default to Driving (hands-free).
+      // Desk (tap) still available from the mode chip — one shot then stop.
       micMode = "tap";
 
       function paintMode() {
         var m = MODES[micMode];
         $("modeChip").textContent = m.chip;
         $("modeChip").className = "chip" + (micMode === "tap" ? "" : " on");
-        $("talkBtn").textContent = captureRunning()
-          ? "⏹ Stop and send" : m.action;
+        if (captureRunning()) {
+          $("talkBtn").textContent = handsFree ? "Listening… (auto)" : "⏹ Stop and send";
+        } else if (handsFree && awaitingReply) {
+          $("talkBtn").textContent = "Thinking…";
+        } else {
+          $("talkBtn").textContent = m.action;
+        }
         $("talkBtn").disabled = false;
         $("speakerToggle").style.display = micMode === "continuous" ? "" : "none";
         $("analyzeBtn").style.display = micMode === "continuous" ? "" : "none";
         document.body.classList.toggle("continuous", micMode === "continuous");
       }
+      paintModeFn = paintMode;
 
       function setMicMode(next) {
         if (next === micMode) return;
@@ -1867,6 +1869,8 @@
         if (micMode === "continuous") { stopContinuous(); setInterim(""); }
         if (micMode === "handsfree") {
           handsFree = false;
+          awaitingReply = 0;
+          if (relistenTimer) { clearTimeout(relistenTimer); relistenTimer = null; }
           if (captureRunning()) captureStop();
           else cleanupAudio();
         }
@@ -1918,14 +1922,39 @@
         paintSpeakerToggle();
       });
       paintSpeakerToggle();
-      paintMode();
 
-      // Reply never arrived (backend error, no audio) — don't wait forever.
+      // Default for Voice + AI: Driving (hands-free loop) — but do NOT start
+      // getUserMedia until the first tap (browsers require a user gesture).
+      // After that first tap, the loop keeps going without another toggle.
+      micMode = "handsfree";
+      handsFree = true;
+      continuousMode = false;
+      ensureSound();
+      paintMode();
+      setStatus("🚗 Driving — tap once to start; it keeps listening after each reply. " +
+                "Mode chip: Desk (one shot) or Meeting (silent).");
+
+      // Recovery watchdogs — do not leave the loop dead after one turn.
       setInterval(function () {
-        if (handsFree && awaitingReply && Date.now() - awaitingReply > 90000) {
-          awaitingReply = 0; relisten();
+        if (!handsFree) return;
+        // Spoken reply never arrived / TTS never finished
+        if (awaitingReply && Date.now() - awaitingReply > 15000) {
+          setStatus("No spoken reply — listening again…");
+          scheduleRelisten(0);
+          return;
         }
-      }, 3000);
+        // Idle with nothing capturing (e.g. missed ended event). Skip while
+        // transcribe/chat is still in flight — that is not "stuck", it is busy.
+        if (!awaitingReply && !pipelineBusy && !captureRunning() && !micStarting) {
+          if (!window.__hfIdleSince) window.__hfIdleSince = Date.now();
+          if (Date.now() - window.__hfIdleSince > 2500) {
+            window.__hfIdleSince = 0;
+            scheduleRelisten(0);
+          }
+        } else {
+          window.__hfIdleSince = 0;
+        }
+      }, 1500);
     }
   } else if (micSupported()) {
     // Console build that does support a mic: offer the switch from the sheet
