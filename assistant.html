@@ -431,17 +431,23 @@
     function finish() {
       if (finished) return;
       finished = true;
+      ttsPlaying = false;
       if (onDone) {
         try { onDone(); } catch (e) {}
       }
       // If playback never started, audio "ended" won't fire — recover here.
       if (handsFree && awaitingReply) scheduleRelisten(250);
+      maybeResumeAfterTts();
     }
     if (!soundOn || continuousMode || micMode === "continuous" || !text) {
       finish();
       return;
     }
-    setTimeout(finish, 20000);   // never strand agent dictation / callers
+    ttsPlaying = true;
+    hushMic();   // iOS ducks TTS if getUserMedia is live; also would hear itself
+    // Long Claude replies exceed 20s of audio — that timeout used to fire
+    // mid-sentence, reopen the mic, and kill the speaker.
+    setTimeout(finish, 120000);
     api("/api/tts", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -491,11 +497,21 @@
           if (ev.id <= lastEventId) return;
           lastEventId = ev.id;
           addMsg(ev.role, ev.text, ev.backend);
+          if (ev.role === "error" && resumeAfterTts) {
+            resumeAfterTts = false;
+            clearReplyWait();
+            if (dictateLoop) resumeDictateNow();
+          }
           if (ev.role === "assistant" && !firstPoll && ev.id > lastSpokenId) {
             lastSpokenId = ev.id;
             // Speak only real AI answers. Never speak "Sent to …: <user text>"
             // (tmux receipt) or other receipts that repeat what the user said.
             if (shouldSpeakAssistant(ev)) speak(ev.text);
+            else if (resumeAfterTts) {
+              resumeAfterTts = false;
+              clearReplyWait();
+              if (dictateLoop) resumeDictateNow();
+            }
           }
         });
         if (firstPoll) {
@@ -1204,6 +1220,13 @@
     }
     b.disabled = false;
     if (dictateLoop) {
+      if (ttsPlaying || resumeAfterTts) {
+        b.className = "";
+        b.textContent = ttsPlaying
+          ? "🔊 Speaking — mic paused (tap to close)"
+          : "Waiting for reply — mic paused (tap to close)";
+        return;
+      }
       b.className = agentRecording === true ? "rec" : "";
       b.textContent = agentRecording === true
         ? (sendMode === "pause" ? "Listening… sends when you pause" : "Listening… say “over” to send")
@@ -1287,9 +1310,38 @@
   // this is on, sending resumes listening for the next one, the way a radio
   // returns to receive after "over".
   var dictateLoop = false;
+  var ttsPlaying = false;
+  var resumeAfterTts = false;
+  var replyWaitTimer = null;
+
+  function clearReplyWait() {
+    if (replyWaitTimer) { clearTimeout(replyWaitTimer); replyWaitTimer = null; }
+  }
+  // Drop an in-flight capture WITHOUT transcribing it (it's usually the speaker).
+  function hushMic() {
+    if (!agentRecording && !agentAudio) return;
+    agentAudioStop();
+    agentRecording = false;
+    agentVad = null;
+    agentPhase = "idle";
+    paintAgentMic();
+    paintTalkForTarget();
+  }
+  function maybeResumeAfterTts() {
+    if (!resumeAfterTts) return;
+    resumeAfterTts = false;
+    clearReplyWait();
+    if (!dictateLoop) return;
+    setStatus("Reply finished — listening.");
+    setTimeout(function () {
+      if (dictateLoop && !ttsPlaying) resumeDictateNow();
+    }, 800);
+  }
 
   function endDictateLoop(why) {
     dictateLoop = false;
+    resumeAfterTts = false;
+    clearReplyWait();
     if (agentRecording) agentFinishNow();
     setStatus(why || "Listening stopped.");
     paintAgentMic();
@@ -1298,14 +1350,34 @@
 
   function resumeDictate() {
     if (!dictateLoop || !dictateReady()) { paintAgentMic(); return; }
-    // Re-open the mic after a short gap so we don't capture our own TTS.
-    // (Do NOT call speak("") — /api/tts rejects empty text with 400 and the
-    // old path stranded onDone on iPad, so the channel never returned to receive.)
+    // AI + Sound on: do NOT open the mic until TTS of the reply has ended.
+    // Opening it early (a) records the speaker as "you" (b) iOS ducks/stops
+    // playback halfway through the answer.
+    if (target.kind !== "tmux" && soundOn) {
+      resumeAfterTts = true;
+      clearReplyWait();
+      replyWaitTimer = setTimeout(function () {
+        replyWaitTimer = null;
+        if (!resumeAfterTts) return;
+        resumeAfterTts = false;
+        setStatus("No spoken reply yet — listening again.");
+        resumeDictateNow();
+      }, 90000);
+      setStatus("Sent — mic paused until the reply is spoken.");
+      paintTalkForTarget();
+      return;
+    }
+    resumeDictateNow();
+  }
+  function resumeDictateNow() {
+    if (!dictateLoop || !dictateReady()) { paintAgentMic(); return; }
+    if (ttsPlaying) { resumeAfterTts = true; paintTalkForTarget(); return; }
     var go = function () {
-      if (dictateLoop) startDictate();
+      if (!dictateLoop || ttsPlaying) return;
+      startDictate();
       paintTalkForTarget();
     };
-    setTimeout(go, soundOn ? 450 : 200);
+    setTimeout(go, soundOn ? 700 : 200);
   }
 
   // One send path for both targets so a voice send behaves like a tapped one.
@@ -1354,6 +1426,7 @@
 
   function startDictate() {
     if (!dictateReady()) { dictateLoop = false; paintAgentMic(); return; }
+    if (ttsPlaying) { resumeAfterTts = true; paintTalkForTarget(); return; }
     paintAgentMic();
     agentListen("dictate", function (text) {
       if (!text) {

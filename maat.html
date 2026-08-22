@@ -269,7 +269,7 @@
       label: "Converse",
       icon: "💬",
       // Mic-first + cache-bust after one-interface layout.
-      url: "./assistant.html?v=75&mode=mic",
+      url: "./assistant.html?v=77&mode=mic",
       kind: "iframe",
       hint: "Talk to a model or a workstation shell — type or speak. Deep link: #converse or #converse?input=mic. Needs Tailscale + tesla-bridge."
     },
@@ -339,7 +339,7 @@
       var url = a.kind === "tools" ? "" : (u === undefined ? defaultUrl(a) : u);
       // Bust Safari/PWA cache for Converse after UI changes (Talk to… header).
       if (a.id === "converse" && url && url.indexOf("assistant.html") >= 0) {
-        url = withQueryParam(url, "v", "75");
+        url = withQueryParam(url, "v", "77");
         if (url.indexOf("mode=") < 0) url = withQueryParam(url, "mode", "mic");
       }
       return {
