@@ -736,6 +736,9 @@
       return;
     }
     ttsPlaying = true;
+    // Shell TTS used to hush the channel and never set this, so grok-harlan
+    // replies left the mic off until the owner tapped Talk again.
+    if (dictateLoop) resumeAfterTts = true;
     hushMic();
     setTimeout(function () { if (gen === ttsGen && !finished) finish(); }, 120000);
 
@@ -1726,7 +1729,8 @@
     if (!dictateLoop || !dictateReady()) { paintAgentMic(); return; }
     if (ttsPlaying) { resumeAfterTts = true; paintTalkForTarget(); return; }
     var go = function () {
-      if (!dictateLoop || ttsPlaying) return;
+      if (!dictateLoop) return;
+      if (ttsPlaying) { resumeAfterTts = true; paintTalkForTarget(); return; }
       startDictate();
       paintTalkForTarget();
     };
