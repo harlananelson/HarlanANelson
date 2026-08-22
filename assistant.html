@@ -1288,7 +1288,9 @@
     b.className = (agentRecording === true || dictateLoop) ? "confirm" : "secondary";
     b.title = (target.kind === "tmux" && !agentSendable)
       ? "Select a sendable session first (tmux-allow)"
-      : "Hands-free channel — tap once, speak (sends on pause); say “out” to close";
+      : (sendMode === "pause"
+        ? "Hands-free channel — tap once, speak (sends on pause); “out” closes"
+        : "Hands-free channel — tap once, speak, say “over” to send; “out” closes");
     // Keep the big Talk button in Voice + AI in sync when the target is tmux.
     paintTalkForTarget();
   }
@@ -1308,7 +1310,7 @@
     if (dictateLoop) {
       b.className = agentRecording === true ? "rec" : "";
       b.textContent = agentRecording === true
-        ? "Listening… sends when you pause"
+        ? (sendMode === "pause" ? "Listening… sends when you pause" : "Listening… say “over” to send")
         : "📻 Channel open — tap to close";
     } else {
       b.className = "";
@@ -1331,12 +1333,32 @@
     return target.kind === "tmux" ? agentSendable : true;
   }
 
-  // Auto-send on pause (silence ends the utterance). Optional trailing "over"
-  // is still stripped if spoken out of habit. "out" / "over and out" closes the
-  // channel after sending any buffered text. Cancel words discard.
+  // Channel send mode (persisted). "pause" = auto-send when silence ends the
+  // utterance. "over" = radio style: buffer in the Send box until you say
+  // “over”. Toggle from ⋯ More. "out" always closes; cancel always discards.
   var _TAIL_SEND = /[\s,.]*\bover\b[\s.!]*$/i;
   var _TAIL_OUT = /[\s,.]*\b(over and out|out)\b[\s.!]*$/i;
   var _TAIL_KILL = /[\s,.]*\b(cancel|scratch that|never mind|nevermind|discard)\b[\s.!]*$/i;
+  var sendMode = "pause";
+  try {
+    var sm = localStorage.getItem("tb_send_mode");
+    if (sm === "over" || sm === "pause") sendMode = sm;
+  } catch (e) {}
+  function setSendMode(next) {
+    if (next !== "pause" && next !== "over") return;
+    sendMode = next;
+    try { localStorage.setItem("tb_send_mode", sendMode); } catch (e) {}
+    paintTalkForTarget();
+    if (typeof paintAgentMic === "function") paintAgentMic();
+    setStatus(sendMode === "pause"
+      ? "Send mode: pause — speak; it sends when you pause. “out” closes."
+      : "Send mode: over — speak, then say “over” to send. “out” closes.");
+  }
+  function channelOpenHint() {
+    return sendMode === "pause"
+      ? "speak; it sends when you pause. “out” closes."
+      : "speak, then say “over” to send. “out” closes.";
+  }
 
   function dictateBox() {
     return target.kind === "tmux" ? $("agentInput")
@@ -1402,8 +1424,7 @@
     if (dictateLoop) { endDictateLoop("Channel closed. Microphone off."); return; }
     if (agentRecording) { agentFinishNow(); return; }   // one-shot: end it early
     dictateLoop = true;
-    setStatus("Channel open → " + (agentSel || "session") +
-              " — speak; it sends when you pause. “out” closes.");
+    setStatus("Channel open → " + (agentSel || "session") + " — " + channelOpenHint());
     startDictate();
   }
 
@@ -1420,6 +1441,7 @@
       var box = dictateBox();
       var kill = _TAIL_KILL.test(text);
       var closing = _TAIL_OUT.test(text);
+      var saidOver = _TAIL_SEND.test(text);
       // Strip protocol words; the remaining words are the payload.
       var body = text.replace(_TAIL_SEND, "").replace(_TAIL_KILL, "").replace(_TAIL_OUT, "").trim();
 
@@ -1433,7 +1455,11 @@
 
       // "out" / "over and out": send any payload then close the channel.
       if (closing) {
-        if (box && body) box.value = body;
+        if (box && body) {
+          box.value = sendMode === "over" && box.value.trim()
+            ? (box.value.trim() + " " + body)
+            : body;
+        }
         var had = box && box.value.trim();
         dictateLoop = false;
         if (agentRecording) agentFinishNow();
@@ -1454,8 +1480,26 @@
         return;
       }
 
-      // Auto-send on pause: each finished utterance is one send (does not
-      // accumulate across pauses — that left text stuck in the Send box).
+      if (sendMode === "over") {
+        // Radio style: accumulate in the Send box until trailing “over”.
+        if (box && body) box.value = (box.value ? box.value.trim() + " " : "") + body;
+        if (target.kind === "tmux") resetAgentSend();
+        if (saidOver) {
+          if (!box || !box.value.trim()) {
+            setStatus("Nothing to send — still listening.");
+            resumeDictate();
+            return;
+          }
+          dispatchDictated();
+          return;
+        }
+        setStatus((target.kind === "tmux" ? ("→ " + (agentSel || "tmux") + ": ") : "") +
+                  "…end with “over” to send, or keep talking.");
+        if (dictateLoop) resumeDictate();
+        return;
+      }
+
+      // pause mode: each finished utterance is one send.
       if (!body) {
         setStatus("Nothing to send — still listening.");
         resumeDictate();
@@ -1519,7 +1563,8 @@
     c.textContent = targetLabel();
     c.className = "chip" + (target.kind === "tmux" ? " on" : "");
     c.title = target.kind === "tmux"
-      ? "tmux " + target.name + " — voice: open channel; sends on pause"
+      ? ("tmux " + target.name + " — voice channel; " +
+         (sendMode === "pause" ? "sends on pause" : "say “over” to send"))
       : "Talking to the AI — tap to choose another target";
   }
 
@@ -1542,20 +1587,24 @@
     if ($("barInput")) {
       $("barInput").value = "";
       $("barInput").placeholder = target.kind === "tmux"
-        ? "For " + target.name + " — speak (sends on pause), or type + Send"
+        ? ("For " + target.name + " — " +
+           (sendMode === "pause" ? "speak (sends on pause)" : "speak + “over”") +
+           ", or type + Send")
         : "…or type instead";
     }
     if ($("agentInput")) {
       $("agentInput").value = "";
       $("agentInput").placeholder = target.kind === "tmux" && agentSendable
-        ? "Hands-free: open channel, speak (sends on pause) — or type here"
+        ? ("Hands-free: open channel — " +
+           (sendMode === "pause" ? "speak (sends on pause)" : "speak + “over”") +
+           " — or type here")
         : $("agentInput").placeholder;
     }
     paintTargetChip();
     paintAgentsBtn();
     paintTalkForTarget();
     if (kind === "tmux" && agentSendable) {
-      setStatus("Target 🖥 " + name + " — tap Talk once for hands-free channel. Pause sends; “out” closes.");
+      setStatus("Target 🖥 " + name + " — tap Talk once. " + channelOpenHint());
     }
   }
 
@@ -1649,8 +1698,16 @@
         note: "Bridge URL, token, session name",
         onClick: function () { openSettings(true); } }
     ];
+    // Send-mode toggle first when in mic/channel UI — easy to flip mid-session.
+    rows.splice(1, 0, sendMode === "pause"
+      ? { label: "📻 Switch to “over” to send",
+          note: "Buffer speech in the Send box until you say “over” (radio style)",
+          onClick: function () { setSendMode("over"); } }
+      : { label: "⏸ Switch to send on pause",
+          note: "Each spoken phrase sends when you pause — no “over” needed",
+          onClick: function () { setSendMode("pause"); } });
     if (cfg.mode === "mic") {
-      rows.splice(1, 0, { label: "⌨️ Switch to type mode",
+      rows.splice(2, 0, { label: "⌨️ Switch to type mode",
         note: "Same Converse surface — reloads without the voice-first layout",
         onClick: function () {
           try {
@@ -1663,7 +1720,7 @@
           }
         } });
     } else if (micModeOffered) {
-      rows.splice(1, 0, { label: "🎤 Switch to mic mode",
+      rows.splice(2, 0, { label: "🎤 Switch to mic mode",
         note: "Same Converse surface — voice-first (Driving / Desk / Meeting)",
         onClick: function () {
           try {
