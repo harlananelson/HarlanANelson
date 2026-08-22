@@ -266,9 +266,9 @@
 <script>
 "use strict";
 /* Written for the Tesla in-car browser: Chromium ~109 feature level, no dev
-   console (all errors go to the on-page status line), no microphone access
-   (voice input happens on the phone via ?mode=mic), audio playback must be
-   unlocked by a user tap, transport is plain fetch polling over HTTPS. */
+   console (all errors go to the on-page status line). Talk hides when this
+   browser cannot capture (showTalkUi); type+Send always remain. Audio
+   playback must be unlocked by a user tap. Transport is fetch polling. */
 (function () {
   var $ = function (id) { return document.getElementById(id); };
 
@@ -554,7 +554,6 @@
         setStatus("That session is read-only (not in tmux-allow).", true);
         return;
       }
-      agentConfirm = true;                 // Send / pause is the confirm
       agentSend();                         // reads + clears the box
       return;
     }
@@ -566,7 +565,10 @@
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ session: cfg.session, message: text, backend: cfg.backend })
     }).then(function () { setStatus(""); })
-      .catch(function (e) { setStatus(e.message, true); })
+      .catch(function (e) {
+        if (input && !(input.value || "").trim()) input.value = text;
+        setStatus(e.message, true);
+      })
       .then(function () { paintTalkForTarget(); });
     // the message + reply arrive through polling, so car and phone both see them
   }
@@ -1075,7 +1077,7 @@
   }
 
   // ---- agents panel (tmux sessions on the workstation) ----
-  var agentsOpen = false, agentSel = "", agentSendable = false, agentConfirm = false;
+  var agentsOpen = false, agentSel = "", agentSendable = false;
   var agentTimer = null;
 
   function agentsView(show) {
@@ -1116,11 +1118,10 @@
         none.value = "";
         none.textContent = agentSessions.length ? "— no shell —" : "— no shells running —";
         sel.appendChild(none);
-        if (target.kind === "tmux" && target.name &&
-            agentSessions.some(function (s) { return s.name === target.name; })) {
-          agentSel = target.name;
-        } else if (!agentSessions.some(function (s) { return s.name === agentSel; })) {
-          agentSel = "";
+        if (!agentSessions.some(function (s) { return s.name === agentSel; })) {
+          agentSel = (target.kind === "tmux" && target.name &&
+            agentSessions.some(function (s) { return s.name === target.name; }))
+            ? target.name : "";
         }
         agentSessions.forEach(function (s) {
           var o = document.createElement("option");
@@ -1187,7 +1188,6 @@
   }
 
   function resetAgentSend() {
-    agentConfirm = false;
     if (typeof paintAgentMic === "function") paintAgentMic();
   }
 
@@ -1286,7 +1286,7 @@
     agentRecording = false;
     if (!frames.length || (total / 16000) * 1000 < AG_MIN_MS) {
       agentPhase = "idle"; paintAgentMic();
-      setStatus("Didn't catch that — tap 🎤 and speak.", true);
+      setStatus("Didn't catch that — tap Talk and speak.", true);
       return;
     }
     var merged = new Float32Array(total), off = 0;
@@ -1435,7 +1435,6 @@
   // One send path for both targets so a voice send behaves like a tapped one.
   function dispatchDictated() {
     if (target.kind === "tmux") {
-      agentConfirm = true;          // voice pause WAS the confirm
       agentSend();
       // agentSend is async; keep the channel open for the next directive.
       setStatus("Sent to " + (target.name || agentSel || "session") + " — listening…");
@@ -1514,7 +1513,6 @@
         dictateLoop = false;
         if (agentRecording) agentFinishNow();
         if (had && target.kind === "tmux") {
-          agentConfirm = true;
           agentSend();
           setStatus("Sent to " + (target.name || agentSel || "session") + ". Channel closed.");
         } else if (had) {
@@ -1612,6 +1610,13 @@
 
   function openTargetSheet() {
     var rows = [];
+    if (!(window.__backends || []).length) {
+      rows.push({
+        label: "Models appear once the bridge connects",
+        note: "Shells below still work if the host is up",
+        onClick: function () {}
+      });
+    }
     (window.__backends || []).forEach(function (b) {
       var here = target.kind === "ai" && cfg.backend === b;
       rows.push({
