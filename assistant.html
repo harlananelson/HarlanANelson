@@ -360,10 +360,69 @@
     t.appendChild(d);
     while (t.children.length > 60) t.removeChild(t.firstChild);
     t.scrollTop = t.scrollHeight;
+    return d;
   }
   // Local send ack into the ONE transcript (tmux no longer leaves chat empty).
   function addTmuxSendAck(sessionName, text) {
     addMsg("user tmux-send", text, "→ 🖥 " + sessionName);
+  }
+
+  // After a send into a shell, pull the pane into THIS transcript so the
+  // phone sees a reply (not only "Sent to …"). Do not TTS the dump.
+  var paneWatch = null;
+  function stopPaneWatch() {
+    if (paneWatch && paneWatch.timer) clearTimeout(paneWatch.timer);
+    paneWatch = null;
+  }
+  function followPane(name) {
+    stopPaneWatch();
+    paneWatch = { name: name, last: "", same: 0, el: null, ticks: 0 };
+    function paint(text) {
+      var lines = text.split("\n");
+      var shown = lines.length > 24 ? lines.slice(-24).join("\n") : text;
+      if (!paneWatch.el || !paneWatch.el.parentNode) {
+        paneWatch.el = addMsg("assistant", shown, "← " + name);
+        return;
+      }
+      var d = paneWatch.el, tagEl = d.querySelector(".tag");
+      d.textContent = "";
+      if (!tagEl) {
+        tagEl = document.createElement("span");
+        tagEl.className = "tag";
+      }
+      tagEl.textContent = "← " + name;
+      d.appendChild(tagEl);
+      d.appendChild(document.createTextNode(shown));
+      $("transcript").scrollTop = $("transcript").scrollHeight;
+    }
+    function tick() {
+      if (!paneWatch || paneWatch.name !== name) return;
+      paneWatch.ticks++;
+      api("/api/tmux/capture?name=" + encodeURIComponent(name) + "&lines=40")
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (!paneWatch || paneWatch.name !== name) return;
+          var text = (data.text || "").replace(/\s+$/, "");
+          if (text && text !== paneWatch.last) {
+            paneWatch.last = text;
+            paneWatch.same = 0;
+            paint(text);
+            setStatus("← " + name + " still writing…");
+          } else {
+            paneWatch.same++;
+            if (paneWatch.same >= 3 || paneWatch.ticks >= 30) {
+              setStatus(paneWatch.last ? ("Reply from " + name + ".") : ("Sent to " + name + "."));
+              stopPaneWatch();
+              return;
+            }
+          }
+          paneWatch.timer = setTimeout(tick, 2000);
+        })
+        .catch(function () {
+          if (paneWatch) paneWatch.timer = setTimeout(tick, 2500);
+        });
+    }
+    paneWatch.timer = setTimeout(tick, 1200);
   }
 
   // ---- backend picker (which AI answers: gemma / claude / grok / …) ----
@@ -1086,7 +1145,8 @@
     }).then(function () {
       addTmuxSendAck(sendName, text);
       resetAgentSend();
-      setStatus("Sent to " + sendName + ".");
+      setStatus("Sent to " + sendName + " — waiting for a reply on screen.");
+      followPane(sendName);
     }).catch(function (e) {
       if (box && !(box.value || "").trim()) box.value = text;
       resetAgentSend();
@@ -1455,6 +1515,7 @@
 
   function setTarget(kind, name) {
     if (dictateLoop) endDictateLoop("Target changed — channel closed.");
+    stopPaneWatch();
     target = { kind: kind, name: name || "" };
     if (kind === "ai") {
       cfg.backend = name || "";
