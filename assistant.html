@@ -1809,18 +1809,9 @@
           }
         } });
     } else if (micModeOffered) {
-      rows.splice(1, 0, { label: "🎤 Switch to mic mode",
-        note: "Same Converse surface — channel mic (AI or tmux)",
-        onClick: function () {
-          try {
-            var u = new URL(location.href);
-            u.searchParams.delete("input");
-            u.searchParams.set("mode", "mic");
-            location.replace(u.pathname + "?" + u.searchParams.toString() + u.hash);
-          } catch (e) {
-            location.search = location.search ? location.search + "&mode=mic" : "?mode=mic";
-          }
-        } });
+      rows.splice(2, 0, { label: "🎤 Switch to mic channel",
+        note: "Opens the mic and starts listening — pause sends",
+        onClick: function () { enterMicMode({ openChannel: true }); } });
     }
     openSheet("More", rows);
   };
@@ -1938,21 +1929,7 @@
   $("msgInput").addEventListener("keydown", function (e) {
     if (e.key === "Enter") sendTyped();
   });
-  // Above "Type a question" — mic entry, not another AI/tmux picker.
-  if ($("composerMicBtn")) {
-    $("composerMicBtn").onclick = function () {
-      try {
-        var u = new URL(location.href);
-        u.searchParams.delete("input");
-        u.searchParams.set("mode", "mic");
-        // Keep / bump cache-bust so Maat iframe reloads into mic cleanly.
-        if (!u.searchParams.get("v")) u.searchParams.set("v", "68");
-        location.replace(u.pathname + "?" + u.searchParams.toString() + u.hash);
-      } catch (e) {
-        location.search = (location.search ? location.search + "&" : "?") + "mode=mic";
-      }
-    };
-  }
+  // Wired below after enterMicMode exists.
 
   // ---- workstation transcript browser (📁) — the files live on the Ubuntu
   //      box (~/.config/tesla-bridge/transcripts), never on this device ----
@@ -2050,85 +2027,119 @@
   });
 
 
-  if (cfg.mode === "mic") {
-    // Voice-first: ONE channel design for AI backends and tmux (the tmux UX).
-    // Driving/Desk/Meeting situation fork is gone from Converse — Meeting
-    // continuous lives on the Listen tab; optional continuous stays in ⋯ More.
-    $("composer").style.display = "none";
-    $("bar").style.display = "flex";
-      $("speakerToggle").style.display = "none";
+  // Mic UI is set up once; enterMicMode can run from a button tap without reload
+  // so the same user gesture can open the channel (browsers require that for mic).
+  var micUiReady = false;
+  function ensureMicUi() {
+    if (micUiReady) return micSupported();
+    micUiReady = true;
+    $("speakerToggle").style.display = "none";
     $("analyzeBtn").style.display = "none";
     document.body.classList.remove("continuous");
     if (!micSupported()) {
       $("talkBtn").disabled = true;
       $("talkBtn").textContent = "No microphone in this browser";
       $("modeChip").style.display = "none";
-    } else {
-      micMode = "tap";
-      handsFree = false;
-      continuousMode = false;
-
-      // modeChip = send-mode toggle (pause ↔ over), not Driving/Desk/Meeting.
-      paintSendModeChip();
-      $("modeChip").addEventListener("click", function () {
-        setSendMode(sendMode === "pause" ? "over" : "pause");
-      });
-
-      // Keep setMicMode for rare continuous entry from ⋯ More.
-      function setMicMode(next) {
-        if (next === "continuous") {
-          if (dictateLoop) endDictateLoop("Channel closed — starting continuous.");
-          micMode = "continuous";
-          continuousMode = true;
-          handsFree = false;
-          startContinuous();
-          $("speakerToggle").style.display = "";
-          $("analyzeBtn").style.display = "";
-          document.body.classList.add("continuous");
-          setStatus("🎙 Continuous — silent transcription. Tap Talk to stop / return to channel.");
-          syncWakeLock();
-          syncRefineTimer();
-          return;
-        }
-        if (micMode === "continuous") { stopContinuous(); setInterim(""); }
-        micMode = "tap";
-        continuousMode = false;
+      return false;
+    }
+    micMode = "tap";
+    handsFree = false;
+    continuousMode = false;
+    paintSendModeChip();
+    $("modeChip").addEventListener("click", function () {
+      setSendMode(sendMode === "pause" ? "over" : "pause");
+    });
+    function setMicMode(next) {
+      if (next === "continuous") {
+        if (dictateLoop) endDictateLoop("Channel closed — starting continuous.");
+        micMode = "continuous";
+        continuousMode = true;
         handsFree = false;
-        $("speakerToggle").style.display = "none";
-        $("analyzeBtn").style.display = "none";
-        document.body.classList.remove("continuous");
+        startContinuous();
+        $("speakerToggle").style.display = "";
+        $("analyzeBtn").style.display = "";
+        document.body.classList.add("continuous");
+        setStatus("🎙 Continuous — silent transcription. Tap Talk to stop / return to channel.");
         syncWakeLock();
         syncRefineTimer();
-        paintTalkForTarget();
-        paintSendModeChip();
+        return;
       }
-      window.__setMicMode = setMicMode;
-
-      $("talkBtn").addEventListener("click", function () {
-        if (micMode === "continuous") {
-          setMicMode("tap");
-          return;
-        }
-        agentDictate();
-        paintTalkForTarget();
-      });
-
-      $("analyzeBtn").addEventListener("click", analyzeTranscript);
-      $("speakerToggle").addEventListener("click", function () {
-        contSpeaker = contSpeaker === "me" ? "source" : "me";
-        paintSpeakerToggle();
-      });
-      paintSpeakerToggle();
-
-      ensureSound();
+      if (micMode === "continuous") { stopContinuous(); setInterim(""); }
+      micMode = "tap";
+      continuousMode = false;
+      handsFree = false;
+      $("speakerToggle").style.display = "none";
+      $("analyzeBtn").style.display = "none";
+      document.body.classList.remove("continuous");
+      syncWakeLock();
+      syncRefineTimer();
       paintTalkForTarget();
-      setStatus("Converse channel — pick Claude / gemma / tmux, tap Talk. " +
-                "Chip toggles pause vs “over”. Meeting continuous is on the Listen tab.");
+      paintSendModeChip();
     }
+    window.__setMicMode = setMicMode;
+    $("talkBtn").addEventListener("click", function () {
+      if (micMode === "continuous") {
+        setMicMode("tap");
+        return;
+      }
+      agentDictate();
+      paintTalkForTarget();
+    });
+    $("analyzeBtn").addEventListener("click", analyzeTranscript);
+    $("speakerToggle").addEventListener("click", function () {
+      contSpeaker = contSpeaker === "me" ? "source" : "me";
+      paintSpeakerToggle();
+    });
+    paintSpeakerToggle();
+    return true;
+  }
+
+  function enterMicMode(opts) {
+    opts = opts || {};
+    cfg.mode = "mic";
+    try {
+      var u = new URL(location.href);
+      u.searchParams.set("mode", "mic");
+      if (!u.searchParams.get("v")) u.searchParams.set("v", "69");
+      history.replaceState(null, "", u.pathname + "?" + u.searchParams.toString() + u.hash);
+    } catch (e) {}
+    $("composer").style.display = "none";
+    $("bar").style.display = "flex";
+    if ($("agentBar")) $("agentBar").style.display = "none";
+    if (!ensureMicUi()) return;
+    ensureSound();
+    if ($("barInput")) {
+      $("barInput").placeholder = "Speak after the channel opens — or type here";
+    }
+    paintTalkForTarget();
+    paintSendModeChip();
+    if (opts.openChannel) {
+      // Same tap as Mic channel — browser allows getUserMedia.
+      agentDictate();
+      paintTalkForTarget();
+    } else {
+      setStatus("Mic ready — tap Talk once to open the channel (required by the browser). " +
+                "Then speak; pause sends. Chip: pause vs “over”.");
+    }
+  }
+
+  if (cfg.mode === "mic") {
+    // Loaded already in mic mode (Maat / deep link): need a Talk tap for mic permission.
+    $("composer").style.display = "none";
+    $("bar").style.display = "flex";
+    ensureMicUi();
+    ensureSound();
+    paintTalkForTarget();
+    setStatus("Mic ready — tap Talk once to open the channel, then speak. Pause sends.");
   } else if (micSupported()) {
-    // Console build that does support a mic: offer the switch from the sheet
-    // rather than a permanent header button.
     micModeOffered = true;
+  }
+
+  // Above "Type a question": enter mic AND open the channel in one tap.
+  if ($("composerMicBtn")) {
+    $("composerMicBtn").onclick = function () {
+      enterMicMode({ openChannel: true });
+    };
   }
 
   // ---- keep the bottom row (Send) inside the visible frame -----------------
