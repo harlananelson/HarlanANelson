@@ -75,19 +75,12 @@
     font-size: 19px; padding: 12px; border-radius: 12px;
     border: 1px solid #444; background: #222; color: #eee;
   }
-  /* Thin handle in-flow; drawer overlays the transcript so it cannot push
-     Talk/Send off the bottom of the Maat iframe. */
-  #paneBtn.pane-handle {
-    flex: 0 0 32px; width: 100%; height: 32px; padding: 0;
-    font-size: 13px; line-height: 32px; border-radius: 0;
-    background: #151b23; color: #9cc4e8; min-height: 0;
-  }
+  /* Live pane is a full overlay of the transcript — never a split. Open
+     it from More; Close returns to the conversation. */
   #agents {
-    display: none; position: absolute; left: 0; right: 0; bottom: 32px;
-    z-index: 8; flex-direction: column; overflow: hidden;
-    max-height: 48%; min-height: 120px;
-    background: #0d1117; border-top: 2px solid #2b6cb0;
-    box-shadow: 0 -8px 24px rgba(0,0,0,.45);
+    display: none; position: absolute; inset: 0; z-index: 8;
+    flex-direction: column; overflow: hidden;
+    background: #0d1117;
   }
   #agents.open { display: flex; }
   #agentList {
@@ -241,14 +234,14 @@
 
 <div id="views-wrap">
   <div id="transcript"></div>
-  <button id="paneBtn" class="pane-handle" type="button" title="Watch a live pane (does not change who you Talk to…)">▲ pane</button>
   <div id="agents" aria-label="live pane">
     <div id="agentList">
       <select id="agentSelect" title="Which pane to watch"></select>
       <button id="agentRefreshBtn" class="secondary" title="Refresh pane">↻</button>
       <span id="agentMode" class="hint" style="margin:0"></span>
+      <button id="paneClose" class="secondary" type="button">Close</button>
     </div>
-    <pre id="agentOut">Pick a pane above to watch. Talk to… still controls where your words go.</pre>
+    <pre id="agentOut">Talk to… still controls where your words go. Close returns to the conversation.</pre>
   </div>
 </div>
 
@@ -1086,7 +1079,7 @@
 
   function agentsView(show) {
     agentsOpen = show;
-    // In-flow drawer under the handle — never hide #transcript, never swap the bar.
+    // Full overlay of the transcript. Never a split; Talk/Send stay put.
     if (show) $("agents").classList.add("open");
     else $("agents").classList.remove("open");
     paintPaneBtn();
@@ -1141,17 +1134,7 @@
   }
 
   // Pane is always available — watch a shell without changing Talk to… address.
-  function paintPaneBtn() {
-    var b = $("paneBtn");
-    if (!b) return;
-    if (agentsOpen) {
-      b.textContent = "▼ pane";
-      b.title = "Hide the live pane (conversation stays)";
-    } else {
-      b.textContent = "▲ pane";
-      b.title = "Watch a live pane (does not change who you Talk to…)";
-    }
-  }
+  function paintPaneBtn() { /* pane is More → overlay, not a split handle */ }
   function paintAgentsBtn() { paintPaneBtn(); }
 
   function applyAgentSelection() {
@@ -1707,15 +1690,22 @@
     rows.splice(1, 0, { label: "🎯 Talk to…",
       note: "Pick a model or a workstation shell",
       onClick: openTargetSheet });
+    rows.splice(2, 0, agentsOpen
+      ? { label: "💬 Back to conversation",
+          note: "Hide the live pane overlay",
+          onClick: function () { agentsView(false); } }
+      : { label: "🖥 Live pane",
+          note: "Watch a workstation shell — covers the conversation until you Close",
+          onClick: function () { agentsView(true); } });
     if (showTalkUi()) {
-      rows.splice(2, 0, sendMode === "pause"
+      rows.splice(3, 0, sendMode === "pause"
         ? { label: "📻 Switch to “over” to send",
             note: "Same as tapping the ⏸ chip — buffer until you say “over”",
             onClick: function () { setSendMode("over"); } }
         : { label: "⏸ Switch to send on pause",
             note: "Same as tapping the 📻 chip — each pause sends",
             onClick: function () { setSendMode("pause"); } });
-      rows.splice(3, 0, continuousMode
+      rows.splice(4, 0, continuousMode
         ? { label: "📻 Back to channel mic",
             note: "Leave silent continuous; return to Talk channel",
             onClick: function () { if (window.__setMicMode) window.__setMicMode("tap"); } }
@@ -1736,10 +1726,7 @@
     setStatus("Cleared.");
   };
 
-  // Pane drawer — independent of Talk to… address.
-  $("paneBtn").onclick = function () {
-    agentsView(!agentsOpen);
-  };
+  if ($("paneClose")) $("paneClose").onclick = function () { agentsView(false); };
   $("agentRefreshBtn").onclick = function () {
     loadAgents();
     refreshAgentOut();
