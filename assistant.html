@@ -389,6 +389,16 @@
     if (keep.length > 20) keep = keep.slice(-20);
     return keep.join("\n");
   }
+  function speakableClip(raw) {
+    var t = paneReplyText(raw || "").replace(/\s+/g, " ").trim();
+    if (!t || /[│┃╭]/.test(t) || t.length < 12) return "";
+    if (t.length > 400) {
+      var cut = t.slice(0, 400);
+      var sp = cut.lastIndexOf(". ");
+      t = (sp > 80 ? cut.slice(0, sp + 1) : cut).trim();
+    }
+    return t;
+  }
   function followPane(name) {
     stopPaneWatch();
     paneWatch = { name: name, last: "", same: 0, el: null, ticks: 0 };
@@ -429,6 +439,8 @@
             paneWatch.same++;
             if (paneWatch.same >= 3 || paneWatch.ticks >= 30) {
               setStatus(paneWatch.last ? ("Reply from " + name + ".") : ("Sent to " + name + "."));
+              var clip = speakableClip(paneWatch.last);
+              if (clip && soundOn) speak(clip);
               stopPaneWatch();
               return;
             }
@@ -490,6 +502,9 @@
     if (/^Sent\.?$/i.test(t)) return false;
     if (/[│┃╭╮]/.test(t)) return false;               // TUI chrome, not prose
     if (t.length > 800) return false;                 // don't orate a pane dump
+    // Shell session names (grok-harlan, ai-g, …): followPane speaks a clip.
+    if (ev.backend && !/^(gemma|claude|grok|ollama|auto|tmux)?$/i.test(ev.backend))
+      return false;
     if (/\. Send\?$/i.test(t)) return false;          // old confirm readback shape
     // Errors are status-line material; don't orate a 502 JSON blob.
     if (/^AI backend failed/i.test(t)) return false;
@@ -799,6 +814,10 @@
           // overlapping polls on slow LTE return the same events — render once
           if (ev.id <= lastEventId) return;
           lastEventId = ev.id;
+          if (paneWatch && ev.backend && ev.backend === paneWatch.name) {
+            if (ev.role === "assistant") lastSpokenId = ev.id;
+            return;
+          }
           addMsg(ev.role, ev.text, ev.backend);
           if (ev.role === "error" && resumeAfterTts) {
             resumeAfterTts = false;
