@@ -100,33 +100,32 @@
     font-size: 19px; padding: 12px; border-radius: 12px;
     border: 1px solid #444; background: #222; color: #eee;
   }
-  /* Agents panel (tmux sessions on the workstation) */
-  #agents { display: none; flex: 1; min-height: 0; flex-direction: column; overflow: hidden; }
-  #agentList { display: flex; gap: 10px; padding: 10px 18px; align-items: center; }
-  #agentList select { flex: 1; min-width: 0; }
-  #agentMode { white-space: nowrap; }
+  /* Pane drawer — overlays the transcript; never replaces it (Fable layout). */
+  #agents {
+    display: none; position: absolute; left: 0; right: 0; bottom: 0;
+    z-index: 8; flex-direction: column; overflow: hidden;
+    max-height: 48%; min-height: 180px;
+    background: #0d1117; border-top: 2px solid #2b6cb0;
+    box-shadow: 0 -8px 24px rgba(0,0,0,.45);
+  }
+  #agents.open { display: flex; }
+  #agentList {
+    display: flex; gap: 8px; padding: 8px 12px; align-items: center; flex-shrink: 0;
+    background: #151b23;
+  }
+  #agentList select { flex: 1; min-width: 0; font-size: 16px; padding: 8px; }
+  #agentMode { white-space: nowrap; font-size: 12px; }
   #agentOut {
-    flex: 1; min-height: 0; overflow: auto; margin: 0 18px; padding: 12px;
+    flex: 1; min-height: 0; overflow: auto; margin: 0 10px 10px; padding: 10px;
     background: #000; border: 1px solid #333; border-radius: 10px;
     font-family: ui-monospace, Menlo, Consolas, monospace;
-    font-size: 14px; line-height: 1.35; white-space: pre; color: #cde;
+    font-size: 13px; line-height: 1.35; white-space: pre; color: #cde;
   }
-  #agentBar {
-    display: flex; flex-wrap: wrap; gap: 10px; background: #1b1b1b; flex: 0 0 auto;
-    padding: 12px 18px 12px;
-  }
-  html.top-level #agentBar {
-    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-  }
-  #agentBar input {
-    flex: 1 1 12rem; min-width: 0; font-size: 19px; padding: 12px 14px;
-    border-radius: 12px; border: 1px solid #444; background: #222; color: #eee;
-  }
-  #agentSendBtn { flex: 0 0 auto; min-width: 5.5rem; }
-  #agentSendBtn.confirm { background: #c0392b; }
-  @media (max-width: 420px) {
-    #agentSendBtn { flex: 1 1 100%; }
-  }
+  /* Typed agent row removed from mic flow — keep node for legacy type confirms. */
+  #agentBar { display: none !important; }
+  #views-wrap { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; }
+  .msg.user .tag { color: #9cc4e0; }
+  .msg.tmux-send { align-self: flex-end; background: #1a3a2a; border: 1px solid #2d6a4f; }
   /* Persistent input bar (replaces the full-screen mic pane) */
   #bar {
     display: none; flex-direction: column; gap: 10px; background: #1b1b1b;
@@ -260,20 +259,20 @@
     since typing on the console is slow. Settings persist in this browser.</p>
 </div>
 
-<div id="transcript"></div>
-
-<div id="agents">
-  <div id="agentList">
-    <select id="agentSelect" title="tmux session on the workstation"></select>
-    <button id="agentRefreshBtn" class="secondary" title="Refresh pane — reload what the tmux session is showing">↻</button>
-    <span id="agentMode" class="hint" style="margin:0"></span>
-  </div>
-  <pre id="agentOut">Pick a session above — its recent output shows here.</pre>
-  <!-- Typed directive row — used in type mode only. Mic mode uses the shared
-       Talk channel bar below (same pause/over design for AI and tmux). -->
-  <div id="agentBar">
-    <input id="agentInput" placeholder="Directive to send to the selected session…" autocomplete="off">
-    <button id="agentSendBtn">Send</button>
+<div id="views-wrap">
+  <div id="transcript"></div>
+  <!-- Drawer: watch a tmux pane WITHOUT replacing the chat transcript. -->
+  <div id="agents" aria-label="tmux pane drawer">
+    <div id="agentList">
+      <select id="agentSelect" title="Which shell to watch (independent of Talk to…)"></select>
+      <button id="agentRefreshBtn" class="secondary" title="Refresh pane — reload what the tmux session is showing">↻</button>
+      <span id="agentMode" class="hint" style="margin:0"></span>
+    </div>
+    <pre id="agentOut">Pick a shell above to watch. Talk to… still controls where your words go.</pre>
+    <div id="agentBar">
+      <input id="agentInput" placeholder="Directive…" autocomplete="off">
+      <button id="agentSendBtn">Send</button>
+    </div>
   </div>
 </div>
 
@@ -423,7 +422,7 @@
   function addMsg(role, text, tag) {
     var d = document.createElement("div");
     d.className = "msg " + role;
-    if (tag && role === "assistant") {
+    if (tag) {
       var s = document.createElement("span");
       s.className = "tag";
       s.textContent = tag;
@@ -434,6 +433,10 @@
     t.appendChild(d);
     while (t.children.length > 60) t.removeChild(t.firstChild);
     t.scrollTop = t.scrollHeight;
+  }
+  // Local send ack into the ONE transcript (tmux no longer leaves chat empty).
+  function addTmuxSendAck(sessionName, text) {
+    addMsg("user tmux-send", text, "→ 🖥 " + sessionName);
   }
 
   // ---- backend picker (which AI answers: gemma / claude / grok / …) ----
@@ -582,11 +585,12 @@
 
   // ---- typed input (works everywhere, the only console-native input) ----
   function sendTyped() {
-    var input = $("msgInput");
+    var input = (cfg.mode === "mic" && $("barInput")) ? $("barInput") : $("msgInput");
     var text = input.value.trim();
     if (!text) return;
     if (target.kind === "tmux") {          // same box, different verb + safety
-      $("agentInput").value = text;
+      if ($("agentInput")) $("agentInput").value = text;
+      agentConfirm = true;                 // mic/type through bar: pause/Send is confirm
       input.value = "";
       agentSend();
       return;
@@ -1078,20 +1082,21 @@
 
   function agentsView(show) {
     agentsOpen = show;
-    $("agents").style.display = show ? "flex" : "none";
-    $("transcript").style.display = show ? "none" : "flex";
-    $("composer").style.display = (show || cfg.mode === "mic") ? "none" : "flex";
-    // Mic mode: keep the shared Talk channel bar — do not swap in a second mic.
-    // Type mode: show the agent typed-input row while the pane is open.
-    if (cfg.mode === "mic") {
-      $("bar").style.display = "flex";
-      if ($("agentBar")) $("agentBar").style.display = "none";
-    } else if ($("agentBar")) {
-      $("agentBar").style.display = show ? "flex" : "none";
+    // Drawer over transcript — never hide #transcript (Fable: demote pane to monitor).
+    if (show) $("agents").classList.add("open");
+    else $("agents").classList.remove("open");
+    if (cfg.mode === "mic") $("bar").style.display = "flex";
+    else if ($("composer")) $("composer").style.display = "flex";
+    paintPaneBtn();
+    if (show) {
+      loadAgents();
+      if (agentTimer) clearInterval(agentTimer);
+      agentTimer = setInterval(refreshAgentOut, 5000);
+      refreshAgentOut();
+    } else if (agentTimer) {
+      clearInterval(agentTimer);
+      agentTimer = null;
     }
-    paintAgentsBtn();
-    if (show) { loadAgents(); agentTimer = setInterval(refreshAgentOut, 5000); }
-    else if (agentTimer) { clearInterval(agentTimer); agentTimer = null; }
   }
 
   // The session list is a LIVE survey — `tmux list-sessions` on the
@@ -1131,43 +1136,35 @@
       .catch(function (e) { setStatus(e.message, true); });
   }
 
-  // Pane toggle — only relevant when a tmux shell is the talk target.
+  // Pane is always available — watch a shell without changing Talk to… address.
   function paintPaneBtn() {
     var b = $("paneBtn");
     if (!b) return;
-    if (target.kind !== "tmux") {
-      b.style.display = "none";
-      return;
-    }
     b.style.display = "";
     if (agentsOpen) {
-      b.textContent = "💬 Chat";
-      b.title = "Show the conversation (keep target " + (agentSel || "tmux") + ")";
+      b.textContent = "▼ Pane";
+      b.title = "Hide the tmux pane drawer (conversation stays underneath)";
     } else {
       b.textContent = "🖥 Pane";
-      b.title = "Show the live tmux pane for " + (agentSel || "session");
+      b.title = "Watch a live tmux pane (does not change who you Talk to…)";
     }
   }
-  // Back-compat name used in a few call sites.
   function paintAgentsBtn() { paintPaneBtn(); }
 
   function applyAgentSelection() {
-    var s = agentSessions.filter(function (x) { return x.name === agentSel; })[0];
-    agentSendable = !!(s && s.sendable);
-    $("agentMode").textContent = s
-      ? (s.sendable ? "can type into this session" : "read-only (not in tmux-allow)")
-      : (agentSessions.length ? "no shell selected — pick one to type into it" : "");
-    paintAgentsBtn();
-    // A tmux target with nothing selected would leave the chip pointing at a
-    // shell that no longer exists (or never did). Fall back to the AI backend,
-    // which is the safe direction: it cannot execute anything.
-    if (target.kind === "tmux") {
-      if (agentSel) { target.name = agentSel; }
-      else { target = { kind: "ai", name: cfg.backend || "" }; }
-      paintTargetChip();
-    }
+    var watch = agentSessions.filter(function (x) { return x.name === agentSel; })[0];
+    var talk = target.kind === "tmux"
+      ? agentSessions.filter(function (x) { return x.name === target.name; })[0]
+      : null;
+    agentSendable = target.kind === "tmux" ? !!(talk && talk.sendable) : true;
+    $("agentMode").textContent = watch
+      ? ((watch.sendable ? "can send" : "read-only") +
+         (target.kind === "tmux" && target.name === agentSel ? " · also Talk to…" : " · watching"))
+      : (agentSessions.length ? "pick a shell to watch" : "no tmux sessions");
+    paintPaneBtn();
     resetAgentSend();
     refreshAgentOut();
+    paintTalkForTarget();
   }
 
   function refreshAgentOut() {
@@ -1194,35 +1191,50 @@
   function resetAgentSend() {
     agentConfirm = false;
     var b = $("agentSendBtn");
-    b.className = "";
-    b.textContent = "Send";
-    b.disabled = !agentSendable;
-    $("agentInput").placeholder = agentSendable
-      ? "Directive to send to " + agentSel + "…"
-      : (agentSel ? agentSel + " is read-only (not in tmux-allow)"
-                  : "No shell selected — pick one above to type into it");
+    if (b) {
+      b.className = "";
+      b.textContent = "Send";
+      b.disabled = !agentSendable;
+    }
+    var inp = $("agentInput");
+    if (inp) {
+      inp.placeholder = agentSendable
+        ? "Directive to send to " + (target.kind === "tmux" ? target.name : agentSel) + "…"
+        : (agentSel ? agentSel + " is read-only (not in tmux-allow)"
+                    : "No shell selected — pick one to watch");
+    }
     if (typeof paintAgentMic === "function") paintAgentMic();
   }
 
   function agentSend() {
-    var text = $("agentInput").value.trim();
-    if (!agentSel || !text) return;
-    if (!agentConfirm) {   // two-tap confirm: typing into a shell is remote execution
+    // Prefer Talk-to tmux name; fall back to pane watch selection.
+    var dest = (target.kind === "tmux" && target.name) ? target.name : agentSel;
+    var box = dictateBox();
+    var text = (box && box.value.trim()) || ($("agentInput") && $("agentInput").value.trim()) || "";
+    if (!dest || !text) return;
+    if (!agentConfirm) {   // two-tap confirm when using visible agent Send (type path)
+      if ($("agentSendBtn") && $("agentBar") && $("agentBar").style.display !== "none") {
+        agentConfirm = true;
+        var b = $("agentSendBtn");
+        b.className = "confirm";
+        b.textContent = "Tap to confirm → " + dest;
+        return;
+      }
+      // Mic channel path already confirmed by pause / “over”.
       agentConfirm = true;
-      var b = $("agentSendBtn");
-      b.className = "confirm";
-      b.textContent = "Tap to confirm → " + agentSel;
-      return;
     }
+    var sendName = dest;
     api("/api/tmux/send", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name: agentSel, text: text, session: cfg.session })
+      body: JSON.stringify({ name: sendName, text: text, session: cfg.session })
     }).then(function () {
-      $("agentInput").value = "";
+      if (box) box.value = "";
+      if ($("agentInput")) $("agentInput").value = "";
+      addTmuxSendAck(sendName, text);
       resetAgentSend();
-      setStatus("Sent to " + agentSel + ".");
-      setTimeout(refreshAgentOut, 800);
+      setStatus("Sent to " + sendName + ".");
+      if (agentsOpen) setTimeout(refreshAgentOut, 800);
     }).catch(function (e) { resetAgentSend(); setStatus(e.message, true); });
   }
 
@@ -1389,7 +1401,9 @@
   // listen) needs it, but the trailing-word form below does not — and
   // requiring sound meant no hands-free send at all in a quiet room.
   function dictateReady() {
-    return target.kind === "tmux" ? agentSendable : true;
+    if (target.kind !== "tmux") return true;
+    var s = agentSessions.filter(function (x) { return x.name === target.name; })[0];
+    return !!(s && s.sendable);
   }
 
   // Channel send mode (persisted). "pause" = auto-send when silence ends the
@@ -1643,46 +1657,39 @@
   }
 
   function setTarget(kind, name) {
-    // Switching target closes an open voice channel (avoid sending to the wrong place).
+    // Address only — never forces Pane/Chat layout (Fable: decouple address from stage).
     if (dictateLoop) endDictateLoop("Target changed — channel closed.");
     target = { kind: kind, name: name || "" };
     if (kind === "ai") {
       cfg.backend = name || "";
       try { localStorage.setItem("tb_backend", cfg.backend); } catch (e) {}
       if ($("backendSel")) $("backendSel").value = cfg.backend;
-      agentsView(false);
+      agentSendable = true; // AI is always "sendable"
     } else {
       agentSel = name;
-      agentsView(true);
-      applyAgentSelection();
+      // Align watch dropdown with talk target, but do not open/close the drawer.
+      if ($("agentSelect")) $("agentSelect").value = name;
+      var s = agentSessions.filter(function (x) { return x.name === name; })[0];
+      agentSendable = !!(s && s.sendable);
+      if (!agentSessions.length) loadAgents();
     }
     var box = $("msgInput");
-    if (box) { box.value = ""; }   // retargeting clears the field (mis-target guard)
+    if (box) box.value = "";
     if ($("barInput")) {
       $("barInput").value = "";
-      $("barInput").placeholder = target.kind === "tmux"
-        ? ("For " + target.name + " — " +
-           (sendMode === "pause" ? "speak (sends on pause)" : "speak + “over”") +
-           ", or type + Send")
-        : "…or type instead";
-    }
-    if ($("agentInput")) {
-      $("agentInput").value = "";
-      $("agentInput").placeholder = target.kind === "tmux" && agentSendable
-        ? ("Hands-free: open channel — " +
-           (sendMode === "pause" ? "speak (sends on pause)" : "speak + “over”") +
-           " — or type here")
-        : $("agentInput").placeholder;
+      $("barInput").placeholder = "Speak on the channel — or type here";
     }
     paintTargetChip();
-    paintAgentsBtn();
+    paintPaneBtn();
     paintTalkForTarget();
-    if (kind === "tmux" && agentSendable) {
-      setStatus("Target 🖥 " + name + " — tap Talk for the channel. " +
-                channelOpenHint() + " Header 🖥 Pane shows the live shell (↻ refreshes it).");
-    } else if (kind === "ai") {
-      setStatus("Target 🤖 " + backendLabel(name || cfg.backend || "AI") +
-                " — tap Talk for the channel. " + channelOpenHint());
+    if (kind === "tmux") {
+      setStatus("Talk to 🖥 " + name + " — " + channelOpenHint() +
+                " Pane watches the shell without leaving the chat.");
+      // Offer the drawer once; user can close it.
+      if (!agentsOpen) agentsView(true);
+    } else {
+      setStatus("Talk to 🤖 " + backendLabel(name || cfg.backend || "AI") +
+                " — " + channelOpenHint());
     }
   }
 
@@ -1826,9 +1833,8 @@
     setStatus("Cleared.");
   };
 
-  // Pane ↔ Chat only — never changes the talk target.
+  // Pane drawer — independent of Talk to… address.
   $("paneBtn").onclick = function () {
-    if (target.kind !== "tmux") return;
     agentsView(!agentsOpen);
   };
   $("agentRefreshBtn").onclick = function () {
@@ -1838,8 +1844,9 @@
   };
   $("agentSelect").addEventListener("change", function () {
     agentSel = this.value;
-    if (agentSel) setTarget("tmux", agentSel);
-    else applyAgentSelection();
+    // Changing what we WATCH does not change Talk to… unless user uses Talk to…
+    applyAgentSelection();
+    refreshAgentOut();
   });
   $("agentSendBtn").onclick = agentSend;
   $("agentInput").addEventListener("input", function () { if (agentConfirm) resetAgentSend(); });
