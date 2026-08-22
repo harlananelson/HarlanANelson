@@ -1649,7 +1649,7 @@
   function openTargetSheet() {
     var rows = [];
     (window.__backends || []).forEach(function (b) {
-      rows.push({ label: (target.kind === "ai" && cfg.backend === b ? "● " : "○ ") + "🤖 " + (b || "auto"),
+      rows.push({ label: (target.kind === "ai" && cfg.backend === b ? "● " : "○ ") + "🤖 " + backendLabel(b),
                   note: b ? "" : "server default",
                   onClick: function () { setTarget("ai", b); } });
     });
