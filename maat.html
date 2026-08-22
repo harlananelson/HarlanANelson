@@ -11,10 +11,11 @@
 <meta name="apple-mobile-web-app-title" content="Maat">
 <meta name="description" content="Maat — right order for a whole digital life. One app under your control.">
 <meta name="referrer" content="no-referrer">
-<meta http-equiv="Permissions-Policy" content="microphone=(self), camera=(), geolocation=()">
 <!-- frame-src: public drills + same-origin tools on 'self'; private backends on the known tailnet host.
-     Custom Settings URLs outside this allowlist will be blocked by the browser. -->
-<meta http-equiv="Content-Security-Policy" content="frame-src 'self' https://harlan-b550-aorus-pro-ac.taila21a91.ts.net https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:8443 https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:8444 https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443 blob: data:;">
+     Custom Settings URLs outside this allowlist will be blocked by the browser.
+     (Permissions-Policy is header-only — do not put it in a meta tag; a wrong
+     microphone=(self) header would break Music's cross-origin mic iframe.) -->
+<meta http-equiv="Content-Security-Policy" content="frame-src 'self' https://harlan-b550-aorus-pro-ac.taila21a91.ts.net https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:8443 https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:8444 https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443;">
 <!-- PWA: name Maat, standalone, feather icon -->
 <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiTWFhdCIsInNob3J0X25hbWUiOiJNYWF0IiwiZGVzY3JpcHRpb24iOiJSaWdodCBvcmRlciBmb3IgYSB3aG9sZSBkaWdpdGFsIGxpZmUuIE9uZSBhcHAgdW5kZXIgeW91ciBjb250cm9sLiIsInN0YXJ0X3VybCI6Ii4vbWFhdC5odG1sIiwic2NvcGUiOiIuLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwib3JpZW50YXRpb24iOiJhbnkiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiIzBmMTQxOSIsInRoZW1lX2NvbG9yIjoiIzBmMTQxOSIsImljb25zIjpbeyJzcmMiOiJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0OGNtVmpkQ0IzYVdSMGFEMGlOVEV5SWlCb1pXbG5hSFE5SWpVeE1pSWdjbmc5SWpFeE1pSWdabWxzYkQwaUl6Qm1NVFF4T1NJdlBqeHdZWFJvSUdROUlrMHlOVFlnT1RaakxUSTBJREF0TkRRZ01qQXRORFFnTkRSMk1UYzJZekFnTmpBZ05EZ2dNVEE0SURFd09DQXhNRGdnTWpRZ01DQTBOQzB5TUNBME5DMDBOSE10TWpBdE5EUXRORFF0TkRSakxUSTBJREF0TkRRdE1qQXRORFF0TkRSV01UUXdZekF0TWpRdE1qQXRORFF0TkRRdE5EUjZJaUJtYVd4c1BTSWpZemhoTXpaaklpOCtQSEJoZEdnZ1pEMGlUVEl5TUNBek9EQm9OekoyTXpKb0xUY3llaUlnWm1sc2JEMGlJMk00WVRNMll5SXZQanh3WVhSb0lHUTlJazB4T1RJZ05ESTBhREV5T0hZeU5FZ3hPVEo2SWlCbWFXeHNQU0lqWXpoaE16WmpJaUJ2Y0dGamFYUjVQU0l1TnlJdlBqd3ZjM1puUGc9PSIsInNpemVzIjoiYW55IiwidHlwZSI6ImltYWdlL3N2Zyt4bWwiLCJwdXJwb3NlIjoiYW55IG1hc2thYmxlIn1dfQ=="
 <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iIzBmMTQxOSIvPjxwYXRoIGQ9Ik0yNTYgOTZjLTI0IDAtNDQgMjAtNDQgNDR2MTc2YzAgNjAgNDggMTA4IDEwOCAxMDggMjQgMCA0NC0yMCA0NC00NHMtMjAtNDQtNDQtNDRjLTI0IDAtNDQtMjAtNDQtNDRWMTQwYzAtMjQtMjAtNDQtNDQtNDR6IiBmaWxsPSIjYzhhMzZjIi8+PHBhdGggZD0iTTIyMCAzODBoNzJ2MzJoLTcyeiIgZmlsbD0iI2M4YTM2YyIvPjxwYXRoIGQ9Ik0xOTIgNDI0aDEyOHYyNEgxOTJ6IiBmaWxsPSIjYzhhMzZjIiBvcGFjaXR5PSIuNyIvPjwvc3ZnPg==">
@@ -175,7 +176,8 @@
   <h1>Maat</h1>
   <div id="aboutPanel" class="note" style="margin-bottom:14px"></div>
   <p class="note">URL overrides (this browser only). Listen, Converse, and Tools need
-    Tailscale. Practice is public. Blank a URL to hide that surface.</p>
+    Tailscale home backends. Practice is public. Blank a URL to show an empty
+    placeholder for that surface (tab stays; clear the field to reset later).</p>
   <div id="settingsFields"></div>
   <div class="row">
     <button id="saveModes" type="button">Save</button>
@@ -244,7 +246,6 @@
 
   // Peer destinations ≤4. About lives in gear (PR4), not the thumb bar.
   var MODE_IDS = { sermon: 1, practice: 1, converse: 1, tools: 1 };
-  var PRIVATE_MODES = { sermon: 1, converse: 1, tools: 1 };
   var DEFAULTS = [
     {
       id: "sermon",
@@ -281,27 +282,33 @@
     }
   ];
 
-  function onTailnet() {
-    return location.hostname.indexOf(".ts.net") >= 0;
-  }
-
+  // When Maat itself is opened from the tailnet host with no port, Listen's
+  // WebSocket is more reliable same-origin on :8443 than via the Netlify page.
   function defaultUrl(mode) {
-    var onTailnet = location.hostname.indexOf(".ts.net") >= 0 && location.port === "";
-    if (onTailnet && mode.id === "sermon") {
+    var onTailnetOriginNoPort =
+      location.hostname.indexOf(".ts.net") >= 0 && location.port === "";
+    if (onTailnetOriginNoPort && mode.id === "sermon") {
       return location.protocol + "//" + location.hostname + ":8443/";
     }
     return mode.url;
   }
 
-  function practiceUrl(lang) {
-    var base = "./languages.html";
-    if (lang && PRACTICE_LANGS[lang]) return base + "?lang=" + lang;
-    return base;
-  }
-
-  function converseUrl(input) {
-    if (input === "mic") return "./assistant.html?mode=mic";
-    return "./assistant.html";
+  // Append/replace a query param on an existing URL without discarding a
+  // Settings override host (e.g. tailnet assistant.html stays on that host).
+  function withQueryParam(url, key, value) {
+    var fallback = url || "./";
+    try {
+      var u = new URL(fallback, location.href);
+      if (value === null || value === undefined || value === "") u.searchParams.delete(key);
+      else u.searchParams.set(key, value);
+      if (u.origin === location.origin) {
+        var file = u.pathname.split("/").pop() || "";
+        return "./" + file + u.search + u.hash;
+      }
+      return u.href;
+    } catch (e) {
+      return fallback;
+    }
   }
 
   function getLastTool() {
@@ -363,7 +370,6 @@
   // PR4: cold open always Converse (predictable). Deep links override below.
   // Do not restore last destination from localStorage.
   var active = "converse";
-  var deepLinkApplied = false;
 
   function aboutHtml() {
     return (
@@ -375,14 +381,9 @@
       '<code>#practice?lang=es</code> · <code>#converse?input=mic</code> · ' +
       '<code>#tools?tool=music</code> · <code>?mode=sermon</code></p>' +
       '<p style="margin:0;font-size:12px">Aliases: voice→Converse+mic, assistant→Converse, music/remarkable→Tools. ' +
-      'Public drills stay at languages.html / *-speech-drill.html.</p>'
+      'Public drills stay at languages.html / *-speech-drill.html. Load failures (Tailscale/service down) ' +
+      'surface as a banner after the iframe timeout — not by guessing connectivity from the page origin.</p>'
     );
-  }
-
-  function maybeDegradeBanner(id) {
-    if (!PRIVATE_MODES[id] || onTailnet()) return;
-    var label = id === "sermon" ? "Listen" : (id === "converse" ? "Converse" : "Tools");
-    showBanner("Connect Tailscale for " + label + " (home backends). Practice works without it.");
   }
 
   function toolById(id) {
@@ -478,6 +479,8 @@
       if (timer) { clearTimeout(timer); timer = null; }
       if (longFired) { longFired = false; return; }
       if (Date.now() < ignoreUntil) return;
+      // Swallow the synthetic mouse pair that follows a touch tap.
+      ignoreUntil = Date.now() + 400;
       onShort();
     };
     el.addEventListener("touchstart", start, { passive: true });
@@ -568,11 +571,13 @@
 
   function watchIframeLoad(frame, app) {
     var done = false;
+    // Failure-driven degradation: only banner when a frame actually fails/times out
+    // (not when the shell is merely served from harlananelson.com with Tailscale up).
     var timer = setTimeout(function () {
       if (done) return;
       var m = app.label + " did not load (" + app.url + ") — is Tailscale on / service running?";
       reportError("maat.html/" + app.id, m); showBanner(m);
-    }, 12000);
+    }, 8000);
     frame.addEventListener("load", function () { done = true; clearTimeout(timer); });
     frame.addEventListener("error", function () {
       done = true; clearTimeout(timer);
@@ -584,7 +589,6 @@
   function show(id) {
     if (!MODE_IDS[id]) id = "converse";
     active = id;
-    maybeDegradeBanner(id);
     modes.forEach(function (a) {
       var v = $("view-" + a.id), t = $("tab-" + a.id);
       var on = a.id === id;
@@ -720,10 +724,7 @@
       if (!TOOL_IDS[tool]) tool = null;
     }
 
-    if (mode && MODE_IDS[mode]) {
-      active = mode;
-      deepLinkApplied = true;
-    }
+    if (mode && MODE_IDS[mode]) active = mode;
 
     if (lang) {
       lang = String(lang).toLowerCase();
@@ -732,30 +733,29 @@
     if (lang) {
       modes.forEach(function (a) {
         if (a.id !== "practice") return;
-        if (!a.url || a.url.indexOf("languages.html") >= 0) {
-          a.url = practiceUrl(lang);
-        }
+        // Preserve Settings host; only set lang= on the existing URL.
+        a.url = withQueryParam(a.url || "./languages.html", "lang", lang);
       });
-      if (!mode) { active = "practice"; deepLinkApplied = true; }
+      if (!mode) active = "practice";
     }
 
     if (input === "mic" || (mode === "converse" && input === "type")) {
       modes.forEach(function (a) {
         if (a.id !== "converse") return;
-        if (!a.url || a.url.indexOf("assistant.html") >= 0) {
-          a.url = converseUrl(input === "mic" ? "mic" : "");
-        }
+        // Preserve Settings host; toggle mode=mic without replacing the base URL.
+        a.url = withQueryParam(
+          a.url || "./assistant.html",
+          "mode",
+          input === "mic" ? "mic" : null
+        );
       });
-      if (!mode) { active = "converse"; deepLinkApplied = true; }
+      if (!mode) active = "converse";
     }
 
     if (tool) {
       activeTool = tool;
       setLastTool(tool);
-      if (!mode || mode === "tools") {
-        active = "tools";
-        deepLinkApplied = true;
-      }
+      if (!mode || mode === "tools") active = "tools";
     }
   }
   applyDeepLink();

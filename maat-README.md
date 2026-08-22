@@ -37,18 +37,21 @@ Unknown `mode` / `lang` / `input` / `tool` values are ignored (allowlists).
 
 ### Security / degradation
 
-- `Referrer-Policy: no-referrer`, `Permissions-Policy` (mic self), `frame-src` CSP for `'self'` + known tailnet hosts
-- Practice iframe sandboxed (no top-navigation)
-- Opening Listen / Converse / Tools off Tailscale shows a connect banner; Practice still works
+- `Referrer-Policy: no-referrer`; `frame-src` CSP for `'self'` + known tailnet hosts
+- Practice iframe sandboxed (no top-navigation) — stops accidental shell navigation; not an XSS boundary for same-origin drills
+- **Failure-driven** banners only: if a private iframe times out / errors, the shell warns (Tailscale or service). No false “connect Tailscale” banner just because Maat is served from harlananelson.com
+- Deep links append `lang=` / `mode=` onto the existing Settings URL (they do not replace a custom host)
 
 ## How to test
 
 1. Open `/maat.html` → lands on **Converse** (not last tab)
 2. Thumb bar: Listen · Practice · Converse · Tools · ⚙️ only (no About tab)
 3. ⚙️ shows About blurb + URL fields
-4. Off Tailscale, tap Tools → banner; Practice still loads
-5. Site navbar: no Spanish/English/Swahili/Japanese Drill entries; Languages + Maat + Listen remain
-6. Deep links and legacy aliases still work
+4. Public PWA origin + Tailscale up: Converse/Tools load with **no** false connect banner
+5. Services truly down: Tools/Listen/Converse banner after iframe timeout; Practice still loads
+6. Settings Converse URL on a tailnet host survives `#converse?input=mic` (host kept, `mode=mic` added)
+7. Site navbar: no per-language Drill entries; Languages + Maat + Listen remain
+8. Deep links and legacy aliases still work
 
 ## Related
 
