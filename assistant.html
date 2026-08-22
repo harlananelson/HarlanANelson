@@ -420,37 +420,219 @@
     return true;
   }
 
-  // ---- spoken replies (server TTS -> <audio>; Sound button unlocks autoplay) ----
-  // onDone fires once when speech is done OR skipped OR failed — callers
-  // (channel resume, confirm listen) must not hang when TTS dies on iPad.
+  // ---- spoken replies ----------------------------------------------------
+  // Phone-like duplex: one AudioContext + one mic stream (PlayAndRecord).
+  // TTS plays through THAT context, not a separate <audio> element — iOS
+  // ducks HTMLAudio when getUserMedia is open. Barge-in is energy-only on
+  // the same mic (AEC on). Fallback: sentence-peek if decode/WebAudio fails.
+  var ttsGen = 0, ttsPeeking = false, peekCtl = null;
+  var call = null, ttsNode = null, bargeProc = null;
+
+  function ensureCall(ok, fail) {
+    if (call && call.stream && call.ctx) {
+      try { if (call.ctx.state === "suspended" && call.ctx.resume) call.ctx.resume(); } catch (e) {}
+      ok(call);
+      return;
+    }
+    navigator.mediaDevices.getUserMedia({
+      audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true, channelCount: 1 }
+    }).then(function (stream) {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      var ctx = new AC();
+      if (ctx.resume) ctx.resume();
+      call = { stream: stream, ctx: ctx, src: ctx.createMediaStreamSource(stream) };
+      ok(call);
+    }).catch(function (e) { if (fail) fail(e); });
+  }
+  function stopTtsNode() {
+    if (!ttsNode) return;
+    try { ttsNode.onended = null; ttsNode.stop(0); } catch (e) {}
+    try { ttsNode.disconnect(); } catch (e) {}
+    ttsNode = null;
+  }
+  function stopBarge() {
+    if (!bargeProc) return;
+    try { bargeProc.disconnect(); bargeProc.onaudioprocess = null; } catch (e) {}
+    bargeProc = null;
+  }
+  function startBargeWatch(onHit) {
+    stopBarge();
+    if (!call) return;
+    var proc = call.ctx.createScriptProcessor(2048, 1, 1);
+    var speechMs = 0, armed = false;
+    // Ignore the first 250ms (TTS attack / AEC settling) so we don't
+    // immediately "hear" the speaker as the user.
+    setTimeout(function () { armed = true; }, 250);
+    proc.onaudioprocess = function (e) {
+      if (!armed || !bargeProc) return;
+      var buf = e.inputBuffer.getChannelData(0);
+      var n = buf.length, sum = 0, j;
+      for (j = 0; j < n; j++) sum += buf[j] * buf[j];
+      var rms = Math.sqrt(sum / n);
+      var ms = (n / call.ctx.sampleRate) * 1000;
+      if (rms >= 0.055) speechMs += ms; else speechMs = 0;
+      if (speechMs >= 140) { stopBarge(); onHit(); }
+    };
+    call.src.connect(proc);
+    proc.connect(call.ctx.destination);
+    bargeProc = proc;
+  }
+  function releaseCall() {
+    stopBarge();
+    stopTtsNode();
+    stopPeek();
+    if (!call) return;
+    try { call.stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
+    try { call.ctx.close(); } catch (e) {}
+    call = null;
+  }
+  function playOnCall(blob, then) {
+    if (!call || !call.ctx) { then(new Error("no call")); return; }
+    var ctx = call.ctx;
+    blob.arrayBuffer().then(function (ab) {
+      var copy = ab.slice(0);
+      var once = false;
+      var ok = function (buf) {
+        if (once) return;
+        once = true;
+        stopTtsNode();
+        var src = ctx.createBufferSource();
+        src.buffer = buf;
+        src.connect(ctx.destination);
+        src.onended = function () { if (ttsNode === src) ttsNode = null; then(); };
+        ttsNode = src;
+        try { src.start(0); } catch (e) { then(e); }
+      };
+      var bad = function (e) { if (once) return; once = true; then(e || new Error("decode")); };
+      var p = ctx.decodeAudioData(copy, ok, bad);
+      if (p && p.then) p.then(ok).catch(bad);
+    }).catch(then);
+  }
+
+  function splitSentences(text) {
+    var t = String(text || "").replace(/\s+/g, " ").trim();
+    if (!t) return [];
+    var bits = t.split(/([.!?]+["')\]]*)\s+/);
+    var out = [], i;
+    for (i = 0; i < bits.length; i += 2) {
+      var s = ((bits[i] || "") + (bits[i + 1] || "")).trim();
+      if (!s) continue;
+      if (out.length && s.length < 16) out[out.length - 1] += " " + s;
+      else out.push(s);
+    }
+    return out.length ? out : [t];
+  }
+  function stopPeek() {
+    if (peekCtl) { try { peekCtl.stop(); } catch (e) {} peekCtl = null; }
+    ttsPeeking = false;
+  }
+  function cancelSpokenReply() {
+    ttsGen++;
+    stopPeek();
+    stopBarge();
+    stopTtsNode();
+    try { audioEl.pause(); } catch (e) {}
+    ttsPlaying = false;
+    ttsPeeking = false;
+  }
+  function fetchTtsBlob(sentence) {
+    return api("/api/tts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: sentence })
+    }).then(function (r) {
+      if (!r.ok) throw new Error("TTS HTTP " + r.status);
+      return r.blob();
+    });
+  }
+  // Energy-only barge-in. High threshold + short window so echo tail of the
+  // last sentence does not steal the next one.
+  function peekBargeIn(done) {
+    var settled = false;
+    function settle(hit) {
+      if (settled) return;
+      settled = true;
+      ttsPeeking = false;
+      peekCtl = null;
+      paintTalkForTarget();
+      done(!!hit);
+    }
+    if (!dictateLoop || !micSupported()) { settle(false); return; }
+    ttsPeeking = true;
+    paintTalkForTarget();
+    var decay = setTimeout(function () {
+      navigator.mediaDevices.getUserMedia({
+        audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 }
+      }).then(function (stream) {
+        var AC = window.AudioContext || window.webkitAudioContext;
+        var ctx = new AC();
+        if (ctx.resume) ctx.resume();
+        var src = ctx.createMediaStreamSource(stream);
+        var proc = ctx.createScriptProcessor(2048, 1, 1);
+        var speechMs = 0, elapsed = 0;
+        function stop() {
+          try { proc.disconnect(); proc.onaudioprocess = null; } catch (e) {}
+          try { src.disconnect(); } catch (e) {}
+          try { stream.getTracks().forEach(function (tr) { tr.stop(); }); } catch (e) {}
+          try { ctx.close(); } catch (e) {}
+        }
+        peekCtl = { stop: function () { stop(); settle(false); } };
+        proc.onaudioprocess = function (e) {
+          var buf = e.inputBuffer.getChannelData(0);
+          var n = buf.length, sum = 0, j;
+          for (j = 0; j < n; j++) sum += buf[j] * buf[j];
+          var rms = Math.sqrt(sum / n);
+          var ms = (n / ctx.sampleRate) * 1000;
+          elapsed += ms;
+          if (rms >= 0.05) speechMs += ms; else speechMs = 0;
+          if (speechMs >= 90) { stop(); settle(true); return; }
+          if (elapsed >= 380) { stop(); settle(false); }
+        };
+        src.connect(proc);
+        proc.connect(ctx.destination);
+      }).catch(function () { settle(false); });
+    }, 180);
+    peekCtl = { stop: function () { clearTimeout(decay); settle(false); } };
+  }
+
   function speak(text, onDone) {
     // Meeting situation (continuous) is silent by construction.
     // ALWAYS complete: if TTS/play fails, hands-free must still re-listen.
-    // Stuck on "Listening will resume…" was why a manual mic off/on was needed.
     var finished = false;
+    var gen = ++ttsGen;
     function finish() {
       if (finished) return;
       finished = true;
+      if (gen !== ttsGen) return;
+      ttsPlaying = false;
+      ttsPeeking = false;
+      stopPeek();
       if (onDone) {
         try { onDone(); } catch (e) {}
       }
-      // If playback never started, audio "ended" won't fire — recover here.
       if (handsFree && awaitingReply) scheduleRelisten(250);
+      maybeResumeAfterTts();
     }
     if (!soundOn || continuousMode || micMode === "continuous" || !text) {
       finish();
       return;
     }
-    setTimeout(finish, 20000);   // never strand agent dictation / callers
-    api("/api/tts", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: text })
-    }).then(function (r) {
-      if (!r.ok) throw new Error("TTS HTTP " + r.status);
-      return r.blob();
-    }).then(function (blob) {
-      if (!soundOn) { finish(); return; }
+    ttsPlaying = true;
+    hushMic();
+    setTimeout(function () { if (gen === ttsGen && !finished) finish(); }, 120000);
+
+    function bargeHit() {
+      if (gen !== ttsGen || finished) return;
+      cancelSpokenReply();
+      resumeAfterTts = false;
+      clearReplyWait();
+      setStatus("You have the floor.");
+      if (dictateLoop) startDictate();
+      paintTalkForTarget();
+    }
+
+    function playBlob(blob, then) {
+      if (gen !== ttsGen) return;
       if (audioEl.src && audioEl.src.indexOf("blob:") === 0) {
         URL.revokeObjectURL(audioEl.src);
       }
@@ -458,25 +640,74 @@
       var onPlayDone = function () {
         audioEl.removeEventListener("ended", onPlayDone);
         audioEl.removeEventListener("error", onPlayDone);
-        finish();
+        then();
       };
       audioEl.addEventListener("ended", onPlayDone);
       audioEl.addEventListener("error", onPlayDone);
       var p = audioEl.play();
-      if (p && p.then) return p;
-    }).catch(function (e) {
-      try {
-        if ("speechSynthesis" in window) {
-          var u = new SpeechSynthesisUtterance(text);
-          u.onend = function () { finish(); };
-          u.onerror = function () { finish(); };
-          speechSynthesis.speak(u);
-          return;
-        }
-      } catch (e2) {}
-      setStatus("Speech failed: " + ((e && e.message) || e), true);
-      finish();
-    });
+      if (p && p.catch) p.catch(function () { then(); });
+    }
+    function playDuplex(blob) {
+      paintTalkForTarget();
+      playOnCall(blob, function (err) {
+        stopBarge();
+        if (gen !== ttsGen) return;
+        if (err) { playSplit(); return; }
+        finish();
+      });
+      startBargeWatch(bargeHit);
+    }
+    function playSplit() {
+      var parts = (dictateLoop && target.kind !== "tmux") ? splitSentences(text) : [text];
+      var blobs = [];
+      function goPrefetch(k) {
+        if (k >= parts.length || blobs[k]) return;
+        fetchTtsBlob(parts[k]).then(function (b) { blobs[k] = b; })
+          .catch(function () { blobs[k] = null; });
+      }
+      function playIndex(i) {
+        if (gen !== ttsGen || finished) return;
+        if (i >= parts.length) { finish(); return; }
+        ttsPeeking = false;
+        paintTalkForTarget();
+        var go = function (blob) {
+          if (gen !== ttsGen) return;
+          if (!blob) { playIndex(i + 1); return; }
+          playBlob(blob, function () {
+            if (gen !== ttsGen || finished) return;
+            if (i >= parts.length - 1) { finish(); return; }
+            goPrefetch(i + 2);
+            if (dictateLoop && soundOn) {
+              peekBargeIn(function (hit) {
+                if (gen !== ttsGen) return;
+                if (hit) { bargeHit(); return; }
+                playIndex(i + 1);
+              });
+            } else playIndex(i + 1);
+          });
+          goPrefetch(i + 1);
+        };
+        if (blobs[i]) go(blobs[i]);
+        else fetchTtsBlob(parts[i]).then(go).catch(function (e) {
+          if (i === 0) {
+            setStatus("Speech failed: " + ((e && e.message) || e), true);
+            finish();
+          } else playIndex(i + 1);
+        });
+      }
+      playIndex(0);
+    }
+
+    if (dictateLoop && micSupported()) {
+      ensureCall(function () {
+        fetchTtsBlob(text).then(function (blob) {
+          if (gen !== ttsGen) return;
+          playDuplex(blob);
+        }).catch(function () { playSplit(); });
+      }, function () { playSplit(); });
+    } else {
+      playSplit();
+    }
   }
 
   // ---- polling (console mode keeps the car screen in sync with the phone) ----
@@ -491,11 +722,21 @@
           if (ev.id <= lastEventId) return;
           lastEventId = ev.id;
           addMsg(ev.role, ev.text, ev.backend);
+          if (ev.role === "error" && resumeAfterTts) {
+            resumeAfterTts = false;
+            clearReplyWait();
+            if (dictateLoop) resumeDictateNow();
+          }
           if (ev.role === "assistant" && !firstPoll && ev.id > lastSpokenId) {
             lastSpokenId = ev.id;
             // Speak only real AI answers. Never speak "Sent to …: <user text>"
             // (tmux receipt) or other receipts that repeat what the user said.
             if (shouldSpeakAssistant(ev)) speak(ev.text);
+            else if (resumeAfterTts) {
+              resumeAfterTts = false;
+              clearReplyWait();
+              if (dictateLoop) resumeDictateNow();
+            }
           }
         });
         if (firstPoll) {
@@ -1106,9 +1347,12 @@
   function agentAudioStop() {
     if (!agentAudio) return;
     try { agentAudio.proc.disconnect(); agentAudio.proc.onaudioprocess = null; } catch (e) {}
-    try { agentAudio.src.disconnect(); } catch (e) {}
-    try { agentAudio.stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
-    try { agentAudio.ctx.close(); } catch (e) {}
+    // Shared call session (phone-like duplex): do not stop tracks or close ctx.
+    if (!agentAudio.shared) {
+      try { agentAudio.src.disconnect(); } catch (e) {}
+      try { agentAudio.stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
+      try { agentAudio.ctx.close(); } catch (e) {}
+    }
     agentAudio = null;
   }
 
@@ -1116,16 +1360,11 @@
     agentPhase = phase;
     var hang = phase === "confirm" ? AG_CONFIRM_HANG_MS : AG_HANG_MS;
     var maxMs = phase === "confirm" ? AG_CONFIRM_MAX_MS : AG_MAX_MS;
-    navigator.mediaDevices.getUserMedia({
-      audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 }
-    }).then(function (stream) {
-      var AC = window.AudioContext || window.webkitAudioContext;
-      var ctx = new AC();
-      if (ctx.resume) ctx.resume();
-      var rate = ctx.sampleRate;
-      var src = ctx.createMediaStreamSource(stream);
-      var proc = ctx.createScriptProcessor(CFRAME, 1, 1);
-      agentAudio = { stream: stream, ctx: ctx, src: src, proc: proc };
+    ensureCall(function (c) {
+      try { if (c.ctx.resume) c.ctx.resume(); } catch (e) {}
+      var rate = c.ctx.sampleRate;
+      var proc = c.ctx.createScriptProcessor(CFRAME, 1, 1);
+      agentAudio = { stream: c.stream, ctx: c.ctx, src: c.src, proc: proc, shared: true };
       agentVad = { speaking: false, silenceMs: 0, frames: [], total: 0, elapsed: 0 };
       agentRecording = true; paintAgentMic();
 
@@ -1142,15 +1381,15 @@
         } else if (agentVad.speaking) {
           agentVad.frames.push(frame); agentVad.total += n;
           agentVad.silenceMs += ms;
-          if (agentVad.silenceMs >= hang) { agentFinish(onText); return; }   // auto-stop on silence
+          if (agentVad.silenceMs >= hang) { agentFinish(onText); return; }
         }
         if (agentVad.elapsed >= maxMs) { agentFinish(onText); }
       };
-      src.connect(proc);
-      proc.connect(ctx.destination);
+      c.src.connect(proc);
+      proc.connect(c.ctx.destination);
       setStatus(phase === "confirm" ? "Say “send” to run it, or “cancel”."
                                     : "Listening — just speak, it stops on its own.");
-    }).catch(function (e) {
+    }, function (e) {
       agentRecording = false; agentPhase = "idle"; paintAgentMic();
       setStatus("Microphone unavailable: " + (e && e.message || e), true);
     });
@@ -1204,6 +1443,18 @@
     }
     b.disabled = false;
     if (dictateLoop) {
+      if (ttsPeeking) {
+        b.className = "rec";
+        b.textContent = "Listening for you… (tap to close)";
+        return;
+      }
+      if (ttsPlaying || resumeAfterTts) {
+        b.className = "";
+        b.textContent = ttsPlaying
+          ? "🔊 Speaking — interrupt anytime (tap to close)"
+          : "Waiting for reply — mic paused (tap to close)";
+        return;
+      }
       b.className = agentRecording === true ? "rec" : "";
       b.textContent = agentRecording === true
         ? (sendMode === "pause" ? "Listening… sends when you pause" : "Listening… say “over” to send")
@@ -1287,10 +1538,41 @@
   // this is on, sending resumes listening for the next one, the way a radio
   // returns to receive after "over".
   var dictateLoop = false;
+  var ttsPlaying = false;
+  var resumeAfterTts = false;
+  var replyWaitTimer = null;
+
+  function clearReplyWait() {
+    if (replyWaitTimer) { clearTimeout(replyWaitTimer); replyWaitTimer = null; }
+  }
+  // Drop an in-flight capture WITHOUT transcribing it (it's usually the speaker).
+  function hushMic() {
+    if (!agentRecording && !agentAudio) return;
+    agentAudioStop();
+    agentRecording = false;
+    agentVad = null;
+    agentPhase = "idle";
+    paintAgentMic();
+    paintTalkForTarget();
+  }
+  function maybeResumeAfterTts() {
+    if (!resumeAfterTts) return;
+    resumeAfterTts = false;
+    clearReplyWait();
+    if (!dictateLoop) return;
+    setStatus("Reply finished — listening.");
+    setTimeout(function () {
+      if (dictateLoop && !ttsPlaying) resumeDictateNow();
+    }, 800);
+  }
 
   function endDictateLoop(why) {
     dictateLoop = false;
-    if (agentRecording) agentFinishNow();
+    resumeAfterTts = false;
+    clearReplyWait();
+    cancelSpokenReply();
+    hushMic();
+    releaseCall();
     setStatus(why || "Listening stopped.");
     paintAgentMic();
     paintTalkForTarget();
@@ -1298,14 +1580,34 @@
 
   function resumeDictate() {
     if (!dictateLoop || !dictateReady()) { paintAgentMic(); return; }
-    // Re-open the mic after a short gap so we don't capture our own TTS.
-    // (Do NOT call speak("") — /api/tts rejects empty text with 400 and the
-    // old path stranded onDone on iPad, so the channel never returned to receive.)
+    // AI + Sound on: do NOT open the mic until TTS of the reply has ended.
+    // Opening it early (a) records the speaker as "you" (b) iOS ducks/stops
+    // playback halfway through the answer.
+    if (target.kind !== "tmux" && soundOn) {
+      resumeAfterTts = true;
+      clearReplyWait();
+      replyWaitTimer = setTimeout(function () {
+        replyWaitTimer = null;
+        if (!resumeAfterTts) return;
+        resumeAfterTts = false;
+        setStatus("No spoken reply yet — listening again.");
+        resumeDictateNow();
+      }, 90000);
+      setStatus("Sent — mic paused until the reply is spoken.");
+      paintTalkForTarget();
+      return;
+    }
+    resumeDictateNow();
+  }
+  function resumeDictateNow() {
+    if (!dictateLoop || !dictateReady()) { paintAgentMic(); return; }
+    if (ttsPlaying) { resumeAfterTts = true; paintTalkForTarget(); return; }
     var go = function () {
-      if (dictateLoop) startDictate();
+      if (!dictateLoop || ttsPlaying) return;
+      startDictate();
       paintTalkForTarget();
     };
-    setTimeout(go, soundOn ? 450 : 200);
+    setTimeout(go, soundOn ? 700 : 200);
   }
 
   // One send path for both targets so a voice send behaves like a tapped one.
@@ -1354,6 +1656,7 @@
 
   function startDictate() {
     if (!dictateReady()) { dictateLoop = false; paintAgentMic(); return; }
+    if (ttsPlaying) { resumeAfterTts = true; paintTalkForTarget(); return; }
     paintAgentMic();
     agentListen("dictate", function (text) {
       if (!text) {
