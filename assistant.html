@@ -369,29 +369,52 @@
   }
 
   // After a send into a shell, pull the pane into THIS transcript so the
-  // phone sees a reply (not only "Sent to …"). Do not TTS the dump.
+  // phone sees a reply (not only "Sent to …"). When Sound is on, speak a
+  // short clip of the prose — leftover TUI box-drawing must never silence us.
   var paneWatch = null;
+  var BOX_DRAW = /[│┃╭╮╰╯─┄━═▀▄█░┌┐└┘]/g;
   function stopPaneWatch() {
     if (paneWatch && paneWatch.timer) clearTimeout(paneWatch.timer);
     paneWatch = null;
   }
+  function stripBoxDrawing(s) {
+    return String(s || "").replace(BOX_DRAW, " ").replace(/\s+/g, " ").trim();
+  }
+  function isTuiChromeLine(L) {
+    if (!L) return true;
+    if (/Enter:queue|Alt\+Enter|Shift\+Tab|Ctrl\+[lx]|always-approve/.test(L)) return true;
+    if (/Grok 4|Thought for \d|Compacting/.test(L)) return true;
+    if (/\[hooks:|Context \d+% full/.test(L)) return true;
+    if (/^(pre_tool_use|post_tool_use)/.test(L)) return true;
+    if (/^(◆|❯|⠴|✔|✓|●|○|→|←)(\s|$)/.test(L)) return true;
+    if (/^(Run |Read |Search |Write |Edit |Waiting for a )/i.test(L)) return true;
+    return false;
+  }
   function paneReplyText(raw) {
     var lines = String(raw || "").split("\n"), keep = [], i, L;
     for (i = 0; i < lines.length; i++) {
-      L = lines[i].replace(/\s+$/, "");
-      if (!L.trim()) continue;
-      if (/Enter:queue|Alt\+Enter|Shift\+Tab|Ctrl\+[lx]|always-approve/.test(L)) continue;
-      if (/Grok 4|Thought for \d/.test(L)) continue;
-      if (/^[│┃╭╮╰╯─┄━═▀▄█░\s]+$/.test(L)) continue;
-      L = L.replace(/^\s*[│┃]\s*/, "").trim();
-      if (L) keep.push(L);
+      L = stripBoxDrawing(lines[i]);
+      if (!L) continue;
+      L = L.replace(/\s+\d{1,2}:\d{2}\s*[AP]M\s*$/i, "").trim();
+      if (isTuiChromeLine(L)) continue;
+      keep.push(L);
     }
     if (keep.length > 20) keep = keep.slice(-20);
     return keep.join("\n");
   }
   function speakableClip(raw) {
-    var t = paneReplyText(raw || "").replace(/\s+/g, " ").trim();
-    if (!t || /[│┃╭]/.test(t) || t.length < 12) return "";
+    var lines = paneReplyText(raw || "").split("\n");
+    var prose = [], rest = [], i, L;
+    for (i = 0; i < lines.length; i++) {
+      L = stripBoxDrawing(lines[i]);
+      if (!L || L.length < 12) continue;
+      rest.push(L);
+      if (/[.!?]$/.test(L) || (L.length >= 24 && /^[A-Z]/.test(L) && /[a-z]/.test(L))) {
+        prose.push(L);
+      }
+    }
+    var t = (prose.length ? prose : rest).join(" ").replace(/\s+/g, " ").trim();
+    if (!t) return "";
     if (t.length > 400) {
       var cut = t.slice(0, 400);
       var sp = cut.lastIndexOf(". ");
@@ -439,8 +462,10 @@
             paneWatch.same++;
             if (paneWatch.same >= 3 || paneWatch.ticks >= 30) {
               setStatus(paneWatch.last ? ("Reply from " + name + ".") : ("Sent to " + name + "."));
-              var clip = speakableClip(paneWatch.last);
-              if (clip && soundOn) speak(clip);
+              if (soundOn) {
+                var clip = speakableClip(paneWatch.last);
+                speak(clip || (paneWatch.last ? ("Reply is on the screen from " + name + ".") : ""));
+              }
               stopPaneWatch();
               return;
             }
