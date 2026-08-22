@@ -193,7 +193,10 @@
   <h1>Home AI</h1>
   <span id="connDot" class="dot"></span>
   <button id="soundBtn" class="secondary">🔇 Sound off</button>
-  <button id="agentsBtn" class="secondary" title="Show tmux pane or pick a target">🖥 Pane</button>
+  <!-- Who you're talking to (AI or tmux) — next to Sound, not down by the mic. -->
+  <button id="targetBtn" class="secondary" title="Pick Claude, gemma, grok, or a tmux shell">🤖 AI</button>
+  <!-- Only when a tmux shell is armed: show/hide the live pane. -->
+  <button id="paneBtn" class="secondary" style="display:none" title="Show or hide the live tmux pane">🖥 Pane</button>
   <button id="overflowBtn" class="secondary" title="Library, clear, settings">⋯ More</button>
 </header>
 
@@ -270,8 +273,8 @@
      the screen for a different set of buttons. -->
 <div id="bar">
   <div id="barContext">
-    <button id="targetChip" class="chip">🤖 AI</button>
-    <button id="modeChip" class="chip">⌨️ Desk</button>
+    <!-- Target lives in the header (next to Sound). Bar keeps send-mode + mic. -->
+    <button id="modeChip" class="chip">⏸ pause</button>
     <button id="speakerToggle" class="chip" style="display:none">🗣 me</button>
     <button id="analyzeBtn" class="chip" style="display:none">🧠 Analyze</button>
   </div>
@@ -1116,11 +1119,9 @@
       .catch(function (e) { setStatus(e.message, true); });
   }
 
-  // Header button: toggle pane vs chat transcript when a tmux target is armed.
-  // Picking Claude/gemma/grok/tmux shells is the target chip ("Talk to…"), not
-  // this button — that was the confusing dual menu.
-  function paintAgentsBtn() {
-    var b = $("agentsBtn");
+  // Pane toggle — only relevant when a tmux shell is the talk target.
+  function paintPaneBtn() {
+    var b = $("paneBtn");
     if (!b) return;
     if (target.kind !== "tmux") {
       b.style.display = "none";
@@ -1129,12 +1130,14 @@
     b.style.display = "";
     if (agentsOpen) {
       b.textContent = "💬 Chat";
-      b.title = "Show the conversation transcript (keep talking to " + (agentSel || "tmux") + ")";
+      b.title = "Show the conversation (keep target " + (agentSel || "tmux") + ")";
     } else {
       b.textContent = "🖥 Pane";
       b.title = "Show the live tmux pane for " + (agentSel || "session");
     }
   }
+  // Back-compat name used in a few call sites.
+  function paintAgentsBtn() { paintPaneBtn(); }
 
   function applyAgentSelection() {
     var s = agentSessions.filter(function (x) { return x.name === agentSel; })[0];
@@ -1617,14 +1620,14 @@
   }
 
   function paintTargetChip() {
-    var c = $("targetChip");
-    if (!c) return;
-    c.textContent = targetLabel();
-    c.className = "chip" + (target.kind === "tmux" ? " on" : "");
-    c.title = target.kind === "tmux"
-      ? ("tmux " + target.name + " — voice channel; " +
-         (sendMode === "pause" ? "sends on pause" : "say “over” to send"))
-      : "Talking to the AI — tap to choose another target";
+    // Header button next to Sound — not the mic row.
+    var b = $("targetBtn");
+    if (!b) return;
+    b.textContent = targetLabel();
+    b.title = target.kind === "tmux"
+      ? ("Talking to tmux " + target.name + " — tap to switch (AI or another shell)")
+      : ("Talking to " + backendLabel(target.name || cfg.backend || "AI") +
+         " — tap to switch (Claude / gemma / grok / tmux shell)");
   }
 
   function setTarget(kind, name) {
@@ -1729,7 +1732,7 @@
   });
 
   var micModeOffered = false;
-  if ($("targetChip")) $("targetChip").onclick = openTargetSheet;
+  if ($("targetBtn")) $("targetBtn").onclick = openTargetSheet;
 
   // Typing is available in every situation — hand the text to the same
   // sendTyped() the desktop composer uses, so target routing (AI vs tmux)
@@ -1816,10 +1819,9 @@
     setStatus("Cleared.");
   };
 
-  // Pane ↔ Chat only — never changes the talk target (that was the bug:
-  // "Chat" switched you back to AI and dropped the shell + channel mic).
-  $("agentsBtn").onclick = function () {
-    if (target.kind !== "tmux") { openTargetSheet(); return; }
+  // Pane ↔ Chat only — never changes the talk target.
+  $("paneBtn").onclick = function () {
+    if (target.kind !== "tmux") return;
     agentsView(!agentsOpen);
   };
   $("agentRefreshBtn").onclick = function () {
@@ -2023,7 +2025,8 @@
     // continuous lives on the Listen tab; optional continuous stays in ⋯ More.
     $("composer").style.display = "none";
     $("bar").style.display = "flex";
-    $("barContext").insertBefore($("backendSel"), $("modeChip"));
+    // Backend / shell pick is the header targetBtn — keep the mic row clean.
+    if ($("backendSel")) $("backendSel").style.display = "none";
     $("speakerToggle").style.display = "none";
     $("analyzeBtn").style.display = "none";
     document.body.classList.remove("continuous");
