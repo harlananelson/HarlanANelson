@@ -435,6 +435,24 @@
     };
   }
 
+  // What may be read aloud. User content must never be spoken back.
+  // Tmux used to emit "Sent to <session>: <full user text>" as an assistant
+  // event, which the poll path then TTS'd — that is the "repeats everything"
+  // / "Sent to grok harlan …" the owner heard.
+  function shouldSpeakAssistant(ev) {
+    if (!ev || !ev.text) return false;
+    var t = String(ev.text).trim();
+    if (!t) return false;
+    if (/^Sent to\b/i.test(t)) return false;          // tmux receipt
+    if (/^Sent\.?$/i.test(t)) return false;
+    if (/\. Send\?$/i.test(t)) return false;          // old confirm readback shape
+    // Errors are status-line material; don't orate a 502 JSON blob.
+    if (/^AI backend failed/i.test(t)) return false;
+    if (/^grok CLI failed/i.test(t)) return false;
+    if (t.charAt(0) === "{") return false;
+    return true;
+  }
+
   // ---- spoken replies (server TTS -> <audio>; Sound button unlocks autoplay) ----
   // onDone fires once when speech is done OR skipped OR failed — callers
   // (channel resume, confirm listen) must not hang when TTS dies on iPad.
@@ -508,7 +526,9 @@
           addMsg(ev.role, ev.text, ev.backend);
           if (ev.role === "assistant" && !firstPoll && ev.id > lastSpokenId) {
             lastSpokenId = ev.id;
-            speak(ev.text);
+            // Speak only real AI answers. Never speak "Sent to …: <user text>"
+            // (tmux receipt) or other receipts that repeat what the user said.
+            if (shouldSpeakAssistant(ev)) speak(ev.text);
           }
         });
         if (firstPoll) {
@@ -1262,11 +1282,34 @@
     // button has to answer at a glance: idle, transmitting, channel open.
     b.textContent = agentRecording === true ? "⏹" : (dictateLoop ? "📻" : "🎤");
     b.className = (agentRecording === true || dictateLoop) ? "confirm" : "secondary";
-    b.title = !soundOn
-      ? "Turn sound on to dictate"
-      : (target.kind === "tmux" && !agentSendable
-           ? "Select a sendable session first"
-           : "Dictate — tap, speak, then say “over” to send");
+    b.title = (target.kind === "tmux" && !agentSendable)
+      ? "Select a sendable session first (tmux-allow)"
+      : "Hands-free channel — tap once, speak, say “over” to send, “out” to close";
+    // Keep the big Talk button in Voice + AI in sync when the target is tmux.
+    paintTalkForTarget();
+  }
+
+  // Big Talk button: AI modes use startRec; tmux uses the open-channel dictate loop.
+  function paintTalkForTarget() {
+    var b = $("talkBtn");
+    if (!b || cfg.mode !== "mic") return;
+    if (target.kind !== "tmux") return;   // paintMode owns AI/continuous labels
+    if (!agentSendable) {
+      b.disabled = true;
+      b.textContent = "Pick a sendable tmux session";
+      b.className = "";
+      return;
+    }
+    b.disabled = false;
+    if (dictateLoop) {
+      b.className = agentRecording === true ? "rec" : "";
+      b.textContent = agentRecording === true
+        ? "Listening… say “over” to send"
+        : "📻 Channel open — tap to close";
+    } else {
+      b.className = "";
+      b.textContent = "Tap to open channel → " + (agentSel || "tmux");
+    }
   }
 
   function normWord(s) {
@@ -1317,7 +1360,10 @@
     // Re-open the mic after a short gap so we don't capture our own TTS.
     // (Do NOT call speak("") — /api/tts rejects empty text with 400 and the
     // old path stranded onDone on iPad, so the channel never returned to receive.)
-    var go = function () { if (dictateLoop) startDictate(); };
+    var go = function () {
+      if (dictateLoop) startDictate();
+      paintTalkForTarget();
+    };
     setTimeout(go, soundOn ? 450 : 200);
   }
 
@@ -1325,33 +1371,40 @@
   // spoken confirm, so a voice send behaves exactly like a tapped one.
   function dispatchDictated() {
     if (target.kind === "tmux") {
-      agentConfirm = true;          // the voice WAS the confirm
+      agentConfirm = true;          // the voice "over" WAS the confirm
       agentSend();
-    } else {
-      var box = dictateBox(), t = box ? box.value.trim() : "";
-      if (!t) return;
-      if ($("msgInput")) $("msgInput").value = t;
-      if (box && box !== $("msgInput")) box.value = "";
-      sendTyped();
+      // agentSend is async; keep the channel open for the next directive.
+      setStatus("Sent to " + (agentSel || "session") + " — listening…");
+      setTimeout(function () { if (typeof refreshAgentOut === "function") refreshAgentOut(); }, 900);
+      resumeDictate();
+      return;
     }
-    // Speak "Sent." then re-open the channel. Previously resumeDictate ran
-    // immediately (and spoke ""), which raced TTS and often never re-listened.
-    if (soundOn) speak("Sent.", function () { resumeDictate(); });
-    else resumeDictate();
+    var box = dictateBox(), t = box ? box.value.trim() : "";
+    if (!t) return;
+    if ($("msgInput")) $("msgInput").value = t;
+    if (box && box !== $("msgInput")) box.value = "";
+    sendTyped();
+    setStatus("Sent.");
+    resumeDictate();
   }
 
   // The button: first tap opens the channel, second tap closes it. While the
   // channel is open a tap mid-transmission just ends that transmission early.
   function agentDictate() {
-    if (!dictateReady()) return;
+    if (!dictateReady()) {
+      setStatus(target.kind === "tmux"
+        ? "Pick a sendable tmux session (✏️ in Talk to… / tmux-allow)."
+        : "Cannot dictate right now.", true);
+      return;
+    }
     // Closing the channel comes FIRST. With the channel open the mic is
     // almost always recording, so testing agentRecording first meant a tap
     // only ended that transmission — and the loop immediately reopened it.
-    // There was then no way to turn the microphone off by tapping, which is
-    // the one thing this button must always be able to do.
     if (dictateLoop) { endDictateLoop("Channel closed. Microphone off."); return; }
     if (agentRecording) { agentFinishNow(); return; }   // one-shot: end it early
     dictateLoop = true;
+    setStatus("Channel open → " + (agentSel || "session") +
+              " — speak, then say “over” to send. “out” closes.");
     startDictate();
   }
 
@@ -1368,48 +1421,54 @@
       var box = dictateBox();
       var kill = _TAIL_KILL.test(text);
       var go = !kill && _TAIL_SEND.test(text);
-      var body = text.replace(_TAIL_SEND, "").replace(_TAIL_KILL, "").trim();
+      var body = text.replace(_TAIL_SEND, "").replace(_TAIL_KILL, "").replace(_TAIL_OUT, "").trim();
 
       if (kill) {
         if (box) box.value = "";
         if (target.kind === "tmux") resetAgentSend();
-        setStatus("Cancelled.");
+        setStatus("Cancelled — still listening.");
         resumeDictate();          // discard that one, keep the channel open
         return;
       }
-      // "out" is the ham word for finished, no reply expected: send whatever
-      // was said and close the channel, rather than returning to receive.
+      // "out" = send whatever is buffered and close the channel.
       if (_TAIL_OUT.test(text)) {
         var last = text.replace(_TAIL_OUT, "").trim();
-        if (box) box.value = (box.value ? box.value.trim() + " " : "") + last;
-        if (target.kind === "tmux") resetAgentSend();
-        // Close FIRST: dispatchDictated() resumes listening, so closing
-        // afterwards would race with the channel it just reopened.
+        if (box && last) box.value = (box.value ? box.value.trim() + " " : "") + last;
+        var had = box && box.value.trim();
         dictateLoop = false;
-        if ((box && box.value.trim()) || last) dispatchDictated();
-        endDictateLoop("Channel closed.");
+        if (agentRecording) agentFinishNow();
+        if (had && target.kind === "tmux") {
+          agentConfirm = true;
+          agentSend();
+          setStatus("Sent to " + (agentSel || "session") + ". Channel closed.");
+        } else if (had) {
+          if ($("msgInput")) $("msgInput").value = box.value.trim();
+          sendTyped();
+          setStatus("Sent. Channel closed.");
+        } else {
+          setStatus("Channel closed.");
+        }
+        paintAgentMic();
+        paintTalkForTarget();
         return;
       }
-      if (box) box.value = (box.value ? box.value.trim() + " " : "") + body;
+      if (box && body) box.value = (box.value ? box.value.trim() + " " : "") + body;
       if (target.kind === "tmux") resetAgentSend();
 
       if (go) {
-        // The trailing word was the decision. Don't ask again — asking after
-        // someone has already said "send" is the opposite of hands-free.
-        if (!body) { setStatus("Nothing to send.", true); return; }
+        // "over" is the decision — hands-free, no second confirm, no readback.
+        if (!box || !box.value.trim()) {
+          setStatus("Nothing to send — still listening.");
+          resumeDictate();
+          return;
+        }
         dispatchDictated();
         return;
       }
-      if (soundOn) {
-        setStatus("Say “over” to send it to " +
-                  (target.kind === "tmux" ? agentSel : (cfg.backend || "the assistant")) +
-                  ", or “cancel”.");
-        speakThenConfirm(body);      // read it back, then listen for the decision
-      } else {
-        // Quiet room: no spoken prompt is possible, so say plainly that the
-        // text is waiting rather than leaving it looking sent.
-        setStatus("Ready — tap Send, or end with “over” next time.");
-      }
+      // Incomplete utterance: keep the buffer, keep listening. No spoken echo.
+      setStatus((target.kind === "tmux" ? ("→ " + (agentSel || "tmux") + ": ") : "") +
+                "…end with “over” to send, or keep talking.");
+      if (dictateLoop) resumeDictate();
     });
   }
 
@@ -1417,8 +1476,7 @@
     if (agentAudio && agentVad) { agentVad.silenceMs = 1e9; }   // next frame flushes
   }
 
-  // Read the captured directive back, then open a short confirm listen.
-  // The readback IS the safety step: you hear exactly what would run.
+  // tmux confirm listen only. Do not speak `text` (that repeated everything).
   function speakThenConfirm(text) {
     var started = false;
     function begin() {
@@ -1438,7 +1496,6 @@
           if (b2) b2.value = "";
           if (target.kind === "tmux") resetAgentSend();
           setStatus("Cancelled.");
-          speak("Cancelled.");
           resumeDictate();
         } else {
           setStatus("Didn't hear “over” — review and tap Send.", true);
@@ -1446,7 +1503,7 @@
         }
       });
     }
-    speak(text + ". Send?", begin);
+    speak("Say over to send, or cancel.", begin);
     setTimeout(begin, 9000);   // TTS silent or failed: confirm anyway, don't strand
   }
 
@@ -1467,11 +1524,13 @@
     c.textContent = targetLabel();
     c.className = "chip" + (target.kind === "tmux" ? " on" : "");
     c.title = target.kind === "tmux"
-      ? "Talking to tmux session " + target.name + " — sends need confirming"
+      ? "tmux " + target.name + " — voice: open channel, say “over” to send"
       : "Talking to the AI — tap to choose another target";
   }
 
   function setTarget(kind, name) {
+    // Switching target closes an open voice channel (avoid sending to the wrong place).
+    if (dictateLoop) endDictateLoop("Target changed — channel closed.");
     target = { kind: kind, name: name || "" };
     if (kind === "ai") {
       cfg.backend = name || "";
@@ -1488,11 +1547,21 @@
     if ($("barInput")) {
       $("barInput").value = "";
       $("barInput").placeholder = target.kind === "tmux"
-        ? "Directive for " + target.name + " — needs confirming"
+        ? "For " + target.name + " — speak + “over”, or type + Send"
         : "…or type instead";
+    }
+    if ($("agentInput")) {
+      $("agentInput").value = "";
+      $("agentInput").placeholder = target.kind === "tmux" && agentSendable
+        ? "Hands-free: open channel, speak, say “over” — or type here"
+        : $("agentInput").placeholder;
     }
     paintTargetChip();
     paintAgentsBtn();
+    paintTalkForTarget();
+    if (kind === "tmux" && agentSendable) {
+      setStatus("Target 🖥 " + name + " — tap Talk once for hands-free channel. “over” sends, “out” closes.");
+    }
   }
 
   function openTargetSheet() {
@@ -1908,8 +1977,13 @@
         setMicMode(sit.key);
       }
 
-      // Primary action: meaning depends on the mode, position never moves.
+      // Primary action: tmux → hands-free channel; AI → desk/driving/meeting modes.
       $("talkBtn").addEventListener("click", function () {
+        if (target.kind === "tmux") {
+          agentDictate();
+          paintTalkForTarget();
+          return;
+        }
         if (micMode === "continuous") { setMicMode("tap"); return; }
         if (captureRunning()) stopRec();
         else startRec();
