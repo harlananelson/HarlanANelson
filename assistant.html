@@ -75,26 +75,6 @@
     font-size: 19px; padding: 12px; border-radius: 12px;
     border: 1px solid #444; background: #222; color: #eee;
   }
-  /* Live pane is a full overlay of the transcript — never a split. Open
-     it from More; Close returns to the conversation. */
-  #agents {
-    display: none; position: absolute; inset: 0; z-index: 8;
-    flex-direction: column; overflow: hidden;
-    background: #0d1117;
-  }
-  #agents.open { display: flex; }
-  #agentList {
-    display: flex; gap: 8px; padding: 8px 12px; align-items: center; flex-shrink: 0;
-    background: #151b23;
-  }
-  #agentList select { flex: 1; min-width: 0; font-size: 16px; padding: 8px; }
-  #agentMode { white-space: nowrap; font-size: 12px; }
-  #agentOut {
-    flex: 1; min-height: 0; overflow: auto; margin: 0 10px 10px; padding: 10px;
-    background: #000; border: 1px solid #333; border-radius: 10px;
-    font-family: ui-monospace, Menlo, Consolas, monospace;
-    font-size: 13px; line-height: 1.35; white-space: pre; color: #cde;
-  }
   #views-wrap { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
   .msg.user .tag { color: #9cc4e0; }
   .msg.tmux-send { align-self: flex-end; background: #1a3a2a; border: 1px solid #2d6a4f; }
@@ -148,7 +128,6 @@
     button { font-size: 24px; padding: 18px 26px; }
     #talkBtn { min-height: 104px; font-size: 28px; }
     .chip { font-size: 20px; padding: 10px 18px; }
-    #agentOut { font-size: 17px; }
     .sheet-body button.row { font-size: 22px; }
   }
   .msg.notice { align-self: center; background: #23303a; color: #9cc4e0; font-size: 16px; }
@@ -234,15 +213,6 @@
 
 <div id="views-wrap">
   <div id="transcript"></div>
-  <div id="agents" aria-label="live pane">
-    <div id="agentList">
-      <select id="agentSelect" title="Which pane to watch"></select>
-      <button id="agentRefreshBtn" class="secondary" title="Refresh pane">↻</button>
-      <span id="agentMode" class="hint" style="margin:0"></span>
-      <button id="paneClose" class="secondary" type="button">Close</button>
-    </div>
-    <pre id="agentOut">Talk to… still controls where your words go. Close returns to the conversation.</pre>
-  </div>
 </div>
 
 <!-- One bar for every address. Talk hides when this browser has no mic. -->
@@ -1073,105 +1043,25 @@
       });
   }
 
-  // ---- agents panel (tmux sessions on the workstation) ----
-  var agentsOpen = false, agentSel = "", agentSendable = false;
-  var agentTimer = null;
-
-  function agentsView(show) {
-    agentsOpen = show;
-    // Full overlay of the transcript. Never a split; Talk/Send stay put.
-    if (show) $("agents").classList.add("open");
-    else $("agents").classList.remove("open");
-    paintPaneBtn();
-    if (show) {
-      loadAgents();
-      if (agentTimer) clearInterval(agentTimer);
-      agentTimer = setInterval(refreshAgentOut, 5000);
-      refreshAgentOut();
-    } else if (agentTimer) {
-      clearInterval(agentTimer);
-      agentTimer = null;
-    }
-  }
-
-  // The session list is a LIVE survey — `tmux list-sessions` on the
-  // workstation each time this runs (on opening Agents and on ↻), never a
-  // fixed list. A dropdown rather than a button per session: there are often
-  // a dozen-plus, and on a phone they wrapped into several rows of chrome
-  // above the output pane.
+  // tmux session list — for Talk to… and sendable checks only. No live pane.
+  var agentSendable = false;
   var agentSessions = [];
   function loadAgents() {
     api("/api/tmux/sessions").then(function (r) { return r.json(); })
       .then(function (data) {
         agentSessions = data.sessions || [];
-        var sel = $("agentSelect");
-        sel.innerHTML = "";
-        // "No shell" is always offered and is the default. Auto-selecting the
-        // first session used to mean the app always had SOME terminal armed —
-        // whichever happened to sort first — so a dictated line was one
-        // confirm away from a shell nobody chose. Talking to a terminal should
-        // be something you pick, not the state you land in.
-        var none = document.createElement("option");
-        none.value = "";
-        none.textContent = agentSessions.length ? "— no shell —" : "— no shells running —";
-        sel.appendChild(none);
-        if (!agentSessions.some(function (s) { return s.name === agentSel; })) {
-          agentSel = (target.kind === "tmux" && target.name &&
-            agentSessions.some(function (s) { return s.name === target.name; }))
-            ? target.name : "";
-        }
-        agentSessions.forEach(function (s) {
-          var o = document.createElement("option");
-          o.value = s.name;
-          o.textContent = (s.sendable ? "✏️ " : "👁 ") + s.name +
-            (s.attached ? " •" : "");
-          sel.appendChild(o);
-        });
-        sel.value = agentSel;
-        applyAgentSelection();
+        applySendable();
       })
       .catch(function (e) { setStatus(e.message, true); });
   }
-
-  // Pane is always available — watch a shell without changing Talk to… address.
-  function paintPaneBtn() { /* pane is More → overlay, not a split handle */ }
-  function paintAgentsBtn() { paintPaneBtn(); }
-
-  function applyAgentSelection() {
-    var watch = agentSessions.filter(function (x) { return x.name === agentSel; })[0];
-    var talk = target.kind === "tmux"
-      ? agentSessions.filter(function (x) { return x.name === target.name; })[0]
-      : null;
-    agentSendable = target.kind === "tmux" ? !!(talk && talk.sendable) : true;
-    $("agentMode").textContent = watch
-      ? ((watch.sendable ? "can send" : "read-only") +
-         (target.kind === "tmux" && target.name === agentSel ? " · also Talk to…" : " · watching"))
-      : (agentSessions.length ? "pick a shell to watch" : "no tmux sessions");
-    paintPaneBtn();
-    resetAgentSend();
-    refreshAgentOut();
-    paintTalkForTarget();
-  }
-
-  function refreshAgentOut() {
-    if (!agentSel) {
-      // Say why the pane is empty. Returning silently left the previous
-      // session's output on screen, which reads as live and is not.
-      $("agentOut").textContent = agentSessions.length
-        ? "No shell selected. Pick one above to watch it, or leave this as it is —\n" +
-          "everything else in the app works without a shell."
-        : "No tmux sessions on the host.";
-      return;
+  function applySendable() {
+    if (target.kind !== "tmux") agentSendable = true;
+    else {
+      var talk = agentSessions.filter(function (x) { return x.name === target.name; })[0];
+      agentSendable = !!(talk && talk.sendable);
     }
-    api("/api/tmux/capture?name=" + encodeURIComponent(agentSel) + "&lines=60")
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        var out = $("agentOut");
-        var stick = out.scrollTop + out.clientHeight >= out.scrollHeight - 40;
-        out.textContent = data.text || "(empty pane)";
-        if (stick) out.scrollTop = out.scrollHeight;
-      })
-      .catch(function (e) { setStatus(e.message, true); });
+    resetAgentSend();
+    paintTalkForTarget();
   }
 
   function resetAgentSend() {
@@ -1197,7 +1087,6 @@
       addTmuxSendAck(sendName, text);
       resetAgentSend();
       setStatus("Sent to " + sendName + ".");
-      if (agentsOpen) setTimeout(refreshAgentOut, 800);
     }).catch(function (e) {
       if (box && !(box.value || "").trim()) box.value = text;
       resetAgentSend();
@@ -1424,8 +1313,7 @@
     if (target.kind === "tmux") {
       agentSend();
       // agentSend is async; keep the channel open for the next directive.
-      setStatus("Sent to " + (target.name || agentSel || "session") + " — listening…");
-      setTimeout(function () { if (typeof refreshAgentOut === "function") refreshAgentOut(); }, 900);
+      setStatus("Sent to " + (target.name || "session") + " — listening…");
       resumeDictate();
       return;
     }
@@ -1458,7 +1346,7 @@
     }
     dictateLoop = true;
     var dest = target.kind === "tmux"
-      ? (target.name || agentSel || "session")
+      ? (target.name || "session")
       : backendLabel(target.name || cfg.backend || "AI");
     setStatus("Channel open → " + dest + " — " + channelOpenHint());
     startDictate();
@@ -1501,7 +1389,7 @@
         if (agentRecording) agentFinishNow();
         if (had && target.kind === "tmux") {
           agentSend();
-          setStatus("Sent to " + (target.name || agentSel || "session") + ". Channel closed.");
+          setStatus("Sent to " + (target.name || "session") + ". Channel closed.");
         } else if (had) {
           sendTyped();
           setStatus("Sent. Channel closed.");
@@ -1574,22 +1462,19 @@
       if ($("backendSel")) $("backendSel").value = cfg.backend;
       agentSendable = true;
     } else {
-      agentSel = name;
-      if ($("agentSelect")) $("agentSelect").value = name;
       var s = agentSessions.filter(function (x) { return x.name === name; })[0];
       agentSendable = !!(s && s.sendable);
       if (!agentSessions.length) loadAgents();
-      else applyAgentSelection();
+      else applySendable();
     }
     if ($("barInput")) $("barInput").value = "";
     paintTargetChip();
-    paintPaneBtn();
     paintTalkForTarget();
     var known = (kind === "tmux" && name)
       ? agentSessions.filter(function (x) { return x.name === name; })[0]
       : null;
     var hint;
-    if (known && !known.sendable) hint = "read-only — watch it via the pane.";
+    if (known && !known.sendable) hint = "read-only (not in tmux-allow).";
     else if (showTalkUi()) hint = channelOpenHint();
     else hint = "type and Send.";
     setStatus("Talk to " + targetLabel() + " — " + hint);
@@ -1690,22 +1575,15 @@
     rows.splice(1, 0, { label: "🎯 Talk to…",
       note: "Pick a model or a workstation shell",
       onClick: openTargetSheet });
-    rows.splice(2, 0, agentsOpen
-      ? { label: "💬 Back to conversation",
-          note: "Hide the live pane overlay",
-          onClick: function () { agentsView(false); } }
-      : { label: "🖥 Live pane",
-          note: "Watch a workstation shell — covers the conversation until you Close",
-          onClick: function () { agentsView(true); } });
     if (showTalkUi()) {
-      rows.splice(3, 0, sendMode === "pause"
+      rows.splice(2, 0, sendMode === "pause"
         ? { label: "📻 Switch to “over” to send",
             note: "Same as tapping the ⏸ chip — buffer until you say “over”",
             onClick: function () { setSendMode("over"); } }
         : { label: "⏸ Switch to send on pause",
             note: "Same as tapping the 📻 chip — each pause sends",
             onClick: function () { setSendMode("pause"); } });
-      rows.splice(4, 0, continuousMode
+      rows.splice(3, 0, continuousMode
         ? { label: "📻 Back to channel mic",
             note: "Leave silent continuous; return to Talk channel",
             onClick: function () { if (window.__setMicMode) window.__setMicMode("tap"); } }
@@ -1725,19 +1603,6 @@
     setInterim("");
     setStatus("Cleared.");
   };
-
-  if ($("paneClose")) $("paneClose").onclick = function () { agentsView(false); };
-  $("agentRefreshBtn").onclick = function () {
-    loadAgents();
-    refreshAgentOut();
-    setStatus("Pane refreshed.");
-  };
-  $("agentSelect").addEventListener("change", function () {
-    agentSel = this.value;
-    // Watch is independent of Talk to… (glance at a job while talking to a model).
-    applyAgentSelection();
-    refreshAgentOut();
-  });
 
   // ---- settings ----
   function openSettings(show) {
@@ -1785,7 +1650,7 @@
     $("transcript").innerHTML = "";
     // Boot skips the session survey when there is no bridge yet, so on a
     // first-time setup this is the first moment the host can be asked. Without
-    // it the shell list stays empty until the pane is opened by hand.
+    // it the shell list in Talk to… stays empty.
     loadAgents();
   };
   if ($("settingsClose")) $("settingsClose").onclick = function () { openSettings(false); };
@@ -2040,12 +1905,9 @@
     setStatus("First-time setup: enter the Bridge URL and token.", true);
   } else {
     setStatus("Connecting…");
-    // Survey the host's shells on every load, so the picker is populated and
-    // current before the pane has ever been opened. Nothing is selected
-    // as a result — the list is offered, not armed.
+    // Survey shells so Talk to… knows sendable vs read-only.
     loadAgents();
   }
-  paintAgentsBtn();
   paintTargetChip();
   poll();
   setInterval(poll, 2500);
