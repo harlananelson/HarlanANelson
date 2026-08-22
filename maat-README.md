@@ -16,8 +16,8 @@ A thin **installable shell** (PWA). Modes load **existing** apps in iframes — 
 | Mode | Loads | Needs |
 |------|--------|--------|
 | **Sermon** | `live-translator.html` | Tailscale + `biblestudy` GPU server for home quality |
-| **Voice + AI** | `tesla-assistant.html?mode=mic` | Tailscale + tesla-bridge |
-| **Assistant** | `tesla-assistant.html` | same bridge |
+| **Voice + AI** | `assistant.html?mode=mic` | Tailscale + tesla-bridge |
+| **Assistant** | `assistant.html` | same bridge |
 | **About** | built-in copy | nothing |
 
 Settings (gear) let you override each mode’s URL (e.g. tailnet same-origin translator on iPad).
@@ -26,7 +26,7 @@ Deep link: `maat.html?mode=sermon` | `voice` | `assistant` | `about`.
 
 ## What it is not
 
-- **Not** a replacement for `live-translator.html` or `tesla-assistant.html` (those stay; bookmarks keep working).
+- **Not** a replacement for `live-translator.html` or `assistant.html` (those stay; bookmarks keep working).
 - **Not** the language drills — public multi-language practice is **`languages.html`**.
 
 ## How to test

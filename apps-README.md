@@ -7,7 +7,7 @@ and stored per-browser, so it also works as a launcher for anything added later.
 
 | Tab | Loads | Backend it talks to | Server must be running |
 |---|---|---|---|
-| 🤖 Assistant | `tesla-assistant.html` (this site) | tesla-bridge, **tailnet-only** `…ts.net` | `bin/serve` (tmux `tesla-bridge`) |
+| 🤖 Assistant | `assistant.html` (this site) | tesla-bridge, **tailnet-only** `…ts.net` | `bin/serve` (tmux `tesla-bridge`) |
 | 🌐 Translate | `live-translator.html` (this site) | home-GPU translator, **`wss://…:8443/ws`** | `~/projects/biblestudy/server/run.sh` (tmux `translator-gpu`) |
 | 📝 reMarkable | its own bridge UI (pre-filled `:9443`) | reMarkable phone-bridge, **tailnet `:9443`** | remarkable phone-bridge (`:8787`) |
 
