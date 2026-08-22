@@ -7,69 +7,50 @@
 
 *Right order for a whole digital life.* One app under **your** control — work and data held together, not scattered across silos.
 
-**Maat** is an ancient word for right order and balance (not a living religious title we are borrowing lightly). We use it for a simple product idea: one place for personal tools, with the data under the person who lives it.
-
-## What v1 is
-
-A thin **installable shell** (PWA). Modes load **existing** apps in iframes — **no backend change**, no rewrite of Listen, bridge, or drills:
+## Destinations (≤ 4 + gear)
 
 | Mode | Loads | Needs |
 |------|--------|--------|
-| **Listen** | `live-translator.html` | Tailscale + `biblestudy` GPU server for home quality |
-| **Practice** | `languages.html` | Nothing private — public drills, shareable |
-| **Converse** | `assistant.html` (± `?mode=mic`) | Tailscale + tesla-bridge |
-| **Tools** | Music (`:8444`) + reMarkable (`:9443`) | Tailscale + musiclab / phone-bridge |
-| **About** | built-in copy | nothing |
+| **Listen** | `live-translator.html` | Tailscale + biblestudy GPU |
+| **Practice** | `languages.html` | Public — no Tailscale |
+| **Converse** | `assistant.html` (± mic) | Tailscale + tesla-bridge |
+| **Tools** | Music `:8444` + reMarkable `:9443` | Tailscale + home services |
+| ⚙️ gear | About + URL overrides | — |
 
-Settings (gear) let you override each mode’s / tool’s URL.
+**Cold open** always lands on **Converse** (deep links override). Last destination is not restored.
 
-### Converse (Voice + Assistant merged)
+### Site navbar
 
-Type and mic are **one utility**. Open Converse for chat; **⋯ More → Switch to mic mode** (or a deep link) for voice-first Driving / Desk / Meeting.
-
-### Tools (Music + reMarkable folded)
-
-Opens the **last-used** tool immediately (default Music). Chip bar switches tools; **long-press** the Tools tab for a jump picker. Speech (Listen) and music capture stay separate pipelines.
+Public site nav points at **Maat**, **Languages**, and **Listen** (`maat.html?mode=sermon`) — not four separate drill links. Individual `*-speech-drill.html` URLs remain bookmarkable.
 
 ### Deep links
 
 | Intent | URL |
 |--------|-----|
-| Practice (last language) | `maat.html#practice` or `?mode=practice` |
-| Practice Spanish | `maat.html#practice?lang=es` |
-| Converse (type) | `#converse` |
-| Converse (mic) | `#converse?input=mic` |
-| Tools (last) | `#tools` |
-| Tools → Music | `#tools?tool=music` or `?mode=music` |
-| Tools → reMarkable | `#tools?tool=remarkable` or `?mode=remarkable` |
-| Listen | `?mode=sermon` (alias: `listen`) |
-| Legacy Voice / Assistant | `?mode=voice` / `?mode=assistant` |
+| Practice / Spanish | `#practice` / `#practice?lang=es` |
+| Converse type / mic | `#converse` / `#converse?input=mic` |
+| Tools | `#tools?tool=music\|remarkable` |
+| Listen | `?mode=sermon` |
+| Legacy | `?mode=voice\|assistant\|music\|remarkable` |
 
-`lang` allowlist: `es` \| `en` \| `ja` \| `sw`.  
-`input` allowlist: `mic` \| `type`.  
-`tool` allowlist: `music` \| `remarkable`.
+Unknown `mode` / `lang` / `input` / `tool` values are ignored (allowlists).
 
-### Public vs private
+### Security / degradation
 
-**Practice** embeds the public Languages hub (sandboxed iframe). Direct drill URLs stay shareable. Listen / Converse / Tools remain private-backend modes (Tailscale).
-
-## What it is not
-
-- **Not** a replacement for `live-translator.html`, `assistant.html`, or `languages.html` (bookmarks keep working).
-- **Not** yet PR4 shell polish (fixed Converse landing, site navbar collapse, broader CSP).
+- `Referrer-Policy: no-referrer`, `Permissions-Policy` (mic self), `frame-src` CSP for `'self'` + known tailnet hosts
+- Practice iframe sandboxed (no top-navigation)
+- Opening Listen / Converse / Tools off Tailscale shows a connect banner; Practice still works
 
 ## How to test
 
-1. Open `/maat.html` after deploy (or local https).
-2. Thumb bar: Listen · Practice · Converse · **Tools** · About (+ gear) — no separate Music / reMarkable tabs.
-3. Tap **Tools** — last tool loads (Music by default).
-4. Switch chips Music ↔ reMarkable; reopen Tools — last choice sticks.
-5. Long-press **Tools** — picker; choose reMarkable.
-6. `#tools?tool=music` and `?mode=remarkable` land correctly.
-7. Practice / Converse / Listen unchanged; Practice works without Tailscale.
+1. Open `/maat.html` → lands on **Converse** (not last tab)
+2. Thumb bar: Listen · Practice · Converse · Tools · ⚙️ only (no About tab)
+3. ⚙️ shows About blurb + URL fields
+4. Off Tailscale, tap Tools → banner; Practice still loads
+5. Site navbar: no Spanish/English/Swahili/Japanese Drill entries; Languages + Maat + Listen remain
+6. Deep links and legacy aliases still work
 
 ## Related
 
-- `languages.html` — ES / EN / JA / SW drills  
-- `assistant.html` — Converse surface  
 - IA design: `~/projects/grok/projects/harlananelson/docs/maat-ia/maat-ia-design.md`
+- `languages.html`, `assistant.html`
