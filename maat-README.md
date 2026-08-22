@@ -18,55 +18,58 @@ A thin **installable shell** (PWA). Modes load **existing** apps in iframes — 
 | **Listen** | `live-translator.html` | Tailscale + `biblestudy` GPU server for home quality |
 | **Practice** | `languages.html` | Nothing private — public drills, shareable |
 | **Converse** | `assistant.html` (± `?mode=mic`) | Tailscale + tesla-bridge |
-| **reMarkable** | tailnet `:9443` | Tailscale + phone-bridge |
-| **Music** | tailnet `:8444` | Tailscale + musiclab |
+| **Tools** | Music (`:8444`) + reMarkable (`:9443`) | Tailscale + musiclab / phone-bridge |
 | **About** | built-in copy | nothing |
 
-Settings (gear) let you override each mode’s URL (e.g. tailnet same-origin translator on iPad).
+Settings (gear) let you override each mode’s / tool’s URL.
 
 ### Converse (Voice + Assistant merged)
 
-Type and mic are **one utility** — input modality, not separate products. Open Converse for chat; use **⋯ More → Switch to mic mode** inside the page (or a deep link) for voice-first Driving / Desk / Meeting. “over” / “out” still work on the open channel.
+Type and mic are **one utility**. Open Converse for chat; **⋯ More → Switch to mic mode** (or a deep link) for voice-first Driving / Desk / Meeting.
+
+### Tools (Music + reMarkable folded)
+
+Opens the **last-used** tool immediately (default Music). Chip bar switches tools; **long-press** the Tools tab for a jump picker. Speech (Listen) and music capture stay separate pipelines.
 
 ### Deep links
 
 | Intent | URL |
 |--------|-----|
 | Practice (last language) | `maat.html#practice` or `?mode=practice` |
-| Practice Spanish | `maat.html#practice?lang=es` or `?mode=practice&lang=es` |
-| Converse (type) | `#converse` or `?mode=converse` |
+| Practice Spanish | `maat.html#practice?lang=es` |
+| Converse (type) | `#converse` |
 | Converse (mic) | `#converse?input=mic` |
+| Tools (last) | `#tools` |
+| Tools → Music | `#tools?tool=music` or `?mode=music` |
+| Tools → reMarkable | `#tools?tool=remarkable` or `?mode=remarkable` |
 | Listen | `?mode=sermon` (alias: `listen`) |
-| Legacy Voice tab | `?mode=voice` → Converse + mic |
-| Legacy Assistant tab | `?mode=assistant` → Converse |
+| Legacy Voice / Assistant | `?mode=voice` / `?mode=assistant` |
 
-`lang` is allowlisted to `es` \| `en` \| `ja` \| `sw`.  
-`input` is allowlisted to `mic` \| `type`.
+`lang` allowlist: `es` \| `en` \| `ja` \| `sw`.  
+`input` allowlist: `mic` \| `type`.  
+`tool` allowlist: `music` \| `remarkable`.
 
 ### Public vs private
 
-**Practice** embeds the public Languages hub (sandboxed iframe; no `allow-top-navigation`). Direct URLs (`languages.html`, `*-speech-drill.html`) stay shareable for learners who should not see Tailscale tools. Listen / Converse / Music / reMarkable remain private-backend modes.
+**Practice** embeds the public Languages hub (sandboxed iframe). Direct drill URLs stay shareable. Listen / Converse / Tools remain private-backend modes (Tailscale).
 
 ## What it is not
 
-- **Not** a replacement for `live-translator.html`, `assistant.html`, or `languages.html` (those stay; bookmarks keep working).
-- **Not** yet the final IA (Tools fold is PR3). Practice + Converse are PR1–PR2 of that plan.
+- **Not** a replacement for `live-translator.html`, `assistant.html`, or `languages.html` (bookmarks keep working).
+- **Not** yet PR4 shell polish (fixed Converse landing, site navbar collapse, broader CSP).
 
 ## How to test
 
-1. Open `/maat.html` (after deploy) or local file over https/localhost.
-2. **Add to Home Screen** for full-screen Maat.
-3. Confirm there is **one** Converse tab (no separate Voice + AI / Assistant).
-4. Tap **Practice** — Languages with last language.
-5. Open `maat.html#converse?input=mic` — voice-first assistant.
-6. Open `maat.html?mode=voice` — same as Converse+mic (alias).
-7. Inside Converse, **⋯ More** switches mic ↔ type without leaving Maat.
-8. **Listen:** Tailscale on; start services as in About tab.
+1. Open `/maat.html` after deploy (or local https).
+2. Thumb bar: Listen · Practice · Converse · **Tools** · About (+ gear) — no separate Music / reMarkable tabs.
+3. Tap **Tools** — last tool loads (Music by default).
+4. Switch chips Music ↔ reMarkable; reopen Tools — last choice sticks.
+5. Long-press **Tools** — picker; choose reMarkable.
+6. `#tools?tool=music` and `?mode=remarkable` land correctly.
+7. Practice / Converse / Listen unchanged; Practice works without Tailscale.
 
 ## Related
 
-- `languages.html` — ES / EN / JA / SW drills, remembers last language  
-- `assistant.html` — Converse surface (type + mic)  
-- `apps.html` — older hub (Assistant / Translate / reMarkable)  
-- IA design: `~/projects/grok/projects/harlananelson/docs/maat-ia/maat-ia-design.md`  
-- Inventory: `~/projects/grok/projects/harlananelson/docs/do-everything-app-inventory.md`
+- `languages.html` — ES / EN / JA / SW drills  
+- `assistant.html` — Converse surface  
+- IA design: `~/projects/grok/projects/harlananelson/docs/maat-ia/maat-ia-design.md`
