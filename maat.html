@@ -209,6 +209,16 @@
     }
   ];
 
+  // When Maat itself is opened from the tailnet host (no port), Listen's
+  // WebSocket is more reliable same-origin on :8443 than via the Netlify page.
+  function defaultUrl(mode) {
+    var onTailnet = location.hostname.indexOf(".ts.net") >= 0 && location.port === "";
+    if (onTailnet && mode.id === "sermon") {
+      return location.protocol + "//" + location.hostname + ":8443/";
+    }
+    return mode.url;
+  }
+
   function loadModes() {
     var saved = {};
     try { saved = JSON.parse(localStorage.getItem("maat_urls") || "{}"); } catch (e) {}
@@ -216,7 +226,7 @@
       var u = saved[a.id];
       return {
         id: a.id, label: a.label, icon: a.icon, kind: a.kind, hint: a.hint,
-        url: (u === undefined ? a.url : u)
+        url: (u === undefined ? defaultUrl(a) : u)
       };
     });
   }

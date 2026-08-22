@@ -57,6 +57,29 @@
     .btn.primary:hover { background:var(--color-primary-hover); }
     .btn.recording { background:var(--color-error); color:#fff; border-color:transparent; }
     .btn.small { padding:0.4rem 0.7rem; min-height:36px; font-size:var(--text-sm); }
+    .analyze-wrap { position:relative; display:inline-flex; }
+    .analyze-menu {
+      position:absolute; top:calc(100% + 6px); left:0; z-index:30;
+      min-width:280px; max-width:min(420px, 92vw);
+      background:var(--color-surface); border:1px solid var(--color-border);
+      border-radius:var(--radius-md); box-shadow:var(--shadow-md);
+      padding:0.35rem; display:flex; flex-direction:column; gap:2px;
+    }
+    .analyze-menu[hidden] { display:none !important; }
+    .analyze-menu .item {
+      border:0; background:transparent; color:var(--color-text);
+      text-align:left; width:100%; min-height:44px; cursor:pointer;
+      border-radius:0.55rem; padding:0.45rem 0.7rem;
+      display:flex; flex-direction:column; gap:0.1rem; align-items:flex-start;
+    }
+    .analyze-menu .item:hover, .analyze-menu .item:focus { background:var(--color-surface-2); }
+    .analyze-menu .item .lbl { font-weight:600; }
+    .analyze-menu .item .hint { font-size:var(--text-sm); color:var(--color-text-muted); font-weight:400; }
+    .analyze-menu .back {
+      border:0; background:transparent; color:var(--color-primary);
+      font-weight:600; text-align:left; min-height:40px; cursor:pointer;
+      padding:0.35rem 0.7rem;
+    }
     .controls { display:flex; flex-wrap:wrap; gap:var(--space-3); align-items:center; margin:var(--space-4) 0 var(--space-2); }
     .spacer { flex:1; }
     .seg-toggle { display:inline-flex; border:1px solid var(--color-border); border-radius:999px; overflow:hidden; }
@@ -205,8 +228,6 @@
           <select id="speakerProfile">
             <option value="">None &mdash; general Spanish</option>
             <option value="transcribe">Transcribe only &mdash; no translation, any language</option>
-            <option value="english-to-spanish">English &rarr; Spanish &mdash; speak English, show Spanish</option>
-            <option value="bilingual">Bilingual EN &#8646; ES &mdash; each speaker into the other language</option>
             <option value="meeting">Meeting &mdash; no translation, text only</option>
             <option value="bible-study">Bible study (theological)</option>
             <option value="jean-petit">Jean Petit (Sunday)</option>
@@ -218,9 +239,21 @@
         <p class="note">Audio streams to your own machine over your tailnet; transcription (Whisper large-v3) and translation (local LLM) run there. No API keys needed. The device must be connected to Tailscale. A speaker profile is built from that preacher's past sermons, so names like Ezequías, Eliseo and Namán are recognised instead of guessed.</p>
       </div>
       <div class="field">
-        <label for="fileRoot">Export filename root &mdash; the downloaded file is named <em>root</em>-YYYYMMDD-HHMM.md</label>
+        <label for="fileRoot">Prefix &mdash; the saved file is <em>prefix</em>-YYYY-MM-DD-HHMM.md</label>
         <input type="text" id="fileRoot" autocomplete="off" spellcheck="false" placeholder="transcript" />
       </div>
+      <div class="field-row" id="exportRow">
+        <div class="field grow">
+          <label for="exportDest">Folder on this computer</label>
+          <select id="exportDest"></select>
+        </div>
+      </div>
+      <label class="checkbox" id="autoSaveRow">
+        <input type="checkbox" id="autoSave" />
+        Save to this computer when I stop
+      </label>
+      <p class="note" id="exportNote"></p>
+      <p class="note" id="exportStatus" hidden></p>
       <div class="field">
         <label for="sens">Mic sensitivity &mdash; move right if it misses quiet speech, left if background noise triggers it</label>
         <input type="range" id="sens" min="0" max="100" step="2" />
@@ -231,11 +264,15 @@
 
     <div class="controls">
       <button id="startBtn" class="btn primary" type="button">● Start listening</button>
-      <button id="clearBtn" class="btn" type="button">Clear</button>
+      <button id="clearBtn" class="btn" type="button" title="Erase the transcript. Start/Stop keep it.">Clear</button>
       <button id="copyBtn" class="btn" type="button">Copy</button>
-      <button id="downloadBtn" class="btn" type="button">Download .md</button>
+      <button id="saveBtn" class="btn" type="button">💾 Save to computer</button>
+      <button id="downloadBtn" class="btn" type="button">Download .md (this device)</button>
       <button id="diarizeBtn" class="btn" type="button">Diarize speakers</button>
-      <button id="analyzeBtn" class="btn" type="button" title="Analyse what has been said, through the selected profile's lens">🧠 Analyze</button>
+      <div class="analyze-wrap">
+        <button id="analyzeBtn" class="btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="analyzeMenu" title="Analyse what has been said — options depend on the profile and folder">🧠 Analyze</button>
+        <div id="analyzeMenu" class="analyze-menu" role="menu" hidden></div>
+      </div>
       <span class="spacer"></span>
       <div class="seg-toggle" role="group" aria-label="Which panes to show">
         <button data-view="both" type="button">Both</button>
@@ -666,7 +703,10 @@
       engine: $('engine'), localOpts: $('localOpts'), cloudOpts: $('cloudOpts'),
       homegpuOpts: $('homegpuOpts'), homeGpuUrl: $('homeGpuUrl'), speakerProfile: $('speakerProfile'),
       cloudModel: $('cloudModel'), cloudModelCustom: $('cloudModelCustom'), vocab: $('vocab'), fileRoot: $('fileRoot'), openaiKey: $('openaiKey'),
-      startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), downloadBtn: $('downloadBtn'), diarizeBtn: $('diarizeBtn'), analyzeBtn: $('analyzeBtn'), fsBtn: $('fsBtn'),
+      exportRow: $('exportRow'), exportDest: $('exportDest'), exportNote: $('exportNote'), exportStatus: $('exportStatus'),
+      autoSave: $('autoSave'), autoSaveRow: $('autoSaveRow'),
+      saveBtn: $('saveBtn'),
+      startBtn: $('startBtn'), clearBtn: $('clearBtn'), copyBtn: $('copyBtn'), downloadBtn: $('downloadBtn'), diarizeBtn: $('diarizeBtn'), analyzeBtn: $('analyzeBtn'), analyzeMenu: $('analyzeMenu'), fsBtn: $('fsBtn'),
       fontDown: $('fontDown'), fontUp: $('fontUp'), statusDot: $('statusDot'), statusText: $('statusText'),
       levelFill: $('levelFill'), transcript: $('transcript'), rows: $('rows'), startHint: $('startHint'),
       diagBox: $('diagBox'), diagCount: $('diagCount'), diagLog: $('diagLog'),
@@ -694,6 +734,8 @@
       cloudModel: 'gpt-4o-transcribe',
       vocab: '',
       fileRoot: 'transcript',
+      exportDest: 'Podcast',
+      autoSave: true,
       homeGpuUrl: '',
       speakerProfile: '',
       logEndpoint: '',
@@ -742,6 +784,8 @@
           cloudModel: s.cloudModel || DEFAULTS.cloudModel,
           vocab: typeof s.vocab === 'string' ? s.vocab : '',
           fileRoot: typeof s.fileRoot === 'string' ? s.fileRoot : DEFAULTS.fileRoot,
+          exportDest: typeof s.exportDest === 'string' ? s.exportDest : DEFAULTS.exportDest,
+          autoSave: s.autoSave !== false,
           homeGpuUrl: typeof s.homeGpuUrl === 'string' ? s.homeGpuUrl : '',
           speakerProfile: typeof s.speakerProfile === 'string' ? s.speakerProfile : '',
           logEndpoint: s.logEndpoint || '',
@@ -857,13 +901,38 @@
     }
 
     // ---- transcript rendering ----
+    function isMonolingual() {
+      var p = state.speakerProfile || '';
+      return p === 'meeting' || p === 'transcribe';
+    }
+
+    function applyProfileChrome() {
+      var mono = isMonolingual();
+      var esHead = document.querySelector('.cell.head.es');
+      var enHead = document.querySelector('.cell.head.en');
+      if (esHead) { esHead.textContent = mono ? 'Transcript' : 'Spanish'; }
+      if (enHead) { enHead.textContent = mono ? 'Notes' : 'English'; }
+      var esBtn = document.querySelector('.seg-toggle [data-view="es"]');
+      var enBtn = document.querySelector('.seg-toggle [data-view="en"]');
+      if (esBtn) { esBtn.textContent = mono ? 'Transcript' : 'Spanish'; }
+      if (enBtn) { enBtn.textContent = mono ? 'Notes' : 'English'; }
+      if (placeholderEl) {
+        placeholderEl.textContent = mono
+          ? 'Press “Start listening”. Meeting / Transcribe writes what was said — no translation.'
+          : 'Press “Start listening” and let Spanish speech reach your microphone. '
+            + 'Each spoken sentence is transcribed, then translated — Spanish on the left, English on the right.';
+      }
+    }
+
     function showPlaceholder() {
       if (placeholderEl) { return; }
       placeholderEl = document.createElement('div');
       placeholderEl.className = 'placeholder';
-      placeholderEl.textContent = 'Press “Start listening” and let Spanish speech reach your microphone. '
-        + 'Each spoken sentence is transcribed on-device, then translated — Spanish on the left, English on the right. '
-        + 'The first run downloads the speech model.';
+      placeholderEl.textContent = isMonolingual()
+        ? 'Press “Start listening”. Meeting / Transcribe writes what was said — no translation.'
+        : 'Press “Start listening” and let Spanish speech reach your microphone. '
+          + 'Each spoken sentence is transcribed, then translated — Spanish on the left, English on the right. '
+          + 'The first run downloads the speech model.';
       els.rows.insertBefore(placeholderEl, interimRow);
     }
     function removePlaceholder() {
@@ -926,6 +995,10 @@
       var esIsSource = (dir === 'es-en');                 // en-es: en is source; auto: decided after detect
       var esLabel = esIsSource ? 'transcribing…' : 'translating…';
       var enLabel = (dir === 'en-es') ? 'transcribing…' : 'translating…';
+      if (isMonolingual()) {
+        esLabel = 'transcribing…';
+        enLabel = '';
+      }
       var retryEs = seg.esState === 'error' ? function () { retrySeg(seg.id); } : null;
       var retryEn = seg.enState === 'error' ? function () { retrySeg(seg.id); } : null;
       paintCell(refs.es, 'es', seg.esState, esText, seg.error, esLabel, retryEs);
@@ -1060,13 +1133,149 @@
       els.localOpts.style.display = eng === 'local' ? '' : 'none';
       els.cloudOpts.style.display = eng === 'cloud' ? '' : 'none';
       els.homegpuOpts.style.display = eng === 'homegpu' ? '' : 'none';
+      var showExport = eng === 'homegpu';
+      if (els.exportRow) { els.exportRow.style.display = showExport ? '' : 'none'; }
+      if (els.exportNote) { els.exportNote.style.display = showExport ? '' : 'none'; }
+      if (els.autoSaveRow) { els.autoSaveRow.style.display = showExport ? '' : 'none'; }
+      if (els.saveBtn) { els.saveBtn.style.display = showExport ? '' : 'none'; }
       if (eng === 'cloud') {
         setModelStatus('Cloud transcription (' + (state.cloudModel || 'gpt-4o-transcribe') + ') — no model download needed.', '');
       } else if (eng === 'homegpu') {
-        setModelStatus('Home GPU engine — transcription and translation run on your own server. No model download, no API keys.', '');
+        setModelStatus(isMonolingual()
+          ? 'Home GPU engine — transcribing only (no translation).'
+          : 'Home GPU engine — transcription and translation run on your own server. No model download, no API keys.', '');
+        fillExportDests();
+        applyProfileChrome();
       } else if (/^(Cloud transcription|Home GPU)/.test(els.modelStatus.textContent || '')) {
         setModelStatus('', '');
       }
+    }
+
+    function hgHttpOrigin() {
+      var u = (state.homeGpuUrl || '').trim();
+      if (!u) { return ''; }
+      return u.replace(/^ws/i, 'http').replace(/\/ws\/?$/i, '').replace(/\/$/, '');
+    }
+
+    function sessionName() {
+      return prefixName().toLowerCase() || 'sermon';
+    }
+
+    function prefixName() {
+      return (state.fileRoot || 'transcript').trim()
+        .replace(/[^\w-]+/g, '-').replace(/^-+|-+$/g, '') || 'transcript';
+    }
+
+    var exportDestPaths = {};
+
+    function predictedSaveName() {
+      var d = new Date();
+      var pad = function (n) { return n < 10 ? '0' + n : String(n); };
+      return prefixName() + '-' + d.getFullYear() + '-' + pad(d.getMonth() + 1) +
+        '-' + pad(d.getDate()) + '-' + pad(d.getHours()) + pad(d.getMinutes()) + '.md';
+    }
+
+    function updateExportNote() {
+      var note = els.exportNote;
+      if (!note) { return; }
+      var dest = (els.exportDest && els.exportDest.value) || state.exportDest || '';
+      var folder = exportDestPaths[dest] || dest;
+      note.textContent = folder
+        ? ('Saves to ' + folder + '/' + predictedSaveName())
+        : 'Pick a folder. File name is your prefix plus the time you stop.';
+    }
+
+    function setExportStatus(kind, text) {
+      var el = els.exportStatus;
+      if (!el) { return; }
+      if (!text) { el.hidden = true; el.textContent = ''; return; }
+      el.hidden = false;
+      el.textContent = text;
+      el.className = 'note' + (kind === 'err' ? ' warn' : '');
+    }
+
+    function fillExportDests() {
+      var origin = hgHttpOrigin();
+      var sel = els.exportDest;
+      if (!sel) { return; }
+      if (!origin) {
+        setExportStatus('err', 'Set the Home GPU URL above so Save can reach this computer.');
+        return;
+      }
+      fetch(origin + '/api/export/dests')
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error('dests ' + r.status)); })
+        .then(function (d) {
+          var keep = state.exportDest || '';
+          exportDestPaths = d.paths || {};
+          sel.innerHTML = '';
+          (d.dests || []).forEach(function (name) {
+            var o = document.createElement('option');
+            o.value = name;
+            o.textContent = exportDestPaths[name] ? (name + ' — ' + exportDestPaths[name]) : name;
+            sel.appendChild(o);
+          });
+          var names = d.dests || [];
+          if (keep && names.indexOf(keep) >= 0) { sel.value = keep; }
+          else if (names.indexOf('Podcast') >= 0) { sel.value = 'Podcast'; }
+          else if (names.indexOf('harlananelson') >= 0) { sel.value = 'harlananelson'; }
+          state.exportDest = sel.value;
+          saveState();
+          setExportStatus('', '');
+          updateExportNote();
+        })
+        .catch(function (e) {
+          pushLog('warn', 'export dests: ' + ((e && e.message) || e));
+          setExportStatus('err', 'Could not list folders on this computer — is the Home GPU server running? Download .md still works on this device.');
+        });
+    }
+
+    function sendExportOnStop() {
+      if (!hgWs || hgWs.readyState !== 1) { return; }
+      var dest = (els.exportDest && els.exportDest.value) || state.exportDest || '';
+      try {
+        hgWs.send(JSON.stringify({
+          type: 'export_on_stop',
+          dest: state.autoSave ? dest : '',
+          label: prefixName()
+        }));
+      } catch (e) { /* never block listen */ }
+    }
+
+    function saveToComputer() {
+      var origin = hgHttpOrigin();
+      if (!origin) {
+        setExportStatus('err', 'Home GPU URL is not set — Save writes on the workstation.');
+        return;
+      }
+      var dest = els.exportDest && els.exportDest.value;
+      if (!dest) {
+        setExportStatus('err', 'Pick a folder, or wait for the folder list to load.');
+        fillExportDests();
+        return;
+      }
+      var label = prefixName();
+      els.saveBtn.disabled = true;
+      setExportStatus('', 'Saving…');
+      fetch(origin + '/api/export', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ session: sessionName(), dest: dest, label: label, scope: 'last' })
+      })
+        .then(function (r) {
+          return r.json().then(function (d) {
+            if (!r.ok) { throw new Error(d.detail || r.status); }
+            return d;
+          });
+        })
+        .then(function (d) {
+          setExportStatus('', 'Saved on this computer: ' + d.path);
+          els.saveBtn.textContent = 'Saved ✓';
+          setTimeout(function () { els.saveBtn.textContent = '💾 Save to computer'; }, 2000);
+        })
+        .catch(function (e) {
+          setExportStatus('err', 'Save failed: ' + ((e && e.message) || e));
+        })
+        .then(function () { els.saveBtn.disabled = false; });
     }
 
     // ---- Home GPU engine: stream PCM to your own server over Tailscale ----
@@ -1127,11 +1336,16 @@
         paintRow(tseg);
         maybeScroll();
         pushLog('', 'term: ' + ev.word);
+      } else if (ev.type === 'exported') {
+        setExportStatus('', 'Saved on this computer: ' + ev.path);
+        setStatus('ok', 'Saved ' + ev.path);
+        pushLog('', 'exported: ' + ev.path);
       } else if (ev.type === 'analysis') {
+        var ahead = ev.label ? ('🧠 ' + ev.label + '\n\n') : '🧠 ';
         var aseg = {
           id: nextId++,
-          es: '🧠 ' + ev.text,
-          en: '🧠 ' + ev.text,
+          es: ahead + ev.text,
+          en: ahead + ev.text,
           esState: 'done', enState: 'done', error: '', t: Date.now(),
           heard: '', dir: 'es-en', passage: true
         };
@@ -1140,7 +1354,9 @@
         addRow(aseg);
         paintRow(aseg);
         maybeScroll();
-        setStatus('ok', 'Analysis ready');
+        setStatus('ok', ev.pushed && ev.pushed.ok
+          ? 'Analysis ready · sent to reMarkable'
+          : 'Analysis ready');
       } else if (ev.type === 'correction') {
         // The rolling QC pass re-read this line with the context that arrived
         // after it and found a recognition error. Replace the text in place;
@@ -1150,13 +1366,17 @@
           cseg.es = ev.text;
           cseg.heard = ev.text;
           cseg.corrected = true;
-          cseg.enState = 'translating';   // a corrected translation follows
+          if (!isMonolingual()) { cseg.enState = 'translating'; }
           paintRow(cseg);
           pushLog('', 'corrected #' + ev.id + ': ' + ev.text);
         }
       } else if (ev.type === 'es') {
         setInterim('');
-        var seg = { id: nextId++, es: ev.text, esState: 'done', en: '', enState: 'translating', error: '', t: Date.now(), heard: ev.text, dir: 'es-en' };
+        var seg = {
+          id: nextId++, es: ev.text, esState: 'done', en: '',
+          enState: isMonolingual() ? 'idle' : 'translating',
+          error: '', t: Date.now(), heard: ev.text, dir: 'es-en'
+        };
         segments.push(seg);
         hgMap[ev.id] = seg;
         removePlaceholder();
@@ -1200,12 +1420,11 @@
               // Reuses the export filename root the user already sets, so the
               // saved transcript matches what a download would have been called.
               try {
-                var nm = (state.fileRoot || 'sermon').trim()
-                  .toLowerCase().replace(/[^a-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '');
-                hgWs.send(JSON.stringify({ type: 'session', name: nm || 'sermon' }));
+                hgWs.send(JSON.stringify({ type: 'session', name: sessionName() }));
                 if (state.speakerProfile) {
                   hgWs.send(JSON.stringify({ type: 'profile', name: state.speakerProfile }));
                 }
+                sendExportOnStop();
               } catch (e) { /* saving is the server's business; never block the stream */ }
               pushLog('', 'Home GPU connected — asr=' + ev.asr + ' llm=' + ev.llm +
                           ' — saving on the workstation');
@@ -1411,7 +1630,6 @@
         processor.connect(muteGain);
         muteGain.connect(audioCtx.destination);
         capturing = true;
-        resetMicWatch();   // a new session starts with a clean slate
         resetVad();
         if (audioCtx.resume) { audioCtx.resume(); }
         pushLog('', 'microphone capture started (sampleRate=' + srcRate + ')');
@@ -1425,7 +1643,6 @@
 
     function stopCapture() {
       capturing = false;
-      resetMicWatch();     // do not carry a stale warning into the next run
       if (processor) { try { processor.disconnect(); processor.onaudioprocess = null; } catch (e) {} }
       if (micSource) { try { micSource.disconnect(); } catch (e) {} }
       if (muteGain) { try { muteGain.disconnect(); } catch (e) {} }
@@ -1434,41 +1651,6 @@
       audioCtx = micStream = micSource = processor = muteGain = null;
       resetVad();
       setLevel(0);
-    }
-
-    // ---- silent-microphone detector -----------------------------------------
-    // A muted mic, a device held by another app, or the wrong input selected all
-    // stream perfectly valid digital silence. Nothing errors, the socket stays
-    // open, and the failure is invisible until you look for a transcript that
-    // does not exist — a 24-minute meeting was lost exactly this way.
-    //
-    // The floor is deliberately far BELOW the speech threshold: a real room
-    // always has a noise floor, so anything genuinely acoustic clears 0.002.
-    // Sustained readings under it mean no signal at all, not a quiet room.
-    var MIC_FLOOR = 0.002;
-    var MIC_SILENT_MS = 20000;      // ~20s of nothing before we say so
-    var micSilentMs = 0, micWarned = false;
-
-    function resetMicWatch() { micSilentMs = 0; micWarned = false; }
-
-    function checkMicAlive(rms, frameMs) {
-      if (rms >= MIC_FLOOR) {
-        if (micWarned) {
-          micWarned = false;
-          setStatus('ok', 'Microphone is picking up sound again.');
-        }
-        micSilentMs = 0;
-        return;
-      }
-      micSilentMs += frameMs;
-      if (!micWarned && micSilentMs >= MIC_SILENT_MS) {
-        micWarned = true;
-        setStatus('err',
-          'No sound from the microphone for ' + Math.round(micSilentMs / 1000) +
-          's — recording, but capturing nothing. Check that the mic is not muted, ' +
-          'that the right input is selected, and that another app (Teams, Zoom) ' +
-          'is not holding it.');
-      }
     }
 
     function onAudio(e) {
@@ -1481,7 +1663,6 @@
       var rms = Math.sqrt(sum / n);
       var frameMs = (n / srcRate) * 1000;
       setLevel(rms);
-      checkMicAlive(rms, frameMs);
       if (state.transcribeEngine === 'homegpu') {
         // continuous streaming: the server does its own VAD and chunking
         if (hgWs && hgWs.readyState === 1) {
@@ -1566,13 +1747,19 @@
       updateControls();
       pushConfig();
       if (state.transcribeEngine === 'homegpu') {
-        pushLog('', 'Start pressed — Home GPU engine, server=' + state.homeGpuUrl);
-        setStatus('idle', 'Connecting to Home GPU server…');
-        hgConnect().then(function (ok) {
+        var already = hgWs && hgWs.readyState === 1;
+        pushLog('', already
+          ? 'Start pressed — resuming (transcript kept)'
+          : 'Start pressed — Home GPU engine, server=' + state.homeGpuUrl);
+        if (!already) { setStatus('idle', 'Connecting to Home GPU server…'); }
+        var ready = already ? Promise.resolve(true) : hgConnect();
+        ready.then(function (ok) {
           if (!ok) { listening = false; updateControls(); return; }
           startCapture().then(function (capOk) {
-            if (!capOk) { listening = false; hgDisconnect(); updateControls(); return; }
-            setStatus('live', 'Listening — streaming to your Home GPU server.');
+            if (!capOk) { listening = false; updateControls(); return; }
+            setStatus('live', isMonolingual()
+              ? 'Listening — transcribing on the Home GPU.'
+              : 'Listening — streaming to your Home GPU server.');
           });
         });
         return;
@@ -1589,9 +1776,14 @@
 
     function stop() {
       listening = false;
-      if (state.transcribeEngine === 'homegpu') { hgDisconnect(); }
+      // Keep the Home GPU session (and its transcript) until Clear.
+      // A full disconnect used to open a new empty session on the next Start,
+      // so Analyze reported "nothing transcribed" after Stop.
+      if (state.transcribeEngine === 'homegpu' && hgWs && hgWs.readyState === 1) {
+        try { hgWs.send(JSON.stringify({ type: 'pause' })); } catch (e) {}
+      }
       stopCapture();
-      setStatus('idle', 'Stopped.');
+      setStatus('idle', 'Stopped — transcript kept. Clear to erase.');
       updateControls();
     }
 
@@ -1710,6 +1902,7 @@
     function clearTranscript() {
       segments = [];
       segEl = {};
+      hgMap = {};
       sessionAudio = [];
       sessionAudioSamples = 0;
       var olds = els.rows.querySelectorAll('.row.seg');
@@ -1719,8 +1912,20 @@
       setInterim('');
       if (translator) { translator.postMessage({ type: 'clear' }); }
       if (whisper) { whisper.postMessage({ type: 'clear' }); }
+      if (hgWs && hgWs.readyState === 1) {
+        try { hgWs.send(JSON.stringify({ type: 'clear' })); } catch (e) {}
+      }
       els.statusText.dataset.msg = listening ? 'Listening…' : 'Idle';
       updateStatus();
+    }
+
+    function transcriptLinesForAnalyze() {
+      return segments.filter(function (s) {
+        if (s.esState !== 'done' || !s.es) { return false; }
+        if (s.passage) { return false; }
+        if (/^🧠 /.test(s.es)) { return false; }
+        return true;
+      }).map(function (s) { return s.heard || s.es; });
     }
 
     function copyTranscript() {
@@ -1789,7 +1994,7 @@
       document.body.removeChild(a);
       setTimeout(function () { URL.revokeObjectURL(url); }, 0);
       els.downloadBtn.textContent = 'Downloaded ✓';
-      setTimeout(function () { els.downloadBtn.textContent = 'Download .md'; }, 1500);
+      setTimeout(function () { els.downloadBtn.textContent = 'Download .md (this device)'; }, 1500);
     }
 
     function copyDiagnostics() {
@@ -1975,9 +2180,11 @@
       fillModelSelect(els.cloudModel, els.cloudModelCustom, CLOUD_SUGGESTIONS, state.cloudModel);
       els.vocab.value = state.vocab || '';
       els.fileRoot.value = state.fileRoot || '';
+      if (els.autoSave) { els.autoSave.checked = state.autoSave !== false; }
       els.homeGpuUrl.value = state.homeGpuUrl || '';
       els.speakerProfile.value = state.speakerProfile || '';
       applyEngine();
+      applyProfileChrome();
       applyView();
       applyScale();
       applyTheme();
@@ -2047,11 +2254,38 @@
       els.fileRoot.addEventListener('input', function () {
         state.fileRoot = els.fileRoot.value;
         saveState();
+        updateExportNote();
+        sendExportOnStop();
+      });
+      els.exportDest.addEventListener('change', function () {
+        state.exportDest = els.exportDest.value;
+        saveState();
+        updateExportNote();
+        sendExportOnStop();
+      });
+      if (els.autoSave) {
+        els.autoSave.addEventListener('change', function () {
+          state.autoSave = !!els.autoSave.checked;
+          saveState();
+          sendExportOnStop();
+          setExportStatus('', state.autoSave
+            ? 'Opted in — Stop will write the .md on this computer.'
+            : 'Opted out — use Save to computer if you want a .md.');
+        });
+      }
+      els.speakerProfile.addEventListener('change', function () {
+        state.speakerProfile = els.speakerProfile.value;
+        saveState();
+        applyProfileChrome();
+        applyEngine();
+        if (hgWs && hgWs.readyState === 1) {
+          try { hgWs.send(JSON.stringify({ type: 'profile', name: state.speakerProfile })); } catch (e) {}
+        }
       });
       els.homeGpuUrl.addEventListener('input', function () {
         state.homeGpuUrl = els.homeGpuUrl.value.trim();
-        state.speakerProfile = els.speakerProfile.value;
         saveState(); updateControls();
+        if (state.transcribeEngine === 'homegpu') { fillExportDests(); }
       });
       els.openaiKey.addEventListener('input', function () {
         state.apiKeys.openai = els.openaiKey.value.trim();
@@ -2073,22 +2307,194 @@
       });
       els.clearBtn.addEventListener('click', clearTranscript);
       els.copyBtn.addEventListener('click', copyTranscript);
+      els.saveBtn.addEventListener('click', saveToComputer);
       els.downloadBtn.addEventListener('click', downloadTranscript);
       els.diarizeBtn.addEventListener('click', diarizeSession);
-      // Analyse through the profile's lens. Only the Home GPU path has a
-      // server to ask; it runs in the background and never pauses capture.
-      els.analyzeBtn.addEventListener('click', function () {
+      // Context-sensitive Analyze menu. The list depends on the speaker
+      // profile and the export dest (sermon tools, meeting commands,
+      // statistical theory → reMarkable). The chosen action runs on the
+      // Home GPU in the background and never pauses capture.
+      var analyzeMenuCache = { key: '', items: null };
+      var analyzeMenuView = 'root';
+
+      function analyzeContext() {
+        return {
+          profile: (els.speakerProfile && els.speakerProfile.value) || state.speakerProfile || '',
+          dest: (els.exportDest && els.exportDest.value) || state.exportDest || ''
+        };
+      }
+
+      function fallbackAnalyzeMenu(profile, dest) {
+        var sermon = /^(bible-study|jean-petit)$/.test(profile) ||
+          /bible|iglesia|sermon|church|faith|jean|casa.?de.?fe|estudio/i.test(dest);
+        var meeting = /^(meeting|transcribe)$/.test(profile) ||
+          (dest && !/bible|iglesia|sermon|church|faith|jean|casa.?de.?fe|estudio/i.test(dest) && dest !== 'Podcast');
+        var stats = /^(hmi|patientvolume|patientvolumeIUH|census|afib|troponin|datadictrwd|allison|SCDCernerProject|nsqip|lungtransplant|concept-dag|edw|omop|pico-dag|patientexperience)$/.test(dest) ||
+          ((/volume|census|troponin|afib|ontology|rwd|cohort|patient/i.test(dest)) && dest !== 'Podcast' && dest !== 'AI');
+        if (sermon) { stats = false; }
+        var items = [{ id: 'profile', label: "Summarize through this profile's lens", hint: 'The summary this profile already knows how to write', remarkable: false }];
+        if (sermon) {
+          items.push(
+            { id: 'sermon_notes', label: 'Sermon note-taking guide → reMarkable', hint: 'Outline, claims, questions, with blank space to write', remarkable: true },
+            { id: 'doctrine', label: 'Identify doctrinal subjects', hint: 'Named doctrines and the unspoken space driving the talk', remarkable: false },
+            { id: 'original_language', label: 'Original language: Greek / Hebrew', hint: 'Words discussed, the sense given in the room, what to verify', remarkable: false }
+          );
+        }
+        if (meeting || /^(meeting|transcribe)$/.test(profile)) {
+          items.push({
+            id: 'meeting_commands',
+            label: 'Meeting analysis commands',
+            hint: 'Pick one — decisions, actions, follow-up, …',
+            remarkable: false,
+            children: [
+              { id: 'meeting_decisions', label: 'Decisions vs. discussion', hint: 'What closed, what is still talk' },
+              { id: 'meeting_actions', label: 'Action items (owner + when)', hint: 'Only owners and dates that were spoken' },
+              { id: 'meeting_questions', label: 'Open questions', hint: 'Asked and not answered, or left hanging' },
+              { id: 'meeting_changes', label: 'What changed during the meeting', hint: 'Dates, owners, numbers, plans that moved' },
+              { id: 'meeting_followup', label: 'Draft a follow-up note', hint: 'A page someone in the room could send' },
+              { id: 'meeting_facts', label: 'Names, dates, numbers', hint: 'Extracted exactly as spoken' },
+              { id: 'meeting_blockers', label: 'Blockers and risks', hint: 'Only what someone named as in the way' }
+            ]
+          });
+        }
+        if (stats) {
+          items.push({ id: 'stats_theory', label: 'Theory / methods document → reMarkable', hint: 'Estimand, design, assumptions, open methods questions', remarkable: true });
+        }
+        return items;
+      }
+
+      function closeAnalyzeMenu() {
+        if (!els.analyzeMenu) { return; }
+        els.analyzeMenu.hidden = true;
+        els.analyzeMenu.innerHTML = '';
+        analyzeMenuView = 'root';
+        if (els.analyzeBtn) { els.analyzeBtn.setAttribute('aria-expanded', 'false'); }
+      }
+
+      function renderAnalyzeMenu(items, view) {
+        var menu = els.analyzeMenu;
+        if (!menu) { return; }
+        menu.innerHTML = '';
+        analyzeMenuView = view || 'root';
+        var list = items || [];
+        if (analyzeMenuView === 'meeting_commands') {
+          var group = null;
+          for (var i = 0; i < list.length; i++) {
+            if (list[i].id === 'meeting_commands') { group = list[i]; break; }
+          }
+          var back = document.createElement('button');
+          back.type = 'button';
+          back.className = 'back';
+          back.textContent = '← Analysis options';
+          back.addEventListener('click', function (e) {
+            e.stopPropagation();
+            renderAnalyzeMenu(list, 'root');
+          });
+          menu.appendChild(back);
+          (group && group.children ? group.children : []).forEach(function (child) {
+            menu.appendChild(analyzeMenuButton(child, list));
+          });
+        } else {
+          list.forEach(function (item) {
+            menu.appendChild(analyzeMenuButton(item, list));
+          });
+        }
+        menu.hidden = false;
+        if (els.analyzeBtn) { els.analyzeBtn.setAttribute('aria-expanded', 'true'); }
+      }
+
+      function analyzeMenuButton(item, allItems) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'item';
+        b.setAttribute('role', 'menuitem');
+        var lbl = document.createElement('span');
+        lbl.className = 'lbl';
+        lbl.textContent = item.label + (item.children ? ' ▸' : '');
+        b.appendChild(lbl);
+        if (item.hint) {
+          var h = document.createElement('span');
+          h.className = 'hint';
+          h.textContent = item.hint;
+          b.appendChild(h);
+        }
+        b.addEventListener('click', function (e) {
+          e.stopPropagation();
+          if (item.children && item.children.length) {
+            renderAnalyzeMenu(allItems, item.id);
+            return;
+          }
+          requestAnalysis(item.id);
+          closeAnalyzeMenu();
+        });
+        return b;
+      }
+
+      function requestAnalysis(actionId) {
         if (!hgWs || hgWs.readyState !== 1) {
           setStatus('err', 'Analyze needs the Home GPU engine connected.');
           return;
         }
+        var ctx = analyzeContext();
         try {
-          hgWs.send(JSON.stringify({ type: 'analyze' }));
+          hgWs.send(JSON.stringify({
+            type: 'analyze',
+            action: actionId || 'profile',
+            dest: ctx.dest,
+            label: prefixName(),
+            lines: transcriptLinesForAnalyze()
+          }));
           setStatus('', 'Analyzing…');
-          pushLog('', 'analysis requested');
+          pushLog('', 'analysis requested: ' + (actionId || 'profile'));
         } catch (e) {
           setStatus('err', 'Could not request analysis: ' + ((e && e.message) || e));
         }
+      }
+
+      function showAnalyzeMenu() {
+        if (!hgWs || hgWs.readyState !== 1) {
+          setStatus('err', 'Analyze needs the Home GPU engine connected.');
+          return;
+        }
+        if (els.analyzeMenu && !els.analyzeMenu.hidden) {
+          closeAnalyzeMenu();
+          return;
+        }
+        var ctx = analyzeContext();
+        var key = ctx.profile + '|' + ctx.dest;
+        var items = (analyzeMenuCache.key === key && analyzeMenuCache.items)
+          ? analyzeMenuCache.items
+          : fallbackAnalyzeMenu(ctx.profile, ctx.dest);
+        renderAnalyzeMenu(items, 'root');
+        var origin = hgHttpOrigin();
+        if (!origin) { return; }
+        var q = '/api/analyze/menu?profile=' + encodeURIComponent(ctx.profile) +
+          '&dest=' + encodeURIComponent(ctx.dest);
+        fetch(origin + q)
+          .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error('menu ' + r.status)); })
+          .then(function (d) {
+            if (!d || !d.items) { return; }
+            analyzeMenuCache = { key: key, items: d.items };
+            if (els.analyzeMenu && !els.analyzeMenu.hidden) {
+              renderAnalyzeMenu(d.items, analyzeMenuView);
+            }
+          })
+          .catch(function (e) {
+            pushLog('warn', 'analyze menu: ' + ((e && e.message) || e));
+          });
+      }
+
+      els.analyzeBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        showAnalyzeMenu();
+      });
+      document.addEventListener('click', function (e) {
+        if (!els.analyzeMenu || els.analyzeMenu.hidden) { return; }
+        if (els.analyzeMenu.contains(e.target) || els.analyzeBtn.contains(e.target)) { return; }
+        closeAnalyzeMenu();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { closeAnalyzeMenu(); }
       });
       els.copyDiag.addEventListener('click', copyDiagnostics);
       els.sendDiag.addEventListener('click', function () { sendLog(true); });
