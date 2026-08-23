@@ -422,13 +422,22 @@
     }
     return t;
   }
-  function followPane(name) {
+  function clipCurated(t) {
+    t = String(t || "").replace(/```[\s\S]*?```/g, " ").replace(/\s+/g, " ").trim();
+    if (!t) return "";
+    if (t.length > 400) {
+      var cut = t.slice(0, 400);
+      var sp = cut.lastIndexOf(". ");
+      t = (sp > 80 ? cut.slice(0, sp + 1) : cut).trim();
+    }
+    return t;
+  }
+  function followPane(name, sent) {
     stopPaneWatch();
     paneWatch = { name: name, last: "", same: 0, el: null, ticks: 0 };
     paneWatch.el = addMsg("assistant", "Waiting for a reply from " + name + "…", "← " + name);
-    function paint(text) {
-      var shown = paneReplyText(text) || text;
-      var lines = shown.split("\n");
+    function paint(shown) {
+      var lines = String(shown || "").split("\n");
       if (lines.length > 24) shown = lines.slice(-24).join("\n");
       if (!paneWatch.el || !paneWatch.el.parentNode) {
         paneWatch.el = addMsg("assistant", shown, "← " + name);
@@ -445,31 +454,43 @@
       d.appendChild(document.createTextNode(shown));
       $("transcript").scrollTop = $("transcript").scrollHeight;
     }
+    function finish(data) {
+      var curated = ((data && data.curated) || "").trim();
+      var pane = (data && data.text) || "";
+      var shown = curated || paneReplyText(pane) || pane;
+      if (shown) paint(shown);
+      setStatus(shown ? ("Reply from " + name + ".") : ("Sent to " + name + "."));
+      if (soundOn) {
+        var clip = curated ? clipCurated(curated) : speakableClip(pane);
+        speak(clip || (shown ? ("Reply is on the screen from " + name + ".") : ""));
+      }
+      stopPaneWatch();
+    }
     function tick() {
       if (!paneWatch || paneWatch.name !== name) return;
       paneWatch.ticks++;
-      api("/api/tmux/capture?name=" + encodeURIComponent(name) + "&lines=40")
+      var q = "/api/tmux/capture?name=" + encodeURIComponent(name) + "&lines=40";
+      if (sent) q += "&after=" + encodeURIComponent(sent);
+      api(q)
         .then(function (r) { return r.json(); })
         .then(function (data) {
           if (!paneWatch || paneWatch.name !== name) return;
-          var text = (data.text || "").replace(/\s+$/, "");
-          if (text && text !== paneWatch.last) {
-            paneWatch.last = text;
+          var curated = (data.curated || "").trim();
+          var pane = (data.text || "").replace(/\s+$/, "");
+          var shown = curated || paneReplyText(pane) || pane;
+          var key = curated ? ("c:" + curated) : ("p:" + pane);
+          var grok = data.source === "grok";
+          if (shown && key !== paneWatch.last) {
+            paneWatch.last = key;
             paneWatch.same = 0;
-            paint(text);
+            paint(shown);
             setStatus("← " + name + " still writing…");
           } else {
             paneWatch.same++;
-            if (paneWatch.same >= 3 || paneWatch.ticks >= 30) {
-              setStatus(paneWatch.last ? ("Reply from " + name + ".") : ("Sent to " + name + "."));
-              if (soundOn) {
-                var clip = speakableClip(paneWatch.last);
-                speak(clip || (paneWatch.last ? ("Reply is on the screen from " + name + ".") : ""));
-              }
-              stopPaneWatch();
-              return;
-            }
           }
+          if (curated && data.complete) { finish(data); return; }
+          if (!grok && (paneWatch.same >= 3 || paneWatch.ticks >= 30)) { finish(data); return; }
+          if (grok && paneWatch.ticks >= 45) { finish(data); return; }
           paneWatch.timer = setTimeout(tick, 2000);
         })
         .catch(function () {
@@ -1453,7 +1474,7 @@
       addTmuxSendAck(sendName, text);
       resetAgentSend();
       setStatus("Sent to " + sendName + " — waiting for a reply on screen.");
-      followPane(sendName);
+      followPane(sendName, text);
     }).catch(function (e) {
       if (box && !(box.value || "").trim()) box.value = text;
       resetAgentSend();
