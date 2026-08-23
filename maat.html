@@ -238,17 +238,36 @@
       id: "remarkable",
       label: "reMarkable",
       icon: "📝",
-      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443/?listen=current&v=14",
+      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443/?listen=current&v=15",
       hint: "Phone → reMarkable. New job can use the current Maat Listen session (sermon/meeting) as input. Needs Tailscale + phone-bridge."
     }
   ];
   var TOOL_IDS = { music: 1, remarkable: 1 };
   var LAST_TOOL_KEY = "maat.tools.lastTool";
   var listenStem = "";
+  function getWorkstationToken() {
+    try { return (localStorage.getItem("tb_token") || "").trim(); } catch (e) { return ""; }
+  }
+  function setWorkstationToken(t) {
+    try { localStorage.setItem("tb_token", (t || "").trim()); } catch (e) {}
+  }
+  function pushAuthToFrames() {
+    var token = getWorkstationToken();
+    if (!token) return;
+    var msg = { type: "maat-auth", token: token };
+    try { msg.bridge = localStorage.getItem("tb_bridge") || ""; } catch (e) {}
+    document.querySelectorAll("iframe").forEach(function (f) {
+      try { if (f.contentWindow) f.contentWindow.postMessage(msg, "*"); } catch (e) {}
+    });
+  }
   window.addEventListener("message", function (ev) {
     var d = ev.data;
-    if (!d || d.type !== "maat-listen" || !d.session) return;
-    listenStem = String(d.session).replace(/[^A-Za-z0-9._-]/g, "");
+    if (!d) return;
+    if (d.type === "maat-listen" && d.session) {
+      listenStem = String(d.session).replace(/[^A-Za-z0-9._-]/g, "");
+      return;
+    }
+    if (d.type === "maat-auth-please") pushAuthToFrames();
   });
   function remarkableUrl() {
     var t = toolById("remarkable");
@@ -256,7 +275,7 @@
     try {
       var u = new URL(base, location.href);
       u.searchParams.set("listen", listenStem || "current");
-      u.searchParams.set("v", "14");
+      u.searchParams.set("v", "15");
       return u.href;
     } catch (e) {
       return base;
@@ -288,7 +307,7 @@
       label: "Converse",
       icon: "💬",
       // Mic-first + cache-bust after one-interface layout.
-      url: "./assistant.html?v=86&mode=mic",
+      url: "./assistant.html?v=87&mode=mic",
       kind: "iframe",
       hint: "Talk to a model or a workstation shell — type or speak. Deep link: #converse or #converse?input=mic. Needs Tailscale + tesla-bridge."
     },
@@ -455,6 +474,7 @@
       note.textContent = "Tailscale required · " + (t.hint || t.label);
     }
     if (opts.showTools !== false) show("tools");
+    if (id === "remarkable") pushAuthToFrames();
   }
 
   function openToolPicker() {
@@ -605,7 +625,10 @@
       var m = app.label + " did not load (" + app.url + ") — is Tailscale on / service running?";
       reportError("maat.html/" + app.id, m); showBanner(m);
     }, 8000);
-    frame.addEventListener("load", function () { done = true; clearTimeout(timer); });
+    frame.addEventListener("load", function () {
+      done = true; clearTimeout(timer);
+      pushAuthToFrames();
+    });
     frame.addEventListener("error", function () {
       done = true; clearTimeout(timer);
       var m = app.label + " failed to load (" + app.url + ")";
@@ -650,6 +673,24 @@
       var about = $("aboutPanel");
       if (about) about.innerHTML = aboutHtml();
       var wrap = $("settingsFields"); wrap.innerHTML = "";
+      var tokLab = document.createElement("label");
+      tokLab.textContent = "Workstation token (all of Maat — Converse, Listen, reMarkable)";
+      tokLab.htmlFor = "maatToken";
+      var tokInp = document.createElement("input");
+      tokInp.id = "maatToken";
+      tokInp.type = "password";
+      tokInp.autocomplete = "off";
+      tokInp.autocapitalize = "off";
+      tokInp.placeholder = "already saved if you signed in on Converse";
+      tokInp.value = getWorkstationToken();
+      wrap.appendChild(tokLab);
+      wrap.appendChild(tokInp);
+      var tokHint = document.createElement("p");
+      tokHint.className = "note";
+      tokHint.style.margin = "4px 0 16px";
+      tokHint.style.fontSize = "12px";
+      tokHint.textContent = "One bearer for the home box. Copied from Converse if you already entered it there.";
+      wrap.appendChild(tokHint);
       modes.forEach(function (a) {
         if (a.kind === "tools") {
           var head = document.createElement("p");
@@ -694,6 +735,11 @@
     $("settings").classList.toggle("open", open);
   }
   $("saveModes").onclick = function () {
+    var tokEl = $("maatToken");
+    if (tokEl) {
+      setWorkstationToken(tokEl.value);
+      pushAuthToFrames();
+    }
     modes.forEach(function (a) {
       if (a.kind === "about" || a.kind === "tools") return;
       var el = $("url-" + a.id);
