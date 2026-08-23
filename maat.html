@@ -238,7 +238,7 @@
       id: "remarkable",
       label: "reMarkable",
       icon: "📝",
-      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443/?listen=current&v=16",
+      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443/?listen=current&v=17",
       hint: "Phone → reMarkable. New job can use the current Maat Listen session (sermon/meeting) as input. Needs Tailscale + phone-bridge."
     }
   ];
@@ -294,7 +294,7 @@
     try {
       var u = new URL(base, location.href);
       u.searchParams.set("listen", listenStem || "current");
-      u.searchParams.set("v", "16");
+      u.searchParams.set("v", "17");
       return u.href;
     } catch (e) {
       return base;
