@@ -278,6 +278,11 @@
     if ($("cfgToken")) $("cfgToken").value = cfg.token;
   });
   try { window.parent.postMessage({ type: "maat-auth-please" }, "*"); } catch (e) {}
+  if (cfg.token) {
+    try {
+      window.parent.postMessage({ type: "maat-auth-offer", token: cfg.token, bridge: cfg.bridge || "" }, "*");
+    } catch (e) {}
+  }
 
   var soundOn = false;
   var lastEventId = 0;
