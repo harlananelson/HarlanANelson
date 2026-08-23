@@ -266,6 +266,18 @@
     var q = params.toString();
     try { history.replaceState(null, "", location.pathname + (q ? "?" + q : "")); } catch (e) {}
   }
+  window.addEventListener("message", function (ev) {
+    var d = ev.data;
+    if (!d || d.type !== "maat-auth" || !d.token) return;
+    cfg.token = String(d.token);
+    try { localStorage.setItem("tb_token", cfg.token); } catch (e) {}
+    if (d.bridge) {
+      cfg.bridge = String(d.bridge).replace(/\/+$/, "");
+      try { localStorage.setItem("tb_bridge", cfg.bridge); } catch (e2) {}
+    }
+    if ($("cfgToken")) $("cfgToken").value = cfg.token;
+  });
+  try { window.parent.postMessage({ type: "maat-auth-please" }, "*"); } catch (e) {}
 
   var soundOn = false;
   var lastEventId = 0;
