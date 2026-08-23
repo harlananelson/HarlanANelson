@@ -238,12 +238,30 @@
       id: "remarkable",
       label: "reMarkable",
       icon: "📝",
-      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443/?listen=current&v=13",
+      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443/?listen=current&v=14",
       hint: "Phone → reMarkable. New job can use the current Maat Listen session (sermon/meeting) as input. Needs Tailscale + phone-bridge."
     }
   ];
   var TOOL_IDS = { music: 1, remarkable: 1 };
   var LAST_TOOL_KEY = "maat.tools.lastTool";
+  var listenStem = "";
+  window.addEventListener("message", function (ev) {
+    var d = ev.data;
+    if (!d || d.type !== "maat-listen" || !d.session) return;
+    listenStem = String(d.session).replace(/[^A-Za-z0-9._-]/g, "");
+  });
+  function remarkableUrl() {
+    var t = toolById("remarkable");
+    var base = (t && t.url) || "";
+    try {
+      var u = new URL(base, location.href);
+      u.searchParams.set("listen", listenStem || "current");
+      u.searchParams.set("v", "14");
+      return u.href;
+    } catch (e) {
+      return base;
+    }
+  }
 
   // Peer destinations ≤4. About lives in gear (PR4), not the thumb bar.
   var MODE_IDS = { sermon: 1, practice: 1, converse: 1, tools: 1 };
@@ -424,9 +442,10 @@
       var f = $("tool-frame-" + t.id);
       if (!f) return;
       var on = t.id === id;
-      if (on && t.url && f.getAttribute("src") !== t.url) {
-        watchIframeLoad(f, { id: "tools/" + t.id, label: t.label, url: t.url });
-        f.src = t.url;
+      var want = t.id === "remarkable" ? remarkableUrl() : t.url;
+      if (on && want && f.getAttribute("src") !== want) {
+        watchIframeLoad(f, { id: "tools/" + t.id, label: t.label, url: want });
+        f.src = want;
       }
       f.classList.toggle("active", on);
     });

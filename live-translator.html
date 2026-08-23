@@ -1161,6 +1161,16 @@
       return prefixName().toLowerCase() || 'sermon';
     }
 
+    function announceListenToMaat() {
+      try {
+        if (window.parent === window) return;
+        var d = new Date();
+        var pad = function (n) { return n < 10 ? '0' + n : String(n); };
+        var stem = sessionName() + '-' + d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+        window.parent.postMessage({ type: 'maat-listen', session: stem }, '*');
+      } catch (e) { /* not in an iframe */ }
+    }
+
     function prefixName() {
       return (state.fileRoot || 'transcript').trim()
         .replace(/[^\w-]+/g, '-').replace(/^-+|-+$/g, '') || 'transcript';
@@ -1746,6 +1756,7 @@
       listening = true;
       updateControls();
       pushConfig();
+      announceListenToMaat();
       if (state.transcribeEngine === 'homegpu') {
         var already = hgWs && hgWs.readyState === 1;
         pushLog('', already
@@ -2256,6 +2267,7 @@
         saveState();
         updateExportNote();
         sendExportOnStop();
+        announceListenToMaat();
       });
       els.exportDest.addEventListener('change', function () {
         state.exportDest = els.exportDest.value;
@@ -2534,6 +2546,7 @@
       });
 
       pushLog('', 'app initialised');
+      announceListenToMaat();
     }
 
     init();
