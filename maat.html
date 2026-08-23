@@ -238,7 +238,7 @@
       id: "remarkable",
       label: "reMarkable",
       icon: "📝",
-      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443/?listen=current&v=15",
+      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443/?listen=current&v=16",
       hint: "Phone → reMarkable. New job can use the current Maat Listen session (sermon/meeting) as input. Needs Tailscale + phone-bridge."
     }
   ];
@@ -268,6 +268,25 @@
       return;
     }
     if (d.type === "maat-auth-please") pushAuthToFrames();
+    if (d.type === "maat-auth-offer" && d.token) {
+      if (!getWorkstationToken()) setWorkstationToken(d.token);
+      if (d.bridge) {
+        try { localStorage.setItem("tb_bridge", String(d.bridge)); } catch (e) {}
+      }
+      pushAuthToFrames();
+    }
+    if (d.type === "maat-rm-status") {
+      var note = $("toolsNote");
+      if (!note) return;
+      if (d.state === "ok") note.textContent = "Connected to the workstation.";
+      else if (d.state === "need-token") {
+        note.textContent = getWorkstationToken()
+          ? "Signing in with the Converse token…"
+          : "Open ⚙ and paste the workstation token (same one as Converse).";
+      } else if (d.state === "unreachable") {
+        note.textContent = "Can't reach the box — check Tailscale.";
+      }
+    }
   });
   function remarkableUrl() {
     var t = toolById("remarkable");
@@ -275,7 +294,7 @@
     try {
       var u = new URL(base, location.href);
       u.searchParams.set("listen", listenStem || "current");
-      u.searchParams.set("v", "15");
+      u.searchParams.set("v", "16");
       return u.href;
     } catch (e) {
       return base;
@@ -307,7 +326,7 @@
       label: "Converse",
       icon: "💬",
       // Mic-first + cache-bust after one-interface layout.
-      url: "./assistant.html?v=87&mode=mic",
+      url: "./assistant.html?v=88&mode=mic",
       kind: "iframe",
       hint: "Talk to a model or a workstation shell — type or speak. Deep link: #converse or #converse?input=mic. Needs Tailscale + tesla-bridge."
     },
@@ -471,7 +490,9 @@
     var note = $("toolsNote");
     if (note) {
       var t = toolById(id);
-      note.textContent = "Tailscale required · " + (t.hint || t.label);
+      note.textContent = (t.id === "remarkable")
+        ? "Connecting…"
+        : ("Needs the home box on Tailscale · " + (t.hint || t.label));
     }
     if (opts.showTools !== false) show("tools");
     if (id === "remarkable") pushAuthToFrames();
@@ -554,7 +575,7 @@
         wrap.id = "view-tools";
         wrap.innerHTML =
           '<div class="tools-bar" id="toolsBar"></div>' +
-          '<div class="tools-note" id="toolsNote">Tailscale required for Tools</div>' +
+          '<div class="tools-note" id="toolsNote">Tools</div>' +
           '<div class="tools-frames" id="toolsFrames"></div>';
         views.appendChild(wrap);
         var frames = $("toolsFrames");
