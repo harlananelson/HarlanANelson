@@ -229,6 +229,7 @@
             <option value="">None &mdash; general Spanish</option>
             <option value="transcribe">Transcribe only &mdash; no translation, any language</option>
             <option value="meeting">Meeting &mdash; no translation, text only</option>
+            <option value="podcast">Podcast &mdash; English talk; facts, science, legal</option>
             <option value="bible-study">Bible study (theological)</option>
             <option value="jean-petit">Jean Petit (Sunday)</option>
             <option value="medical">Medical interpreting</option>
@@ -903,7 +904,7 @@
     // ---- transcript rendering ----
     function isMonolingual() {
       var p = state.speakerProfile || '';
-      return p === 'meeting' || p === 'transcribe';
+      return p === 'meeting' || p === 'transcribe' || p === 'podcast';
     }
 
     function applyProfileChrome() {
@@ -918,7 +919,7 @@
       if (enBtn) { enBtn.textContent = mono ? 'Notes' : 'English'; }
       if (placeholderEl) {
         placeholderEl.textContent = mono
-          ? 'Press “Start listening”. Meeting / Transcribe writes what was said — no translation.'
+          ? 'Press “Start listening”. Meeting / Transcribe / Podcast writes what was said — no translation.'
           : 'Press “Start listening” and let Spanish speech reach your microphone. '
             + 'Each spoken sentence is transcribed, then translated — Spanish on the left, English on the right.';
       }
@@ -929,7 +930,7 @@
       placeholderEl = document.createElement('div');
       placeholderEl.className = 'placeholder';
       placeholderEl.textContent = isMonolingual()
-        ? 'Press “Start listening”. Meeting / Transcribe writes what was said — no translation.'
+        ? 'Press “Start listening”. Meeting / Transcribe / Podcast writes what was said — no translation.'
         : 'Press “Start listening” and let Spanish speech reach your microphone. '
           + 'Each spoken sentence is transcribed, then translated — Spanish on the left, English on the right. '
           + 'The first run downloads the speech model.';
@@ -2337,14 +2338,33 @@
       }
 
       function fallbackAnalyzeMenu(profile, dest) {
-        var sermon = /^(bible-study|jean-petit)$/.test(profile) ||
-          /bible|iglesia|sermon|church|faith|jean|casa.?de.?fe|estudio/i.test(dest);
-        var meeting = /^(meeting|transcribe)$/.test(profile) ||
-          (dest && !/bible|iglesia|sermon|church|faith|jean|casa.?de.?fe|estudio/i.test(dest) && dest !== 'Podcast');
-        var stats = /^(hmi|patientvolume|patientvolumeIUH|census|afib|troponin|datadictrwd|allison|SCDCernerProject|nsqip|lungtransplant|concept-dag|edw|omop|pico-dag|patientexperience)$/.test(dest) ||
-          ((/volume|census|troponin|afib|ontology|rwd|cohort|patient/i.test(dest)) && dest !== 'Podcast' && dest !== 'AI');
+        var podcast = profile === 'podcast';
+        var sermon = !podcast && (/^(bible-study|jean-petit)$/.test(profile) ||
+          /bible|iglesia|sermon|church|faith|jean|casa.?de.?fe|estudio/i.test(dest));
+        var meeting = !podcast && (/^(meeting|transcribe)$/.test(profile) ||
+          (dest && !/bible|iglesia|sermon|church|faith|jean|casa.?de.?fe|estudio/i.test(dest) && dest !== 'Podcast'));
+        var stats = !podcast && (/^(hmi|patientvolume|patientvolumeIUH|census|afib|troponin|datadictrwd|allison|SCDCernerProject|nsqip|lungtransplant|concept-dag|edw|omop|pico-dag|patientexperience)$/.test(dest) ||
+          ((/volume|census|troponin|afib|ontology|rwd|cohort|patient/i.test(dest)) && dest !== 'Podcast' && dest !== 'AI'));
         if (sermon) { stats = false; }
         var items = [{ id: 'profile', label: "Summarize through this profile's lens", hint: 'The summary this profile already knows how to write', remarkable: false }];
+        if (podcast) {
+          items.push(
+            { id: 'podcast_critique', label: 'Critique this episode', hint: 'Facts, scientific validity, probing questions, political/legal', remarkable: false },
+            { id: 'podcast_notes', label: 'Critique this episode → reMarkable', hint: 'Same critique, with blank space to write', remarkable: true },
+            {
+              id: 'podcast_commands',
+              label: 'Look closer',
+              hint: 'Facts, science, questions, or political/legal — one at a time',
+              remarkable: false,
+              children: [
+                { id: 'podcast_facts', label: 'Facts claimed', hint: 'Numbers, names, dates — asserted vs attributed' },
+                { id: 'podcast_science', label: 'Scientific validity', hint: 'Units, denominators, comparators, causal leaps' },
+                { id: 'podcast_questions', label: 'Probing questions', hint: 'Scale comparisons, mechanism, incentives, falsifiers' },
+                { id: 'podcast_legal', label: 'Political / legal analysis', hint: 'What they said the law is vs what they want it to be' }
+              ]
+            }
+          );
+        }
         if (sermon) {
           items.push(
             { id: 'sermon_notes', label: 'Sermon note-taking guide → reMarkable', hint: 'Outline, claims, questions, with blank space to write', remarkable: true },
@@ -2389,11 +2409,13 @@
         menu.innerHTML = '';
         analyzeMenuView = view || 'root';
         var list = items || [];
-        if (analyzeMenuView === 'meeting_commands') {
-          var group = null;
+        var group = null;
+        if (analyzeMenuView !== 'root') {
           for (var i = 0; i < list.length; i++) {
-            if (list[i].id === 'meeting_commands') { group = list[i]; break; }
+            if (list[i].id === analyzeMenuView && list[i].children) { group = list[i]; break; }
           }
+        }
+        if (group) {
           var back = document.createElement('button');
           back.type = 'button';
           back.className = 'back';
@@ -2403,7 +2425,7 @@
             renderAnalyzeMenu(list, 'root');
           });
           menu.appendChild(back);
-          (group && group.children ? group.children : []).forEach(function (child) {
+          group.children.forEach(function (child) {
             menu.appendChild(analyzeMenuButton(child, list));
           });
         } else {
