@@ -251,6 +251,14 @@
   function setWorkstationToken(t) {
     try { localStorage.setItem("tb_token", (t || "").trim()); } catch (e) {}
   }
+  function getTailscaleHost() {
+    try { return (localStorage.getItem("tb_bridge") || "").trim().replace(/\/+$/, ""); } catch (e) { return ""; }
+  }
+  function setTailscaleHost(v) {
+    var t = (v || "").trim().replace(/\/+$/, "");
+    if (t && !/^https?:\/\//i.test(t) && !/^wss?:\/\//i.test(t)) t = "https://" + t;
+    try { localStorage.setItem("tb_bridge", t); } catch (e) {}
+  }
   function pushAuthToFrames() {
     var token = getWorkstationToken();
     if (!token) return;
@@ -308,7 +316,7 @@
       id: "sermon",
       label: "Listen",
       icon: "🌐",
-      url: "./live-translator.html?v=20",
+      url: "./live-translator.html?v=21",
       kind: "iframe",
       hint: "Listen to a service, a meeting, a podcast or an appointment: transcription, translation when the profile calls for it, and analysis (sermon, meeting, or podcast fact/science/legal). Pick a profile inside. On iPad prefer the tailnet page if WebSocket fails."
     },
@@ -712,6 +720,25 @@
       tokHint.style.fontSize = "12px";
       tokHint.textContent = "One bearer for the home box. Copied from Converse if you already entered it there.";
       wrap.appendChild(tokHint);
+      var tsLab = document.createElement("label");
+      tsLab.textContent = "Tailscale machine (all of Maat — Converse, Listen GPU, Tools)";
+      tsLab.htmlFor = "maatBridge";
+      var tsInp = document.createElement("input");
+      tsInp.id = "maatBridge";
+      tsInp.type = "text";
+      tsInp.autocomplete = "off";
+      tsInp.autocapitalize = "off";
+      tsInp.spellcheck = false;
+      tsInp.placeholder = "https://your-machine.your-tailnet.ts.net";
+      tsInp.value = getTailscaleHost();
+      wrap.appendChild(tsLab);
+      wrap.appendChild(tsInp);
+      var tsHint = document.createElement("p");
+      tsHint.className = "note";
+      tsHint.style.margin = "4px 0 16px";
+      tsHint.style.fontSize = "12px";
+      tsHint.textContent = "The MagicDNS name of the home box. Listen uses it as wss://…:8443/ws. Same value as Converse’s Bridge URL.";
+      wrap.appendChild(tsHint);
       modes.forEach(function (a) {
         if (a.kind === "tools") {
           var head = document.createElement("p");
@@ -759,8 +786,10 @@
     var tokEl = $("maatToken");
     if (tokEl) {
       setWorkstationToken(tokEl.value);
-      pushAuthToFrames();
     }
+    var tsEl = $("maatBridge");
+    if (tsEl) setTailscaleHost(tsEl.value);
+    pushAuthToFrames();
     modes.forEach(function (a) {
       if (a.kind === "about" || a.kind === "tools") return;
       var el = $("url-" + a.id);
