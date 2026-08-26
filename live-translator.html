@@ -153,7 +153,10 @@
           <select id="direction">
             <option value="es-en">Spanish → English</option>
             <option value="en-es">English → Spanish</option>
-            <option value="auto">Bidirectional — auto-detect (conversation)</option>
+            <option value="auto">Bidirectional ES ⇄ EN — auto-detect</option>
+            <option value="ko-en">Korean → English</option>
+            <option value="en-ko">English → Korean</option>
+            <option value="auto-ko">Bidirectional KO ⇄ EN — auto-detect</option>
           </select>
         </div>
       </div>
@@ -230,6 +233,9 @@
             <option value="transcribe">Transcribe only &mdash; no translation, any language</option>
             <option value="meeting">Meeting &mdash; no translation, text only</option>
             <option value="podcast">Podcast &mdash; English talk; facts, science, legal</option>
+            <option value="korean">Korean → English</option>
+            <option value="korean-en">Korean ⇄ English (conversation)</option>
+            <option value="english-to-korean">English → Korean</option>
             <option value="bible-study">Bible study (theological)</option>
             <option value="jean-petit">Jean Petit (Sunday)</option>
             <option value="medical">Medical interpreting</option>
@@ -535,8 +541,8 @@
     async function handle(job, attempt) {
       try {
         const raw = await callProvider(job.text, job.context, job.target);
-        if (job.target === 'auto') {
-          const parsed = parseAuto(raw);
+        if (job.target === 'auto' || job.target === 'auto-ko') {
+          const parsed = parseAuto(raw, job.target);
           self.postMessage({ type: 'result', id: job.id, ok: true, text: parsed.t, lang: parsed.lang });
         } else {
           self.postMessage({ type: 'result', id: job.id, ok: true, text: raw });
@@ -551,12 +557,17 @@
       }
     }
 
-    function parseAuto(raw) {
+    function parseAuto(raw, target) {
       var s = String(raw || '').trim().replace(/^```(?:json)?/i, '').replace(/```$/, '').trim();
       var i = s.indexOf('{'), j = s.lastIndexOf('}');
       if (i >= 0 && j > i) { s = s.slice(i, j + 1); }
       var obj = JSON.parse(s);   // throws on bad output -> retried by handle()
-      var lang = obj.lang === 'en' ? 'en' : 'es';
+      var lang;
+      if (target === 'auto-ko') {
+        lang = obj.lang === 'en' ? 'en' : 'ko';
+      } else {
+        lang = obj.lang === 'en' ? 'en' : 'es';
+      }
       var t = String(obj.t == null ? '' : obj.t).trim();
       if (!t) { throw new Error('Empty translation in auto response'); }
       return { lang: lang, t: t };
@@ -584,6 +595,10 @@
       'never ask for or mention missing or insufficient context; never add bracketed notes, disclaimers, apologies, or explanations. ' +
       'Preserve the tone and register of the original.';
 
+    function langName(code) {
+      return ({ es: 'Spanish', en: 'English', ko: 'Korean' })[code] || 'English';
+    }
+
     function systemFor(target) {
       if (target === 'auto') {
         return 'You are a live bilingual interpreter for a Spanish/English conversation. You receive one spoken utterance. ' +
@@ -591,23 +606,31 @@
           'Reply with ONLY a compact JSON object and nothing else: {"lang":"es"|"en","t":"<the translation in the other language>"}. ' +
           '"lang" is the language of the INPUT; "t" is its translation. No code fences, no extra text. ' + SHARED_RULES;
       }
-      var tgt = target === 'es' ? 'Spanish' : 'English';
+      if (target === 'auto-ko') {
+        return 'You are a live bilingual interpreter for a Korean/English conversation. You receive one spoken utterance. ' +
+          'Detect whether it is Korean or English, then translate it into the OTHER language. ' +
+          'Reply with ONLY a compact JSON object and nothing else: {"lang":"ko"|"en","t":"<the translation in the other language>"}. ' +
+          '"lang" is the language of the INPUT; "t" is its translation. No code fences, no extra text. ' + SHARED_RULES;
+      }
+      var tgt = langName(target);
       return 'You are a live interpreter. Translate the speech transcript you are given into natural, fluent ' + tgt + '. ' +
         'Reply with ONLY the ' + tgt + ' translation itself: no quotation marks, no preamble, no notes. ' + SHARED_RULES;
     }
 
     function userPrompt(text, context, target) {
+      var left = (cfg && cfg.leftName) || 'Spanish';
+      var right = (cfg && cfg.rightName) || 'English';
       var p = '';
       if (context && (context.es || context.en)) {
         p += 'Preceding turn (context only - do not translate or repeat it):\n';
-        if (context.es) { p += 'Spanish: ' + context.es + '\n'; }
-        if (context.en) { p += 'English: ' + context.en + '\n'; }
+        if (context.es) { p += left + ': ' + context.es + '\n'; }
+        if (context.en) { p += right + ': ' + context.en + '\n'; }
         p += '\n';
       }
-      if (target === 'auto') {
+      if (target === 'auto' || target === 'auto-ko') {
         p += 'Utterance:\n' + text;
       } else {
-        p += 'Translate this segment into ' + (target === 'es' ? 'Spanish' : 'English') + ':\n' + text;
+        p += 'Translate this segment into ' + langName(target) + ':\n' + text;
       }
       return p;
     }
@@ -790,7 +813,7 @@
           homeGpuUrl: typeof s.homeGpuUrl === 'string' ? s.homeGpuUrl : '',
           speakerProfile: typeof s.speakerProfile === 'string' ? s.speakerProfile : '',
           logEndpoint: s.logEndpoint || '',
-          direction: ['es-en', 'en-es', 'auto'].indexOf(s.direction) >= 0 ? s.direction : 'es-en',
+          direction: DIRECTIONS.indexOf(s.direction) >= 0 ? s.direction : 'es-en',
           theme: s.theme === 'dark' ? 'dark' : 'light',
           scale: typeof s.scale === 'number' ? s.scale : 1,
           view: ['both', 'es', 'en'].indexOf(s.view) >= 0 ? s.view : 'both'
@@ -805,19 +828,48 @@
     function hasKey() { return !!(state.apiKeys[state.provider] || '').trim(); }
     function whisperDevice() { return state.useWebGPU ? 'webgpu' : 'wasm'; }
     // Direction-aware language hints (null = auto-detect for conversation mode).
-    function srcWhisperLang() { var d = state.direction; return d === 'en-es' ? 'english' : d === 'auto' ? null : 'spanish'; }
-    function srcCloudLang() { var d = state.direction; return d === 'en-es' ? 'en' : d === 'auto' ? null : 'es'; }
-    function translateTarget() { var d = state.direction; return d === 'en-es' ? 'es' : d === 'auto' ? 'auto' : 'en'; }
+    var DIRECTIONS = ['es-en', 'en-es', 'auto', 'ko-en', 'en-ko', 'auto-ko'];
+    function dirInfo(d) {
+      d = d || (state && state.direction) || 'es-en';
+      if (d === 'ko-en') {
+        return { srcCol: 'es', tgtCol: 'en', whisper: 'korean', cloud: 'ko', tgt: 'en',
+                 left: 'Korean', right: 'English' };
+      }
+      if (d === 'en-ko') {
+        return { srcCol: 'en', tgtCol: 'es', whisper: 'english', cloud: 'en', tgt: 'ko',
+                 left: 'Korean', right: 'English' };
+      }
+      if (d === 'auto-ko') {
+        return { srcCol: null, tgtCol: null, whisper: null, cloud: null, tgt: 'auto-ko',
+                 left: 'Korean', right: 'English', auto: true };
+      }
+      if (d === 'en-es') {
+        return { srcCol: 'en', tgtCol: 'es', whisper: 'english', cloud: 'en', tgt: 'es',
+                 left: 'Spanish', right: 'English' };
+      }
+      if (d === 'auto') {
+        return { srcCol: null, tgtCol: null, whisper: null, cloud: null, tgt: 'auto',
+                 left: 'Spanish', right: 'English', auto: true };
+      }
+      return { srcCol: 'es', tgtCol: 'en', whisper: 'spanish', cloud: 'es', tgt: 'en',
+               left: 'Spanish', right: 'English' };
+    }
+    function srcWhisperLang() { return dirInfo().whisper; }
+    function srcCloudLang() { return dirInfo().cloud; }
+    function translateTarget() { return dirInfo().tgt; }
     function micThreshold() { return 0.032 - (state.sensitivity / 100) * 0.028; }
 
     function pushConfig() {
       if (!translator) { return; }
+      var chrome = pairChrome();
       translator.postMessage({
         type: 'config',
         config: {
           provider: state.provider,
           model: (state.models[state.provider] || '').trim(),
-          apiKey: (state.apiKeys[state.provider] || '').trim()
+          apiKey: (state.apiKeys[state.provider] || '').trim(),
+          leftName: chrome.left,
+          rightName: chrome.right
         }
       });
     }
@@ -907,33 +959,53 @@
       return p === 'meeting' || p === 'transcribe' || p === 'podcast';
     }
 
+    function pairChrome() {
+      if (isMonolingual()) {
+        return {
+          left: 'Transcript', right: 'Notes',
+          placeholder: 'Press “Start listening”. Meeting / Transcribe / Podcast writes what was said — no translation.'
+        };
+      }
+      var p = state.speakerProfile || '';
+      if (state.transcribeEngine === 'homegpu') {
+        if (p === 'korean') {
+          return { left: 'Korean', right: 'English',
+            placeholder: 'Press “Start listening”. Korean on the left, English on the right.' };
+        }
+        if (p === 'english-to-korean') {
+          return { left: 'English', right: 'Korean',
+            placeholder: 'Press “Start listening”. English on the left, Korean on the right.' };
+        }
+        if (p === 'korean-en') {
+          return { left: 'Heard', right: 'Translation',
+            placeholder: 'Press “Start listening”. Each line is transcribed, then translated into the other language (Korean ⇄ English).' };
+        }
+      }
+      var info = dirInfo(state.direction);
+      return {
+        left: info.left, right: info.right,
+        placeholder: 'Press “Start listening”. ' + info.left + ' on the left, ' + info.right + ' on the right.'
+      };
+    }
+
     function applyProfileChrome() {
-      var mono = isMonolingual();
+      var chrome = pairChrome();
       var esHead = document.querySelector('.cell.head.es');
       var enHead = document.querySelector('.cell.head.en');
-      if (esHead) { esHead.textContent = mono ? 'Transcript' : 'Spanish'; }
-      if (enHead) { enHead.textContent = mono ? 'Notes' : 'English'; }
+      if (esHead) { esHead.textContent = chrome.left; }
+      if (enHead) { enHead.textContent = chrome.right; }
       var esBtn = document.querySelector('.seg-toggle [data-view="es"]');
       var enBtn = document.querySelector('.seg-toggle [data-view="en"]');
-      if (esBtn) { esBtn.textContent = mono ? 'Transcript' : 'Spanish'; }
-      if (enBtn) { enBtn.textContent = mono ? 'Notes' : 'English'; }
-      if (placeholderEl) {
-        placeholderEl.textContent = mono
-          ? 'Press “Start listening”. Meeting / Transcribe / Podcast writes what was said — no translation.'
-          : 'Press “Start listening” and let Spanish speech reach your microphone. '
-            + 'Each spoken sentence is transcribed, then translated — Spanish on the left, English on the right.';
-      }
+      if (esBtn) { esBtn.textContent = chrome.left; }
+      if (enBtn) { enBtn.textContent = chrome.right; }
+      if (placeholderEl) { placeholderEl.textContent = chrome.placeholder; }
     }
 
     function showPlaceholder() {
       if (placeholderEl) { return; }
       placeholderEl = document.createElement('div');
       placeholderEl.className = 'placeholder';
-      placeholderEl.textContent = isMonolingual()
-        ? 'Press “Start listening”. Meeting / Transcribe / Podcast writes what was said — no translation.'
-        : 'Press “Start listening” and let Spanish speech reach your microphone. '
-          + 'Each spoken sentence is transcribed, then translated — Spanish on the left, English on the right. '
-          + 'The first run downloads the speech model.';
+      placeholderEl.textContent = pairChrome().placeholder;
       els.rows.insertBefore(placeholderEl, interimRow);
     }
     function removePlaceholder() {
@@ -993,9 +1065,13 @@
       }
       // which column is the source (heard) vs. the translation depends on direction
       var dir = seg.dir || 'es-en';
-      var esIsSource = (dir === 'es-en');                 // en-es: en is source; auto: decided after detect
-      var esLabel = esIsSource ? 'transcribing…' : 'translating…';
-      var enLabel = (dir === 'en-es') ? 'transcribing…' : 'translating…';
+      var info = dirInfo(dir);
+      var esLabel = (info.srcCol === 'es') ? 'transcribing…' : 'translating…';
+      var enLabel = (info.srcCol === 'en') ? 'transcribing…' : 'translating…';
+      if (info.auto) {
+        esLabel = 'transcribing…';
+        enLabel = 'translating…';
+      }
       if (isMonolingual()) {
         esLabel = 'transcribing…';
         enLabel = '';
@@ -1034,26 +1110,31 @@
       return (c.es || c.en) ? c : null;
     }
     function segTarget(seg) {
-      return seg.dir === 'en-es' ? 'es' : seg.dir === 'auto' ? 'auto' : 'en';
+      return dirInfo(seg.dir || state.direction).tgt;
     }
 
     function applyTranscript(seg, text) {
       var txt = (text || '').trim();
       if (!txt || !/\p{L}/u.test(txt)) { removeSeg(seg); return; }   // empty / punctuation-only / noise
       var dir = seg.dir || 'es-en';
+      var info = dirInfo(dir);
       seg.heard = txt;
       // place the heard text in its language column; the other column awaits the translation.
-      if (dir === 'es-en') { seg.es = txt; seg.esState = 'done'; seg.enState = 'translating'; }
-      else if (dir === 'en-es') { seg.en = txt; seg.enState = 'done'; seg.esState = 'translating'; }
-      else { seg.esState = 'translating'; seg.enState = 'translating'; }   // auto: column decided after detect
+      if (info.auto) {
+        seg.esState = 'translating'; seg.enState = 'translating';
+      } else if (info.srcCol === 'en') {
+        seg.en = txt; seg.enState = 'done'; seg.esState = 'translating';
+      } else {
+        seg.es = txt; seg.esState = 'done'; seg.enState = 'translating';
+      }
       paintRow(seg);
       maybeScroll();
       if (translator) {
         translator.postMessage({ type: 'translate', id: seg.id, text: txt, target: segTarget(seg), context: transCtx(seg) });
       } else {
-        if (dir === 'es-en') { seg.enState = 'error'; }
-        else if (dir === 'en-es') { seg.esState = 'error'; }
-        else { seg.esState = 'error'; seg.enState = 'error'; }
+        if (info.auto) { seg.esState = 'error'; seg.enState = 'error'; }
+        else if (info.srcCol === 'en') { seg.esState = 'error'; }
+        else { seg.enState = 'error'; }
         seg.error = 'Translation worker unavailable';
         paintRow(seg);
       }
@@ -1523,19 +1604,24 @@
         var seg = findSeg(m.id);
         if (!seg) { return; }
         var dir = seg.dir || 'es-en';
+        var info = dirInfo(dir);
         if (m.ok) {
-          if (dir === 'es-en') { seg.en = m.text; seg.enState = 'done'; }
-          else if (dir === 'en-es') { seg.es = m.text; seg.esState = 'done'; }
-          else {   // auto: heard text goes in its detected-language column, translation in the other
+          if (info.auto) {
+            // Heard in its language column (English = right; Korean/Spanish = left).
             if (m.lang === 'en') { seg.en = seg.heard; seg.es = m.text; }
             else { seg.es = seg.heard; seg.en = m.text; }
             seg.esState = 'done'; seg.enState = 'done';
+          } else if (info.tgtCol === 'es') {
+            seg.es = m.text; seg.esState = 'done';
+          } else {
+            seg.en = m.text; seg.enState = 'done';
           }
           seg.error = '';
         } else {
           pushLog('error', 'translation error (line ' + m.id + '): ' + m.error);
-          if (dir === 'en-es') { seg.esState = 'error'; }
-          else if (dir === 'auto') { seg.es = seg.heard || seg.es; seg.esState = 'done'; seg.enState = 'error'; }
+          if (info.auto) {
+            seg.es = seg.heard || seg.es; seg.esState = 'done'; seg.enState = 'error';
+          } else if (info.tgtCol === 'es') { seg.esState = 'error'; }
           else { seg.enState = 'error'; }
           seg.error = m.error || 'Translation failed';
         }
@@ -1560,11 +1646,12 @@
       var seg = findSeg(id);
       if (!seg || !translator) { return; }
       var dir = seg.dir || 'es-en';
-      var src = seg.heard || (dir === 'en-es' ? seg.en : seg.es);
+      var info = dirInfo(dir);
+      var src = seg.heard || (info.srcCol === 'en' ? seg.en : seg.es);
       if (!src) { return; }
-      if (dir === 'es-en') { seg.enState = 'translating'; }
-      else if (dir === 'en-es') { seg.esState = 'translating'; }
-      else { seg.esState = 'translating'; seg.enState = 'translating'; }
+      if (info.auto) { seg.esState = 'translating'; seg.enState = 'translating'; }
+      else if (info.tgtCol === 'es') { seg.esState = 'translating'; }
+      else { seg.enState = 'translating'; }
       seg.error = '';
       paintRow(seg);
       translator.postMessage({ type: 'translate', id: seg.id, text: src, target: segTarget(seg), context: transCtx(seg) });
@@ -2208,8 +2295,8 @@
       // events
       els.direction.addEventListener('change', function () {
         var v = els.direction.value;
-        state.direction = ['es-en', 'en-es', 'auto'].indexOf(v) >= 0 ? v : 'es-en';
-        saveState(); updateControls();
+        state.direction = DIRECTIONS.indexOf(v) >= 0 ? v : 'es-en';
+        saveState(); applyProfileChrome(); updateControls();
       });
       els.provider.addEventListener('change', function () {
         state.provider = els.provider.value === 'openai' ? 'openai' : 'anthropic';
