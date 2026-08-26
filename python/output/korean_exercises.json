@@ -1,0 +1,5270 @@
+[
+  {
+    "id": "hada-yo-0",
+    "verbo": "하다",
+    "contexto": "do: yori hada → Polite present (–요)",
+    "respuesta": "요리를 해요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: yorireur haeyo.",
+    "grupos": [
+      [
+        "요리",
+        "요리를"
+      ],
+      [
+        "해요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-yo-1",
+    "verbo": "하다",
+    "contexto": "do: sugje hada → Polite present (–요)",
+    "respuesta": "숙제를 해요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: sugjereur haeyo.",
+    "grupos": [
+      [
+        "숙제",
+        "숙제를"
+      ],
+      [
+        "해요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-yo-2",
+    "verbo": "하다",
+    "contexto": "do: undong hada → Polite present (–요)",
+    "respuesta": "운동을 해요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: undongeur haeyo.",
+    "grupos": [
+      [
+        "운동",
+        "운동을"
+      ],
+      [
+        "해요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-an_yo-3",
+    "verbo": "하다",
+    "contexto": "do: sugje hada → Polite negative (안 –요)",
+    "respuesta": "숙제를 안 해요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: sugjereur an haeyo.",
+    "grupos": [
+      [
+        "숙제",
+        "숙제를"
+      ],
+      [
+        "안 해요",
+        "안해요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-an_yo-4",
+    "verbo": "하다",
+    "contexto": "do: yori hada → Polite negative (안 –요)",
+    "respuesta": "요리를 안 해요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: yorireur an haeyo.",
+    "grupos": [
+      [
+        "요리",
+        "요리를"
+      ],
+      [
+        "안 해요",
+        "안해요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-an_yo-5",
+    "verbo": "하다",
+    "contexto": "do: undong hada → Polite negative (안 –요)",
+    "respuesta": "운동을 안 해요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: undongeur an haeyo.",
+    "grupos": [
+      [
+        "운동",
+        "운동을"
+      ],
+      [
+        "안 해요",
+        "안해요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-ss_yo-6",
+    "verbo": "하다",
+    "contexto": "do: sugje hada → Polite past (–었어요)",
+    "respuesta": "숙제를 했어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: sugjereur haesseoyo.",
+    "grupos": [
+      [
+        "숙제",
+        "숙제를"
+      ],
+      [
+        "했어요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-ss_yo-7",
+    "verbo": "하다",
+    "contexto": "do: yori hada → Polite past (–었어요)",
+    "respuesta": "요리를 했어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: yorireur haesseoyo.",
+    "grupos": [
+      [
+        "요리",
+        "요리를"
+      ],
+      [
+        "했어요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-ss_yo-8",
+    "verbo": "하다",
+    "contexto": "do: undong hada → Polite past (–었어요)",
+    "respuesta": "운동을 했어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: undongeur haesseoyo.",
+    "grupos": [
+      [
+        "운동",
+        "운동을"
+      ],
+      [
+        "했어요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-an_ss_yo-9",
+    "verbo": "하다",
+    "contexto": "do: sugje hada → Polite past neg. (안 –었어요)",
+    "respuesta": "숙제를 안 했어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: sugjereur an haesseoyo.",
+    "grupos": [
+      [
+        "숙제",
+        "숙제를"
+      ],
+      [
+        "안 했어요",
+        "안했어요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-an_ss_yo-10",
+    "verbo": "하다",
+    "contexto": "do: undong hada → Polite past neg. (안 –었어요)",
+    "respuesta": "운동을 안 했어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: undongeur an haesseoyo.",
+    "grupos": [
+      [
+        "운동",
+        "운동을"
+      ],
+      [
+        "안 했어요",
+        "안했어요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-an_ss_yo-11",
+    "verbo": "하다",
+    "contexto": "do: yori hada → Polite past neg. (안 –었어요)",
+    "respuesta": "요리를 안 했어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: yorireur an haesseoyo.",
+    "grupos": [
+      [
+        "요리",
+        "요리를"
+      ],
+      [
+        "안 했어요",
+        "안했어요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-da-12",
+    "verbo": "하다",
+    "contexto": "do: undong hada → Dictionary (–다)",
+    "respuesta": "운동을 하다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: undongeur hada.",
+    "grupos": [
+      [
+        "운동",
+        "운동을"
+      ],
+      [
+        "하다"
+      ]
+    ]
+  },
+  {
+    "id": "hada-da-13",
+    "verbo": "하다",
+    "contexto": "do: sugje hada → Dictionary (–다)",
+    "respuesta": "숙제를 하다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: sugjereur hada.",
+    "grupos": [
+      [
+        "숙제",
+        "숙제를"
+      ],
+      [
+        "하다"
+      ]
+    ]
+  },
+  {
+    "id": "hada-da-14",
+    "verbo": "하다",
+    "contexto": "do: yori hada → Dictionary (–다)",
+    "respuesta": "요리를 하다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: yorireur hada.",
+    "grupos": [
+      [
+        "요리",
+        "요리를"
+      ],
+      [
+        "하다"
+      ]
+    ]
+  },
+  {
+    "id": "hada-nida-15",
+    "verbo": "하다",
+    "contexto": "do: undong hada → Formal present (–습니다)",
+    "respuesta": "운동을 합니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: undongeur habnida.",
+    "grupos": [
+      [
+        "운동",
+        "운동을"
+      ],
+      [
+        "합니다"
+      ]
+    ]
+  },
+  {
+    "id": "hada-nida-16",
+    "verbo": "하다",
+    "contexto": "do: sugje hada → Formal present (–습니다)",
+    "respuesta": "숙제를 합니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: sugjereur habnida.",
+    "grupos": [
+      [
+        "숙제",
+        "숙제를"
+      ],
+      [
+        "합니다"
+      ]
+    ]
+  },
+  {
+    "id": "hada-nida-17",
+    "verbo": "하다",
+    "contexto": "do: yori hada → Formal present (–습니다)",
+    "respuesta": "요리를 합니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: yorireur habnida.",
+    "grupos": [
+      [
+        "요리",
+        "요리를"
+      ],
+      [
+        "합니다"
+      ]
+    ]
+  },
+  {
+    "id": "hada-seyo-18",
+    "verbo": "하다",
+    "contexto": "do: undong hada → Honourific (–세요)",
+    "respuesta": "운동을 하세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: undongeur haseyo.",
+    "grupos": [
+      [
+        "운동",
+        "운동을"
+      ],
+      [
+        "하세요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-seyo-19",
+    "verbo": "하다",
+    "contexto": "do: sugje hada → Honourific (–세요)",
+    "respuesta": "숙제를 하세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: sugjereur haseyo.",
+    "grupos": [
+      [
+        "숙제",
+        "숙제를"
+      ],
+      [
+        "하세요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-seyo-20",
+    "verbo": "하다",
+    "contexto": "do: yori hada → Honourific (–세요)",
+    "respuesta": "요리를 하세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: yorireur haseyo.",
+    "grupos": [
+      [
+        "요리",
+        "요리를"
+      ],
+      [
+        "하세요"
+      ]
+    ]
+  },
+  {
+    "id": "hada-go-21",
+    "verbo": "하다",
+    "contexto": "do: undong hada → Connective (–고)",
+    "respuesta": "운동을 하고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: undongeur hago.",
+    "grupos": [
+      [
+        "운동",
+        "운동을"
+      ],
+      [
+        "하고"
+      ]
+    ]
+  },
+  {
+    "id": "hada-go-22",
+    "verbo": "하다",
+    "contexto": "do: yori hada → Connective (–고)",
+    "respuesta": "요리를 하고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: yorireur hago.",
+    "grupos": [
+      [
+        "요리",
+        "요리를"
+      ],
+      [
+        "하고"
+      ]
+    ]
+  },
+  {
+    "id": "hada-go-23",
+    "verbo": "하다",
+    "contexto": "do: sugje hada → Connective (–고)",
+    "respuesta": "숙제를 하고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: sugjereur hago.",
+    "grupos": [
+      [
+        "숙제",
+        "숙제를"
+      ],
+      [
+        "하고"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-yo-24",
+    "verbo": "공부하다",
+    "contexto": "study: yeongeo gongbu-hada → Polite present (–요)",
+    "respuesta": "영어를 공부해요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: yeongeoreur gongbuhaeyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "공부해요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-yo-25",
+    "verbo": "공부하다",
+    "contexto": "study: hangugeo gongbu-hada → Polite present (–요)",
+    "respuesta": "한국어를 공부해요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: hangugeoreur gongbuhaeyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "공부해요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-yo-26",
+    "verbo": "공부하다",
+    "contexto": "study: suhag gongbu-hada → Polite present (–요)",
+    "respuesta": "수학을 공부해요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: suhageur gongbuhaeyo.",
+    "grupos": [
+      [
+        "수학",
+        "수학을"
+      ],
+      [
+        "공부해요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-an_yo-27",
+    "verbo": "공부하다",
+    "contexto": "study: yeongeo gongbu-hada → Polite negative (안 –요)",
+    "respuesta": "영어를 안 공부해요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: yeongeoreur an gongbuhaeyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "안 공부해요",
+        "안공부해요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-an_yo-28",
+    "verbo": "공부하다",
+    "contexto": "study: suhag gongbu-hada → Polite negative (안 –요)",
+    "respuesta": "수학을 안 공부해요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: suhageur an gongbuhaeyo.",
+    "grupos": [
+      [
+        "수학",
+        "수학을"
+      ],
+      [
+        "안 공부해요",
+        "안공부해요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-an_yo-29",
+    "verbo": "공부하다",
+    "contexto": "study: hangugeo gongbu-hada → Polite negative (안 –요)",
+    "respuesta": "한국어를 안 공부해요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: hangugeoreur an gongbuhaeyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "안 공부해요",
+        "안공부해요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-ss_yo-30",
+    "verbo": "공부하다",
+    "contexto": "study: suhag gongbu-hada → Polite past (–었어요)",
+    "respuesta": "수학을 공부했어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: suhageur gongbuhaesseoyo.",
+    "grupos": [
+      [
+        "수학",
+        "수학을"
+      ],
+      [
+        "공부했어요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-ss_yo-31",
+    "verbo": "공부하다",
+    "contexto": "study: hangugeo gongbu-hada → Polite past (–었어요)",
+    "respuesta": "한국어를 공부했어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: hangugeoreur gongbuhaesseoyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "공부했어요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-ss_yo-32",
+    "verbo": "공부하다",
+    "contexto": "study: yeongeo gongbu-hada → Polite past (–었어요)",
+    "respuesta": "영어를 공부했어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: yeongeoreur gongbuhaesseoyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "공부했어요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-an_ss_yo-33",
+    "verbo": "공부하다",
+    "contexto": "study: hangugeo gongbu-hada → Polite past neg. (안 –었어요)",
+    "respuesta": "한국어를 안 공부했어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: hangugeoreur an gongbuhaesseoyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "안 공부했어요",
+        "안공부했어요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-an_ss_yo-34",
+    "verbo": "공부하다",
+    "contexto": "study: yeongeo gongbu-hada → Polite past neg. (안 –었어요)",
+    "respuesta": "영어를 안 공부했어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: yeongeoreur an gongbuhaesseoyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "안 공부했어요",
+        "안공부했어요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-an_ss_yo-35",
+    "verbo": "공부하다",
+    "contexto": "study: suhag gongbu-hada → Polite past neg. (안 –었어요)",
+    "respuesta": "수학을 안 공부했어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: suhageur an gongbuhaesseoyo.",
+    "grupos": [
+      [
+        "수학",
+        "수학을"
+      ],
+      [
+        "안 공부했어요",
+        "안공부했어요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-da-36",
+    "verbo": "공부하다",
+    "contexto": "study: yeongeo gongbu-hada → Dictionary (–다)",
+    "respuesta": "영어를 공부하다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: yeongeoreur gongbuhada.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "공부하다"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-da-37",
+    "verbo": "공부하다",
+    "contexto": "study: hangugeo gongbu-hada → Dictionary (–다)",
+    "respuesta": "한국어를 공부하다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: hangugeoreur gongbuhada.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "공부하다"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-da-38",
+    "verbo": "공부하다",
+    "contexto": "study: suhag gongbu-hada → Dictionary (–다)",
+    "respuesta": "수학을 공부하다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: suhageur gongbuhada.",
+    "grupos": [
+      [
+        "수학",
+        "수학을"
+      ],
+      [
+        "공부하다"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-nida-39",
+    "verbo": "공부하다",
+    "contexto": "study: yeongeo gongbu-hada → Formal present (–습니다)",
+    "respuesta": "영어를 공부합니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: yeongeoreur gongbuhabnida.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "공부합니다"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-nida-40",
+    "verbo": "공부하다",
+    "contexto": "study: suhag gongbu-hada → Formal present (–습니다)",
+    "respuesta": "수학을 공부합니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: suhageur gongbuhabnida.",
+    "grupos": [
+      [
+        "수학",
+        "수학을"
+      ],
+      [
+        "공부합니다"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-nida-41",
+    "verbo": "공부하다",
+    "contexto": "study: hangugeo gongbu-hada → Formal present (–습니다)",
+    "respuesta": "한국어를 공부합니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: hangugeoreur gongbuhabnida.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "공부합니다"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-seyo-42",
+    "verbo": "공부하다",
+    "contexto": "study: suhag gongbu-hada → Honourific (–세요)",
+    "respuesta": "수학을 공부하세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: suhageur gongbuhaseyo.",
+    "grupos": [
+      [
+        "수학",
+        "수학을"
+      ],
+      [
+        "공부하세요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-seyo-43",
+    "verbo": "공부하다",
+    "contexto": "study: hangugeo gongbu-hada → Honourific (–세요)",
+    "respuesta": "한국어를 공부하세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: hangugeoreur gongbuhaseyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "공부하세요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-seyo-44",
+    "verbo": "공부하다",
+    "contexto": "study: yeongeo gongbu-hada → Honourific (–세요)",
+    "respuesta": "영어를 공부하세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: yeongeoreur gongbuhaseyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "공부하세요"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-go-45",
+    "verbo": "공부하다",
+    "contexto": "study: yeongeo gongbu-hada → Connective (–고)",
+    "respuesta": "영어를 공부하고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: yeongeoreur gongbuhago.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "공부하고"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-go-46",
+    "verbo": "공부하다",
+    "contexto": "study: suhag gongbu-hada → Connective (–고)",
+    "respuesta": "수학을 공부하고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: suhageur gongbuhago.",
+    "grupos": [
+      [
+        "수학",
+        "수학을"
+      ],
+      [
+        "공부하고"
+      ]
+    ]
+  },
+  {
+    "id": "gongbu-hada-go-47",
+    "verbo": "공부하다",
+    "contexto": "study: hangugeo gongbu-hada → Connective (–고)",
+    "respuesta": "한국어를 공부하고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: hangugeoreur gongbuhago.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "공부하고"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-yo-48",
+    "verbo": "말하다",
+    "contexto": "speak: yeongeo malhada → Polite present (–요)",
+    "respuesta": "영어를 말해요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: yeongeoreur marhaeyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "말해요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-yo-49",
+    "verbo": "말하다",
+    "contexto": "speak: hangugeo malhada → Polite present (–요)",
+    "respuesta": "한국어를 말해요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: hangugeoreur marhaeyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "말해요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-yo-50",
+    "verbo": "말하다",
+    "contexto": "speak: yeongeo malhada → Polite present (–요)",
+    "respuesta": "영어를 말해요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: yeongeoreur marhaeyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "말해요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-an_yo-51",
+    "verbo": "말하다",
+    "contexto": "speak: yeongeo malhada → Polite negative (안 –요)",
+    "respuesta": "영어를 안 말해요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: yeongeoreur an marhaeyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "안 말해요",
+        "안말해요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-an_yo-52",
+    "verbo": "말하다",
+    "contexto": "speak: hangugeo malhada → Polite negative (안 –요)",
+    "respuesta": "한국어를 안 말해요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: hangugeoreur an marhaeyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "안 말해요",
+        "안말해요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-an_yo-53",
+    "verbo": "말하다",
+    "contexto": "speak: hangugeo malhada → Polite negative (안 –요)",
+    "respuesta": "한국어를 안 말해요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: hangugeoreur an marhaeyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "안 말해요",
+        "안말해요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-ss_yo-54",
+    "verbo": "말하다",
+    "contexto": "speak: hangugeo malhada → Polite past (–었어요)",
+    "respuesta": "한국어를 말했어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: hangugeoreur marhaesseoyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "말했어요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-ss_yo-55",
+    "verbo": "말하다",
+    "contexto": "speak: yeongeo malhada → Polite past (–었어요)",
+    "respuesta": "영어를 말했어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: yeongeoreur marhaesseoyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "말했어요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-ss_yo-56",
+    "verbo": "말하다",
+    "contexto": "speak: yeongeo malhada → Polite past (–었어요)",
+    "respuesta": "영어를 말했어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: yeongeoreur marhaesseoyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "말했어요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-an_ss_yo-57",
+    "verbo": "말하다",
+    "contexto": "speak: yeongeo malhada → Polite past neg. (안 –었어요)",
+    "respuesta": "영어를 안 말했어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: yeongeoreur an marhaesseoyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "안 말했어요",
+        "안말했어요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-an_ss_yo-58",
+    "verbo": "말하다",
+    "contexto": "speak: hangugeo malhada → Polite past neg. (안 –었어요)",
+    "respuesta": "한국어를 안 말했어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: hangugeoreur an marhaesseoyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "안 말했어요",
+        "안말했어요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-an_ss_yo-59",
+    "verbo": "말하다",
+    "contexto": "speak: hangugeo malhada → Polite past neg. (안 –었어요)",
+    "respuesta": "한국어를 안 말했어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: hangugeoreur an marhaesseoyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "안 말했어요",
+        "안말했어요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-da-60",
+    "verbo": "말하다",
+    "contexto": "speak: yeongeo malhada → Dictionary (–다)",
+    "respuesta": "영어를 말하다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: yeongeoreur marhada.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "말하다"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-da-61",
+    "verbo": "말하다",
+    "contexto": "speak: hangugeo malhada → Dictionary (–다)",
+    "respuesta": "한국어를 말하다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: hangugeoreur marhada.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "말하다"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-da-62",
+    "verbo": "말하다",
+    "contexto": "speak: hangugeo malhada → Dictionary (–다)",
+    "respuesta": "한국어를 말하다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: hangugeoreur marhada.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "말하다"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-nida-63",
+    "verbo": "말하다",
+    "contexto": "speak: hangugeo malhada → Formal present (–습니다)",
+    "respuesta": "한국어를 말합니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: hangugeoreur marhabnida.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "말합니다"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-nida-64",
+    "verbo": "말하다",
+    "contexto": "speak: yeongeo malhada → Formal present (–습니다)",
+    "respuesta": "영어를 말합니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: yeongeoreur marhabnida.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "말합니다"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-nida-65",
+    "verbo": "말하다",
+    "contexto": "speak: hangugeo malhada → Formal present (–습니다)",
+    "respuesta": "한국어를 말합니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: hangugeoreur marhabnida.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "말합니다"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-seyo-66",
+    "verbo": "말하다",
+    "contexto": "speak: hangugeo malhada → Honourific (–세요)",
+    "respuesta": "한국어를 말하세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: hangugeoreur marhaseyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "말하세요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-seyo-67",
+    "verbo": "말하다",
+    "contexto": "speak: yeongeo malhada → Honourific (–세요)",
+    "respuesta": "영어를 말하세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: yeongeoreur marhaseyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "말하세요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-seyo-68",
+    "verbo": "말하다",
+    "contexto": "speak: hangugeo malhada → Honourific (–세요)",
+    "respuesta": "한국어를 말하세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: hangugeoreur marhaseyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "말하세요"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-go-69",
+    "verbo": "말하다",
+    "contexto": "speak: hangugeo malhada → Connective (–고)",
+    "respuesta": "한국어를 말하고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: hangugeoreur marhago.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "말하고"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-go-70",
+    "verbo": "말하다",
+    "contexto": "speak: yeongeo malhada → Connective (–고)",
+    "respuesta": "영어를 말하고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: yeongeoreur marhago.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "말하고"
+      ]
+    ]
+  },
+  {
+    "id": "malhada-go-71",
+    "verbo": "말하다",
+    "contexto": "speak: yeongeo malhada → Connective (–고)",
+    "respuesta": "영어를 말하고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: yeongeoreur marhago.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "말하고"
+      ]
+    ]
+  },
+  {
+    "id": "gada-yo-72",
+    "verbo": "가다",
+    "contexto": "go: jib gada → Polite present (–요)",
+    "respuesta": "집을 가요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: jibeur gayo.",
+    "grupos": [
+      [
+        "집",
+        "집을"
+      ],
+      [
+        "가요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-yo-73",
+    "verbo": "가다",
+    "contexto": "go: sijang gada → Polite present (–요)",
+    "respuesta": "시장을 가요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: sijangeur gayo.",
+    "grupos": [
+      [
+        "시장",
+        "시장을"
+      ],
+      [
+        "가요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-yo-74",
+    "verbo": "가다",
+    "contexto": "go: haggyo gada → Polite present (–요)",
+    "respuesta": "학교를 가요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: haggyoreur gayo.",
+    "grupos": [
+      [
+        "학교",
+        "학교를"
+      ],
+      [
+        "가요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-an_yo-75",
+    "verbo": "가다",
+    "contexto": "go: sijang gada → Polite negative (안 –요)",
+    "respuesta": "시장을 안 가요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: sijangeur an gayo.",
+    "grupos": [
+      [
+        "시장",
+        "시장을"
+      ],
+      [
+        "안 가요",
+        "안가요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-an_yo-76",
+    "verbo": "가다",
+    "contexto": "go: haggyo gada → Polite negative (안 –요)",
+    "respuesta": "학교를 안 가요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: haggyoreur an gayo.",
+    "grupos": [
+      [
+        "학교",
+        "학교를"
+      ],
+      [
+        "안 가요",
+        "안가요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-an_yo-77",
+    "verbo": "가다",
+    "contexto": "go: jib gada → Polite negative (안 –요)",
+    "respuesta": "집을 안 가요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: jibeur an gayo.",
+    "grupos": [
+      [
+        "집",
+        "집을"
+      ],
+      [
+        "안 가요",
+        "안가요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-ss_yo-78",
+    "verbo": "가다",
+    "contexto": "go: sijang gada → Polite past (–었어요)",
+    "respuesta": "시장을 갔어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: sijangeur gasseoyo.",
+    "grupos": [
+      [
+        "시장",
+        "시장을"
+      ],
+      [
+        "갔어요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-ss_yo-79",
+    "verbo": "가다",
+    "contexto": "go: jib gada → Polite past (–었어요)",
+    "respuesta": "집을 갔어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: jibeur gasseoyo.",
+    "grupos": [
+      [
+        "집",
+        "집을"
+      ],
+      [
+        "갔어요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-ss_yo-80",
+    "verbo": "가다",
+    "contexto": "go: haggyo gada → Polite past (–었어요)",
+    "respuesta": "학교를 갔어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: haggyoreur gasseoyo.",
+    "grupos": [
+      [
+        "학교",
+        "학교를"
+      ],
+      [
+        "갔어요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-an_ss_yo-81",
+    "verbo": "가다",
+    "contexto": "go: haggyo gada → Polite past neg. (안 –었어요)",
+    "respuesta": "학교를 안 갔어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: haggyoreur an gasseoyo.",
+    "grupos": [
+      [
+        "학교",
+        "학교를"
+      ],
+      [
+        "안 갔어요",
+        "안갔어요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-an_ss_yo-82",
+    "verbo": "가다",
+    "contexto": "go: sijang gada → Polite past neg. (안 –었어요)",
+    "respuesta": "시장을 안 갔어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: sijangeur an gasseoyo.",
+    "grupos": [
+      [
+        "시장",
+        "시장을"
+      ],
+      [
+        "안 갔어요",
+        "안갔어요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-an_ss_yo-83",
+    "verbo": "가다",
+    "contexto": "go: jib gada → Polite past neg. (안 –었어요)",
+    "respuesta": "집을 안 갔어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: jibeur an gasseoyo.",
+    "grupos": [
+      [
+        "집",
+        "집을"
+      ],
+      [
+        "안 갔어요",
+        "안갔어요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-da-84",
+    "verbo": "가다",
+    "contexto": "go: haggyo gada → Dictionary (–다)",
+    "respuesta": "학교를 가다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: haggyoreur gada.",
+    "grupos": [
+      [
+        "학교",
+        "학교를"
+      ],
+      [
+        "가다"
+      ]
+    ]
+  },
+  {
+    "id": "gada-da-85",
+    "verbo": "가다",
+    "contexto": "go: jib gada → Dictionary (–다)",
+    "respuesta": "집을 가다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: jibeur gada.",
+    "grupos": [
+      [
+        "집",
+        "집을"
+      ],
+      [
+        "가다"
+      ]
+    ]
+  },
+  {
+    "id": "gada-da-86",
+    "verbo": "가다",
+    "contexto": "go: sijang gada → Dictionary (–다)",
+    "respuesta": "시장을 가다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: sijangeur gada.",
+    "grupos": [
+      [
+        "시장",
+        "시장을"
+      ],
+      [
+        "가다"
+      ]
+    ]
+  },
+  {
+    "id": "gada-nida-87",
+    "verbo": "가다",
+    "contexto": "go: haggyo gada → Formal present (–습니다)",
+    "respuesta": "학교를 갑니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: haggyoreur gabnida.",
+    "grupos": [
+      [
+        "학교",
+        "학교를"
+      ],
+      [
+        "갑니다"
+      ]
+    ]
+  },
+  {
+    "id": "gada-nida-88",
+    "verbo": "가다",
+    "contexto": "go: sijang gada → Formal present (–습니다)",
+    "respuesta": "시장을 갑니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: sijangeur gabnida.",
+    "grupos": [
+      [
+        "시장",
+        "시장을"
+      ],
+      [
+        "갑니다"
+      ]
+    ]
+  },
+  {
+    "id": "gada-nida-89",
+    "verbo": "가다",
+    "contexto": "go: jib gada → Formal present (–습니다)",
+    "respuesta": "집을 갑니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: jibeur gabnida.",
+    "grupos": [
+      [
+        "집",
+        "집을"
+      ],
+      [
+        "갑니다"
+      ]
+    ]
+  },
+  {
+    "id": "gada-seyo-90",
+    "verbo": "가다",
+    "contexto": "go: jib gada → Honourific (–세요)",
+    "respuesta": "집을 가세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: jibeur gaseyo.",
+    "grupos": [
+      [
+        "집",
+        "집을"
+      ],
+      [
+        "가세요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-seyo-91",
+    "verbo": "가다",
+    "contexto": "go: haggyo gada → Honourific (–세요)",
+    "respuesta": "학교를 가세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: haggyoreur gaseyo.",
+    "grupos": [
+      [
+        "학교",
+        "학교를"
+      ],
+      [
+        "가세요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-seyo-92",
+    "verbo": "가다",
+    "contexto": "go: sijang gada → Honourific (–세요)",
+    "respuesta": "시장을 가세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: sijangeur gaseyo.",
+    "grupos": [
+      [
+        "시장",
+        "시장을"
+      ],
+      [
+        "가세요"
+      ]
+    ]
+  },
+  {
+    "id": "gada-go-93",
+    "verbo": "가다",
+    "contexto": "go: sijang gada → Connective (–고)",
+    "respuesta": "시장을 가고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: sijangeur gago.",
+    "grupos": [
+      [
+        "시장",
+        "시장을"
+      ],
+      [
+        "가고"
+      ]
+    ]
+  },
+  {
+    "id": "gada-go-94",
+    "verbo": "가다",
+    "contexto": "go: jib gada → Connective (–고)",
+    "respuesta": "집을 가고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: jibeur gago.",
+    "grupos": [
+      [
+        "집",
+        "집을"
+      ],
+      [
+        "가고"
+      ]
+    ]
+  },
+  {
+    "id": "gada-go-95",
+    "verbo": "가다",
+    "contexto": "go: haggyo gada → Connective (–고)",
+    "respuesta": "학교를 가고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: haggyoreur gago.",
+    "grupos": [
+      [
+        "학교",
+        "학교를"
+      ],
+      [
+        "가고"
+      ]
+    ]
+  },
+  {
+    "id": "oda-yo-96",
+    "verbo": "오다",
+    "contexto": "come (maeir) → Polite present (–요)",
+    "respuesta": "매일 와요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: maeir wayo.",
+    "grupos": [
+      [
+        "와요"
+      ]
+    ]
+  },
+  {
+    "id": "oda-yo-97",
+    "verbo": "오다",
+    "contexto": "come (eoje) → Polite present (–요)",
+    "respuesta": "어제 와요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: eoje wayo.",
+    "grupos": [
+      [
+        "와요"
+      ]
+    ]
+  },
+  {
+    "id": "oda-an_yo-98",
+    "verbo": "오다",
+    "contexto": "come (maeir) → Polite negative (안 –요)",
+    "respuesta": "매일 안 와요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: maeir an wayo.",
+    "grupos": [
+      [
+        "안 와요",
+        "안와요"
+      ]
+    ]
+  },
+  {
+    "id": "oda-an_yo-99",
+    "verbo": "오다",
+    "contexto": "come (oneur) → Polite negative (안 –요)",
+    "respuesta": "오늘 안 와요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: oneur an wayo.",
+    "grupos": [
+      [
+        "안 와요",
+        "안와요"
+      ]
+    ]
+  },
+  {
+    "id": "oda-ss_yo-100",
+    "verbo": "오다",
+    "contexto": "come (jigeum) → Polite past (–었어요)",
+    "respuesta": "지금 왔어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: jigeum wasseoyo.",
+    "grupos": [
+      [
+        "왔어요"
+      ]
+    ]
+  },
+  {
+    "id": "oda-ss_yo-101",
+    "verbo": "오다",
+    "contexto": "come (oneur) → Polite past (–었어요)",
+    "respuesta": "오늘 왔어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: oneur wasseoyo.",
+    "grupos": [
+      [
+        "왔어요"
+      ]
+    ]
+  },
+  {
+    "id": "oda-an_ss_yo-102",
+    "verbo": "오다",
+    "contexto": "come (eoje) → Polite past neg. (안 –었어요)",
+    "respuesta": "어제 안 왔어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: eoje an wasseoyo.",
+    "grupos": [
+      [
+        "안 왔어요",
+        "안왔어요"
+      ]
+    ]
+  },
+  {
+    "id": "oda-an_ss_yo-103",
+    "verbo": "오다",
+    "contexto": "come (oneur) → Polite past neg. (안 –었어요)",
+    "respuesta": "오늘 안 왔어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: oneur an wasseoyo.",
+    "grupos": [
+      [
+        "안 왔어요",
+        "안왔어요"
+      ]
+    ]
+  },
+  {
+    "id": "oda-da-104",
+    "verbo": "오다",
+    "contexto": "come (oneur) → Dictionary (–다)",
+    "respuesta": "오늘 오다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: oneur oda.",
+    "grupos": [
+      [
+        "오다"
+      ]
+    ]
+  },
+  {
+    "id": "oda-da-105",
+    "verbo": "오다",
+    "contexto": "come (jigeum) → Dictionary (–다)",
+    "respuesta": "지금 오다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: jigeum oda.",
+    "grupos": [
+      [
+        "오다"
+      ]
+    ]
+  },
+  {
+    "id": "oda-nida-106",
+    "verbo": "오다",
+    "contexto": "come (naeir) → Formal present (–습니다)",
+    "respuesta": "내일 옵니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: naeir obnida.",
+    "grupos": [
+      [
+        "옵니다"
+      ]
+    ]
+  },
+  {
+    "id": "oda-nida-107",
+    "verbo": "오다",
+    "contexto": "come (jigeum) → Formal present (–습니다)",
+    "respuesta": "지금 옵니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: jigeum obnida.",
+    "grupos": [
+      [
+        "옵니다"
+      ]
+    ]
+  },
+  {
+    "id": "oda-seyo-108",
+    "verbo": "오다",
+    "contexto": "come (jigeum) → Honourific (–세요)",
+    "respuesta": "지금 오세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: jigeum oseyo.",
+    "grupos": [
+      [
+        "오세요"
+      ]
+    ]
+  },
+  {
+    "id": "oda-seyo-109",
+    "verbo": "오다",
+    "contexto": "come (maeir) → Honourific (–세요)",
+    "respuesta": "매일 오세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: maeir oseyo.",
+    "grupos": [
+      [
+        "오세요"
+      ]
+    ]
+  },
+  {
+    "id": "oda-go-110",
+    "verbo": "오다",
+    "contexto": "come (oneur) → Connective (–고)",
+    "respuesta": "오늘 오고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: oneur ogo.",
+    "grupos": [
+      [
+        "오고"
+      ]
+    ]
+  },
+  {
+    "id": "oda-go-111",
+    "verbo": "오다",
+    "contexto": "come (jigeum) → Connective (–고)",
+    "respuesta": "지금 오고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: jigeum ogo.",
+    "grupos": [
+      [
+        "오고"
+      ]
+    ]
+  },
+  {
+    "id": "boda-yo-112",
+    "verbo": "보다",
+    "contexto": "see / watch: yeonghwa boda → Polite present (–요)",
+    "respuesta": "영화를 봐요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: yeonghwareur bwayo.",
+    "grupos": [
+      [
+        "영화",
+        "영화를"
+      ],
+      [
+        "봐요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-yo-113",
+    "verbo": "보다",
+    "contexto": "see / watch: chaeg boda → Polite present (–요)",
+    "respuesta": "책을 봐요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: chaegeur bwayo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "봐요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-yo-114",
+    "verbo": "보다",
+    "contexto": "see / watch: terrebijeon boda → Polite present (–요)",
+    "respuesta": "텔레비전을 봐요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: terrebijeoneur bwayo.",
+    "grupos": [
+      [
+        "텔레비전",
+        "텔레비전을"
+      ],
+      [
+        "봐요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-an_yo-115",
+    "verbo": "보다",
+    "contexto": "see / watch: yeonghwa boda → Polite negative (안 –요)",
+    "respuesta": "영화를 안 봐요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: yeonghwareur an bwayo.",
+    "grupos": [
+      [
+        "영화",
+        "영화를"
+      ],
+      [
+        "안 봐요",
+        "안봐요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-an_yo-116",
+    "verbo": "보다",
+    "contexto": "see / watch: chaeg boda → Polite negative (안 –요)",
+    "respuesta": "책을 안 봐요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: chaegeur an bwayo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "안 봐요",
+        "안봐요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-an_yo-117",
+    "verbo": "보다",
+    "contexto": "see / watch: terrebijeon boda → Polite negative (안 –요)",
+    "respuesta": "텔레비전을 안 봐요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: terrebijeoneur an bwayo.",
+    "grupos": [
+      [
+        "텔레비전",
+        "텔레비전을"
+      ],
+      [
+        "안 봐요",
+        "안봐요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-ss_yo-118",
+    "verbo": "보다",
+    "contexto": "see / watch: chaeg boda → Polite past (–었어요)",
+    "respuesta": "책을 봤어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: chaegeur bwasseoyo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "봤어요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-ss_yo-119",
+    "verbo": "보다",
+    "contexto": "see / watch: terrebijeon boda → Polite past (–었어요)",
+    "respuesta": "텔레비전을 봤어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: terrebijeoneur bwasseoyo.",
+    "grupos": [
+      [
+        "텔레비전",
+        "텔레비전을"
+      ],
+      [
+        "봤어요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-ss_yo-120",
+    "verbo": "보다",
+    "contexto": "see / watch: yeonghwa boda → Polite past (–었어요)",
+    "respuesta": "영화를 봤어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: yeonghwareur bwasseoyo.",
+    "grupos": [
+      [
+        "영화",
+        "영화를"
+      ],
+      [
+        "봤어요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-an_ss_yo-121",
+    "verbo": "보다",
+    "contexto": "see / watch: chaeg boda → Polite past neg. (안 –었어요)",
+    "respuesta": "책을 안 봤어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: chaegeur an bwasseoyo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "안 봤어요",
+        "안봤어요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-an_ss_yo-122",
+    "verbo": "보다",
+    "contexto": "see / watch: terrebijeon boda → Polite past neg. (안 –었어요)",
+    "respuesta": "텔레비전을 안 봤어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: terrebijeoneur an bwasseoyo.",
+    "grupos": [
+      [
+        "텔레비전",
+        "텔레비전을"
+      ],
+      [
+        "안 봤어요",
+        "안봤어요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-an_ss_yo-123",
+    "verbo": "보다",
+    "contexto": "see / watch: yeonghwa boda → Polite past neg. (안 –었어요)",
+    "respuesta": "영화를 안 봤어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: yeonghwareur an bwasseoyo.",
+    "grupos": [
+      [
+        "영화",
+        "영화를"
+      ],
+      [
+        "안 봤어요",
+        "안봤어요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-da-124",
+    "verbo": "보다",
+    "contexto": "see / watch: terrebijeon boda → Dictionary (–다)",
+    "respuesta": "텔레비전을 보다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: terrebijeoneur boda.",
+    "grupos": [
+      [
+        "텔레비전",
+        "텔레비전을"
+      ],
+      [
+        "보다"
+      ]
+    ]
+  },
+  {
+    "id": "boda-da-125",
+    "verbo": "보다",
+    "contexto": "see / watch: yeonghwa boda → Dictionary (–다)",
+    "respuesta": "영화를 보다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: yeonghwareur boda.",
+    "grupos": [
+      [
+        "영화",
+        "영화를"
+      ],
+      [
+        "보다"
+      ]
+    ]
+  },
+  {
+    "id": "boda-da-126",
+    "verbo": "보다",
+    "contexto": "see / watch: chaeg boda → Dictionary (–다)",
+    "respuesta": "책을 보다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: chaegeur boda.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "보다"
+      ]
+    ]
+  },
+  {
+    "id": "boda-nida-127",
+    "verbo": "보다",
+    "contexto": "see / watch: chaeg boda → Formal present (–습니다)",
+    "respuesta": "책을 봅니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: chaegeur bobnida.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "봅니다"
+      ]
+    ]
+  },
+  {
+    "id": "boda-nida-128",
+    "verbo": "보다",
+    "contexto": "see / watch: terrebijeon boda → Formal present (–습니다)",
+    "respuesta": "텔레비전을 봅니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: terrebijeoneur bobnida.",
+    "grupos": [
+      [
+        "텔레비전",
+        "텔레비전을"
+      ],
+      [
+        "봅니다"
+      ]
+    ]
+  },
+  {
+    "id": "boda-nida-129",
+    "verbo": "보다",
+    "contexto": "see / watch: yeonghwa boda → Formal present (–습니다)",
+    "respuesta": "영화를 봅니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: yeonghwareur bobnida.",
+    "grupos": [
+      [
+        "영화",
+        "영화를"
+      ],
+      [
+        "봅니다"
+      ]
+    ]
+  },
+  {
+    "id": "boda-seyo-130",
+    "verbo": "보다",
+    "contexto": "see / watch: yeonghwa boda → Honourific (–세요)",
+    "respuesta": "영화를 보세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: yeonghwareur boseyo.",
+    "grupos": [
+      [
+        "영화",
+        "영화를"
+      ],
+      [
+        "보세요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-seyo-131",
+    "verbo": "보다",
+    "contexto": "see / watch: terrebijeon boda → Honourific (–세요)",
+    "respuesta": "텔레비전을 보세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: terrebijeoneur boseyo.",
+    "grupos": [
+      [
+        "텔레비전",
+        "텔레비전을"
+      ],
+      [
+        "보세요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-seyo-132",
+    "verbo": "보다",
+    "contexto": "see / watch: chaeg boda → Honourific (–세요)",
+    "respuesta": "책을 보세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: chaegeur boseyo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "보세요"
+      ]
+    ]
+  },
+  {
+    "id": "boda-go-133",
+    "verbo": "보다",
+    "contexto": "see / watch: chaeg boda → Connective (–고)",
+    "respuesta": "책을 보고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: chaegeur bogo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "보고"
+      ]
+    ]
+  },
+  {
+    "id": "boda-go-134",
+    "verbo": "보다",
+    "contexto": "see / watch: yeonghwa boda → Connective (–고)",
+    "respuesta": "영화를 보고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: yeonghwareur bogo.",
+    "grupos": [
+      [
+        "영화",
+        "영화를"
+      ],
+      [
+        "보고"
+      ]
+    ]
+  },
+  {
+    "id": "boda-go-135",
+    "verbo": "보다",
+    "contexto": "see / watch: terrebijeon boda → Connective (–고)",
+    "respuesta": "텔레비전을 보고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: terrebijeoneur bogo.",
+    "grupos": [
+      [
+        "텔레비전",
+        "텔레비전을"
+      ],
+      [
+        "보고"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-yo-136",
+    "verbo": "먹다",
+    "contexto": "eat: bab meokda → Polite present (–요)",
+    "respuesta": "밥을 먹어요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: babeur meogeoyo.",
+    "grupos": [
+      [
+        "밥",
+        "밥을"
+      ],
+      [
+        "먹어요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-yo-137",
+    "verbo": "먹다",
+    "contexto": "eat: ppang meokda → Polite present (–요)",
+    "respuesta": "빵을 먹어요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: ppangeur meogeoyo.",
+    "grupos": [
+      [
+        "빵",
+        "빵을"
+      ],
+      [
+        "먹어요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-yo-138",
+    "verbo": "먹다",
+    "contexto": "eat: sagwa meokda → Polite present (–요)",
+    "respuesta": "사과를 먹어요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: sagwareur meogeoyo.",
+    "grupos": [
+      [
+        "사과",
+        "사과를"
+      ],
+      [
+        "먹어요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-an_yo-139",
+    "verbo": "먹다",
+    "contexto": "eat: sagwa meokda → Polite negative (안 –요)",
+    "respuesta": "사과를 안 먹어요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: sagwareur an meogeoyo.",
+    "grupos": [
+      [
+        "사과",
+        "사과를"
+      ],
+      [
+        "안 먹어요",
+        "안먹어요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-an_yo-140",
+    "verbo": "먹다",
+    "contexto": "eat: ppang meokda → Polite negative (안 –요)",
+    "respuesta": "빵을 안 먹어요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: ppangeur an meogeoyo.",
+    "grupos": [
+      [
+        "빵",
+        "빵을"
+      ],
+      [
+        "안 먹어요",
+        "안먹어요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-an_yo-141",
+    "verbo": "먹다",
+    "contexto": "eat: bab meokda → Polite negative (안 –요)",
+    "respuesta": "밥을 안 먹어요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: babeur an meogeoyo.",
+    "grupos": [
+      [
+        "밥",
+        "밥을"
+      ],
+      [
+        "안 먹어요",
+        "안먹어요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-ss_yo-142",
+    "verbo": "먹다",
+    "contexto": "eat: sagwa meokda → Polite past (–었어요)",
+    "respuesta": "사과를 먹었어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: sagwareur meogeosseoyo.",
+    "grupos": [
+      [
+        "사과",
+        "사과를"
+      ],
+      [
+        "먹었어요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-ss_yo-143",
+    "verbo": "먹다",
+    "contexto": "eat: ppang meokda → Polite past (–었어요)",
+    "respuesta": "빵을 먹었어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: ppangeur meogeosseoyo.",
+    "grupos": [
+      [
+        "빵",
+        "빵을"
+      ],
+      [
+        "먹었어요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-ss_yo-144",
+    "verbo": "먹다",
+    "contexto": "eat: bab meokda → Polite past (–었어요)",
+    "respuesta": "밥을 먹었어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: babeur meogeosseoyo.",
+    "grupos": [
+      [
+        "밥",
+        "밥을"
+      ],
+      [
+        "먹었어요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-an_ss_yo-145",
+    "verbo": "먹다",
+    "contexto": "eat: bab meokda → Polite past neg. (안 –었어요)",
+    "respuesta": "밥을 안 먹었어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: babeur an meogeosseoyo.",
+    "grupos": [
+      [
+        "밥",
+        "밥을"
+      ],
+      [
+        "안 먹었어요",
+        "안먹었어요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-an_ss_yo-146",
+    "verbo": "먹다",
+    "contexto": "eat: ppang meokda → Polite past neg. (안 –었어요)",
+    "respuesta": "빵을 안 먹었어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: ppangeur an meogeosseoyo.",
+    "grupos": [
+      [
+        "빵",
+        "빵을"
+      ],
+      [
+        "안 먹었어요",
+        "안먹었어요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-an_ss_yo-147",
+    "verbo": "먹다",
+    "contexto": "eat: sagwa meokda → Polite past neg. (안 –었어요)",
+    "respuesta": "사과를 안 먹었어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: sagwareur an meogeosseoyo.",
+    "grupos": [
+      [
+        "사과",
+        "사과를"
+      ],
+      [
+        "안 먹었어요",
+        "안먹었어요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-da-148",
+    "verbo": "먹다",
+    "contexto": "eat: sagwa meokda → Dictionary (–다)",
+    "respuesta": "사과를 먹다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: sagwareur meogda.",
+    "grupos": [
+      [
+        "사과",
+        "사과를"
+      ],
+      [
+        "먹다"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-da-149",
+    "verbo": "먹다",
+    "contexto": "eat: bab meokda → Dictionary (–다)",
+    "respuesta": "밥을 먹다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: babeur meogda.",
+    "grupos": [
+      [
+        "밥",
+        "밥을"
+      ],
+      [
+        "먹다"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-da-150",
+    "verbo": "먹다",
+    "contexto": "eat: ppang meokda → Dictionary (–다)",
+    "respuesta": "빵을 먹다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: ppangeur meogda.",
+    "grupos": [
+      [
+        "빵",
+        "빵을"
+      ],
+      [
+        "먹다"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-nida-151",
+    "verbo": "먹다",
+    "contexto": "eat: ppang meokda → Formal present (–습니다)",
+    "respuesta": "빵을 먹습니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: ppangeur meogseubnida.",
+    "grupos": [
+      [
+        "빵",
+        "빵을"
+      ],
+      [
+        "먹습니다"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-nida-152",
+    "verbo": "먹다",
+    "contexto": "eat: sagwa meokda → Formal present (–습니다)",
+    "respuesta": "사과를 먹습니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: sagwareur meogseubnida.",
+    "grupos": [
+      [
+        "사과",
+        "사과를"
+      ],
+      [
+        "먹습니다"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-nida-153",
+    "verbo": "먹다",
+    "contexto": "eat: bab meokda → Formal present (–습니다)",
+    "respuesta": "밥을 먹습니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: babeur meogseubnida.",
+    "grupos": [
+      [
+        "밥",
+        "밥을"
+      ],
+      [
+        "먹습니다"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-seyo-154",
+    "verbo": "먹다",
+    "contexto": "eat: sagwa meokda → Honourific (–세요)",
+    "respuesta": "사과를 먹으세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: sagwareur meogeuseyo.",
+    "grupos": [
+      [
+        "사과",
+        "사과를"
+      ],
+      [
+        "먹으세요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-seyo-155",
+    "verbo": "먹다",
+    "contexto": "eat: ppang meokda → Honourific (–세요)",
+    "respuesta": "빵을 먹으세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: ppangeur meogeuseyo.",
+    "grupos": [
+      [
+        "빵",
+        "빵을"
+      ],
+      [
+        "먹으세요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-seyo-156",
+    "verbo": "먹다",
+    "contexto": "eat: bab meokda → Honourific (–세요)",
+    "respuesta": "밥을 먹으세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: babeur meogeuseyo.",
+    "grupos": [
+      [
+        "밥",
+        "밥을"
+      ],
+      [
+        "먹으세요"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-go-157",
+    "verbo": "먹다",
+    "contexto": "eat: sagwa meokda → Connective (–고)",
+    "respuesta": "사과를 먹고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: sagwareur meoggo.",
+    "grupos": [
+      [
+        "사과",
+        "사과를"
+      ],
+      [
+        "먹고"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-go-158",
+    "verbo": "먹다",
+    "contexto": "eat: ppang meokda → Connective (–고)",
+    "respuesta": "빵을 먹고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: ppangeur meoggo.",
+    "grupos": [
+      [
+        "빵",
+        "빵을"
+      ],
+      [
+        "먹고"
+      ]
+    ]
+  },
+  {
+    "id": "meokda-go-159",
+    "verbo": "먹다",
+    "contexto": "eat: bab meokda → Connective (–고)",
+    "respuesta": "밥을 먹고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: babeur meoggo.",
+    "grupos": [
+      [
+        "밥",
+        "밥을"
+      ],
+      [
+        "먹고"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-yo-160",
+    "verbo": "읽다",
+    "contexto": "read: chaeg ikda → Polite present (–요)",
+    "respuesta": "책을 읽어요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: chaegeur irgeoyo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "읽어요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-yo-161",
+    "verbo": "읽다",
+    "contexto": "read: pyeonji ikda → Polite present (–요)",
+    "respuesta": "편지를 읽어요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: pyeonjireur irgeoyo.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "읽어요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-yo-162",
+    "verbo": "읽다",
+    "contexto": "read: sinmun ikda → Polite present (–요)",
+    "respuesta": "신문을 읽어요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: sinmuneur irgeoyo.",
+    "grupos": [
+      [
+        "신문",
+        "신문을"
+      ],
+      [
+        "읽어요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-an_yo-163",
+    "verbo": "읽다",
+    "contexto": "read: sinmun ikda → Polite negative (안 –요)",
+    "respuesta": "신문을 안 읽어요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: sinmuneur an irgeoyo.",
+    "grupos": [
+      [
+        "신문",
+        "신문을"
+      ],
+      [
+        "안 읽어요",
+        "안읽어요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-an_yo-164",
+    "verbo": "읽다",
+    "contexto": "read: chaeg ikda → Polite negative (안 –요)",
+    "respuesta": "책을 안 읽어요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: chaegeur an irgeoyo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "안 읽어요",
+        "안읽어요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-an_yo-165",
+    "verbo": "읽다",
+    "contexto": "read: pyeonji ikda → Polite negative (안 –요)",
+    "respuesta": "편지를 안 읽어요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: pyeonjireur an irgeoyo.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "안 읽어요",
+        "안읽어요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-ss_yo-166",
+    "verbo": "읽다",
+    "contexto": "read: sinmun ikda → Polite past (–었어요)",
+    "respuesta": "신문을 읽었어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: sinmuneur irgeosseoyo.",
+    "grupos": [
+      [
+        "신문",
+        "신문을"
+      ],
+      [
+        "읽었어요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-ss_yo-167",
+    "verbo": "읽다",
+    "contexto": "read: chaeg ikda → Polite past (–었어요)",
+    "respuesta": "책을 읽었어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: chaegeur irgeosseoyo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "읽었어요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-ss_yo-168",
+    "verbo": "읽다",
+    "contexto": "read: pyeonji ikda → Polite past (–었어요)",
+    "respuesta": "편지를 읽었어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: pyeonjireur irgeosseoyo.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "읽었어요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-an_ss_yo-169",
+    "verbo": "읽다",
+    "contexto": "read: sinmun ikda → Polite past neg. (안 –었어요)",
+    "respuesta": "신문을 안 읽었어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: sinmuneur an irgeosseoyo.",
+    "grupos": [
+      [
+        "신문",
+        "신문을"
+      ],
+      [
+        "안 읽었어요",
+        "안읽었어요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-an_ss_yo-170",
+    "verbo": "읽다",
+    "contexto": "read: pyeonji ikda → Polite past neg. (안 –었어요)",
+    "respuesta": "편지를 안 읽었어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: pyeonjireur an irgeosseoyo.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "안 읽었어요",
+        "안읽었어요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-an_ss_yo-171",
+    "verbo": "읽다",
+    "contexto": "read: chaeg ikda → Polite past neg. (안 –었어요)",
+    "respuesta": "책을 안 읽었어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: chaegeur an irgeosseoyo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "안 읽었어요",
+        "안읽었어요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-da-172",
+    "verbo": "읽다",
+    "contexto": "read: chaeg ikda → Dictionary (–다)",
+    "respuesta": "책을 읽다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: chaegeur irgda.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "읽다"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-da-173",
+    "verbo": "읽다",
+    "contexto": "read: pyeonji ikda → Dictionary (–다)",
+    "respuesta": "편지를 읽다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: pyeonjireur irgda.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "읽다"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-da-174",
+    "verbo": "읽다",
+    "contexto": "read: sinmun ikda → Dictionary (–다)",
+    "respuesta": "신문을 읽다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: sinmuneur irgda.",
+    "grupos": [
+      [
+        "신문",
+        "신문을"
+      ],
+      [
+        "읽다"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-nida-175",
+    "verbo": "읽다",
+    "contexto": "read: pyeonji ikda → Formal present (–습니다)",
+    "respuesta": "편지를 읽습니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: pyeonjireur irgseubnida.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "읽습니다"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-nida-176",
+    "verbo": "읽다",
+    "contexto": "read: chaeg ikda → Formal present (–습니다)",
+    "respuesta": "책을 읽습니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: chaegeur irgseubnida.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "읽습니다"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-nida-177",
+    "verbo": "읽다",
+    "contexto": "read: sinmun ikda → Formal present (–습니다)",
+    "respuesta": "신문을 읽습니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: sinmuneur irgseubnida.",
+    "grupos": [
+      [
+        "신문",
+        "신문을"
+      ],
+      [
+        "읽습니다"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-seyo-178",
+    "verbo": "읽다",
+    "contexto": "read: chaeg ikda → Honourific (–세요)",
+    "respuesta": "책을 읽으세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: chaegeur irgeuseyo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "읽으세요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-seyo-179",
+    "verbo": "읽다",
+    "contexto": "read: sinmun ikda → Honourific (–세요)",
+    "respuesta": "신문을 읽으세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: sinmuneur irgeuseyo.",
+    "grupos": [
+      [
+        "신문",
+        "신문을"
+      ],
+      [
+        "읽으세요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-seyo-180",
+    "verbo": "읽다",
+    "contexto": "read: pyeonji ikda → Honourific (–세요)",
+    "respuesta": "편지를 읽으세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: pyeonjireur irgeuseyo.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "읽으세요"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-go-181",
+    "verbo": "읽다",
+    "contexto": "read: chaeg ikda → Connective (–고)",
+    "respuesta": "책을 읽고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: chaegeur irggo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "읽고"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-go-182",
+    "verbo": "읽다",
+    "contexto": "read: pyeonji ikda → Connective (–고)",
+    "respuesta": "편지를 읽고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: pyeonjireur irggo.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "읽고"
+      ]
+    ]
+  },
+  {
+    "id": "ikda-go-183",
+    "verbo": "읽다",
+    "contexto": "read: sinmun ikda → Connective (–고)",
+    "respuesta": "신문을 읽고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: sinmuneur irggo.",
+    "grupos": [
+      [
+        "신문",
+        "신문을"
+      ],
+      [
+        "읽고"
+      ]
+    ]
+  },
+  {
+    "id": "masida-yo-184",
+    "verbo": "마시다",
+    "contexto": "drink: cha masida → Polite present (–요)",
+    "respuesta": "차를 마셔요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: chareur masyeoyo.",
+    "grupos": [
+      [
+        "차",
+        "차를"
+      ],
+      [
+        "마셔요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-yo-185",
+    "verbo": "마시다",
+    "contexto": "drink: keopi masida → Polite present (–요)",
+    "respuesta": "커피를 마셔요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: keopireur masyeoyo.",
+    "grupos": [
+      [
+        "커피",
+        "커피를"
+      ],
+      [
+        "마셔요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-yo-186",
+    "verbo": "마시다",
+    "contexto": "drink: mur masida → Polite present (–요)",
+    "respuesta": "물을 마셔요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: mureur masyeoyo.",
+    "grupos": [
+      [
+        "물",
+        "물을"
+      ],
+      [
+        "마셔요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-an_yo-187",
+    "verbo": "마시다",
+    "contexto": "drink: mur masida → Polite negative (안 –요)",
+    "respuesta": "물을 안 마셔요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: mureur an masyeoyo.",
+    "grupos": [
+      [
+        "물",
+        "물을"
+      ],
+      [
+        "안 마셔요",
+        "안마셔요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-an_yo-188",
+    "verbo": "마시다",
+    "contexto": "drink: keopi masida → Polite negative (안 –요)",
+    "respuesta": "커피를 안 마셔요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: keopireur an masyeoyo.",
+    "grupos": [
+      [
+        "커피",
+        "커피를"
+      ],
+      [
+        "안 마셔요",
+        "안마셔요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-an_yo-189",
+    "verbo": "마시다",
+    "contexto": "drink: cha masida → Polite negative (안 –요)",
+    "respuesta": "차를 안 마셔요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: chareur an masyeoyo.",
+    "grupos": [
+      [
+        "차",
+        "차를"
+      ],
+      [
+        "안 마셔요",
+        "안마셔요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-ss_yo-190",
+    "verbo": "마시다",
+    "contexto": "drink: keopi masida → Polite past (–었어요)",
+    "respuesta": "커피를 마셨어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: keopireur masyeosseoyo.",
+    "grupos": [
+      [
+        "커피",
+        "커피를"
+      ],
+      [
+        "마셨어요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-ss_yo-191",
+    "verbo": "마시다",
+    "contexto": "drink: cha masida → Polite past (–었어요)",
+    "respuesta": "차를 마셨어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: chareur masyeosseoyo.",
+    "grupos": [
+      [
+        "차",
+        "차를"
+      ],
+      [
+        "마셨어요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-ss_yo-192",
+    "verbo": "마시다",
+    "contexto": "drink: mur masida → Polite past (–었어요)",
+    "respuesta": "물을 마셨어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: mureur masyeosseoyo.",
+    "grupos": [
+      [
+        "물",
+        "물을"
+      ],
+      [
+        "마셨어요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-an_ss_yo-193",
+    "verbo": "마시다",
+    "contexto": "drink: keopi masida → Polite past neg. (안 –었어요)",
+    "respuesta": "커피를 안 마셨어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: keopireur an masyeosseoyo.",
+    "grupos": [
+      [
+        "커피",
+        "커피를"
+      ],
+      [
+        "안 마셨어요",
+        "안마셨어요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-an_ss_yo-194",
+    "verbo": "마시다",
+    "contexto": "drink: mur masida → Polite past neg. (안 –었어요)",
+    "respuesta": "물을 안 마셨어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: mureur an masyeosseoyo.",
+    "grupos": [
+      [
+        "물",
+        "물을"
+      ],
+      [
+        "안 마셨어요",
+        "안마셨어요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-an_ss_yo-195",
+    "verbo": "마시다",
+    "contexto": "drink: cha masida → Polite past neg. (안 –었어요)",
+    "respuesta": "차를 안 마셨어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: chareur an masyeosseoyo.",
+    "grupos": [
+      [
+        "차",
+        "차를"
+      ],
+      [
+        "안 마셨어요",
+        "안마셨어요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-da-196",
+    "verbo": "마시다",
+    "contexto": "drink: mur masida → Dictionary (–다)",
+    "respuesta": "물을 마시다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: mureur masida.",
+    "grupos": [
+      [
+        "물",
+        "물을"
+      ],
+      [
+        "마시다"
+      ]
+    ]
+  },
+  {
+    "id": "masida-da-197",
+    "verbo": "마시다",
+    "contexto": "drink: keopi masida → Dictionary (–다)",
+    "respuesta": "커피를 마시다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: keopireur masida.",
+    "grupos": [
+      [
+        "커피",
+        "커피를"
+      ],
+      [
+        "마시다"
+      ]
+    ]
+  },
+  {
+    "id": "masida-da-198",
+    "verbo": "마시다",
+    "contexto": "drink: cha masida → Dictionary (–다)",
+    "respuesta": "차를 마시다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: chareur masida.",
+    "grupos": [
+      [
+        "차",
+        "차를"
+      ],
+      [
+        "마시다"
+      ]
+    ]
+  },
+  {
+    "id": "masida-nida-199",
+    "verbo": "마시다",
+    "contexto": "drink: mur masida → Formal present (–습니다)",
+    "respuesta": "물을 마십니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: mureur masibnida.",
+    "grupos": [
+      [
+        "물",
+        "물을"
+      ],
+      [
+        "마십니다"
+      ]
+    ]
+  },
+  {
+    "id": "masida-nida-200",
+    "verbo": "마시다",
+    "contexto": "drink: keopi masida → Formal present (–습니다)",
+    "respuesta": "커피를 마십니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: keopireur masibnida.",
+    "grupos": [
+      [
+        "커피",
+        "커피를"
+      ],
+      [
+        "마십니다"
+      ]
+    ]
+  },
+  {
+    "id": "masida-nida-201",
+    "verbo": "마시다",
+    "contexto": "drink: cha masida → Formal present (–습니다)",
+    "respuesta": "차를 마십니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: chareur masibnida.",
+    "grupos": [
+      [
+        "차",
+        "차를"
+      ],
+      [
+        "마십니다"
+      ]
+    ]
+  },
+  {
+    "id": "masida-seyo-202",
+    "verbo": "마시다",
+    "contexto": "drink: cha masida → Honourific (–세요)",
+    "respuesta": "차를 마시세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: chareur masiseyo.",
+    "grupos": [
+      [
+        "차",
+        "차를"
+      ],
+      [
+        "마시세요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-seyo-203",
+    "verbo": "마시다",
+    "contexto": "drink: keopi masida → Honourific (–세요)",
+    "respuesta": "커피를 마시세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: keopireur masiseyo.",
+    "grupos": [
+      [
+        "커피",
+        "커피를"
+      ],
+      [
+        "마시세요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-seyo-204",
+    "verbo": "마시다",
+    "contexto": "drink: mur masida → Honourific (–세요)",
+    "respuesta": "물을 마시세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: mureur masiseyo.",
+    "grupos": [
+      [
+        "물",
+        "물을"
+      ],
+      [
+        "마시세요"
+      ]
+    ]
+  },
+  {
+    "id": "masida-go-205",
+    "verbo": "마시다",
+    "contexto": "drink: mur masida → Connective (–고)",
+    "respuesta": "물을 마시고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: mureur masigo.",
+    "grupos": [
+      [
+        "물",
+        "물을"
+      ],
+      [
+        "마시고"
+      ]
+    ]
+  },
+  {
+    "id": "masida-go-206",
+    "verbo": "마시다",
+    "contexto": "drink: keopi masida → Connective (–고)",
+    "respuesta": "커피를 마시고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: keopireur masigo.",
+    "grupos": [
+      [
+        "커피",
+        "커피를"
+      ],
+      [
+        "마시고"
+      ]
+    ]
+  },
+  {
+    "id": "masida-go-207",
+    "verbo": "마시다",
+    "contexto": "drink: cha masida → Connective (–고)",
+    "respuesta": "차를 마시고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: chareur masigo.",
+    "grupos": [
+      [
+        "차",
+        "차를"
+      ],
+      [
+        "마시고"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-yo-208",
+    "verbo": "쓰다",
+    "contexto": "write: ireum sseuda → Polite present (–요)",
+    "respuesta": "이름을 써요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: ireumeur sseoyo.",
+    "grupos": [
+      [
+        "이름",
+        "이름을"
+      ],
+      [
+        "써요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-yo-209",
+    "verbo": "쓰다",
+    "contexto": "write: pyeonji sseuda → Polite present (–요)",
+    "respuesta": "편지를 써요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: pyeonjireur sseoyo.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "써요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-yo-210",
+    "verbo": "쓰다",
+    "contexto": "write: imeir sseuda → Polite present (–요)",
+    "respuesta": "이메일을 써요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: imeireur sseoyo.",
+    "grupos": [
+      [
+        "이메일",
+        "이메일을"
+      ],
+      [
+        "써요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-an_yo-211",
+    "verbo": "쓰다",
+    "contexto": "write: ireum sseuda → Polite negative (안 –요)",
+    "respuesta": "이름을 안 써요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: ireumeur an sseoyo.",
+    "grupos": [
+      [
+        "이름",
+        "이름을"
+      ],
+      [
+        "안 써요",
+        "안써요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-an_yo-212",
+    "verbo": "쓰다",
+    "contexto": "write: imeir sseuda → Polite negative (안 –요)",
+    "respuesta": "이메일을 안 써요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: imeireur an sseoyo.",
+    "grupos": [
+      [
+        "이메일",
+        "이메일을"
+      ],
+      [
+        "안 써요",
+        "안써요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-an_yo-213",
+    "verbo": "쓰다",
+    "contexto": "write: pyeonji sseuda → Polite negative (안 –요)",
+    "respuesta": "편지를 안 써요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: pyeonjireur an sseoyo.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "안 써요",
+        "안써요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-ss_yo-214",
+    "verbo": "쓰다",
+    "contexto": "write: ireum sseuda → Polite past (–었어요)",
+    "respuesta": "이름을 썼어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: ireumeur sseosseoyo.",
+    "grupos": [
+      [
+        "이름",
+        "이름을"
+      ],
+      [
+        "썼어요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-ss_yo-215",
+    "verbo": "쓰다",
+    "contexto": "write: imeir sseuda → Polite past (–었어요)",
+    "respuesta": "이메일을 썼어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: imeireur sseosseoyo.",
+    "grupos": [
+      [
+        "이메일",
+        "이메일을"
+      ],
+      [
+        "썼어요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-ss_yo-216",
+    "verbo": "쓰다",
+    "contexto": "write: pyeonji sseuda → Polite past (–었어요)",
+    "respuesta": "편지를 썼어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: pyeonjireur sseosseoyo.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "썼어요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-an_ss_yo-217",
+    "verbo": "쓰다",
+    "contexto": "write: ireum sseuda → Polite past neg. (안 –었어요)",
+    "respuesta": "이름을 안 썼어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: ireumeur an sseosseoyo.",
+    "grupos": [
+      [
+        "이름",
+        "이름을"
+      ],
+      [
+        "안 썼어요",
+        "안썼어요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-an_ss_yo-218",
+    "verbo": "쓰다",
+    "contexto": "write: pyeonji sseuda → Polite past neg. (안 –었어요)",
+    "respuesta": "편지를 안 썼어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: pyeonjireur an sseosseoyo.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "안 썼어요",
+        "안썼어요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-an_ss_yo-219",
+    "verbo": "쓰다",
+    "contexto": "write: imeir sseuda → Polite past neg. (안 –었어요)",
+    "respuesta": "이메일을 안 썼어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: imeireur an sseosseoyo.",
+    "grupos": [
+      [
+        "이메일",
+        "이메일을"
+      ],
+      [
+        "안 썼어요",
+        "안썼어요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-da-220",
+    "verbo": "쓰다",
+    "contexto": "write: ireum sseuda → Dictionary (–다)",
+    "respuesta": "이름을 쓰다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: ireumeur sseuda.",
+    "grupos": [
+      [
+        "이름",
+        "이름을"
+      ],
+      [
+        "쓰다"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-da-221",
+    "verbo": "쓰다",
+    "contexto": "write: pyeonji sseuda → Dictionary (–다)",
+    "respuesta": "편지를 쓰다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: pyeonjireur sseuda.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "쓰다"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-da-222",
+    "verbo": "쓰다",
+    "contexto": "write: imeir sseuda → Dictionary (–다)",
+    "respuesta": "이메일을 쓰다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: imeireur sseuda.",
+    "grupos": [
+      [
+        "이메일",
+        "이메일을"
+      ],
+      [
+        "쓰다"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-nida-223",
+    "verbo": "쓰다",
+    "contexto": "write: imeir sseuda → Formal present (–습니다)",
+    "respuesta": "이메일을 씁니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: imeireur sseubnida.",
+    "grupos": [
+      [
+        "이메일",
+        "이메일을"
+      ],
+      [
+        "씁니다"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-nida-224",
+    "verbo": "쓰다",
+    "contexto": "write: pyeonji sseuda → Formal present (–습니다)",
+    "respuesta": "편지를 씁니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: pyeonjireur sseubnida.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "씁니다"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-nida-225",
+    "verbo": "쓰다",
+    "contexto": "write: ireum sseuda → Formal present (–습니다)",
+    "respuesta": "이름을 씁니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: ireumeur sseubnida.",
+    "grupos": [
+      [
+        "이름",
+        "이름을"
+      ],
+      [
+        "씁니다"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-seyo-226",
+    "verbo": "쓰다",
+    "contexto": "write: ireum sseuda → Honourific (–세요)",
+    "respuesta": "이름을 쓰세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: ireumeur sseuseyo.",
+    "grupos": [
+      [
+        "이름",
+        "이름을"
+      ],
+      [
+        "쓰세요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-seyo-227",
+    "verbo": "쓰다",
+    "contexto": "write: pyeonji sseuda → Honourific (–세요)",
+    "respuesta": "편지를 쓰세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: pyeonjireur sseuseyo.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "쓰세요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-seyo-228",
+    "verbo": "쓰다",
+    "contexto": "write: imeir sseuda → Honourific (–세요)",
+    "respuesta": "이메일을 쓰세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: imeireur sseuseyo.",
+    "grupos": [
+      [
+        "이메일",
+        "이메일을"
+      ],
+      [
+        "쓰세요"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-go-229",
+    "verbo": "쓰다",
+    "contexto": "write: ireum sseuda → Connective (–고)",
+    "respuesta": "이름을 쓰고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: ireumeur sseugo.",
+    "grupos": [
+      [
+        "이름",
+        "이름을"
+      ],
+      [
+        "쓰고"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-go-230",
+    "verbo": "쓰다",
+    "contexto": "write: imeir sseuda → Connective (–고)",
+    "respuesta": "이메일을 쓰고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: imeireur sseugo.",
+    "grupos": [
+      [
+        "이메일",
+        "이메일을"
+      ],
+      [
+        "쓰고"
+      ]
+    ]
+  },
+  {
+    "id": "sseuda-go-231",
+    "verbo": "쓰다",
+    "contexto": "write: pyeonji sseuda → Connective (–고)",
+    "respuesta": "편지를 쓰고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: pyeonjireur sseugo.",
+    "grupos": [
+      [
+        "편지",
+        "편지를"
+      ],
+      [
+        "쓰고"
+      ]
+    ]
+  },
+  {
+    "id": "juda-yo-232",
+    "verbo": "주다",
+    "contexto": "give: chaeg juda → Polite present (–요)",
+    "respuesta": "책을 줘요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: chaegeur jwoyo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "줘요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-yo-233",
+    "verbo": "주다",
+    "contexto": "give: don juda → Polite present (–요)",
+    "respuesta": "돈을 줘요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: doneur jwoyo.",
+    "grupos": [
+      [
+        "돈",
+        "돈을"
+      ],
+      [
+        "줘요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-yo-234",
+    "verbo": "주다",
+    "contexto": "give: seonmur juda → Polite present (–요)",
+    "respuesta": "선물을 줘요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: seonmureur jwoyo.",
+    "grupos": [
+      [
+        "선물",
+        "선물을"
+      ],
+      [
+        "줘요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-an_yo-235",
+    "verbo": "주다",
+    "contexto": "give: seonmur juda → Polite negative (안 –요)",
+    "respuesta": "선물을 안 줘요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: seonmureur an jwoyo.",
+    "grupos": [
+      [
+        "선물",
+        "선물을"
+      ],
+      [
+        "안 줘요",
+        "안줘요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-an_yo-236",
+    "verbo": "주다",
+    "contexto": "give: don juda → Polite negative (안 –요)",
+    "respuesta": "돈을 안 줘요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: doneur an jwoyo.",
+    "grupos": [
+      [
+        "돈",
+        "돈을"
+      ],
+      [
+        "안 줘요",
+        "안줘요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-an_yo-237",
+    "verbo": "주다",
+    "contexto": "give: chaeg juda → Polite negative (안 –요)",
+    "respuesta": "책을 안 줘요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: chaegeur an jwoyo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "안 줘요",
+        "안줘요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-ss_yo-238",
+    "verbo": "주다",
+    "contexto": "give: don juda → Polite past (–었어요)",
+    "respuesta": "돈을 줬어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: doneur jwosseoyo.",
+    "grupos": [
+      [
+        "돈",
+        "돈을"
+      ],
+      [
+        "줬어요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-ss_yo-239",
+    "verbo": "주다",
+    "contexto": "give: chaeg juda → Polite past (–었어요)",
+    "respuesta": "책을 줬어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: chaegeur jwosseoyo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "줬어요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-ss_yo-240",
+    "verbo": "주다",
+    "contexto": "give: seonmur juda → Polite past (–었어요)",
+    "respuesta": "선물을 줬어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: seonmureur jwosseoyo.",
+    "grupos": [
+      [
+        "선물",
+        "선물을"
+      ],
+      [
+        "줬어요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-an_ss_yo-241",
+    "verbo": "주다",
+    "contexto": "give: chaeg juda → Polite past neg. (안 –었어요)",
+    "respuesta": "책을 안 줬어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: chaegeur an jwosseoyo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "안 줬어요",
+        "안줬어요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-an_ss_yo-242",
+    "verbo": "주다",
+    "contexto": "give: don juda → Polite past neg. (안 –었어요)",
+    "respuesta": "돈을 안 줬어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: doneur an jwosseoyo.",
+    "grupos": [
+      [
+        "돈",
+        "돈을"
+      ],
+      [
+        "안 줬어요",
+        "안줬어요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-an_ss_yo-243",
+    "verbo": "주다",
+    "contexto": "give: seonmur juda → Polite past neg. (안 –었어요)",
+    "respuesta": "선물을 안 줬어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: seonmureur an jwosseoyo.",
+    "grupos": [
+      [
+        "선물",
+        "선물을"
+      ],
+      [
+        "안 줬어요",
+        "안줬어요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-da-244",
+    "verbo": "주다",
+    "contexto": "give: don juda → Dictionary (–다)",
+    "respuesta": "돈을 주다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: doneur juda.",
+    "grupos": [
+      [
+        "돈",
+        "돈을"
+      ],
+      [
+        "주다"
+      ]
+    ]
+  },
+  {
+    "id": "juda-da-245",
+    "verbo": "주다",
+    "contexto": "give: seonmur juda → Dictionary (–다)",
+    "respuesta": "선물을 주다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: seonmureur juda.",
+    "grupos": [
+      [
+        "선물",
+        "선물을"
+      ],
+      [
+        "주다"
+      ]
+    ]
+  },
+  {
+    "id": "juda-da-246",
+    "verbo": "주다",
+    "contexto": "give: chaeg juda → Dictionary (–다)",
+    "respuesta": "책을 주다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: chaegeur juda.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "주다"
+      ]
+    ]
+  },
+  {
+    "id": "juda-nida-247",
+    "verbo": "주다",
+    "contexto": "give: chaeg juda → Formal present (–습니다)",
+    "respuesta": "책을 줍니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: chaegeur jubnida.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "줍니다"
+      ]
+    ]
+  },
+  {
+    "id": "juda-nida-248",
+    "verbo": "주다",
+    "contexto": "give: don juda → Formal present (–습니다)",
+    "respuesta": "돈을 줍니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: doneur jubnida.",
+    "grupos": [
+      [
+        "돈",
+        "돈을"
+      ],
+      [
+        "줍니다"
+      ]
+    ]
+  },
+  {
+    "id": "juda-nida-249",
+    "verbo": "주다",
+    "contexto": "give: seonmur juda → Formal present (–습니다)",
+    "respuesta": "선물을 줍니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: seonmureur jubnida.",
+    "grupos": [
+      [
+        "선물",
+        "선물을"
+      ],
+      [
+        "줍니다"
+      ]
+    ]
+  },
+  {
+    "id": "juda-seyo-250",
+    "verbo": "주다",
+    "contexto": "give: chaeg juda → Honourific (–세요)",
+    "respuesta": "책을 주세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: chaegeur juseyo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "주세요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-seyo-251",
+    "verbo": "주다",
+    "contexto": "give: don juda → Honourific (–세요)",
+    "respuesta": "돈을 주세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: doneur juseyo.",
+    "grupos": [
+      [
+        "돈",
+        "돈을"
+      ],
+      [
+        "주세요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-seyo-252",
+    "verbo": "주다",
+    "contexto": "give: seonmur juda → Honourific (–세요)",
+    "respuesta": "선물을 주세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: seonmureur juseyo.",
+    "grupos": [
+      [
+        "선물",
+        "선물을"
+      ],
+      [
+        "주세요"
+      ]
+    ]
+  },
+  {
+    "id": "juda-go-253",
+    "verbo": "주다",
+    "contexto": "give: chaeg juda → Connective (–고)",
+    "respuesta": "책을 주고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: chaegeur jugo.",
+    "grupos": [
+      [
+        "책",
+        "책을"
+      ],
+      [
+        "주고"
+      ]
+    ]
+  },
+  {
+    "id": "juda-go-254",
+    "verbo": "주다",
+    "contexto": "give: seonmur juda → Connective (–고)",
+    "respuesta": "선물을 주고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: seonmureur jugo.",
+    "grupos": [
+      [
+        "선물",
+        "선물을"
+      ],
+      [
+        "주고"
+      ]
+    ]
+  },
+  {
+    "id": "juda-go-255",
+    "verbo": "주다",
+    "contexto": "give: don juda → Connective (–고)",
+    "respuesta": "돈을 주고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: doneur jugo.",
+    "grupos": [
+      [
+        "돈",
+        "돈을"
+      ],
+      [
+        "주고"
+      ]
+    ]
+  },
+  {
+    "id": "jada-yo-256",
+    "verbo": "자다",
+    "contexto": "sleep (jigeum) → Polite present (–요)",
+    "respuesta": "지금 자요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: jigeum jayo.",
+    "grupos": [
+      [
+        "자요"
+      ]
+    ]
+  },
+  {
+    "id": "jada-yo-257",
+    "verbo": "자다",
+    "contexto": "sleep (eoje) → Polite present (–요)",
+    "respuesta": "어제 자요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: eoje jayo.",
+    "grupos": [
+      [
+        "자요"
+      ]
+    ]
+  },
+  {
+    "id": "jada-an_yo-258",
+    "verbo": "자다",
+    "contexto": "sleep (oneur) → Polite negative (안 –요)",
+    "respuesta": "오늘 안 자요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: oneur an jayo.",
+    "grupos": [
+      [
+        "안 자요",
+        "안자요"
+      ]
+    ]
+  },
+  {
+    "id": "jada-an_yo-259",
+    "verbo": "자다",
+    "contexto": "sleep (maeir) → Polite negative (안 –요)",
+    "respuesta": "매일 안 자요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: maeir an jayo.",
+    "grupos": [
+      [
+        "안 자요",
+        "안자요"
+      ]
+    ]
+  },
+  {
+    "id": "jada-ss_yo-260",
+    "verbo": "자다",
+    "contexto": "sleep (eoje) → Polite past (–었어요)",
+    "respuesta": "어제 잤어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: eoje jasseoyo.",
+    "grupos": [
+      [
+        "잤어요"
+      ]
+    ]
+  },
+  {
+    "id": "jada-ss_yo-261",
+    "verbo": "자다",
+    "contexto": "sleep (maeir) → Polite past (–었어요)",
+    "respuesta": "매일 잤어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: maeir jasseoyo.",
+    "grupos": [
+      [
+        "잤어요"
+      ]
+    ]
+  },
+  {
+    "id": "jada-an_ss_yo-262",
+    "verbo": "자다",
+    "contexto": "sleep (maeir) → Polite past neg. (안 –었어요)",
+    "respuesta": "매일 안 잤어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: maeir an jasseoyo.",
+    "grupos": [
+      [
+        "안 잤어요",
+        "안잤어요"
+      ]
+    ]
+  },
+  {
+    "id": "jada-an_ss_yo-263",
+    "verbo": "자다",
+    "contexto": "sleep (oneur) → Polite past neg. (안 –었어요)",
+    "respuesta": "오늘 안 잤어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: oneur an jasseoyo.",
+    "grupos": [
+      [
+        "안 잤어요",
+        "안잤어요"
+      ]
+    ]
+  },
+  {
+    "id": "jada-da-264",
+    "verbo": "자다",
+    "contexto": "sleep (oneur) → Dictionary (–다)",
+    "respuesta": "오늘 자다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: oneur jada.",
+    "grupos": [
+      [
+        "자다"
+      ]
+    ]
+  },
+  {
+    "id": "jada-da-265",
+    "verbo": "자다",
+    "contexto": "sleep (maeir) → Dictionary (–다)",
+    "respuesta": "매일 자다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: maeir jada.",
+    "grupos": [
+      [
+        "자다"
+      ]
+    ]
+  },
+  {
+    "id": "jada-nida-266",
+    "verbo": "자다",
+    "contexto": "sleep (naeir) → Formal present (–습니다)",
+    "respuesta": "내일 잡니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: naeir jabnida.",
+    "grupos": [
+      [
+        "잡니다"
+      ]
+    ]
+  },
+  {
+    "id": "jada-nida-267",
+    "verbo": "자다",
+    "contexto": "sleep (jigeum) → Formal present (–습니다)",
+    "respuesta": "지금 잡니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: jigeum jabnida.",
+    "grupos": [
+      [
+        "잡니다"
+      ]
+    ]
+  },
+  {
+    "id": "jada-seyo-268",
+    "verbo": "자다",
+    "contexto": "sleep (oneur) → Honourific (–세요)",
+    "respuesta": "오늘 자세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: oneur jaseyo.",
+    "grupos": [
+      [
+        "자세요"
+      ]
+    ]
+  },
+  {
+    "id": "jada-seyo-269",
+    "verbo": "자다",
+    "contexto": "sleep (naeir) → Honourific (–세요)",
+    "respuesta": "내일 자세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: naeir jaseyo.",
+    "grupos": [
+      [
+        "자세요"
+      ]
+    ]
+  },
+  {
+    "id": "jada-go-270",
+    "verbo": "자다",
+    "contexto": "sleep (naeir) → Connective (–고)",
+    "respuesta": "내일 자고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: naeir jago.",
+    "grupos": [
+      [
+        "자고"
+      ]
+    ]
+  },
+  {
+    "id": "jada-go-271",
+    "verbo": "자다",
+    "contexto": "sleep (jigeum) → Connective (–고)",
+    "respuesta": "지금 자고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: jigeum jago.",
+    "grupos": [
+      [
+        "자고"
+      ]
+    ]
+  },
+  {
+    "id": "salda-yo-272",
+    "verbo": "살다",
+    "contexto": "live (maeir) → Polite present (–요)",
+    "respuesta": "매일 살아요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: maeir sarayo.",
+    "grupos": [
+      [
+        "살아요"
+      ]
+    ]
+  },
+  {
+    "id": "salda-yo-273",
+    "verbo": "살다",
+    "contexto": "live (naeir) → Polite present (–요)",
+    "respuesta": "내일 살아요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: naeir sarayo.",
+    "grupos": [
+      [
+        "살아요"
+      ]
+    ]
+  },
+  {
+    "id": "salda-an_yo-274",
+    "verbo": "살다",
+    "contexto": "live (naeir) → Polite negative (안 –요)",
+    "respuesta": "내일 안 살아요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: naeir an sarayo.",
+    "grupos": [
+      [
+        "안 살아요",
+        "안살아요"
+      ]
+    ]
+  },
+  {
+    "id": "salda-an_yo-275",
+    "verbo": "살다",
+    "contexto": "live (maeir) → Polite negative (안 –요)",
+    "respuesta": "매일 안 살아요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: maeir an sarayo.",
+    "grupos": [
+      [
+        "안 살아요",
+        "안살아요"
+      ]
+    ]
+  },
+  {
+    "id": "salda-ss_yo-276",
+    "verbo": "살다",
+    "contexto": "live (maeir) → Polite past (–었어요)",
+    "respuesta": "매일 살았어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: maeir sarasseoyo.",
+    "grupos": [
+      [
+        "살았어요"
+      ]
+    ]
+  },
+  {
+    "id": "salda-ss_yo-277",
+    "verbo": "살다",
+    "contexto": "live (oneur) → Polite past (–었어요)",
+    "respuesta": "오늘 살았어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: oneur sarasseoyo.",
+    "grupos": [
+      [
+        "살았어요"
+      ]
+    ]
+  },
+  {
+    "id": "salda-an_ss_yo-278",
+    "verbo": "살다",
+    "contexto": "live (oneur) → Polite past neg. (안 –었어요)",
+    "respuesta": "오늘 안 살았어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: oneur an sarasseoyo.",
+    "grupos": [
+      [
+        "안 살았어요",
+        "안살았어요"
+      ]
+    ]
+  },
+  {
+    "id": "salda-an_ss_yo-279",
+    "verbo": "살다",
+    "contexto": "live (naeir) → Polite past neg. (안 –었어요)",
+    "respuesta": "내일 안 살았어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: naeir an sarasseoyo.",
+    "grupos": [
+      [
+        "안 살았어요",
+        "안살았어요"
+      ]
+    ]
+  },
+  {
+    "id": "salda-da-280",
+    "verbo": "살다",
+    "contexto": "live (maeir) → Dictionary (–다)",
+    "respuesta": "매일 살다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: maeir sarda.",
+    "grupos": [
+      [
+        "살다"
+      ]
+    ]
+  },
+  {
+    "id": "salda-da-281",
+    "verbo": "살다",
+    "contexto": "live (jigeum) → Dictionary (–다)",
+    "respuesta": "지금 살다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: jigeum sarda.",
+    "grupos": [
+      [
+        "살다"
+      ]
+    ]
+  },
+  {
+    "id": "salda-nida-282",
+    "verbo": "살다",
+    "contexto": "live (naeir) → Formal present (–습니다)",
+    "respuesta": "내일 삽니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: naeir sabnida.",
+    "grupos": [
+      [
+        "삽니다"
+      ]
+    ]
+  },
+  {
+    "id": "salda-nida-283",
+    "verbo": "살다",
+    "contexto": "live (oneur) → Formal present (–습니다)",
+    "respuesta": "오늘 삽니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: oneur sabnida.",
+    "grupos": [
+      [
+        "삽니다"
+      ]
+    ]
+  },
+  {
+    "id": "salda-seyo-284",
+    "verbo": "살다",
+    "contexto": "live (jigeum) → Honourific (–세요)",
+    "respuesta": "지금 사세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: jigeum saseyo.",
+    "grupos": [
+      [
+        "사세요"
+      ]
+    ]
+  },
+  {
+    "id": "salda-seyo-285",
+    "verbo": "살다",
+    "contexto": "live (maeir) → Honourific (–세요)",
+    "respuesta": "매일 사세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: maeir saseyo.",
+    "grupos": [
+      [
+        "사세요"
+      ]
+    ]
+  },
+  {
+    "id": "salda-go-286",
+    "verbo": "살다",
+    "contexto": "live (oneur) → Connective (–고)",
+    "respuesta": "오늘 살고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: oneur sargo.",
+    "grupos": [
+      [
+        "살고"
+      ]
+    ]
+  },
+  {
+    "id": "salda-go-287",
+    "verbo": "살다",
+    "contexto": "live (naeir) → Connective (–고)",
+    "respuesta": "내일 살고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: naeir sargo.",
+    "grupos": [
+      [
+        "살고"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-yo-288",
+    "verbo": "듣다",
+    "contexto": "listen / hear: eumag deutda → Polite present (–요)",
+    "respuesta": "음악을 들어요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: eumageur deureoyo.",
+    "grupos": [
+      [
+        "음악",
+        "음악을"
+      ],
+      [
+        "들어요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-yo-289",
+    "verbo": "듣다",
+    "contexto": "listen / hear: radio deutda → Polite present (–요)",
+    "respuesta": "라디오를 들어요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: radioreur deureoyo.",
+    "grupos": [
+      [
+        "라디오",
+        "라디오를"
+      ],
+      [
+        "들어요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-yo-290",
+    "verbo": "듣다",
+    "contexto": "listen / hear: radio deutda → Polite present (–요)",
+    "respuesta": "라디오를 들어요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: radioreur deureoyo.",
+    "grupos": [
+      [
+        "라디오",
+        "라디오를"
+      ],
+      [
+        "들어요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-an_yo-291",
+    "verbo": "듣다",
+    "contexto": "listen / hear: eumag deutda → Polite negative (안 –요)",
+    "respuesta": "음악을 안 들어요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: eumageur an deureoyo.",
+    "grupos": [
+      [
+        "음악",
+        "음악을"
+      ],
+      [
+        "안 들어요",
+        "안들어요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-an_yo-292",
+    "verbo": "듣다",
+    "contexto": "listen / hear: radio deutda → Polite negative (안 –요)",
+    "respuesta": "라디오를 안 들어요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: radioreur an deureoyo.",
+    "grupos": [
+      [
+        "라디오",
+        "라디오를"
+      ],
+      [
+        "안 들어요",
+        "안들어요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-an_yo-293",
+    "verbo": "듣다",
+    "contexto": "listen / hear: eumag deutda → Polite negative (안 –요)",
+    "respuesta": "음악을 안 들어요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: eumageur an deureoyo.",
+    "grupos": [
+      [
+        "음악",
+        "음악을"
+      ],
+      [
+        "안 들어요",
+        "안들어요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-ss_yo-294",
+    "verbo": "듣다",
+    "contexto": "listen / hear: radio deutda → Polite past (–었어요)",
+    "respuesta": "라디오를 들었어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: radioreur deureosseoyo.",
+    "grupos": [
+      [
+        "라디오",
+        "라디오를"
+      ],
+      [
+        "들었어요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-ss_yo-295",
+    "verbo": "듣다",
+    "contexto": "listen / hear: eumag deutda → Polite past (–었어요)",
+    "respuesta": "음악을 들었어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: eumageur deureosseoyo.",
+    "grupos": [
+      [
+        "음악",
+        "음악을"
+      ],
+      [
+        "들었어요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-ss_yo-296",
+    "verbo": "듣다",
+    "contexto": "listen / hear: radio deutda → Polite past (–었어요)",
+    "respuesta": "라디오를 들었어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: radioreur deureosseoyo.",
+    "grupos": [
+      [
+        "라디오",
+        "라디오를"
+      ],
+      [
+        "들었어요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-an_ss_yo-297",
+    "verbo": "듣다",
+    "contexto": "listen / hear: eumag deutda → Polite past neg. (안 –었어요)",
+    "respuesta": "음악을 안 들었어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: eumageur an deureosseoyo.",
+    "grupos": [
+      [
+        "음악",
+        "음악을"
+      ],
+      [
+        "안 들었어요",
+        "안들었어요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-an_ss_yo-298",
+    "verbo": "듣다",
+    "contexto": "listen / hear: radio deutda → Polite past neg. (안 –었어요)",
+    "respuesta": "라디오를 안 들었어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: radioreur an deureosseoyo.",
+    "grupos": [
+      [
+        "라디오",
+        "라디오를"
+      ],
+      [
+        "안 들었어요",
+        "안들었어요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-an_ss_yo-299",
+    "verbo": "듣다",
+    "contexto": "listen / hear: radio deutda → Polite past neg. (안 –었어요)",
+    "respuesta": "라디오를 안 들었어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: radioreur an deureosseoyo.",
+    "grupos": [
+      [
+        "라디오",
+        "라디오를"
+      ],
+      [
+        "안 들었어요",
+        "안들었어요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-da-300",
+    "verbo": "듣다",
+    "contexto": "listen / hear: radio deutda → Dictionary (–다)",
+    "respuesta": "라디오를 듣다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: radioreur deudda.",
+    "grupos": [
+      [
+        "라디오",
+        "라디오를"
+      ],
+      [
+        "듣다"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-da-301",
+    "verbo": "듣다",
+    "contexto": "listen / hear: eumag deutda → Dictionary (–다)",
+    "respuesta": "음악을 듣다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: eumageur deudda.",
+    "grupos": [
+      [
+        "음악",
+        "음악을"
+      ],
+      [
+        "듣다"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-da-302",
+    "verbo": "듣다",
+    "contexto": "listen / hear: radio deutda → Dictionary (–다)",
+    "respuesta": "라디오를 듣다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: radioreur deudda.",
+    "grupos": [
+      [
+        "라디오",
+        "라디오를"
+      ],
+      [
+        "듣다"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-nida-303",
+    "verbo": "듣다",
+    "contexto": "listen / hear: eumag deutda → Formal present (–습니다)",
+    "respuesta": "음악을 듣습니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: eumageur deudseubnida.",
+    "grupos": [
+      [
+        "음악",
+        "음악을"
+      ],
+      [
+        "듣습니다"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-nida-304",
+    "verbo": "듣다",
+    "contexto": "listen / hear: radio deutda → Formal present (–습니다)",
+    "respuesta": "라디오를 듣습니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: radioreur deudseubnida.",
+    "grupos": [
+      [
+        "라디오",
+        "라디오를"
+      ],
+      [
+        "듣습니다"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-nida-305",
+    "verbo": "듣다",
+    "contexto": "listen / hear: radio deutda → Formal present (–습니다)",
+    "respuesta": "라디오를 듣습니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: radioreur deudseubnida.",
+    "grupos": [
+      [
+        "라디오",
+        "라디오를"
+      ],
+      [
+        "듣습니다"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-seyo-306",
+    "verbo": "듣다",
+    "contexto": "listen / hear: radio deutda → Honourific (–세요)",
+    "respuesta": "라디오를 들으세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: radioreur deureuseyo.",
+    "grupos": [
+      [
+        "라디오",
+        "라디오를"
+      ],
+      [
+        "들으세요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-seyo-307",
+    "verbo": "듣다",
+    "contexto": "listen / hear: eumag deutda → Honourific (–세요)",
+    "respuesta": "음악을 들으세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: eumageur deureuseyo.",
+    "grupos": [
+      [
+        "음악",
+        "음악을"
+      ],
+      [
+        "들으세요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-seyo-308",
+    "verbo": "듣다",
+    "contexto": "listen / hear: eumag deutda → Honourific (–세요)",
+    "respuesta": "음악을 들으세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: eumageur deureuseyo.",
+    "grupos": [
+      [
+        "음악",
+        "음악을"
+      ],
+      [
+        "들으세요"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-go-309",
+    "verbo": "듣다",
+    "contexto": "listen / hear: eumag deutda → Connective (–고)",
+    "respuesta": "음악을 듣고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: eumageur deudgo.",
+    "grupos": [
+      [
+        "음악",
+        "음악을"
+      ],
+      [
+        "듣고"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-go-310",
+    "verbo": "듣다",
+    "contexto": "listen / hear: radio deutda → Connective (–고)",
+    "respuesta": "라디오를 듣고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: radioreur deudgo.",
+    "grupos": [
+      [
+        "라디오",
+        "라디오를"
+      ],
+      [
+        "듣고"
+      ]
+    ]
+  },
+  {
+    "id": "deutda-go-311",
+    "verbo": "듣다",
+    "contexto": "listen / hear: eumag deutda → Connective (–고)",
+    "respuesta": "음악을 듣고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: eumageur deudgo.",
+    "grupos": [
+      [
+        "음악",
+        "음악을"
+      ],
+      [
+        "듣고"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-yo-312",
+    "verbo": "배우다",
+    "contexto": "learn: yeongeo baeuda → Polite present (–요)",
+    "respuesta": "영어를 배워요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: yeongeoreur baewoyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "배워요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-yo-313",
+    "verbo": "배우다",
+    "contexto": "learn: hangugeo baeuda → Polite present (–요)",
+    "respuesta": "한국어를 배워요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: hangugeoreur baewoyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "배워요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-yo-314",
+    "verbo": "배우다",
+    "contexto": "learn: yeongeo baeuda → Polite present (–요)",
+    "respuesta": "영어를 배워요",
+    "pista": "Polite 해요체 present: 가요, 먹어요, 해요. Say: yeongeoreur baewoyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "배워요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-an_yo-315",
+    "verbo": "배우다",
+    "contexto": "learn: hangugeo baeuda → Polite negative (안 –요)",
+    "respuesta": "한국어를 안 배워요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: hangugeoreur an baewoyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "안 배워요",
+        "안배워요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-an_yo-316",
+    "verbo": "배우다",
+    "contexto": "learn: yeongeo baeuda → Polite negative (안 –요)",
+    "respuesta": "영어를 안 배워요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: yeongeoreur an baewoyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "안 배워요",
+        "안배워요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-an_yo-317",
+    "verbo": "배우다",
+    "contexto": "learn: yeongeo baeuda → Polite negative (안 –요)",
+    "respuesta": "영어를 안 배워요",
+    "pista": "Polite negative: 안 + 해요체 (안 가요). Say: yeongeoreur an baewoyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "안 배워요",
+        "안배워요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-ss_yo-318",
+    "verbo": "배우다",
+    "contexto": "learn: yeongeo baeuda → Polite past (–었어요)",
+    "respuesta": "영어를 배웠어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: yeongeoreur baewosseoyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "배웠어요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-ss_yo-319",
+    "verbo": "배우다",
+    "contexto": "learn: hangugeo baeuda → Polite past (–었어요)",
+    "respuesta": "한국어를 배웠어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: hangugeoreur baewosseoyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "배웠어요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-ss_yo-320",
+    "verbo": "배우다",
+    "contexto": "learn: hangugeo baeuda → Polite past (–었어요)",
+    "respuesta": "한국어를 배웠어요",
+    "pista": "Polite past: 았/었 + 어요 (갔어요, 먹었어요, 했어요). Say: hangugeoreur baewosseoyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "배웠어요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-an_ss_yo-321",
+    "verbo": "배우다",
+    "contexto": "learn: yeongeo baeuda → Polite past neg. (안 –었어요)",
+    "respuesta": "영어를 안 배웠어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: yeongeoreur an baewosseoyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "안 배웠어요",
+        "안배웠어요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-an_ss_yo-322",
+    "verbo": "배우다",
+    "contexto": "learn: hangugeo baeuda → Polite past neg. (안 –었어요)",
+    "respuesta": "한국어를 안 배웠어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: hangugeoreur an baewosseoyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "안 배웠어요",
+        "안배웠어요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-an_ss_yo-323",
+    "verbo": "배우다",
+    "contexto": "learn: yeongeo baeuda → Polite past neg. (안 –었어요)",
+    "respuesta": "영어를 안 배웠어요",
+    "pista": "Polite past negative: 안 + past (안 갔어요). Say: yeongeoreur an baewosseoyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "안 배웠어요",
+        "안배웠어요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-da-324",
+    "verbo": "배우다",
+    "contexto": "learn: hangugeo baeuda → Dictionary (–다)",
+    "respuesta": "한국어를 배우다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: hangugeoreur baeuda.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "배우다"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-da-325",
+    "verbo": "배우다",
+    "contexto": "learn: yeongeo baeuda → Dictionary (–다)",
+    "respuesta": "영어를 배우다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: yeongeoreur baeuda.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "배우다"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-da-326",
+    "verbo": "배우다",
+    "contexto": "learn: yeongeo baeuda → Dictionary (–다)",
+    "respuesta": "영어를 배우다",
+    "pista": "Dictionary / citation form (가다, 먹다, 하다). Say: yeongeoreur baeuda.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "배우다"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-nida-327",
+    "verbo": "배우다",
+    "contexto": "learn: yeongeo baeuda → Formal present (–습니다)",
+    "respuesta": "영어를 배웁니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: yeongeoreur baeubnida.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "배웁니다"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-nida-328",
+    "verbo": "배우다",
+    "contexto": "learn: hangugeo baeuda → Formal present (–습니다)",
+    "respuesta": "한국어를 배웁니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: hangugeoreur baeubnida.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "배웁니다"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-nida-329",
+    "verbo": "배우다",
+    "contexto": "learn: hangugeo baeuda → Formal present (–습니다)",
+    "respuesta": "한국어를 배웁니다",
+    "pista": "Formal 합니다체: no batchim → ㅂ니다; batchim → 습니다; ㄹ drops. Say: hangugeoreur baeubnida.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "배웁니다"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-seyo-330",
+    "verbo": "배우다",
+    "contexto": "learn: hangugeo baeuda → Honourific (–세요)",
+    "respuesta": "한국어를 배우세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: hangugeoreur baeuseyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "배우세요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-seyo-331",
+    "verbo": "배우다",
+    "contexto": "learn: yeongeo baeuda → Honourific (–세요)",
+    "respuesta": "영어를 배우세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: yeongeoreur baeuseyo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "배우세요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-seyo-332",
+    "verbo": "배우다",
+    "contexto": "learn: hangugeo baeuda → Honourific (–세요)",
+    "respuesta": "한국어를 배우세요",
+    "pista": "Request / honourific: stem + 세요 (batchim takes 으세요). Say: hangugeoreur baeuseyo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "배우세요"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-go-333",
+    "verbo": "배우다",
+    "contexto": "learn: yeongeo baeuda → Connective (–고)",
+    "respuesta": "영어를 배우고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: yeongeoreur baeugo.",
+    "grupos": [
+      [
+        "영어",
+        "영어를"
+      ],
+      [
+        "배우고"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-go-334",
+    "verbo": "배우다",
+    "contexto": "learn: hangugeo baeuda → Connective (–고)",
+    "respuesta": "한국어를 배우고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: hangugeoreur baeugo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "배우고"
+      ]
+    ]
+  },
+  {
+    "id": "baeuda-go-335",
+    "verbo": "배우다",
+    "contexto": "learn: hangugeo baeuda → Connective (–고)",
+    "respuesta": "한국어를 배우고",
+    "pista": "Connective -고: 가고, 먹고, 하고. Say: hangugeoreur baeugo.",
+    "grupos": [
+      [
+        "한국어",
+        "한국어를"
+      ],
+      [
+        "배우고"
+      ]
+    ]
+  }
+]
