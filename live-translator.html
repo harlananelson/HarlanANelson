@@ -1268,6 +1268,7 @@
       }
     }
 
+    var DEFAULT_TS_HOST = 'harlan-b550-aorus-pro-ac.taila21a91.ts.net';
     function tailscaleBridge() {
       try { return (localStorage.getItem('tb_bridge') || '').trim().replace(/\/+$/, ''); } catch (e) { return ''; }
     }
@@ -1284,12 +1285,10 @@
     function resolvedHomeGpuUrl() {
       var explicit = (state.homeGpuUrl || '').trim();
       if (explicit) { return explicit; }
-      var fromTs = gpuWsFromTailscale(tailscaleBridge());
-      if (fromTs) { return fromTs; }
       if (location.port === '8443' && /\.ts\.net$/i.test(location.hostname)) {
         return (location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/ws';
       }
-      return '';
+      return gpuWsFromTailscale(tailscaleBridge() || DEFAULT_TS_HOST);
     }
     function hgHttpOrigin() {
       var u = resolvedHomeGpuUrl();

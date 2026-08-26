@@ -251,19 +251,37 @@
   function setWorkstationToken(t) {
     try { localStorage.setItem("tb_token", (t || "").trim()); } catch (e) {}
   }
+  var DEFAULT_TS_HOST = "harlan-b550-aorus-pro-ac.taila21a91.ts.net";
   function getTailscaleHost() {
     try { return (localStorage.getItem("tb_bridge") || "").trim().replace(/\/+$/, ""); } catch (e) { return ""; }
   }
   function setTailscaleHost(v) {
     var t = (v || "").trim().replace(/\/+$/, "");
-    if (t && !/^https?:\/\//i.test(t) && !/^wss?:\/\//i.test(t)) t = "https://" + t;
+    if (!t) return; // never wipe a working Converse/Listen host
+    if (!/^https?:\/\//i.test(t) && !/^wss?:\/\//i.test(t)) t = "https://" + t;
     try { localStorage.setItem("tb_bridge", t); } catch (e) {}
+  }
+  function tailscaleHostname() {
+    var raw = getTailscaleHost() || ("https://" + DEFAULT_TS_HOST);
+    if (!/^https?:\/\//i.test(raw) && !/^wss?:\/\//i.test(raw)) raw = "https://" + raw;
+    try {
+      var u = new URL(raw.replace(/^ws/i, "http"));
+      return u.hostname || DEFAULT_TS_HOST;
+    } catch (e) { return DEFAULT_TS_HOST; }
+  }
+  function listenGpuPageUrl() {
+    return "https://" + tailscaleHostname() + ":8443/?v=22";
+  }
+  function isSiteListen(url) {
+    var s = String(url || "");
+    if (!s) return true;
+    return /live-translator\.html/i.test(s) && s.indexOf(":8443") < 0;
   }
   function pushAuthToFrames() {
     var token = getWorkstationToken();
-    if (!token) return;
-    var msg = { type: "maat-auth", token: token };
-    try { msg.bridge = localStorage.getItem("tb_bridge") || ""; } catch (e) {}
+    var bridge = getTailscaleHost() || ("https://" + DEFAULT_TS_HOST);
+    if (!token && !bridge) return;
+    var msg = { type: "maat-auth", token: token || "", bridge: bridge };
     document.querySelectorAll("iframe").forEach(function (f) {
       try { if (f.contentWindow) f.contentWindow.postMessage(msg, "*"); } catch (e) {}
     });
@@ -316,7 +334,7 @@
       id: "sermon",
       label: "Listen",
       icon: "🌐",
-      url: "./live-translator.html?v=21",
+      url: "./live-translator.html?v=22",
       kind: "iframe",
       hint: "Listen to a service, a meeting, a podcast or an appointment: transcription, translation when the profile calls for it, and analysis (sermon, meeting, or podcast fact/science/legal). Pick a profile inside. On iPad prefer the tailnet page if WebSocket fails."
     },
@@ -351,6 +369,7 @@
   // When Maat itself is opened from the tailnet host with no port, Listen's
   // WebSocket is more reliable same-origin on :8443 than via the Netlify page.
   function defaultUrl(mode) {
+    if (mode.id === "sermon") return listenGpuPageUrl();
     var onTailnetOriginNoPort =
       location.hostname.indexOf(".ts.net") >= 0 && location.port === "";
     if (onTailnetOriginNoPort && mode.id === "sermon") {
@@ -406,6 +425,11 @@
       if (a.id === "converse" && url && url.indexOf("assistant.html") >= 0) {
         url = withQueryParam(url, "v", "83");
         if (url.indexOf("mode=") < 0) url = withQueryParam(url, "mode", "mic");
+      }
+      // Listen must be the Tailscale :8443 page so the WebSocket is same-origin
+      // on iPad. A saved Netlify live-translator.html URL cannot open wss://.
+      if (a.id === "sermon") {
+        url = isSiteListen(url) ? listenGpuPageUrl() : withQueryParam(url, "v", "22");
       }
       return {
         id: a.id, label: a.label, icon: a.icon, kind: a.kind, hint: a.hint,
@@ -730,7 +754,7 @@
       tsInp.autocapitalize = "off";
       tsInp.spellcheck = false;
       tsInp.placeholder = "https://your-machine.your-tailnet.ts.net";
-      tsInp.value = getTailscaleHost();
+      tsInp.value = getTailscaleHost() || ("https://" + DEFAULT_TS_HOST);
       wrap.appendChild(tsLab);
       wrap.appendChild(tsInp);
       var tsHint = document.createElement("p");
