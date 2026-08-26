@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Languages">
-<meta name="description" content="Speech drills for Spanish, English, Japanese, Korean, and Swahili. Remembers your last language.">
+<meta name="description" content="Speech drills for Spanish, English, Japanese, and Swahili. Remembers your last language.">
 <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiTGFuZ3VhZ2VzIiwic2hvcnRfbmFtZSI6Ikxhbmd1YWdlcyIsImRlc2NyaXB0aW9uIjoiU3BlZWNoIGRyaWxscyBcdTIwMTQgU3BhbmlzaCwgRW5nbGlzaCwgSmFwYW5lc2UsIFN3YWhpbGkiLCJzdGFydF91cmwiOiIuL2xhbmd1YWdlcy5odG1sIiwic2NvcGUiOiIuLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwib3JpZW50YXRpb24iOiJhbnkiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2Y3ZjZmMiIsInRoZW1lX2NvbG9yIjoiIzAxNjk2ZiIsImljb25zIjpbeyJzcmMiOiJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0OGNtVmpkQ0IzYVdSMGFEMGlOVEV5SWlCb1pXbG5hSFE5SWpVeE1pSWdjbmc5SWpFeE1pSWdabWxzYkQwaUl6QXhOamsyWmlJdlBqeDBaWGgwSUhnOUlqSTFOaUlnZVQwaU16QXdJaUIwWlhoMExXRnVZMmh2Y2owaWJXbGtaR3hsSWlCbWIyNTBMWE5wZW1VOUlqSXdNQ0lnWm1sc2JEMGlJMlptWmlJK1FUd3ZkR1Y0ZEQ0OEwzTjJaejQ9Iiwic2l6ZXMiOiJhbnkiLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCIsInB1cnBvc2UiOiJhbnkgbWFza2FibGUifV19">
 <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iIzAxNjk2ZiIvPjx0ZXh0IHg9IjI1NiIgeT0iMzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjIwMCIgZmlsbD0iI2ZmZiI+QTwvdGV4dD48L3N2Zz4=">
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iIzAxNjk2ZiIvPjx0ZXh0IHg9IjI1NiIgeT0iMzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjIwMCIgZmlsbD0iI2ZmZiI+QTwvdGV4dD48L3N2Zz4=">
@@ -67,7 +67,6 @@
     { id: "es", label: "Español",  code: "ES", url: "./spanish-speech-drill.html" },
     { id: "en", label: "English",  code: "EN", url: "./english-speech-drill.html" },
     { id: "ja", label: "日本語",    code: "JA", url: "./japanese-speech-drill.html" },
-    { id: "ko", label: "한국어",    code: "KO", url: "./korean-speech-drill.html" },
     { id: "sw", label: "Kiswahili", code: "SW", url: "./swahili-speech-drill.html" }
   ];
 
@@ -75,7 +74,7 @@
   var active = null;
   try { active = localStorage.getItem(STORAGE_KEY); } catch (e) {}
 
-  // Deep link: ?lang=es|en|ja|ko|sw
+  // Deep link: ?lang=es|en|ja|sw
   try {
     var q = new URLSearchParams(location.search).get("lang");
     if (q) active = q;
