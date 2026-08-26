@@ -428,6 +428,22 @@
     try { localStorage.setItem("maat_urls", JSON.stringify(m)); } catch (e) {}
   }
 
+  // Listen setup (provider/model/API keys/engine) lives in the gear, editing
+  // Listen's own localStorage store. Same-origin only: applies to the default
+  // ./live-translator.html embed, not a tailnet URL override.
+  var LT_KEY = "liveTranslator.v2";
+  function loadListenSetup() {
+    var s = {};
+    try { s = JSON.parse(localStorage.getItem(LT_KEY) || "{}"); } catch (e) { s = {}; }
+    if (!s || typeof s !== "object") s = {};
+    s.models = s.models || {};
+    s.apiKeys = s.apiKeys || {};
+    return s;
+  }
+  function saveListenSetup(s) {
+    try { localStorage.setItem(LT_KEY, JSON.stringify(s)); } catch (e) {}
+  }
+
   var modes = loadModes();
   var tools = loadTools();
   var activeTool = getLastTool();
@@ -752,8 +768,105 @@
           wrap.appendChild(h);
         }
       });
+      buildListenSetup(wrap);
     }
     $("settings").classList.toggle("open", open);
+  }
+
+  // ---- Listen setup fields (moved out of the Listen page into the gear) ----
+  function buildListenSetup(wrap) {
+    var s = loadListenSetup();
+    var head = document.createElement("p");
+    head.className = "note";
+    head.style.marginTop = "16px";
+    head.textContent = "Listen setup — translation provider, model, and API keys. Saved in this browser only and read by Listen on this site.";
+    wrap.appendChild(head);
+
+    function field(labelText, el, id) {
+      var lab = document.createElement("label");
+      lab.textContent = labelText; lab.htmlFor = id;
+      el.id = id;
+      wrap.appendChild(lab); wrap.appendChild(el);
+      return el;
+    }
+    function select(options, value) {
+      var sel = document.createElement("select");
+      sel.style.cssText = "width:100%;background:#101720;color:#e8e6e1;border:1px solid #2a3540;border-radius:10px;padding:12px 14px;font-size:16px";
+      options.forEach(function (o) {
+        var op = document.createElement("option");
+        op.value = o[0]; op.textContent = o[1];
+        sel.appendChild(op);
+      });
+      sel.value = value;
+      return sel;
+    }
+    function input(value, placeholder, mask) {
+      var inp = document.createElement("input");
+      inp.type = mask ? "password" : "text";
+      inp.value = value || ""; inp.placeholder = placeholder || "";
+      inp.autocapitalize = "off"; inp.spellcheck = false;
+      inp.setAttribute("autocomplete", "off");
+      return inp;
+    }
+
+    var provider = s.provider === "openai" ? "openai" : "anthropic";
+    var provSel = field("Translation provider",
+      select([["anthropic", "Anthropic (Claude)"], ["openai", "OpenAI"]], provider), "lt-provider");
+    var modelInp = field("Translation model — blank uses the default",
+      input(s.models[provider] || "", "model id"), "lt-model");
+    var keyInp = field("Translation API key",
+      input(s.apiKeys[provider] || "", "paste your API key", true), "lt-key");
+    var oaiInp = field("OpenAI API key — cloud transcription",
+      input(s.apiKeys.openai || "", "sk-...", true), "lt-openai-key");
+    field("Transcription engine",
+      select([["local", "On-device Whisper (private)"],
+              ["cloud", "Cloud — OpenAI (most accurate)"],
+              ["homegpu", "Home GPU — Tailscale server"]],
+        ["cloud", "homegpu"].indexOf(s.transcribeEngine) >= 0 ? s.transcribeEngine : "local"), "lt-engine");
+    field("Home GPU server URL",
+      input(s.homeGpuUrl || "", "wss://machine.tailnet.ts.net:8443/ws"), "lt-gpu");
+
+    var shown = provider;
+    function stash() {
+      var model = (modelInp.value || "").trim();
+      if (model) { s.models[shown] = model; } else { delete s.models[shown]; }
+      s.apiKeys[shown] = (keyInp.value || "").trim();
+    }
+    // Switching provider swaps the model/key fields to that provider's saved
+    // values; the OpenAI translation key doubles as the transcription key.
+    function syncOpenaiVisibility() {
+      var isOpenai = provSel.value === "openai";
+      oaiInp.style.display = isOpenai ? "none" : "";
+      if (oaiInp.previousElementSibling) {
+        oaiInp.previousElementSibling.style.display = isOpenai ? "none" : "";
+      }
+    }
+    provSel.addEventListener("change", function () {
+      stash();
+      shown = provSel.value === "openai" ? "openai" : "anthropic";
+      modelInp.value = s.models[shown] || "";
+      keyInp.value = s.apiKeys[shown] || "";
+      syncOpenaiVisibility();
+    });
+    syncOpenaiVisibility();
+
+    ltSetup = { state: s, stash: stash };
+  }
+
+  var ltSetup = null;
+
+  function saveListenSetupFields() {
+    if (!ltSetup || !$("lt-provider")) return;
+    var s = ltSetup.state;
+    ltSetup.stash();
+    var p = $("lt-provider").value === "openai" ? "openai" : "anthropic";
+    s.provider = p;
+    // With OpenAI as provider, apiKeys.openai was already written by stash();
+    // otherwise the dedicated transcription-key field owns it.
+    if (p !== "openai") { s.apiKeys.openai = ($("lt-openai-key").value || "").trim(); }
+    s.transcribeEngine = $("lt-engine").value;
+    s.homeGpuUrl = ($("lt-gpu").value || "").trim();
+    saveListenSetup(s);
   }
   $("saveModes").onclick = function () {
     var tokEl = $("maatToken");
@@ -773,6 +886,7 @@
       t.url = (el.value || "").trim().replace(/\s+/g, "");
     });
     saveModes(modes, tools);
+    saveListenSetupFields();
     openSettings(false);
     build();
   };

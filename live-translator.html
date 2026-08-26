@@ -1912,9 +1912,13 @@
       if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
         hint = 'This browser cannot access the microphone.';
       } else if (eng === 'homegpu' && !homeGpuOK) {
-        hint = 'Enter your Home GPU server URL (wss://…/ws) in the transcription settings.';
+        hint = framed
+          ? 'Enter your Home GPU server URL (wss://…/ws) in Maat’s gear settings.'
+          : 'Enter your Home GPU server URL (wss://…/ws) in the transcription settings.';
       } else if (eng !== 'homegpu' && !hasKey()) {
-        hint = 'Enter your translation API key above to enable listening.';
+        hint = framed
+          ? 'Enter your translation API key in Maat’s gear settings to enable listening.'
+          : 'Enter your translation API key above to enable listening.';
       } else if (!cloudKeyOK) {
         hint = 'Cloud transcription needs an OpenAI key — set the Translation provider to OpenAI and paste your key.';
       }
