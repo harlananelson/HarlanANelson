@@ -154,9 +154,9 @@
             <option value="es-en">Spanish → English</option>
             <option value="en-es">English → Spanish</option>
             <option value="auto">Bidirectional ES ⇄ EN — auto-detect</option>
-            <option value="ko-en">Korean → English</option>
-            <option value="en-ko">English → Korean</option>
-            <option value="auto-ko">Bidirectional KO ⇄ EN — auto-detect</option>
+            <option value="auto-ko">Korean-English</option>
+            <option value="ko-en">Korean → English only</option>
+            <option value="en-ko">English → Korean only</option>
           </select>
         </div>
       </div>
@@ -233,9 +233,9 @@
             <option value="transcribe">Transcribe only &mdash; no translation, any language</option>
             <option value="meeting">Meeting &mdash; no translation, text only</option>
             <option value="podcast">Podcast &mdash; English talk; facts, science, legal</option>
-            <option value="korean">Korean → English</option>
-            <option value="korean-en">Korean ⇄ English (conversation)</option>
-            <option value="english-to-korean">English → Korean</option>
+            <option value="korean-en">Korean-English</option>
+            <option value="korean">Korean → English only</option>
+            <option value="english-to-korean">English → Korean only</option>
             <option value="bible-study">Bible study (theological)</option>
             <option value="jean-petit">Jean Petit (Sunday)</option>
             <option value="medical">Medical interpreting</option>
@@ -857,6 +857,41 @@
     function srcWhisperLang() { return dirInfo().whisper; }
     function srcCloudLang() { return dirInfo().cloud; }
     function translateTarget() { return dirInfo().tgt; }
+
+    // Direction is the pair the user picks. Home GPU only honours speaker
+    // profile, so Korean-English in Direction must select the matching profile.
+    function profileForDirection(d) {
+      if (d === 'ko-en') return 'korean';
+      if (d === 'en-ko') return 'english-to-korean';
+      if (d === 'auto-ko') return 'korean-en';
+      return null;
+    }
+    function directionForProfile(p) {
+      if (p === 'korean') return 'ko-en';
+      if (p === 'english-to-korean') return 'en-ko';
+      if (p === 'korean-en') return 'auto-ko';
+      return null;
+    }
+    function isKoreanProfile(p) {
+      return p === 'korean' || p === 'korean-en' || p === 'english-to-korean';
+    }
+    function syncPairFromDirection() {
+      var p = profileForDirection(state.direction);
+      if (p) { state.speakerProfile = p; }
+      else if (isKoreanProfile(state.speakerProfile)) { state.speakerProfile = ''; }
+      if (els.speakerProfile) { els.speakerProfile.value = state.speakerProfile || ''; }
+    }
+    function syncPairFromProfile() {
+      var d = directionForProfile(state.speakerProfile);
+      if (d) {
+        state.direction = d;
+        if (els.direction) { els.direction.value = d; }
+      }
+    }
+    function sendHomeGpuProfile() {
+      if (!hgWs || hgWs.readyState !== 1) { return; }
+      try { hgWs.send(JSON.stringify({ type: 'profile', name: state.speakerProfile || '' })); } catch (e) {}
+    }
     function micThreshold() { return 0.032 - (state.sensitivity / 100) * 0.028; }
 
     function pushConfig() {
@@ -978,7 +1013,7 @@
         }
         if (p === 'korean-en') {
           return { left: 'Heard', right: 'Translation',
-            placeholder: 'Press “Start listening”. Each line is transcribed, then translated into the other language (Korean ⇄ English).' };
+            placeholder: 'Press “Start listening”. Korean-English: each line is transcribed, then translated into the other language.' };
         }
       }
       var info = dirInfo(state.direction);
@@ -2282,6 +2317,8 @@
       if (els.autoSave) { els.autoSave.checked = state.autoSave !== false; }
       els.homeGpuUrl.value = state.homeGpuUrl || '';
       els.speakerProfile.value = state.speakerProfile || '';
+      if (directionForProfile(state.speakerProfile)) { syncPairFromProfile(); }
+      else if (profileForDirection(state.direction)) { syncPairFromDirection(); }
       applyEngine();
       applyProfileChrome();
       applyView();
@@ -2296,7 +2333,9 @@
       els.direction.addEventListener('change', function () {
         var v = els.direction.value;
         state.direction = DIRECTIONS.indexOf(v) >= 0 ? v : 'es-en';
-        saveState(); applyProfileChrome(); updateControls();
+        syncPairFromDirection();
+        saveState(); applyProfileChrome(); pushConfig(); updateControls();
+        sendHomeGpuProfile();
       });
       els.provider.addEventListener('change', function () {
         state.provider = els.provider.value === 'openai' ? 'openai' : 'anthropic';
@@ -2375,12 +2414,11 @@
       }
       els.speakerProfile.addEventListener('change', function () {
         state.speakerProfile = els.speakerProfile.value;
+        syncPairFromProfile();
         saveState();
         applyProfileChrome();
         applyEngine();
-        if (hgWs && hgWs.readyState === 1) {
-          try { hgWs.send(JSON.stringify({ type: 'profile', name: state.speakerProfile })); } catch (e) {}
-        }
+        sendHomeGpuProfile();
       });
       els.homeGpuUrl.addEventListener('input', function () {
         state.homeGpuUrl = els.homeGpuUrl.value.trim();
