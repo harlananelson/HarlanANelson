@@ -325,18 +325,33 @@
     if (!s) return true;
     return /live-translator\.html/i.test(s) && s.indexOf(":8443") < 0;
   }
-  function pushAuthToFrames() {
+  function pushAuthToFrames(clearKeys) {
     var token = getWorkstationToken();
     var bridge = getTailscaleHost() || ("https://" + DEFAULT_TS_HOST);
     var msg = {
       type: "maat-auth",
       token: token || "",
       bridge: bridge,
-      translationKey: getTranslationKey(),
-      transcriptionKey: getTranscriptionKey(),
       provider: getMaatProvider(),
       model: getMaatModel()
     };
+    // "I have no keys" and "clear your keys" are DIFFERENT statements, and
+    // conflating them wipes real keys. Every push carried empty strings when
+    // the gear was unset, and Listen read empty as clear — so merely opening
+    // Maat destroyed keys typed into standalone Listen at the tailnet URL,
+    // hitting exactly the person who set Listen up before finding Settings.
+    //
+    // So: omit an empty key (Listen keeps what it has), send a non-empty key
+    // to set it, and clear ONLY on the explicit flag the Clear button sets.
+    // Absence means "no opinion", never "delete".
+    if (clearKeys) {
+      msg.clearKeys = true;
+    } else {
+      var tk = getTranslationKey();
+      var xk = getTranscriptionKey();
+      if (tk) msg.translationKey = tk;
+      if (xk) msg.transcriptionKey = xk;
+    }
     document.querySelectorAll("iframe").forEach(function (f) {
       var origin = frameTargetOrigin(f);
       if (!origin) return;
@@ -870,7 +885,7 @@
         tcInp.value = "";
         setTranslationKey("");
         setTranscriptionKey("");
-        pushAuthToFrames();
+        pushAuthToFrames(true);   // explicit clear — see pushAuthToFrames
       };
       keyBtns.appendChild(showKeys);
       keyBtns.appendChild(clearKeys);

@@ -1329,18 +1329,14 @@
         state.models[state.provider] = d.model.trim();
         changed = true;
       }
-      // Empty strings clear; non-empty strings set. Apply clears first, then
-      // sets, so an OpenAI translation key is not wiped by a blank transcription
-      // field (they share state.apiKeys.openai).
-      if (typeof d.translationKey === 'string' && !d.translationKey) {
+      // Clearing happens ONLY on the explicit flag. An ABSENT key means Maat
+      // has no opinion — keep whatever is stored here. Treating absent (or
+      // empty) as "clear" meant that merely opening Maat with an unset gear
+      // wiped keys entered on standalone Listen at the tailnet URL.
+      if (d.clearKeys) {
         state.apiKeys[p] = '';
+        state.apiKeys.openai = '';
         changed = true;
-      }
-      if (typeof d.transcriptionKey === 'string' && !d.transcriptionKey) {
-        if (p !== 'openai' || typeof d.translationKey !== 'string' || !d.translationKey) {
-          state.apiKeys.openai = '';
-          changed = true;
-        }
       }
       if (typeof d.translationKey === 'string' && d.translationKey) {
         state.apiKeys[p] = d.translationKey;
