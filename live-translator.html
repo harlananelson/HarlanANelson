@@ -154,9 +154,9 @@
             <option value="es-en">Spanish → English</option>
             <option value="en-es">English → Spanish</option>
             <option value="auto">Bidirectional ES ⇄ EN — auto-detect</option>
-            <option value="ko-en">Korean → English</option>
-            <option value="en-ko">English → Korean</option>
-            <option value="auto-ko">Bidirectional KO ⇄ EN — auto-detect</option>
+            <option value="auto-ko">Korean-English</option>
+            <option value="ko-en">Korean → English only</option>
+            <option value="en-ko">English → Korean only</option>
           </select>
         </div>
       </div>
@@ -223,8 +223,8 @@
       </div>
       <div id="homegpuOpts">
         <div class="field">
-          <label for="homeGpuUrl">Home GPU server URL &mdash; your streaming server, exposed with <code>tailscale serve</code></label>
-          <input type="text" id="homeGpuUrl" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="wss://machine.tailnet.ts.net:8443/ws" />
+          <label for="homeGpuUrl">Home GPU URL &mdash; blank uses the Tailscale machine in Maat ⚙</label>
+          <input type="text" id="homeGpuUrl" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="wss://…:8443/ws (or leave blank)" />
         </div>
         <div class="field">
           <label for="speakerProfile">Speaker profile &mdash; primes the recognizer with this preacher's names and vocabulary</label>
@@ -233,9 +233,9 @@
             <option value="transcribe">Transcribe only &mdash; no translation, any language</option>
             <option value="meeting">Meeting &mdash; no translation, text only</option>
             <option value="podcast">Podcast &mdash; English talk; facts, science, legal</option>
-            <option value="korean">Korean → English</option>
-            <option value="korean-en">Korean ⇄ English (conversation)</option>
-            <option value="english-to-korean">English → Korean</option>
+            <option value="korean-en">Korean-English</option>
+            <option value="korean">Korean → English only</option>
+            <option value="english-to-korean">English → Korean only</option>
             <option value="bible-study">Bible study (theological)</option>
             <option value="jean-petit">Jean Petit (Sunday)</option>
             <option value="medical">Medical interpreting</option>
@@ -857,6 +857,41 @@
     function srcWhisperLang() { return dirInfo().whisper; }
     function srcCloudLang() { return dirInfo().cloud; }
     function translateTarget() { return dirInfo().tgt; }
+
+    // Direction is the pair the user picks. Home GPU only honours speaker
+    // profile, so Korean-English in Direction must select the matching profile.
+    function profileForDirection(d) {
+      if (d === 'ko-en') return 'korean';
+      if (d === 'en-ko') return 'english-to-korean';
+      if (d === 'auto-ko') return 'korean-en';
+      return null;
+    }
+    function directionForProfile(p) {
+      if (p === 'korean') return 'ko-en';
+      if (p === 'english-to-korean') return 'en-ko';
+      if (p === 'korean-en') return 'auto-ko';
+      return null;
+    }
+    function isKoreanProfile(p) {
+      return p === 'korean' || p === 'korean-en' || p === 'english-to-korean';
+    }
+    function syncPairFromDirection() {
+      var p = profileForDirection(state.direction);
+      if (p) { state.speakerProfile = p; }
+      else if (isKoreanProfile(state.speakerProfile)) { state.speakerProfile = ''; }
+      if (els.speakerProfile) { els.speakerProfile.value = state.speakerProfile || ''; }
+    }
+    function syncPairFromProfile() {
+      var d = directionForProfile(state.speakerProfile);
+      if (d) {
+        state.direction = d;
+        if (els.direction) { els.direction.value = d; }
+      }
+    }
+    function sendHomeGpuProfile() {
+      if (!hgWs || hgWs.readyState !== 1) { return; }
+      try { hgWs.send(JSON.stringify({ type: 'profile', name: state.speakerProfile || '' })); } catch (e) {}
+    }
     function micThreshold() { return 0.032 - (state.sensitivity / 100) * 0.028; }
 
     function pushConfig() {
@@ -978,7 +1013,7 @@
         }
         if (p === 'korean-en') {
           return { left: 'Heard', right: 'Translation',
-            placeholder: 'Press “Start listening”. Each line is transcribed, then translated into the other language (Korean ⇄ English).' };
+            placeholder: 'Press “Start listening”. Korean-English: each line is transcribed, then translated into the other language.' };
         }
       }
       var info = dirInfo(state.direction);
@@ -1233,8 +1268,30 @@
       }
     }
 
+    var DEFAULT_TS_HOST = 'harlan-b550-aorus-pro-ac.taila21a91.ts.net';
+    function tailscaleBridge() {
+      try { return (localStorage.getItem('tb_bridge') || '').trim().replace(/\/+$/, ''); } catch (e) { return ''; }
+    }
+    function gpuWsFromTailscale(bridge) {
+      var raw = (bridge || '').trim();
+      if (!raw) { return ''; }
+      if (!/^https?:\/\//i.test(raw) && !/^wss?:\/\//i.test(raw)) { raw = 'https://' + raw; }
+      try {
+        var u = new URL(raw.replace(/^ws/i, 'http'));
+        if (!u.hostname) { return ''; }
+        return 'wss://' + u.hostname + ':8443/ws';
+      } catch (e) { return ''; }
+    }
+    function resolvedHomeGpuUrl() {
+      var explicit = (state.homeGpuUrl || '').trim();
+      if (explicit) { return explicit; }
+      if (location.port === '8443' && /\.ts\.net$/i.test(location.hostname)) {
+        return (location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/ws';
+      }
+      return gpuWsFromTailscale(tailscaleBridge() || DEFAULT_TS_HOST);
+    }
     function hgHttpOrigin() {
-      var u = (state.homeGpuUrl || '').trim();
+      var u = resolvedHomeGpuUrl();
       if (!u) { return ''; }
       return u.replace(/^ws/i, 'http').replace(/\/ws\/?$/i, '').replace(/\/$/, '');
     }
@@ -1242,6 +1299,27 @@
     function sessionName() {
       return prefixName().toLowerCase() || 'sermon';
     }
+
+    function paintGpuUrlHint() {
+      if (!els.homeGpuUrl) { return; }
+      var derived = gpuWsFromTailscale(tailscaleBridge());
+      els.homeGpuUrl.placeholder = derived
+        ? derived + '  (from Tailscale in ⚙)'
+        : 'wss://…:8443/ws (or leave blank for Tailscale in ⚙)';
+    }
+    window.addEventListener('message', function (ev) {
+      var d = ev.data;
+      if (!d || d.type !== 'maat-auth') { return; }
+      if (d.bridge) {
+        try { localStorage.setItem('tb_bridge', String(d.bridge).replace(/\/+$/, '')); } catch (e) {}
+        paintGpuUrlHint();
+      }
+    });
+    try {
+      if (window.parent !== window) {
+        window.parent.postMessage({ type: 'maat-auth-please' }, '*');
+      }
+    } catch (e) {}
 
     function announceListenToMaat() {
       try {
@@ -1336,7 +1414,7 @@
     function saveToComputer() {
       var origin = hgHttpOrigin();
       if (!origin) {
-        setExportStatus('err', 'Home GPU URL is not set — Save writes on the workstation.');
+        setExportStatus('err', 'No Tailscale machine in ⚙ — Save writes on the workstation.');
         return;
       }
       var dest = els.exportDest && els.exportDest.value;
@@ -1488,7 +1566,7 @@
 
     function hgConnect() {
       return new Promise(function (resolve) {
-        var url = (state.homeGpuUrl || '').trim();
+        var url = resolvedHomeGpuUrl();
         try { hgWs = new WebSocket(url); } catch (e) {
           setStatus('err', 'Bad Home GPU server URL: ' + ((e && e.message) || e));
           resolve(false); return;
@@ -1826,8 +1904,8 @@
     // ---- start / stop ----
     function start() {
       if (state.transcribeEngine === 'homegpu') {
-        if (!(state.homeGpuUrl || '').trim()) {
-          setStatus('err', 'Enter your Home GPU server URL (wss://…/ws) in the transcription settings.');
+        if (!resolvedHomeGpuUrl()) {
+          setStatus('err', 'Set the Tailscale machine in Maat ⚙ (or paste a wss://…:8443/ws URL).');
           return;
         }
       } else {
@@ -1849,7 +1927,7 @@
         var already = hgWs && hgWs.readyState === 1;
         pushLog('', already
           ? 'Start pressed — resuming (transcript kept)'
-          : 'Start pressed — Home GPU engine, server=' + state.homeGpuUrl);
+          : 'Start pressed — Home GPU engine, server=' + resolvedHomeGpuUrl());
         if (!already) { setStatus('idle', 'Connecting to Home GPU server…'); }
         var ready = already ? Promise.resolve(true) : hgConnect();
         ready.then(function (ok) {
@@ -1900,7 +1978,7 @@
     function updateControls() {
       var eng = state.transcribeEngine;
       var cloudKeyOK = eng !== 'cloud' || !!(state.apiKeys.openai || '').trim();
-      var homeGpuOK = eng !== 'homegpu' || !!(state.homeGpuUrl || '').trim();
+      var homeGpuOK = eng !== 'homegpu' || !!resolvedHomeGpuUrl();
       var keysOK = eng === 'homegpu' ? homeGpuOK : (hasKey() && cloudKeyOK);
       var canStart = keysOK && navigator.mediaDevices && navigator.mediaDevices.getUserMedia;
       els.startBtn.disabled = !canStart && !listening;
@@ -1912,13 +1990,9 @@
       if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
         hint = 'This browser cannot access the microphone.';
       } else if (eng === 'homegpu' && !homeGpuOK) {
-        hint = framed
-          ? 'Enter your Home GPU server URL (wss://…/ws) in Maat’s gear settings.'
-          : 'Enter your Home GPU server URL (wss://…/ws) in the transcription settings.';
+        hint = 'Set the Tailscale machine in Maat ⚙ (or paste a wss://…:8443/ws URL).';
       } else if (eng !== 'homegpu' && !hasKey()) {
-        hint = framed
-          ? 'Enter your translation API key in Maat’s gear settings to enable listening.'
-          : 'Enter your translation API key above to enable listening.';
+        hint = 'Enter your translation API key above to enable listening.';
       } else if (!cloudKeyOK) {
         hint = 'Cloud transcription needs an OpenAI key — set the Translation provider to OpenAI and paste your key.';
       }
@@ -2285,7 +2359,10 @@
       els.fileRoot.value = state.fileRoot || '';
       if (els.autoSave) { els.autoSave.checked = state.autoSave !== false; }
       els.homeGpuUrl.value = state.homeGpuUrl || '';
+      paintGpuUrlHint();
       els.speakerProfile.value = state.speakerProfile || '';
+      if (directionForProfile(state.speakerProfile)) { syncPairFromProfile(); }
+      else if (profileForDirection(state.direction)) { syncPairFromDirection(); }
       applyEngine();
       applyProfileChrome();
       applyView();
@@ -2300,7 +2377,9 @@
       els.direction.addEventListener('change', function () {
         var v = els.direction.value;
         state.direction = DIRECTIONS.indexOf(v) >= 0 ? v : 'es-en';
-        saveState(); applyProfileChrome(); updateControls();
+        syncPairFromDirection();
+        saveState(); applyProfileChrome(); pushConfig(); updateControls();
+        sendHomeGpuProfile();
       });
       els.provider.addEventListener('change', function () {
         state.provider = els.provider.value === 'openai' ? 'openai' : 'anthropic';
@@ -2379,12 +2458,11 @@
       }
       els.speakerProfile.addEventListener('change', function () {
         state.speakerProfile = els.speakerProfile.value;
+        syncPairFromProfile();
         saveState();
         applyProfileChrome();
         applyEngine();
-        if (hgWs && hgWs.readyState === 1) {
-          try { hgWs.send(JSON.stringify({ type: 'profile', name: state.speakerProfile })); } catch (e) {}
-        }
+        sendHomeGpuProfile();
       });
       els.homeGpuUrl.addEventListener('input', function () {
         state.homeGpuUrl = els.homeGpuUrl.value.trim();
