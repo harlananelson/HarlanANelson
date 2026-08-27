@@ -175,6 +175,7 @@
         </div>
       </div>
       <div class="field-row">
+        <div id="maatKeysNote" class="note hidden">API keys are set in Maat ⚙ Settings.</div>
         <div class="field grow">
           <label for="apiKey">API key &mdash; stored only in this browser</label>
           <input id="apiKey" name="translation_key" type="text" class="key-input masked" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="paste your API key" />
@@ -720,7 +721,7 @@
     var $ = function (id) { return document.getElementById(id); };
     var els = {
       themeBtn: $('themeBtn'), direction: $('direction'), provider: $('provider'), model: $('model'), modelCustom: $('modelCustom'),
-      apiKey: $('apiKey'), showKey: $('showKey'), keyHint: $('keyHint'),
+      apiKey: $('apiKey'), showKey: $('showKey'), keyHint: $('keyHint'), maatKeysNote: $('maatKeysNote'),
       checkBtn: $('checkBtn'), checkResult: $('checkResult'),
       whisperModel: $('whisperModel'), whisperCustom: $('whisperCustom'), webgpu: $('webgpu'),
       preloadBtn: $('preloadBtn'), sens: $('sens'), modelStatus: $('modelStatus'),
@@ -767,6 +768,8 @@
       theme: 'light', scale: 1, view: 'both'
     };
     var STORE_KEY = 'liveTranslator.v2';
+    var framed = false;
+    try { framed = window.parent !== window; } catch (e) { framed = true; }
 
     // ---- state ----
     var state = loadState();
@@ -1307,6 +1310,52 @@
         ? derived + '  (from Tailscale in ⚙)'
         : 'wss://…:8443/ws (or leave blank for Tailscale in ⚙)';
     }
+    function applyFramedKeyUi() {
+      if (!framed) { return; }
+      if (els.apiKey && els.apiKey.parentNode) { els.apiKey.parentNode.classList.add('hidden'); }
+      if (els.showKey) { els.showKey.classList.add('hidden'); }
+      if (els.openaiKey && els.openaiKey.parentNode) { els.openaiKey.parentNode.classList.add('hidden'); }
+      if (els.maatKeysNote) { els.maatKeysNote.classList.remove('hidden'); }
+    }
+    function applyMaatAuthKeys(d) {
+      var changed = false;
+      var p = (d.provider === 'openai' || d.provider === 'anthropic') ? d.provider : state.provider;
+      if (d.provider === 'openai' || d.provider === 'anthropic') {
+        state.provider = d.provider;
+        if (els.provider) { els.provider.value = state.provider; }
+        changed = true;
+      }
+      if (typeof d.model === 'string' && d.model.trim()) {
+        state.models[state.provider] = d.model.trim();
+        changed = true;
+      }
+      // Clearing happens ONLY on the explicit flag. An ABSENT key means Maat
+      // has no opinion — keep whatever is stored here. Treating absent (or
+      // empty) as "clear" meant that merely opening Maat with an unset gear
+      // wiped keys entered on standalone Listen at the tailnet URL.
+      if (d.clearKeys) {
+        // Clear EVERY slot by name. apiKeys[p] + apiKeys.openai wrote the same
+        // property twice whenever the gear provider was OpenAI, leaving the
+        // anthropic key behind — so "Clear keys on a shared device" did not.
+        state.apiKeys.anthropic = '';
+        state.apiKeys.openai = '';
+        changed = true;
+      }
+      if (typeof d.translationKey === 'string' && d.translationKey) {
+        state.apiKeys[p] = d.translationKey;
+        changed = true;
+      }
+      if (typeof d.transcriptionKey === 'string' && d.transcriptionKey) {
+        state.apiKeys.openai = d.transcriptionKey;
+        changed = true;
+      }
+      if (!changed) { return; }
+      saveState();
+      refreshModelField();
+      refreshKeyField();
+      pushConfig();
+      updateControls();
+    }
     window.addEventListener('message', function (ev) {
       var d = ev.data;
       if (!d || d.type !== 'maat-auth') { return; }
@@ -1314,9 +1363,10 @@
         try { localStorage.setItem('tb_bridge', String(d.bridge).replace(/\/+$/, '')); } catch (e) {}
         paintGpuUrlHint();
       }
+      applyMaatAuthKeys(d);
     });
     try {
-      if (window.parent !== window) {
+      if (framed) {
         window.parent.postMessage({ type: 'maat-auth-please' }, '*');
       }
     } catch (e) {}
@@ -1992,9 +2042,13 @@
       } else if (eng === 'homegpu' && !homeGpuOK) {
         hint = 'Set the Tailscale machine in Maat ⚙ (or paste a wss://…:8443/ws URL).';
       } else if (eng !== 'homegpu' && !hasKey()) {
-        hint = 'Enter your translation API key above to enable listening.';
+        hint = framed
+          ? 'Set the translation API key in Maat ⚙ Settings.'
+          : 'Enter your translation API key above to enable listening.';
       } else if (!cloudKeyOK) {
-        hint = 'Cloud transcription needs an OpenAI key — set the Translation provider to OpenAI and paste your key.';
+        hint = framed
+          ? 'Cloud transcription needs an OpenAI key — set it in Maat ⚙ Settings.'
+          : 'Cloud transcription needs an OpenAI key — set the Translation provider to OpenAI and paste your key.';
       }
       els.startHint.textContent = hint;
       els.startHint.className = hint ? 'note warn' : 'note';
@@ -2053,9 +2107,13 @@
       updateKeyHint();
     }
     function updateKeyHint() {
-      var v = (els.apiKey.value || '').trim();
+      var v = framed
+        ? ((state.apiKeys[state.provider] || '').trim())
+        : ((els.apiKey.value || '').trim());
       var hint = '';
-      if (v && state.provider === 'anthropic' && v.indexOf('sk-ant-') !== 0) {
+      if (framed && !v) {
+        hint = 'No translation key set — open Maat ⚙ Settings.';
+      } else if (v && state.provider === 'anthropic' && v.indexOf('sk-ant-') !== 0) {
         hint = 'Anthropic keys normally start with “sk-ant-”.';
       } else if (v && state.provider === 'openai' && v.indexOf('sk-') !== 0) {
         hint = 'OpenAI keys normally start with “sk-”.';
@@ -2349,6 +2407,7 @@
       els.provider.value = state.provider;
       refreshModelField();
       refreshKeyField();
+      applyFramedKeyUi();
       fillModelSelect(els.whisperModel, els.whisperCustom, WHISPER_SUGGESTIONS, state.whisperModel);
       els.webgpu.checked = state.useWebGPU;
       els.sens.value = String(state.sensitivity);

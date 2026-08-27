@@ -87,7 +87,7 @@
   #settings h1 { font-size: 22px; margin-bottom: 6px; color: #e8e6e1; }
   #settings p.note { font-size: 14px; color: #8a939e; line-height: 1.5; margin-bottom: 10px; }
   #settings label { display: block; font-size: 14px; color: #9aa3ad; margin: 14px 0 5px; }
-  #settings input {
+  #settings input, #settings select {
     width: 100%; font-size: 16px; padding: 12px; border-radius: 10px;
     border: 1px solid #3a4550; background: #1a222c; color: #e8e6e1;
   }
@@ -261,6 +261,60 @@
     if (!/^https?:\/\//i.test(t) && !/^wss?:\/\//i.test(t)) t = "https://" + t;
     try { localStorage.setItem("tb_bridge", t); } catch (e) {}
   }
+  function getTranslationKey() {
+    try { return (localStorage.getItem("maat_translation_key") || "").trim(); } catch (e) { return ""; }
+  }
+  function setTranslationKey(v) {
+    try {
+      var t = (v || "").trim();
+      // Empty is a NO-OP, exactly as setTailscaleHost never wipes a
+      // working host. Deleting here made Maat forget a key while framed
+      // Listen kept using it — Maat could then neither re-push nor clear
+      // it. Removal goes through Clear keys, which signals the frames.
+      if (t) localStorage.setItem("maat_translation_key", t);
+    } catch (e) {}
+  }
+  function getTranscriptionKey() {
+    try { return (localStorage.getItem("maat_transcription_key") || "").trim(); } catch (e) { return ""; }
+  }
+  function setTranscriptionKey(v) {
+    try {
+      var t = (v || "").trim();
+      // Empty is a NO-OP, exactly as setTailscaleHost never wipes a
+      // working host. Deleting here made Maat forget a key while framed
+      // Listen kept using it — Maat could then neither re-push nor clear
+      // it. Removal goes through Clear keys, which signals the frames.
+      if (t) localStorage.setItem("maat_transcription_key", t);
+    } catch (e) {}
+  }
+  function getMaatProvider() {
+    try {
+      var p = (localStorage.getItem("maat_provider") || "").trim();
+      return p === "openai" ? "openai" : "anthropic";
+    } catch (e) { return "anthropic"; }
+  }
+  function setMaatProvider(p) {
+    try { localStorage.setItem("maat_provider", p === "openai" ? "openai" : "anthropic"); } catch (e) {}
+  }
+  function getMaatModel() {
+    try { return (localStorage.getItem("maat_model") || "").trim(); } catch (e) { return ""; }
+  }
+  function setMaatModel(v) {
+    try { localStorage.setItem("maat_model", (v || "").trim()); } catch (e) {}
+  }
+  function modelPlaceholder(provider) {
+    return provider === "openai" ? "gpt-5-mini" : "claude-haiku-4-5-20251001";
+  }
+  function frameTargetOrigin(f) {
+    var src = "";
+    try { src = f.getAttribute("src") || f.src || (f.dataset && f.dataset.src) || ""; } catch (e) { return ""; }
+    if (!src) return "";
+    try {
+      var u = new URL(src, location.href);
+      if (u.protocol !== "http:" && u.protocol !== "https:") return "";
+      return u.origin;
+    } catch (e) { return ""; }
+  }
   function tailscaleHostname() {
     var raw = getTailscaleHost() || ("https://" + DEFAULT_TS_HOST);
     if (!/^https?:\/\//i.test(raw) && !/^wss?:\/\//i.test(raw)) raw = "https://" + raw;
@@ -277,13 +331,37 @@
     if (!s) return true;
     return /live-translator\.html/i.test(s) && s.indexOf(":8443") < 0;
   }
-  function pushAuthToFrames() {
+  function pushAuthToFrames(clearKeys) {
     var token = getWorkstationToken();
     var bridge = getTailscaleHost() || ("https://" + DEFAULT_TS_HOST);
-    if (!token && !bridge) return;
-    var msg = { type: "maat-auth", token: token || "", bridge: bridge };
+    var msg = {
+      type: "maat-auth",
+      token: token || "",
+      bridge: bridge,
+      provider: getMaatProvider(),
+      model: getMaatModel()
+    };
+    // "I have no keys" and "clear your keys" are DIFFERENT statements, and
+    // conflating them wipes real keys. Every push carried empty strings when
+    // the gear was unset, and Listen read empty as clear — so merely opening
+    // Maat destroyed keys typed into standalone Listen at the tailnet URL,
+    // hitting exactly the person who set Listen up before finding Settings.
+    //
+    // So: omit an empty key (Listen keeps what it has), send a non-empty key
+    // to set it, and clear ONLY on the explicit flag the Clear button sets.
+    // Absence means "no opinion", never "delete".
+    if (clearKeys) {
+      msg.clearKeys = true;
+    } else {
+      var tk = getTranslationKey();
+      var xk = getTranscriptionKey();
+      if (tk) msg.translationKey = tk;
+      if (xk) msg.transcriptionKey = xk;
+    }
     document.querySelectorAll("iframe").forEach(function (f) {
-      try { if (f.contentWindow) f.contentWindow.postMessage(msg, "*"); } catch (e) {}
+      var origin = frameTargetOrigin(f);
+      if (!origin) return;
+      try { if (f.contentWindow) f.contentWindow.postMessage(msg, origin); } catch (e) {}
     });
   }
   window.addEventListener("message", function (ev) {
@@ -763,6 +841,99 @@
       tsHint.style.fontSize = "12px";
       tsHint.textContent = "The MagicDNS name of the home box. Listen uses it as wss://…:8443/ws. Same value as Converse’s Bridge URL.";
       wrap.appendChild(tsHint);
+      var trLab = document.createElement("label");
+      trLab.textContent = "Translation API key (Listen)";
+      trLab.htmlFor = "maatTranslationKey";
+      var trInp = document.createElement("input");
+      trInp.id = "maatTranslationKey";
+      trInp.type = "password";
+      trInp.autocomplete = "off";
+      trInp.autocapitalize = "off";
+      trInp.spellcheck = false;
+      trInp.placeholder = "paste the Anthropic or OpenAI key";
+      trInp.value = getTranslationKey();
+      wrap.appendChild(trLab);
+      wrap.appendChild(trInp);
+      var tcLab = document.createElement("label");
+      tcLab.textContent = "Transcription API key (OpenAI)";
+      tcLab.htmlFor = "maatTranscriptionKey";
+      var tcInp = document.createElement("input");
+      tcInp.id = "maatTranscriptionKey";
+      tcInp.type = "password";
+      tcInp.autocomplete = "off";
+      tcInp.autocapitalize = "off";
+      tcInp.spellcheck = false;
+      tcInp.placeholder = "sk-… (cloud transcription)";
+      tcInp.value = getTranscriptionKey();
+      wrap.appendChild(tcLab);
+      wrap.appendChild(tcInp);
+      var keyBtns = document.createElement("div");
+      keyBtns.className = "row";
+      keyBtns.style.marginTop = "10px";
+      var showKeys = document.createElement("button");
+      showKeys.id = "showMaatKeys";
+      showKeys.type = "button";
+      showKeys.className = "secondary";
+      showKeys.textContent = "Show";
+      showKeys.onclick = function () {
+        var hide = trInp.type === "password";
+        trInp.type = hide ? "text" : "password";
+        tcInp.type = hide ? "text" : "password";
+        showKeys.textContent = hide ? "Hide" : "Show";
+      };
+      var clearKeys = document.createElement("button");
+      clearKeys.id = "clearMaatKeys";
+      clearKeys.type = "button";
+      clearKeys.className = "secondary";
+      clearKeys.textContent = "Clear keys";
+      clearKeys.onclick = function () {
+        trInp.value = "";
+        tcInp.value = "";
+        setTranslationKey("");
+        setTranscriptionKey("");
+        pushAuthToFrames(true);   // explicit clear — see pushAuthToFrames
+      };
+      keyBtns.appendChild(showKeys);
+      keyBtns.appendChild(clearKeys);
+      wrap.appendChild(keyBtns);
+      var provLab = document.createElement("label");
+      provLab.textContent = "Translation provider";
+      provLab.htmlFor = "maatProvider";
+      var provSel = document.createElement("select");
+      provSel.id = "maatProvider";
+      var optA = document.createElement("option");
+      optA.value = "anthropic";
+      optA.textContent = "Anthropic (Claude)";
+      var optO = document.createElement("option");
+      optO.value = "openai";
+      optO.textContent = "OpenAI";
+      provSel.appendChild(optA);
+      provSel.appendChild(optO);
+      provSel.value = getMaatProvider();
+      wrap.appendChild(provLab);
+      wrap.appendChild(provSel);
+      var modLab = document.createElement("label");
+      modLab.textContent = "Translation model";
+      modLab.htmlFor = "maatModel";
+      var modInp = document.createElement("input");
+      modInp.id = "maatModel";
+      modInp.type = "text";
+      modInp.autocomplete = "off";
+      modInp.autocapitalize = "off";
+      modInp.spellcheck = false;
+      modInp.placeholder = modelPlaceholder(provSel.value);
+      modInp.value = getMaatModel();
+      wrap.appendChild(modLab);
+      wrap.appendChild(modInp);
+      provSel.onchange = function () {
+        modInp.placeholder = modelPlaceholder(provSel.value === "openai" ? "openai" : "anthropic");
+      };
+      var keyHint = document.createElement("p");
+      keyHint.className = "note";
+      keyHint.style.margin = "4px 0 16px";
+      keyHint.style.fontSize = "12px";
+      keyHint.textContent = "Stored only in this browser. Pushed to Listen when it runs inside Maat. Clear keys on a shared device.";
+      wrap.appendChild(keyHint);
       modes.forEach(function (a) {
         if (a.kind === "tools") {
           var head = document.createElement("p");
@@ -813,6 +984,14 @@
     }
     var tsEl = $("maatBridge");
     if (tsEl) setTailscaleHost(tsEl.value);
+    var trEl = $("maatTranslationKey");
+    if (trEl) setTranslationKey(trEl.value);
+    var tcEl = $("maatTranscriptionKey");
+    if (tcEl) setTranscriptionKey(tcEl.value);
+    var prEl = $("maatProvider");
+    if (prEl) setMaatProvider(prEl.value);
+    var mdEl = $("maatModel");
+    if (mdEl) setMaatModel(mdEl.value);
     pushAuthToFrames();
     modes.forEach(function (a) {
       if (a.kind === "about" || a.kind === "tools") return;
