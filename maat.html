@@ -267,8 +267,11 @@
   function setTranslationKey(v) {
     try {
       var t = (v || "").trim();
+      // Empty is a NO-OP, exactly as setTailscaleHost never wipes a
+      // working host. Deleting here made Maat forget a key while framed
+      // Listen kept using it — Maat could then neither re-push nor clear
+      // it. Removal goes through Clear keys, which signals the frames.
       if (t) localStorage.setItem("maat_translation_key", t);
-      else localStorage.removeItem("maat_translation_key");
     } catch (e) {}
   }
   function getTranscriptionKey() {
@@ -277,8 +280,11 @@
   function setTranscriptionKey(v) {
     try {
       var t = (v || "").trim();
+      // Empty is a NO-OP, exactly as setTailscaleHost never wipes a
+      // working host. Deleting here made Maat forget a key while framed
+      // Listen kept using it — Maat could then neither re-push nor clear
+      // it. Removal goes through Clear keys, which signals the frames.
       if (t) localStorage.setItem("maat_transcription_key", t);
-      else localStorage.removeItem("maat_transcription_key");
     } catch (e) {}
   }
   function getMaatProvider() {

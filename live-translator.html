@@ -1334,7 +1334,10 @@
       // empty) as "clear" meant that merely opening Maat with an unset gear
       // wiped keys entered on standalone Listen at the tailnet URL.
       if (d.clearKeys) {
-        state.apiKeys[p] = '';
+        // Clear EVERY slot by name. apiKeys[p] + apiKeys.openai wrote the same
+        // property twice whenever the gear provider was OpenAI, leaving the
+        // anthropic key behind — so "Clear keys on a shared device" did not.
+        state.apiKeys.anthropic = '';
         state.apiKeys.openai = '';
         changed = true;
       }
