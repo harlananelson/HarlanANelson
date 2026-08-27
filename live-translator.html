@@ -153,7 +153,10 @@
           <select id="direction">
             <option value="es-en">Spanish → English</option>
             <option value="en-es">English → Spanish</option>
-            <option value="auto">Bidirectional — auto-detect (conversation)</option>
+            <option value="auto">Bidirectional ES ⇄ EN — auto-detect</option>
+            <option value="auto-ko">Korean-English</option>
+            <option value="ko-en">Korean → English only</option>
+            <option value="en-ko">English → Korean only</option>
           </select>
         </div>
       </div>
@@ -220,8 +223,8 @@
       </div>
       <div id="homegpuOpts">
         <div class="field">
-          <label for="homeGpuUrl">Home GPU server URL &mdash; your streaming server, exposed with <code>tailscale serve</code></label>
-          <input type="text" id="homeGpuUrl" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="wss://machine.tailnet.ts.net:8443/ws" />
+          <label for="homeGpuUrl">Home GPU URL &mdash; blank uses the Tailscale machine in Maat ⚙</label>
+          <input type="text" id="homeGpuUrl" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="wss://…:8443/ws (or leave blank)" />
         </div>
         <div class="field">
           <label for="speakerProfile">Speaker profile &mdash; primes the recognizer with this preacher's names and vocabulary</label>
@@ -229,6 +232,10 @@
             <option value="">None &mdash; general Spanish</option>
             <option value="transcribe">Transcribe only &mdash; no translation, any language</option>
             <option value="meeting">Meeting &mdash; no translation, text only</option>
+            <option value="podcast">Podcast &mdash; English talk; facts, science, legal</option>
+            <option value="korean-en">Korean-English</option>
+            <option value="korean">Korean → English only</option>
+            <option value="english-to-korean">English → Korean only</option>
             <option value="bible-study">Bible study (theological)</option>
             <option value="jean-petit">Jean Petit (Sunday)</option>
             <option value="medical">Medical interpreting</option>
@@ -534,8 +541,8 @@
     async function handle(job, attempt) {
       try {
         const raw = await callProvider(job.text, job.context, job.target);
-        if (job.target === 'auto') {
-          const parsed = parseAuto(raw);
+        if (job.target === 'auto' || job.target === 'auto-ko') {
+          const parsed = parseAuto(raw, job.target);
           self.postMessage({ type: 'result', id: job.id, ok: true, text: parsed.t, lang: parsed.lang });
         } else {
           self.postMessage({ type: 'result', id: job.id, ok: true, text: raw });
@@ -550,12 +557,17 @@
       }
     }
 
-    function parseAuto(raw) {
+    function parseAuto(raw, target) {
       var s = String(raw || '').trim().replace(/^```(?:json)?/i, '').replace(/```$/, '').trim();
       var i = s.indexOf('{'), j = s.lastIndexOf('}');
       if (i >= 0 && j > i) { s = s.slice(i, j + 1); }
       var obj = JSON.parse(s);   // throws on bad output -> retried by handle()
-      var lang = obj.lang === 'en' ? 'en' : 'es';
+      var lang;
+      if (target === 'auto-ko') {
+        lang = obj.lang === 'en' ? 'en' : 'ko';
+      } else {
+        lang = obj.lang === 'en' ? 'en' : 'es';
+      }
       var t = String(obj.t == null ? '' : obj.t).trim();
       if (!t) { throw new Error('Empty translation in auto response'); }
       return { lang: lang, t: t };
@@ -583,6 +595,10 @@
       'never ask for or mention missing or insufficient context; never add bracketed notes, disclaimers, apologies, or explanations. ' +
       'Preserve the tone and register of the original.';
 
+    function langName(code) {
+      return ({ es: 'Spanish', en: 'English', ko: 'Korean' })[code] || 'English';
+    }
+
     function systemFor(target) {
       if (target === 'auto') {
         return 'You are a live bilingual interpreter for a Spanish/English conversation. You receive one spoken utterance. ' +
@@ -590,23 +606,31 @@
           'Reply with ONLY a compact JSON object and nothing else: {"lang":"es"|"en","t":"<the translation in the other language>"}. ' +
           '"lang" is the language of the INPUT; "t" is its translation. No code fences, no extra text. ' + SHARED_RULES;
       }
-      var tgt = target === 'es' ? 'Spanish' : 'English';
+      if (target === 'auto-ko') {
+        return 'You are a live bilingual interpreter for a Korean/English conversation. You receive one spoken utterance. ' +
+          'Detect whether it is Korean or English, then translate it into the OTHER language. ' +
+          'Reply with ONLY a compact JSON object and nothing else: {"lang":"ko"|"en","t":"<the translation in the other language>"}. ' +
+          '"lang" is the language of the INPUT; "t" is its translation. No code fences, no extra text. ' + SHARED_RULES;
+      }
+      var tgt = langName(target);
       return 'You are a live interpreter. Translate the speech transcript you are given into natural, fluent ' + tgt + '. ' +
         'Reply with ONLY the ' + tgt + ' translation itself: no quotation marks, no preamble, no notes. ' + SHARED_RULES;
     }
 
     function userPrompt(text, context, target) {
+      var left = (cfg && cfg.leftName) || 'Spanish';
+      var right = (cfg && cfg.rightName) || 'English';
       var p = '';
       if (context && (context.es || context.en)) {
         p += 'Preceding turn (context only - do not translate or repeat it):\n';
-        if (context.es) { p += 'Spanish: ' + context.es + '\n'; }
-        if (context.en) { p += 'English: ' + context.en + '\n'; }
+        if (context.es) { p += left + ': ' + context.es + '\n'; }
+        if (context.en) { p += right + ': ' + context.en + '\n'; }
         p += '\n';
       }
-      if (target === 'auto') {
+      if (target === 'auto' || target === 'auto-ko') {
         p += 'Utterance:\n' + text;
       } else {
-        p += 'Translate this segment into ' + (target === 'es' ? 'Spanish' : 'English') + ':\n' + text;
+        p += 'Translate this segment into ' + langName(target) + ':\n' + text;
       }
       return p;
     }
@@ -789,7 +813,7 @@
           homeGpuUrl: typeof s.homeGpuUrl === 'string' ? s.homeGpuUrl : '',
           speakerProfile: typeof s.speakerProfile === 'string' ? s.speakerProfile : '',
           logEndpoint: s.logEndpoint || '',
-          direction: ['es-en', 'en-es', 'auto'].indexOf(s.direction) >= 0 ? s.direction : 'es-en',
+          direction: DIRECTIONS.indexOf(s.direction) >= 0 ? s.direction : 'es-en',
           theme: s.theme === 'dark' ? 'dark' : 'light',
           scale: typeof s.scale === 'number' ? s.scale : 1,
           view: ['both', 'es', 'en'].indexOf(s.view) >= 0 ? s.view : 'both'
@@ -804,19 +828,83 @@
     function hasKey() { return !!(state.apiKeys[state.provider] || '').trim(); }
     function whisperDevice() { return state.useWebGPU ? 'webgpu' : 'wasm'; }
     // Direction-aware language hints (null = auto-detect for conversation mode).
-    function srcWhisperLang() { var d = state.direction; return d === 'en-es' ? 'english' : d === 'auto' ? null : 'spanish'; }
-    function srcCloudLang() { var d = state.direction; return d === 'en-es' ? 'en' : d === 'auto' ? null : 'es'; }
-    function translateTarget() { var d = state.direction; return d === 'en-es' ? 'es' : d === 'auto' ? 'auto' : 'en'; }
+    var DIRECTIONS = ['es-en', 'en-es', 'auto', 'ko-en', 'en-ko', 'auto-ko'];
+    function dirInfo(d) {
+      d = d || (state && state.direction) || 'es-en';
+      if (d === 'ko-en') {
+        return { srcCol: 'es', tgtCol: 'en', whisper: 'korean', cloud: 'ko', tgt: 'en',
+                 left: 'Korean', right: 'English' };
+      }
+      if (d === 'en-ko') {
+        return { srcCol: 'en', tgtCol: 'es', whisper: 'english', cloud: 'en', tgt: 'ko',
+                 left: 'Korean', right: 'English' };
+      }
+      if (d === 'auto-ko') {
+        return { srcCol: null, tgtCol: null, whisper: null, cloud: null, tgt: 'auto-ko',
+                 left: 'Korean', right: 'English', auto: true };
+      }
+      if (d === 'en-es') {
+        return { srcCol: 'en', tgtCol: 'es', whisper: 'english', cloud: 'en', tgt: 'es',
+                 left: 'Spanish', right: 'English' };
+      }
+      if (d === 'auto') {
+        return { srcCol: null, tgtCol: null, whisper: null, cloud: null, tgt: 'auto',
+                 left: 'Spanish', right: 'English', auto: true };
+      }
+      return { srcCol: 'es', tgtCol: 'en', whisper: 'spanish', cloud: 'es', tgt: 'en',
+               left: 'Spanish', right: 'English' };
+    }
+    function srcWhisperLang() { return dirInfo().whisper; }
+    function srcCloudLang() { return dirInfo().cloud; }
+    function translateTarget() { return dirInfo().tgt; }
+
+    // Direction is the pair the user picks. Home GPU only honours speaker
+    // profile, so Korean-English in Direction must select the matching profile.
+    function profileForDirection(d) {
+      if (d === 'ko-en') return 'korean';
+      if (d === 'en-ko') return 'english-to-korean';
+      if (d === 'auto-ko') return 'korean-en';
+      return null;
+    }
+    function directionForProfile(p) {
+      if (p === 'korean') return 'ko-en';
+      if (p === 'english-to-korean') return 'en-ko';
+      if (p === 'korean-en') return 'auto-ko';
+      return null;
+    }
+    function isKoreanProfile(p) {
+      return p === 'korean' || p === 'korean-en' || p === 'english-to-korean';
+    }
+    function syncPairFromDirection() {
+      var p = profileForDirection(state.direction);
+      if (p) { state.speakerProfile = p; }
+      else if (isKoreanProfile(state.speakerProfile)) { state.speakerProfile = ''; }
+      if (els.speakerProfile) { els.speakerProfile.value = state.speakerProfile || ''; }
+    }
+    function syncPairFromProfile() {
+      var d = directionForProfile(state.speakerProfile);
+      if (d) {
+        state.direction = d;
+        if (els.direction) { els.direction.value = d; }
+      }
+    }
+    function sendHomeGpuProfile() {
+      if (!hgWs || hgWs.readyState !== 1) { return; }
+      try { hgWs.send(JSON.stringify({ type: 'profile', name: state.speakerProfile || '' })); } catch (e) {}
+    }
     function micThreshold() { return 0.032 - (state.sensitivity / 100) * 0.028; }
 
     function pushConfig() {
       if (!translator) { return; }
+      var chrome = pairChrome();
       translator.postMessage({
         type: 'config',
         config: {
           provider: state.provider,
           model: (state.models[state.provider] || '').trim(),
-          apiKey: (state.apiKeys[state.provider] || '').trim()
+          apiKey: (state.apiKeys[state.provider] || '').trim(),
+          leftName: chrome.left,
+          rightName: chrome.right
         }
       });
     }
@@ -903,36 +991,56 @@
     // ---- transcript rendering ----
     function isMonolingual() {
       var p = state.speakerProfile || '';
-      return p === 'meeting' || p === 'transcribe';
+      return p === 'meeting' || p === 'transcribe' || p === 'podcast';
+    }
+
+    function pairChrome() {
+      if (isMonolingual()) {
+        return {
+          left: 'Transcript', right: 'Notes',
+          placeholder: 'Press “Start listening”. Meeting / Transcribe / Podcast writes what was said — no translation.'
+        };
+      }
+      var p = state.speakerProfile || '';
+      if (state.transcribeEngine === 'homegpu') {
+        if (p === 'korean') {
+          return { left: 'Korean', right: 'English',
+            placeholder: 'Press “Start listening”. Korean on the left, English on the right.' };
+        }
+        if (p === 'english-to-korean') {
+          return { left: 'English', right: 'Korean',
+            placeholder: 'Press “Start listening”. English on the left, Korean on the right.' };
+        }
+        if (p === 'korean-en') {
+          return { left: 'Heard', right: 'Translation',
+            placeholder: 'Press “Start listening”. Korean-English: each line is transcribed, then translated into the other language.' };
+        }
+      }
+      var info = dirInfo(state.direction);
+      return {
+        left: info.left, right: info.right,
+        placeholder: 'Press “Start listening”. ' + info.left + ' on the left, ' + info.right + ' on the right.'
+      };
     }
 
     function applyProfileChrome() {
-      var mono = isMonolingual();
+      var chrome = pairChrome();
       var esHead = document.querySelector('.cell.head.es');
       var enHead = document.querySelector('.cell.head.en');
-      if (esHead) { esHead.textContent = mono ? 'Transcript' : 'Spanish'; }
-      if (enHead) { enHead.textContent = mono ? 'Notes' : 'English'; }
+      if (esHead) { esHead.textContent = chrome.left; }
+      if (enHead) { enHead.textContent = chrome.right; }
       var esBtn = document.querySelector('.seg-toggle [data-view="es"]');
       var enBtn = document.querySelector('.seg-toggle [data-view="en"]');
-      if (esBtn) { esBtn.textContent = mono ? 'Transcript' : 'Spanish'; }
-      if (enBtn) { enBtn.textContent = mono ? 'Notes' : 'English'; }
-      if (placeholderEl) {
-        placeholderEl.textContent = mono
-          ? 'Press “Start listening”. Meeting / Transcribe writes what was said — no translation.'
-          : 'Press “Start listening” and let Spanish speech reach your microphone. '
-            + 'Each spoken sentence is transcribed, then translated — Spanish on the left, English on the right.';
-      }
+      if (esBtn) { esBtn.textContent = chrome.left; }
+      if (enBtn) { enBtn.textContent = chrome.right; }
+      if (placeholderEl) { placeholderEl.textContent = chrome.placeholder; }
     }
 
     function showPlaceholder() {
       if (placeholderEl) { return; }
       placeholderEl = document.createElement('div');
       placeholderEl.className = 'placeholder';
-      placeholderEl.textContent = isMonolingual()
-        ? 'Press “Start listening”. Meeting / Transcribe writes what was said — no translation.'
-        : 'Press “Start listening” and let Spanish speech reach your microphone. '
-          + 'Each spoken sentence is transcribed, then translated — Spanish on the left, English on the right. '
-          + 'The first run downloads the speech model.';
+      placeholderEl.textContent = pairChrome().placeholder;
       els.rows.insertBefore(placeholderEl, interimRow);
     }
     function removePlaceholder() {
@@ -992,9 +1100,13 @@
       }
       // which column is the source (heard) vs. the translation depends on direction
       var dir = seg.dir || 'es-en';
-      var esIsSource = (dir === 'es-en');                 // en-es: en is source; auto: decided after detect
-      var esLabel = esIsSource ? 'transcribing…' : 'translating…';
-      var enLabel = (dir === 'en-es') ? 'transcribing…' : 'translating…';
+      var info = dirInfo(dir);
+      var esLabel = (info.srcCol === 'es') ? 'transcribing…' : 'translating…';
+      var enLabel = (info.srcCol === 'en') ? 'transcribing…' : 'translating…';
+      if (info.auto) {
+        esLabel = 'transcribing…';
+        enLabel = 'translating…';
+      }
       if (isMonolingual()) {
         esLabel = 'transcribing…';
         enLabel = '';
@@ -1033,26 +1145,31 @@
       return (c.es || c.en) ? c : null;
     }
     function segTarget(seg) {
-      return seg.dir === 'en-es' ? 'es' : seg.dir === 'auto' ? 'auto' : 'en';
+      return dirInfo(seg.dir || state.direction).tgt;
     }
 
     function applyTranscript(seg, text) {
       var txt = (text || '').trim();
       if (!txt || !/\p{L}/u.test(txt)) { removeSeg(seg); return; }   // empty / punctuation-only / noise
       var dir = seg.dir || 'es-en';
+      var info = dirInfo(dir);
       seg.heard = txt;
       // place the heard text in its language column; the other column awaits the translation.
-      if (dir === 'es-en') { seg.es = txt; seg.esState = 'done'; seg.enState = 'translating'; }
-      else if (dir === 'en-es') { seg.en = txt; seg.enState = 'done'; seg.esState = 'translating'; }
-      else { seg.esState = 'translating'; seg.enState = 'translating'; }   // auto: column decided after detect
+      if (info.auto) {
+        seg.esState = 'translating'; seg.enState = 'translating';
+      } else if (info.srcCol === 'en') {
+        seg.en = txt; seg.enState = 'done'; seg.esState = 'translating';
+      } else {
+        seg.es = txt; seg.esState = 'done'; seg.enState = 'translating';
+      }
       paintRow(seg);
       maybeScroll();
       if (translator) {
         translator.postMessage({ type: 'translate', id: seg.id, text: txt, target: segTarget(seg), context: transCtx(seg) });
       } else {
-        if (dir === 'es-en') { seg.enState = 'error'; }
-        else if (dir === 'en-es') { seg.esState = 'error'; }
-        else { seg.esState = 'error'; seg.enState = 'error'; }
+        if (info.auto) { seg.esState = 'error'; seg.enState = 'error'; }
+        else if (info.srcCol === 'en') { seg.esState = 'error'; }
+        else { seg.enState = 'error'; }
         seg.error = 'Translation worker unavailable';
         paintRow(seg);
       }
@@ -1151,14 +1268,67 @@
       }
     }
 
+    var DEFAULT_TS_HOST = 'harlan-b550-aorus-pro-ac.taila21a91.ts.net';
+    function tailscaleBridge() {
+      try { return (localStorage.getItem('tb_bridge') || '').trim().replace(/\/+$/, ''); } catch (e) { return ''; }
+    }
+    function gpuWsFromTailscale(bridge) {
+      var raw = (bridge || '').trim();
+      if (!raw) { return ''; }
+      if (!/^https?:\/\//i.test(raw) && !/^wss?:\/\//i.test(raw)) { raw = 'https://' + raw; }
+      try {
+        var u = new URL(raw.replace(/^ws/i, 'http'));
+        if (!u.hostname) { return ''; }
+        return 'wss://' + u.hostname + ':8443/ws';
+      } catch (e) { return ''; }
+    }
+    function resolvedHomeGpuUrl() {
+      var explicit = (state.homeGpuUrl || '').trim();
+      if (explicit) { return explicit; }
+      if (location.port === '8443' && /\.ts\.net$/i.test(location.hostname)) {
+        return (location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/ws';
+      }
+      return gpuWsFromTailscale(tailscaleBridge() || DEFAULT_TS_HOST);
+    }
     function hgHttpOrigin() {
-      var u = (state.homeGpuUrl || '').trim();
+      var u = resolvedHomeGpuUrl();
       if (!u) { return ''; }
       return u.replace(/^ws/i, 'http').replace(/\/ws\/?$/i, '').replace(/\/$/, '');
     }
 
     function sessionName() {
       return prefixName().toLowerCase() || 'sermon';
+    }
+
+    function paintGpuUrlHint() {
+      if (!els.homeGpuUrl) { return; }
+      var derived = gpuWsFromTailscale(tailscaleBridge());
+      els.homeGpuUrl.placeholder = derived
+        ? derived + '  (from Tailscale in ⚙)'
+        : 'wss://…:8443/ws (or leave blank for Tailscale in ⚙)';
+    }
+    window.addEventListener('message', function (ev) {
+      var d = ev.data;
+      if (!d || d.type !== 'maat-auth') { return; }
+      if (d.bridge) {
+        try { localStorage.setItem('tb_bridge', String(d.bridge).replace(/\/+$/, '')); } catch (e) {}
+        paintGpuUrlHint();
+      }
+    });
+    try {
+      if (window.parent !== window) {
+        window.parent.postMessage({ type: 'maat-auth-please' }, '*');
+      }
+    } catch (e) {}
+
+    function announceListenToMaat() {
+      try {
+        if (window.parent === window) return;
+        var d = new Date();
+        var pad = function (n) { return n < 10 ? '0' + n : String(n); };
+        var stem = sessionName() + '-' + d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+        window.parent.postMessage({ type: 'maat-listen', session: stem }, '*');
+      } catch (e) { /* not in an iframe */ }
     }
 
     function prefixName() {
@@ -1244,7 +1414,7 @@
     function saveToComputer() {
       var origin = hgHttpOrigin();
       if (!origin) {
-        setExportStatus('err', 'Home GPU URL is not set — Save writes on the workstation.');
+        setExportStatus('err', 'No Tailscale machine in ⚙ — Save writes on the workstation.');
         return;
       }
       var dest = els.exportDest && els.exportDest.value;
@@ -1396,7 +1566,7 @@
 
     function hgConnect() {
       return new Promise(function (resolve) {
-        var url = (state.homeGpuUrl || '').trim();
+        var url = resolvedHomeGpuUrl();
         try { hgWs = new WebSocket(url); } catch (e) {
           setStatus('err', 'Bad Home GPU server URL: ' + ((e && e.message) || e));
           resolve(false); return;
@@ -1512,19 +1682,24 @@
         var seg = findSeg(m.id);
         if (!seg) { return; }
         var dir = seg.dir || 'es-en';
+        var info = dirInfo(dir);
         if (m.ok) {
-          if (dir === 'es-en') { seg.en = m.text; seg.enState = 'done'; }
-          else if (dir === 'en-es') { seg.es = m.text; seg.esState = 'done'; }
-          else {   // auto: heard text goes in its detected-language column, translation in the other
+          if (info.auto) {
+            // Heard in its language column (English = right; Korean/Spanish = left).
             if (m.lang === 'en') { seg.en = seg.heard; seg.es = m.text; }
             else { seg.es = seg.heard; seg.en = m.text; }
             seg.esState = 'done'; seg.enState = 'done';
+          } else if (info.tgtCol === 'es') {
+            seg.es = m.text; seg.esState = 'done';
+          } else {
+            seg.en = m.text; seg.enState = 'done';
           }
           seg.error = '';
         } else {
           pushLog('error', 'translation error (line ' + m.id + '): ' + m.error);
-          if (dir === 'en-es') { seg.esState = 'error'; }
-          else if (dir === 'auto') { seg.es = seg.heard || seg.es; seg.esState = 'done'; seg.enState = 'error'; }
+          if (info.auto) {
+            seg.es = seg.heard || seg.es; seg.esState = 'done'; seg.enState = 'error';
+          } else if (info.tgtCol === 'es') { seg.esState = 'error'; }
           else { seg.enState = 'error'; }
           seg.error = m.error || 'Translation failed';
         }
@@ -1549,11 +1724,12 @@
       var seg = findSeg(id);
       if (!seg || !translator) { return; }
       var dir = seg.dir || 'es-en';
-      var src = seg.heard || (dir === 'en-es' ? seg.en : seg.es);
+      var info = dirInfo(dir);
+      var src = seg.heard || (info.srcCol === 'en' ? seg.en : seg.es);
       if (!src) { return; }
-      if (dir === 'es-en') { seg.enState = 'translating'; }
-      else if (dir === 'en-es') { seg.esState = 'translating'; }
-      else { seg.esState = 'translating'; seg.enState = 'translating'; }
+      if (info.auto) { seg.esState = 'translating'; seg.enState = 'translating'; }
+      else if (info.tgtCol === 'es') { seg.esState = 'translating'; }
+      else { seg.enState = 'translating'; }
       seg.error = '';
       paintRow(seg);
       translator.postMessage({ type: 'translate', id: seg.id, text: src, target: segTarget(seg), context: transCtx(seg) });
@@ -1728,8 +1904,8 @@
     // ---- start / stop ----
     function start() {
       if (state.transcribeEngine === 'homegpu') {
-        if (!(state.homeGpuUrl || '').trim()) {
-          setStatus('err', 'Enter your Home GPU server URL (wss://…/ws) in the transcription settings.');
+        if (!resolvedHomeGpuUrl()) {
+          setStatus('err', 'Set the Tailscale machine in Maat ⚙ (or paste a wss://…:8443/ws URL).');
           return;
         }
       } else {
@@ -1746,11 +1922,12 @@
       listening = true;
       updateControls();
       pushConfig();
+      announceListenToMaat();
       if (state.transcribeEngine === 'homegpu') {
         var already = hgWs && hgWs.readyState === 1;
         pushLog('', already
           ? 'Start pressed — resuming (transcript kept)'
-          : 'Start pressed — Home GPU engine, server=' + state.homeGpuUrl);
+          : 'Start pressed — Home GPU engine, server=' + resolvedHomeGpuUrl());
         if (!already) { setStatus('idle', 'Connecting to Home GPU server…'); }
         var ready = already ? Promise.resolve(true) : hgConnect();
         ready.then(function (ok) {
@@ -1801,7 +1978,7 @@
     function updateControls() {
       var eng = state.transcribeEngine;
       var cloudKeyOK = eng !== 'cloud' || !!(state.apiKeys.openai || '').trim();
-      var homeGpuOK = eng !== 'homegpu' || !!(state.homeGpuUrl || '').trim();
+      var homeGpuOK = eng !== 'homegpu' || !!resolvedHomeGpuUrl();
       var keysOK = eng === 'homegpu' ? homeGpuOK : (hasKey() && cloudKeyOK);
       var canStart = keysOK && navigator.mediaDevices && navigator.mediaDevices.getUserMedia;
       els.startBtn.disabled = !canStart && !listening;
@@ -1813,7 +1990,7 @@
       if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
         hint = 'This browser cannot access the microphone.';
       } else if (eng === 'homegpu' && !homeGpuOK) {
-        hint = 'Enter your Home GPU server URL (wss://…/ws) in the transcription settings.';
+        hint = 'Set the Tailscale machine in Maat ⚙ (or paste a wss://…:8443/ws URL).';
       } else if (eng !== 'homegpu' && !hasKey()) {
         hint = 'Enter your translation API key above to enable listening.';
       } else if (!cloudKeyOK) {
@@ -2182,7 +2359,10 @@
       els.fileRoot.value = state.fileRoot || '';
       if (els.autoSave) { els.autoSave.checked = state.autoSave !== false; }
       els.homeGpuUrl.value = state.homeGpuUrl || '';
+      paintGpuUrlHint();
       els.speakerProfile.value = state.speakerProfile || '';
+      if (directionForProfile(state.speakerProfile)) { syncPairFromProfile(); }
+      else if (profileForDirection(state.direction)) { syncPairFromDirection(); }
       applyEngine();
       applyProfileChrome();
       applyView();
@@ -2196,8 +2376,10 @@
       // events
       els.direction.addEventListener('change', function () {
         var v = els.direction.value;
-        state.direction = ['es-en', 'en-es', 'auto'].indexOf(v) >= 0 ? v : 'es-en';
-        saveState(); updateControls();
+        state.direction = DIRECTIONS.indexOf(v) >= 0 ? v : 'es-en';
+        syncPairFromDirection();
+        saveState(); applyProfileChrome(); pushConfig(); updateControls();
+        sendHomeGpuProfile();
       });
       els.provider.addEventListener('change', function () {
         state.provider = els.provider.value === 'openai' ? 'openai' : 'anthropic';
@@ -2256,6 +2438,7 @@
         saveState();
         updateExportNote();
         sendExportOnStop();
+        announceListenToMaat();
       });
       els.exportDest.addEventListener('change', function () {
         state.exportDest = els.exportDest.value;
@@ -2275,12 +2458,11 @@
       }
       els.speakerProfile.addEventListener('change', function () {
         state.speakerProfile = els.speakerProfile.value;
+        syncPairFromProfile();
         saveState();
         applyProfileChrome();
         applyEngine();
-        if (hgWs && hgWs.readyState === 1) {
-          try { hgWs.send(JSON.stringify({ type: 'profile', name: state.speakerProfile })); } catch (e) {}
-        }
+        sendHomeGpuProfile();
       });
       els.homeGpuUrl.addEventListener('input', function () {
         state.homeGpuUrl = els.homeGpuUrl.value.trim();
@@ -2325,14 +2507,33 @@
       }
 
       function fallbackAnalyzeMenu(profile, dest) {
-        var sermon = /^(bible-study|jean-petit)$/.test(profile) ||
-          /bible|iglesia|sermon|church|faith|jean|casa.?de.?fe|estudio/i.test(dest);
-        var meeting = /^(meeting|transcribe)$/.test(profile) ||
-          (dest && !/bible|iglesia|sermon|church|faith|jean|casa.?de.?fe|estudio/i.test(dest) && dest !== 'Podcast');
-        var stats = /^(hmi|patientvolume|patientvolumeIUH|census|afib|troponin|datadictrwd|allison|SCDCernerProject|nsqip|lungtransplant|concept-dag|edw|omop|pico-dag|patientexperience)$/.test(dest) ||
-          ((/volume|census|troponin|afib|ontology|rwd|cohort|patient/i.test(dest)) && dest !== 'Podcast' && dest !== 'AI');
+        var podcast = profile === 'podcast';
+        var sermon = !podcast && (/^(bible-study|jean-petit)$/.test(profile) ||
+          /bible|iglesia|sermon|church|faith|jean|casa.?de.?fe|estudio/i.test(dest));
+        var meeting = !podcast && (/^(meeting|transcribe)$/.test(profile) ||
+          (dest && !/bible|iglesia|sermon|church|faith|jean|casa.?de.?fe|estudio/i.test(dest) && dest !== 'Podcast'));
+        var stats = !podcast && (/^(hmi|patientvolume|patientvolumeIUH|census|afib|troponin|datadictrwd|allison|SCDCernerProject|nsqip|lungtransplant|concept-dag|edw|omop|pico-dag|patientexperience)$/.test(dest) ||
+          ((/volume|census|troponin|afib|ontology|rwd|cohort|patient/i.test(dest)) && dest !== 'Podcast' && dest !== 'AI'));
         if (sermon) { stats = false; }
         var items = [{ id: 'profile', label: "Summarize through this profile's lens", hint: 'The summary this profile already knows how to write', remarkable: false }];
+        if (podcast) {
+          items.push(
+            { id: 'podcast_critique', label: 'Critique this episode', hint: 'Facts, scientific validity, probing questions, political/legal', remarkable: false },
+            { id: 'podcast_notes', label: 'Critique this episode → reMarkable', hint: 'Same critique, with blank space to write', remarkable: true },
+            {
+              id: 'podcast_commands',
+              label: 'Look closer',
+              hint: 'Facts, science, questions, or political/legal — one at a time',
+              remarkable: false,
+              children: [
+                { id: 'podcast_facts', label: 'Facts claimed', hint: 'Numbers, names, dates — asserted vs attributed' },
+                { id: 'podcast_science', label: 'Scientific validity', hint: 'Units, denominators, comparators, causal leaps' },
+                { id: 'podcast_questions', label: 'Probing questions', hint: 'Scale comparisons, mechanism, incentives, falsifiers' },
+                { id: 'podcast_legal', label: 'Political / legal analysis', hint: 'What they said the law is vs what they want it to be' }
+              ]
+            }
+          );
+        }
         if (sermon) {
           items.push(
             { id: 'sermon_notes', label: 'Sermon note-taking guide → reMarkable', hint: 'Outline, claims, questions, with blank space to write', remarkable: true },
@@ -2377,11 +2578,13 @@
         menu.innerHTML = '';
         analyzeMenuView = view || 'root';
         var list = items || [];
-        if (analyzeMenuView === 'meeting_commands') {
-          var group = null;
+        var group = null;
+        if (analyzeMenuView !== 'root') {
           for (var i = 0; i < list.length; i++) {
-            if (list[i].id === 'meeting_commands') { group = list[i]; break; }
+            if (list[i].id === analyzeMenuView && list[i].children) { group = list[i]; break; }
           }
+        }
+        if (group) {
           var back = document.createElement('button');
           back.type = 'button';
           back.className = 'back';
@@ -2391,7 +2594,7 @@
             renderAnalyzeMenu(list, 'root');
           });
           menu.appendChild(back);
-          (group && group.children ? group.children : []).forEach(function (child) {
+          group.children.forEach(function (child) {
             menu.appendChild(analyzeMenuButton(child, list));
           });
         } else {
@@ -2534,6 +2737,7 @@
       });
 
       pushLog('', 'app initialised');
+      announceListenToMaat();
     }
 
     init();

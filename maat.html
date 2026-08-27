@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#0f1419">
 <meta name="mobile-web-app-capable" content="yes">
@@ -237,12 +238,94 @@
       id: "remarkable",
       label: "reMarkable",
       icon: "📝",
-      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443/",
-      hint: "Phone → reMarkable bridge (tailnet :9443). Needs Tailscale and the phone-bridge on the workstation."
+      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443/?listen=current&v=17",
+      hint: "Phone → reMarkable. New job can use the current Maat Listen session (sermon/meeting) as input. Needs Tailscale + phone-bridge."
     }
   ];
   var TOOL_IDS = { music: 1, remarkable: 1 };
   var LAST_TOOL_KEY = "maat.tools.lastTool";
+  var listenStem = "";
+  function getWorkstationToken() {
+    try { return (localStorage.getItem("tb_token") || "").trim(); } catch (e) { return ""; }
+  }
+  function setWorkstationToken(t) {
+    try { localStorage.setItem("tb_token", (t || "").trim()); } catch (e) {}
+  }
+  var DEFAULT_TS_HOST = "harlan-b550-aorus-pro-ac.taila21a91.ts.net";
+  function getTailscaleHost() {
+    try { return (localStorage.getItem("tb_bridge") || "").trim().replace(/\/+$/, ""); } catch (e) { return ""; }
+  }
+  function setTailscaleHost(v) {
+    var t = (v || "").trim().replace(/\/+$/, "");
+    if (!t) return; // never wipe a working Converse/Listen host
+    if (!/^https?:\/\//i.test(t) && !/^wss?:\/\//i.test(t)) t = "https://" + t;
+    try { localStorage.setItem("tb_bridge", t); } catch (e) {}
+  }
+  function tailscaleHostname() {
+    var raw = getTailscaleHost() || ("https://" + DEFAULT_TS_HOST);
+    if (!/^https?:\/\//i.test(raw) && !/^wss?:\/\//i.test(raw)) raw = "https://" + raw;
+    try {
+      var u = new URL(raw.replace(/^ws/i, "http"));
+      return u.hostname || DEFAULT_TS_HOST;
+    } catch (e) { return DEFAULT_TS_HOST; }
+  }
+  function listenGpuPageUrl() {
+    return "https://" + tailscaleHostname() + ":8443/?v=22";
+  }
+  function isSiteListen(url) {
+    var s = String(url || "");
+    if (!s) return true;
+    return /live-translator\.html/i.test(s) && s.indexOf(":8443") < 0;
+  }
+  function pushAuthToFrames() {
+    var token = getWorkstationToken();
+    var bridge = getTailscaleHost() || ("https://" + DEFAULT_TS_HOST);
+    if (!token && !bridge) return;
+    var msg = { type: "maat-auth", token: token || "", bridge: bridge };
+    document.querySelectorAll("iframe").forEach(function (f) {
+      try { if (f.contentWindow) f.contentWindow.postMessage(msg, "*"); } catch (e) {}
+    });
+  }
+  window.addEventListener("message", function (ev) {
+    var d = ev.data;
+    if (!d) return;
+    if (d.type === "maat-listen" && d.session) {
+      listenStem = String(d.session).replace(/[^A-Za-z0-9._-]/g, "");
+      return;
+    }
+    if (d.type === "maat-auth-please") pushAuthToFrames();
+    if (d.type === "maat-auth-offer" && d.token) {
+      if (!getWorkstationToken()) setWorkstationToken(d.token);
+      if (d.bridge) {
+        try { localStorage.setItem("tb_bridge", String(d.bridge)); } catch (e) {}
+      }
+      pushAuthToFrames();
+    }
+    if (d.type === "maat-rm-status") {
+      var note = $("toolsNote");
+      if (!note) return;
+      if (d.state === "ok") note.textContent = "Connected to the workstation.";
+      else if (d.state === "need-token") {
+        note.textContent = getWorkstationToken()
+          ? "Signing in with the Converse token…"
+          : "Open ⚙ and paste the workstation token (same one as Converse).";
+      } else if (d.state === "unreachable") {
+        note.textContent = "Can't reach the box — check Tailscale.";
+      }
+    }
+  });
+  function remarkableUrl() {
+    var t = toolById("remarkable");
+    var base = (t && t.url) || "";
+    try {
+      var u = new URL(base, location.href);
+      u.searchParams.set("listen", listenStem || "current");
+      u.searchParams.set("v", "17");
+      return u.href;
+    } catch (e) {
+      return base;
+    }
+  }
 
   // Peer destinations ≤4. About lives in gear (PR4), not the thumb bar.
   var MODE_IDS = { sermon: 1, practice: 1, converse: 1, tools: 1 };
@@ -251,9 +334,9 @@
       id: "sermon",
       label: "Listen",
       icon: "🌐",
-      url: "./live-translator.html",
+      url: "./live-translator.html?v=22",
       kind: "iframe",
-      hint: "Listen to a service, a meeting or an appointment: transcription, translation when the profile calls for it, and analysis. Pick a profile inside. On iPad prefer the tailnet page if WebSocket fails."
+      hint: "Listen to a service, a meeting, a podcast or an appointment: transcription, translation when the profile calls for it, and analysis (sermon, meeting, or podcast fact/science/legal). Pick a profile inside. On iPad prefer the tailnet page if WebSocket fails."
     },
     {
       id: "practice",
@@ -268,10 +351,10 @@
       id: "converse",
       label: "Converse",
       icon: "💬",
-      // Mic-first + cache-bust after pane-drawer redesign.
-      url: "./assistant.html?v=70&mode=mic",
+      // Mic-first + cache-bust after one-interface layout.
+      url: "./assistant.html?v=88&mode=mic",
       kind: "iframe",
-      hint: "Talk to the home AI — type or speak. Deep link: #converse or #converse?input=mic. Needs Tailscale + tesla-bridge."
+      hint: "Talk to a model or a workstation shell — type or speak. Deep link: #converse or #converse?input=mic. Needs Tailscale + tesla-bridge."
     },
     {
       id: "tools",
@@ -286,6 +369,7 @@
   // When Maat itself is opened from the tailnet host with no port, Listen's
   // WebSocket is more reliable same-origin on :8443 than via the Netlify page.
   function defaultUrl(mode) {
+    if (mode.id === "sermon") return listenGpuPageUrl();
     var onTailnetOriginNoPort =
       location.hostname.indexOf(".ts.net") >= 0 && location.port === "";
     if (onTailnetOriginNoPort && mode.id === "sermon") {
@@ -339,8 +423,13 @@
       var url = a.kind === "tools" ? "" : (u === undefined ? defaultUrl(a) : u);
       // Bust Safari/PWA cache for Converse after UI changes (Talk to… header).
       if (a.id === "converse" && url && url.indexOf("assistant.html") >= 0) {
-        url = withQueryParam(url, "v", "70");
+        url = withQueryParam(url, "v", "83");
         if (url.indexOf("mode=") < 0) url = withQueryParam(url, "mode", "mic");
+      }
+      // Listen must be the Tailscale :8443 page so the WebSocket is same-origin
+      // on iPad. A saved Netlify live-translator.html URL cannot open wss://.
+      if (a.id === "sermon") {
+        url = isSiteListen(url) ? listenGpuPageUrl() : withQueryParam(url, "v", "22");
       }
       return {
         id: a.id, label: a.label, icon: a.icon, kind: a.kind, hint: a.hint,
@@ -423,18 +512,22 @@
       var f = $("tool-frame-" + t.id);
       if (!f) return;
       var on = t.id === id;
-      if (on && t.url && !f.getAttribute("src")) {
-        watchIframeLoad(f, { id: "tools/" + t.id, label: t.label, url: t.url });
-        f.src = t.url;
+      var want = t.id === "remarkable" ? remarkableUrl() : t.url;
+      if (on && want && f.getAttribute("src") !== want) {
+        watchIframeLoad(f, { id: "tools/" + t.id, label: t.label, url: want });
+        f.src = want;
       }
       f.classList.toggle("active", on);
     });
     var note = $("toolsNote");
     if (note) {
       var t = toolById(id);
-      note.textContent = "Tailscale required · " + (t.hint || t.label);
+      note.textContent = (t.id === "remarkable")
+        ? "Connecting…"
+        : ("Needs the home box on Tailscale · " + (t.hint || t.label));
     }
     if (opts.showTools !== false) show("tools");
+    if (id === "remarkable") pushAuthToFrames();
   }
 
   function openToolPicker() {
@@ -514,7 +607,7 @@
         wrap.id = "view-tools";
         wrap.innerHTML =
           '<div class="tools-bar" id="toolsBar"></div>' +
-          '<div class="tools-note" id="toolsNote">Tailscale required for Tools</div>' +
+          '<div class="tools-note" id="toolsNote">Tools</div>' +
           '<div class="tools-frames" id="toolsFrames"></div>';
         views.appendChild(wrap);
         var frames = $("toolsFrames");
@@ -585,12 +678,21 @@
       var m = app.label + " did not load (" + app.url + ") — is Tailscale on / service running?";
       reportError("maat.html/" + app.id, m); showBanner(m);
     }, 8000);
-    frame.addEventListener("load", function () { done = true; clearTimeout(timer); });
+    frame.addEventListener("load", function () {
+      done = true; clearTimeout(timer);
+      pushAuthToFrames();
+    });
     frame.addEventListener("error", function () {
       done = true; clearTimeout(timer);
       var m = app.label + " failed to load (" + app.url + ")";
       reportError("maat.html/" + app.id, m); showBanner(m);
     });
+  }
+
+  function srcHasCacheToken(cur, want) {
+    var m = String(want || "").match(/[?&](v=[^&]+)/);
+    if (!m) return !!cur;
+    return String(cur).indexOf(m[1]) >= 0;
   }
 
   function show(id) {
@@ -604,9 +706,13 @@
           v.classList.toggle("active", on);
           if (on) selectTool(activeTool || getLastTool(), { showTools: false });
         } else {
-          if (on && v.tagName === "IFRAME" && !v.getAttribute("src") && v.dataset.src) {
-            watchIframeLoad(v, a);
-            v.src = v.dataset.src;
+          if (on && v.tagName === "IFRAME") {
+            var want = a.url || v.dataset.src;
+            var cur = v.getAttribute("src") || "";
+            if (want && (!cur || (a.id === "converse" && !srcHasCacheToken(cur, want)))) {
+              watchIframeLoad(v, a);
+              v.src = want;
+            }
           }
           v.classList.toggle("active", on);
         }
@@ -620,6 +726,43 @@
       var about = $("aboutPanel");
       if (about) about.innerHTML = aboutHtml();
       var wrap = $("settingsFields"); wrap.innerHTML = "";
+      var tokLab = document.createElement("label");
+      tokLab.textContent = "Workstation token (all of Maat — Converse, Listen, reMarkable)";
+      tokLab.htmlFor = "maatToken";
+      var tokInp = document.createElement("input");
+      tokInp.id = "maatToken";
+      tokInp.type = "password";
+      tokInp.autocomplete = "off";
+      tokInp.autocapitalize = "off";
+      tokInp.placeholder = "already saved if you signed in on Converse";
+      tokInp.value = getWorkstationToken();
+      wrap.appendChild(tokLab);
+      wrap.appendChild(tokInp);
+      var tokHint = document.createElement("p");
+      tokHint.className = "note";
+      tokHint.style.margin = "4px 0 16px";
+      tokHint.style.fontSize = "12px";
+      tokHint.textContent = "One bearer for the home box. Copied from Converse if you already entered it there.";
+      wrap.appendChild(tokHint);
+      var tsLab = document.createElement("label");
+      tsLab.textContent = "Tailscale machine (all of Maat — Converse, Listen GPU, Tools)";
+      tsLab.htmlFor = "maatBridge";
+      var tsInp = document.createElement("input");
+      tsInp.id = "maatBridge";
+      tsInp.type = "text";
+      tsInp.autocomplete = "off";
+      tsInp.autocapitalize = "off";
+      tsInp.spellcheck = false;
+      tsInp.placeholder = "https://your-machine.your-tailnet.ts.net";
+      tsInp.value = getTailscaleHost() || ("https://" + DEFAULT_TS_HOST);
+      wrap.appendChild(tsLab);
+      wrap.appendChild(tsInp);
+      var tsHint = document.createElement("p");
+      tsHint.className = "note";
+      tsHint.style.margin = "4px 0 16px";
+      tsHint.style.fontSize = "12px";
+      tsHint.textContent = "The MagicDNS name of the home box. Listen uses it as wss://…:8443/ws. Same value as Converse’s Bridge URL.";
+      wrap.appendChild(tsHint);
       modes.forEach(function (a) {
         if (a.kind === "tools") {
           var head = document.createElement("p");
@@ -664,6 +807,13 @@
     $("settings").classList.toggle("open", open);
   }
   $("saveModes").onclick = function () {
+    var tokEl = $("maatToken");
+    if (tokEl) {
+      setWorkstationToken(tokEl.value);
+    }
+    var tsEl = $("maatBridge");
+    if (tsEl) setTailscaleHost(tsEl.value);
+    pushAuthToFrames();
     modes.forEach(function (a) {
       if (a.kind === "about" || a.kind === "tools") return;
       var el = $("url-" + a.id);
