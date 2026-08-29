@@ -70,9 +70,15 @@
     padding-bottom: env(safe-area-inset-bottom, 0);
   }
   #tabs button {
-    flex: 1; background: none; border: 0; color: #7a8490; cursor: pointer;
-    padding: 10px 4px 12px; font-size: 11px; display: flex; flex-direction: column;
+    /* min-width:0 matters now that there are five destinations plus the gear:
+       a flex item defaults to min-width:auto, so "Converse" would refuse to
+       shrink and push the row wider than a 320 px phone. The label ellipses
+       instead of overflowing; the icon above it stays the real target. */
+    flex: 1 1 0; min-width: 0; background: none; border: 0; color: #7a8490;
+    cursor: pointer;
+    padding: 10px 2px 12px; font-size: 11px; display: flex; flex-direction: column;
     align-items: center; gap: 3px; touch-action: manipulation;
+    overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
     -webkit-user-select: none; user-select: none;
   }
   #tabs button .ic { font-size: 22px; line-height: 1; }
@@ -228,13 +234,6 @@
   // PR3: Music + reMarkable fold under Tools (last-tool memory + long-press).
   var TOOL_DEFS = [
     {
-      id: "music",
-      label: "Music",
-      icon: "🎵",
-      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:8444/",
-      hint: "Record or upload music — levels, clipping, spectrum, tempo, key (tailnet :8444). Full-rate capture; not the 16 kHz speech path."
-    },
-    {
       id: "remarkable",
       label: "reMarkable",
       icon: "📝",
@@ -242,7 +241,7 @@
       hint: "Phone → reMarkable. New job can use the current Maat Listen session (sermon/meeting) as input. Needs Tailscale + phone-bridge."
     }
   ];
-  var TOOL_IDS = { music: 1, remarkable: 1 };
+  var TOOL_IDS = { remarkable: 1 };
   var LAST_TOOL_KEY = "maat.tools.lastTool";
   var listenStem = "";
   function getWorkstationToken() {
@@ -405,8 +404,12 @@
     }
   }
 
-  // Peer destinations ≤4. About lives in gear (PR4), not the thumb bar.
-  var MODE_IDS = { sermon: 1, practice: 1, converse: 1, tools: 1 };
+  // Peer destinations. The bar held four for a long time on the argument that
+  // five is too many for a thumb; Music is promoted out of Tools because it is
+  // a thing you go and do, not a utility you reach for mid-task, and burying
+  // it one tap deeper made it easy to forget it exists. Tools keeps its own
+  // slot for reMarkable. About stays in the gear.
+  var MODE_IDS = { sermon: 1, practice: 1, converse: 1, music: 1, tools: 1 };
   var DEFAULTS = [
     {
       id: "sermon",
@@ -435,12 +438,20 @@
       hint: "Talk to a model or a workstation shell — type or speak. Deep link: #converse or #converse?input=mic. Needs Tailscale + tesla-bridge."
     },
     {
+      id: "music",
+      label: "Music",
+      icon: "🎵",
+      url: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:8444/",
+      kind: "iframe",
+      hint: "Record or upload, then pick a lens: sound engineering, bass, drums, marimba or choir. Full-rate capture (tailnet :8444) — not the 16 kHz speech path. Deep link: #music"
+    },
+    {
       id: "tools",
       label: "Tools",
       icon: "🛠️",
       url: "",
       kind: "tools",
-      hint: "Music analyzer + reMarkable bridge. Opens last tool. Long-press this tab to jump. Needs Tailscale. Deep link: #tools?tool=music"
+      hint: "reMarkable bridge — phone to tablet. Needs Tailscale. Deep link: #tools?tool=remarkable"
     }
   ];
 
@@ -478,7 +489,7 @@
     var t = null;
     try { t = localStorage.getItem(LAST_TOOL_KEY); } catch (e) {}
     if (t && TOOL_IDS[t]) return t;
-    return "music";
+    return "remarkable";
   }
   function setLastTool(id) {
     if (!TOOL_IDS[id]) return;
@@ -553,8 +564,8 @@
       '<strong style="color:#e8e6e1">Tools</strong>. Practice is public; the rest need Tailscale home backends.</p>' +
       '<p style="margin:0 0 6px"><strong style="color:#e8e6e1">Deep links</strong> — ' +
       '<code>#practice?lang=es</code> · <code>#converse?input=mic</code> · ' +
-      '<code>#tools?tool=music</code> · <code>?mode=sermon</code></p>' +
-      '<p style="margin:0;font-size:12px">Aliases: voice→Converse+mic, assistant→Converse, music/remarkable→Tools. ' +
+      '<code>#music</code> · <code>?mode=sermon</code></p>' +
+      '<p style="margin:0;font-size:12px">Aliases: voice→Converse+mic, assistant→Converse, remarkable→Tools. ' +
       'Public drills stay at languages.html / *-speech-drill.html. Load failures (Tailscale/service down) ' +
       'surface as a banner after the iframe timeout — not by guessing connectivity from the page origin.</p>'
     );
@@ -1045,9 +1056,16 @@
     if (mode === "listen") mode = "sermon";
     if (mode === "voice") { mode = "converse"; if (!input) input = "mic"; }
     if (mode === "assistant") { mode = "converse"; }
-    if (mode === "music" || mode === "remarkable") {
+    // #remarkable is still a tool; #music is now a destination of its own and
+    // must NOT be rewritten into Tools, or promoting it changes nothing.
+    if (mode === "remarkable") {
       tool = mode;
       mode = "tools";
+    }
+    // Old links: #tools?tool=music now lands on the Music tab.
+    if (mode === "tools" && tool === "music") {
+      tool = null;
+      mode = "music";
     }
     if (mode && !MODE_IDS[mode]) mode = null;
 
