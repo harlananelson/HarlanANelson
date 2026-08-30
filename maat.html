@@ -323,7 +323,13 @@
     } catch (e) { return DEFAULT_TS_HOST; }
   }
   function listenGpuPageUrl() {
-    return "https://" + tailscaleHostname() + ":8443/?v=22";
+    // Bumped to 24 for the scripture card that extends as the reading grows
+    // (#99). The server now sends passage events with replaces:true and the
+    // page replaces the card in place; a cached copy from before that change
+    // has no such handler and appends a new card for every update, so a long
+    // reading arrives as the same passage repeated ten times over. The phone
+    // keeps serving the cached page until this number changes.
+    return "https://" + tailscaleHostname() + ":8443/?v=24";
   }
   function isSiteListen(url) {
     var s = String(url || "");
