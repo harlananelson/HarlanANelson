@@ -1521,26 +1521,54 @@
       return out;
     }
 
+    function passageSameChapter(a, b) {
+      function chap(r) {
+        var m = String(r || '').match(/^(.*\s)(\d+):/);
+        return m ? (m[1] + m[2]) : String(r || '');
+      }
+      return !!a && !!b && chap(a) === chap(b);
+    }
+
     function hgHandleEvent(ev) {
       if (ev.type === 'interim') {
         // in-progress Spanish from the server, ahead of sentence commit
         setInterim('🎙 ' + ev.text);
       } else if (ev.type === 'passage') {
-        // scripture passage detected in the speech - show it as its own row
-        var pseg = {
-          id: nextId++,
-          es: '📖 ' + ev.ref_es + (ev.es ? ' — ' + ev.es : ''),
-          en: '📖 ' + ev.ref_en + (ev.en ? ' — ' + ev.en : ''),
-          esState: 'done', enState: 'done', error: '', t: Date.now(),
-          heard: '', dir: 'es-en', passage: true
-        };
-        segments.push(pseg);
-        removePlaceholder();
-        addRow(pseg);
-        paintRow(pseg);
+        // scripture passage detected in the speech - show it as its own row.
+        // Jean Petit names 1–2 verses then reads many more: a later card
+        // with the same book+chapter *replaces* the announced-only card.
+        var esT = '📖 ' + ev.ref_es + (ev.es ? ' — ' + ev.es : '');
+        var enT = '📖 ' + ev.ref_en + (ev.en ? ' — ' + ev.en : '');
+        var updated = false;
+        if (ev.replaces) {
+          for (var pi = segments.length - 1; pi >= 0; pi--) {
+            var prev = segments[pi];
+            if (!prev.passage || !prev.ref_en) { continue; }
+            if (passageSameChapter(prev.ref_en, ev.ref_en)) {
+              prev.es = esT; prev.en = enT;
+              prev.ref_en = ev.ref_en; prev.ref_es = ev.ref_es;
+              paintRow(prev);
+              updated = true;
+            }
+            break;
+          }
+        }
+        if (!updated) {
+          var pseg = {
+            id: nextId++,
+            es: esT, en: enT,
+            esState: 'done', enState: 'done', error: '', t: Date.now(),
+            heard: '', dir: 'es-en', passage: true,
+            ref_en: ev.ref_en, ref_es: ev.ref_es
+          };
+          segments.push(pseg);
+          removePlaceholder();
+          addRow(pseg);
+          paintRow(pseg);
+        }
         maybeScroll();
         updateStatus();
-        pushLog('', 'passage: ' + ev.ref_en);
+        pushLog('', 'passage: ' + ev.ref_en + (updated ? ' (extended)' : ''));
       } else if (ev.type === 'lexicon') {
         // a Greek/Hebrew word was mentioned: show it with its script and sense
         var tseg = {
