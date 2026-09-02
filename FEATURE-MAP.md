@@ -233,5 +233,5 @@ localStorage keys: `tb_token`, `tb_bridge`, `maat_translation_key`, `maat_transc
 ## What this is not
 
 - Not a visual heatmap or Figma overlay.
-- Not shipped native iPad audio (plan only: `~/projects/grok/usage/maat-native-ipad-shell-plan.md`).
+- Native iPad shell sketched (`ios/Maat/`, plan: `~/projects/grok/usage/maat-native-ipad-shell-plan.md`). Needs Xcode on a Mac to install.
 - Not a substitute for the `listen-session` skill when the question is “what did I just record?”
