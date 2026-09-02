@@ -1504,6 +1504,12 @@
     // back {"type":"es"|"en", "id":..., "text":...} events.
     var hgWs = null;
     var hgMap = {};   // server sentence id -> segment
+    var hgConnecting = false;
+    var hgReconnectTimer = null;
+    var hgReconnectDelay = 1000;
+    var hgHold = [];          // 16 kHz PCM ArrayBuffers while the socket is down
+    var hgHoldSamples = 0;
+    var HG_HOLD_MAX = 16000 * 45;  // ~45 s of 16 kHz mono float32
 
     function downsampleTo16k(frame, rate) {
       if (rate === 16000) { return frame; }
@@ -1642,10 +1648,62 @@
       }
     }
 
+    function hgHoldPush(buf) {
+      var n = buf.byteLength / 4;
+      while (hgHoldSamples + n > HG_HOLD_MAX && hgHold.length) {
+        hgHoldSamples -= hgHold.shift().byteLength / 4;
+      }
+      hgHold.push(buf);
+      hgHoldSamples += n;
+    }
+
+    function hgFlushHold() {
+      if (!hgWs || hgWs.readyState !== 1 || !hgHold.length) { return; }
+      var n = hgHold.length;
+      var sec = (hgHoldSamples / 16000).toFixed(1);
+      while (hgHold.length) { hgWs.send(hgHold.shift()); }
+      hgHoldSamples = 0;
+      pushLog('', 'replayed ' + n + ' held frames (~' + sec + ' s) after reconnect');
+    }
+
+    function hgCancelReconnect() {
+      if (hgReconnectTimer) { clearTimeout(hgReconnectTimer); hgReconnectTimer = null; }
+      hgReconnectDelay = 1000;
+    }
+
+    function hgScheduleReconnect() {
+      if (!listening || state.transcribeEngine !== 'homegpu') { return; }
+      if (hgConnecting || (hgWs && hgWs.readyState === 1) || hgReconnectTimer) { return; }
+      var wait = hgReconnectDelay;
+      hgReconnectDelay = Math.min(hgReconnectDelay * 2, 8000);
+      setStatus('err', 'Home GPU connection lost — still listening, reconnecting…');
+      hgReconnectTimer = setTimeout(function () {
+        hgReconnectTimer = null;
+        if (!listening || state.transcribeEngine !== 'homegpu') { return; }
+        if (hgWs && hgWs.readyState === 1) { return; }
+        pushLog('', 'Home GPU reconnect attempt');
+        hgConnect().then(function (ok) {
+          if (ok) {
+            hgCancelReconnect();
+            hgFlushHold();
+            if (audioCtx && audioCtx.resume) { audioCtx.resume(); }
+            setStatus('live', isMonolingual()
+              ? 'Listening — reconnected to Home GPU.'
+              : 'Listening — reconnected; streaming to Home GPU.');
+          } else {
+            hgScheduleReconnect();
+          }
+        });
+      }, wait);
+    }
+
     function hgConnect() {
       return new Promise(function (resolve) {
+        if (hgConnecting) { resolve(false); return; }
+        hgConnecting = true;
         var url = resolvedHomeGpuUrl();
         try { hgWs = new WebSocket(url); } catch (e) {
+          hgConnecting = false;
           setStatus('err', 'Bad Home GPU server URL: ' + ((e && e.message) || e));
           resolve(false); return;
         }
@@ -1654,6 +1712,7 @@
         var timer = setTimeout(function () {
           if (settled) { return; }
           settled = true;
+          hgConnecting = false;
           try { hgWs.close(); } catch (e) {}
           setStatus('err', 'Home GPU server did not respond — is it running, and is tailscale serve active?');
           resolve(false);
@@ -1663,7 +1722,7 @@
           try { ev = JSON.parse(m.data); } catch (e) { return; }
           if (ev.type === 'ready') {
             if (!settled) {
-              settled = true; clearTimeout(timer);
+              settled = true; clearTimeout(timer); hgConnecting = false;
               // Name the recording so the server files it as <name>-<date>.
               // Reuses the export filename root the user already sets, so the
               // saved transcript matches what a download would have been called.
@@ -1684,17 +1743,18 @@
         };
         hgWs.onerror = function () {
           if (settled) { return; }
-          settled = true; clearTimeout(timer);
+          settled = true; clearTimeout(timer); hgConnecting = false;
           setStatus('err', 'Could not connect to the Home GPU server. Check the URL and that this device is on Tailscale.');
           resolve(false);
         };
         hgWs.onclose = function () {
+          hgWs = null;
+          hgConnecting = false;
           if (!settled) { settled = true; clearTimeout(timer); resolve(false); }
           else if (listening && state.transcribeEngine === 'homegpu') {
             pushLog('error', 'Home GPU connection closed');
-            setStatus('err', 'Home GPU connection lost — press Stop, then Start to reconnect.');
+            hgScheduleReconnect();
           }
-          hgWs = null;
         };
       });
     }
@@ -1918,9 +1978,16 @@
       var frameMs = (n / srcRate) * 1000;
       setLevel(rms);
       if (state.transcribeEngine === 'homegpu') {
-        // continuous streaming: the server does its own VAD and chunking
+        // continuous streaming: the server does its own VAD and chunking.
+        // If the iPad lost its iPhone/Tailscale path, keep capturing and hold
+        // PCM until the socket is back — otherwise the UI looks live while
+        // nothing is saved (CRS podcast 2026-09-02).
+        var pcm = downsampleTo16k(frame, srcRate).buffer;
         if (hgWs && hgWs.readyState === 1) {
-          hgWs.send(downsampleTo16k(frame, srcRate).buffer);
+          hgWs.send(pcm);
+        } else if (listening) {
+          hgHoldPush(pcm);
+          hgScheduleReconnect();
         }
         return;
       }
@@ -2031,6 +2098,9 @@
 
     function stop() {
       listening = false;
+      hgCancelReconnect();
+      hgHold = [];
+      hgHoldSamples = 0;
       // Keep the Home GPU session (and its transcript) until Clear.
       // A full disconnect used to open a new empty session on the next Start,
       // so Analyze reported "nothing transcribed" after Stop.
@@ -2573,6 +2643,18 @@
       });
       els.startBtn.addEventListener('click', function () {
         if (listening) { stop(); } else { start(); }
+      });
+      window.addEventListener('online', function () {
+        if (listening && state.transcribeEngine === 'homegpu'
+            && !(hgWs && hgWs.readyState === 1)) {
+          hgReconnectDelay = 1000;
+          hgScheduleReconnect();
+        }
+      });
+      window.addEventListener('offline', function () {
+        if (listening && state.transcribeEngine === 'homegpu') {
+          setStatus('err', 'Network gone — still listening, will reconnect.');
+        }
       });
       els.clearBtn.addEventListener('click', clearTranscript);
       els.copyBtn.addEventListener('click', copyTranscript);
