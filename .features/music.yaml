@@ -1,0 +1,20 @@
+name: music
+purpose: >
+  Full-rate audio capture and lenses (sound engineering, bass, drums,
+  marimba, choir). Not the 16 kHz speech path. Own thumb-bar destination.
+apps:
+  - web
+entry_points:
+  - "maat.html#music"
+  - "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:8444/"
+core_components:
+  - maat.html
+selectors:
+  shell_tab: "#tab-music"
+  shell_iframe: "#view-music"
+how_to_reach: "Tap Music. Old #tools?tool=music is rewritten to this tab."
+needs: Tailscale
+related_features:
+  - shell
+traps:
+  - "Do not look for Music under Tools"

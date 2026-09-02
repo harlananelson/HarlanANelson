@@ -1,0 +1,34 @@
+name: converse
+purpose: Talk to a model or workstation shell. Type or speak. Default cold open.
+apps:
+  - web
+entry_points:
+  - "maat.html#converse"
+  - "maat.html#converse?input=mic"
+  - "assistant.html?v=88&mode=mic"
+core_components:
+  - maat.html
+  - assistant.html
+selectors:
+  shell_tab: "#tab-converse"
+  shell_iframe: "#view-converse"
+  talk: "#talkBtn"
+  type: "#barInput"
+  send: "#barSend"
+  target: "#targetBtn"
+  sound: "#soundBtn"
+  more: "#overflowBtn"
+  status: "#status"
+  transcript: "#transcript"
+  cfg_bridge: "#cfgBridge"
+  cfg_token: "#cfgToken"
+how_to_reach: >
+  Cold open maat.html, or tap Converse.
+  #converse?input=mic sets mode=mic without replacing a Settings host.
+needs: Tailscale + tesla-bridge
+related_features:
+  - shell
+  - settings
+traps:
+  - "Talk hides when the browser has no mic; type+Send remain"
+  - "Errors go to #status — Tesla/in-car Chromium has no console"

@@ -1,0 +1,35 @@
+name: shell
+purpose: >
+  Maat PWA chrome. Five destinations in the thumb bar plus gear.
+  Cold open is always Converse. Last destination is not restored.
+apps:
+  - web
+entry_points:
+  - maat.html
+  - https://harlananelson.com/maat.html
+core_components:
+  - maat.html
+selectors:
+  banner: "#banner"
+  views: "#views"
+  tabs: "#tabs"
+  tab_listen: "#tab-sermon"
+  tab_practice: "#tab-practice"
+  tab_converse: "#tab-converse"
+  tab_music: "#tab-music"
+  tab_tools: "#tab-tools"
+  gear: "#tabs button.gear"
+  settings: "#settings"
+  tool_picker: "#toolPicker"
+how_to_reach: "Open maat.html. Do not search for #tab-listen — Listen's id is sermon."
+traps:
+  - "Listen tab id is sermon, label is Listen"
+  - "Practice iframe cannot navigate the shell (sandbox)"
+  - "#tools?tool=music lands on Music, not Tools"
+related_features:
+  - listen
+  - practice
+  - converse
+  - music
+  - tools-remarkable
+  - settings

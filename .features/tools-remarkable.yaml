@@ -1,0 +1,32 @@
+name: tools-remarkable
+purpose: Phone to reMarkable jobs. Typical path is current Listen session to a study guide on the tablet.
+apps:
+  - web
+entry_points:
+  - "maat.html#tools?tool=remarkable"
+  - "maat.html#remarkable"
+  - "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net:9443/"
+core_components:
+  - maat.html
+  - "~/projects/remarkable/phone-bridge/static/index.html"
+selectors:
+  shell_tab: "#tab-tools"
+  tools_wrap: "#view-tools"
+  tool_frame: "#tool-frame-remarkable"
+  tools_note: "#toolsNote"
+  go: "#go-btn"
+  preview_first: "#preview-first"
+  source_line: "#source-line"
+  listen_select: "#listen-select"
+  gear: "#gear-btn"
+how_to_reach: >
+  Tap Tools (last tool) or long-press Tools for the picker.
+  Frame URL gets listen=<stem> from Listen's maat-listen postMessage.
+needs: Tailscale + phone-bridge + workstation token (same as Converse)
+related_features:
+  - shell
+  - listen
+  - settings
+traps:
+  - "Long-press Tools opens picker; short tap opens last tool"
+  - "Need-token status means paste tb_token in Maat gear, not a new account"

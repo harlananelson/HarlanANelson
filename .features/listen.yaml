@@ -1,0 +1,37 @@
+name: listen
+purpose: >
+  Transcribe, optionally translate, and analyze a live room
+  (sermon, meeting, podcast). Internal mode id is sermon.
+apps:
+  - web
+entry_points:
+  - "maat.html?mode=sermon"
+  - "maat.html#listen"
+  - live-translator.html
+core_components:
+  - maat.html
+  - live-translator.html
+selectors:
+  shell_tab: "#tab-sermon"
+  shell_iframe: "#view-sermon"
+  start: "#startBtn"
+  direction: "#direction"
+  speaker_profile: "#speakerProfile"
+  file_root: "#fileRoot"
+  home_gpu: "#homeGpuUrl"
+how_to_reach: >
+  Tap Listen in the Maat thumb bar, or open ?mode=sermon.
+  Prefer the tailnet :8443 page on iPad if the Netlify WebSocket fails.
+needs: Tailscale + home GPU :8443 for the reliable path
+postmessage:
+  inbound: maat-auth
+  outbound: "maat-listen {session}"
+transcript_store: "~/.config/tesla-bridge/transcripts/"
+related_features:
+  - shell
+  - settings
+  - tools-remarkable
+traps:
+  - "Session name is #fileRoot, not the meeting topic"
+  - "Empty Settings keys must not clear framed Listen keys"
+  - "Use listen-session skill; do not find -newermt today"

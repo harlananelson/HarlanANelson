@@ -55,5 +55,6 @@ Unknown `mode` / `lang` / `input` / `tool` values are ignored (allowlists).
 
 ## Related
 
+- **Feature map (agent GUI):** [`FEATURE-MAP.md`](FEATURE-MAP.md) — how to reach each destination, DOM ids, deep links, traps. YAML lookup in `.features/`.
 - IA design: `~/projects/grok/projects/harlananelson/docs/maat-ia/maat-ia-design.md`
 - `languages.html`, `assistant.html`

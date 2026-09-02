@@ -1,0 +1,36 @@
+name: settings
+purpose: Browser-local URL overrides, Tailscale host, and API keys pushed into framed apps.
+apps:
+  - web
+entry_points:
+  - "maat.html#about"
+core_components:
+  - maat.html
+selectors:
+  gear: "#tabs button.gear"
+  overlay: "#settings"
+  token: "FAKESECRET_s1t2u3v4w5x6y7z8a9b0"
+  bridge: "#maatBridge"
+  translation_key: "#maatTranslationKey"
+  transcription_key: "#maatTranscriptionKey"
+  clear_keys: "#clearMaatKeys"
+  save: "#saveModes"
+  cancel: "#closeSettings"
+how_to_reach: "Tap the gear in the thumb bar, or #about."
+localstorage:
+  - tb_token
+  - tb_bridge
+  - maat_translation_key
+  - maat_transcription_key
+  - maat_provider
+  - maat_model
+  - maat_urls
+  - maat.tools.lastTool
+related_features:
+  - shell
+  - listen
+  - converse
+  - tools-remarkable
+traps:
+  - "Blanking a key field and Save does not clear framed Listen keys — use Clear keys"
+  - "Empty Tailscale host is a no-op (will not wipe a working host)"

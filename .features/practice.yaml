@@ -1,0 +1,28 @@
+name: practice
+purpose: Public speech drills (ES/EN/JA/SW). No Tailscale.
+apps:
+  - web
+entry_points:
+  - "maat.html#practice"
+  - "maat.html#practice?lang=es"
+  - languages.html
+core_components:
+  - maat.html
+  - languages.html
+  - spanish-speech-drill.html
+  - english-speech-drill.html
+  - japanese-speech-drill.html
+  - swahili-speech-drill.html
+selectors:
+  shell_tab: "#tab-practice"
+  shell_iframe: "#view-practice"
+  tab_es: "#tab-es"
+  tab_en: "#tab-en"
+  tab_ja: "#tab-ja"
+  tab_sw: "#tab-sw"
+how_to_reach: "Tap Practice, or #practice?lang=es|en|ja|sw (allowlisted)."
+related_features:
+  - shell
+traps:
+  - "Unknown lang values are ignored"
+  - "Last language is localStorage.languages_last"
