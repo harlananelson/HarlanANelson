@@ -2047,7 +2047,87 @@
     }
 
     // ---- start / stop ----
+    function hasNativeAsr() {
+      try {
+        return !!(window.webkit && webkit.messageHandlers && webkit.messageHandlers.maatAsr);
+      } catch (e) { return false; }
+    }
+
+    var nativeAsrQueue = [];   // finals waiting for Tailscale flush
+    function nativeAsrLang() {
+      var w = srcWhisperLang() || srcCloudLang() || '';
+      if (w.indexOf('es') === 0 || w === 'spanish') return 'es-ES';
+      if (w.indexOf('en') === 0 || w === 'english') return 'en-US';
+      return 'en-US';
+    }
+
+    function nativeAsrPaint(text, done) {
+      if (!text) { return; }
+      if (!done) { setInterim(text); return; }
+      setInterim('');
+      var seg = {
+        id: nextId++, es: text, esState: 'done', en: text,
+        enState: 'done', error: '', t: Date.now(), heard: text, dir: state.direction
+      };
+      segments.push(seg);
+      removePlaceholder();
+      addRow(seg);
+      paintRow(seg);
+      maybeScroll();
+      updateStatus();
+    }
+
+    function nativeAsrFlush(text) {
+      if (text) { nativeAsrQueue.push(text); }
+      var origin = hgHttpOrigin();
+      if (!origin || !navigator.onLine) { return; }
+      var pending = nativeAsrQueue.slice();
+      nativeAsrQueue = [];
+      pending.forEach(function (line) {
+        fetch(origin + '/api/transcript/append', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ session: sessionName(), text: line })
+        }).catch(function () { nativeAsrQueue.push(line); });
+      });
+    }
+
+    window.__maatAsr = function (ev) {
+      if (!ev) { return; }
+      if (ev.type === 'partial') { nativeAsrPaint(ev.text, false); }
+      else if (ev.type === 'final') {
+        nativeAsrPaint(ev.text, true);
+        nativeAsrFlush(ev.text);
+      } else if (ev.type === 'error') {
+        pushLog('error', 'native ASR: ' + (ev.text || ''));
+        setStatus('err', 'On-device ASR: ' + (ev.text || 'error'));
+      } else if (ev.type === 'status' && ev.state === 'listening') {
+        setStatus('live', 'Listening — on-device Neural Engine (Apple speech).');
+      }
+    };
+    window.addEventListener('online', function () { nativeAsrFlush(); });
+
     function start() {
+      if (hasNativeAsr()) {
+        listening = true;
+        updateControls();
+        pushConfig();
+        announceListenToMaat();
+        pushLog('', 'Start pressed — native on-device ASR');
+        setStatus('idle', 'Starting on-device speech recognition…');
+        try {
+          webkit.messageHandlers.maatAsr.postMessage({
+            cmd: 'start',
+            language: nativeAsrLang(),
+            session: sessionName()
+          });
+        } catch (e) {
+          listening = false;
+          updateControls();
+          setStatus('err', 'Native ASR failed to start: ' + ((e && e.message) || e));
+        }
+        return;
+      }
       if (state.transcribeEngine === 'homegpu') {
         if (!resolvedHomeGpuUrl()) {
           setStatus('err', 'Set the Tailscale machine in Maat ⚙ (or paste a wss://…:8443/ws URL).');
@@ -2098,6 +2178,9 @@
 
     function stop() {
       listening = false;
+      if (hasNativeAsr()) {
+        try { webkit.messageHandlers.maatAsr.postMessage({ cmd: 'stop' }); } catch (e) {}
+      }
       hgCancelReconnect();
       hgHold = [];
       hgHoldSamples = 0;
@@ -2128,7 +2211,7 @@
       var cloudKeyOK = eng !== 'cloud' || !!(state.apiKeys.openai || '').trim();
       var homeGpuOK = eng !== 'homegpu' || !!resolvedHomeGpuUrl();
       var keysOK = eng === 'homegpu' ? homeGpuOK : (hasKey() && cloudKeyOK);
-      var canStart = keysOK && navigator.mediaDevices && navigator.mediaDevices.getUserMedia;
+      var canStart = hasNativeAsr() || (keysOK && navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
       els.startBtn.disabled = !canStart && !listening;
       els.startBtn.textContent = listening ? '■ Stop' : '● Start listening';
       els.startBtn.classList.toggle('recording', listening);

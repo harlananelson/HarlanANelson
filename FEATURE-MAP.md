@@ -67,7 +67,7 @@ Hands (browser) still required. This map only tells the hands where to go.
 - Practice iframe is sandboxed (`allow-scripts allow-same-origin allow-forms allow-popups allow-downloads`) — it cannot navigate the shell.
 - `#tools?tool=music` is rewritten to the **Music** tab, not Tools.
 - Empty Settings key fields are a no-op on save (do not clear framed Listen keys). **Clear keys** is the only wipe.
-- Native iPad audio shell (`WKWebView` + `webkit.messageHandlers.maatAudio`) is a **plan**, not shipped. Live path is still `getUserMedia` inside the iframes.
+- Native iPad shell is **sketched** in `ios/Maat/` (`webkit.messageHandlers.maatAsr`, Apple on-device Speech / ANE). Not installed until a Mac signs it. Safari PWA still uses `getUserMedia` + Home GPU.
 
 **Related:** `.features/shell.yaml`, `.features/settings.yaml`
 
@@ -83,7 +83,7 @@ Hands (browser) still required. This map only tells the hands where to go.
 
 1. Maat → thumb **Listen** (`#tab-sermon`).
 2. Or `maat.html?mode=sermon`.
-3. Iframe `#view-sermon`. Default URL `./live-translator.html?v=24`. If Maat is on the tailnet host with no port, or Settings points Listen at `:8443`, the GPU page is `https://<tailscale-host>:8443/?v=22` (WebSocket same-origin).
+3. Iframe `#view-sermon`. Default URL `./live-translator.html?v=25`. If Maat is on the tailnet host with no port, or Settings points Listen at `:8443`, the GPU page is `https://<tailscale-host>:8443/?v=22` (WebSocket same-origin). Native iPad shell (`ios/Maat`) uses Apple on-device ASR (Neural Engine) when `webkit.messageHandlers.maatAsr` is present.
 
 **Needs.** Tailscale + home GPU (`:8443`) for the reliable path. Public `live-translator.html` on Netlify can fail the WebSocket on iPad.
 

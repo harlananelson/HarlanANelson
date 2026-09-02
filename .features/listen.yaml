@@ -35,4 +35,4 @@ traps:
   - "Session name is #fileRoot, not the meeting topic"
   - "Empty Settings keys must not clear framed Listen keys"
   - "Use listen-session skill; do not find -newermt today"
-  - "iPad on iPhone internet: if that pair drops, the Home GPU WebSocket dies. Before v=24 the mic stayed up and audio was discarded (UI looked live; CRS cars-2026-09-02 cut Xin at 10:32). Now it holds ~45s and reconnects."
+  - "iPad on iPhone internet: if that pair drops, the Home GPU WebSocket dies. Before v=24 the mic stayed up and audio was discarded (UI looked live; CRS cars-2026-09-02 cut Xin at 10:32). PWA now holds ~45s and reconnects. Native ios/Maat uses Apple on-device ASR (Neural Engine) so transcription continues offline."
