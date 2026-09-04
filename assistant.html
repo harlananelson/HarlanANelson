@@ -388,25 +388,95 @@
   }
 
   // ---- transcript rendering ----
-  function addMsg(role, text, tag) {
+  // ---- per-target history (2026-09-04) ----
+  // Every message is kept in memory (and localStorage, per session) tagged
+  // with the target it belongs to: "ai:<backend>" or "tmux:<session>". The
+  // transcript shows only the current target's messages, so switching in
+  // Talk to… brings back that assistant's conversation. "ai:" (server
+  // default / auto) shows every AI message, since auto can answer as any.
+  var HIST_MAX = 400;
+  var histKey = "tb_history:" + cfg.session;
+  var history = [];
+  try { history = JSON.parse(localStorage.getItem(histKey) || "[]") || []; } catch (e) { history = []; }
+  if (!Array.isArray(history)) history = [];
+  var histSaveTimer = null;
+  function saveHistory() {
+    if (histSaveTimer) return;
+    histSaveTimer = setTimeout(function () {
+      histSaveTimer = null;
+      while (history.length > HIST_MAX) history.shift();
+      try { localStorage.setItem(histKey, JSON.stringify(history)); } catch (e) {}
+    }, 250);
+  }
+  function currentTargetKey() {
+    // target/agentSessions are declared further down (hoisted vars); guard
+    // for anything that writes to the transcript before they are assigned.
+    if (typeof target === "object" && target && target.kind === "tmux") return "tmux:" + target.name;
+    return "ai:" + (cfg.backend || "");
+  }
+  function normBackendKey(b) { return b === "ollama" ? "gemma" : b; }
+  // Which target an event from the bridge belongs to. Shell names are
+  // whatever the bridge lists in agentSessions (or anything that is not a
+  // known model id); no backend means "whoever I am talking to now".
+  function keyForEvent(ev) {
+    var b = (ev && ev.backend) || "";
+    if (!b) return currentTargetKey();
+    var isShell = (agentSessions || []).some(function (x) { return x.name === b; }) ||
+      !/^(gemma|claude|grok|ollama|auto|tmux)$/i.test(b);
+    return isShell ? ("tmux:" + b) : ("ai:" + normBackendKey(b));
+  }
+  function histMatches(entry, key) {
+    if (!entry) return false;
+    var k = entry.tkey || "";
+    if (k === key) return true;
+    if (key === "ai:" && k.indexOf("ai:") === 0) return true;
+    return false;
+  }
+  function histHasEvent(ev) {
+    if (!ev || ev.id == null) return false;
+    return history.some(function (h) { return h.id === ev.id && h.role === ev.role && h.text === ev.text; });
+  }
+  function renderMsg(entry) {
     var d = document.createElement("div");
-    d.className = "msg " + role;
-    if (tag) {
+    d.className = "msg " + entry.role;
+    if (entry.tag) {
       var s = document.createElement("span");
       s.className = "tag";
-      s.textContent = tag;
+      s.textContent = entry.tag;
       d.appendChild(s);
     }
-    d.appendChild(document.createTextNode(text));
+    d.appendChild(document.createTextNode(entry.text));
+    d._hist = entry;
     var t = $("transcript");
     t.appendChild(d);
     while (t.children.length > 60) t.removeChild(t.firstChild);
+    return d;
+  }
+  // Repaint the transcript for the current target from history.
+  function renderTranscript() {
+    var t = $("transcript");
+    if (!t) return;
+    t.innerHTML = "";
+    var key = currentTargetKey();
+    var shown = history.filter(function (h) { return histMatches(h, key); });
+    shown.slice(-60).forEach(renderMsg);
     t.scrollTop = t.scrollHeight;
+  }
+  // tkey: which target this belongs to (default: the current one). id: bridge
+  // event id, for de-duplicating cached history against a fresh poll.
+  function addMsg(role, text, tag, tkey, id) {
+    var entry = { role: role, text: text, tag: tag || "", tkey: tkey || currentTargetKey(), ts: Date.now() };
+    if (id != null) entry.id = id;
+    history.push(entry);
+    saveHistory();
+    if (!histMatches(entry, currentTargetKey())) return null;
+    var d = renderMsg(entry);
+    $("transcript").scrollTop = $("transcript").scrollHeight;
     return d;
   }
   // Local send ack into the ONE transcript (tmux no longer leaves chat empty).
   function addTmuxSendAck(sessionName, text) {
-    addMsg("user tmux-send", text, "→ 🖥 " + sessionName);
+    addMsg("user tmux-send", text, "→ 🖥 " + sessionName, "tmux:" + sessionName);
   }
 
   // After a send into a shell, pull the pane into THIS transcript so the
@@ -476,15 +546,19 @@
   function followPane(name, sent) {
     stopPaneWatch();
     paneWatch = { name: name, last: "", same: 0, el: null, ticks: 0 };
-    paneWatch.el = addMsg("assistant", "Waiting for a reply from " + name + "…", "← " + name);
+    paneWatch.el = addMsg("assistant", "Waiting for a reply from " + name + "…", "← " + name, "tmux:" + name);
     function paint(shown) {
       var lines = String(shown || "").split("\n");
       if (lines.length > 24) shown = lines.slice(-24).join("\n");
       if (!paneWatch.el || !paneWatch.el.parentNode) {
-        paneWatch.el = addMsg("assistant", shown, "← " + name);
+        // Target switched away (element gone) or never shown: update the
+        // history entry in place rather than adding a second bubble.
+        if (paneWatch.el && paneWatch.el._hist) { paneWatch.el._hist.text = shown; saveHistory(); return; }
+        paneWatch.el = addMsg("assistant", shown, "← " + name, "tmux:" + name);
         return;
       }
       var d = paneWatch.el, tagEl = d.querySelector(".tag");
+      if (d._hist) { d._hist.text = shown; saveHistory(); }
       d.textContent = "";
       if (!tagEl) {
         tagEl = document.createElement("span");
@@ -908,7 +982,10 @@
             if (ev.role === "assistant") lastSpokenId = ev.id;
             return;
           }
-          addMsg(ev.role, ev.text, ev.backend);
+          // Cached history already holds this one (page reload): don't
+          // repeat it, and don't speak it either.
+          if (firstPoll && histHasEvent(ev)) { if (ev.role === "assistant") lastSpokenId = ev.id; return; }
+          addMsg(ev.role, ev.text, ev.backend, keyForEvent(ev), ev.id);
           if (ev.role === "error" && resumeAfterTts) {
             resumeAfterTts = false;
             clearReplyWait();
@@ -1983,6 +2060,7 @@
       else applySendable();
     }
     if ($("barInput")) $("barInput").value = "";
+    renderTranscript();
     paintTargetChip();
     paintTalkForTarget();
     var known = (kind === "tmux" && name)
@@ -2109,10 +2187,14 @@
     openSheet("More", rows);
   };
 
-  // Clear the on-screen conversation. Display only: saved transcripts on the
-  // workstation are untouched, and polling continues from the current event
-  // cursor so cleared messages don't come back.
+  // Clear the conversation with the CURRENT target (screen + this browser's
+  // cached history for it). Other targets keep theirs. Saved transcripts on
+  // the workstation are untouched, and polling continues from the current
+  // event cursor so cleared messages don't come back.
   function clearConversation() {
+    var key = currentTargetKey();
+    history = history.filter(function (h) { return !histMatches(h, key); });
+    saveHistory();
     $("transcript").innerHTML = "";
     contTranscript = [];        // analyses start fresh from here too
     setInterim("");
@@ -2162,7 +2244,11 @@
     openSettings(false);
     setStatus("Saved.");
     firstPoll = true; lastEventId = 0;
-    $("transcript").innerHTML = "";
+    // History is per session: reload the cache for the saved one and repaint.
+    histKey = "tb_history:" + cfg.session;
+    try { history = JSON.parse(localStorage.getItem(histKey) || "[]") || []; } catch (e2) { history = []; }
+    if (!Array.isArray(history)) history = [];
+    renderTranscript();
     // Boot skips the session survey when there is no bridge yet, so on a
     // first-time setup this is the first moment the host can be asked. Without
     // it the shell list in Talk to… stays empty.
@@ -2347,6 +2433,7 @@
       paintSendModeChip();
     }
     window.__setMicMode = setMicMode;
+    window.__setTargetForTest = setTarget;   // test hook, same pattern as __setMicMode
     $("talkBtn").addEventListener("click", function () {
       ensureSound();   // user gesture — iOS will not unlock audio on page load
       if (micMode === "continuous") {
@@ -2424,6 +2511,7 @@
     loadAgents();
   }
   paintTargetChip();
+  renderTranscript();   // cached history for the starting target
   poll();
   setInterval(poll, 2500);
 })();
