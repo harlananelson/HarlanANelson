@@ -95,17 +95,20 @@
     flex: 1 1 auto; min-width: 0; font-size: 16px; padding: 10px 12px;
     border-radius: 12px; border: 1px solid #444; background: #222; color: #eee;
   }
-  #barSend { flex: 0 0 auto; min-width: 4.5rem; padding: 10px 16px; }
+  #barSend { flex: 0 0 auto; min-width: 44px; padding: 10px 14px; font-size: 20px; line-height: 1; }
   .chip {
     background: #333; font-size: 16px; padding: 8px 14px; border-radius: 999px;
   }
   .chip.on { background: #2b6cb0; }
+  /* Mic + pause live in the header (2026-09-04): one row of compact icon
+     buttons. The long state text moved to title/aria-label + #status. */
   #talkBtn {
-    width: 100%; min-height: 56px; font-size: 20px; padding: 12px 16px;
-    border-radius: 14px;
+    min-width: 44px; min-height: 44px; font-size: 20px; padding: 8px 12px;
+    border-radius: 12px; line-height: 1;
     background: #2b6cb0; user-select: none; -webkit-user-select: none;
   }
   #talkBtn.rec { background: #c0392b; }
+  header #modeChip { min-height: 44px; font-size: 18px; padding: 8px 12px; line-height: 1; }
   /* Continuous mode: the transcript is the point — give it the screen, drop the
      big talk button, and compact the controls into a bar under it. */
   body.continuous #talkBtn { background: #c0392b; }
@@ -127,7 +130,8 @@
   @media (pointer: coarse) and (min-width: 1100px) {
     body { font-size: 24px; }
     button { font-size: 24px; padding: 18px 26px; }
-    #talkBtn { min-height: 104px; font-size: 28px; }
+    #talkBtn { min-height: 64px; min-width: 64px; font-size: 28px; }
+    header #modeChip { min-height: 64px; font-size: 24px; }
     .chip { font-size: 20px; padding: 10px 18px; }
     .sheet-body button.row { font-size: 22px; }
   }
@@ -153,6 +157,10 @@
 <header>
   <h1>Home AI <span id="connDot" class="dot"></span></h1>
   <div class="hdr-actions">
+    <!-- Mic controls: send-mode chip + open-mic. Both hide when this browser
+         has no mic (applyTalkVisibility). -->
+    <button id="modeChip" class="chip" title="Send mode">⏸</button>
+    <button id="talkBtn" title="Tap to talk" aria-label="Tap to talk">🎤</button>
     <button id="soundBtn" class="secondary">🔇 Sound</button>
     <!-- Who you're talking to — always visible next to Sound. Same picker
          for models and shells; address never changes this layout. -->
@@ -216,17 +224,16 @@
   <div id="transcript"></div>
 </div>
 
-<!-- One bar for every address. Talk hides when this browser has no mic. -->
+<!-- One bar for every address. Mic + pause moved to the header; this row is
+     type + Send, with the meeting-mode chips above it when they apply. -->
 <div id="bar">
   <div id="barContext">
-    <button id="modeChip" class="chip">⏸ pause</button>
     <button id="speakerToggle" class="chip" style="display:none">🗣 me</button>
     <button id="analyzeBtn" class="chip" style="display:none">🧠 Analyze</button>
   </div>
-  <button id="talkBtn">Tap to talk</button>
   <div id="barType">
     <input id="barInput" placeholder="Type a message" autocomplete="off">
-    <button id="barSend">Send</button>
+    <button id="barSend" title="Send" aria-label="Send">➤</button>
   </div>
 </div>
 <select id="backendSel" title="AI backend" aria-hidden="true" hidden></select>
@@ -974,6 +981,15 @@
     if (isTeslaConsole()) return false;
     return true;
   }
+  // The mic button is an icon; the wording each state used to print on the
+  // button goes to title/aria-label (and the caller's setStatus if it matters).
+  function setTalkLabel(icon, text) {
+    var b = $("talkBtn");
+    if (!b) return;
+    b.textContent = icon;
+    b.title = text;
+    b.setAttribute("aria-label", text);
+  }
   function applyTalkVisibility() {
     var show = showTalkUi();
     if ($("talkBtn")) $("talkBtn").style.display = show ? "" : "none";
@@ -981,7 +997,7 @@
     var ctx = $("barContext");
     if (ctx) {
       var any = false;
-      ["modeChip", "speakerToggle", "analyzeBtn"].forEach(function (id) {
+      ["speakerToggle", "analyzeBtn"].forEach(function (id) {
         var el = $(id);
         if (el && el.style.display !== "none") any = true;
       });
@@ -1382,7 +1398,7 @@
       maxMs: handsFree ? 90000 : 60000,
       onStart: function () {
         $("talkBtn").className = "rec";
-        $("talkBtn").textContent = handsFree ? "Listening… (auto)" : "⏹ Stop and send";
+        setTalkLabel("⏹", handsFree ? "Listening… (auto)" : "Stop and send");
         // iOS can leave the AudioContext suspended after TTS; nudge it awake
         // so VAD frames actually arrive for the next turn.
         try {
@@ -1391,21 +1407,21 @@
       },
       onFail: function () {
         $("talkBtn").className = "";
-        $("talkBtn").textContent = handsFree ? "Tap to start talking" : "Tap to talk";
+        setTalkLabel("🎤", handsFree ? "Tap to start talking" : "Tap to talk");
         // Permission / device glitch: keep the mode on, let the user tap again
         // rather than silently dying for the rest of the session.
-        if (handsFree) setStatus("Mic paused — tap the big button to listen again.", true);
+        if (handsFree) setStatus("Mic paused — tap 🎤 to listen again.", true);
       },
       onDone: function (wav) {
         $("talkBtn").className = "";
-        $("talkBtn").textContent = handsFree ? "Thinking…" : "Tap to talk";
+        setTalkLabel(handsFree ? "⏳" : "🎤", handsFree ? "Thinking…" : "Tap to talk");
         uploadClip(wav);
       }
     });
   }
   function stopRec() {
     if (captureRunning()) captureStop();
-    else { $("talkBtn").className = ""; $("talkBtn").textContent = "Tap to talk"; }
+    else { $("talkBtn").className = ""; setTalkLabel("🎤", "Tap to talk"); }
   }
   function uploadClip(blob) {
     // null = nothing above the noise floor.
@@ -1601,7 +1617,7 @@
     if (!showTalkUi()) return;
     if (target.kind === "tmux" && !agentSendable) {
       b.disabled = true;
-      b.textContent = "Pick a sendable session in Talk to…";
+      setTalkLabel("🎤", "Pick a sendable session in Talk to…");
       b.className = "";
       return;
     }
@@ -1609,27 +1625,28 @@
     if (dictateLoop) {
       if (ttsPeeking) {
         b.className = "rec";
-        b.textContent = "Listening for you… (tap to close)";
+        setTalkLabel("🔴", "Listening for you… (tap to close)");
         return;
       }
       if (ttsPlaying || resumeAfterTts) {
         b.className = "";
-        b.textContent = ttsPlaying
-          ? "🔊 Speaking — interrupt anytime (tap to close)"
-          : "Waiting for reply — mic paused (tap to close)";
+        setTalkLabel(ttsPlaying ? "🔊" : "⏳", ttsPlaying
+          ? "Speaking — interrupt anytime (tap to close)"
+          : "Waiting for reply — mic paused (tap to close)");
         return;
       }
       b.className = agentRecording === true ? "rec" : "";
-      b.textContent = agentRecording === true
-        ? (sendMode === "pause" ? "Listening… sends when you pause" : "Listening… say “over” to send")
-        : "📻 Channel open — tap to close";
+      if (agentRecording === true)
+        setTalkLabel("🔴", sendMode === "pause" ? "Listening… sends when you pause" : "Listening… say “over” to send");
+      else
+        setTalkLabel("📻", "Channel open — tap to close");
       return;
     }
     b.className = "";
     // Do not repeat the destination here — that belongs on header Talk to…
-    b.textContent = sendMode === "pause"
-      ? "🎤 Tap to open mic (sends on pause)"
-      : "🎤 Tap to open mic (say “over” to send)";
+    setTalkLabel("🎤", sendMode === "pause"
+      ? "Open mic (sends on pause)"
+      : "Open mic (say “over” to send)");
   }
 
   function paintSendModeChip() {
@@ -1638,11 +1655,11 @@
     if (!showTalkUi()) { c.style.display = "none"; applyTalkVisibility(); return; }
     c.style.display = "";
     if (sendMode === "pause") {
-      c.textContent = "⏸ pause";
+      c.textContent = "⏸";
       c.className = "chip on";
       c.title = "Send mode: pause — tap to switch to “over”";
     } else {
-      c.textContent = "📻 over";
+      c.textContent = "📻";
       c.className = "chip on";
       c.title = "Send mode: over — tap to switch to pause";
     }
@@ -2282,7 +2299,7 @@
         $("speakerToggle").style.display = "";
         $("analyzeBtn").style.display = "";
         document.body.classList.add("continuous");
-        setStatus("🎙 Continuous — silent transcription. Tap Talk to stop / return to channel.");
+        setStatus("🎙 Continuous — silent transcription. Tap 🎤 to stop / return to channel.");
         syncWakeLock();
         syncRefineTimer();
         applyTalkVisibility();
@@ -2324,7 +2341,7 @@
     ensureMicUi();
     paintTalkForTarget();
     paintSendModeChip();
-    setStatus("Tap Talk to open the channel, then speak. Pause sends.");
+    setStatus("Tap 🎤 in the top bar to open the channel, then speak. Pause sends.");
   } else {
     setStatus("Type a message, then Send.");
   }
