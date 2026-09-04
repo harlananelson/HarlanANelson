@@ -329,7 +329,7 @@
     // has no such handler and appends a new card for every update, so a long
     // reading arrives as the same passage repeated ten times over. The phone
     // keeps serving the cached page until this number changes.
-    return "https://" + tailscaleHostname() + ":8443/?v=24";
+    return "https://" + tailscaleHostname() + ":8443/?v=25";
   }
   function isSiteListen(url) {
     var s = String(url || "");
@@ -421,7 +421,7 @@
       id: "sermon",
       label: "Listen",
       icon: "🌐",
-      url: "./live-translator.html?v=25",
+      url: "./live-translator.html?v=26",
       kind: "iframe",
       hint: "Listen to a service, a meeting, a podcast or an appointment: transcription, translation when the profile calls for it, and analysis (sermon, meeting, or podcast fact/science/legal). Pick a profile inside. On iPad prefer the tailnet page if WebSocket fails."
     },

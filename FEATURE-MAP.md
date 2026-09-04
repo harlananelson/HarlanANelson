@@ -83,7 +83,7 @@ Hands (browser) still required. This map only tells the hands where to go.
 
 1. Maat → thumb **Listen** (`#tab-sermon`).
 2. Or `maat.html?mode=sermon`.
-3. Iframe `#view-sermon`. Default URL `./live-translator.html?v=25`. If Maat is on the tailnet host with no port, or Settings points Listen at `:8443`, the GPU page is `https://<tailscale-host>:8443/?v=22` (WebSocket same-origin). Native iPad shell (`ios/Maat`) uses Apple on-device ASR (Neural Engine) when `webkit.messageHandlers.maatAsr` is present.
+3. Iframe `#view-sermon`. Default URL `./live-translator.html?v=26`. If Maat is on the tailnet host with no port, or Settings points Listen at `:8443`, the GPU page is `https://<tailscale-host>:8443/?v=25` (WebSocket same-origin). Native iPad shell (`ios/Maat`) uses Apple on-device ASR (Neural Engine) when `webkit.messageHandlers.maatAsr` is present.
 
 **Needs.** Tailscale + home GPU (`:8443`) for the reliable path. Public `live-translator.html` on Netlify can fail the WebSocket on iPad.
 
