@@ -43,8 +43,21 @@
     display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
     margin-left: auto; justify-content: flex-end;
   }
+  /* Header actions scale with the viewport: --hdr-icon is the icon size,
+     clamped so a phone never drops below a thumb target and a wall console
+     never balloons. Padding/gaps derive from it. */
+  header { --hdr-icon: clamp(18px, 2.6vw, 30px); }
   header .hdr-actions button {
-    font-size: 16px; padding: 10px 14px; white-space: nowrap;
+    font-size: calc(var(--hdr-icon) * 0.8); padding: calc(var(--hdr-icon) * 0.45) calc(var(--hdr-icon) * 0.6);
+    white-space: nowrap; line-height: 1.2;
+  }
+  /* Narrow screens (phone): the header must stay one row, so the text half
+     of each action drops and the icon carries it. .lbl is the droppable part. */
+  @media (max-width: 640px) {
+    header { gap: 6px; padding: 8px 10px; }
+    header h1 { font-size: 16px; }
+    header .hdr-actions { gap: 6px; flex-wrap: nowrap; }
+    header .hdr-actions .lbl { display: none; }
   }
   /* Target must stay visible — this is how you pick Claude/gemma/tmux. */
   #targetBtn { background: #2b6cb0; }
@@ -103,12 +116,16 @@
   /* Mic + pause live in the header (2026-09-04): one row of compact icon
      buttons. The long state text moved to title/aria-label + #status. */
   #talkBtn {
-    min-width: 44px; min-height: 44px; font-size: 20px; padding: 8px 12px;
+    min-width: 44px; min-height: 44px; font-size: var(--hdr-icon);
+    padding: calc(var(--hdr-icon) * 0.4) calc(var(--hdr-icon) * 0.55);
     border-radius: 12px; line-height: 1;
     background: #2b6cb0; user-select: none; -webkit-user-select: none;
   }
   #talkBtn.rec { background: #c0392b; }
-  header #modeChip { min-height: 44px; font-size: 18px; padding: 8px 12px; line-height: 1; }
+  header #modeChip {
+    min-height: 44px; font-size: calc(var(--hdr-icon) * 0.9);
+    padding: calc(var(--hdr-icon) * 0.4) calc(var(--hdr-icon) * 0.55); line-height: 1;
+  }
   /* Continuous mode: the transcript is the point — give it the screen, drop the
      big talk button, and compact the controls into a bar under it. */
   body.continuous #talkBtn { background: #c0392b; }
@@ -130,8 +147,8 @@
   @media (pointer: coarse) and (min-width: 1100px) {
     body { font-size: 24px; }
     button { font-size: 24px; padding: 18px 26px; }
-    #talkBtn { min-height: 64px; min-width: 64px; font-size: 28px; }
-    header #modeChip { min-height: 64px; font-size: 24px; }
+    header { --hdr-icon: clamp(28px, 2.6vw, 40px); }
+    #talkBtn, header #modeChip { min-height: 64px; min-width: 64px; }
     .chip { font-size: 20px; padding: 10px 18px; }
     .sheet-body button.row { font-size: 22px; }
   }
@@ -161,11 +178,11 @@
          has no mic (applyTalkVisibility). -->
     <button id="modeChip" class="chip" title="Send mode">⏸</button>
     <button id="talkBtn" title="Tap to talk" aria-label="Tap to talk">🎤</button>
-    <button id="soundBtn" class="secondary">🔇 Sound</button>
+    <button id="soundBtn" class="secondary">🔇<span class="lbl"> Sound</span></button>
     <!-- Who you're talking to — always visible next to Sound. Same picker
          for models and shells; address never changes this layout. -->
     <button id="targetBtn" title="Pick who you talk to">Talk to…</button>
-    <button id="overflowBtn" class="secondary" title="Library, clear, settings">⋯ More</button>
+    <button id="overflowBtn" class="secondary" title="Library, clear, settings">⋯<span class="lbl"> More</span></button>
   </div>
 </header>
 
@@ -983,6 +1000,15 @@
   }
   // The mic button is an icon; the wording each state used to print on the
   // button goes to title/aria-label (and the caller's setStatus if it matters).
+  // Header action = icon + droppable text (.lbl hides on narrow screens).
+  function setBtnLabel(id, icon, text) {
+    var b = $(id);
+    if (!b) return;
+    b.textContent = icon;
+    var sp = document.createElement("span"); sp.className = "lbl"; sp.textContent = text;
+    b.appendChild(sp);
+    b.title = (icon + text).trim();
+  }
   function setTalkLabel(icon, text) {
     var b = $("talkBtn");
     if (!b) return;
@@ -1024,7 +1050,7 @@
   function ensureSound() {
     if (soundOn) return;
     soundOn = true;
-    $("soundBtn").textContent = "🔊 Sound on";
+    setBtnLabel("soundBtn", "🔊", " Sound on");
     unlockAudio();
   }
   function cleanupAudio() {
@@ -1934,7 +1960,10 @@
   function paintTargetChip() {
     var b = $("targetBtn");
     if (!b) return;
-    b.textContent = "Talk to: " + targetLabel();
+    // Target label stays visible on narrow screens; only the "Talk to:" drops.
+    b.textContent = "";
+    var lbl = document.createElement("span"); lbl.className = "lbl"; lbl.textContent = "Talk to: ";
+    b.appendChild(lbl); b.appendChild(document.createTextNode(targetLabel()));
     b.title = "Tap to pick who you talk to";
   }
 
@@ -2159,7 +2188,7 @@
   // playing and cancel the browser-voice fallback, not just future ones.
   $("soundBtn").onclick = function () {
     soundOn = !soundOn;
-    $("soundBtn").textContent = soundOn ? "🔊 Sound on" : "🔇 Sound off";
+    setBtnLabel("soundBtn", soundOn ? "🔊" : "🔇", soundOn ? " Sound on" : " Sound off");
     if (typeof paintAgentMic === "function") paintAgentMic();   // dictation is sound-gated
     if (soundOn) { unlockAudio(); }      // unlock <audio> inside this tap gesture
     else {
