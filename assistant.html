@@ -1686,7 +1686,15 @@
           agentVad.silenceMs += ms;
           if (agentVad.silenceMs >= hang) { agentFinish(onText); return; }
         }
-        if (agentVad.elapsed >= maxMs) { agentFinish(onText); }
+        if (agentVad.elapsed >= maxMs) {
+          // maxMs caps one utterance, not the wait for one. While driving
+          // there are minutes of silence; the old code ended the capture
+          // here with no frames, said "Didn't catch that", and never
+          // listened again. Silence just keeps listening (confirm still
+          // times out - it is a yes/no window).
+          if (agentVad.speaking || phase === "confirm") { agentFinish(onText); }
+          else { agentVad.elapsed = 0; }
+        }
       };
       c.src.connect(proc);
       proc.connect(c.ctx.destination);
@@ -1703,7 +1711,11 @@
     agentAudioStop();
     agentRecording = false;
     if (!frames.length || (total / 16000) * 1000 < AG_MIN_MS) {
+      var wasConfirm = agentPhase === "confirm";
       agentPhase = "idle"; paintAgentMic();
+      // In the open channel an empty capture is not an error: hand "" back
+      // so the dictate loop resumes listening (it treats "" as noise).
+      if (dictateLoop && !wasConfirm) { onText(""); return; }
       setStatus("Didn't catch that — tap Talk and speak.", true);
       return;
     }
@@ -1985,6 +1997,10 @@
         return;
       }
 
+      // Meta work by voice: "list agents", "talk to scd", "who am I talking
+      // to", "pause mode". Handled here, never sent to the target.
+      if (!closing && handleVoiceCommand(body)) return;
+
       // "out" / "over and out": send any payload then close the channel.
       if (closing) {
         if (box && body) {
@@ -2040,6 +2056,85 @@
     });
   }
 
+  // ---- voice meta-commands -------------------------------------------------
+  // Spoken in the open channel instead of a message. Each one answers (spoken
+  // when Sound is on, and as a notice in the transcript) and keeps listening.
+  function voiceKey(s) {
+    return String(s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  }
+  function voiceAnswer(text) {
+    addMsg("notice", text, "voice command");
+    setStatus(text);
+    if (soundOn) speak(text);          // speak() resumes the channel when done
+    else resumeDictate();
+  }
+  function listSendableNames() {
+    return (agentSessions || []).filter(function (x) { return x.sendable; })
+      .map(function (x) { return x.name; });
+  }
+  function findTargetByVoice(said) {
+    var k = voiceKey(said);
+    if (!k) return null;
+    var models = (window.__backends || []).filter(Boolean);
+    var i;
+    // exact, then prefix, then contains; shells first because they are the
+    // names most likely to be garbled ("S C D", "h m i").
+    var shells = (agentSessions || []).map(function (x) { return x.name; });
+    var pools = [["tmux", shells], ["ai", models]];
+    var tests = [function (a, b) { return a === b; },
+                 function (a, b) { return a.indexOf(b) === 0 || b.indexOf(a) === 0; },
+                 function (a, b) { return a.indexOf(b) >= 0 || b.indexOf(a) >= 0; }];
+    for (var t = 0; t < tests.length; t++) {
+      for (var pi = 0; pi < pools.length; pi++) {
+        var names = pools[pi][1];
+        for (i = 0; i < names.length; i++) {
+          if (tests[t](voiceKey(names[i]), k)) return { kind: pools[pi][0], name: names[i] };
+        }
+      }
+    }
+    if (/^(auto|default|server default|any)$/.test(k)) return { kind: "ai", name: "" };
+    return null;
+  }
+  function handleVoiceCommand(body) {
+    var t = String(body || "").toLowerCase().replace(/[.,!?]+$/g, "").trim();
+    if (!t) return false;
+    var m;
+    if (/^(list|show|what are)( the| my)? (agents|sessions|targets|shells|models|writable (agents|sessions))$/.test(t) ||
+        /^who can i talk to$/.test(t)) {
+      var shells = listSendableNames();
+      var models = (window.__backends || []).filter(Boolean);
+      var parts = [];
+      if (models.length) parts.push("Models: " + models.map(backendLabel).join(", "));
+      parts.push(shells.length ? ("Writable shells: " + shells.join(", ")) : "No writable shells.");
+      voiceAnswer(parts.join(". ") + ".");
+      if (!(agentSessions || []).length) loadAgents();
+      return true;
+    }
+    if (/^(who|which( agent| target)?) am i talking to$/.test(t) || /^(current|which) (target|agent)$/.test(t)) {
+      voiceAnswer("You are talking to " + targetLabel() + ".");
+      return true;
+    }
+    m = t.match(/^(?:talk|switch|change|go|connect) to (.+)$/);
+    if (m) {
+      var hit = findTargetByVoice(m[1]);
+      if (!hit) { voiceAnswer("I don't know " + m[1] + ". Say list agents."); return true; }
+      if (hit.kind === "tmux") {
+        var s = (agentSessions || []).filter(function (x) { return x.name === hit.name; })[0];
+        if (s && !s.sendable) { voiceAnswer(hit.name + " is read-only."); return true; }
+      }
+      setTarget(hit.kind, hit.name, true);
+      voiceAnswer("Now talking to " + targetLabel() + ".");
+      return true;
+    }
+    m = t.match(/^(?:(?:send on |use |switch to |set )?(pause|over) mode|send on (pause|over))$/);
+    if (m) {
+      setSendMode(m[1] || m[2]);
+      voiceAnswer("Send mode " + sendMode + ".");
+      return true;
+    }
+    return false;
+  }
+
   function agentFinishNow() {
     if (agentAudio && agentVad) { agentVad.silenceMs = 1e9; }   // next frame flushes
   }
@@ -2064,8 +2159,8 @@
     b.title = "Tap to pick who you talk to";
   }
 
-  function setTarget(kind, name) {
-    if (dictateLoop) endDictateLoop("Target changed — channel closed.");
+  function setTarget(kind, name, keepChannel) {
+    if (dictateLoop && !keepChannel) endDictateLoop("Target changed — channel closed.");
     stopPaneWatch();
     target = { kind: kind, name: name || "" };
     if (kind === "ai") {
@@ -2454,6 +2549,7 @@
     }
     window.__setMicMode = setMicMode;
     window.__setTargetForTest = setTarget;   // test hook, same pattern as __setMicMode
+    window.__voiceCommandForTest = handleVoiceCommand;
     $("talkBtn").addEventListener("click", function () {
       ensureSound();   // user gesture — iOS will not unlock audio on page load
       if (micMode === "continuous") {
