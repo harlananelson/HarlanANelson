@@ -1547,15 +1547,22 @@
         var enT = '📖 ' + ev.ref_en + (ev.en ? ' — ' + ev.en : '');
         var updated = false;
         if (ev.replaces) {
+          // Find the most recent card for this book+chapter, looking past
+          // cards for OTHER chapters. The old loop stopped at the newest
+          // passage card whatever its chapter, so when the server alternated
+          // Matthew 8 / Mark 2 refinements (2026-09-04 friday session) every
+          // one missed and became a new card - the same verse dozens of
+          // times down the screen.
           for (var pi = segments.length - 1; pi >= 0; pi--) {
             var prev = segments[pi];
             if (!prev.passage || !prev.ref_en) { continue; }
-            if (passageSameChapter(prev.ref_en, ev.ref_en)) {
+            if (!passageSameChapter(prev.ref_en, ev.ref_en)) { continue; }
+            if (prev.es !== esT || prev.en !== enT) {
               prev.es = esT; prev.en = enT;
               prev.ref_en = ev.ref_en; prev.ref_es = ev.ref_es;
               paintRow(prev);
-              updated = true;
             }
+            updated = true;
             break;
           }
         }
