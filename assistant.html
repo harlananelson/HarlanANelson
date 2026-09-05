@@ -422,7 +422,7 @@
     var b = (ev && ev.backend) || "";
     if (!b) return currentTargetKey();
     var isShell = (agentSessions || []).some(function (x) { return x.name === b; }) ||
-      !/^(gemma|claude|grok|ollama|auto|tmux)$/i.test(b);
+      !/^(gemma|claude|grok|ollama|auto|tmux|voice)$/i.test(b);
     return isShell ? ("tmux:" + b) : ("ai:" + normBackendKey(b));
   }
   function histMatches(entry, key) {
@@ -619,6 +619,7 @@
   function backendLabel(b) {
     if (!b) return "auto";
     if (b === "ollama") return "gemma (ollama)";  // legacy id before server rename
+    if (b === "voice") return "Grok voice";
     return b;
   }
   function fillBackends(list) {
@@ -1743,6 +1744,141 @@
     paintTalkForTarget();
   }
 
+  // ---- Grok voice (realtime) ------------------------------------------------
+  // Speech-to-speech over the bridge's /api/voice WebSocket (tesla PR #20):
+  // mic PCM goes up, the model's PCM comes back, tmux tools run bridge-side.
+  // Opt-in: the target "voice" appears in Talk to… only when /api/ping says
+  // the bridge has an xAI key. Costs money per minute, so never the default.
+  var voiceAvailable = false;
+  var voice = null;   // { ws, proc, ready, outRate, playCtx, nextTime, text }
+  function isVoiceTarget() { return target.kind === "ai" && (target.name || cfg.backend) === "voice"; }
+  function probeVoice() {
+    if (!cfg.bridge) return;
+    api("/api/ping").then(function (r) { return r.json(); })
+      .then(function (d) { voiceAvailable = !!(d && d.voice); })
+      .catch(function () {});
+  }
+  function voiceUrl() {
+    return cfg.bridge.replace(/^http/i, "ws") + "/api/voice";
+  }
+  function voiceActive() { return !!(voice && voice.ws); }
+  function voicePlay(ab) {
+    if (!voice || !soundOn) return;
+    var i16 = new Int16Array(ab), n = i16.length;
+    if (!n) return;
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if (!voice.playCtx) {
+      try { voice.playCtx = new AC({ sampleRate: voice.outRate }); }
+      catch (e) { voice.playCtx = new AC(); }
+      voice.nextTime = 0;
+    }
+    var ctx = voice.playCtx;
+    try { if (ctx.state === "suspended" && ctx.resume) ctx.resume(); } catch (e) {}
+    var f32 = new Float32Array(n);
+    for (var i = 0; i < n; i++) f32[i] = i16[i] / 32768;
+    // iOS may refuse the requested rate; resample to whatever we got.
+    if (ctx.sampleRate !== voice.outRate) {
+      var ratio = voice.outRate / ctx.sampleRate, m = Math.floor(n / ratio), out = new Float32Array(m);
+      for (var j = 0; j < m; j++) {
+        var idx = j * ratio, i0 = Math.floor(idx), fr = idx - i0;
+        var a = f32[i0], b = f32[Math.min(i0 + 1, n - 1)];
+        out[j] = a + (b - a) * fr;
+      }
+      f32 = out;
+    }
+    var buf = ctx.createBuffer(1, f32.length, ctx.sampleRate);
+    buf.getChannelData(0).set(f32);
+    var src = ctx.createBufferSource();
+    src.buffer = buf; src.connect(ctx.destination);
+    var at = Math.max(voice.nextTime || 0, ctx.currentTime + 0.02);
+    src.start(at);
+    voice.nextTime = at + buf.duration;
+  }
+  function voiceStop(why) {
+    if (!voice) return;
+    var v = voice; voice = null;
+    try { if (v.ws && v.ws.readyState === 1) v.ws.send(JSON.stringify({ type: "stop" })); } catch (e) {}
+    try { if (v.ws) { v.ws.onmessage = null; v.ws.onclose = null; v.ws.close(); } } catch (e) {}
+    try { if (v.proc) { v.proc.disconnect(); v.proc.onaudioprocess = null; } } catch (e) {}
+    try { if (v.playCtx) v.playCtx.close(); } catch (e) {}
+    releaseCall();
+    setInterim("");
+    setStatus(why || "Grok voice closed. Microphone off.");
+    paintTalkForTarget();
+  }
+  function voiceStart() {
+    if (voice) return;
+    if (!cfg.bridge || !cfg.token) { setStatus("No Bridge URL / token — open Settings.", true); return; }
+    if (!("WebSocket" in window)) { setStatus("This browser has no WebSocket.", true); return; }
+    voice = { ws: null, proc: null, ready: false, outRate: 24000, playCtx: null, nextTime: 0, text: "" };
+    setStatus("Connecting to Grok voice…");
+    paintTalkForTarget();
+    ensureCall(function (c) {
+      if (!voice) return;
+      try { if (c.ctx.resume) c.ctx.resume(); } catch (e) {}
+      var ws;
+      try { ws = new WebSocket(voiceUrl()); }
+      catch (e) { voiceStop("Grok voice: " + e.message); return; }
+      ws.binaryType = "arraybuffer";
+      voice.ws = ws;
+      ws.onopen = function () {
+        if (!voice || voice.ws !== ws) return;
+        ws.send(JSON.stringify({ type: "start", token: cfg.token, session: cfg.session, rate: 16000 }));
+      };
+      ws.onmessage = function (ev) {
+        if (!voice || voice.ws !== ws) return;
+        if (typeof ev.data !== "string") { voicePlay(ev.data); return; }
+        var m; try { m = JSON.parse(ev.data); } catch (e) { return; }
+        if (m.type === "ready") {
+          voice.ready = true;
+          if (m.out_rate) voice.outRate = m.out_rate;
+          setStatus("Grok voice live" + (m.voice ? " (" + m.voice + ")" : "") + " — just talk. Tap 🔴 to hang up.");
+          paintTalkForTarget();
+        } else if (m.type === "user") {
+          setInterim("🎙 " + (m.text || ""));
+        } else if (m.type === "text") {
+          voice.text += (m.delta || "");
+          setInterim("💬 " + voice.text);
+        } else if (m.type === "done") {
+          voice.text = "";
+          // the transcript itself arrives through /api/events (backend "voice")
+          setTimeout(function () { if (voice && !voice.text) setInterim(""); }, 1500);
+        } else if (m.type === "error") {
+          setStatus("Grok voice: " + (m.message || "error"), true);
+        }
+      };
+      ws.onclose = function (ev) {
+        if (!voice || voice.ws !== ws) return;
+        var why = ev && ev.code === 1008 && ev.reason ? ("Grok voice refused: " + ev.reason)
+                : "Grok voice closed" + (ev && ev.reason ? (": " + ev.reason) : ".");
+        voiceStop(why);
+      };
+      ws.onerror = function () { /* onclose carries the reason */ };
+      // Mic → 16 kHz int16 PCM → ws. Server-side VAD ends turns; nothing to mark.
+      var rate = c.ctx.sampleRate;
+      var proc = c.ctx.createScriptProcessor(CFRAME, 1, 1);
+      voice.proc = proc;
+      proc.onaudioprocess = function (e) {
+        if (!voice || voice.ws !== ws || !voice.ready || ws.readyState !== 1) return;
+        var f = downsampleTo16k(new Float32Array(e.inputBuffer.getChannelData(0)), rate);
+        var i16 = new Int16Array(f.length);
+        for (var i = 0; i < f.length; i++) {
+          var x = Math.max(-1, Math.min(1, f[i]));
+          i16[i] = x < 0 ? x * 32768 : x * 32767;
+        }
+        try { ws.send(i16.buffer); } catch (err) {}
+      };
+      c.src.connect(proc);
+      proc.connect(c.ctx.destination);
+    }, function (e) {
+      voiceStop("Microphone unavailable: " + (e && e.message || e));
+    });
+  }
+  function voiceToggle() {
+    if (voice) voiceStop("Grok voice closed. Microphone off.");
+    else voiceStart();
+  }
+
   // Big Talk button: ONE design for every address — open/close channel.
   function paintTalkForTarget() {
     var b = $("talkBtn");
@@ -1757,6 +1893,16 @@
       return;
     }
     b.disabled = false;
+    if (isVoiceTarget()) {
+      if (voiceActive()) {
+        b.className = "rec";
+        setTalkLabel("🔴", voice && voice.ready ? "Grok voice live — tap to hang up" : "Connecting to Grok voice… (tap to cancel)");
+      } else {
+        b.className = "";
+        setTalkLabel("🎙", "Open Grok voice (realtime, speech-to-speech)");
+      }
+      return;
+    }
     if (dictateLoop) {
       if (ttsPeeking) {
         b.className = "rec";
@@ -2075,6 +2221,8 @@
   function findTargetByVoice(said) {
     var k = voiceKey(said);
     if (!k) return null;
+    // "grok voice" must not fall through to the grok model by substring.
+    if (voiceAvailable && /^(grokvoice|voice|realtime|voicemode)$/.test(k)) return { kind: "ai", name: "voice" };
     var models = (window.__backends || []).filter(Boolean);
     var i;
     // exact, then prefix, then contains; shells first because they are the
@@ -2161,6 +2309,7 @@
 
   function setTarget(kind, name, keepChannel) {
     if (dictateLoop && !keepChannel) endDictateLoop("Target changed — channel closed.");
+    if (voice && !(kind === "ai" && name === "voice")) voiceStop("Target changed — Grok voice closed.");
     stopPaneWatch();
     target = { kind: kind, name: name || "" };
     if (kind === "ai") {
@@ -2205,6 +2354,13 @@
         onClick: function () { setTarget("ai", b); }
       });
     });
+    if (voiceAvailable) {
+      rows.push({
+        label: (isVoiceTarget() ? "● " : "○ ") + "🎙 Grok voice",
+        note: "realtime speech-to-speech · can use the shells · ~$0.08/min",
+        onClick: function () { setTarget("ai", "voice"); }
+      });
+    }
     api("/api/tmux/sessions").then(function (r) { return r.json(); })
       .then(function (d) {
         agentSessions = d.sessions || [];
@@ -2556,6 +2712,7 @@
         setMicMode("tap");
         return;
       }
+      if (isVoiceTarget()) { voiceToggle(); paintTalkForTarget(); return; }
       agentDictate();
       paintTalkForTarget();
     });
@@ -2628,6 +2785,7 @@
   }
   paintTargetChip();
   renderTranscript();   // cached history for the starting target
+  probeVoice();         // does the bridge offer realtime voice?
   poll();
   setInterval(poll, 2500);
 })();
