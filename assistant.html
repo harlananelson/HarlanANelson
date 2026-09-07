@@ -1762,16 +1762,29 @@
     return cfg.bridge.replace(/^http/i, "ws") + "/api/voice";
   }
   function voiceActive() { return !!(voice && voice.ws); }
+  // iOS only lets a context play if it was created/resumed inside a user
+  // gesture, so voiceStart() (the 🎤 tap) calls this before any audio arrives.
+  function voiceEnsurePlayCtx() {
+    if (!voice || voice.playCtx) return;
+    var AC = window.AudioContext || window.webkitAudioContext;
+    try { voice.playCtx = new AC({ sampleRate: voice.outRate }); }
+    catch (e) { voice.playCtx = new AC(); }
+    voice.nextTime = 0;
+    voice.sources = [];
+    try { if (voice.playCtx.resume) voice.playCtx.resume(); } catch (e) {}
+  }
+  // Barge-in / end of turn: drop anything still scheduled and restart the cursor.
+  function voiceFlushPlayback() {
+    if (!voice) return;
+    (voice.sources || []).forEach(function (src) { try { src.onended = null; src.stop(0); } catch (e) {} });
+    voice.sources = [];
+    voice.nextTime = 0;
+  }
   function voicePlay(ab) {
     if (!voice || !soundOn) return;
     var i16 = new Int16Array(ab), n = i16.length;
     if (!n) return;
-    var AC = window.AudioContext || window.webkitAudioContext;
-    if (!voice.playCtx) {
-      try { voice.playCtx = new AC({ sampleRate: voice.outRate }); }
-      catch (e) { voice.playCtx = new AC(); }
-      voice.nextTime = 0;
-    }
+    voiceEnsurePlayCtx();
     var ctx = voice.playCtx;
     try { if (ctx.state === "suspended" && ctx.resume) ctx.resume(); } catch (e) {}
     var f32 = new Float32Array(n);
@@ -1790,9 +1803,17 @@
     buf.getChannelData(0).set(f32);
     var src = ctx.createBufferSource();
     src.buffer = buf; src.connect(ctx.destination);
-    var at = Math.max(voice.nextTime || 0, ctx.currentTime + 0.02);
+    // Gapless: back to back after the previous chunk, with a small lead so
+    // network jitter never lands a chunk in the past (that is the stutter).
+    var at = Math.max(voice.nextTime || 0, ctx.currentTime + 0.05);
     src.start(at);
     voice.nextTime = at + buf.duration;
+    voice.sources.push(src);
+    src.onended = function () {
+      if (!voice || !voice.sources) return;
+      var i = voice.sources.indexOf(src);
+      if (i >= 0) voice.sources.splice(i, 1);
+    };
   }
   function voiceStop(why) {
     if (!voice) return;
@@ -1810,7 +1831,8 @@
     if (voice) return;
     if (!cfg.bridge || !cfg.token) { setStatus("No Bridge URL / token — open Settings.", true); return; }
     if (!("WebSocket" in window)) { setStatus("This browser has no WebSocket.", true); return; }
-    voice = { ws: null, proc: null, ready: false, outRate: 24000, playCtx: null, nextTime: 0, text: "" };
+    voice = { ws: null, proc: null, ready: false, outRate: 24000, playCtx: null, nextTime: 0, sources: [], text: "" };
+    voiceEnsurePlayCtx();   // inside the tap gesture, for iOS
     setStatus("Connecting to Grok voice…");
     paintTalkForTarget();
     ensureCall(function (c) {
@@ -1831,16 +1853,26 @@
         var m; try { m = JSON.parse(ev.data); } catch (e) { return; }
         if (m.type === "ready") {
           voice.ready = true;
-          if (m.out_rate) voice.outRate = m.out_rate;
+          if (m.out_rate && m.out_rate !== voice.outRate) {
+            // rate differs from the default we opened the context with
+            voice.outRate = m.out_rate;
+            try { if (voice.playCtx) voice.playCtx.close(); } catch (e) {}
+            voice.playCtx = null; voiceEnsurePlayCtx();
+          }
           setStatus("Grok voice live" + (m.voice ? " (" + m.voice + ")" : "") + " — just talk. Tap 🔴 to hang up.");
           paintTalkForTarget();
         } else if (m.type === "user") {
+          // The model heard you. If it was still talking, that is a barge-in:
+          // cut the queued audio rather than finishing the old sentence.
+          if (voice.playCtx && voice.nextTime > voice.playCtx.currentTime) voiceFlushPlayback();
+          voice.text = "";
           setInterim("🎙 " + (m.text || ""));
         } else if (m.type === "text") {
           voice.text += (m.delta || "");
           setInterim("💬 " + voice.text);
         } else if (m.type === "done") {
           voice.text = "";
+          voice.nextTime = 0;   // next turn starts fresh
           // the transcript itself arrives through /api/events (backend "voice")
           setTimeout(function () { if (voice && !voice.text) setInterim(""); }, 1500);
         } else if (m.type === "error") {
