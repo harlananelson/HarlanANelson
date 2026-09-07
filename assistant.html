@@ -1750,12 +1750,61 @@
   // Opt-in: the target "voice" appears in Talk to… only when /api/ping says
   // the bridge has an xAI key. Costs money per minute, so never the default.
   var voiceAvailable = false;
-  var voice = null;   // { ws, proc, ready, outRate, playCtx, nextTime, text }
+  var voiceDefault = "";          // bridge's default voice id (from /api/ping)
+  var voiceRoster = null;         // [{id,name,gender,language}] from /api/voices
+  var voiceChoice = "";           // "" = bridge default; persisted per device
+  try { voiceChoice = localStorage.getItem("tb_voice") || ""; } catch (e) {}
+  var voice = null;   // { ws, proc, ready, outRate, playCtx, nextTime, sources, text }
+  function voiceName(id) {
+    if (!id) return voiceDefault ? (voiceNameOf(voiceDefault) + " (default)") : "default";
+    return voiceNameOf(id);
+  }
+  function voiceNameOf(id) {
+    var hit = (voiceRoster || []).filter(function (v) { return v.id === id; })[0];
+    return hit ? hit.name : id;
+  }
+  function setVoiceChoice(id) {
+    voiceChoice = id || "";
+    try { localStorage.setItem("tb_voice", voiceChoice); } catch (e) {}
+    // Changing voice mid-call: reopen the socket; the bridge keeps the history.
+    if (voice) { voiceStop("Switching voice to " + voiceName(voiceChoice) + "…"); voiceStart(); }
+  }
+  function loadVoiceRoster(then) {
+    if (voiceRoster) { if (then) then(voiceRoster); return; }
+    api("/api/voices").then(function (r) { return r.json(); })
+      .then(function (d) {
+        voiceRoster = (d && d.voices) || [];
+        if (d && d.default) voiceDefault = d.default;
+        if (then) then(voiceRoster);
+      })
+      .catch(function (e) { setStatus("Could not load voices: " + e.message, true); if (then) then([]); });
+  }
+  function openVoiceSheet() {
+    loadVoiceRoster(function (list) {
+      var rows = [{
+        label: (voiceChoice ? "○ " : "● ") + "Bridge default" + (voiceDefault ? " (" + voiceNameOf(voiceDefault) + ")" : ""),
+        note: "whatever the workstation is set to",
+        onClick: function () { setVoiceChoice(""); }
+      }];
+      list.forEach(function (v) {
+        rows.push({
+          label: (voiceChoice === v.id ? "● " : "○ ") + v.name,
+          note: [v.gender, v.language].filter(Boolean).join(" · "),
+          onClick: function () { setVoiceChoice(v.id); }
+        });
+      });
+      if (!list.length) rows.push({ label: "No voices listed", note: "Is the bridge's xAI key in?", onClick: function () {} });
+      openSheet("Grok voice", rows);
+    });
+  }
   function isVoiceTarget() { return target.kind === "ai" && (target.name || cfg.backend) === "voice"; }
   function probeVoice() {
     if (!cfg.bridge) return;
     api("/api/ping").then(function (r) { return r.json(); })
-      .then(function (d) { voiceAvailable = !!(d && d.voice); })
+      .then(function (d) {
+        voiceAvailable = !!(d && d.voice);
+        if (d && d.voice_default) voiceDefault = d.voice_default;
+      })
       .catch(function () {});
   }
   function voiceUrl() {
@@ -1845,7 +1894,9 @@
       voice.ws = ws;
       ws.onopen = function () {
         if (!voice || voice.ws !== ws) return;
-        ws.send(JSON.stringify({ type: "start", token: cfg.token, session: cfg.session, rate: 16000 }));
+        var start = { type: "start", token: cfg.token, session: cfg.session, rate: 16000 };
+        if (voiceChoice) start.voice = voiceChoice;
+        ws.send(JSON.stringify(start));
       };
       ws.onmessage = function (ev) {
         if (!voice || voice.ws !== ws) return;
@@ -1859,7 +1910,7 @@
             try { if (voice.playCtx) voice.playCtx.close(); } catch (e) {}
             voice.playCtx = null; voiceEnsurePlayCtx();
           }
-          setStatus("Grok voice live" + (m.voice ? " (" + m.voice + ")" : "") + " — just talk. Tap 🔴 to hang up.");
+          setStatus("Grok voice live" + (m.voice ? " · " + voiceNameOf(m.voice) : "") + " — just talk. Tap 🔴 to hang up.");
           paintTalkForTarget();
         } else if (m.type === "user") {
           // The model heard you. If it was still talking, that is a barge-in:
@@ -2306,6 +2357,18 @@
       voiceAnswer("Now talking to " + targetLabel() + ".");
       return true;
     }
+    m = t.match(/^(?:use |set |change |switch )?(?:the )?voice(?: to)? (.+)$/) || t.match(/^(?:use |switch to )?(.+) voice$/);
+    if (m && voiceAvailable) {
+      var want = voiceKey(m[1]);
+      if (/^(default|normal|bridge)$/.test(want)) { setVoiceChoice(""); voiceAnswer("Voice set to the default."); return true; }
+      loadVoiceRoster(function (list) {
+        var hit = list.filter(function (v) { return voiceKey(v.id) === want || voiceKey(v.name) === want; })[0];
+        if (!hit) { voiceAnswer("I don't know a voice called " + m[1] + "."); return; }
+        setVoiceChoice(hit.id);
+        voiceAnswer("Voice set to " + hit.name + ".");
+      });
+      return true;
+    }
     m = t.match(/^(?:(?:send on |use |switch to |set )?(pause|over) mode|send on (pause|over))$/);
     if (m) {
       setSendMode(m[1] || m[2]);
@@ -2471,6 +2534,11 @@
     rows.splice(1, 0, { label: "🎯 Talk to…",
       note: "Pick a model or a workstation shell",
       onClick: openTargetSheet });
+    if (voiceAvailable) {
+      rows.splice(2, 0, { label: "🎙 Grok voice: " + voiceName(voiceChoice),
+        note: "Pick which xAI voice speaks (all are bilingual)",
+        onClick: openVoiceSheet });
+    }
     if (showTalkUi()) {
       rows.splice(2, 0, sendMode === "pause"
         ? { label: "📻 Switch to “over” to send",
