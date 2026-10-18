@@ -418,3 +418,14 @@ test('4:17 good capture: a normal non-repetitive Spanish segment passes through 
   assert.equal(book.lines()[2].text, 'Y es cuando esa paz que pasa todo entendimiento');
   assert.equal(book.lines().length, 4);
 });
+
+test('an accepted correction replaces one book line and does not add a row', function () {
+  var book = S.createTranscript();
+  var kept = book.add('El conocer a Dios, que amabilice.', { localId: 7 });
+  assert.equal(kept.lines.length, 1);
+  assert.equal(book.revise(7, 'El conocer a Dios, mi amada iglesia.'), true);
+  assert.equal(book.lines().length, 1);
+  assert.match(book.lines()[0].text, /mi amada iglesia/);
+  assert.equal(book.revise(99, 'no such line'), false);
+  assert.equal(book.lines().length, 1);
+});

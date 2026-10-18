@@ -117,6 +117,11 @@
     .note { font-size:var(--text-sm); color:var(--color-text-muted); margin:0.2rem 0; }
     .note.warn { color:var(--color-warning); }
     .callout { border-left:3px solid var(--color-primary); background:var(--color-surface-2); padding:0.7rem 1rem; border-radius:var(--radius-md); font-size:var(--text-sm); }
+    .review-panel { margin:0.4rem 0 0.8rem; }
+    .review-card { border-left:3px solid var(--color-primary); background:var(--color-surface-2); padding:0.6rem 0.8rem; border-radius:var(--radius-md); margin:0.35rem 0; font-size:var(--text-sm); }
+    .review-card .from { color:var(--color-text-muted); text-decoration:line-through; }
+    .review-card .to { margin-top:0.25rem; }
+    .review-actions { display:flex; gap:0.4rem; margin-top:0.45rem; }
     .diag { margin-top:var(--space-4); }
     .diag summary { cursor:pointer; font:600 var(--text-base)/1.2 var(--font-body); }
     .diag-actions { display:flex; gap:var(--space-2); margin:var(--space-3) 0; flex-wrap:wrap; }
@@ -260,6 +265,15 @@
         <input type="checkbox" id="autoSave" />
         Save to this computer when I stop
       </label>
+      <label class="checkbox" for="reviewAudio">
+        <input type="checkbox" id="reviewAudio" />
+        After Stop, ask the Home GPU to suggest transcript corrections
+      </label>
+      <div class="field">
+        <label for="reviewUrl">Review URL &mdash; blank uses the Home GPU (<code>/api/review</code>). A cloud host is refused.</label>
+        <input type="text" id="reviewUrl" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="https://…:8443/api/review" />
+      </div>
+      <p class="note">Suggestions only. The recorded audio stays with the transcript and is sent to the Home GPU, never to a cloud transcription API. Nothing is rewritten until you press Apply.</p>
       <p class="note" id="exportNote"></p>
       <p class="note" id="exportStatus" hidden></p>
       <div class="field">
@@ -277,6 +291,7 @@
       <button id="saveBtn" class="btn" type="button">💾 Save to computer</button>
       <button id="downloadBtn" class="btn" type="button">Download .md (this device)</button>
       <button id="diarizeBtn" class="btn" type="button">Diarize speakers</button>
+      <button id="reviewBtn" class="btn" type="button" title="Send the recorded audio and the Spanish transcript to the Home GPU. Corrections come back as suggestions.">Review audio</button>
       <div class="analyze-wrap">
         <button id="analyzeBtn" class="btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="analyzeMenu" title="Analyse what has been said — options depend on the profile and folder">🧠 Analyze</button>
         <div id="analyzeMenu" class="analyze-menu" role="menu" hidden></div>
@@ -292,6 +307,10 @@
       <button id="fsBtn" class="btn small" type="button" aria-label="Fullscreen transcript" title="Fullscreen transcript">⛶</button>
     </div>
     <div id="startHint" class="note"></div>
+    <div id="reviewPanel" class="review-panel" hidden>
+      <p id="reviewStatus" class="note"></p>
+      <div id="reviewList"></div>
+    </div>
 
     <div class="statusbar">
       <span id="statusDot" class="dot"></span>
@@ -737,6 +756,7 @@
 
   <script src="live-translator-stream.js"></script>
   <script src="live-translator-passage.js"></script>
+  <script src="tools/listen-review.js"></script>
   <script>
   (function () {
     'use strict';
@@ -750,6 +770,8 @@
       preloadBtn: $('preloadBtn'), sens: $('sens'), modelStatus: $('modelStatus'),
       engine: $('engine'), localOpts: $('localOpts'), cloudOpts: $('cloudOpts'),
       homegpuOpts: $('homegpuOpts'), homeGpuUrl: $('homeGpuUrl'), speakerProfile: $('speakerProfile'),
+      reviewAudio: $('reviewAudio'), reviewUrl: $('reviewUrl'), reviewBtn: $('reviewBtn'),
+      reviewPanel: $('reviewPanel'), reviewStatus: $('reviewStatus'), reviewList: $('reviewList'),
       cloudModel: $('cloudModel'), cloudModelCustom: $('cloudModelCustom'), vocab: $('vocab'), fileRoot: $('fileRoot'), openaiKey: $('openaiKey'),
       exportRow: $('exportRow'), exportDest: $('exportDest'), exportNote: $('exportNote'), exportStatus: $('exportStatus'),
       autoSave: $('autoSave'), autoSaveRow: $('autoSaveRow'),
@@ -788,6 +810,8 @@
       speakerProfile: '',
       logEndpoint: '',
       direction: 'es-en',
+      reviewAudio: false,
+      reviewUrl: '',
       theme: 'light', scale: 1, view: 'both'
     };
     var STORE_KEY = 'liveTranslator.v2';
@@ -806,8 +830,10 @@
     var interimRow = null, interimEs = null, interimEn = null;
     var placeholderEl = null;
     var segEl = {};
-    var sessionAudio = [];        // Float32 chunks @16k, accumulated for post-session diarization
+    var sessionAudio = [];        // Float32 chunks @16k, kept with the transcript for diarization and review
     var sessionAudioSamples = 0;
+    var reviewGen = 0;
+    var reviewAbort = null;
     var logBuffer = [];
     var LOG_MAX = 500;
 
@@ -840,6 +866,8 @@
           speakerProfile: typeof s.speakerProfile === 'string' ? s.speakerProfile : '',
           logEndpoint: s.logEndpoint || '',
           direction: DIRECTIONS.indexOf(s.direction) >= 0 ? s.direction : 'es-en',
+          reviewAudio: typeof s.reviewAudio === 'boolean' ? s.reviewAudio : false,
+          reviewUrl: typeof s.reviewUrl === 'string' ? s.reviewUrl : '',
           theme: s.theme === 'dark' ? 'dark' : 'light',
           scale: typeof s.scale === 'number' ? s.scale : 1,
           view: ['both', 'es', 'en'].indexOf(s.view) >= 0 ? s.view : 'both'
@@ -1642,7 +1670,15 @@
       if (!hgWs || hgWs.readyState !== 1) { return; }
       try { hgWs.send(JSON.stringify(obj)); } catch (e) {}
     }
+    function rememberHgAudio(buf) {
+      if (!buf || !buf.byteLength) { return; }
+      var copy = new Float32Array(buf.slice(0));
+      if (!copy.length) { return; }
+      sessionAudio.push(copy);
+      sessionAudioSamples += copy.length;
+    }
     function sendHgPcm(buf) {
+      rememberHgAudio(buf);
       if (hgWs && hgWs.readyState === 1) {
         try { hgWs.send(buf); } catch (e) {}
       } else if (listening) {
@@ -2532,6 +2568,7 @@
       stopCapture();
       setStatus('idle', 'Stopped — transcript kept. Clear to erase.');
       updateControls();
+      if (state.reviewAudio) { requestAudioReview(); }
     }
 
     // ---- status / controls ----
@@ -2661,6 +2698,9 @@
       resetSpeechBook();
       sessionAudio = [];
       sessionAudioSamples = 0;
+      reviewGen++;
+      if (reviewAbort) { try { reviewAbort.abort(); } catch (e) {} reviewAbort = null; }
+      clearReviewUi();
       var olds = els.rows.querySelectorAll('.row.seg');
       Array.prototype.forEach.call(olds, function (r) { r.remove(); });
       removePlaceholder();
@@ -2673,6 +2713,177 @@
       }
       els.statusText.dataset.msg = listening ? 'Listening…' : 'Idle';
       updateStatus();
+    }
+
+    function spanishReviewLines() {
+      return segments.filter(function (s) {
+        if (s.esState !== 'done' || !s.es) { return false; }
+        if (s.passage) { return false; }
+        if (/^🧠 /.test(s.es)) { return false; }
+        return true;
+      });
+    }
+    function setReviewStatus(msg) {
+      if (els.reviewStatus) { els.reviewStatus.textContent = msg || ''; }
+      if (els.reviewPanel) {
+        var hasCards = els.reviewList && els.reviewList.childNodes.length;
+        els.reviewPanel.hidden = !msg && !hasCards;
+      }
+    }
+    function clearReviewUi() {
+      if (els.reviewList) { els.reviewList.innerHTML = ''; }
+      if (els.reviewStatus) { els.reviewStatus.textContent = ''; }
+      if (els.reviewPanel) { els.reviewPanel.hidden = true; }
+    }
+    function applyReviewSuggestion(suggestion, card, btn) {
+      if (!window.ListenReview) { return; }
+      var segs = spanishReviewLines();
+      var lines = segs.map(function (seg) {
+        return { text: seg.heard || seg.es, es: seg.es, id: seg.id };
+      });
+      var result = ListenReview.acceptSuggestion(lines, suggestion);
+      if (!result.ok) {
+        setReviewStatus(result.reason === 'stale'
+          ? 'That line changed, so the suggestion was not applied.'
+          : 'Could not match that suggestion to a transcript line.');
+        return;
+      }
+      var seg = segs[result.line];
+      if (!seg) { return; }
+      seg.es = suggestion.to;
+      seg.heard = suggestion.to;
+      seg.acceptedSuggestion = true;
+      paintRow(seg);
+      var book = speech();
+      if (book && book.revise) { book.revise(seg.id, suggestion.to); }
+      if (btn) { btn.textContent = 'Applied'; btn.disabled = true; }
+      if (card) { card.classList.add('applied'); }
+      pushLog('', 'review suggestion applied to line ' + seg.id);
+    }
+    function renderReviewSuggestions(suggestions) {
+      if (!els.reviewList) { return; }
+      els.reviewList.innerHTML = '';
+      if (!suggestions.length) {
+        setReviewStatus('No corrections suggested. The transcript was left as written.');
+        return;
+      }
+      setReviewStatus(suggestions.length + ' suggestion' + (suggestions.length === 1 ? '' : 's')
+        + '. Nothing changes until you press Apply.');
+      suggestions.forEach(function (s) {
+        var card = document.createElement('div');
+        card.className = 'review-card';
+        var from = document.createElement('div');
+        from.className = 'from';
+        from.textContent = s.from;
+        var to = document.createElement('div');
+        to.className = 'to';
+        to.textContent = s.to;
+        var actions = document.createElement('div');
+        actions.className = 'review-actions';
+        var apply = document.createElement('button');
+        apply.type = 'button';
+        apply.className = 'btn small';
+        apply.textContent = 'Apply';
+        var dismiss = document.createElement('button');
+        dismiss.type = 'button';
+        dismiss.className = 'btn small';
+        dismiss.textContent = 'Dismiss';
+        apply.addEventListener('click', function () { applyReviewSuggestion(s, card, apply); });
+        dismiss.addEventListener('click', function () {
+          card.remove();
+          pushLog('', 'review suggestion dismissed');
+        });
+        actions.appendChild(apply);
+        actions.appendChild(dismiss);
+        card.appendChild(from);
+        card.appendChild(to);
+        if (s.reason) {
+          var reason = document.createElement('div');
+          reason.className = 'note';
+          reason.textContent = s.reason;
+          card.appendChild(reason);
+        }
+        card.appendChild(actions);
+        els.reviewList.appendChild(card);
+      });
+    }
+    function requestAudioReview() {
+      if (!window.ListenReview) {
+        setReviewStatus('Review helper did not load.');
+        return;
+      }
+      var target = ListenReview.reviewTarget({
+        homeGpuHttp: hgHttpOrigin(),
+        reviewUrl: state.reviewUrl
+      });
+      if (!target.ok) {
+        var msg = target.reason === 'cloud-refused'
+          ? 'Audio review stays on the Home GPU. A cloud host was refused.'
+          : target.reason === 'bad-url'
+            ? 'The review URL is not a valid http(s) address.'
+            : 'No Home GPU URL for audio review.';
+        setReviewStatus(msg);
+        pushLog('error', 'audio review: ' + (target.reason || 'refused'));
+        return;
+      }
+      if (!sessionAudioSamples) {
+        setReviewStatus('No recorded audio to review. The transcript was left as written.');
+        return;
+      }
+      var segs = spanishReviewLines();
+      if (!segs.length) {
+        setReviewStatus('No Spanish transcript to review.');
+        return;
+      }
+      reviewGen++;
+      var gen = reviewGen;
+      if (reviewAbort) { try { reviewAbort.abort(); } catch (e) {} }
+      reviewAbort = typeof AbortController !== 'undefined' ? new AbortController() : null;
+      var timer = setTimeout(function () {
+        if (reviewAbort) { try { reviewAbort.abort(); } catch (e) {} }
+      }, 120000);
+      setReviewStatus('Sending the recording and the Spanish transcript to the Home GPU…');
+      if (els.reviewBtn) { els.reviewBtn.disabled = true; }
+      var merged = new Float32Array(sessionAudioSamples);
+      var off = 0;
+      var i;
+      for (i = 0; i < sessionAudio.length; i++) {
+        merged.set(sessionAudio[i], off);
+        off += sessionAudio[i].length;
+      }
+      var form = new FormData();
+      form.append('file', new Blob([encodeWav(merged, 16000)], { type: 'audio/wav' }), 'session.wav');
+      form.append('transcript', segs.map(function (s) { return s.heard || s.es; }).join('\n'));
+      form.append('session', sessionName());
+      fetch(target.url, {
+        method: 'POST',
+        body: form,
+        signal: reviewAbort ? reviewAbort.signal : undefined
+      }).then(function (res) {
+        return res.text().then(function (body) {
+          if (gen !== reviewGen) { return null; }
+          if (!res.ok) {
+            throw new Error(res.status + ' ' + (res.statusText || '') + (body ? ' — ' + String(body).slice(0, 240) : ''));
+          }
+          try { return JSON.parse(body); }
+          catch (e) { throw new Error('Unreadable review response'); }
+        });
+      }).then(function (data) {
+        if (data == null || gen !== reviewGen) { return; }
+        renderReviewSuggestions(ListenReview.parseSuggestions(data));
+        pushLog('', 'audio review returned suggestions from ' + target.url);
+      }).catch(function (err) {
+        if (gen !== reviewGen) { return; }
+        var aborted = err && (err.name === 'AbortError');
+        var detail = aborted
+          ? 'Audio review timed out. The transcript was not changed.'
+          : 'Audio review failed: ' + String((err && err.message) || err) + ' The transcript was not changed.';
+        setReviewStatus(detail);
+        pushLog('error', detail);
+      }).then(function () {
+        clearTimeout(timer);
+        if (els.reviewBtn) { els.reviewBtn.disabled = false; }
+      });
     }
 
     function transcriptLinesForAnalyze() {
@@ -2925,6 +3136,8 @@
 
       // populate settings
       els.direction.value = state.direction;
+      if (els.reviewAudio) { els.reviewAudio.checked = !!state.reviewAudio; }
+      if (els.reviewUrl) { els.reviewUrl.value = state.reviewUrl || ''; }
       els.provider.value = state.provider;
       refreshModelField();
       refreshKeyField();
@@ -3035,6 +3248,21 @@
             ? 'Opted in — Stop will write the .md on this computer.'
             : 'Opted out — use Save to computer if you want a .md.');
         });
+      }
+      if (els.reviewAudio) {
+        els.reviewAudio.addEventListener('change', function () {
+          state.reviewAudio = !!els.reviewAudio.checked;
+          saveState();
+        });
+      }
+      if (els.reviewUrl) {
+        els.reviewUrl.addEventListener('input', function () {
+          state.reviewUrl = els.reviewUrl.value.trim();
+          saveState();
+        });
+      }
+      if (els.reviewBtn) {
+        els.reviewBtn.addEventListener('click', function () { requestAudioReview(); });
       }
       els.speakerProfile.addEventListener('change', function () {
         state.speakerProfile = els.speakerProfile.value;
