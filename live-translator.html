@@ -117,6 +117,11 @@
     .note { font-size:var(--text-sm); color:var(--color-text-muted); margin:0.2rem 0; }
     .note.warn { color:var(--color-warning); }
     .callout { border-left:3px solid var(--color-primary); background:var(--color-surface-2); padding:0.7rem 1rem; border-radius:var(--radius-md); font-size:var(--text-sm); }
+    .review-panel { margin:0.4rem 0 0.8rem; }
+    .review-card { border-left:3px solid var(--color-primary); background:var(--color-surface-2); padding:0.6rem 0.8rem; border-radius:var(--radius-md); margin:0.35rem 0; font-size:var(--text-sm); }
+    .review-card .from { color:var(--color-text-muted); text-decoration:line-through; }
+    .review-card .to { margin-top:0.25rem; }
+    .review-actions { display:flex; gap:0.4rem; margin-top:0.45rem; }
     .diag { margin-top:var(--space-4); }
     .diag summary { cursor:pointer; font:600 var(--text-base)/1.2 var(--font-body); }
     .diag-actions { display:flex; gap:var(--space-2); margin:var(--space-3) 0; flex-wrap:wrap; }
@@ -260,6 +265,15 @@
         <input type="checkbox" id="autoSave" />
         Save to this computer when I stop
       </label>
+      <label class="checkbox" for="reviewAudio">
+        <input type="checkbox" id="reviewAudio" />
+        After Stop, ask the Home GPU to suggest transcript corrections
+      </label>
+      <div class="field">
+        <label for="reviewUrl">Review URL &mdash; blank uses the Home GPU (<code>/api/review</code>). A cloud host is refused.</label>
+        <input type="text" id="reviewUrl" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="https://…:8443/api/review" />
+      </div>
+      <p class="note">Suggestions only. The recorded audio stays with the transcript and is sent to the Home GPU, never to a cloud transcription API. Nothing is rewritten until you press Apply.</p>
       <p class="note" id="exportNote"></p>
       <p class="note" id="exportStatus" hidden></p>
       <div class="field">
@@ -277,6 +291,7 @@
       <button id="saveBtn" class="btn" type="button">💾 Save to computer</button>
       <button id="downloadBtn" class="btn" type="button">Download .md (this device)</button>
       <button id="diarizeBtn" class="btn" type="button">Diarize speakers</button>
+      <button id="reviewBtn" class="btn" type="button" title="Send the recorded audio and the Spanish transcript to the Home GPU. Corrections come back as suggestions.">Review audio</button>
       <div class="analyze-wrap">
         <button id="analyzeBtn" class="btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="analyzeMenu" title="Analyse what has been said — options depend on the profile and folder">🧠 Analyze</button>
         <div id="analyzeMenu" class="analyze-menu" role="menu" hidden></div>
@@ -292,6 +307,10 @@
       <button id="fsBtn" class="btn small" type="button" aria-label="Fullscreen transcript" title="Fullscreen transcript">⛶</button>
     </div>
     <div id="startHint" class="note"></div>
+    <div id="reviewPanel" class="review-panel" hidden>
+      <p id="reviewStatus" class="note"></p>
+      <div id="reviewList"></div>
+    </div>
 
     <div class="statusbar">
       <span id="statusDot" class="dot"></span>
@@ -471,8 +490,20 @@
             continue;
           }
           try {
-            const opts = { task: 'transcribe' };
-            if (job.language) { opts.language = job.language; }   // omitted => Whisper auto-detects (conversation mode)
+            // One utterance, one decode. Do not pass the previous transcript:
+            // conditioning on it is how a short phrase starts repeating.
+            // job.prompt is a vocabulary hint only; this build of the speech
+            // library does not apply it as decoder prompt ids, so it is not
+            // forwarded (a stuck prompt is worse than no prompt).
+            // Temperature 0 is the default greedy decode. A fallback attempt
+            // passes temperature > 0 with sampling. compression_ratio_threshold
+            // is enforced on the page; this library has no such argument.
+            const opts = { task: 'transcribe', return_timestamps: false };
+            if (job.language) { opts.language = job.language; }
+            if (typeof job.temperature === 'number' && job.temperature > 0) {
+              opts.temperature = job.temperature;
+              opts.do_sample = true;
+            }
             const out = await transcriber(job.audio, opts);
             const text = (out && typeof out.text === 'string' ? out.text : '').trim();
             self.postMessage({ type: 'transcript', id: job.id, ok: true, text: text });
@@ -522,7 +553,12 @@
         cfg = Object.assign({}, cfg, m.config || {});
         pump();
       } else if (m.type === 'translate') {
-        queue.push({ id: m.id, text: m.text, context: m.context || null, target: m.target || 'en' });
+        const job = { id: m.id, text: m.text, context: m.context || null, target: m.target || 'en' };
+        let replaced = false;
+        for (let qi = 0; qi < queue.length; qi++) {
+          if (queue[qi].id === job.id) { queue[qi] = job; replaced = true; break; }
+        }
+        if (!replaced) { queue.push(job); }
         pump();
       } else if (m.type === 'test') {
         runTest();
@@ -591,10 +627,14 @@
 
     var SHARED_RULES =
       'The text comes from automatic speech recognition, so it may be a fragment, lack punctuation, or contain recognition errors. ' +
-      'Handle all of that silently: render the most likely intended meaning. ' +
+      'Translate the words that are present. Do not guess a stronger or more specific meaning than what was said. ' +
       'Never remark that the text is garbled, unclear, incomplete, or mis-transcribed; never mention transcription errors; ' +
       'never ask for or mention missing or insufficient context; never add bracketed notes, disclaimers, apologies, or explanations. ' +
-      'Preserve the tone and register of the original.';
+      'Preserve the tone and register of the original. Do not intensify it.';
+
+    function rules() {
+      return SHARED_RULES + (cfg.extraRule ? (' ' + cfg.extraRule) : '');
+    }
 
     function langName(code) {
       return ({ es: 'Spanish', en: 'English', ko: 'Korean' })[code] || 'English';
@@ -605,17 +645,17 @@
         return 'You are a live bilingual interpreter for a Spanish/English conversation. You receive one spoken utterance. ' +
           'Detect whether it is Spanish or English, then translate it into the OTHER language. ' +
           'Reply with ONLY a compact JSON object and nothing else: {"lang":"es"|"en","t":"<the translation in the other language>"}. ' +
-          '"lang" is the language of the INPUT; "t" is its translation. No code fences, no extra text. ' + SHARED_RULES;
+          '"lang" is the language of the INPUT; "t" is its translation. No code fences, no extra text. ' + rules();
       }
       if (target === 'auto-ko') {
         return 'You are a live bilingual interpreter for a Korean/English conversation. You receive one spoken utterance. ' +
           'Detect whether it is Korean or English, then translate it into the OTHER language. ' +
           'Reply with ONLY a compact JSON object and nothing else: {"lang":"ko"|"en","t":"<the translation in the other language>"}. ' +
-          '"lang" is the language of the INPUT; "t" is its translation. No code fences, no extra text. ' + SHARED_RULES;
+          '"lang" is the language of the INPUT; "t" is its translation. No code fences, no extra text. ' + rules();
       }
       var tgt = langName(target);
       return 'You are a live interpreter. Translate the speech transcript you are given into natural, fluent ' + tgt + '. ' +
-        'Reply with ONLY the ' + tgt + ' translation itself: no quotation marks, no preamble, no notes. ' + SHARED_RULES;
+        'Reply with ONLY the ' + tgt + ' translation itself: no quotation marks, no preamble, no notes. ' + rules();
     }
 
     function userPrompt(text, context, target) {
@@ -714,6 +754,9 @@
     }
   </script>
 
+  <script src="live-translator-stream.js"></script>
+  <script src="live-translator-passage.js"></script>
+  <script src="tools/listen-review.js"></script>
   <script>
   (function () {
     'use strict';
@@ -727,6 +770,8 @@
       preloadBtn: $('preloadBtn'), sens: $('sens'), modelStatus: $('modelStatus'),
       engine: $('engine'), localOpts: $('localOpts'), cloudOpts: $('cloudOpts'),
       homegpuOpts: $('homegpuOpts'), homeGpuUrl: $('homeGpuUrl'), speakerProfile: $('speakerProfile'),
+      reviewAudio: $('reviewAudio'), reviewUrl: $('reviewUrl'), reviewBtn: $('reviewBtn'),
+      reviewPanel: $('reviewPanel'), reviewStatus: $('reviewStatus'), reviewList: $('reviewList'),
       cloudModel: $('cloudModel'), cloudModelCustom: $('cloudModelCustom'), vocab: $('vocab'), fileRoot: $('fileRoot'), openaiKey: $('openaiKey'),
       exportRow: $('exportRow'), exportDest: $('exportDest'), exportNote: $('exportNote'), exportStatus: $('exportStatus'),
       autoSave: $('autoSave'), autoSaveRow: $('autoSaveRow'),
@@ -765,6 +810,8 @@
       speakerProfile: '',
       logEndpoint: '',
       direction: 'es-en',
+      reviewAudio: false,
+      reviewUrl: '',
       theme: 'light', scale: 1, view: 'both'
     };
     var STORE_KEY = 'liveTranslator.v2';
@@ -783,8 +830,10 @@
     var interimRow = null, interimEs = null, interimEn = null;
     var placeholderEl = null;
     var segEl = {};
-    var sessionAudio = [];        // Float32 chunks @16k, accumulated for post-session diarization
+    var sessionAudio = [];        // Float32 chunks @16k, kept with the transcript for diarization and review
     var sessionAudioSamples = 0;
+    var reviewGen = 0;
+    var reviewAbort = null;
     var logBuffer = [];
     var LOG_MAX = 500;
 
@@ -817,6 +866,8 @@
           speakerProfile: typeof s.speakerProfile === 'string' ? s.speakerProfile : '',
           logEndpoint: s.logEndpoint || '',
           direction: DIRECTIONS.indexOf(s.direction) >= 0 ? s.direction : 'es-en',
+          reviewAudio: typeof s.reviewAudio === 'boolean' ? s.reviewAudio : false,
+          reviewUrl: typeof s.reviewUrl === 'string' ? s.reviewUrl : '',
           theme: s.theme === 'dark' ? 'dark' : 'light',
           scale: typeof s.scale === 'number' ? s.scale : 1,
           view: ['both', 'es', 'en'].indexOf(s.view) >= 0 ? s.view : 'both'
@@ -907,7 +958,10 @@
           model: (state.models[state.provider] || '').trim(),
           apiKey: (state.apiKeys[state.provider] || '').trim(),
           leftName: chrome.left,
-          rightName: chrome.right
+          rightName: chrome.right,
+          extraRule: window.ListenStream
+            ? [ListenStream.LITERAL_TRANSLATION_RULE, ListenStream.UNCERTAIN_WORD_RULE].join(' ')
+            : ''
         }
       });
     }
@@ -987,6 +1041,9 @@
       var refs = segEl[seg.id];
       if (refs && refs.row) { refs.row.remove(); }
       delete segEl[seg.id];
+      if (seg && seg.translateTimer) { clearTimeout(seg.translateTimer); seg.translateTimer = null; }
+      var mk;
+      for (mk in hgMap) { if (hgMap[mk] === seg) { delete hgMap[mk]; } }
       if (!segments.length) { showPlaceholder(); }
       updateStatus();
     }
@@ -995,6 +1052,10 @@
     function isMonolingual() {
       var p = state.speakerProfile || '';
       return p === 'meeting' || p === 'transcribe' || p === 'podcast';
+    }
+
+    function skipTranslation() {
+      return isMonolingual();
     }
 
     function pairChrome() {
@@ -1120,12 +1181,14 @@
       paintCell(refs.en, 'en', seg.enState, enText, seg.error, enLabel, retryEn);
     }
 
-    function setInterim(txt) {
+    function setInterim(txt, pendingEn) {
       if (txt) {
         interimEs.textContent = txt;
+        if (interimEn) { interimEn.textContent = pendingEn === false ? '' : '…'; }
         interimRow.style.display = '';
       } else {
         interimEs.textContent = '';
+        if (interimEn) { interimEn.textContent = '…'; }
         interimRow.style.display = 'none';
       }
       maybeScroll();
@@ -1141,6 +1204,7 @@
     // ---- transcription result handling (shared by on-device and cloud) ----
     function transCtx(seg) {
       var prev = prevSeg(seg);
+      while (prev && (prev.noContext || prev.passage || prev.collapsed)) { prev = prevSeg(prev); }
       if (!prev) { return null; }
       var c = {};
       if (prev.esState === 'done' && prev.es) { c.es = prev.es; }
@@ -1150,10 +1214,60 @@
     function segTarget(seg) {
       return dirInfo(seg.dir || state.direction).tgt;
     }
+    function guardTranslation(source, text) {
+      if (!window.ListenStream || !ListenStream.flagUnmatchedProfanity) { return text; }
+      var check = ListenStream.flagUnmatchedProfanity(source, text);
+      if (!check.flagged) { return text; }
+      pushLog('warn', 'translation added profanity with no counterpart in the Spanish: ' + check.words.join(', '));
+      return check.text;
+    }
+
+    var TRANSLATE_TIMEOUT_MS = 45000;
+    function armTranslationTimeout(seg) {
+      if (seg.translateTimer) { clearTimeout(seg.translateTimer); }
+      seg.translateTimer = setTimeout(function () {
+        if (!seg || seg.enState !== 'translating') { return; }
+        seg.enState = 'error';
+        seg.error = 'Translation timed out — the Spanish line was kept and was not added again.';
+        paintRow(seg);
+        pushLog('error', 'translation timed out for line ' + seg.id
+          + ' — Spanish line kept, not added again. “'
+          + String(seg.heard || seg.es || '').slice(0, 80) + '”');
+      }, TRANSLATE_TIMEOUT_MS);
+    }
+    function clearTranslationTimeout(seg) {
+      if (seg && seg.translateTimer) { clearTimeout(seg.translateTimer); seg.translateTimer = null; }
+    }
+    function queueTranslate(seg) {
+      if (!seg || !translator || skipTranslation() || seg.collapsed) { return; }
+      seg.noContext = false;
+      armTranslationTimeout(seg);
+      translator.postMessage({
+        type: 'translate', id: seg.id, text: seg.heard || seg.es,
+        target: segTarget(seg), context: transCtx(seg)
+      });
+    }
 
     function applyTranscript(seg, text) {
       var txt = (text || '').trim();
       if (!txt || !/\p{L}/u.test(txt)) { removeSeg(seg); return; }   // empty / punctuation-only / noise
+      if (window.ListenStream && considerRedecode(seg, txt)) { return; }
+      if (window.ListenStream) {
+        // The placeholder row is not in the transcript book yet. Hand the
+        // text to the book so a loop collapses onto an existing line
+        // instead of stacking another copy. A normal segment is stored
+        // exactly as the recognizer wrote it.
+        var keptId = seg.id;
+        var pcm = seg.pcm;
+        var attempt = seg.decodeAttempt || 0;
+        removeSeg(seg);
+        var decision = acceptSpeech(txt, null, keptId);
+        if (decision && decision.line) {
+          var kept = findSeg(decision.line.id);
+          if (kept) { kept.pcm = pcm; kept.decodeAttempt = attempt; }
+        }
+        return;
+      }
       var dir = seg.dir || 'es-en';
       var info = dirInfo(dir);
       seg.heard = txt;
@@ -1216,7 +1330,7 @@
     }
 
     // cloud transcription via OpenAI's audio API (uses the OpenAI key)
-    function cloudTranscribe(seg, audio16k) {
+    function cloudTranscribe(seg, audio16k, temperature) {
       var key = (state.apiKeys.openai || '').trim();
       if (!key) { applyTranscriptError(seg, 'Cloud transcription needs an OpenAI API key'); return; }
       var form = new FormData();
@@ -1224,8 +1338,11 @@
       form.append('model', (state.cloudModel || 'gpt-4o-transcribe').trim());
       var clang = srcCloudLang();
       if (clang) { form.append('language', clang); }   // omitted => OpenAI auto-detects (conversation mode)
-      var vocab = (state.vocab || '').trim();
-      if (vocab) { form.append('prompt', vocab); }
+      if (typeof temperature === 'number' && temperature > 0) {
+        form.append('temperature', String(temperature));
+      }
+      var hint = (state.vocab || '').trim();
+      if (hint) { form.append('prompt', hint); }
       fetch('https://api.openai.com/v1/audio/transcriptions', {
         method: 'POST',
         headers: { 'authorization': 'Bearer ' + key },
@@ -1527,6 +1644,201 @@
       return out;
     }
 
+    var speechBook = null;
+    var audioGate = null;
+    var hgPreroll = [];
+    var HG_PREROLL_MAX = 8;
+    var hgReplayTimer = null;
+
+    function speech() {
+      if (!window.ListenStream) { return null; }
+      if (!speechBook) { speechBook = ListenStream.createTranscript(); }
+      return speechBook;
+    }
+    function gate() {
+      if (!window.ListenStream) { return null; }
+      if (!audioGate) { audioGate = ListenStream.createAudioGate({ hangMs: HANG_MS, maxMs: MAX_MS }); }
+      return audioGate;
+    }
+    function resetSpeechBook() {
+      speechBook = window.ListenStream ? ListenStream.createTranscript() : null;
+      audioGate = window.ListenStream ? ListenStream.createAudioGate({ hangMs: HANG_MS, maxMs: MAX_MS }) : null;
+      hgPreroll = [];
+      if (hgReplayTimer) { clearTimeout(hgReplayTimer); hgReplayTimer = null; }
+    }
+    function sendHgJson(obj) {
+      if (!hgWs || hgWs.readyState !== 1) { return; }
+      try { hgWs.send(JSON.stringify(obj)); } catch (e) {}
+    }
+    function rememberHgAudio(buf) {
+      if (!buf || !buf.byteLength) { return; }
+      var copy = new Float32Array(buf.slice(0));
+      if (!copy.length) { return; }
+      sessionAudio.push(copy);
+      sessionAudioSamples += copy.length;
+    }
+    function sendHgPcm(buf) {
+      rememberHgAudio(buf);
+      if (hgWs && hgWs.readyState === 1) {
+        try { hgWs.send(buf); } catch (e) {}
+      } else if (listening) {
+        hgHoldPush(buf);
+        hgScheduleReconnect();
+      }
+    }
+    // dropUntilSilence is only for a live partial that is still growing.
+    // A finished line that collapsed keeps the microphone open: the next
+    // sentence may be real preaching.
+    function resetListenAudio(reason, dropUntilSilence) {
+      if (dropUntilSilence && gate()) {
+        gate().forceReset();
+        hgHold = [];
+        hgHoldSamples = 0;
+        hgPreroll = [];
+      }
+      sendHgJson({
+        type: 'reset',
+        reason: reason || 'repetition',
+        condition_on_previous_text: false
+      });
+      pushLog('warn', 'decoder loop — conditioning dropped (' + (reason || 'repetition') + ')'
+        + (dropUntilSilence ? ', holding audio until silence' : ''));
+    }
+    function showPartial(text) {
+      var raw = text == null ? '' : String(text);
+      if (!raw.trim()) { setInterim(''); return; }
+      var book = speech();
+      if (!book) { setInterim('🎙 ' + raw); return; }
+      var d = book.partial(raw);
+      setInterim(d.text ? ('🎙 ' + d.text) : '', d.translate !== false);
+      if (d.resetAudio) { resetListenAudio('repetition', true); }
+    }
+    function mapServerSeg(seg) {
+      if (!seg || seg.serverId == null || seg.serverId === '') { return; }
+      hgMap[seg.serverId] = seg;
+    }
+    function renderSpeech(decision) {
+      if (!decision) { return; }
+      if (decision.action === 'duplicate') {
+        if (decision.reason === 'reconnect') {
+          pushLog('warn', 'reconnect replay matched an existing line — not added again');
+        } else if (decision.reason === 'id') {
+          pushLog('', 'segment id already on screen — not added again');
+        }
+        return;
+      }
+      var wanted = {};
+      (decision.lines || []).forEach(function (ln) { wanted[ln.id] = ln; });
+      segments.filter(function (seg) { return seg.guarded && !wanted[seg.id]; }).forEach(removeSeg);
+      (decision.lines || []).forEach(function (ln) {
+        var seg = findSeg(ln.id);
+        if (!seg) {
+          seg = {
+            id: ln.id,
+            es: ln.text,
+            esState: 'done',
+            en: '',
+            enState: 'idle',
+            error: '',
+            t: Date.now(),
+            heard: ln.base || ln.text,
+            dir: state.direction || 'es-en',
+            guarded: true,
+            collapsed: !!ln.collapsed,
+            noContext: !!ln.collapsed,
+            serverId: ln.serverId == null ? null : ln.serverId
+          };
+          segments.push(seg);
+          removePlaceholder();
+          addRow(seg);
+        } else {
+          seg.es = ln.text;
+          seg.heard = ln.base || ln.text;
+          seg.esState = 'done';
+          seg.collapsed = !!ln.collapsed;
+          seg.noContext = !!ln.collapsed;
+          seg.guarded = true;
+          if (ln.serverId != null && ln.serverId !== '') { seg.serverId = ln.serverId; }
+          if (ln.collapsed && decision.action !== 'collapse') {
+            // An intra-line decoder loop was never real speech. A second copy
+            // of a normal sentence keeps the translation already in flight.
+            clearTranslationTimeout(seg);
+            if (seg.enState === 'translating') { seg.en = ''; seg.enState = 'idle'; }
+          }
+        }
+        mapServerSeg(seg);
+        paintRow(seg);
+      });
+      var line = decision.line;
+      var segNow = line ? findSeg(line.id) : null;
+      if (segNow && decision.translate && !line.collapsed && !skipTranslation()) {
+        segNow.enState = 'translating';
+        segNow.collapsed = false;
+        segNow.noContext = false;
+        paintRow(segNow);
+        queueTranslate(segNow);
+      }
+      maybeScroll();
+      updateStatus();
+    }
+    function acceptSpeech(text, serverId, localId) {
+      var book = speech();
+      if (!book) { return null; }
+      var id = localId != null ? localId : nextId;
+      var decision = book.add(text, { serverId: serverId, localId: id });
+      if (decision.line && decision.line.id >= nextId) { nextId = decision.line.id + 1; }
+      renderSpeech(decision);
+      if (decision.action === 'keep' && decision.line && decision.line.collapsed) {
+        resetListenAudio('repetition', false);
+      }
+      return decision;
+    }
+    function considerRedecode(seg, txt) {
+      if (!seg || seg.passage || !window.ListenStream || !ListenStream.decodeDecision) { return false; }
+      if (state.transcribeEngine === 'homegpu' || state.transcribeEngine === 'native') { return false; }
+      var audio = seg.pcm;
+      if (!audio || !audio.length) { return false; }
+      var decision = ListenStream.decodeDecision(txt, seg.decodeAttempt || 0);
+      if (!decision.retry) { return false; }
+      seg.decodeAttempt = decision.attempt;
+      seg.esState = 'transcribing';
+      seg.enState = 'idle';
+      seg.error = '';
+      paintRow(seg);
+      var opts = ListenStream.whisperDecodeOptions(srcWhisperLang(), decision.attempt);
+      pushLog('warn', 'repetition suspected (compression ' + (decision.ratio || 0).toFixed(2)
+        + ') — conditioning dropped, re-decoding at temperature ' + opts.temperature);
+      if (state.transcribeEngine === 'cloud') {
+        cloudTranscribe(seg, audio, opts.temperature);
+        return true;
+      }
+      if (!whisper) { return false; }
+      var copy = new Float32Array(audio);
+      whisper.postMessage({
+        type: 'transcribe',
+        id: seg.id,
+        audio: copy,
+        model: state.whisperModel,
+        device: whisperDevice(),
+        language: opts.language || srcWhisperLang(),
+        temperature: opts.temperature
+      }, [copy.buffer]);
+      return true;
+    }
+    function paintPassage(seg, ev) {
+      if (!window.ListenPassage || !ev) { return; }
+      seg.lookupGen = (seg.lookupGen || 0) + 1;
+      var gen = seg.lookupGen;
+      ListenPassage.fill(ev).then(function (filled) {
+        if (!filled || seg.lookupGen !== gen) { return; }
+        if (filled.es) { seg.es = filled.es; }
+        if (filled.en) { seg.en = filled.en; }
+        seg.ref_es = filled.ref_es || seg.ref_es;
+        seg.ref_en = filled.ref_en || seg.ref_en;
+        paintRow(seg);
+      });
+    }
+
     function passageSameChapter(a, b) {
       function chap(r) {
         var m = String(r || '').match(/^(.*\s)(\d+):/);
@@ -1538,14 +1850,25 @@
     function hgHandleEvent(ev) {
       if (ev.type === 'interim') {
         // in-progress Spanish from the server, ahead of sentence commit
-        setInterim('🎙 ' + ev.text);
+        showPartial(ev.text);
       } else if (ev.type === 'passage') {
-        // scripture passage detected in the speech - show it as its own row.
-        // Jean Petit names 1–2 verses then reads many more: a later card
-        // with the same book+chapter *replaces* the announced-only card.
-        var esT = '📖 ' + ev.ref_es + (ev.es ? ' — ' + ev.es : '');
-        var enT = '📖 ' + ev.ref_en + (ev.en ? ' — ' + ev.en : '');
+        // Scripture card. The reference paints immediately. Verse text comes
+        // from the configured public-domain lookup, never from ev.es / ev.en
+        // (those have come back as a copyright rant).
+        var card = (window.ListenPassage && ListenPassage.cardFromEvent(ev)) || {
+          es: ev.ref_es ? ('📖 ' + ev.ref_es) : '',
+          en: ev.ref_en ? ('📖 ' + ev.ref_en) : '',
+          ref_es: ev.ref_es || '',
+          ref_en: ev.ref_en || ''
+        };
+        if (!card.ref_es && !card.ref_en) {
+          pushLog('warn', 'passage event had no reference — not shown');
+          return;
+        }
+        var esT = card.es || (card.ref_es ? ('📖 ' + card.ref_es) : '');
+        var enT = card.en || (card.ref_en ? ('📖 ' + card.ref_en) : '');
         var updated = false;
+        var target = null;
         if (ev.replaces) {
           // Find the most recent card for this book+chapter, looking past
           // cards for OTHER chapters. The old loop stopped at the newest
@@ -1556,32 +1879,34 @@
           for (var pi = segments.length - 1; pi >= 0; pi--) {
             var prev = segments[pi];
             if (!prev.passage || !prev.ref_en) { continue; }
-            if (!passageSameChapter(prev.ref_en, ev.ref_en)) { continue; }
-            if (prev.es !== esT || prev.en !== enT) {
-              prev.es = esT; prev.en = enT;
-              prev.ref_en = ev.ref_en; prev.ref_es = ev.ref_es;
-              paintRow(prev);
-            }
+            if (!passageSameChapter(prev.ref_en, card.ref_en || ev.ref_en)) { continue; }
+            prev.es = esT; prev.en = enT;
+            prev.ref_en = card.ref_en || ev.ref_en;
+            prev.ref_es = card.ref_es || ev.ref_es;
+            paintRow(prev);
+            target = prev;
             updated = true;
             break;
           }
         }
         if (!updated) {
-          var pseg = {
+          target = {
             id: nextId++,
             es: esT, en: enT,
             esState: 'done', enState: 'done', error: '', t: Date.now(),
             heard: '', dir: 'es-en', passage: true,
-            ref_en: ev.ref_en, ref_es: ev.ref_es
+            ref_en: card.ref_en || ev.ref_en || '',
+            ref_es: card.ref_es || ev.ref_es || ''
           };
-          segments.push(pseg);
+          segments.push(target);
           removePlaceholder();
-          addRow(pseg);
-          paintRow(pseg);
+          addRow(target);
+          paintRow(target);
         }
+        paintPassage(target, ev);
         maybeScroll();
         updateStatus();
-        pushLog('', 'passage: ' + ev.ref_en + (updated ? ' (extended)' : ''));
+        pushLog('', 'passage: ' + (target.ref_en || target.ref_es) + (updated ? ' (extended)' : ''));
       } else if (ev.type === 'lexicon') {
         // a Greek/Hebrew word was mentioned: show it with its script and sense
         var tseg = {
@@ -1620,22 +1945,29 @@
           : 'Analysis ready');
       } else if (ev.type === 'correction') {
         // The rolling QC pass re-read this line with the context that arrived
-        // after it and found a recognition error. Replace the text in place;
-        // a corrected translation follows as a normal 'en' event.
+        // after it and found a recognition error. Replace the text in place.
+        // A loop still collapses; a normal correction is kept word for word.
         var cseg = hgMap[ev.id];
-        if (cseg) {
+        if (window.ListenStream) {
+          acceptSpeech(ev.text, ev.id, cseg ? cseg.id : nextId);
+          pushLog('', 'corrected #' + ev.id);
+        } else if (cseg) {
           cseg.es = ev.text;
           cseg.heard = ev.text;
           cseg.corrected = true;
-          if (!isMonolingual()) { cseg.enState = 'translating'; }
+          if (!skipTranslation()) { cseg.enState = 'translating'; }
           paintRow(cseg);
           pushLog('', 'corrected #' + ev.id + ': ' + ev.text);
         }
       } else if (ev.type === 'es') {
         setInterim('');
+        if (window.ListenStream) {
+          acceptSpeech(ev.text, ev.id, nextId);
+          return;
+        }
         var seg = {
           id: nextId++, es: ev.text, esState: 'done', en: '',
-          enState: isMonolingual() ? 'idle' : 'translating',
+          enState: skipTranslation() ? 'idle' : 'translating',
           error: '', t: Date.now(), heard: ev.text, dir: 'es-en'
         };
         segments.push(seg);
@@ -1646,9 +1978,11 @@
         maybeScroll();
         updateStatus();
       } else if (ev.type === 'en') {
+        if (skipTranslation()) { return; }
         var seg2 = hgMap[ev.id];
-        if (!seg2) { return; }
-        seg2.en = ev.text;
+        if (!seg2 || seg2.collapsed) { return; }
+        clearTranslationTimeout(seg2);
+        seg2.en = guardTranslation(seg2.heard || seg2.es, ev.text);
         seg2.enState = 'done';
         paintRow(seg2);
         maybeScroll();
@@ -1664,13 +1998,25 @@
       hgHoldSamples += n;
     }
 
+    function armReplayEnd(seconds) {
+      var book = speech();
+      if (!book) { return; }
+      if (hgReplayTimer) { clearTimeout(hgReplayTimer); }
+      var ms = Math.max(1500, Math.min(8000, (seconds || 0) * 1000 + 1000));
+      hgReplayTimer = setTimeout(function () {
+        hgReplayTimer = null;
+        var live = speech();
+        if (live) { live.endReplay(); }
+      }, ms);
+    }
     function hgFlushHold() {
-      if (!hgWs || hgWs.readyState !== 1 || !hgHold.length) { return; }
+      if (!hgWs || hgWs.readyState !== 1 || !hgHold.length) { return 0; }
       var n = hgHold.length;
-      var sec = (hgHoldSamples / 16000).toFixed(1);
+      var sec = hgHoldSamples / 16000;
       while (hgHold.length) { hgWs.send(hgHold.shift()); }
       hgHoldSamples = 0;
-      pushLog('', 'replayed ' + n + ' held frames (~' + sec + ' s) after reconnect');
+      pushLog('', 'replayed ' + n + ' held frames (~' + sec.toFixed(1) + ' s) after reconnect');
+      return sec;
     }
 
     function hgCancelReconnect() {
@@ -1692,7 +2038,10 @@
         hgConnect().then(function (ok) {
           if (ok) {
             hgCancelReconnect();
-            hgFlushHold();
+            var book = speech();
+            if (book) { book.beginReplay(); }
+            var replayedSec = hgFlushHold();
+            armReplayEnd(replayedSec);
             if (audioCtx && audioCtx.resume) { audioCtx.resume(); }
             setStatus('live', isMonolingual()
               ? 'Listening — reconnected to Home GPU.'
@@ -1759,7 +2108,8 @@
           hgConnecting = false;
           if (!settled) { settled = true; clearTimeout(timer); resolve(false); }
           else if (listening && state.transcribeEngine === 'homegpu') {
-            pushLog('error', 'Home GPU connection closed');
+            pushLog('error', 'Home GPU connection closed — network gone, still listening, will reconnect.');
+            if (speech()) { speech().beginReplay(); }
             hgScheduleReconnect();
           }
         };
@@ -1789,6 +2139,7 @@
         seg.audioEnd = sessionAudioSamples + audioCopy.length;
         sessionAudio.push(audioCopy);
         sessionAudioSamples += audioCopy.length;
+        seg.pcm = audioCopy;
         if (state.transcribeEngine === 'cloud') {
           cloudTranscribe(seg, audio16k);
         } else if (whisper) {
@@ -1826,18 +2177,20 @@
       if (m.type === 'result') {
         var seg = findSeg(m.id);
         if (!seg) { return; }
+        clearTranslationTimeout(seg);
         var dir = seg.dir || 'es-en';
         var info = dirInfo(dir);
         if (m.ok) {
+          var source = seg.heard || seg.es;
           if (info.auto) {
             // Heard in its language column (English = right; Korean/Spanish = left).
             if (m.lang === 'en') { seg.en = seg.heard; seg.es = m.text; }
-            else { seg.es = seg.heard; seg.en = m.text; }
+            else { seg.es = source; seg.en = guardTranslation(source, m.text); }
             seg.esState = 'done'; seg.enState = 'done';
           } else if (info.tgtCol === 'es') {
             seg.es = m.text; seg.esState = 'done';
           } else {
-            seg.en = m.text; seg.enState = 'done';
+            seg.en = guardTranslation(source, m.text); seg.enState = 'done';
           }
           seg.error = '';
         } else {
@@ -1867,7 +2220,8 @@
 
     function retrySeg(id) {
       var seg = findSeg(id);
-      if (!seg || !translator) { return; }
+      if (!seg || seg.collapsed || !translator || skipTranslation()) { return; }
+      if (speech()) { speech().retry(id); }
       var dir = seg.dir || 'es-en';
       var info = dirInfo(dir);
       var src = seg.heard || (info.srcCol === 'en' ? seg.en : seg.es);
@@ -1877,7 +2231,7 @@
       else { seg.enState = 'translating'; }
       seg.error = '';
       paintRow(seg);
-      translator.postMessage({ type: 'translate', id: seg.id, text: src, target: segTarget(seg), context: transCtx(seg) });
+      queueTranslate(seg);
     }
 
     // ---- speech model status ----
@@ -1985,16 +2339,29 @@
       var frameMs = (n / srcRate) * 1000;
       setLevel(rms);
       if (state.transcribeEngine === 'homegpu') {
-        // continuous streaming: the server does its own VAD and chunking.
-        // If the iPad lost its iPhone/Tailscale path, keep capturing and hold
-        // PCM until the socket is back — otherwise the UI looks live while
-        // nothing is saved (CRS podcast 2026-09-02).
-        var pcm = downsampleTo16k(frame, srcRate).buffer;
-        if (hgWs && hgWs.readyState === 1) {
-          hgWs.send(pcm);
-        } else if (listening) {
-          hgHoldPush(pcm);
-          hgScheduleReconnect();
+        // Stream speech, not an unbounded run of silence. A short preroll
+        // keeps the start of a word. The server still does its own VAD.
+        // If the socket is down, hold PCM until it is back.
+        var pcm = downsampleTo16k(frame, srcRate);
+        var g = gate();
+        if (!g) { sendHgPcm(pcm.buffer); return; }
+        var gated = g.noteFrame({ rms: rms, threshold: micThreshold(), frameMs: frameMs });
+        if (gated.sendPreroll && hgPreroll.length) {
+          var pre = hgPreroll.slice();
+          hgPreroll = [];
+          pre.forEach(sendHgPcm);
+        }
+        if (!gated.send) {
+          if (gated.reason !== 'repetition') {
+            hgPreroll.push(pcm.buffer);
+            if (hgPreroll.length > HG_PREROLL_MAX) { hgPreroll.shift(); }
+          }
+          return;
+        }
+        sendHgPcm(pcm.buffer);
+        if (gated.reset && gated.reason === 'max') {
+          sendHgJson({ type: 'reset', reason: 'max', condition_on_previous_text: false });
+          pushLog('warn', 'audio segment reached ' + Math.round(MAX_MS / 1000) + 's — reset, still listening');
         }
         return;
       }
@@ -2070,8 +2437,9 @@
 
     function nativeAsrPaint(text, done) {
       if (!text) { return; }
-      if (!done) { setInterim(text); return; }
+      if (!done) { showPartial(text); return; }
       setInterim('');
+      if (window.ListenStream) { acceptSpeech(text, null, nextId); return; }
       var seg = {
         id: nextId++, es: text, esState: 'done', en: text,
         enState: 'done', error: '', t: Date.now(), heard: text, dir: state.direction
@@ -2200,6 +2568,7 @@
       stopCapture();
       setStatus('idle', 'Stopped — transcript kept. Clear to erase.');
       updateControls();
+      if (state.reviewAudio) { requestAudioReview(); }
     }
 
     // ---- status / controls ----
@@ -2326,8 +2695,12 @@
       segments = [];
       segEl = {};
       hgMap = {};
+      resetSpeechBook();
       sessionAudio = [];
       sessionAudioSamples = 0;
+      reviewGen++;
+      if (reviewAbort) { try { reviewAbort.abort(); } catch (e) {} reviewAbort = null; }
+      clearReviewUi();
       var olds = els.rows.querySelectorAll('.row.seg');
       Array.prototype.forEach.call(olds, function (r) { r.remove(); });
       removePlaceholder();
@@ -2340,6 +2713,177 @@
       }
       els.statusText.dataset.msg = listening ? 'Listening…' : 'Idle';
       updateStatus();
+    }
+
+    function spanishReviewLines() {
+      return segments.filter(function (s) {
+        if (s.esState !== 'done' || !s.es) { return false; }
+        if (s.passage) { return false; }
+        if (/^🧠 /.test(s.es)) { return false; }
+        return true;
+      });
+    }
+    function setReviewStatus(msg) {
+      if (els.reviewStatus) { els.reviewStatus.textContent = msg || ''; }
+      if (els.reviewPanel) {
+        var hasCards = els.reviewList && els.reviewList.childNodes.length;
+        els.reviewPanel.hidden = !msg && !hasCards;
+      }
+    }
+    function clearReviewUi() {
+      if (els.reviewList) { els.reviewList.innerHTML = ''; }
+      if (els.reviewStatus) { els.reviewStatus.textContent = ''; }
+      if (els.reviewPanel) { els.reviewPanel.hidden = true; }
+    }
+    function applyReviewSuggestion(suggestion, card, btn) {
+      if (!window.ListenReview) { return; }
+      var segs = spanishReviewLines();
+      var lines = segs.map(function (seg) {
+        return { text: seg.heard || seg.es, es: seg.es, id: seg.id };
+      });
+      var result = ListenReview.acceptSuggestion(lines, suggestion);
+      if (!result.ok) {
+        setReviewStatus(result.reason === 'stale'
+          ? 'That line changed, so the suggestion was not applied.'
+          : 'Could not match that suggestion to a transcript line.');
+        return;
+      }
+      var seg = segs[result.line];
+      if (!seg) { return; }
+      seg.es = suggestion.to;
+      seg.heard = suggestion.to;
+      seg.acceptedSuggestion = true;
+      paintRow(seg);
+      var book = speech();
+      if (book && book.revise) { book.revise(seg.id, suggestion.to); }
+      if (btn) { btn.textContent = 'Applied'; btn.disabled = true; }
+      if (card) { card.classList.add('applied'); }
+      pushLog('', 'review suggestion applied to line ' + seg.id);
+    }
+    function renderReviewSuggestions(suggestions) {
+      if (!els.reviewList) { return; }
+      els.reviewList.innerHTML = '';
+      if (!suggestions.length) {
+        setReviewStatus('No corrections suggested. The transcript was left as written.');
+        return;
+      }
+      setReviewStatus(suggestions.length + ' suggestion' + (suggestions.length === 1 ? '' : 's')
+        + '. Nothing changes until you press Apply.');
+      suggestions.forEach(function (s) {
+        var card = document.createElement('div');
+        card.className = 'review-card';
+        var from = document.createElement('div');
+        from.className = 'from';
+        from.textContent = s.from;
+        var to = document.createElement('div');
+        to.className = 'to';
+        to.textContent = s.to;
+        var actions = document.createElement('div');
+        actions.className = 'review-actions';
+        var apply = document.createElement('button');
+        apply.type = 'button';
+        apply.className = 'btn small';
+        apply.textContent = 'Apply';
+        var dismiss = document.createElement('button');
+        dismiss.type = 'button';
+        dismiss.className = 'btn small';
+        dismiss.textContent = 'Dismiss';
+        apply.addEventListener('click', function () { applyReviewSuggestion(s, card, apply); });
+        dismiss.addEventListener('click', function () {
+          card.remove();
+          pushLog('', 'review suggestion dismissed');
+        });
+        actions.appendChild(apply);
+        actions.appendChild(dismiss);
+        card.appendChild(from);
+        card.appendChild(to);
+        if (s.reason) {
+          var reason = document.createElement('div');
+          reason.className = 'note';
+          reason.textContent = s.reason;
+          card.appendChild(reason);
+        }
+        card.appendChild(actions);
+        els.reviewList.appendChild(card);
+      });
+    }
+    function requestAudioReview() {
+      if (!window.ListenReview) {
+        setReviewStatus('Review helper did not load.');
+        return;
+      }
+      var target = ListenReview.reviewTarget({
+        homeGpuHttp: hgHttpOrigin(),
+        reviewUrl: state.reviewUrl
+      });
+      if (!target.ok) {
+        var msg = target.reason === 'cloud-refused'
+          ? 'Audio review stays on the Home GPU. A cloud host was refused.'
+          : target.reason === 'bad-url'
+            ? 'The review URL is not a valid http(s) address.'
+            : 'No Home GPU URL for audio review.';
+        setReviewStatus(msg);
+        pushLog('error', 'audio review: ' + (target.reason || 'refused'));
+        return;
+      }
+      if (!sessionAudioSamples) {
+        setReviewStatus('No recorded audio to review. The transcript was left as written.');
+        return;
+      }
+      var segs = spanishReviewLines();
+      if (!segs.length) {
+        setReviewStatus('No Spanish transcript to review.');
+        return;
+      }
+      reviewGen++;
+      var gen = reviewGen;
+      if (reviewAbort) { try { reviewAbort.abort(); } catch (e) {} }
+      reviewAbort = typeof AbortController !== 'undefined' ? new AbortController() : null;
+      var timer = setTimeout(function () {
+        if (reviewAbort) { try { reviewAbort.abort(); } catch (e) {} }
+      }, 120000);
+      setReviewStatus('Sending the recording and the Spanish transcript to the Home GPU…');
+      if (els.reviewBtn) { els.reviewBtn.disabled = true; }
+      var merged = new Float32Array(sessionAudioSamples);
+      var off = 0;
+      var i;
+      for (i = 0; i < sessionAudio.length; i++) {
+        merged.set(sessionAudio[i], off);
+        off += sessionAudio[i].length;
+      }
+      var form = new FormData();
+      form.append('file', new Blob([encodeWav(merged, 16000)], { type: 'audio/wav' }), 'session.wav');
+      form.append('transcript', segs.map(function (s) { return s.heard || s.es; }).join('\n'));
+      form.append('session', sessionName());
+      fetch(target.url, {
+        method: 'POST',
+        body: form,
+        signal: reviewAbort ? reviewAbort.signal : undefined
+      }).then(function (res) {
+        return res.text().then(function (body) {
+          if (gen !== reviewGen) { return null; }
+          if (!res.ok) {
+            throw new Error(res.status + ' ' + (res.statusText || '') + (body ? ' — ' + String(body).slice(0, 240) : ''));
+          }
+          try { return JSON.parse(body); }
+          catch (e) { throw new Error('Unreadable review response'); }
+        });
+      }).then(function (data) {
+        if (data == null || gen !== reviewGen) { return; }
+        renderReviewSuggestions(ListenReview.parseSuggestions(data));
+        pushLog('', 'audio review returned suggestions from ' + target.url);
+      }).catch(function (err) {
+        if (gen !== reviewGen) { return; }
+        var aborted = err && (err.name === 'AbortError');
+        var detail = aborted
+          ? 'Audio review timed out. The transcript was not changed.'
+          : 'Audio review failed: ' + String((err && err.message) || err) + ' The transcript was not changed.';
+        setReviewStatus(detail);
+        pushLog('error', detail);
+      }).then(function () {
+        clearTimeout(timer);
+        if (els.reviewBtn) { els.reviewBtn.disabled = false; }
+      });
     }
 
     function transcriptLinesForAnalyze() {
@@ -2592,6 +3136,8 @@
 
       // populate settings
       els.direction.value = state.direction;
+      if (els.reviewAudio) { els.reviewAudio.checked = !!state.reviewAudio; }
+      if (els.reviewUrl) { els.reviewUrl.value = state.reviewUrl || ''; }
       els.provider.value = state.provider;
       refreshModelField();
       refreshKeyField();
@@ -2703,6 +3249,21 @@
             : 'Opted out — use Save to computer if you want a .md.');
         });
       }
+      if (els.reviewAudio) {
+        els.reviewAudio.addEventListener('change', function () {
+          state.reviewAudio = !!els.reviewAudio.checked;
+          saveState();
+        });
+      }
+      if (els.reviewUrl) {
+        els.reviewUrl.addEventListener('input', function () {
+          state.reviewUrl = els.reviewUrl.value.trim();
+          saveState();
+        });
+      }
+      if (els.reviewBtn) {
+        els.reviewBtn.addEventListener('click', function () { requestAudioReview(); });
+      }
       els.speakerProfile.addEventListener('change', function () {
         state.speakerProfile = els.speakerProfile.value;
         syncPairFromProfile();
@@ -2743,6 +3304,8 @@
       });
       window.addEventListener('offline', function () {
         if (listening && state.transcribeEngine === 'homegpu') {
+          pushLog('error', 'Network gone — still listening, will reconnect.');
+          if (speech()) { speech().beginReplay(); }
           setStatus('err', 'Network gone — still listening, will reconnect.');
         }
       });
