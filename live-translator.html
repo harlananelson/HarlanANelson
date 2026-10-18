@@ -117,11 +117,6 @@
     .note { font-size:var(--text-sm); color:var(--color-text-muted); margin:0.2rem 0; }
     .note.warn { color:var(--color-warning); }
     .callout { border-left:3px solid var(--color-primary); background:var(--color-surface-2); padding:0.7rem 1rem; border-radius:var(--radius-md); font-size:var(--text-sm); }
-    .review-panel { margin:0.4rem 0 0.8rem; }
-    .review-card { border-left:3px solid var(--color-primary); background:var(--color-surface-2); padding:0.6rem 0.8rem; border-radius:var(--radius-md); margin:0.35rem 0; font-size:var(--text-sm); }
-    .review-card .from { color:var(--color-text-muted); text-decoration:line-through; }
-    .review-card .to { margin-top:0.25rem; }
-    .review-actions { display:flex; gap:0.4rem; margin-top:0.45rem; }
     .diag { margin-top:var(--space-4); }
     .diag summary { cursor:pointer; font:600 var(--text-base)/1.2 var(--font-body); }
     .diag-actions { display:flex; gap:var(--space-2); margin:var(--space-3) 0; flex-wrap:wrap; }
@@ -149,7 +144,7 @@
       <button id="themeBtn" class="btn small" type="button" title="Toggle light / dark" aria-label="Toggle theme">☾</button>
     </div>
 
-    <p class="sub">Listens to a Spanish sermon and writes a Spanish transcript. English translation is off until you uncheck “Spanish transcript only”. Audio for the Home GPU path stays on your tailnet; on-device Whisper never uploads audio.</p>
+    <p class="sub">Listens to spoken Spanish, transcribes it on your device with a Whisper speech model, and shows a running English translation beside it. The audio is transcribed entirely in your browser — it never leaves the device. Only the recognized text is sent to your chosen LLM for translation, using your own API key.</p>
 
     <section class="settings panel" aria-label="Settings">
       <div class="field-row">
@@ -164,10 +159,6 @@
             <option value="en-ko">English → Korean only</option>
           </select>
         </div>
-        <label class="checkbox" for="transcriptOnly">
-          <input type="checkbox" id="transcriptOnly" checked />
-          Spanish transcript only — no English translation
-        </label>
       </div>
       <div class="field-row">
         <div class="field">
@@ -269,15 +260,6 @@
         <input type="checkbox" id="autoSave" />
         Save to this computer when I stop
       </label>
-      <label class="checkbox" for="reviewAudio">
-        <input type="checkbox" id="reviewAudio" />
-        After Stop, ask the Home GPU to suggest transcript corrections
-      </label>
-      <div class="field">
-        <label for="reviewUrl">Review URL &mdash; blank uses the Home GPU (<code>/api/review</code>). A cloud host is refused.</label>
-        <input type="text" id="reviewUrl" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="https://…:8443/api/review" />
-      </div>
-      <p class="note">Suggestions only. The recorded audio stays with the transcript and is sent to the Home GPU, never to a cloud transcription API. Nothing is rewritten until you press Apply.</p>
       <p class="note" id="exportNote"></p>
       <p class="note" id="exportStatus" hidden></p>
       <div class="field">
@@ -295,7 +277,6 @@
       <button id="saveBtn" class="btn" type="button">💾 Save to computer</button>
       <button id="downloadBtn" class="btn" type="button">Download .md (this device)</button>
       <button id="diarizeBtn" class="btn" type="button">Diarize speakers</button>
-      <button id="reviewBtn" class="btn" type="button" title="Send the recorded audio and the Spanish transcript to the Home GPU. Corrections come back as suggestions.">Review audio</button>
       <div class="analyze-wrap">
         <button id="analyzeBtn" class="btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="analyzeMenu" title="Analyse what has been said — options depend on the profile and folder">🧠 Analyze</button>
         <div id="analyzeMenu" class="analyze-menu" role="menu" hidden></div>
@@ -311,10 +292,6 @@
       <button id="fsBtn" class="btn small" type="button" aria-label="Fullscreen transcript" title="Fullscreen transcript">⛶</button>
     </div>
     <div id="startHint" class="note"></div>
-    <div id="reviewPanel" class="review-panel" hidden>
-      <p id="reviewStatus" class="note"></p>
-      <div id="reviewList"></div>
-    </div>
 
     <div class="statusbar">
       <span id="statusDot" class="dot"></span>
@@ -349,7 +326,7 @@
     </details>
 
     <footer>
-      <p class="note">The page writes a Spanish transcript. English translation stays off until you uncheck “Spanish transcript only”. On-device Whisper runs in a Web Worker; a second worker translates only when English is turned on. The first time you use the on-device model it downloads (tens of MB) and is then cached. Works in recent Chrome, Edge, Firefox, and Safari — including on iPad.</p>
+      <p class="note">Two background pipelines run independently: one Web Worker transcribes speech with an on-device Whisper model, a second Web Worker translates each finished sentence through your LLM. A per-sentence merge buffer joins them, so the Spanish and English panes never block one another. The first time you use it the speech model downloads (tens of MB) and is then cached for next time. Works in recent Chrome, Edge, Firefox, and Safari — including on iPad.</p>
     </footer>
   </div>
 
@@ -760,7 +737,6 @@
 
   <script src="live-translator-stream.js"></script>
   <script src="live-translator-passage.js"></script>
-  <script src="tools/listen-review.js"></script>
   <script>
   (function () {
     'use strict';
@@ -774,9 +750,6 @@
       preloadBtn: $('preloadBtn'), sens: $('sens'), modelStatus: $('modelStatus'),
       engine: $('engine'), localOpts: $('localOpts'), cloudOpts: $('cloudOpts'),
       homegpuOpts: $('homegpuOpts'), homeGpuUrl: $('homeGpuUrl'), speakerProfile: $('speakerProfile'),
-      transcriptOnly: $('transcriptOnly'),
-      reviewAudio: $('reviewAudio'), reviewUrl: $('reviewUrl'), reviewBtn: $('reviewBtn'),
-      reviewPanel: $('reviewPanel'), reviewStatus: $('reviewStatus'), reviewList: $('reviewList'),
       cloudModel: $('cloudModel'), cloudModelCustom: $('cloudModelCustom'), vocab: $('vocab'), fileRoot: $('fileRoot'), openaiKey: $('openaiKey'),
       exportRow: $('exportRow'), exportDest: $('exportDest'), exportNote: $('exportNote'), exportStatus: $('exportStatus'),
       autoSave: $('autoSave'), autoSaveRow: $('autoSaveRow'),
@@ -794,18 +767,18 @@
       openai: ['gpt-5-mini', 'gpt-5', 'gpt-4.1-mini', 'gpt-4o-mini']
     };
     var WHISPER_SUGGESTIONS = [
-      'onnx-community/whisper-small-ONNX', 'onnx-community/whisper-base',
-      'onnx-community/whisper-tiny', 'Xenova/whisper-base'
+      'onnx-community/whisper-base', 'onnx-community/whisper-tiny',
+      'onnx-community/whisper-small-ONNX', 'Xenova/whisper-base'
     ];
     var CLOUD_SUGGESTIONS = ['gpt-4o-transcribe', 'gpt-4o-mini-transcribe', 'whisper-1'];
     var DEFAULTS = {
       provider: 'anthropic',
       models: { anthropic: 'claude-haiku-4-5-20251001', openai: 'gpt-5-mini' },
       apiKeys: { anthropic: '', openai: '' },
-      whisperModel: 'onnx-community/whisper-small-ONNX',
+      whisperModel: 'onnx-community/whisper-tiny',
       useWebGPU: false,
       sensitivity: 70,
-      transcribeEngine: 'homegpu',
+      transcribeEngine: 'local',
       cloudModel: 'gpt-4o-transcribe',
       vocab: '',
       fileRoot: 'transcript',
@@ -815,10 +788,7 @@
       speakerProfile: '',
       logEndpoint: '',
       direction: 'es-en',
-      transcriptOnly: true,
-      reviewAudio: false,
-      reviewUrl: '',
-      theme: 'light', scale: 1, view: 'es'
+      theme: 'light', scale: 1, view: 'both'
     };
     var STORE_KEY = 'liveTranslator.v2';
     var framed = false;
@@ -836,10 +806,8 @@
     var interimRow = null, interimEs = null, interimEn = null;
     var placeholderEl = null;
     var segEl = {};
-    var sessionAudio = [];        // Float32 chunks @16k, kept with the transcript for diarization and review
+    var sessionAudio = [];        // Float32 chunks @16k, accumulated for post-session diarization
     var sessionAudioSamples = 0;
-    var reviewGen = 0;
-    var reviewAbort = null;
     var logBuffer = [];
     var LOG_MAX = 500;
 
@@ -859,8 +827,7 @@
           provider: s.provider === 'openai' ? 'openai' : 'anthropic',
           models: Object.assign({}, DEFAULTS.models, s.models || {}),
           apiKeys: Object.assign({}, DEFAULTS.apiKeys, s.apiKeys || {}),
-          whisperModel: (!s.whisperModel || s.whisperModel === 'onnx-community/whisper-tiny')
-            ? DEFAULTS.whisperModel : s.whisperModel,
+          whisperModel: s.whisperModel || DEFAULTS.whisperModel,
           useWebGPU: !!s.useWebGPU,
           sensitivity: typeof s.sensitivity === 'number' ? s.sensitivity : DEFAULTS.sensitivity,
           transcribeEngine: ['cloud', 'homegpu'].indexOf(s.transcribeEngine) >= 0 ? s.transcribeEngine : 'local',
@@ -873,13 +840,9 @@
           speakerProfile: typeof s.speakerProfile === 'string' ? s.speakerProfile : '',
           logEndpoint: s.logEndpoint || '',
           direction: DIRECTIONS.indexOf(s.direction) >= 0 ? s.direction : 'es-en',
-          transcriptOnly: typeof s.transcriptOnly === 'boolean' ? s.transcriptOnly : true,
-          reviewAudio: typeof s.reviewAudio === 'boolean' ? s.reviewAudio : false,
-          reviewUrl: typeof s.reviewUrl === 'string' ? s.reviewUrl : '',
           theme: s.theme === 'dark' ? 'dark' : 'light',
           scale: typeof s.scale === 'number' ? s.scale : 1,
-          view: typeof s.transcriptOnly === 'boolean' && ['both', 'es', 'en'].indexOf(s.view) >= 0
-            ? s.view : 'es'
+          view: ['both', 'es', 'en'].indexOf(s.view) >= 0 ? s.view : 'both'
         };
       } catch (e) {
         return JSON.parse(JSON.stringify(DEFAULTS));
@@ -1064,41 +1027,10 @@
     }
 
     function skipTranslation() {
-      return isMonolingual() || !!state.transcriptOnly;
-    }
-
-    // Sermon Listen locks Spanish. Auto-detect is what flipped names and
-    // dropped words mid-sentence. Korean pairs keep their own hint.
-    function asrWhisperLang() {
-      if (isKoreanProfile(state.speakerProfile)) { return srcWhisperLang(); }
-      if (state.direction === 'en-es') { return 'english'; }
-      if (state.direction === 'en-ko' || state.direction === 'ko-en' || state.direction === 'auto-ko') {
-        return srcWhisperLang();
-      }
-      return 'spanish';
-    }
-    function asrCloudLang() {
-      var w = asrWhisperLang();
-      if (w === 'spanish') { return 'es'; }
-      if (w === 'english') { return 'en'; }
-      if (w === 'korean') { return 'ko'; }
-      return srcCloudLang();
-    }
-    function asrPrompt() {
-      if (!window.ListenStream) { return (state.vocab || '').trim(); }
-      var custom = (state.vocab || '').trim();
-      if (custom) { return ListenStream.chainPrompt('', custom); }
-      if (asrWhisperLang() === 'spanish') { return ListenStream.sermonPrompt(); }
-      return '';
+      return isMonolingual();
     }
 
     function pairChrome() {
-      if (state.transcriptOnly && !isKoreanProfile(state.speakerProfile)) {
-        return {
-          left: 'Spanish', right: 'English',
-          placeholder: 'Press “Start listening”. Spanish transcript only — uncheck that box to show English.'
-        };
-      }
       if (isMonolingual()) {
         return {
           left: 'Transcript', right: 'Notes',
@@ -1376,14 +1308,12 @@
       var form = new FormData();
       form.append('file', new Blob([encodeWav(audio16k, 16000)], { type: 'audio/wav' }), 'utterance.wav');
       form.append('model', (state.cloudModel || 'gpt-4o-transcribe').trim());
-      var clang = asrCloudLang();
+      var clang = srcCloudLang();
       if (clang) { form.append('language', clang); }   // omitted => OpenAI auto-detects (conversation mode)
       if (typeof temperature === 'number' && temperature > 0) {
         form.append('temperature', String(temperature));
       }
-      var hint = asrPrompt();
-      // Vocabulary hint only. Never the previous line — that is how a
-      // misheard name gets repeated into the next segment.
+      var hint = (state.vocab || '').trim();
       if (hint) { form.append('prompt', hint); }
       fetch('https://api.openai.com/v1/audio/transcriptions', {
         method: 'POST',
@@ -1420,8 +1350,8 @@
       if (eng === 'cloud') {
         setModelStatus('Cloud transcription (' + (state.cloudModel || 'gpt-4o-transcribe') + ') — no model download needed.', '');
       } else if (eng === 'homegpu') {
-        setModelStatus(skipTranslation()
-          ? 'Home GPU — Spanish transcript only (no translation).'
+        setModelStatus(isMonolingual()
+          ? 'Home GPU engine — transcribing only (no translation).'
           : 'Home GPU engine — transcription and translation run on your own server. No model download, no API keys.', '');
         fillExportDests();
         applyProfileChrome();
@@ -1712,15 +1642,7 @@
       if (!hgWs || hgWs.readyState !== 1) { return; }
       try { hgWs.send(JSON.stringify(obj)); } catch (e) {}
     }
-    function rememberHgAudio(buf) {
-      if (!buf || !buf.byteLength) { return; }
-      var copy = new Float32Array(buf.slice(0));
-      if (!copy.length) { return; }
-      sessionAudio.push(copy);
-      sessionAudioSamples += copy.length;
-    }
     function sendHgPcm(buf) {
-      rememberHgAudio(buf);
       if (hgWs && hgWs.readyState === 1) {
         try { hgWs.send(buf); } catch (e) {}
       } else if (listening) {
@@ -1847,7 +1769,7 @@
       seg.enState = 'idle';
       seg.error = '';
       paintRow(seg);
-      var opts = ListenStream.whisperDecodeOptions(asrWhisperLang(), decision.attempt);
+      var opts = ListenStream.whisperDecodeOptions(srcWhisperLang(), decision.attempt);
       pushLog('warn', 'repetition suspected (compression ' + (decision.ratio || 0).toFixed(2)
         + ') — conditioning dropped, re-decoding at temperature ' + opts.temperature);
       if (state.transcribeEngine === 'cloud') {
@@ -1862,7 +1784,7 @@
         audio: copy,
         model: state.whisperModel,
         device: whisperDevice(),
-        language: opts.language || asrWhisperLang(),
+        language: opts.language || srcWhisperLang(),
         temperature: opts.temperature
       }, [copy.buffer]);
       return true;
@@ -2125,13 +2047,7 @@
               // Reuses the export filename root the user already sets, so the
               // saved transcript matches what a download would have been called.
               try {
-                hgWs.send(JSON.stringify({
-                  type: 'session',
-                  name: sessionName(),
-                  language: asrCloudLang(),
-                  translate: !skipTranslation(),
-                  prompt: asrPrompt()
-                }));
+                hgWs.send(JSON.stringify({ type: 'session', name: sessionName() }));
                 if (state.speakerProfile) {
                   hgWs.send(JSON.stringify({ type: 'profile', name: state.speakerProfile }));
                 }
@@ -2192,7 +2108,7 @@
           cloudTranscribe(seg, audio16k);
         } else if (whisper) {
           whisper.postMessage(
-            { type: 'transcribe', id: seg.id, audio: audio16k, model: state.whisperModel, device: whisperDevice(), language: asrWhisperLang() },
+            { type: 'transcribe', id: seg.id, audio: audio16k, model: state.whisperModel, device: whisperDevice(), language: srcWhisperLang() },
             [audio16k.buffer]
           );
         } else {
@@ -2477,11 +2393,10 @@
 
     var nativeAsrQueue = [];   // finals waiting for Tailscale flush
     function nativeAsrLang() {
-      var w = asrWhisperLang() || '';
+      var w = srcWhisperLang() || srcCloudLang() || '';
       if (w.indexOf('es') === 0 || w === 'spanish') return 'es-ES';
       if (w.indexOf('en') === 0 || w === 'english') return 'en-US';
-      if (w.indexOf('ko') === 0 || w === 'korean') return 'ko-KR';
-      return 'es-ES';
+      return 'en-US';
     }
 
     function nativeAsrPaint(text, done) {
@@ -2557,18 +2472,12 @@
           setStatus('err', 'Set the Tailscale machine in Maat ⚙ (or paste a wss://…:8443/ws URL).');
           return;
         }
-      } else if (state.transcribeEngine === 'cloud') {
-        if (!(state.apiKeys.openai || '').trim()) {
+      } else {
+        if (!hasKey()) { setStatus('err', 'Enter your translation API key first.'); return; }
+        if (state.transcribeEngine === 'cloud' && !(state.apiKeys.openai || '').trim()) {
           setStatus('err', 'Cloud transcription needs an OpenAI API key — see the transcription settings.');
           return;
         }
-        if (!skipTranslation() && !hasKey()) {
-          setStatus('err', 'Enter your translation API key first.');
-          return;
-        }
-      } else if (!skipTranslation() && !hasKey()) {
-        setStatus('err', 'Enter your translation API key first.');
-        return;
       }
       if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
         setStatus('err', 'This browser cannot access the microphone.');
@@ -2623,7 +2532,6 @@
       stopCapture();
       setStatus('idle', 'Stopped — transcript kept. Clear to erase.');
       updateControls();
-      if (state.reviewAudio) { requestAudioReview(); }
     }
 
     // ---- status / controls ----
@@ -2641,8 +2549,7 @@
       var eng = state.transcribeEngine;
       var cloudKeyOK = eng !== 'cloud' || !!(state.apiKeys.openai || '').trim();
       var homeGpuOK = eng !== 'homegpu' || !!resolvedHomeGpuUrl();
-      var translationOK = skipTranslation() || hasKey();
-      var keysOK = eng === 'homegpu' ? homeGpuOK : (translationOK && cloudKeyOK);
+      var keysOK = eng === 'homegpu' ? homeGpuOK : (hasKey() && cloudKeyOK);
       var canStart = hasNativeAsr() || (keysOK && navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
       els.startBtn.disabled = !canStart && !listening;
       els.startBtn.textContent = listening ? '■ Stop' : '● Start listening';
@@ -2654,7 +2561,7 @@
         hint = 'This browser cannot access the microphone.';
       } else if (eng === 'homegpu' && !homeGpuOK) {
         hint = 'Set the Tailscale machine in Maat ⚙ (or paste a wss://…:8443/ws URL).';
-      } else if (eng !== 'homegpu' && !skipTranslation() && !hasKey()) {
+      } else if (eng !== 'homegpu' && !hasKey()) {
         hint = framed
           ? 'Set the translation API key in Maat ⚙ Settings.'
           : 'Enter your translation API key above to enable listening.';
@@ -2754,9 +2661,6 @@
       resetSpeechBook();
       sessionAudio = [];
       sessionAudioSamples = 0;
-      reviewGen++;
-      if (reviewAbort) { try { reviewAbort.abort(); } catch (e) {} reviewAbort = null; }
-      clearReviewUi();
       var olds = els.rows.querySelectorAll('.row.seg');
       Array.prototype.forEach.call(olds, function (r) { r.remove(); });
       removePlaceholder();
@@ -2771,177 +2675,6 @@
       updateStatus();
     }
 
-    function spanishReviewLines() {
-      return segments.filter(function (s) {
-        if (s.esState !== 'done' || !s.es) { return false; }
-        if (s.passage) { return false; }
-        if (/^🧠 /.test(s.es)) { return false; }
-        return true;
-      });
-    }
-    function setReviewStatus(msg) {
-      if (els.reviewStatus) { els.reviewStatus.textContent = msg || ''; }
-      if (els.reviewPanel) {
-        var hasCards = els.reviewList && els.reviewList.childNodes.length;
-        els.reviewPanel.hidden = !msg && !hasCards;
-      }
-    }
-    function clearReviewUi() {
-      if (els.reviewList) { els.reviewList.innerHTML = ''; }
-      if (els.reviewStatus) { els.reviewStatus.textContent = ''; }
-      if (els.reviewPanel) { els.reviewPanel.hidden = true; }
-    }
-    function applyReviewSuggestion(suggestion, card, btn) {
-      if (!window.ListenReview) { return; }
-      var segs = spanishReviewLines();
-      var lines = segs.map(function (seg) {
-        return { text: seg.heard || seg.es, es: seg.es, id: seg.id };
-      });
-      var result = ListenReview.acceptSuggestion(lines, suggestion);
-      if (!result.ok) {
-        setReviewStatus(result.reason === 'stale'
-          ? 'That line changed, so the suggestion was not applied.'
-          : 'Could not match that suggestion to a transcript line.');
-        return;
-      }
-      var seg = segs[result.line];
-      if (!seg) { return; }
-      seg.es = suggestion.to;
-      seg.heard = suggestion.to;
-      seg.acceptedSuggestion = true;
-      paintRow(seg);
-      var book = speech();
-      if (book && book.revise) { book.revise(seg.id, suggestion.to); }
-      if (btn) { btn.textContent = 'Applied'; btn.disabled = true; }
-      if (card) { card.classList.add('applied'); }
-      pushLog('', 'review suggestion applied to line ' + seg.id);
-    }
-    function renderReviewSuggestions(suggestions) {
-      if (!els.reviewList) { return; }
-      els.reviewList.innerHTML = '';
-      if (!suggestions.length) {
-        setReviewStatus('No corrections suggested. The transcript was left as written.');
-        return;
-      }
-      setReviewStatus(suggestions.length + ' suggestion' + (suggestions.length === 1 ? '' : 's')
-        + '. Nothing changes until you press Apply.');
-      suggestions.forEach(function (s) {
-        var card = document.createElement('div');
-        card.className = 'review-card';
-        var from = document.createElement('div');
-        from.className = 'from';
-        from.textContent = s.from;
-        var to = document.createElement('div');
-        to.className = 'to';
-        to.textContent = s.to;
-        var actions = document.createElement('div');
-        actions.className = 'review-actions';
-        var apply = document.createElement('button');
-        apply.type = 'button';
-        apply.className = 'btn small';
-        apply.textContent = 'Apply';
-        var dismiss = document.createElement('button');
-        dismiss.type = 'button';
-        dismiss.className = 'btn small';
-        dismiss.textContent = 'Dismiss';
-        apply.addEventListener('click', function () { applyReviewSuggestion(s, card, apply); });
-        dismiss.addEventListener('click', function () {
-          card.remove();
-          pushLog('', 'review suggestion dismissed');
-        });
-        actions.appendChild(apply);
-        actions.appendChild(dismiss);
-        card.appendChild(from);
-        card.appendChild(to);
-        if (s.reason) {
-          var reason = document.createElement('div');
-          reason.className = 'note';
-          reason.textContent = s.reason;
-          card.appendChild(reason);
-        }
-        card.appendChild(actions);
-        els.reviewList.appendChild(card);
-      });
-    }
-    function requestAudioReview() {
-      if (!window.ListenReview) {
-        setReviewStatus('Review helper did not load.');
-        return;
-      }
-      var target = ListenReview.reviewTarget({
-        homeGpuHttp: hgHttpOrigin(),
-        reviewUrl: state.reviewUrl
-      });
-      if (!target.ok) {
-        var msg = target.reason === 'cloud-refused'
-          ? 'Audio review stays on the Home GPU. A cloud host was refused.'
-          : target.reason === 'bad-url'
-            ? 'The review URL is not a valid http(s) address.'
-            : 'No Home GPU URL for audio review.';
-        setReviewStatus(msg);
-        pushLog('error', 'audio review: ' + (target.reason || 'refused'));
-        return;
-      }
-      if (!sessionAudioSamples) {
-        setReviewStatus('No recorded audio to review. The transcript was left as written.');
-        return;
-      }
-      var segs = spanishReviewLines();
-      if (!segs.length) {
-        setReviewStatus('No Spanish transcript to review.');
-        return;
-      }
-      reviewGen++;
-      var gen = reviewGen;
-      if (reviewAbort) { try { reviewAbort.abort(); } catch (e) {} }
-      reviewAbort = typeof AbortController !== 'undefined' ? new AbortController() : null;
-      var timer = setTimeout(function () {
-        if (reviewAbort) { try { reviewAbort.abort(); } catch (e) {} }
-      }, 120000);
-      setReviewStatus('Sending the recording and the Spanish transcript to the Home GPU…');
-      if (els.reviewBtn) { els.reviewBtn.disabled = true; }
-      var merged = new Float32Array(sessionAudioSamples);
-      var off = 0;
-      var i;
-      for (i = 0; i < sessionAudio.length; i++) {
-        merged.set(sessionAudio[i], off);
-        off += sessionAudio[i].length;
-      }
-      var form = new FormData();
-      form.append('file', new Blob([encodeWav(merged, 16000)], { type: 'audio/wav' }), 'session.wav');
-      form.append('transcript', segs.map(function (s) { return s.heard || s.es; }).join('\n'));
-      form.append('session', sessionName());
-      fetch(target.url, {
-        method: 'POST',
-        body: form,
-        signal: reviewAbort ? reviewAbort.signal : undefined
-      }).then(function (res) {
-        return res.text().then(function (body) {
-          if (gen !== reviewGen) { return null; }
-          if (!res.ok) {
-            throw new Error(res.status + ' ' + (res.statusText || '') + (body ? ' — ' + String(body).slice(0, 240) : ''));
-          }
-          try { return JSON.parse(body); }
-          catch (e) { throw new Error('Unreadable review response'); }
-        });
-      }).then(function (data) {
-        if (data == null || gen !== reviewGen) { return; }
-        renderReviewSuggestions(ListenReview.parseSuggestions(data));
-        pushLog('', 'audio review returned suggestions from ' + target.url);
-      }).catch(function (err) {
-        if (gen !== reviewGen) { return; }
-        var aborted = err && (err.name === 'AbortError');
-        var detail = aborted
-          ? 'Audio review timed out. The transcript was not changed.'
-          : 'Audio review failed: ' + String((err && err.message) || err) + ' The transcript was not changed.';
-        setReviewStatus(detail);
-        pushLog('error', detail);
-      }).then(function () {
-        clearTimeout(timer);
-        if (els.reviewBtn) { els.reviewBtn.disabled = false; }
-      });
-    }
-
     function transcriptLinesForAnalyze() {
       return segments.filter(function (s) {
         if (s.esState !== 'done' || !s.es) { return false; }
@@ -2954,9 +2687,8 @@
     function copyTranscript() {
       if (!segments.length) { return; }
       var text = segments.map(function (s) {
-        var es = s.esState === 'done' ? s.es : '[' + s.esState + ']';
-        if (skipTranslation() || s.enState !== 'done' || !s.en) { return es; }
-        return es + '\n' + s.en;
+        return 'ES: ' + (s.esState === 'done' ? s.es : '[' + s.esState + ']')
+          + '\nEN: ' + (s.enState === 'done' ? s.en : '[' + s.enState + ']');
       }).join('\n\n');
       navigator.clipboard.writeText(text).then(function () {
         els.copyBtn.textContent = 'Copied ✓';
@@ -2978,12 +2710,10 @@
         ? 'cloud ' + (state.cloudModel || 'gpt-4o-transcribe')
         : 'on-device ' + (state.whisperModel || 'whisper');
       var translator = (state.models[state.provider] || state.provider) + ' (' + state.provider + ')';
-      var transcriptOnly = skipTranslation();
       var lines = [
-        transcriptOnly ? '# Spanish transcript' : '# Spanish → English transcript',
+        '# Spanish → English Transcript',
         '',
-        '*Recorded ' + new Date(t0).toLocaleString() + ' • transcription: ' + engine
-          + (transcriptOnly ? '' : ' • translation: ' + translator) + '*',
+        '*Recorded ' + new Date(t0).toLocaleString() + ' • transcription: ' + engine + ' • translation: ' + translator + '*',
         '',
         '---',
         ''
@@ -2992,9 +2722,10 @@
         var s = segments[i];
         var stamp = fmtElapsed((s.t || t0) - t0);
         var es = s.esState === 'done' ? s.es : '[' + s.esState + ']';
+        var en = s.enState === 'done' ? s.en : '[' + s.enState + ']';
         var spk = (s.speaker != null) ? '**Voice ' + (s.speaker + 1) + '** · ' : '';
-        lines.push('**[' + stamp + ']** · ' + spk + es);
-        if (!transcriptOnly && s.enState === 'done' && s.en) { lines.push(s.en); }
+        lines.push('**[' + stamp + ']** · ' + spk + '*' + es + '*  ');
+        lines.push(en);
         lines.push('');
       }
       return lines.join('\n');
@@ -3194,9 +2925,6 @@
 
       // populate settings
       els.direction.value = state.direction;
-      if (els.transcriptOnly) { els.transcriptOnly.checked = !!state.transcriptOnly; }
-      if (els.reviewAudio) { els.reviewAudio.checked = !!state.reviewAudio; }
-      if (els.reviewUrl) { els.reviewUrl.value = state.reviewUrl || ''; }
       els.provider.value = state.provider;
       refreshModelField();
       refreshKeyField();
@@ -3226,32 +2954,6 @@
       updateStatus();
 
       // events
-      if (els.transcriptOnly) {
-        els.transcriptOnly.addEventListener('change', function () {
-          state.transcriptOnly = !!els.transcriptOnly.checked;
-          state.view = state.transcriptOnly ? 'es' : 'both';
-          applyView();
-          saveState();
-          applyProfileChrome();
-          pushConfig();
-          updateControls();
-        });
-      }
-      if (els.reviewAudio) {
-        els.reviewAudio.addEventListener('change', function () {
-          state.reviewAudio = !!els.reviewAudio.checked;
-          saveState();
-        });
-      }
-      if (els.reviewUrl) {
-        els.reviewUrl.addEventListener('input', function () {
-          state.reviewUrl = els.reviewUrl.value.trim();
-          saveState();
-        });
-      }
-      if (els.reviewBtn) {
-        els.reviewBtn.addEventListener('click', function () { requestAudioReview(); });
-      }
       els.direction.addEventListener('change', function () {
         var v = els.direction.value;
         state.direction = DIRECTIONS.indexOf(v) >= 0 ? v : 'es-en';

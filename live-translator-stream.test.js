@@ -278,15 +278,14 @@ test('4:07 sermon: heard phrase versus the bad transcript', function () {
   assert.doesNotMatch(d.lines[0].text, /Sila/);
 });
 
-test('markdown keeps Spanish primary and the ×N marker', function () {
+test('markdown keeps the ×N marker on the Spanish line', function () {
   var t = S.createTranscript();
   t.add(times(ESPIRITU, 8));
   t.add(QUIEN);
-  var md = S.formatMarkdown(t.lines(), { transcriptOnly: true });
-  assert.match(md, /^# Spanish transcript/);
+  var md = S.formatMarkdown(t.lines());
+  assert.match(md, /^# Spanish → English Transcript/);
   assert.match(md, /El Espíritu Santo ×8/);
   assert.match(md, /¿Quién es Pablo\?/);
-  assert.doesNotMatch(md, /^EN:/m);
 });
 
 test('audio gate trims silence and resets at the segment cap', function () {
@@ -418,15 +417,4 @@ test('4:17 good capture: a normal non-repetitive Spanish segment passes through 
   assert.equal(heardFix.translate, true);
   assert.equal(book.lines()[2].text, 'Y es cuando esa paz que pasa todo entendimiento');
   assert.equal(book.lines().length, 4);
-});
-
-test('an accepted correction replaces one book line and does not add a row', function () {
-  var book = S.createTranscript();
-  var kept = book.add('El conocer a Dios, que amabilice.', { localId: 7 });
-  assert.equal(kept.lines.length, 1);
-  assert.equal(book.revise(7, 'El conocer a Dios, mi amada iglesia.'), true);
-  assert.equal(book.lines().length, 1);
-  assert.match(book.lines()[0].text, /mi amada iglesia/);
-  assert.equal(book.revise(99, 'no such line'), false);
-  assert.equal(book.lines().length, 1);
 });
