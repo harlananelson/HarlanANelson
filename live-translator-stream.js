@@ -15,9 +15,11 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
 
-  // 4+ identical repeats with nothing new between them. Two or three
-  // repeats, and alternating pairs, are real preaching.
+  // Inside one line, 4+ copies of the same short phrase are a decoder loop.
+  // A second copy of the same finished sentence is a duplicate row.
+  // Alternating different sentences are real preaching.
   var MIN_REPEATS = 4;
+  var MIN_CONSECUTIVE = 2;
   var MAX_GRAM = 8;
   // Whisper's compression_ratio_threshold. Used only together with a
   // repeated n-gram that already covers most of the line, so ordinary
@@ -33,6 +35,42 @@
   var UNCERTAIN_WORD_RULE =
     'If a word is not a real word or looks mis-heard, do not guess a replacement and do not invent a gloss. ' +
     'Leave the word and mark it with [?]. Write “carnavozo [?]”, not a guessed spelling, and “pasemonia [?]”, never “phantom”.';
+
+  // The model must not turn a mild exclamation into a swear, or add words
+  // the speaker did not say. The post-check flags a miss; it does not invent
+  // a milder English word in its place.
+  var LITERAL_TRANSLATION_RULE =
+    'Translate literally. Do not intensify, add, or invent words that are not in the source. ' +
+    'Never introduce profanity. A mild exclamation stays mild: “caramba” is like “wow” or “gosh”, never “damn”. ' +
+    'Do not strengthen the tone beyond the words that were said.';
+
+  var EN_PROFANITY_RE = /\b(?:god\s*damn(?:ed)?|goddammit|dammit|damn(?:ed)?(?:\s+it)?|motherfuckers?|fuck(?:ing|ed|er)?|shitty|shit|assholes?|bitches|bitch|what the hell|the hell)\b/gi;
+  var ES_STRONG = {
+    mierda: 1, joder: 1, jodido: 1, jodida: 1, carajo: 1, puta: 1, puto: 1,
+    coño: 1, cojones: 1, cabrón: 1, cabron: 1, malparido: 1, verga: 1,
+    chingar: 1, chingada: 1, pinche: 1, pendejo: 1, pendeja: 1,
+    maldición: 1, maldicion: 1, maldito: 1, maldita: 1
+  };
+
+  function flagUnmatchedProfanity(source, translation) {
+    var original = String(translation == null ? '' : translation);
+    var srcKeys = {};
+    tokenize(source).forEach(function (w) {
+      var k = wordKey(w);
+      if (k) { srcKeys[k] = true; }
+    });
+    if (Object.keys(srcKeys).some(function (k) { return ES_STRONG[k]; })) {
+      return { flagged: false, text: original, words: [] };
+    }
+    var words = [];
+    var text = original.replace(EN_PROFANITY_RE, function (m, offset, whole) {
+      var after = whole.slice(offset + m.length, offset + m.length + 6);
+      if (/^\s*\[\?\]/.test(after)) { return m; }
+      words.push(m);
+      return m + ' [?]';
+    });
+    return { flagged: words.length > 0, text: text, words: words };
+  }
 
   function sermonPrompt() { return SERMON_PROMPT; }
 
@@ -252,6 +290,7 @@
 
   function createTranscript(opts) {
     var minRepeats = (opts && opts.minRepeats) || MIN_REPEATS;
+    var minConsecutive = (opts && opts.minConsecutive) || MIN_CONSECUTIVE;
     var lines = [];
     var nextLocal = 1;
     var byServer = {};
@@ -391,7 +430,7 @@
       }
       if (keyNow && keyNow === lastKey) { run += 1; }
       else { run = 1; lastKey = keyNow; }
-      if (keyNow && run >= minRepeats) {
+      if (keyNow && run >= minConsecutive) {
         var folded = fold(keyNow, run);
         if (serverId != null && serverId !== '') {
           if (folded) { remember(folded, serverId); }
@@ -537,10 +576,13 @@
 
   return {
     MIN_REPEATS: MIN_REPEATS,
+    MIN_CONSECUTIVE: MIN_CONSECUTIVE,
     COMPRESSION_RATIO_THRESHOLD: COMPRESSION_RATIO_THRESHOLD,
     TEMPERATURES: TEMPERATURES,
     SERMON_PROMPT: SERMON_PROMPT,
     UNCERTAIN_WORD_RULE: UNCERTAIN_WORD_RULE,
+    LITERAL_TRANSLATION_RULE: LITERAL_TRANSLATION_RULE,
+    flagUnmatchedProfanity: flagUnmatchedProfanity,
     sermonPrompt: sermonPrompt,
     chainPrompt: chainPrompt,
     joinUtterance: joinUtterance,

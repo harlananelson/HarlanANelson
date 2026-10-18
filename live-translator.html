@@ -612,10 +612,10 @@
 
     var SHARED_RULES =
       'The text comes from automatic speech recognition, so it may be a fragment, lack punctuation, or contain recognition errors. ' +
-      'Handle all of that silently: render the most likely intended meaning. ' +
+      'Translate the words that are present. Do not guess a stronger or more specific meaning than what was said. ' +
       'Never remark that the text is garbled, unclear, incomplete, or mis-transcribed; never mention transcription errors; ' +
       'never ask for or mention missing or insufficient context; never add bracketed notes, disclaimers, apologies, or explanations. ' +
-      'Preserve the tone and register of the original.';
+      'Preserve the tone and register of the original. Do not intensify it.';
 
     function rules() {
       return SHARED_RULES + (cfg.extraRule ? (' ' + cfg.extraRule) : '');
@@ -940,7 +940,9 @@
           apiKey: (state.apiKeys[state.provider] || '').trim(),
           leftName: chrome.left,
           rightName: chrome.right,
-          extraRule: window.ListenStream ? ListenStream.UNCERTAIN_WORD_RULE : ''
+          extraRule: window.ListenStream
+            ? [ListenStream.LITERAL_TRANSLATION_RULE, ListenStream.UNCERTAIN_WORD_RULE].join(' ')
+            : ''
         }
       });
     }
@@ -1191,12 +1193,14 @@
       paintCell(refs.en, 'en', seg.enState, enText, seg.error, enLabel, retryEn);
     }
 
-    function setInterim(txt) {
+    function setInterim(txt, pendingEn) {
       if (txt) {
         interimEs.textContent = txt;
+        if (interimEn) { interimEn.textContent = pendingEn === false ? '' : '…'; }
         interimRow.style.display = '';
       } else {
         interimEs.textContent = '';
+        if (interimEn) { interimEn.textContent = '…'; }
         interimRow.style.display = 'none';
       }
       maybeScroll();
@@ -1221,6 +1225,13 @@
     }
     function segTarget(seg) {
       return dirInfo(seg.dir || state.direction).tgt;
+    }
+    function guardTranslation(source, text) {
+      if (!window.ListenStream || !ListenStream.flagUnmatchedProfanity) { return text; }
+      var check = ListenStream.flagUnmatchedProfanity(source, text);
+      if (!check.flagged) { return text; }
+      pushLog('warn', 'translation added profanity with no counterpart in the Spanish: ' + check.words.join(', '));
+      return check.text;
     }
 
     var TRANSLATE_TIMEOUT_MS = 45000;
@@ -1705,7 +1716,7 @@
       var book = speech();
       if (!book) { setInterim('🎙 ' + raw); return; }
       var d = book.partial(raw);
-      setInterim(d.text ? ('🎙 ' + d.text) : '');
+      setInterim(d.text ? ('🎙 ' + d.text) : '', d.translate !== false);
       if (d.resetAudio) { resetListenAudio('repetition', true); }
     }
     function mapServerSeg(seg) {
@@ -1754,7 +1765,9 @@
           seg.noContext = !!ln.collapsed;
           seg.guarded = true;
           if (ln.serverId != null && ln.serverId !== '') { seg.serverId = ln.serverId; }
-          if (ln.collapsed) {
+          if (ln.collapsed && decision.action !== 'collapse') {
+            // An intra-line decoder loop was never real speech. A second copy
+            // of a normal sentence keeps the translation already in flight.
             clearTranslationTimeout(seg);
             if (seg.enState === 'translating') { seg.en = ''; seg.enState = 'idle'; }
           }
@@ -1975,7 +1988,7 @@
         var seg2 = hgMap[ev.id];
         if (!seg2 || seg2.collapsed) { return; }
         clearTranslationTimeout(seg2);
-        seg2.en = ev.text;
+        seg2.en = guardTranslation(seg2.heard || seg2.es, ev.text);
         seg2.enState = 'done';
         paintRow(seg2);
         maybeScroll();
@@ -2180,15 +2193,16 @@
         var dir = seg.dir || 'es-en';
         var info = dirInfo(dir);
         if (m.ok) {
+          var source = seg.heard || seg.es;
           if (info.auto) {
             // Heard in its language column (English = right; Korean/Spanish = left).
             if (m.lang === 'en') { seg.en = seg.heard; seg.es = m.text; }
-            else { seg.es = seg.heard; seg.en = m.text; }
+            else { seg.es = source; seg.en = guardTranslation(source, m.text); }
             seg.esState = 'done'; seg.enState = 'done';
           } else if (info.tgtCol === 'es') {
             seg.es = m.text; seg.esState = 'done';
           } else {
-            seg.en = m.text; seg.enState = 'done';
+            seg.en = guardTranslation(source, m.text); seg.enState = 'done';
           }
           seg.error = '';
         } else {

@@ -34,6 +34,22 @@ test('El Espíritu Santo repeated 40 times collapses to one marked instance', fu
   assert.equal(again.lines.length, 1);
 });
 
+test('mixed-case Espíritu Santo partial is one line and is not translated', function () {
+  var raw = 'El Espíritu Santo, el Espíritu Santo, el Espíritu Santo, el Espíritu Santo, el Espíritu Santo';
+  var loop = S.detectLoop(raw);
+  assert.ok(loop);
+  assert.ok(loop.count >= 4);
+  var shown = S.createTranscript().partial(raw);
+  assert.equal(shown.translate, false);
+  assert.equal(shown.resetAudio, true);
+  assert.match(shown.text, /×5$/);
+  var row = S.createTranscript().add(raw, { serverId: 'es' });
+  assert.equal(row.translate, false);
+  assert.equal(row.collapsed, true);
+  assert.equal(row.lines.length, 1);
+  assert.match(row.lines[0].text, /×5$/);
+});
+
 test('partial Espíritu loop is shown once with a marker and asks for one audio reset', function () {
   var t = S.createTranscript();
   var first = t.partial(times(ESPIRITU, 40));
@@ -62,17 +78,33 @@ test('twenty-two identical alabanza lines collapse to one ×22 marker, not 22 ro
   assert.ok(last.action === 'collapse');
 });
 
-test('three identical lines stay; the fourth collapses and is not silently deleted', function () {
+test('a second identical sentence is kept as one line marked ×2, not deleted', function () {
   var t = S.createTranscript();
   var line = 'Amén.';
-  var d3 = null;
-  for (var i = 0; i < 3; i++) { d3 = t.add(line, { serverId: 'm' + i }); }
-  assert.equal(d3.lines.length, 3);
-  assert.equal(d3.action, 'keep');
-  var d4 = t.add(line, { serverId: 'm3' });
-  assert.equal(d4.action, 'collapse');
-  assert.equal(d4.lines.length, 1);
-  assert.equal(d4.lines[0].text, 'Amén. ×4'); // period kept; the count is the record of the other three
+  var d1 = t.add(line, { serverId: 'm0' });
+  assert.equal(d1.action, 'keep');
+  assert.equal(d1.lines.length, 1);
+  var d2 = t.add(line, { serverId: 'm1' });
+  assert.equal(d2.action, 'collapse');
+  assert.equal(d2.translate, false);
+  assert.equal(d2.lines.length, 1);
+  assert.equal(d2.lines[0].text, 'Amén. ×2');
+  var d3 = t.add(line, { serverId: 'm2' });
+  assert.equal(d3.lines.length, 1);
+  assert.equal(d3.lines[0].text, 'Amén. ×3');
+});
+
+test('the emoción sentence repeated twice does not become two rows', function () {
+  var line = 'Que la emoción te lleva, que tú vas a estar emocionado por llevar la palabra.';
+  var t = S.createTranscript();
+  var first = t.add(line, { serverId: 'em1' });
+  assert.equal(first.action, 'keep');
+  assert.equal(first.translate, true);
+  var second = t.add(line, { serverId: 'em2' });
+  assert.equal(second.action, 'collapse');
+  assert.equal(second.translate, false);
+  assert.equal(second.lines.length, 1);
+  assert.match(second.lines[0].text, /llevar la palabra\. ×2$/);
 });
 
 test('alternating Quién es Pablo / sentadito five times is kept as real speech', function () {
@@ -109,7 +141,7 @@ test('reconnect resend of the same server id does not add a row', function () {
   assert.equal(dup.lines.length, 2);
 });
 
-test('replayed text during reconnect is not appended; the same words after reconnect are', function () {
+test('replayed text during reconnect is not appended; a later consecutive copy is ×2', function () {
   var t = S.createTranscript();
   t.add(BENDIGA, { serverId: 1 });
   t.add(PABLO, { serverId: 2 });
@@ -120,8 +152,14 @@ test('replayed text during reconnect is not appended; the same words after recon
   assert.equal(replayed.lines.length, 2);
   t.endReplay();
   var later = t.add(PABLO, { serverId: 100 });
-  assert.equal(later.action, 'keep');
-  assert.equal(later.lines.length, 3);
+  assert.equal(later.action, 'collapse');
+  assert.equal(later.lines.length, 2);
+  assert.match(later.lines[1].text, /×2$/);
+  var between = t.add('Amén.', { serverId: 101 });
+  assert.equal(between.action, 'keep');
+  var again = t.add(PABLO, { serverId: 102 });
+  assert.equal(again.action, 'keep');
+  assert.equal(again.lines.length, 4);
 });
 
 test('a translation retry does not add a row', function () {
@@ -168,6 +206,28 @@ test('sermon prompt lists Silas and Sila once and is not chained onto previous t
   assert.equal(retryOpts.condition_on_previous_text, false);
 });
 
+test('caramba is not rendered as profanity, and a real swear in the Spanish is left', function () {
+  assert.match(S.LITERAL_TRANSLATION_RULE, /literally/i);
+  assert.match(S.LITERAL_TRANSLATION_RULE, /caramba/);
+  assert.match(S.LITERAL_TRANSLATION_RULE, /never “damn”/);
+  assert.match(S.LITERAL_TRANSLATION_RULE, /do not intensify/i);
+  var es = 'Yo no la paso yo, caramba, pero no es el tiempo de irme allí';
+  var en = "I don't pass it, damn it, but it is not the time to go there.";
+  var flagged = S.flagUnmatchedProfanity(es, en);
+  assert.equal(flagged.flagged, true);
+  assert.match(flagged.text, /damn it \[\?\]/);
+  assert.doesNotMatch(flagged.text, /gosh/);
+  assert.doesNotMatch(flagged.text, /wow/);
+  var mild = S.flagUnmatchedProfanity(es, 'I do not get through it, gosh, but it is not the time to go there.');
+  assert.equal(mild.flagged, false);
+  assert.equal(mild.text, 'I do not get through it, gosh, but it is not the time to go there.');
+  var real = S.flagUnmatchedProfanity('Esto es una mierda', 'This is shit');
+  assert.equal(real.flagged, false);
+  assert.equal(real.text, 'This is shit');
+  var hell = S.flagUnmatchedProfanity('las puertas del infierno', 'the gates of hell');
+  assert.equal(hell.flagged, false);
+});
+
 test('uncertain words are flagged, not rewritten or glossed', function () {
   assert.match(S.UNCERTAIN_WORD_RULE, /\[\?\]/);
   assert.match(S.UNCERTAIN_WORD_RULE, /carnavozo/);
@@ -208,14 +268,14 @@ test('4:07 sermon: heard phrase versus the bad transcript', function () {
   assert.doesNotMatch(joined, /Silvia/);
   assert.doesNotMatch(joined, /dice/);
 
-  // Three identical lines are under the 4+ loop threshold, so a real
-  // triple is kept. The Silvia line is a mishear, not something to delete.
+  // The same misheard line three times is one row. The words stay
+  // "Silvia"; the guard does not guess "Sila".
   var t = S.createTranscript();
   var d;
   for (var i = 0; i < 3; i++) { d = t.add('Vamos a cantar, Silvia.', { serverId: 'v' + i }); }
-  assert.equal(d.action, 'keep');
-  assert.equal(d.lines.length, 3);
-  assert.ok(d.lines.every(function (ln) { return ln.text.indexOf('×') < 0; }));
+  assert.equal(d.lines.length, 1);
+  assert.match(d.lines[0].text, /Silvia\. ×3$/);
+  assert.doesNotMatch(d.lines[0].text, /Sila/);
 });
 
 test('markdown keeps Spanish primary and the ×N marker', function () {
