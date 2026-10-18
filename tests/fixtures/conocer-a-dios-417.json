@@ -1,0 +1,17 @@
+{
+  "id": "conocer-a-dios-417",
+  "recordedAt": "4:17 PM",
+  "anchor": "El conocer a Dios",
+  "note": "Maat's better capture. The hypothesis is what the app wrote. Do not rewrite it to match the reference. The aligner only measures the gap.",
+  "reference": "El conocer a Dios, mi amada iglesia, no te hace que te perdones los pecados. El conocer a Dios no hace que tu vida cambie. Toda la humanidad conoce a Dios. No es eso lo que te va a cambiar, es aceptar a Cristo en tu corazón. Es lo que cuando vos abrís tu corazón al Señor, a Cristo, para que viva y para que cambie tu vida, tu corazón, tu ser, y empiecen a pasar cosas maravillosas. Y es cuando esa paz que pasa todo entendimiento, llegará a ti.",
+  "hypothesis": "El conocer a Dios, que amabilice, no te hace que te perdonen los pecados. El conocer a Dios no hace que tu vida cambie. No es eso lo que te va a cambiar, es aceptar a Cristo. Es lo que cuando vos abrís tu corazón al Señor, a Cristo, para que viva y para que cambie tu vida, tu corazón. Y empiecen a pasar cosas maravillosas. Y es cuando esa paz te pasa todo",
+  "observed": [
+    "mi amada iglesia -> que amabilice",
+    "perdones -> perdonen",
+    "dropped: Toda la humanidad conoce a Dios",
+    "dropped: en tu corazón",
+    "dropped: tu ser",
+    "sentence split before “Y empiecen” (punctuation; the word gap is “tu ser”)",
+    "ending truncated: esa paz que pasa todo entendimiento, llegará a ti -> esa paz te pasa todo"
+  ]
+}
