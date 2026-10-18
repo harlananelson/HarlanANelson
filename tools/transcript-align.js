@@ -137,6 +137,67 @@
     });
   }
 
+  var SENTENCE_STOP = {
+    el: 1, la: 1, los: 1, las: 1, un: 1, una: 1, de: 1, del: 1, al: 1, a: 1,
+    y: 1, o: 1, u: 1, que: 1, en: 1, es: 1, no: 1, te: 1, tu: 1, su: 1, se: 1,
+    lo: 1, le: 1, me: 1, mi: 1, por: 1, para: 1, con: 1, como: 1
+  };
+
+  function splitSentences(text) {
+    return String(text == null ? '' : text)
+      .split(/(?<=[.!?…])\s+/)
+      .map(function (s) { return s.replace(/\s+/g, ' ').trim(); })
+      .filter(Boolean);
+  }
+
+  function contentWords(tokens) {
+    return tokens.filter(function (w) { return w.length > 2 && !SENTENCE_STOP[w]; });
+  }
+
+  // How many content words of `need` occur, in order, inside `hay`.
+  function coveredCount(need, hay) {
+    var found = 0;
+    var j = 0;
+    var i, at;
+    for (i = 0; i < need.length; i++) {
+      at = -1;
+      for (var k = j; k < hay.length; k++) {
+        if (hay[k] === need[i]) { at = k; break; }
+      }
+      if (at >= 0) { found++; j = at + 1; }
+    }
+    return found;
+  }
+
+  // Whole reference sentences the transcript does not contain, plus
+  // sentences that start out present and then drop off. Word-level
+  // substitutions inside a sentence that is otherwise there are not misses.
+  function missedSentences(reference, hypothesis, opts) {
+    opts = opts || {};
+    var minCoverage = typeof opts.minCoverage === 'number' ? opts.minCoverage : 0.5;
+    var hyp = tokenize(hypothesis);
+    var missed = [];
+    var partial = [];
+    splitSentences(reference).forEach(function (sentence) {
+      var words = contentWords(tokenize(sentence));
+      if (words.length < 3) { return; }
+      var found = coveredCount(words, hyp);
+      var coverage = found / words.length;
+      var entry = { sentence: sentence, coverage: coverage, words: words.length, found: found };
+      if (coverage < minCoverage) { missed.push(entry); return; }
+      var tail = 0;
+      for (var i = words.length - 1; i >= 0; i--) {
+        if (hyp.indexOf(words[i]) < 0) { tail++; }
+        else { break; }
+      }
+      if (tail >= 2) {
+        entry.droppedTail = words.slice(words.length - tail).join(' ');
+        partial.push(entry);
+      }
+    });
+    return { missed: missed, partial: partial };
+  }
+
   function align(reference, hypothesis, opts) {
     var refTokens = tokenize(reference);
     var hypTokens = tokenize(hypothesis);
@@ -189,6 +250,8 @@
     indexOfGram: indexOfGram,
     alignWords: alignWords,
     errorPhrases: errorPhrases,
+    splitSentences: splitSentences,
+    missedSentences: missedSentences,
     align: align
   };
 });

@@ -461,12 +461,29 @@
       return { ok: true, line: line, length: lines.length, added: false };
     }
 
+    // An accepted review suggestion. Replaces that line's text and does
+    // not insert a row. The caller decides whether to call this.
+    function revise(id, text) {
+      var line = find(id);
+      var raw = String(text == null ? '' : text).trim();
+      if (!line || !raw) { return false; }
+      line.base = raw;
+      line.key = norm(raw);
+      line.count = 1;
+      line.collapsed = false;
+      line.text = raw;
+      lastKey = line.key;
+      run = 1;
+      return true;
+    }
+
     return {
       partial: partial,
       add: add,
       beginReplay: beginReplay,
       endReplay: endReplay,
       retry: retry,
+      revise: revise,
       lines: snapshot
     };
   }

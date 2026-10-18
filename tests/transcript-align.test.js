@@ -79,4 +79,13 @@ test('4:17 conocer a Dios: app text versus the reference, word for word from the
   assert.equal(kept.lines[0].text, fx.hypothesis);
   assert.ok(kept.lines[0].text.indexOf('amabilice') >= 0);
   assert.ok(kept.lines[0].text.indexOf('iglesia') < 0);
+
+  var gaps = A.missedSentences(fx.reference, fx.hypothesis);
+  assert.deepEqual(gaps.missed.map(function (s) { return s.sentence; }), [
+    'Toda la humanidad conoce a Dios.'
+  ]);
+  assert.ok(gaps.partial.some(function (s) {
+    return /entendimiento/.test(s.sentence) && /llegará/.test(s.droppedTail);
+  }));
+  assert.ok(gaps.missed.every(function (s) { return s.sentence !== fx.hypothesis; }));
 });

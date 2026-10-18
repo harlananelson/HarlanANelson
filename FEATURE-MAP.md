@@ -83,7 +83,7 @@ Hands (browser) still required. This map only tells the hands where to go.
 
 1. Maat → thumb **Listen** (`#tab-sermon`).
 2. Or `maat.html?mode=sermon`.
-3. Iframe `#view-sermon`. Default URL `./live-translator.html?v=27`. If Maat is on the tailnet host with no port, or Settings points Listen at `:8443`, the GPU page is `https://<tailscale-host>:8443/?v=25` (WebSocket same-origin). Native iPad shell (`ios/Maat`) uses Apple on-device ASR (Neural Engine) when `webkit.messageHandlers.maatAsr` is present.
+3. Iframe `#view-sermon`. Default URL `./live-translator.html?v=28`. If Maat is on the tailnet host with no port, or Settings points Listen at `:8443`, the GPU page is `https://<tailscale-host>:8443/?v=25` (WebSocket same-origin). Native iPad shell (`ios/Maat`) uses Apple on-device ASR (Neural Engine) when `webkit.messageHandlers.maatAsr` is present.
 
 **Needs.** Tailscale + home GPU (`:8443`) for the reliable path. Public `live-translator.html` on Netlify can fail the WebSocket on iPad.
 
@@ -97,6 +97,8 @@ Hands (browser) still required. This map only tells the hands where to go.
 | Speaker profile | `#speakerProfile` |
 | Session prefix | `#fileRoot` (file is `prefix-YYYY-MM-DD-HHMM.md`) |
 | Home GPU URL | `#homeGpuUrl` |
+| Spanish transcript only | `#transcriptOnly` (checked by default; Spanish pane full width, no translation) |
+| Post-session audio review | `#reviewAudio` (off by default), `#reviewUrl`, `#reviewBtn`. Suggestions render in `#reviewList`. Apply is explicit. |
 | Clear / copy / save | `#clearBtn`, `#copyBtn`, `#saveBtn` |
 | Keys note when framed | `#maatKeysNote` — “API keys are set in Maat ⚙ Settings.” |
 
