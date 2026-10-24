@@ -193,6 +193,7 @@
             <option value="local">On-device Whisper (private, no upload)</option>
             <option value="cloud">Cloud &mdash; OpenAI gpt-4o-transcribe (most accurate)</option>
             <option value="homegpu">Home GPU &mdash; your own server over Tailscale (Whisper large-v3 + local LLM)</option>
+            <option value="xai">Home GPU + xAI speech-to-text &mdash; audio goes to xAI for this session (grok-voice-transcribe-2.0)</option>
           </select>
         </div>
       </div>
@@ -891,9 +892,17 @@
         if (els.direction) { els.direction.value = d; }
       }
     }
+    // xAI speech-to-text is a per-page-load pick, never saved: a meeting, medical,
+    // immigration or criminal-defense session must not inherit it from an earlier choice.
+    var homeAsrXai = false;
+    function sendHomeGpuEngine() {
+      if (!hgWs || hgWs.readyState !== 1) { return; }
+      try { hgWs.send(JSON.stringify({ type: 'engine', engine: homeAsrXai ? 'xai' : 'whisper' })); } catch (e) {}
+    }
     function sendHomeGpuProfile() {
       if (!hgWs || hgWs.readyState !== 1) { return; }
       try { hgWs.send(JSON.stringify({ type: 'profile', name: state.speakerProfile || '' })); } catch (e) {}
+      sendHomeGpuEngine();
     }
     function micThreshold() { return 0.032 - (state.sensitivity / 100) * 0.028; }
 
@@ -1263,7 +1272,9 @@
       } else if (eng === 'homegpu') {
         setModelStatus(isMonolingual()
           ? 'Home GPU engine — transcribing only (no translation).'
-          : 'Home GPU engine — transcription and translation run on your own server. No model download, no API keys.', '');
+          : (homeAsrXai
+            ? 'Home GPU + xAI speech-to-text — audio is sent to xAI for this session; translation stays on your GPU.'
+            : 'Home GPU engine — transcription and translation run on your own server. No model download, no API keys.'), '');
         fillExportDests();
         applyProfileChrome();
       } else if (/^(Cloud transcription|Home GPU)/.test(els.modelStatus.textContent || '')) {
@@ -1735,6 +1746,7 @@
               // saved transcript matches what a download would have been called.
               try {
                 hgWs.send(JSON.stringify({ type: 'session', name: sessionName() }));
+                sendHomeGpuEngine();
                 if (state.speakerProfile) {
                   hgWs.send(JSON.stringify({ type: 'profile', name: state.speakerProfile }));
                 }
@@ -2667,7 +2679,10 @@
         saveState();
       });
       els.engine.addEventListener('change', function () {
-        state.transcribeEngine = ['cloud', 'homegpu'].indexOf(els.engine.value) >= 0 ? els.engine.value : 'local';
+        homeAsrXai = els.engine.value === 'xai';
+        state.transcribeEngine = homeAsrXai ? 'homegpu'
+          : (['cloud', 'homegpu'].indexOf(els.engine.value) >= 0 ? els.engine.value : 'local');
+        sendHomeGpuEngine();
         applyEngine();
         saveState();
         updateControls();
