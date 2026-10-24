@@ -1381,6 +1381,30 @@
       } catch (e) { /* not in an iframe */ }
     }
 
+    // Tell the Maat shell whether a recording is live, so a stray touch on its
+    // thumb bar cannot walk away from one. The heartbeat lets the shell treat a
+    // dead or reloaded iframe as "not recording" instead of guarding forever.
+    var maatRecSent = false;
+    var maatRecTimer = null;
+    function postRecordingToMaat(on) {
+      try {
+        if (window.parent === window) return;
+        window.parent.postMessage({ type: 'maat-recording', on: !!on }, '*');
+      } catch (e) { /* not in an iframe */ }
+    }
+    function syncRecordingToMaat() {
+      if (maatRecSent === !!listening) return;
+      maatRecSent = !!listening;
+      postRecordingToMaat(maatRecSent);
+      if (maatRecTimer) { clearInterval(maatRecTimer); maatRecTimer = null; }
+      if (maatRecSent) {
+        maatRecTimer = setInterval(function () { postRecordingToMaat(true); }, 5000);
+      }
+    }
+    window.addEventListener('pagehide', function () {
+      if (maatRecSent) postRecordingToMaat(false);
+    });
+
     function prefixName() {
       return (state.fileRoot || 'transcript').trim()
         .replace(/[^\w-]+/g, '-').replace(/^-+|-+$/g, '') || 'transcript';
@@ -2240,6 +2264,7 @@
       }
       els.startHint.textContent = hint;
       els.startHint.className = hint ? 'note warn' : 'note';
+      syncRecordingToMaat();
     }
 
     // ---- settings fields ----
