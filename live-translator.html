@@ -1115,7 +1115,8 @@
         enLabel = '';
       }
       var retryEs = seg.esState === 'error' ? function () { retrySeg(seg.id); } : null;
-      var retryEn = seg.enState === 'error' ? function () { retrySeg(seg.id); } : null;
+      // A line lost to a dropped Home GPU session has no source to re-send from.
+      var retryEn = (seg.enState === 'error' && !seg.lost) ? function () { retrySeg(seg.id); } : null;
       paintCell(refs.es, 'es', seg.esState, esText, seg.error, esLabel, retryEs);
       paintCell(refs.en, 'en', seg.enState, enText, seg.error, enLabel, retryEn);
     }
@@ -1505,6 +1506,23 @@
     var hgWs = null;
     var hgMap = {};   // server sentence id -> segment
     var hgConnecting = false;
+
+    // A closed socket takes its server session with it. Translations still owed
+    // on it will never arrive, and the next session numbers its sentences from
+    // the start again, so leaving them as "translating…" is a spinner that never
+    // resolves. Say they were lost, and forget the dead session's ids.
+    function hgAbandonPending() {
+      Object.keys(hgMap).forEach(function (k) {
+        var s = hgMap[k];
+        if (!s || s.enState !== 'translating') { return; }
+        s.enState = 'error';
+        s.error = 'translation lost — connection reset';
+        s.lost = true;
+        paintRow(s);
+      });
+      hgMap = {};
+      updateStatus();
+    }
     var hgReconnectTimer = null;
     var hgReconnectDelay = 1000;
     var hgHold = [];          // 16 kHz PCM ArrayBuffers while the socket is down
@@ -1757,6 +1775,7 @@
         hgWs.onclose = function () {
           hgWs = null;
           hgConnecting = false;
+          if (settled) { hgAbandonPending(); }
           if (!settled) { settled = true; clearTimeout(timer); resolve(false); }
           else if (listening && state.transcribeEngine === 'homegpu') {
             pushLog('error', 'Home GPU connection closed');
@@ -2208,10 +2227,36 @@
       if (text) { els.statusText.dataset.msg = text; }
       updateStatus();
     }
+    // Lines heard but not yet translated. On 2026-10-23 the Home GPU fell
+    // minutes behind the room (server audio backlog 30 -> 2692 frames) and the
+    // only sign here was a spinner on each row; say how far behind we are.
+    var LAG_WARN_MS = 20000;
+    function translationLag() {
+      var count = 0;
+      var oldestMs = 0;
+      var now = Date.now();
+      for (var i = 0; i < segments.length; i++) {
+        var s = segments[i];
+        if (s.passage || s.enState !== 'translating') { continue; }
+        count++;
+        var age = now - (s.t || now);
+        if (age > oldestMs) { oldestMs = age; }
+      }
+      return { count: count, oldestMs: oldestMs };
+    }
+    setInterval(function () {
+      if (translationLag().count) { updateStatus(); }
+    }, 5000);
+
     function updateStatus() {
       var base = els.statusText.dataset.msg || (listening ? 'Listening…' : 'Idle');
       var n = segments.length;
-      els.statusText.textContent = base + (n ? '   ·   ' + n + ' line' + (n === 1 ? '' : 's') : '');
+      var lag = translationLag();
+      var behind = lag.oldestMs >= LAG_WARN_MS
+        ? '   ·   translation behind: ' + lag.count + ' line' + (lag.count === 1 ? '' : 's') +
+          ', oldest ' + Math.round(lag.oldestMs / 1000) + 's'
+        : '';
+      els.statusText.textContent = base + (n ? '   ·   ' + n + ' line' + (n === 1 ? '' : 's') : '') + behind;
     }
     function updateControls() {
       var eng = state.transcribeEngine;
