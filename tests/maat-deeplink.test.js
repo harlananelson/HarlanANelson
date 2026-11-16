@@ -44,6 +44,10 @@ test("a lastTool poisoned by an earlier build is ignored", function () {
   var h = load("#tools", "", { "maat.tools.lastTool": "constructor" });
   assert.ok(!h.threw, h.threw && h.threw.message);
   assert.ok(h.frames["tool-frame-remarkable"], "Tools still builds its frame");
+  // The poisoned id must not become the active tool: the real tool is selected
+  // and its frame loaded, and the bad value is not written back.
+  assert.ok(h.frames["tool-frame-remarkable"].src, "reMarkable frame was loaded (active tool fell back to remarkable)");
+  assert.notStrictEqual(h.store["maat.tools.lastTool"], "constructor");
 });
 
 console.log(failures ? failures + " failure(s)" : "all passed");
