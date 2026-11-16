@@ -355,6 +355,10 @@
   }
   window.addEventListener("message", function (ev) {
     var d = ev.data;
+    if (d && d.type === "maat-show") {     // the shell tells us which tab is showing
+      if (fromTrustedParent(ev)) onMaatShow(d);
+      return;
+    }
     if (!d || d.type !== "maat-auth" || !d.token) return;
     if (!fromTrustedParent(ev)) return;
     cfg.token = String(d.token);
@@ -1440,6 +1444,7 @@
   // back the moment the page is visible again.
   document.addEventListener("visibilitychange", function () {
     if (document.visibilityState === "visible") syncWakeLock();
+    else if (document.visibilityState === "hidden") stopOpenChannelWhenHidden();
   });
 
   function startContinuous() {
@@ -2187,6 +2192,21 @@
     paintAgentMic();
     paintTalkForTarget();
   }
+
+  /* maat-hidden-stop:start */
+  // DECISION NEEDED (R3-05): an open channel / Grok voice keeps the mic hot and
+  // keeps typing utterances into the chosen target while the user is on
+  // another Maat tab (the frame stays "visible" to the browser, so the shell
+  // has to tell us). Stop both when Converse is not the showing tab or the
+  // page itself is hidden. Continuous transcription (no sends) is left alone.
+  function stopOpenChannelWhenHidden() {
+    if (voice) voiceStop("Converse hidden — Grok voice closed. Microphone off.");
+    if (dictateLoop) endDictateLoop("Converse hidden — channel closed. Microphone off.");
+  }
+  function onMaatShow(d) {
+    if (d && d.type === "maat-show" && d.id !== "converse") stopOpenChannelWhenHidden();
+  }
+  /* maat-hidden-stop:end */
 
   function resumeDictate() {
     if (!dictateLoop || !dictateReady()) { paintAgentMic(); return; }

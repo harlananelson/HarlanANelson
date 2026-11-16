@@ -833,6 +833,18 @@
       }
       if (t) t.classList.toggle("sel", on);
     });
+    tellConverseWhichTab(id);
+  }
+
+  // Converse's iframe stays loaded (and "visible" to the browser) behind the
+  // other tabs, so it cannot tell by itself that it is no longer showing. Tell
+  // it, so an open channel can close its mic (R3-05). Explicit targetOrigin.
+  function tellConverseWhichTab(id) {
+    var cf = $("view-converse");
+    if (!cf || cf.tagName !== "IFRAME" || !cf.getAttribute("src")) return;
+    var origin = frameTargetOrigin(cf);
+    if (!origin) return;
+    try { cf.contentWindow.postMessage({ type: "maat-show", id: id }, origin); } catch (e) {}
   }
 
   function openSettings(open) {
