@@ -229,6 +229,11 @@
   });
 
   // Public Practice languages (allowlisted for deep links — never pass raw lang through).
+  // Allowlists are looked up with hasOwn, never by truthiness: "constructor",
+  // "__proto__" and "toString" are truthy on a plain object and used to pass.
+  function inSet(set, key) {
+    return typeof key === "string" && Object.prototype.hasOwnProperty.call(set, key);
+  }
   var PRACTICE_LANGS = { es: 1, en: 1, ja: 1, sw: 1 };
 
   // PR3: Music + reMarkable fold under Tools (last-tool memory + long-press).
@@ -369,25 +374,74 @@
       try { if (f.contentWindow) f.contentWindow.postMessage(msg, origin); } catch (e) {}
     });
   }
+  // ---- Who may talk to the shell (W1: R1-01, R2-F8, R3-03, R8-F5) ----
+  // A message is acted on only if event.source is one of THIS page's own
+  // iframes AND event.origin is that frame's origin AND that origin is on the
+  // allowlist below. Secrets are pushed only with an explicit targetOrigin.
+  // The same rule (same allowlist) guards assistant.html and
+  // live-translator.html on the receiving side; keep the three in step.
+  /* maat-origin-allowlist:start */
+  function maatOriginTrusted(origin, configuredHost) {
+    var u;
+    try { u = new URL(String(origin)); } catch (e) { return false; }
+    if (u.protocol !== "https:") return false;
+    var h = u.hostname.toLowerCase();
+    if (h === "harlananelson.com" || h === "www.harlananelson.com") return u.port === "";
+    if (h === "harlan-b550-aorus-pro-ac.taila21a91.ts.net") return true; // any port
+    return !!configuredHost && h === String(configuredHost).toLowerCase();
+  }
+  /* maat-origin-allowlist:end */
+  function shellFrameFor(win) {
+    if (!win) return null;
+    var list = document.querySelectorAll("iframe");
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].contentWindow === win) return list[i];
+    }
+    return null;
+  }
+  // Frame ids allowed to send each message type.
+  function senderMayUse(frame, type) {
+    var id = frame.id || "";
+    if (type === "maat-listen" || type === "maat-recording") return id === "view-sermon";
+    if (type === "maat-auth-offer") return id === "view-converse";
+    if (type === "maat-auth-please") {
+      return id === "view-converse" || id === "view-sermon" || id === "tool-frame-remarkable";
+    }
+    if (type === "maat-rm-status") return id.indexOf("tool-frame-") === 0;
+    return false;
+  }
+  // The bridge may only ever be the tailnet host or the host already
+  // configured; a message cannot move it somewhere else.
+  function bridgeAllowedFromMessage(b) {
+    try {
+      var u = new URL(/^https?:\/\//i.test(b) ? b : "https://" + b);
+      if (u.protocol !== "https:") return false;
+      var h = u.hostname.toLowerCase();
+      return h === DEFAULT_TS_HOST || h === tailscaleHostname().toLowerCase();
+    } catch (e) { return false; }
+  }
   window.addEventListener("message", function (ev) {
     var d = ev.data;
-    if (!d) return;
+    if (!d || typeof d.type !== "string") return;
+    var sender = shellFrameFor(ev.source);
+    if (!sender) return;
+    var senderOrigin = frameTargetOrigin(sender);
+    if (!senderOrigin || ev.origin !== senderOrigin ||
+        !maatOriginTrusted(ev.origin, tailscaleHostname())) return;
+    if (!senderMayUse(sender, d.type)) return;
     if (d.type === "maat-listen" && d.session) {
       listenStem = String(d.session).replace(/[^A-Za-z0-9._-]/g, "");
       return;
     }
     if (d.type === "maat-recording") {
-      // Only the Listen frame may claim a recording is live.
-      var lf = $("view-sermon");
-      if (!lf || ev.source !== lf.contentWindow) return;
       listenRecordingAt = d.on === true ? Date.now() : 0;
       return;
     }
     if (d.type === "maat-auth-please") pushAuthToFrames();
     if (d.type === "maat-auth-offer" && d.token) {
       if (!getWorkstationToken()) setWorkstationToken(d.token);
-      if (d.bridge) {
-        try { localStorage.setItem("tb_bridge", String(d.bridge)); } catch (e) {}
+      if (d.bridge && bridgeAllowedFromMessage(String(d.bridge))) {
+        try { localStorage.setItem("tb_bridge", String(d.bridge).trim().replace(/\/+$/, "")); } catch (e) {}
       }
       pushAuthToFrames();
     }
@@ -501,11 +555,11 @@
   function getLastTool() {
     var t = null;
     try { t = localStorage.getItem(LAST_TOOL_KEY); } catch (e) {}
-    if (t && TOOL_IDS[t]) return t;
+    if (t && inSet(TOOL_IDS, t)) return t;
     return "remarkable";
   }
   function setLastTool(id) {
-    if (!TOOL_IDS[id]) return;
+    if (!inSet(TOOL_IDS, id)) return;
     try { localStorage.setItem(LAST_TOOL_KEY, id); } catch (e) {}
   }
 
@@ -606,7 +660,7 @@
 
   function selectTool(id, opts) {
     opts = opts || {};
-    if (!TOOL_IDS[id]) return;
+    if (!inSet(TOOL_IDS, id)) return;
     activeTool = id;
     setLastTool(id);
     paintToolsBar();
@@ -805,7 +859,7 @@
   }
 
   function show(id) {
-    if (!MODE_IDS[id]) id = "converse";
+    if (!inSet(MODE_IDS, id)) id = "converse";
     // A stray touch on the thumb bar must not walk away from a live recording.
     if (active === "sermon" && id !== "sermon" && listenIsRecording() &&
         !window.confirm("Listen is recording. Leave it?")) {
@@ -1092,7 +1146,7 @@
       tool = null;
       mode = "music";
     }
-    if (mode && !MODE_IDS[mode]) mode = null;
+    if (mode && !inSet(MODE_IDS, mode)) mode = null;
 
     if (input) {
       input = String(input).toLowerCase();
@@ -1100,14 +1154,14 @@
     }
     if (tool) {
       tool = String(tool).toLowerCase();
-      if (!TOOL_IDS[tool]) tool = null;
+      if (!inSet(TOOL_IDS, tool)) tool = null;
     }
 
-    if (mode && MODE_IDS[mode]) active = mode;
+    if (mode && inSet(MODE_IDS, mode)) active = mode;
 
     if (lang) {
       lang = String(lang).toLowerCase();
-      if (!PRACTICE_LANGS[lang]) lang = null;
+      if (!inSet(PRACTICE_LANGS, lang)) lang = null;
     }
     if (lang) {
       modes.forEach(function (a) {
