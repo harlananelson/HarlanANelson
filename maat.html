@@ -1089,6 +1089,11 @@
     $("settings").classList.toggle("open", open);
   }
   $("saveModes").onclick = function () {
+    // What the addresses were BEFORE this Save touched the host or storage.
+    // Diffing against the in-memory modes instead would count a deep link's
+    // ?lang= / mode=mic as a change and reload that frame on a token-only Save.
+    var beforeModes = loadModes();
+    var beforeTools = loadTools();
     var tokEl = $("maatToken");
     if (tokEl) {
       setWorkstationToken(tokEl.value);
@@ -1123,15 +1128,16 @@
     tools.forEach(function (t) { takeUrl(t.id, t.url); });
     try { localStorage.setItem("maat_urls", JSON.stringify(saved)); } catch (e) {}
     openSettings(false);
-    applyUrlChanges();
+    applyUrlChanges(beforeModes, beforeTools);
   };
-  function applyUrlChanges() {
+  function applyUrlChanges(beforeModes, beforeTools) {
     var nextModes = loadModes();
     var nextTools = loadTools();
     var needBuild = false;
     nextModes.forEach(function (n, i) {
       var cur = modes[i];
-      if (!cur || cur.id !== n.id || cur.url === n.url) return;
+      var was = beforeModes[i];
+      if (!cur || cur.id !== n.id || !was || was.url === n.url) return;
       if (cur.id === "sermon" && listenIsRecording() &&
           !window.confirm("Listen is recording. Reload it with the new address now? " +
                           "Cancel keeps the recording; the new address applies the next time Listen loads.")) {
@@ -1146,7 +1152,8 @@
     var toolChanged = false;
     nextTools.forEach(function (n, i) {
       var cur = tools[i];
-      if (!cur || cur.id !== n.id || cur.url === n.url) return;
+      var was = beforeTools[i];
+      if (!cur || cur.id !== n.id || !was || was.url === n.url) return;
       cur.url = n.url;
       toolChanged = true;
       var f = $("tool-frame-" + cur.id);

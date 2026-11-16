@@ -91,5 +91,14 @@ test("R1-08: the Tailscale machine field changes Listen even after an earlier Sa
   assert.ok(/^https:\/\/other-box\.example-tailnet\.ts\.net:8443\//.test(last[1]), last && last[1]);
 });
 
+test("R1-04: a token-only Save after a deep link (#practice?lang=es, #converse?input=type) reloads nothing", function () {
+  ["#practice?lang=es", "#converse?input=type", "#converse?input=mic"].forEach(function (hash) {
+    var h = page.load({ hash: hash });
+    var logBefore = h.srcLog.length;
+    saveWith(h, { maatToken: "NEW-TOKEN" });
+    assert.strictEqual(h.srcLog.length, logBefore, hash + ": frames navigated: " + JSON.stringify(h.srcLog.slice(logBefore)));
+  });
+});
+
 console.log(failures ? failures + " failure(s)" : "all passed");
 process.exit(failures ? 1 : 0);
