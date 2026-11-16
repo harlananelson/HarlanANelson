@@ -257,6 +257,7 @@
     <button id="speakerToggle" class="chip" style="display:none">🗣 me</button>
     <button id="analyzeBtn" class="chip" style="display:none">🧠 Analyze</button>
     <button id="termToggle" class="chip" style="display:none" title="Show shell replies as the terminal screen or as plain text">▤ Terminal</button>
+    <button id="lastReplyBtn" class="chip" style="display:none" title="Show this session's latest reply, without sending anything">⟲ Last reply</button>
   </div>
   <div id="barType">
     <input id="barInput" placeholder="Type a message" autocomplete="off">
@@ -690,10 +691,13 @@
     }
     return t;
   }
-  function followPane(name, sent) {
+  // waitText: the placeholder while the first capture is in flight. The
+  // "Last reply" chip calls this with sent="" to read where a session left
+  // off without sending it anything.
+  function followPane(name, sent, waitText) {
     stopPaneWatch();
     paneWatch = { name: name, last: "", same: 0, el: null, ticks: 0 };
-    paneWatch.el = addMsg("assistant", "Waiting for a reply from " + name + "…", "← " + name, "tmux:" + name);
+    paneWatch.el = addMsg("assistant", waitText || ("Waiting for a reply from " + name + "…"), "← " + name, "tmux:" + name);
     function paint(shown, ansi) {
       var lines = String(shown || "").split("\n");
       if (lines.length > 24) shown = lines.slice(-24).join("\n");
@@ -1267,6 +1271,7 @@
     if (!b) return;
     var isShell = typeof target === "object" && target && target.kind === "tmux";
     b.style.display = isShell ? "" : "none";
+    if ($("lastReplyBtn")) $("lastReplyBtn").style.display = isShell ? "" : "none";
     b.textContent = termView ? "▤ Terminal" : "¶ Text";
     b.className = termView ? "chip on" : "chip";
     b.setAttribute("aria-pressed", termView ? "true" : "false");
@@ -1279,7 +1284,7 @@
     var ctx = $("barContext");
     if (ctx) {
       var any = false;
-      ["speakerToggle", "analyzeBtn", "termToggle"].forEach(function (id) {
+      ["speakerToggle", "analyzeBtn", "termToggle", "lastReplyBtn"].forEach(function (id) {
         var el = $(id);
         if (el && el.style.display !== "none") any = true;
       });
@@ -2424,6 +2429,18 @@
     setStatus(termView
       ? "Terminal view: shell replies show the screen as the terminal does."
       : "Text view: shell replies show the reply text only.");
+  };
+
+  // Read-only: one capture of the selected tmux session, painted like a reply
+  // (curated / condensed text when the bridge has it, terminal view if on).
+  // Nothing is typed into the session.
+  if ($("lastReplyBtn")) $("lastReplyBtn").onclick = function () {
+    if (!(typeof target === "object" && target && target.kind === "tmux" && target.name)) {
+      setStatus("Pick a shell session first.");
+      return;
+    }
+    setStatus("Fetching the latest reply from " + target.name + "…");
+    followPane(target.name, "", "Fetching the latest reply from " + target.name + "…");
   };
 
   function barTypeSend() {
