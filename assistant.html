@@ -233,8 +233,9 @@
     <button id="settingsClose" class="secondary" type="button">Close</button>
   </div>
   <p class="hint">Tip: you can pre-fill this by opening the page as
-    …/assistant.html?bridge=URL&amp;token=TOKEN — handy the first time,
-    since typing on the console is slow. Settings persist in this browser.</p>
+    …/assistant.html?token=TOKEN (a link to the default machine can also carry
+    ?bridge=); a different machine is entered here in Settings, not by link.
+    Settings persist in this browser.</p>
 </div>
 
 <div id="views-wrap">
@@ -265,15 +266,19 @@
   var $ = function (id) { return document.getElementById(id); };
 
   // ---- who may talk to this page (W1: R3-02, R3-03, R8-F5) ----
-  // Same allowlist as maat.html and live-translator.html; keep the three in step.
+  // PARENT allowlist (narrower than the shell's frame allowlist in maat.html):
+  // only Maat itself may frame this page and be believed. That is the website,
+  // or the tailnet / configured bridge host on its default port (Maat opened on
+  // the funnel). Other services on the same host (:8443 Listen, :8444 Music,
+  // :9443 reMarkable) are NOT Maat and never get the bearer token.
   /* maat-origin-allowlist:start */
-  function maatOriginTrusted(origin, configuredHost) {
+  function maatParentTrusted(origin, configuredHost) {
     var u;
     try { u = new URL(String(origin)); } catch (e) { return false; }
-    if (u.protocol !== "https:") return false;
+    if (u.protocol !== "https:" || u.port !== "") return false;
     var h = u.hostname.toLowerCase();
-    if (h === "harlananelson.com" || h === "www.harlananelson.com") return u.port === "";
-    if (h === "harlan-b550-aorus-pro-ac.taila21a91.ts.net") return true; // any port
+    if (h === "harlananelson.com" || h === "www.harlananelson.com") return true;
+    if (h === "harlan-b550-aorus-pro-ac.taila21a91.ts.net") return true;
     return !!configuredHost && h === String(configuredHost).toLowerCase();
   }
   /* maat-origin-allowlist:end */
@@ -301,7 +306,7 @@
   // Messages from the Maat shell: only from our parent window, on an allowed origin.
   function fromTrustedParent(ev) {
     return window.parent !== window && ev.source === window.parent &&
-      maatOriginTrusted(ev.origin, hostOf(storedBridge()));
+      maatParentTrusted(ev.origin, hostOf(storedBridge()));
   }
   // Post to the parent with an explicit targetOrigin (never "*"): its own
   // origin if we can tell and it is allowlisted, else each allowlisted shell
@@ -311,10 +316,10 @@
     var seen = [], cands = [];
     try { if (location.ancestorOrigins && location.ancestorOrigins.length) cands.push(location.ancestorOrigins[0]); } catch (e) {}
     try { if (document.referrer) cands.push(new URL(document.referrer).origin); } catch (e) {}
-    cands = cands.filter(function (o) { return maatOriginTrusted(o, hostOf(storedBridge())); });
+    cands = cands.filter(function (o) { return maatParentTrusted(o, hostOf(storedBridge())); });
     if (!cands.length) {
       cands = ["https://harlananelson.com", "https://www.harlananelson.com",
-        "https://" + DEFAULT_TS_HOST, "https://" + DEFAULT_TS_HOST + ":8443"];
+        "https://" + DEFAULT_TS_HOST];
     }
     cands.forEach(function (o) {
       if (seen.indexOf(o) >= 0) return;
@@ -361,7 +366,11 @@
     try { localStorage.setItem("tb_token", cfg.token); } catch (e) {}
     if (d.bridge) {
       var nb = cleanBridge(String(d.bridge));
-      if (bridgeLooksValid(nb)) {
+      // Same rule as ?bridge=: the default host or the host already stored.
+      // A different machine is entered in Settings, never taken from a message.
+      var nbHost = hostOf(nb), stB = storedBridge();
+      if (bridgeLooksValid(nb) && nbHost &&
+          (nbHost === DEFAULT_TS_HOST || (stB && nbHost === hostOf(stB)))) {
         cfg.bridge = nb;
         try { localStorage.setItem("tb_bridge", cfg.bridge); } catch (e2) {}
       }
