@@ -72,5 +72,59 @@ test("R3-02: ?bridge= that fails Save's validity check is ignored", function () 
   assert.ok(h.store.tb_bridge === undefined || h.store.tb_bridge === "https://" + HOST, h.store.tb_bridge);
 });
 
+// ---- follow-up: parents are Maat only, never another service on the tailnet host ----
+["https://" + HOST + ":8444", "https://" + HOST + ":9443", "https://" + HOST + ":8443"].forEach(function (o) {
+  test("HIGH-1: maat-auth from a parent on " + o + " is refused", function () {
+    var h = page.load({ store: Object.assign({}, GOOD) });
+    h.send(true, o, { type: "maat-auth", token: "ATTACKER", bridge: "https://evil.example" });
+    assert.strictEqual(h.store.tb_token, "REAL");
+    assert.strictEqual(h.store.tb_bridge, "https://" + HOST);
+  });
+  test("HIGH-1: no token is posted to a parent framed from " + o, function () {
+    var h = page.load({ store: Object.assign({}, GOOD), ancestorOrigins: [o], referrer: o + "/" });
+    h.posts.filter(function (p) { return p.token; }).forEach(function (p) {
+      assert.notStrictEqual(p.origin, o, "token posted to " + p.origin);
+      assert.ok(!/:\d+$/.test(p.origin), "token posted to a port-qualified origin " + p.origin);
+    });
+  });
+});
+
+test("HIGH-1: parents on harlananelson.com, www, and the tailnet host with no port are accepted", function () {
+  ["https://harlananelson.com", "https://www.harlananelson.com", "https://" + HOST].forEach(function (o) {
+    var h = page.load({ store: Object.assign({}, GOOD) });
+    h.send(true, o, { type: "maat-auth", token: "NEW" });
+    assert.strictEqual(h.store.tb_token, "NEW", o);
+  });
+});
+
+test("HIGH-1: a configured (stored) bridge host is a parent on its empty port only", function () {
+  var st = { tb_token: "REAL", tb_bridge: "https://other.example.ts.net" };
+  var h = page.load({ store: Object.assign({}, st) });
+  h.send(true, "https://other.example.ts.net:8444", { type: "maat-auth", token: "ATTACKER" });
+  assert.strictEqual(h.store.tb_token, "REAL");
+  h.send(true, "https://other.example.ts.net", { type: "maat-auth", token: "NEW" });
+  assert.strictEqual(h.store.tb_token, "NEW");
+});
+
+test("HIGH-1: maat-auth.bridge is stored only for the default host or the already-stored host", function () {
+  var h = page.load({ store: Object.assign({}, GOOD) });
+  h.send(true, "https://harlananelson.com", { type: "maat-auth", token: "T", bridge: "https://evil.example" });
+  assert.strictEqual(h.store.tb_bridge, "https://" + HOST);
+  var h2 = page.load({ store: { tb_token: "REAL", tb_bridge: "https://other.example.ts.net" } });
+  h2.send(true, "https://harlananelson.com", { type: "maat-auth", token: "T", bridge: "https://other.example.ts.net/" });
+  assert.strictEqual(h2.store.tb_bridge, "https://other.example.ts.net");
+  h2.send(true, "https://harlananelson.com", { type: "maat-auth", token: "T", bridge: "https://" + HOST });
+  assert.strictEqual(h2.store.tb_bridge, "https://" + HOST);
+});
+
+test("MEDIUM: the visible first-run hint no longer says ?bridge= sets a new machine", function () {
+  var fs = require("fs"), path = require("path");
+  var html = fs.readFileSync(path.join(__dirname, "..", "assistant.html"), "utf8");
+  var m = html.match(/<p class="hint">Tip:[\s\S]*?<\/p>/);
+  assert.ok(m, "hint present");
+  assert.ok(!/bridge=URL/.test(m[0]), m[0]);
+  assert.ok(/Settings/.test(m[0]), "hint points at Settings");
+});
+
 console.log(failures ? failures + " failure(s)" : "all passed");
 process.exit(failures ? 1 : 0);
