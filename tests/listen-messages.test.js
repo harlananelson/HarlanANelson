@@ -67,8 +67,8 @@ test("the parent on a foreign origin is refused", function () {
   assert.strictEqual(e.applied.length, 0);
 });
 
-test("the real parent (harlananelson.com, or the tailnet origin on :8443) is accepted", function () {
-  ["https://harlananelson.com", "https://" + HOST + ":8443", "https://" + HOST].forEach(function (o) {
+test("the real parent (harlananelson.com, www, or the tailnet origin with no port) is accepted", function () {
+  ["https://harlananelson.com", "https://www.harlananelson.com", "https://" + HOST].forEach(function (o) {
     var store = { tb_bridge: "https://" + HOST };
     var e = makeEnv(store);
     e.send(true, o, { type: "maat-auth", bridge: "https://" + HOST, translationKey: "k" });
@@ -95,6 +95,44 @@ test("an unexpected framing origin gets nothing", function () {
   var e = makeEnv({}, { ancestorOrigins: ["https://evil.example"], referrer: "https://evil.example/" });
   e.api.post({ type: "maat-listen", session: "s" });
   e.posts.forEach(function (p) { assert.ok(/harlananelson\.com$|ts\.net(:8443)?$/.test(p.origin), p.origin); });
+});
+
+// ---- follow-up HIGH-1: only Maat is a parent, not another service on the tailnet host ----
+["https://" + HOST + ":8443", "https://" + HOST + ":8444", "https://" + HOST + ":9443"].forEach(function (o) {
+  test("HIGH-1: a parent on " + o + " cannot set keys or the bridge", function () {
+    var store = { tb_bridge: "https://" + HOST };
+    var e = makeEnv(store);
+    e.send(true, o, { type: "maat-auth", bridge: "https://evil.example", translationKey: "k", clearKeys: true });
+    assert.strictEqual(e.applied.length, 0);
+    assert.strictEqual(store.tb_bridge, "https://" + HOST);
+  });
+  test("HIGH-1: nothing is posted to a port-qualified origin when framed from " + o, function () {
+    var e = makeEnv({}, { ancestorOrigins: [o], referrer: o + "/" });
+    e.api.post({ type: "maat-listen", session: "s" });
+    e.posts.forEach(function (p) { assert.ok(!/:\d+$/.test(p.origin), p.origin); });
+  });
+});
+
+test("HIGH-1: a configured (stored) bridge host is a parent on its empty port only", function () {
+  var store = { tb_bridge: "https://other.example.ts.net" };
+  var e = makeEnv(store);
+  e.send(true, "https://other.example.ts.net:8444", { type: "maat-auth", translationKey: "k" });
+  assert.strictEqual(e.applied.length, 0);
+  e.send(true, "https://other.example.ts.net", { type: "maat-auth", translationKey: "k" });
+  assert.strictEqual(e.applied.length, 1);
+});
+
+test("HIGH-1: maat-auth.bridge is stored only for the default host or the already-stored host", function () {
+  var store = { tb_bridge: "https://" + HOST };
+  var e = makeEnv(store);
+  e.send(true, "https://harlananelson.com", { type: "maat-auth", bridge: "https://evil.example", translationKey: "k" });
+  assert.strictEqual(store.tb_bridge, "https://" + HOST);
+  var s2 = { tb_bridge: "https://other.example.ts.net" };
+  var e2 = makeEnv(s2);
+  e2.send(true, "https://harlananelson.com", { type: "maat-auth", bridge: "https://other.example.ts.net/", translationKey: "k" });
+  assert.strictEqual(s2.tb_bridge, "https://other.example.ts.net");
+  e2.send(true, "https://harlananelson.com", { type: "maat-auth", bridge: "https://" + HOST, translationKey: "k" });
+  assert.strictEqual(s2.tb_bridge, "https://" + HOST);
 });
 
 console.log(failures ? failures + " failure(s)" : "all passed");

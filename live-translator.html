@@ -1379,15 +1379,19 @@
     /* maat-parent-messaging:start */
     // W1 (R2-F8, R8-F5): only our parent window, on an allowlisted origin, may
     // set keys or the bridge; everything we post to it names its origin.
-    // Same allowlist as maat.html and assistant.html; keep the three in step.
+    // PARENT allowlist (narrower than the shell's frame allowlist in maat.html):
+    // only Maat itself may frame this page and be believed: the website, or the
+    // tailnet / configured bridge host on its default port (Maat opened on the
+    // funnel). Other services on that host (:8443 this page, :8444 Music,
+    // :9443 reMarkable) are not Maat.
     /* maat-origin-allowlist:start */
-    function maatOriginTrusted(origin, configuredHost) {
+    function maatParentTrusted(origin, configuredHost) {
       var u;
       try { u = new URL(String(origin)); } catch (e) { return false; }
-      if (u.protocol !== 'https:') { return false; }
+      if (u.protocol !== 'https:' || u.port !== '') { return false; }
       var h = u.hostname.toLowerCase();
-      if (h === 'harlananelson.com' || h === 'www.harlananelson.com') { return u.port === ''; }
-      if (h === 'harlan-b550-aorus-pro-ac.taila21a91.ts.net') { return true; } // any port
+      if (h === 'harlananelson.com' || h === 'www.harlananelson.com') { return true; }
+      if (h === 'harlan-b550-aorus-pro-ac.taila21a91.ts.net') { return true; }
       return !!configuredHost && h === String(configuredHost).toLowerCase();
     }
     /* maat-origin-allowlist:end */
@@ -1398,7 +1402,7 @@
     }
     function fromTrustedMaatParent(ev) {
       return window.parent !== window && ev.source === window.parent &&
-        maatOriginTrusted(ev.origin, maatConfiguredHost());
+        maatParentTrusted(ev.origin, maatConfiguredHost());
     }
     // Post to the parent with an explicit targetOrigin, never '*': its own
     // origin when we can tell and it is allowlisted, else each allowlisted
@@ -1408,16 +1412,19 @@
       var seen = [], cands = [];
       try { if (location.ancestorOrigins && location.ancestorOrigins.length) { cands.push(location.ancestorOrigins[0]); } } catch (e) {}
       try { if (document.referrer) { cands.push(new URL(document.referrer).origin); } } catch (e) {}
-      cands = cands.filter(function (o) { return maatOriginTrusted(o, maatConfiguredHost()); });
+      cands = cands.filter(function (o) { return maatParentTrusted(o, maatConfiguredHost()); });
       if (!cands.length) {
         cands = ['https://harlananelson.com', 'https://www.harlananelson.com',
-          'https://' + DEFAULT_TS_HOST, 'https://' + DEFAULT_TS_HOST + ':8443'];
+          'https://' + DEFAULT_TS_HOST];
       }
       cands.forEach(function (o) {
         if (seen.indexOf(o) >= 0) { return; }
         seen.push(o);
         try { window.parent.postMessage(msg, o); } catch (e) {}
       });
+    }
+    function maatHostOf(b) {
+      try { return new URL(/^https?:\/\//i.test(b) ? b : 'https://' + b).hostname.toLowerCase(); } catch (e) { return ''; }
     }
     function maatBridgeAcceptable(b) {
       try {
@@ -1429,7 +1436,11 @@
       var d = ev.data;
       if (!d || d.type !== 'maat-auth') { return; }
       if (!fromTrustedMaatParent(ev)) { return; }
-      if (d.bridge && maatBridgeAcceptable(String(d.bridge))) {
+      // Bridge: only the default host or the host already stored (the same rule
+      // as Converse's ?bridge=); a different machine is entered by hand.
+      var bHost = d.bridge ? maatHostOf(String(d.bridge)) : '';
+      if (d.bridge && maatBridgeAcceptable(String(d.bridge)) && bHost &&
+          (bHost === DEFAULT_TS_HOST || bHost === maatConfiguredHost())) {
         try { localStorage.setItem('tb_bridge', String(d.bridge).replace(/\/+$/, '')); } catch (e) {}
         paintGpuUrlHint();
       }
@@ -1600,6 +1611,7 @@
     var hgWs = null;
     var hgMap = {};   // server sentence id -> segment
     var hgConnecting = false;
+    var hgConnectTimer = null;   // the 10 s connect timer, so Stop can clear it
 
     // A closed socket takes its server session with it. Translations still owed
     // on it will never arrive, and the next session numbers its sentences from
@@ -1816,31 +1828,47 @@
       }, wait);
     }
 
-    function hgConnect() {
+    // gen: the startGen of the Start that asked for this connection (undefined
+    // for a reconnect). When Stop (or a newer Start) has bumped startGen, this
+    // connection is stale: close it, say nothing, send nothing.
+    function hgConnect(gen) {
       return new Promise(function (resolve) {
         if (hgConnecting) { resolve(false); return; }
         hgConnecting = true;
         var url = resolvedHomeGpuUrl();
-        try { hgWs = new WebSocket(url); } catch (e) {
+        var ws;
+        try { ws = hgWs = new WebSocket(url); } catch (e) {
           hgConnecting = false;
           setStatus('err', 'Bad Home GPU server URL: ' + ((e && e.message) || e));
           resolve(false); return;
         }
-        hgWs.binaryType = 'arraybuffer';
+        ws.binaryType = 'arraybuffer';
         var settled = false;
-        var timer = setTimeout(function () {
+        var timer = null;
+        function stale() { return gen !== undefined && gen !== startGen; }
+        function abandon() {
+          settled = true; clearTimeout(timer);
+          if (hgConnectTimer === timer) { hgConnectTimer = null; }
+          if (hgWs === ws) { hgWs = null; hgConnecting = false; }
+          try { ws.close(); } catch (e) {}
+          resolve(false);
+        }
+        timer = setTimeout(function () {
           if (settled) { return; }
+          if (stale()) { abandon(); return; }
           settled = true;
           hgConnecting = false;
-          try { hgWs.close(); } catch (e) {}
+          try { ws.close(); } catch (e) {}
           setStatus('err', 'Home GPU server did not respond — is it running, and is tailscale serve active?');
           resolve(false);
         }, 10000);
-        hgWs.onmessage = function (m) {
+        hgConnectTimer = timer;
+        ws.onmessage = function (m) {
           var ev;
           try { ev = JSON.parse(m.data); } catch (e) { return; }
           if (ev.type === 'ready') {
             if (!settled) {
+              if (stale()) { abandon(); return; }
               settled = true; clearTimeout(timer); hgConnecting = false;
               // Name the recording so the server files it as <name>-<date>.
               // Reuses the export filename root the user already sets, so the
@@ -1860,13 +1888,18 @@
           }
           hgHandleEvent(ev);
         };
-        hgWs.onerror = function () {
+        ws.onerror = function () {
           if (settled) { return; }
+          if (stale()) { abandon(); return; }
           settled = true; clearTimeout(timer); hgConnecting = false;
           setStatus('err', 'Could not connect to the Home GPU server. Check the URL and that this device is on Tailscale.');
           resolve(false);
         };
-        hgWs.onclose = function () {
+        ws.onclose = function () {
+          if (hgWs !== ws) {   // an abandoned socket: must not touch the current connection
+            if (!settled) { settled = true; clearTimeout(timer); resolve(false); }
+            return;
+          }
           hgWs = null;
           hgConnecting = false;
           if (settled) { hgAbandonPending(); }
@@ -2288,7 +2321,7 @@
           ? 'Start pressed — resuming (transcript kept)'
           : 'Start pressed — Home GPU engine, server=' + resolvedHomeGpuUrl());
         if (!already) { setStatus('idle', 'Connecting to Home GPU server…'); }
-        var ready = already ? Promise.resolve(true) : hgConnect();
+        var ready = already ? Promise.resolve(true) : hgConnect(gen);
         ready.then(function (ok) {
           if (gen !== startGen) { return; }   // Stop (or a newer Start) got here first
           if (!ok) { listening = false; updateControls(); return; }
@@ -2316,6 +2349,12 @@
     function stop() {
       startGen++;   // cancels a Start still connecting or waiting on the mic prompt
       listening = false;
+      if (hgConnecting) {   // a connect in flight: close it now and stop its timer
+        clearTimeout(hgConnectTimer); hgConnectTimer = null;
+        var cws = hgWs;
+        hgWs = null; hgConnecting = false;
+        if (cws) { try { cws.close(); } catch (e) {} }
+      }
       if (hasNativeAsr()) {
         try { webkit.messageHandlers.maatAsr.postMessage({ cmd: 'stop' }); } catch (e) {}
       }
