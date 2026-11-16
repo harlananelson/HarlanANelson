@@ -14,6 +14,7 @@ final class OnDeviceASR {
     private var localeId = "en-US"
     private var sessionName = "transcript"
     private var onEvent: (([String: Any]) -> Void)?
+    private var interruptionObserver: NSObjectProtocol?
 
     func authorize() async -> Bool {
         await withCheckedContinuation { cont in
@@ -49,7 +50,29 @@ final class OnDeviceASR {
         engine.prepare()
         try engine.start()
         running = true
+        observeInterruptions()
         try startTask()
+    }
+
+    /// A phone call, Siri or an alarm stops the engine and ends the audio
+    /// session. When the interruption ends, restart the engine so a long
+    /// recording carries on (R1-03). NOT BUILT: needs a device test.
+    private func observeInterruptions() {
+        if interruptionObserver != nil { return }
+        interruptionObserver = NotificationCenter.default.addObserver(
+            forName: AVAudioSession.interruptionNotification,
+            object: AVAudioSession.sharedInstance(), queue: .main) { [weak self] note in
+            guard let self, self.running,
+                  let raw = note.userInfo?[AVAudioSessionInterruptionTypeKey] as? UInt,
+                  let type = AVAudioSession.InterruptionType(rawValue: raw),
+                  type == .ended else { return }
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+                if !self.engine.isRunning { try self.engine.start() }
+            } catch {
+                self.onEvent?(["type": "error", "text": "Could not resume after interruption: \(error.localizedDescription)"])
+            }
+        }
     }
 
     private func startTask() throws {
@@ -91,6 +114,10 @@ final class OnDeviceASR {
         task = nil
         request?.endAudio()
         request = nil
+        if let o = interruptionObserver {
+            NotificationCenter.default.removeObserver(o)
+            interruptionObserver = nil
+        }
         if engine.isRunning { engine.stop() }
         engine.inputNode.removeTap(onBus: 0)
         try? AVAudioSession.sharedInstance()
