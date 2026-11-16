@@ -6,6 +6,10 @@ var assert = require("assert");
 var page = require("./lib/maat-page.js");
 
 var HOST = "harlan-b550-aorus-pro-ac.taila21a91.ts.net";
+var CURRENT = (function () {
+  var m = /var CACHE_V = \{ listen: "(\d+)", converse: "(\d+)" \};/.exec(page.script);
+  return { listen: m[1], converse: m[2] };
+})();
 var failures = 0;
 function test(name, fn) {
   try { fn(); console.log("ok   - " + name); }
@@ -78,9 +82,9 @@ test("R1-08: legacy frozen entries (v=26 Listen, v=83 Converse) no longer pin th
   var h = page.load({ hash: "#sermon", store: { maat_urls: JSON.stringify(frozen) } });
   var frames = h.frames();
   var listenSrc = frames["view-sermon"].src;
-  assert.strictEqual(vOf(listenSrc), "26", listenSrc);       // current constant, not the old 22
+  assert.strictEqual(vOf(listenSrc), CURRENT.listen, listenSrc);   // current constant, not the old 22
   h = page.load({ store: { maat_urls: JSON.stringify(frozen) } });
-  assert.notStrictEqual(vOf(h.frames()["view-converse"].src), "83", h.frames()["view-converse"].src);
+  assert.strictEqual(vOf(h.frames()["view-converse"].src), CURRENT.converse, h.frames()["view-converse"].src);
 });
 
 test("R1-08: the Tailscale machine field changes Listen even after an earlier Save", function () {
