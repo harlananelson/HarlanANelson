@@ -229,6 +229,11 @@
   });
 
   // Public Practice languages (allowlisted for deep links — never pass raw lang through).
+  // Allowlists are looked up with hasOwn, never by truthiness: "constructor",
+  // "__proto__" and "toString" are truthy on a plain object and used to pass.
+  function inSet(set, key) {
+    return typeof key === "string" && Object.prototype.hasOwnProperty.call(set, key);
+  }
   var PRACTICE_LANGS = { es: 1, en: 1, ja: 1, sw: 1 };
 
   // PR3: Music + reMarkable fold under Tools (last-tool memory + long-press).
@@ -550,11 +555,11 @@
   function getLastTool() {
     var t = null;
     try { t = localStorage.getItem(LAST_TOOL_KEY); } catch (e) {}
-    if (t && TOOL_IDS[t]) return t;
+    if (t && inSet(TOOL_IDS, t)) return t;
     return "remarkable";
   }
   function setLastTool(id) {
-    if (!TOOL_IDS[id]) return;
+    if (!inSet(TOOL_IDS, id)) return;
     try { localStorage.setItem(LAST_TOOL_KEY, id); } catch (e) {}
   }
 
@@ -655,7 +660,7 @@
 
   function selectTool(id, opts) {
     opts = opts || {};
-    if (!TOOL_IDS[id]) return;
+    if (!inSet(TOOL_IDS, id)) return;
     activeTool = id;
     setLastTool(id);
     paintToolsBar();
@@ -854,7 +859,7 @@
   }
 
   function show(id) {
-    if (!MODE_IDS[id]) id = "converse";
+    if (!inSet(MODE_IDS, id)) id = "converse";
     // A stray touch on the thumb bar must not walk away from a live recording.
     if (active === "sermon" && id !== "sermon" && listenIsRecording() &&
         !window.confirm("Listen is recording. Leave it?")) {
@@ -1141,7 +1146,7 @@
       tool = null;
       mode = "music";
     }
-    if (mode && !MODE_IDS[mode]) mode = null;
+    if (mode && !inSet(MODE_IDS, mode)) mode = null;
 
     if (input) {
       input = String(input).toLowerCase();
@@ -1149,14 +1154,14 @@
     }
     if (tool) {
       tool = String(tool).toLowerCase();
-      if (!TOOL_IDS[tool]) tool = null;
+      if (!inSet(TOOL_IDS, tool)) tool = null;
     }
 
-    if (mode && MODE_IDS[mode]) active = mode;
+    if (mode && inSet(MODE_IDS, mode)) active = mode;
 
     if (lang) {
       lang = String(lang).toLowerCase();
-      if (!PRACTICE_LANGS[lang]) lang = null;
+      if (!inSet(PRACTICE_LANGS, lang)) lang = null;
     }
     if (lang) {
       modes.forEach(function (a) {
