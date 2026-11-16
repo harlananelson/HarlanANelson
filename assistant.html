@@ -345,10 +345,13 @@
   };
   // ?token= is saved to localStorage above — scrub it from the visible URL
   // and browser history (keep the other params, e.g. mode=mic).
-  if (params.has("token") && window.history && history.replaceState) {
+  // Say window.history: a later `var history = []` (the message log) is
+  // hoisted over the bare name for this whole function, so a bare `history`
+  // here is undefined and this line used to throw and abort the page.
+  if (params.has("token") && window.history && window.history.replaceState) {
     params.delete("token");
     var q = params.toString();
-    try { history.replaceState(null, "", location.pathname + (q ? "?" + q : "")); } catch (e) {}
+    try { window.history.replaceState(null, "", location.pathname + (q ? "?" + q : "")); } catch (e) {}
   }
   window.addEventListener("message", function (ev) {
     var d = ev.data;
