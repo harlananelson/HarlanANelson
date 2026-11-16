@@ -234,6 +234,8 @@
             <option value="transcribe">Transcribe only &mdash; no translation, any language</option>
             <option value="meeting">Meeting &mdash; no translation, text only</option>
             <option value="podcast">Podcast &mdash; English talk; facts, science, legal</option>
+            <option value="english-to-spanish">English → Spanish only</option>
+            <option value="bilingual">Bilingual English ⇄ Spanish — auto-detect</option>
             <option value="korean-en">Korean-English</option>
             <option value="korean">Korean → English only</option>
             <option value="english-to-korean">English → Korean only</option>
@@ -867,21 +869,38 @@
       if (d === 'ko-en') return 'korean';
       if (d === 'en-ko') return 'english-to-korean';
       if (d === 'auto-ko') return 'korean-en';
+      // Without these the Home GPU server kept its Spanish -> English default
+      // for English speech (R2-F7). es-en IS that default, so it needs no profile.
+      if (d === 'en-es') return 'english-to-spanish';
+      if (d === 'auto') return 'bilingual';
       return null;
     }
     function directionForProfile(p) {
       if (p === 'korean') return 'ko-en';
       if (p === 'english-to-korean') return 'en-ko';
       if (p === 'korean-en') return 'auto-ko';
+      if (p === 'english-to-spanish') return 'en-es';
+      if (p === 'bilingual') return 'auto';
       return null;
+    }
+    function isPairProfile(p) {
+      return directionForProfile(p) !== null;
     }
     function isKoreanProfile(p) {
       return p === 'korean' || p === 'korean-en' || p === 'english-to-korean';
     }
-    function syncPairFromDirection() {
+    // force: the user just chose a Direction, so it wins. At load (no force) a
+    // stored Direction only fills an empty profile or replaces another pair
+    // profile; it never overwrites an unrelated one (medical, meeting, ...).
+    // The Korean pairs have always replaced it, and still do.
+    function syncPairFromDirection(force) {
       var p = profileForDirection(state.direction);
-      if (p) { state.speakerProfile = p; }
-      else if (isKoreanProfile(state.speakerProfile)) { state.speakerProfile = ''; }
+      if (p) {
+        var cur = state.speakerProfile || '';
+        var koreanPair = isKoreanProfile(p);
+        if (force || koreanPair || !cur || isPairProfile(cur)) { state.speakerProfile = p; }
+      }
+      else if (isPairProfile(state.speakerProfile)) { state.speakerProfile = ''; }
       if (els.speakerProfile) { els.speakerProfile.value = state.speakerProfile || ''; }
     }
     function syncPairFromProfile() {
@@ -2763,7 +2782,7 @@
       els.direction.addEventListener('change', function () {
         var v = els.direction.value;
         state.direction = DIRECTIONS.indexOf(v) >= 0 ? v : 'es-en';
-        syncPairFromDirection();
+        syncPairFromDirection(true);
         saveState(); applyProfileChrome(); pushConfig(); updateControls();
         sendHomeGpuProfile();
       });
