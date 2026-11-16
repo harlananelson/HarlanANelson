@@ -8,6 +8,10 @@ var assert = require("assert");
 
 var src = fs.readFileSync(path.join(__dirname, "..", "maat.html"), "utf8");
 var script = src.split("<script>")[1].split("</script>")[0];
+// Test-only read access to private page state: a probe is installed at the top
+// of the page IIFE (declarations are hoisted, so it can read listenStem later).
+var probeScript = script.replace("(function () {", "(function () {\n__probe.stem = function () { return listenStem; };");
+assert.notStrictEqual(probeScript, script, "page IIFE start not found");
 
 var DEFAULT_HOST = "harlan-b550-aorus-pro-ac.taila21a91.ts.net";
 
@@ -49,13 +53,14 @@ function makeHarness(initialStore) {
   var fetchStub = function (u, o) { fetches.push([u, o && o.headers && o.headers.Authorization]); return { catch: function () {} }; };
   var loc = { href: "https://harlananelson.com/maat.html", origin: "https://harlananelson.com",
     search: "", hash: "", hostname: "harlananelson.com", port: "", protocol: "https:" };
+  var probe = {};
   try {
-    new Function("window", "document", "localStorage", "fetch", "location", "navigator", "URL", "URLSearchParams", script)(
-      win, doc, localStorage, fetchStub, loc, { userAgent: "x" }, URL, URLSearchParams);
+    new Function("window", "document", "localStorage", "fetch", "location", "navigator", "URL", "URLSearchParams", "__probe", probeScript)(
+      win, doc, localStorage, fetchStub, loc, { userAgent: "x" }, URL, URLSearchParams, probe);
   } catch (e) { /* later init steps hit the stub DOM; the listener is already registered */ }
   assert.ok(listener, "message listener must be registered");
   return {
-    store: store, posts: posts, fetches: fetches, frames: frames,
+    store: store, probe: probe, posts: posts, fetches: fetches, frames: frames,
     send: function (frameId, origin, data) {
       listener({ origin: origin, source: frameId ? frames[frameId].contentWindow : { name: "foreign" }, data: data });
     }
@@ -124,11 +129,15 @@ test("Listen (tailnet :8443) may request auth; the push never uses targetOrigin 
 
 test("maat-listen is accepted only from the Listen frame", function () {
   var h = makeHarness();
-  h.send("view-converse", "https://harlananelson.com", { type: "maat-listen", session: "evil" });
-  h.send(null, "https://evil.example", { type: "maat-listen", session: "evil" });
-  // No public accessor for the stem; remarkable url is derived from it, so a
-  // forged stem must not be able to throw or leak. Accepting the real one must work.
-  h.send("view-sermon", "https://" + DEFAULT_HOST + ":8443", { type: "maat-listen", session: "real" });
+  assert.strictEqual(h.probe.stem(), "");
+  h.send("view-converse", "https://harlananelson.com", { type: "maat-listen", session: "evil" });   // wrong frame
+  h.send("view-music", "https://" + DEFAULT_HOST + ":8444", { type: "maat-listen", session: "evil" });
+  h.send(null, "https://evil.example", { type: "maat-listen", session: "evil" });                  // foreign window
+  h.send(null, "https://harlananelson.com", { type: "maat-listen", session: "evil" });             // right origin, wrong window
+  h.send("view-sermon", "https://evil.example", { type: "maat-listen", session: "evil" });          // Listen frame, wrong origin
+  assert.strictEqual(h.probe.stem(), "", "forged stem was accepted: " + h.probe.stem());
+  h.send("view-sermon", "https://" + DEFAULT_HOST + ":8443", { type: "maat-listen", session: "real/../x-2026-11-15" });
+  assert.strictEqual(h.probe.stem(), "real..x-2026-11-15", "the real Listen frame stem is stored, sanitised");
 });
 
 test("allowlist helper: shell origins, tailnet origins on any port, configured host, nothing else", function () {
