@@ -549,6 +549,11 @@
       if (value === null || value === undefined || value === "") u.searchParams.delete(key);
       else u.searchParams.set(key, value);
       if (u.origin === location.origin) {
+        // Same directory as this page: keep the short relative form. Another
+        // directory keeps its full path (a typed /maat/assistant.html must not
+        // become ./assistant.html).
+        var dir = function (p) { return p.slice(0, p.lastIndexOf("/") + 1); };
+        if (dir(u.pathname) !== dir(new URL(location.href).pathname)) return u.pathname + u.search + u.hash;
         var file = u.pathname.split("/").pop() || "";
         return "./" + file + u.search + u.hash;
       }
@@ -578,18 +583,35 @@
     try { saved = JSON.parse(localStorage.getItem("maat_urls") || "{}"); } catch (e) {}
     return (saved && typeof saved === "object") ? saved : {};
   }
+  // Compare origin + path + query + hash after removing ONLY v= and mode=.
+  // (Not the short relative form: that dropped the directory, so a typed
+  // same-origin address with another path compared equal to the default.)
   function normUrl(u) {
-    return withQueryParam(withQueryParam(u, "v", null), "mode", null);
+    try {
+      var x = new URL(u || "./", location.href);
+      x.searchParams.delete("v");
+      x.searchParams.delete("mode");
+      return x.origin + x.pathname + x.search + x.hash;
+    } catch (e) { return String(u || ""); }
   }
   // Old builds also froze the Listen HOST. A saved bare tailnet :8443 root
   // page (optionally with ?v=N) is exactly what they wrote, so it is treated
   // as derived too; point Listen elsewhere with the "Tailscale machine" field.
   var LEGACY_DERIVED = { sermon: /^https:\/\/[^\/?#]+\.ts\.net:8443\/?(\?v=\d+)?$/i };
+  // Only the frozen default machine, or the machine currently configured, was
+  // ever written by an old build; a bare :8443 URL on any other tailnet host
+  // is something the user typed.
+  function legacyHostIsOurs(u) {
+    try {
+      var h = new URL(u).hostname.toLowerCase();
+      return h === DEFAULT_TS_HOST || h === tailscaleHostname().toLowerCase();
+    } catch (e) { return false; }
+  }
   function overrideOf(saved, id, dflt) {
     var u = saved[id];
     if (typeof u !== "string") return undefined;
     if (u === "") return "";
-    if (LEGACY_DERIVED[id] && LEGACY_DERIVED[id].test(u)) return undefined;
+    if (LEGACY_DERIVED[id] && LEGACY_DERIVED[id].test(u) && legacyHostIsOurs(u)) return undefined;
     return normUrl(u) === normUrl(dflt) ? undefined : u;
   }
 

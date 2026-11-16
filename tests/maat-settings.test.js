@@ -104,5 +104,34 @@ test("R1-04: a token-only Save after a deep link (#practice?lang=es, #converse?i
   });
 });
 
+test("MEDIUM-a: a same-origin override in another directory is kept, not collapsed to the default", function () {
+  var h = page.load({ store: { maat_urls: JSON.stringify({ converse: "https://harlananelson.com/maat/assistant.html" }) } });
+  var src = h.frames()["view-converse"].src;
+  assert.ok(/\/maat\/assistant\.html/.test(src), "Converse src lost the typed path: " + src);
+  saveWith(h, { maatToken: "T2" });
+  var saved = JSON.parse(h.store.maat_urls || "{}");
+  assert.strictEqual(saved.converse, "https://harlananelson.com/maat/assistant.html", "override dropped: " + saved.converse);
+});
+
+test("MEDIUM-a: the default with other v=/mode= is still not an override", function () {
+  var h = page.load({ store: { maat_urls: JSON.stringify({ converse: "https://harlananelson.com/assistant.html?v=83&mode=mic" }) } });
+  var src = h.frames()["view-converse"].src;
+  assert.ok(/^\.\/assistant\.html/.test(src) && vOf(src) !== "83", src);
+});
+
+test("MEDIUM-b: a bare :8443 Listen URL on another tailnet machine is an override, not derived", function () {
+  var h = page.load({ hash: "#sermon", store: { maat_urls: JSON.stringify({ sermon: "https://other-box.example-tailnet.ts.net:8443/" }) } });
+  var src = h.frames()["view-sermon"].src;
+  assert.ok(/^https:\/\/other-box\.example-tailnet\.ts\.net:8443\//.test(src), "Listen host replaced: " + src);
+});
+
+test("MEDIUM-b: a bare :8443 URL on the configured machine is still derived (follows the Tailscale field)", function () {
+  var h = page.load({ hash: "#sermon", store: { tb_bridge: "https://cfg-box.example-tailnet.ts.net",
+    maat_urls: JSON.stringify({ sermon: "https://cfg-box.example-tailnet.ts.net:8443/?v=20" }) } });
+  var src = h.frames()["view-sermon"].src;
+  assert.ok(/^https:\/\/cfg-box\.example-tailnet\.ts\.net:8443\//.test(src), src);
+  assert.notStrictEqual(vOf(src), "20", "frozen v= still pinned: " + src);
+});
+
 console.log(failures ? failures + " failure(s)" : "all passed");
 process.exit(failures ? 1 : 0);
