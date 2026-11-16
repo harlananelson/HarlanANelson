@@ -264,10 +264,70 @@
 (function () {
   var $ = function (id) { return document.getElementById(id); };
 
+  // ---- who may talk to this page (W1: R3-02, R3-03, R8-F5) ----
+  // Same allowlist as maat.html and live-translator.html; keep the three in step.
+  /* maat-origin-allowlist:start */
+  function maatOriginTrusted(origin, configuredHost) {
+    var u;
+    try { u = new URL(String(origin)); } catch (e) { return false; }
+    if (u.protocol !== "https:") return false;
+    var h = u.hostname.toLowerCase();
+    if (h === "harlananelson.com" || h === "www.harlananelson.com") return u.port === "";
+    if (h === "harlan-b550-aorus-pro-ac.taila21a91.ts.net") return true; // any port
+    return !!configuredHost && h === String(configuredHost).toLowerCase();
+  }
+  /* maat-origin-allowlist:end */
+  var DEFAULT_TS_HOST = "harlan-b550-aorus-pro-ac.taila21a91.ts.net";
+  function hostOf(u) {
+    try { return new URL(/^https?:\/\//i.test(u) ? u : "https://" + u).hostname.toLowerCase(); } catch (e) { return ""; }
+  }
+  function storedBridge() {
+    try { return (localStorage.getItem("tb_bridge") || "").replace(/\/+$/, ""); } catch (e) { return ""; }
+  }
+  // A bridge named in the URL is honoured only if it is https, passes the
+  // same check Save applies, AND is either the tailnet host or the host
+  // already stored. Otherwise a link could point the stored bearer token at
+  // any server. First-run with a different host: type it in Settings.
+  var bridgeUrlRejected = "";
+  function acceptUrlBridge(raw) {
+    var b = cleanBridge(raw);
+    var h = hostOf(b);
+    var stored = storedBridge();
+    if (bridgeLooksValid(b) && h &&
+        (h === DEFAULT_TS_HOST || (stored && h === hostOf(stored)))) return b;
+    bridgeUrlRejected = h || "(unparseable)";
+    return "";
+  }
+  // Messages from the Maat shell: only from our parent window, on an allowed origin.
+  function fromTrustedParent(ev) {
+    return window.parent !== window && ev.source === window.parent &&
+      maatOriginTrusted(ev.origin, hostOf(storedBridge()));
+  }
+  // Post to the parent with an explicit targetOrigin (never "*"): its own
+  // origin if we can tell and it is allowlisted, else each allowlisted shell
+  // origin (the browser delivers only to the one that matches).
+  function postToParent(msg) {
+    if (window.parent === window) return;
+    var seen = [], cands = [];
+    try { if (location.ancestorOrigins && location.ancestorOrigins.length) cands.push(location.ancestorOrigins[0]); } catch (e) {}
+    try { if (document.referrer) cands.push(new URL(document.referrer).origin); } catch (e) {}
+    cands = cands.filter(function (o) { return maatOriginTrusted(o, hostOf(storedBridge())); });
+    if (!cands.length) {
+      cands = ["https://harlananelson.com", "https://www.harlananelson.com",
+        "https://" + DEFAULT_TS_HOST, "https://" + DEFAULT_TS_HOST + ":8443"];
+    }
+    cands.forEach(function (o) {
+      if (seen.indexOf(o) >= 0) return;
+      seen.push(o);
+      try { window.parent.postMessage(msg, o); } catch (e) {}
+    });
+  }
+
   // ---- config (URL params override, then persist in localStorage) ----
   var params = new URLSearchParams(location.search);
   function cfgGet(k, dflt) {
     var v = params.get(k);
+    if (v && k === "bridge") v = acceptUrlBridge(v);
     if (v) { try { localStorage.setItem("tb_" + k, v); } catch (e) {} return v; }
     try { return localStorage.getItem("tb_" + k) || dflt; } catch (e) { return dflt; }
   }
@@ -293,19 +353,21 @@
   window.addEventListener("message", function (ev) {
     var d = ev.data;
     if (!d || d.type !== "maat-auth" || !d.token) return;
+    if (!fromTrustedParent(ev)) return;
     cfg.token = String(d.token);
     try { localStorage.setItem("tb_token", cfg.token); } catch (e) {}
     if (d.bridge) {
-      cfg.bridge = String(d.bridge).replace(/\/+$/, "");
-      try { localStorage.setItem("tb_bridge", cfg.bridge); } catch (e2) {}
+      var nb = cleanBridge(String(d.bridge));
+      if (bridgeLooksValid(nb)) {
+        cfg.bridge = nb;
+        try { localStorage.setItem("tb_bridge", cfg.bridge); } catch (e2) {}
+      }
     }
     if ($("cfgToken")) $("cfgToken").value = cfg.token;
   });
-  try { window.parent.postMessage({ type: "maat-auth-please" }, "*"); } catch (e) {}
+  postToParent({ type: "maat-auth-please" });
   if (cfg.token) {
-    try {
-      window.parent.postMessage({ type: "maat-auth-offer", token: cfg.token, bridge: cfg.bridge || "" }, "*");
-    } catch (e) {}
+    postToParent({ type: "maat-auth-offer", token: cfg.token, bridge: cfg.bridge || "" });
   }
 
   var soundOn = false;
@@ -2878,6 +2940,9 @@
   if (!cfg.bridge || !cfg.token) {
     openSettings(true);
     setStatus("First-time setup: enter the Bridge URL and token.", true);
+  } else if (bridgeUrlRejected) {
+    setStatus("Ignored ?bridge= (" + bridgeUrlRejected + "): set a different bridge in Settings.", true);
+    loadAgents();
   } else {
     setStatus("Connecting…");
     // Survey shells so Talk to… knows sendable vs read-only.
