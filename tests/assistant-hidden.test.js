@@ -49,10 +49,34 @@ test("the page routes maat-show only from the trusted parent, and hides on visib
   assert.ok(/visibilityState === "hidden"[\s\S]{0,80}stopOpenChannelWhenHidden/.test(src), "visibilitychange stops the channel");
 });
 
-test("a foreign window's maat-show does not reach the page (listener level)", function () {
-  var h = page.load({ store: { tb_token: "T", tb_bridge: "https://harlan-b550-aorus-pro-ac.taila21a91.ts.net" } });
+var HOSTN = "harlan-b550-aorus-pro-ac.taila21a91.ts.net";
+var PROBE = "__probe.open = function () { dictateLoop = true; }; __probe.isOpen = function () { return dictateLoop; };";
+function openChannelPage() {
+  var h = page.load({ store: { tb_token: "T", tb_bridge: "https://" + HOSTN }, probe: PROBE });
   assert.ok(!h.threw, h.threw && h.threw.message);
-  h.send(false, "https://evil.example", { type: "maat-show", id: "sermon" });   // must not throw
+  h.probe.open();
+  assert.strictEqual(h.probe.isOpen(), true);
+  return h;
+}
+
+test("listener level: maat-show from the real parent closes an open channel", function () {
+  var h = openChannelPage();
+  h.send(true, "https://harlananelson.com", { type: "maat-show", id: "sermon" });
+  assert.strictEqual(h.probe.isOpen(), false);
+});
+
+test("listener level: a foreign window's maat-show leaves the channel open", function () {
+  var h = openChannelPage();
+  h.send(false, "https://evil.example", { type: "maat-show", id: "sermon" });
+  assert.strictEqual(h.probe.isOpen(), true, "foreign window closed the channel");
+});
+
+test("listener level: the parent window on a foreign origin, or another service's port, leaves it open", function () {
+  ["https://evil.example", "https://" + HOSTN + ":8444"].forEach(function (o) {
+    var h = openChannelPage();
+    h.send(true, o, { type: "maat-show", id: "sermon" });
+    assert.strictEqual(h.probe.isOpen(), true, o);
+  });
 });
 
 console.log(failures ? failures + " failure(s)" : "all passed");

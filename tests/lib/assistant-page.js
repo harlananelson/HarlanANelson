@@ -39,10 +39,15 @@ exports.load = function (opts) {
   ctx.window.addEventListener = function (t, f) { (listeners[t] = listeners[t] || []).push(f); };
   ctx.window.self = ctx; ctx.window.top = ctx;
   var threw = null;
-  try { new Function(Object.keys(ctx).join(","), script).apply(null, Object.keys(ctx).map(function (k) { return ctx[k]; })); }
+  // opts.probe: source injected inside the page's IIFE (just before its end) so
+  // a test can read/write private state. It receives the object `probe`.
+  var probe = {};
+  ctx.__probe = probe;
+  var body = opts.probe ? script.replace(/\}\)\(\);\s*$/, opts.probe + "\n})();") : script;
+  try { new Function(Object.keys(ctx).join(","), body).apply(null, Object.keys(ctx).map(function (k) { return ctx[k]; })); }
   catch (e) { threw = e; }
   return {
-    store: store, fetches: fetches, posts: posts, replaced: replaced, threw: threw, parentWin: parentWin,
+    store: store, probe: probe, fetches: fetches, posts: posts, replaced: replaced, threw: threw, parentWin: parentWin,
     send: function (fromParent, origin, data) {
       (listeners.message || []).forEach(function (f) { f({ origin: origin, source: fromParent ? parentWin : { name: "other" }, data: data }); });
     }
