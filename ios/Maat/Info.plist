@@ -6,6 +6,10 @@
 	<string>Maat Listen records meetings and sermons on this iPad, including when the network drops.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Maat transcribes speech on-device with the Neural Engine so recording continues offline.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoadsInWebContent</key>

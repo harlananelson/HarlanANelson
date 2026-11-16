@@ -18,6 +18,8 @@ struct MaatWebView: UIViewRepresentable {
             forMainFrameOnly: true
         ))
         let view = WKWebView(frame: .zero, configuration: conf)
+        view.navigationDelegate = context.coordinator   // R1-06
+        view.uiDelegate = context.coordinator           // R1-05
         view.scrollView.bounces = false
         context.coordinator.webView = view
         if let url = URL(string: "https://harlananelson.com/maat.html") {
