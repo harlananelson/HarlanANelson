@@ -2028,10 +2028,22 @@
                echoCancellation: !loud, noiseSuppression: !loud, autoGainControl: !loud };
     }
 
-    function startCapture() {
+    // Bumped by every Start and every Stop. A Start that is still waiting on
+    // the Home GPU handshake or the mic permission prompt checks it before it
+    // acts, so a Stop pressed in that window cancels it instead of leaving an
+    // orphan capture that streams audio while the page says "Stopped" (R2-F1).
+    var startGen = 0; // eslint-disable-line no-unused-vars
+    function startCapture(gen) {
+      // Never open a second capture over a live one: the first set of
+      // mic track / AudioContext / processor would leak.
+      if (audioCtx || micStream) { stopCapture(); }
       return navigator.mediaDevices.getUserMedia({
         audio: captureConstraints()
       }).then(function (stream) {
+        if (gen !== undefined && gen !== startGen) {
+          stream.getTracks().forEach(function (t) { t.stop(); });
+          return 'stale';
+        }
         micStream = stream;
         var Ctx = window.AudioContext || window.webkitAudioContext;
         audioCtx = new Ctx();
@@ -2050,6 +2062,7 @@
         pushLog('', 'microphone capture started (sampleRate=' + srcRate + ')');
         return true;
       }).catch(function (err) {
+        if (gen !== undefined && gen !== startGen) { return 'stale'; }
         pushLog('error', 'getUserMedia failed: ' + ((err && (err.name + ': ' + err.message)) || err));
         setStatus('err', 'Microphone access failed: ' + ((err && err.message) || err));
         return false;
@@ -2245,6 +2258,7 @@
         setStatus('err', 'This browser cannot access the microphone.');
         return;
       }
+      var gen = ++startGen;
       listening = true;
       updateControls();
       pushConfig();
@@ -2257,8 +2271,10 @@
         if (!already) { setStatus('idle', 'Connecting to Home GPU server…'); }
         var ready = already ? Promise.resolve(true) : hgConnect();
         ready.then(function (ok) {
+          if (gen !== startGen) { return; }   // Stop (or a newer Start) got here first
           if (!ok) { listening = false; updateControls(); return; }
-          startCapture().then(function (capOk) {
+          startCapture(gen).then(function (capOk) {
+            if (capOk === 'stale' || gen !== startGen) { return; }
             if (!capOk) { listening = false; updateControls(); return; }
             setStatus('live', isMonolingual()
               ? 'Listening — transcribing on the Home GPU.'
@@ -2271,13 +2287,15 @@
       if (state.transcribeEngine === 'local' && whisper) {
         whisper.postMessage({ type: 'load', model: state.whisperModel, device: whisperDevice() });
       }
-      startCapture().then(function (ok) {
+      startCapture(gen).then(function (ok) {
+        if (ok === 'stale' || gen !== startGen) { return; }
         if (!ok) { listening = false; updateControls(); return; }
         setStatus('live', 'Listening — speak or play Spanish audio.');
       });
     }
 
     function stop() {
+      startGen++;   // cancels a Start still connecting or waiting on the mic prompt
       listening = false;
       if (hasNativeAsr()) {
         try { webkit.messageHandlers.maatAsr.postMessage({ cmd: 'stop' }); } catch (e) {}
