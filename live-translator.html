@@ -1360,15 +1360,19 @@
     /* maat-parent-messaging:start */
     // W1 (R2-F8, R8-F5): only our parent window, on an allowlisted origin, may
     // set keys or the bridge; everything we post to it names its origin.
-    // Same allowlist as maat.html and assistant.html; keep the three in step.
+    // PARENT allowlist (narrower than the shell's frame allowlist in maat.html):
+    // only Maat itself may frame this page and be believed: the website, or the
+    // tailnet / configured bridge host on its default port (Maat opened on the
+    // funnel). Other services on that host (:8443 this page, :8444 Music,
+    // :9443 reMarkable) are not Maat.
     /* maat-origin-allowlist:start */
-    function maatOriginTrusted(origin, configuredHost) {
+    function maatParentTrusted(origin, configuredHost) {
       var u;
       try { u = new URL(String(origin)); } catch (e) { return false; }
-      if (u.protocol !== 'https:') { return false; }
+      if (u.protocol !== 'https:' || u.port !== '') { return false; }
       var h = u.hostname.toLowerCase();
-      if (h === 'harlananelson.com' || h === 'www.harlananelson.com') { return u.port === ''; }
-      if (h === 'harlan-b550-aorus-pro-ac.taila21a91.ts.net') { return true; } // any port
+      if (h === 'harlananelson.com' || h === 'www.harlananelson.com') { return true; }
+      if (h === 'harlan-b550-aorus-pro-ac.taila21a91.ts.net') { return true; }
       return !!configuredHost && h === String(configuredHost).toLowerCase();
     }
     /* maat-origin-allowlist:end */
@@ -1379,7 +1383,7 @@
     }
     function fromTrustedMaatParent(ev) {
       return window.parent !== window && ev.source === window.parent &&
-        maatOriginTrusted(ev.origin, maatConfiguredHost());
+        maatParentTrusted(ev.origin, maatConfiguredHost());
     }
     // Post to the parent with an explicit targetOrigin, never '*': its own
     // origin when we can tell and it is allowlisted, else each allowlisted
@@ -1389,16 +1393,19 @@
       var seen = [], cands = [];
       try { if (location.ancestorOrigins && location.ancestorOrigins.length) { cands.push(location.ancestorOrigins[0]); } } catch (e) {}
       try { if (document.referrer) { cands.push(new URL(document.referrer).origin); } } catch (e) {}
-      cands = cands.filter(function (o) { return maatOriginTrusted(o, maatConfiguredHost()); });
+      cands = cands.filter(function (o) { return maatParentTrusted(o, maatConfiguredHost()); });
       if (!cands.length) {
         cands = ['https://harlananelson.com', 'https://www.harlananelson.com',
-          'https://' + DEFAULT_TS_HOST, 'https://' + DEFAULT_TS_HOST + ':8443'];
+          'https://' + DEFAULT_TS_HOST];
       }
       cands.forEach(function (o) {
         if (seen.indexOf(o) >= 0) { return; }
         seen.push(o);
         try { window.parent.postMessage(msg, o); } catch (e) {}
       });
+    }
+    function maatHostOf(b) {
+      try { return new URL(/^https?:\/\//i.test(b) ? b : 'https://' + b).hostname.toLowerCase(); } catch (e) { return ''; }
     }
     function maatBridgeAcceptable(b) {
       try {
@@ -1410,7 +1417,11 @@
       var d = ev.data;
       if (!d || d.type !== 'maat-auth') { return; }
       if (!fromTrustedMaatParent(ev)) { return; }
-      if (d.bridge && maatBridgeAcceptable(String(d.bridge))) {
+      // Bridge: only the default host or the host already stored (the same rule
+      // as Converse's ?bridge=); a different machine is entered by hand.
+      var bHost = d.bridge ? maatHostOf(String(d.bridge)) : '';
+      if (d.bridge && maatBridgeAcceptable(String(d.bridge)) && bHost &&
+          (bHost === DEFAULT_TS_HOST || bHost === maatConfiguredHost())) {
         try { localStorage.setItem('tb_bridge', String(d.bridge).replace(/\/+$/, '')); } catch (e) {}
         paintGpuUrlHint();
       }
