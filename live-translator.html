@@ -1357,18 +1357,69 @@
       pushConfig();
       updateControls();
     }
+    /* maat-parent-messaging:start */
+    // W1 (R2-F8, R8-F5): only our parent window, on an allowlisted origin, may
+    // set keys or the bridge; everything we post to it names its origin.
+    // Same allowlist as maat.html and assistant.html; keep the three in step.
+    /* maat-origin-allowlist:start */
+    function maatOriginTrusted(origin, configuredHost) {
+      var u;
+      try { u = new URL(String(origin)); } catch (e) { return false; }
+      if (u.protocol !== 'https:') { return false; }
+      var h = u.hostname.toLowerCase();
+      if (h === 'harlananelson.com' || h === 'www.harlananelson.com') { return u.port === ''; }
+      if (h === 'harlan-b550-aorus-pro-ac.taila21a91.ts.net') { return true; } // any port
+      return !!configuredHost && h === String(configuredHost).toLowerCase();
+    }
+    /* maat-origin-allowlist:end */
+    function maatConfiguredHost() {
+      var raw = tailscaleBridge();
+      if (!raw) { return ''; }
+      try { return new URL(/^https?:\/\//i.test(raw) ? raw : 'https://' + raw).hostname.toLowerCase(); } catch (e) { return ''; }
+    }
+    function fromTrustedMaatParent(ev) {
+      return window.parent !== window && ev.source === window.parent &&
+        maatOriginTrusted(ev.origin, maatConfiguredHost());
+    }
+    // Post to the parent with an explicit targetOrigin, never '*': its own
+    // origin when we can tell and it is allowlisted, else each allowlisted
+    // shell origin (the browser delivers only to the one that matches).
+    function postToMaatParent(msg) {
+      if (window.parent === window) { return; }
+      var seen = [], cands = [];
+      try { if (location.ancestorOrigins && location.ancestorOrigins.length) { cands.push(location.ancestorOrigins[0]); } } catch (e) {}
+      try { if (document.referrer) { cands.push(new URL(document.referrer).origin); } } catch (e) {}
+      cands = cands.filter(function (o) { return maatOriginTrusted(o, maatConfiguredHost()); });
+      if (!cands.length) {
+        cands = ['https://harlananelson.com', 'https://www.harlananelson.com',
+          'https://' + DEFAULT_TS_HOST, 'https://' + DEFAULT_TS_HOST + ':8443'];
+      }
+      cands.forEach(function (o) {
+        if (seen.indexOf(o) >= 0) { return; }
+        seen.push(o);
+        try { window.parent.postMessage(msg, o); } catch (e) {}
+      });
+    }
+    function maatBridgeAcceptable(b) {
+      try {
+        var u = new URL(/^https?:\/\//i.test(b) ? b : 'https://' + b);
+        return u.protocol === 'https:' && !!u.hostname;
+      } catch (e) { return false; }
+    }
     window.addEventListener('message', function (ev) {
       var d = ev.data;
       if (!d || d.type !== 'maat-auth') { return; }
-      if (d.bridge) {
+      if (!fromTrustedMaatParent(ev)) { return; }
+      if (d.bridge && maatBridgeAcceptable(String(d.bridge))) {
         try { localStorage.setItem('tb_bridge', String(d.bridge).replace(/\/+$/, '')); } catch (e) {}
         paintGpuUrlHint();
       }
       applyMaatAuthKeys(d);
     });
+    /* maat-parent-messaging:end */
     try {
       if (framed) {
-        window.parent.postMessage({ type: 'maat-auth-please' }, '*');
+        postToMaatParent({ type: 'maat-auth-please' });
       }
     } catch (e) {}
 
@@ -1378,7 +1429,7 @@
         var d = new Date();
         var pad = function (n) { return n < 10 ? '0' + n : String(n); };
         var stem = sessionName() + '-' + d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
-        window.parent.postMessage({ type: 'maat-listen', session: stem }, '*');
+        postToMaatParent({ type: 'maat-listen', session: stem });
       } catch (e) { /* not in an iframe */ }
     }
 
@@ -1390,7 +1441,7 @@
     function postRecordingToMaat(on) {
       try {
         if (window.parent === window) return;
-        window.parent.postMessage({ type: 'maat-recording', on: !!on }, '*');
+        postToMaatParent({ type: 'maat-recording', on: !!on });
       } catch (e) { /* not in an iframe */ }
     }
     function syncRecordingToMaat() {
