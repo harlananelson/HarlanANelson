@@ -14,6 +14,11 @@ final class AsrBridge: NSObject, WKScriptMessageHandler, WKNavigationDelegate, W
     /// main frame (maat.html), which defines nothing, so every event was
     /// dropped (R1-02).
     private var asrFrame: WKFrameInfo?
+    /// Bumped by every start and stop. A start that was suspended on the
+    /// speech-permission prompt checks it afterwards, so a Stop (or a newer
+    /// Start) pressed meanwhile cancels it. Touched only inside the
+    /// @MainActor Tasks below.
+    private var generation = 0
 
     private static let shellHosts: Set<String> = ["harlananelson.com", "www.harlananelson.com"]
     private static let tailnetHost = "harlan-b550-aorus-pro-ac.taila21a91.ts.net"
@@ -24,6 +29,11 @@ final class AsrBridge: NSObject, WKScriptMessageHandler, WKNavigationDelegate, W
         guard o.protocol == "https" else { return false }
         let host = o.host.lowercased()
         if frame.isMainFrame { return AsrBridge.shellHosts.contains(host) }
+        // NOT DONE (review #119 item d): a Listen frame on a machine set in
+        // Settings is a different host and is refused here. Trusting "the host
+        // the shell actually loaded" needs the shell (maat.html, main frame
+        // only) to tell native which host it chose, e.g. a new `cmd` on
+        // maatAsr. That message does not exist yet, so it is not guessed at.
         return host == AsrBridge.tailnetHost && o.port == 8443
     }
 
@@ -39,8 +49,12 @@ final class AsrBridge: NSObject, WKScriptMessageHandler, WKNavigationDelegate, W
             case "start":
                 let lang = (body["language"] as? String) ?? "en-US"
                 let session = (body["session"] as? String) ?? "transcript"
+                self.generation += 1
+                let gen = self.generation
                 self.asrFrame = frame
                 let ok = await asr.authorize()
+                // Stop (or a newer Start) ran while the permission prompt was up.
+                guard gen == self.generation else { return }
                 guard ok else {
                     post(["type": "error", "text": "Speech recognition not authorized"])
                     return
@@ -59,6 +73,7 @@ final class AsrBridge: NSObject, WKScriptMessageHandler, WKNavigationDelegate, W
                     self.post(["type": "error", "text": error.localizedDescription])
                 }
             case "stop":
+                self.generation += 1
                 asr.stop()
                 UIApplication.shared.isIdleTimerDisabled = false
                 post(["type": "status", "state": "stopped"])
@@ -101,13 +116,18 @@ final class AsrBridge: NSObject, WKScriptMessageHandler, WKNavigationDelegate, W
     // with false and ignores alert()/prompt() and window.open, so Maat's
     // "Listen is recording. Leave it?" guard silently swallowed every tab tap.
 
-    private func present(_ alert: UIAlertController) {
+    /// Returns false when there is nothing to present on. The caller MUST then
+    /// call the JS completion handler itself: WKWebView waits for it forever,
+    /// which would freeze the page's confirm()/prompt().
+    private func present(_ alert: UIAlertController) -> Bool {
         let scene = UIApplication.shared.connectedScenes
             .compactMap { $0 as? UIWindowScene }
             .first { $0.activationState == .foregroundActive }
         var top = scene?.windows.first { $0.isKeyWindow }?.rootViewController
         while let next = top?.presentedViewController { top = next }
-        top?.present(alert, animated: true)
+        guard let presenter = top else { return false }
+        presenter.present(alert, animated: true)
+        return true
     }
 
     func webView(_ webView: WKWebView,
@@ -116,7 +136,7 @@ final class AsrBridge: NSObject, WKScriptMessageHandler, WKNavigationDelegate, W
                  completionHandler: @escaping () -> Void) {
         let a = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         a.addAction(UIAlertAction(title: "OK", style: .default) { _ in completionHandler() })
-        present(a)
+        if !present(a) { completionHandler() }
     }
 
     func webView(_ webView: WKWebView,
@@ -126,7 +146,7 @@ final class AsrBridge: NSObject, WKScriptMessageHandler, WKNavigationDelegate, W
         let a = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         a.addAction(UIAlertAction(title: "Cancel", style: .cancel) { _ in completionHandler(false) })
         a.addAction(UIAlertAction(title: "OK", style: .default) { _ in completionHandler(true) })
-        present(a)
+        if !present(a) { completionHandler(false) }
     }
 
     func webView(_ webView: WKWebView,
@@ -140,7 +160,7 @@ final class AsrBridge: NSObject, WKScriptMessageHandler, WKNavigationDelegate, W
         a.addAction(UIAlertAction(title: "OK", style: .default) { _ in
             completionHandler(a.textFields?.first?.text)
         })
-        present(a)
+        if !present(a) { completionHandler(nil) }
     }
 
     /// window.open / target=_blank: hand the URL to Safari instead of dropping it.

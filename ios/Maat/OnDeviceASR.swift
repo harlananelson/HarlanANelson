@@ -15,6 +15,9 @@ final class OnDeviceASR {
     private var sessionName = "transcript"
     private var onEvent: (([String: Any]) -> Void)?
     private var interruptionObserver: NSObjectProtocol?
+    /// True only while OUR tap is installed on the input node, so stop() never
+    /// calls removeTap on a bus that has none (it can throw after an interruption).
+    private var tapInstalled = false
 
     func authorize() async -> Bool {
         await withCheckedContinuation { cont in
@@ -41,22 +44,37 @@ final class OnDeviceASR {
                               options: [.defaultToSpeaker])
         try audio.setActive(true)
 
-        let input = engine.inputNode
-        let fmt = input.outputFormat(forBus: 0)
-        input.removeTap(onBus: 0)
-        input.installTap(onBus: 0, bufferSize: 1024, format: fmt) { [weak self] buffer, _ in
-            self?.request?.append(buffer)
-        }
-        engine.prepare()
-        try engine.start()
+        try beginCapture()
         running = true
         observeInterruptions()
         try startTask()
     }
 
+    /// Install the mic tap and start the engine. Used by start() and again after
+    /// an interruption, when the format may have changed and the tap is gone.
+    private func beginCapture() throws {
+        let input = engine.inputNode
+        let fmt = input.outputFormat(forBus: 0)
+        removeTapIfInstalled()
+        input.installTap(onBus: 0, bufferSize: 1024, format: fmt) { [weak self] buffer, _ in
+            self?.request?.append(buffer)
+        }
+        tapInstalled = true
+        engine.prepare()
+        try engine.start()
+    }
+
+    private func removeTapIfInstalled() {
+        if tapInstalled {
+            engine.inputNode.removeTap(onBus: 0)
+            tapInstalled = false
+        }
+    }
+
     /// A phone call, Siri or an alarm stops the engine and ends the audio
-    /// session. When the interruption ends, restart the engine so a long
-    /// recording carries on (R1-03). NOT BUILT: needs a device test.
+    /// session. When the interruption ends AND the system says we should resume
+    /// (.shouldResume), run the same tap + recognition-task path as a fresh
+    /// start, so a long recording carries on (R1-03). NOT BUILT: needs a device test.
     private func observeInterruptions() {
         if interruptionObserver != nil { return }
         interruptionObserver = NotificationCenter.default.addObserver(
@@ -66,9 +84,20 @@ final class OnDeviceASR {
                   let raw = note.userInfo?[AVAudioSessionInterruptionTypeKey] as? UInt,
                   let type = AVAudioSession.InterruptionType(rawValue: raw),
                   type == .ended else { return }
+            // Honour the system's hint: if it does not say resume (e.g. another
+            // app took the mic for good), leave the recording stopped.
+            let optRaw = (note.userInfo?[AVAudioSessionInterruptionOptionKey] as? UInt) ?? 0
+            guard AVAudioSession.InterruptionOptions(rawValue: optRaw).contains(.shouldResume) else { return }
             do {
                 try AVAudioSession.sharedInstance().setActive(true)
-                if !self.engine.isRunning { try self.engine.start() }
+                // The old task may already have finished or errored; replace it.
+                self.task?.cancel()
+                self.task = nil
+                self.request?.endAudio()
+                self.request = nil
+                if self.engine.isRunning { self.engine.stop() }
+                try self.beginCapture()
+                try self.startTask()
             } catch {
                 self.onEvent?(["type": "error", "text": "Could not resume after interruption: \(error.localizedDescription)"])
             }
@@ -119,7 +148,7 @@ final class OnDeviceASR {
             interruptionObserver = nil
         }
         if engine.isRunning { engine.stop() }
-        engine.inputNode.removeTap(onBus: 0)
+        removeTapIfInstalled()
         try? AVAudioSession.sharedInstance()
             .setActive(false, options: .notifyOthersOnDeactivation)
         onEvent = nil
