@@ -229,6 +229,12 @@
   });
 
   // Public Practice languages (allowlisted for deep links — never pass raw lang through).
+  // One cache-buster per frame, used by DEFAULTS, listenGpuPageUrl() and
+  // loadModes(). They used to be repeated (and disagree: 22/26/27, 83/88), and
+  // loadModes() forced the older number over a saved URL, so a bump here never
+  // reached a device that had pressed Save. Bump the number when the frame's
+  // page changes; Safari/PWA keeps serving a cached copy until it does.
+  var CACHE_V = { listen: "26", converse: "88" };
   // Allowlists are looked up with hasOwn, never by truthiness: "constructor",
   // "__proto__" and "toString" are truthy on a plain object and used to pass.
   function inSet(set, key) {
@@ -334,7 +340,7 @@
     // has no such handler and appends a new card for every update, so a long
     // reading arrives as the same passage repeated ten times over. The phone
     // keeps serving the cached page until this number changes.
-    return "https://" + tailscaleHostname() + ":8443/?v=26";
+    return "https://" + tailscaleHostname() + ":8443/?v=" + CACHE_V.listen;
   }
   function isSiteListen(url) {
     var s = String(url || "");
@@ -500,7 +506,7 @@
       label: "Converse",
       icon: "💬",
       // Mic-first + cache-bust after one-interface layout.
-      url: "./assistant.html?v=88&mode=mic",
+      url: "./assistant.html?v=" + CACHE_V.converse + "&mode=mic",
       kind: "iframe",
       hint: "Talk to a model or a workstation shell — type or speak. Deep link: #converse or #converse?input=mic. Needs Tailscale + tesla-bridge."
     },
@@ -563,9 +569,32 @@
     try { localStorage.setItem(LAST_TOOL_KEY, id); } catch (e) {}
   }
 
-  function loadModes() {
+  // maat_urls holds ONLY addresses the user typed. Older builds saved every
+  // computed URL on Save, which froze the cache-buster and the Listen host
+  // (R1-08), so a stored value that is just the default with another v= or
+  // mode= is treated as "not an override".
+  function savedUrls() {
     var saved = {};
     try { saved = JSON.parse(localStorage.getItem("maat_urls") || "{}"); } catch (e) {}
+    return (saved && typeof saved === "object") ? saved : {};
+  }
+  function normUrl(u) {
+    return withQueryParam(withQueryParam(u, "v", null), "mode", null);
+  }
+  // Old builds also froze the Listen HOST. A saved bare tailnet :8443 root
+  // page (optionally with ?v=N) is exactly what they wrote, so it is treated
+  // as derived too; point Listen elsewhere with the "Tailscale machine" field.
+  var LEGACY_DERIVED = { sermon: /^https:\/\/[^\/?#]+\.ts\.net:8443\/?(\?v=\d+)?$/i };
+  function overrideOf(saved, id, dflt) {
+    var u = saved[id];
+    if (typeof u !== "string") return undefined;
+    if (u === "") return "";
+    if (LEGACY_DERIVED[id] && LEGACY_DERIVED[id].test(u)) return undefined;
+    return normUrl(u) === normUrl(dflt) ? undefined : u;
+  }
+
+  function loadModes() {
+    var saved = savedUrls();
     // Migrate pre-PR2 Voice/Assistant URL prefs into Converse (typed default).
     if (saved.converse === undefined) {
       if (saved.assistant) saved.converse = saved.assistant;
@@ -575,17 +604,17 @@
       }
     }
     return DEFAULTS.map(function (a) {
-      var u = saved[a.id];
-      var url = a.kind === "tools" ? "" : (u === undefined ? defaultUrl(a) : u);
+      var ov = a.kind === "tools" ? undefined : overrideOf(saved, a.id, defaultUrl(a));
+      var url = a.kind === "tools" ? "" : (ov === undefined ? defaultUrl(a) : ov);
       // Bust Safari/PWA cache for Converse after UI changes (Talk to… header).
       if (a.id === "converse" && url && url.indexOf("assistant.html") >= 0) {
-        url = withQueryParam(url, "v", "83");
+        url = withQueryParam(url, "v", CACHE_V.converse);
         if (url.indexOf("mode=") < 0) url = withQueryParam(url, "mode", "mic");
       }
       // Listen must be the Tailscale :8443 page so the WebSocket is same-origin
       // on iPad. A saved Netlify live-translator.html URL cannot open wss://.
       if (a.id === "sermon") {
-        url = isSiteListen(url) ? listenGpuPageUrl() : withQueryParam(url, "v", "22");
+        url = isSiteListen(url) ? listenGpuPageUrl() : withQueryParam(url, "v", CACHE_V.listen);
       }
       return {
         id: a.id, label: a.label, icon: a.icon, kind: a.kind, hint: a.hint,
@@ -596,24 +625,14 @@
   }
 
   function loadTools() {
-    var saved = {};
-    try { saved = JSON.parse(localStorage.getItem("maat_urls") || "{}"); } catch (e) {}
+    var saved = savedUrls();
     return TOOL_DEFS.map(function (t) {
+      var ov = overrideOf(saved, t.id, t.url);
       return {
         id: t.id, label: t.label, icon: t.icon, hint: t.hint,
-        url: (saved[t.id] === undefined ? t.url : saved[t.id])
+        url: (ov === undefined ? t.url : ov)
       };
     });
-  }
-
-  function saveModes(modes, tools) {
-    var m = {};
-    modes.forEach(function (a) {
-      if (a.kind === "about" || a.kind === "tools") return;
-      m[a.id] = a.url;
-    });
-    (tools || []).forEach(function (t) { m[t.id] = t.url; });
-    try { localStorage.setItem("maat_urls", JSON.stringify(m)); } catch (e) {}
   }
 
   var modes = loadModes();
@@ -1037,6 +1056,7 @@
             lab.htmlFor = "url-" + t.id;
             var inp = document.createElement("input");
             inp.id = "url-" + t.id; inp.value = t.url || "";
+            inp.dataset.shown = inp.value;
             inp.autocapitalize = "off"; inp.spellcheck = false;
             inp.placeholder = t.hint || "https://…";
             wrap.appendChild(lab); wrap.appendChild(inp);
@@ -1054,6 +1074,7 @@
         lab.htmlFor = "url-" + a.id;
         var inp = document.createElement("input");
         inp.id = "url-" + a.id; inp.value = a.url || "";
+        inp.dataset.shown = inp.value;
         inp.autocapitalize = "off"; inp.spellcheck = false;
         inp.placeholder = a.hint || "https://… or ./page.html";
         wrap.appendChild(lab); wrap.appendChild(inp);
@@ -1083,21 +1104,61 @@
     var mdEl = $("maatModel");
     if (mdEl) setMaatModel(mdEl.value);
     pushAuthToFrames();
+    // Keys, token and provider never need a reload. URLs are stored only if
+    // the user edited that field, and only the frames whose address actually
+    // changed are reloaded (R1-04, R1-08).
+    var saved = savedUrls();
+    function takeUrl(id, dflt) {
+      var el = $("url-" + id);
+      if (!el) return;
+      var v = (el.value || "").trim().replace(/\s+/g, "");
+      if (el.dataset && v === el.dataset.shown) return;   // untouched: leave storage alone
+      if (v !== "" && normUrl(v) === normUrl(dflt)) delete saved[id];
+      else saved[id] = v;
+    }
     modes.forEach(function (a) {
       if (a.kind === "about" || a.kind === "tools") return;
-      var el = $("url-" + a.id);
-      if (!el) return;
-      a.url = (el.value || "").trim().replace(/\s+/g, "");
+      takeUrl(a.id, defaultUrl(a));
     });
-    tools.forEach(function (t) {
-      var el = $("url-" + t.id);
-      if (!el) return;
-      t.url = (el.value || "").trim().replace(/\s+/g, "");
-    });
-    saveModes(modes, tools);
+    tools.forEach(function (t) { takeUrl(t.id, t.url); });
+    try { localStorage.setItem("maat_urls", JSON.stringify(saved)); } catch (e) {}
     openSettings(false);
-    build();
+    applyUrlChanges();
   };
+  function applyUrlChanges() {
+    var nextModes = loadModes();
+    var nextTools = loadTools();
+    var needBuild = false;
+    nextModes.forEach(function (n, i) {
+      var cur = modes[i];
+      if (!cur || cur.id !== n.id || cur.url === n.url) return;
+      if (cur.id === "sermon" && listenIsRecording() &&
+          !window.confirm("Listen is recording. Reload it with the new address now? " +
+                          "Cancel keeps the recording; the new address applies the next time Listen loads.")) {
+        return;
+      }
+      cur.url = n.url;
+      var v = $("view-" + cur.id);
+      if (!v || v.tagName !== "IFRAME" || !cur.url) { needBuild = true; return; }
+      v.dataset.src = cur.url;
+      if (v.getAttribute("src")) { watchIframeLoad(v, cur); v.src = cur.url; }
+    });
+    var toolChanged = false;
+    nextTools.forEach(function (n, i) {
+      var cur = tools[i];
+      if (!cur || cur.id !== n.id || cur.url === n.url) return;
+      cur.url = n.url;
+      toolChanged = true;
+      var f = $("tool-frame-" + cur.id);
+      if (f) f.dataset.src = cur.url || "";
+      else needBuild = true;
+    });
+    if (needBuild) {
+      if (!listenIsRecording() || window.confirm("Listen is recording. Rebuild the screen anyway?")) build();
+    } else if (toolChanged) {
+      selectTool(activeTool || getLastTool(), { showTools: false });
+    }
+  }
   $("closeSettings").onclick = function () { openSettings(false); };
 
   // Deep links (allowlisted). Prefer hash for installable shortcuts; query still works.

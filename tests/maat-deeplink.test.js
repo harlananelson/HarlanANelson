@@ -1,49 +1,11 @@
 // Run: node tests/maat-deeplink.test.js
 // W6 / R1-09: deep-link allowlists must not accept Object.prototype names.
 "use strict";
-var fs = require("fs");
-var path = require("path");
 var assert = require("assert");
-var src = fs.readFileSync(path.join(__dirname, "..", "maat.html"), "utf8");
-var script = src.split("<script>")[1].split("</script>")[0];
-
+var page = require("./lib/maat-page.js");
 function load(hash, search, initial) {
-  var store = initial || {};
-  var localStorage = {
-    getItem: function (k) { return k in store ? store[k] : null; },
-    setItem: function (k, v) { store[k] = String(v); }
-  };
-  var made = [];
-  function el(tag) {
-    var e = { tag: tag, tagName: String(tag).toUpperCase(), style: {}, dataset: {}, children: [], attrs: {}, className: "", innerHTML: "",
-      setAttribute: function (k, v) { e.attrs[k] = v; }, getAttribute: function (k) { return e.attrs[k] || null; },
-      appendChild: function (c) { e.children.push(c); return c; },
-      classList: { toggle: function () {}, add: function () {}, remove: function () {} },
-      addEventListener: function () {}, querySelectorAll: function () { return []; } };
-    made.push(e);
-    return e;
-  }
-  var byId = {};
-  var doc = {
-    getElementById: function (id) {
-      for (var i = made.length - 1; i >= 0; i--) if (made[i].id === id) return made[i];
-      return byId[id] || (byId[id] = el("div"));
-    },
-    querySelectorAll: function () { return []; },
-    createElement: el
-  };
-  var loc = { href: "https://harlananelson.com/maat.html", origin: "https://harlananelson.com",
-    search: search || "", hash: hash || "", hostname: "harlananelson.com", port: "", protocol: "https:" };
-  var win = { addEventListener: function () {}, confirm: function () { return true; } };
-  var threw = null;
-  try {
-    new Function("window", "document", "localStorage", "fetch", "location", "navigator", "URL", "URLSearchParams",
-      "setTimeout", "clearTimeout", script)(win, doc, localStorage, function () { return { catch: function () {} }; },
-      loc, { userAgent: "x" }, URL, URLSearchParams, function () { return 0; }, function () {});
-  } catch (e) { threw = e; }
-  var frames = {};
-  made.forEach(function (e) { if (e.tag === "iframe") frames[e.id] = e; });
-  return { store: store, frames: frames, threw: threw };
+  var h = page.load({ hash: hash, search: search, store: initial });
+  return { store: h.store, frames: h.frames(), threw: h.threw };
 }
 
 var failures = 0;
