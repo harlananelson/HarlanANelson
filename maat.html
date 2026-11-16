@@ -229,6 +229,17 @@
   });
 
   // Public Practice languages (allowlisted for deep links — never pass raw lang through).
+  // One cache-buster per frame, used by DEFAULTS, listenGpuPageUrl() and
+  // loadModes(). They used to be repeated (and disagree: 22/26/27, 83/88), and
+  // loadModes() forced the older number over a saved URL, so a bump here never
+  // reached a device that had pressed Save. Bump the number when the frame's
+  // page changes; Safari/PWA keeps serving a cached copy until it does.
+  var CACHE_V = { listen: "28", converse: "90" };
+  // Allowlists are looked up with hasOwn, never by truthiness: "constructor",
+  // "__proto__" and "toString" are truthy on a plain object and used to pass.
+  function inSet(set, key) {
+    return typeof key === "string" && Object.prototype.hasOwnProperty.call(set, key);
+  }
   var PRACTICE_LANGS = { es: 1, en: 1, ja: 1, sw: 1 };
 
   // PR3: Music + reMarkable fold under Tools (last-tool memory + long-press).
@@ -329,7 +340,7 @@
     // has no such handler and appends a new card for every update, so a long
     // reading arrives as the same passage repeated ten times over. The phone
     // keeps serving the cached page until this number changes.
-    return "https://" + tailscaleHostname() + ":8443/?v=26";
+    return "https://" + tailscaleHostname() + ":8443/?v=" + CACHE_V.listen;
   }
   function isSiteListen(url) {
     var s = String(url || "");
@@ -369,25 +380,74 @@
       try { if (f.contentWindow) f.contentWindow.postMessage(msg, origin); } catch (e) {}
     });
   }
+  // ---- Who may talk to the shell (W1: R1-01, R2-F8, R3-03, R8-F5) ----
+  // A message is acted on only if event.source is one of THIS page's own
+  // iframes AND event.origin is that frame's origin AND that origin is on the
+  // allowlist below. Secrets are pushed only with an explicit targetOrigin.
+  // The same rule (same allowlist) guards assistant.html and
+  // live-translator.html on the receiving side; keep the three in step.
+  /* maat-origin-allowlist:start */
+  function maatOriginTrusted(origin, configuredHost) {
+    var u;
+    try { u = new URL(String(origin)); } catch (e) { return false; }
+    if (u.protocol !== "https:") return false;
+    var h = u.hostname.toLowerCase();
+    if (h === "harlananelson.com" || h === "www.harlananelson.com") return u.port === "";
+    if (h === "harlan-b550-aorus-pro-ac.taila21a91.ts.net") return true; // any port
+    return !!configuredHost && h === String(configuredHost).toLowerCase();
+  }
+  /* maat-origin-allowlist:end */
+  function shellFrameFor(win) {
+    if (!win) return null;
+    var list = document.querySelectorAll("iframe");
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].contentWindow === win) return list[i];
+    }
+    return null;
+  }
+  // Frame ids allowed to send each message type.
+  function senderMayUse(frame, type) {
+    var id = frame.id || "";
+    if (type === "maat-listen" || type === "maat-recording") return id === "view-sermon";
+    if (type === "maat-auth-offer") return id === "view-converse";
+    if (type === "maat-auth-please") {
+      return id === "view-converse" || id === "view-sermon" || id === "tool-frame-remarkable";
+    }
+    if (type === "maat-rm-status") return id.indexOf("tool-frame-") === 0;
+    return false;
+  }
+  // The bridge may only ever be the tailnet host or the host already
+  // configured; a message cannot move it somewhere else.
+  function bridgeAllowedFromMessage(b) {
+    try {
+      var u = new URL(/^https?:\/\//i.test(b) ? b : "https://" + b);
+      if (u.protocol !== "https:") return false;
+      var h = u.hostname.toLowerCase();
+      return h === DEFAULT_TS_HOST || h === tailscaleHostname().toLowerCase();
+    } catch (e) { return false; }
+  }
   window.addEventListener("message", function (ev) {
     var d = ev.data;
-    if (!d) return;
+    if (!d || typeof d.type !== "string") return;
+    var sender = shellFrameFor(ev.source);
+    if (!sender) return;
+    var senderOrigin = frameTargetOrigin(sender);
+    if (!senderOrigin || ev.origin !== senderOrigin ||
+        !maatOriginTrusted(ev.origin, tailscaleHostname())) return;
+    if (!senderMayUse(sender, d.type)) return;
     if (d.type === "maat-listen" && d.session) {
       listenStem = String(d.session).replace(/[^A-Za-z0-9._-]/g, "");
       return;
     }
     if (d.type === "maat-recording") {
-      // Only the Listen frame may claim a recording is live.
-      var lf = $("view-sermon");
-      if (!lf || ev.source !== lf.contentWindow) return;
       listenRecordingAt = d.on === true ? Date.now() : 0;
       return;
     }
     if (d.type === "maat-auth-please") pushAuthToFrames();
     if (d.type === "maat-auth-offer" && d.token) {
       if (!getWorkstationToken()) setWorkstationToken(d.token);
-      if (d.bridge) {
-        try { localStorage.setItem("tb_bridge", String(d.bridge)); } catch (e) {}
+      if (d.bridge && bridgeAllowedFromMessage(String(d.bridge))) {
+        try { localStorage.setItem("tb_bridge", String(d.bridge).trim().replace(/\/+$/, "")); } catch (e) {}
       }
       pushAuthToFrames();
     }
@@ -446,7 +506,7 @@
       label: "Converse",
       icon: "💬",
       // Mic-first + cache-bust after one-interface layout.
-      url: "./assistant.html?v=88&mode=mic",
+      url: "./assistant.html?v=" + CACHE_V.converse + "&mode=mic",
       kind: "iframe",
       hint: "Talk to a model or a workstation shell — type or speak. Deep link: #converse or #converse?input=mic. Needs Tailscale + tesla-bridge."
     },
@@ -489,6 +549,11 @@
       if (value === null || value === undefined || value === "") u.searchParams.delete(key);
       else u.searchParams.set(key, value);
       if (u.origin === location.origin) {
+        // Same directory as this page: keep the short relative form. Another
+        // directory keeps its full path (a typed /maat/assistant.html must not
+        // become ./assistant.html).
+        var dir = function (p) { return p.slice(0, p.lastIndexOf("/") + 1); };
+        if (dir(u.pathname) !== dir(new URL(location.href).pathname)) return u.pathname + u.search + u.hash;
         var file = u.pathname.split("/").pop() || "";
         return "./" + file + u.search + u.hash;
       }
@@ -501,17 +566,57 @@
   function getLastTool() {
     var t = null;
     try { t = localStorage.getItem(LAST_TOOL_KEY); } catch (e) {}
-    if (t && TOOL_IDS[t]) return t;
+    if (t && inSet(TOOL_IDS, t)) return t;
     return "remarkable";
   }
   function setLastTool(id) {
-    if (!TOOL_IDS[id]) return;
+    if (!inSet(TOOL_IDS, id)) return;
     try { localStorage.setItem(LAST_TOOL_KEY, id); } catch (e) {}
   }
 
-  function loadModes() {
+  // maat_urls holds ONLY addresses the user typed. Older builds saved every
+  // computed URL on Save, which froze the cache-buster and the Listen host
+  // (R1-08), so a stored value that is just the default with another v= or
+  // mode= is treated as "not an override".
+  function savedUrls() {
     var saved = {};
     try { saved = JSON.parse(localStorage.getItem("maat_urls") || "{}"); } catch (e) {}
+    return (saved && typeof saved === "object") ? saved : {};
+  }
+  // Compare origin + path + query + hash after removing ONLY v= and mode=.
+  // (Not the short relative form: that dropped the directory, so a typed
+  // same-origin address with another path compared equal to the default.)
+  function normUrl(u) {
+    try {
+      var x = new URL(u || "./", location.href);
+      x.searchParams.delete("v");
+      x.searchParams.delete("mode");
+      return x.origin + x.pathname + x.search + x.hash;
+    } catch (e) { return String(u || ""); }
+  }
+  // Old builds also froze the Listen HOST. A saved bare tailnet :8443 root
+  // page (optionally with ?v=N) is exactly what they wrote, so it is treated
+  // as derived too; point Listen elsewhere with the "Tailscale machine" field.
+  var LEGACY_DERIVED = { sermon: /^https:\/\/[^\/?#]+\.ts\.net:8443\/?(\?v=\d+)?$/i };
+  // Only the frozen default machine, or the machine currently configured, was
+  // ever written by an old build; a bare :8443 URL on any other tailnet host
+  // is something the user typed.
+  function legacyHostIsOurs(u) {
+    try {
+      var h = new URL(u).hostname.toLowerCase();
+      return h === DEFAULT_TS_HOST || h === tailscaleHostname().toLowerCase();
+    } catch (e) { return false; }
+  }
+  function overrideOf(saved, id, dflt) {
+    var u = saved[id];
+    if (typeof u !== "string") return undefined;
+    if (u === "") return "";
+    if (LEGACY_DERIVED[id] && LEGACY_DERIVED[id].test(u) && legacyHostIsOurs(u)) return undefined;
+    return normUrl(u) === normUrl(dflt) ? undefined : u;
+  }
+
+  function loadModes() {
+    var saved = savedUrls();
     // Migrate pre-PR2 Voice/Assistant URL prefs into Converse (typed default).
     if (saved.converse === undefined) {
       if (saved.assistant) saved.converse = saved.assistant;
@@ -521,17 +626,17 @@
       }
     }
     return DEFAULTS.map(function (a) {
-      var u = saved[a.id];
-      var url = a.kind === "tools" ? "" : (u === undefined ? defaultUrl(a) : u);
+      var ov = a.kind === "tools" ? undefined : overrideOf(saved, a.id, defaultUrl(a));
+      var url = a.kind === "tools" ? "" : (ov === undefined ? defaultUrl(a) : ov);
       // Bust Safari/PWA cache for Converse after UI changes (Talk to… header).
       if (a.id === "converse" && url && url.indexOf("assistant.html") >= 0) {
-        url = withQueryParam(url, "v", "83");
+        url = withQueryParam(url, "v", CACHE_V.converse);
         if (url.indexOf("mode=") < 0) url = withQueryParam(url, "mode", "mic");
       }
       // Listen must be the Tailscale :8443 page so the WebSocket is same-origin
       // on iPad. A saved Netlify live-translator.html URL cannot open wss://.
       if (a.id === "sermon") {
-        url = isSiteListen(url) ? listenGpuPageUrl() : withQueryParam(url, "v", "22");
+        url = isSiteListen(url) ? listenGpuPageUrl() : withQueryParam(url, "v", CACHE_V.listen);
       }
       return {
         id: a.id, label: a.label, icon: a.icon, kind: a.kind, hint: a.hint,
@@ -542,24 +647,14 @@
   }
 
   function loadTools() {
-    var saved = {};
-    try { saved = JSON.parse(localStorage.getItem("maat_urls") || "{}"); } catch (e) {}
+    var saved = savedUrls();
     return TOOL_DEFS.map(function (t) {
+      var ov = overrideOf(saved, t.id, t.url);
       return {
         id: t.id, label: t.label, icon: t.icon, hint: t.hint,
-        url: (saved[t.id] === undefined ? t.url : saved[t.id])
+        url: (ov === undefined ? t.url : ov)
       };
     });
-  }
-
-  function saveModes(modes, tools) {
-    var m = {};
-    modes.forEach(function (a) {
-      if (a.kind === "about" || a.kind === "tools") return;
-      m[a.id] = a.url;
-    });
-    (tools || []).forEach(function (t) { m[t.id] = t.url; });
-    try { localStorage.setItem("maat_urls", JSON.stringify(m)); } catch (e) {}
   }
 
   var modes = loadModes();
@@ -606,7 +701,7 @@
 
   function selectTool(id, opts) {
     opts = opts || {};
-    if (!TOOL_IDS[id]) return;
+    if (!inSet(TOOL_IDS, id)) return;
     activeTool = id;
     setLastTool(id);
     paintToolsBar();
@@ -805,7 +900,7 @@
   }
 
   function show(id) {
-    if (!MODE_IDS[id]) id = "converse";
+    if (!inSet(MODE_IDS, id)) id = "converse";
     // A stray touch on the thumb bar must not walk away from a live recording.
     if (active === "sermon" && id !== "sermon" && listenIsRecording() &&
         !window.confirm("Listen is recording. Leave it?")) {
@@ -983,6 +1078,7 @@
             lab.htmlFor = "url-" + t.id;
             var inp = document.createElement("input");
             inp.id = "url-" + t.id; inp.value = t.url || "";
+            inp.dataset.shown = inp.value;
             inp.autocapitalize = "off"; inp.spellcheck = false;
             inp.placeholder = t.hint || "https://…";
             wrap.appendChild(lab); wrap.appendChild(inp);
@@ -1000,6 +1096,7 @@
         lab.htmlFor = "url-" + a.id;
         var inp = document.createElement("input");
         inp.id = "url-" + a.id; inp.value = a.url || "";
+        inp.dataset.shown = inp.value;
         inp.autocapitalize = "off"; inp.spellcheck = false;
         inp.placeholder = a.hint || "https://… or ./page.html";
         wrap.appendChild(lab); wrap.appendChild(inp);
@@ -1014,6 +1111,11 @@
     $("settings").classList.toggle("open", open);
   }
   $("saveModes").onclick = function () {
+    // What the addresses were BEFORE this Save touched the host or storage.
+    // Diffing against the in-memory modes instead would count a deep link's
+    // ?lang= / mode=mic as a change and reload that frame on a token-only Save.
+    var beforeModes = loadModes();
+    var beforeTools = loadTools();
     var tokEl = $("maatToken");
     if (tokEl) {
       setWorkstationToken(tokEl.value);
@@ -1029,21 +1131,63 @@
     var mdEl = $("maatModel");
     if (mdEl) setMaatModel(mdEl.value);
     pushAuthToFrames();
+    // Keys, token and provider never need a reload. URLs are stored only if
+    // the user edited that field, and only the frames whose address actually
+    // changed are reloaded (R1-04, R1-08).
+    var saved = savedUrls();
+    function takeUrl(id, dflt) {
+      var el = $("url-" + id);
+      if (!el) return;
+      var v = (el.value || "").trim().replace(/\s+/g, "");
+      if (el.dataset && v === el.dataset.shown) return;   // untouched: leave storage alone
+      if (v !== "" && normUrl(v) === normUrl(dflt)) delete saved[id];
+      else saved[id] = v;
+    }
     modes.forEach(function (a) {
       if (a.kind === "about" || a.kind === "tools") return;
-      var el = $("url-" + a.id);
-      if (!el) return;
-      a.url = (el.value || "").trim().replace(/\s+/g, "");
+      takeUrl(a.id, defaultUrl(a));
     });
-    tools.forEach(function (t) {
-      var el = $("url-" + t.id);
-      if (!el) return;
-      t.url = (el.value || "").trim().replace(/\s+/g, "");
-    });
-    saveModes(modes, tools);
+    tools.forEach(function (t) { takeUrl(t.id, t.url); });
+    try { localStorage.setItem("maat_urls", JSON.stringify(saved)); } catch (e) {}
     openSettings(false);
-    build();
+    applyUrlChanges(beforeModes, beforeTools);
   };
+  function applyUrlChanges(beforeModes, beforeTools) {
+    var nextModes = loadModes();
+    var nextTools = loadTools();
+    var needBuild = false;
+    nextModes.forEach(function (n, i) {
+      var cur = modes[i];
+      var was = beforeModes[i];
+      if (!cur || cur.id !== n.id || !was || was.url === n.url) return;
+      if (cur.id === "sermon" && listenIsRecording() &&
+          !window.confirm("Listen is recording. Reload it with the new address now? " +
+                          "Cancel keeps the recording; the new address applies the next time Listen loads.")) {
+        return;
+      }
+      cur.url = n.url;
+      var v = $("view-" + cur.id);
+      if (!v || v.tagName !== "IFRAME" || !cur.url) { needBuild = true; return; }
+      v.dataset.src = cur.url;
+      if (v.getAttribute("src")) { watchIframeLoad(v, cur); v.src = cur.url; }
+    });
+    var toolChanged = false;
+    nextTools.forEach(function (n, i) {
+      var cur = tools[i];
+      var was = beforeTools[i];
+      if (!cur || cur.id !== n.id || !was || was.url === n.url) return;
+      cur.url = n.url;
+      toolChanged = true;
+      var f = $("tool-frame-" + cur.id);
+      if (f) f.dataset.src = cur.url || "";
+      else needBuild = true;
+    });
+    if (needBuild) {
+      if (!listenIsRecording() || window.confirm("Listen is recording. Rebuild the screen anyway?")) build();
+    } else if (toolChanged) {
+      selectTool(activeTool || getLastTool(), { showTools: false });
+    }
+  }
   $("closeSettings").onclick = function () { openSettings(false); };
 
   // Deep links (allowlisted). Prefer hash for installable shortcuts; query still works.
@@ -1092,7 +1236,7 @@
       tool = null;
       mode = "music";
     }
-    if (mode && !MODE_IDS[mode]) mode = null;
+    if (mode && !inSet(MODE_IDS, mode)) mode = null;
 
     if (input) {
       input = String(input).toLowerCase();
@@ -1100,14 +1244,14 @@
     }
     if (tool) {
       tool = String(tool).toLowerCase();
-      if (!TOOL_IDS[tool]) tool = null;
+      if (!inSet(TOOL_IDS, tool)) tool = null;
     }
 
-    if (mode && MODE_IDS[mode]) active = mode;
+    if (mode && inSet(MODE_IDS, mode)) active = mode;
 
     if (lang) {
       lang = String(lang).toLowerCase();
-      if (!PRACTICE_LANGS[lang]) lang = null;
+      if (!inSet(PRACTICE_LANGS, lang)) lang = null;
     }
     if (lang) {
       modes.forEach(function (a) {
