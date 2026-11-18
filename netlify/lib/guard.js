@@ -134,6 +134,7 @@ async function admit({ origin, headers, bucket, globalCost = 1, lambdaEvent, sto
     const r = await consume(s, { bucket, ip: clientIp(headers), globalCost, limits: limitsFor(bucket, env) });
     return r.ok ? null : { status: r.status, body: r.reason };
   } catch (err) {
+    console.error(`[guard] ${bucket} limiter failed:`, err);
     return { status: 503, body: 'Usage limiter unavailable' };
   }
 }
