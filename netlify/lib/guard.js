@@ -115,22 +115,18 @@ async function consume(store, { bucket, ip, globalCost = 1, limits, now = new Da
   return { ok: true };
 }
 
-function rateStore(event) {
-  // Required lazily so the pure functions above can be tested without the package.
-  const blobs = require('@netlify/blobs');
-  // Lambda-style (exports.handler) functions must hand Blobs their event first.
-  if (event && typeof blobs.connectLambda === 'function') blobs.connectLambda(event);
-  return blobs.getStore({ name: 'rate-limits', consistency: 'strong' });
-}
-
 // Full gate for a request. Returns null when the request may proceed, or a
 // { status, body } refusal. Fails CLOSED: if the counters cannot be read or
 // written, the request is refused, because the alternative is unmetered spend.
-async function admit({ origin, headers, bucket, globalCost = 1, lambdaEvent, store, env = process.env }) {
+// `store` is a Blobs store, or a function returning one (so creating it is inside
+// the try). Use getStore({ name: 'rate-limits', consistency: 'strong' }) from a
+// modern (export default) function: Lambda-style handlers cannot use strong
+// consistency, because connectLambda() sets no uncachedEdgeURL.
+async function admit({ origin, headers, bucket, globalCost = 1, store, env = process.env }) {
   if (!isAllowedOrigin(origin, env)) return { status: 403, body: 'Forbidden origin' };
   try {
-    // `store` may be a store, or a function returning one (so creating it is inside this try).
-    const s = typeof store === 'function' ? store() : (store || rateStore(lambdaEvent));
+    const s = typeof store === 'function' ? store() : store;
+    if (!s) throw new Error('no rate-limit store given');
     const r = await consume(s, { bucket, ip: clientIp(headers), globalCost, limits: limitsFor(bucket, env) });
     return r.ok ? null : { status: r.status, body: r.reason };
   } catch (err) {
