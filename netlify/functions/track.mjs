@@ -5,14 +5,11 @@
 //   npx netlify-cli blobs:list drill-tracking
 //   npx netlify-cli blobs:get drill-tracking <key>
 import { getStore } from '@netlify/blobs';
-
-const CORS = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type',
-};
+import guard from '../lib/guard.js';
 
 export default async (req) => {
+  const origin = req.headers.get('origin') || '';
+  const CORS = guard.corsHeaders(origin);
   if (req.method === 'OPTIONS') {
     return new Response(null, { status: 204, headers: CORS });
   }
@@ -41,6 +38,12 @@ export default async (req) => {
   if (events.length > 500 || JSON.stringify(events).length > 200_000) {
     return new Response('Batch too large', { status: 413, headers: CORS });
   }
+
+  const refused = await guard.admit({
+    origin, headers: req.headers, bucket: 'track',
+    store: () => getStore({ name: 'rate-limits', consistency: 'strong' }),
+  });
+  if (refused) return new Response(refused.body, { status: refused.status, headers: CORS });
 
   const store = getStore('drill-tracking');
   const key = `${drill}/${session}/${Date.now()}`;
