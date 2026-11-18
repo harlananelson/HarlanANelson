@@ -12,6 +12,6 @@ jobs:
         with:
           node-version: 20
       - name: Syntax-check scripts and functions
-        run: for f in *.js netlify/functions/*.js netlify/functions/*.mjs netlify/lib/*.js; do node --check "$f"; done
+        run: shopt -s nullglob; for f in *.js netlify/functions/*.js netlify/functions/*.mjs netlify/lib/*.js; do node --check "$f"; done
       - name: Unit tests (function guard)
         run: node --test netlify/
