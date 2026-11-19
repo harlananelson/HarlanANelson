@@ -92,6 +92,15 @@
   #views-wrap { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
   .msg.user .tag { color: #9cc4e0; }
   .msg.tmux-send { align-self: flex-end; background: #1a3a2a; border: 1px solid #2d6a4f; }
+  /* Terminal view: a tmux pane drawn like the terminal (monospace, aligned
+     box tables, colours, no wrapping — scroll sideways instead). */
+  .msg.term { align-self: stretch; max-width: 100%; background: #0d1117; border: 1px solid #30363d; padding: 10px 12px; white-space: normal; }
+  .msg.term pre.term {
+    margin: 0; white-space: pre; overflow-x: auto; -webkit-overflow-scrolling: touch;
+    font-family: ui-monospace, "SF Mono", Menlo, "DejaVu Sans Mono", "Cascadia Mono", Consolas, "Liberation Mono", monospace;
+    font-size: 12.5px; line-height: 1.22; color: #d0d0d0; tab-size: 8;
+    font-variant-ligatures: none; font-kerning: none;
+  }
   /* One instrument for every address (AI or shell). Talk hides when there is
      no usable mic; type + Send always remain. */
   #bar {
@@ -247,6 +256,7 @@
   <div id="barContext">
     <button id="speakerToggle" class="chip" style="display:none">🗣 me</button>
     <button id="analyzeBtn" class="chip" style="display:none">🧠 Analyze</button>
+    <button id="termToggle" class="chip" style="display:none" title="Show shell replies as the terminal screen or as plain text">▤ Terminal</button>
   </div>
   <div id="barType">
     <input id="barInput" placeholder="Type a message" autocomplete="off">
@@ -405,7 +415,17 @@
     histSaveTimer = setTimeout(function () {
       histSaveTimer = null;
       while (history.length > HIST_MAX) history.shift();
-      try { localStorage.setItem(histKey, JSON.stringify(history)); } catch (e) {}
+      // Terminal dumps are big: persist `ansi` for the newest 6 only (older
+      // entries fall back to their plain text after a reload).
+      var keepAnsi = 6, slim = [], i, h;
+      for (i = history.length - 1; i >= 0; i--) {
+        h = history[i];
+        if (h.ansi && keepAnsi-- <= 0) {
+          h = Object.assign({}, h); delete h.ansi; delete h.width;
+        }
+        slim.unshift(h);
+      }
+      try { localStorage.setItem(histKey, JSON.stringify(slim)); } catch (e) {}
     }, 250);
   }
   function currentTargetKey() {
@@ -436,16 +456,143 @@
     if (!ev || ev.id == null) return false;
     return history.some(function (h) { return h.id === ev.id && h.role === ev.role && h.text === ev.text; });
   }
-  function renderMsg(entry) {
-    var d = document.createElement("div");
-    d.className = "msg " + entry.role;
+  /* ansi-term:begin — terminal view for tmux panes (pure; tests/assistant-ansi.test.js) */
+  // Parse a `tmux capture-pane -e` dump into styled runs. Only SGR (colour,
+  // bold, dim, italic, underline, inverse) is honoured; every other escape or
+  // control byte is dropped. Output is data, never markup: the DOM side sets
+  // textContent and numeric colours only, so pane text cannot inject HTML.
+  var ANSI_16 = [
+    "#2e3436", "#ef5350", "#8bc34a", "#e5c07b", "#61afef", "#c678dd", "#56b6c2", "#d0d0d0",
+    "#767676", "#ff6e6e", "#a5e075", "#f0d58a", "#82c4ff", "#de9bf0", "#6fd3df", "#ffffff"
+  ];
+  function ansi256(n) {
+    n = n | 0;
+    if (n < 0 || n > 255) return null;
+    if (n < 16) return ANSI_16[n];
+    if (n >= 232) { var g = 8 + (n - 232) * 10; return "rgb(" + g + "," + g + "," + g + ")"; }
+    n -= 16;
+    var lv = [0, 95, 135, 175, 215, 255];
+    return "rgb(" + lv[Math.floor(n / 36)] + "," + lv[Math.floor(n / 6) % 6] + "," + lv[n % 6] + ")";
+  }
+  function ansiRgb(r, g, b) {
+    function c(v) { v = v | 0; return v < 0 ? 0 : (v > 255 ? 255 : v); }
+    return "rgb(" + c(r) + "," + c(g) + "," + c(b) + ")";
+  }
+  function ansiApplySgr(st, params) {
+    var p = params.length ? params : [0], i, n;
+    for (i = 0; i < p.length; i++) {
+      n = p[i];
+      if (n === 0) { st.fg = st.bg = null; st.bold = st.dim = st.italic = st.underline = st.inverse = false; }
+      else if (n === 1) st.bold = true;
+      else if (n === 2) st.dim = true;
+      else if (n === 3) st.italic = true;
+      else if (n === 4) st.underline = true;
+      else if (n === 7) st.inverse = true;
+      else if (n === 22) st.bold = st.dim = false;
+      else if (n === 23) st.italic = false;
+      else if (n === 24) st.underline = false;
+      else if (n === 27) st.inverse = false;
+      else if (n >= 30 && n <= 37) st.fg = ANSI_16[n - 30];
+      else if (n >= 90 && n <= 97) st.fg = ANSI_16[n - 90 + 8];
+      else if (n === 39) st.fg = null;
+      else if (n >= 40 && n <= 47) st.bg = ANSI_16[n - 40];
+      else if (n >= 100 && n <= 107) st.bg = ANSI_16[n - 100 + 8];
+      else if (n === 49) st.bg = null;
+      else if (n === 38 || n === 48) {
+        var col = null;
+        if (p[i + 1] === 5) { col = ansi256(p[i + 2]); i += 2; }
+        else if (p[i + 1] === 2) { col = ansiRgb(p[i + 2], p[i + 3], p[i + 4]); i += 4; }
+        if (n === 38) st.fg = col; else st.bg = col;
+      }
+    }
+  }
+  function ansiSegments(raw) {
+    var s = String(raw || ""), out = [], buf = "", i = 0, ch, m;
+    var st = { fg: null, bg: null, bold: false, dim: false, italic: false, underline: false, inverse: false };
+    function flush() {
+      if (!buf) return;
+      var fg = st.fg, bg = st.bg;
+      if (st.inverse) { fg = st.bg || "#0d1117"; bg = st.fg || "#d0d0d0"; }
+      out.push({ text: buf, fg: fg, bg: bg, bold: st.bold, dim: st.dim, italic: st.italic, underline: st.underline });
+      buf = "";
+    }
+    var CSI = /^\x1b\[([0-9;:?<=>]*)([ -\/]*)([@-~])/;
+    var OSC = /^\x1b\][\s\S]*?(\x07|\x1b\\)/;
+    while (i < s.length) {
+      ch = s.charAt(i);
+      if (ch === "\x1b") {
+        var rest = s.slice(i, i + 256);
+        if ((m = CSI.exec(rest))) {
+          if (m[3] === "m" && !m[2] && !/[?<=>]/.test(m[1])) {
+            flush();
+            ansiApplySgr(st, m[1] ? m[1].split(/[;:]/).map(function (x) { return x === "" ? 0 : parseInt(x, 10); }) : []);
+          }
+          i += m[0].length; continue;
+        }
+        if ((m = OSC.exec(rest))) { i += m[0].length; continue; }
+        i += 2; continue;                       // lone ESC + one byte
+      }
+      if (ch === "\r") { i++; continue; }
+      var code = ch.charCodeAt(0);
+      if ((code < 32 && ch !== "\n" && ch !== "\t") || code === 127) { i++; continue; }
+      buf += ch; i++;
+    }
+    flush();
+    return out;
+  }
+  function ansiPlain(raw) {
+    return ansiSegments(raw).map(function (g) { return g.text; }).join("");
+  }
+  /* ansi-term:end */
+  function ansiToFragment(raw) {
+    var frag = document.createDocumentFragment();
+    ansiSegments(raw).forEach(function (g) {
+      if (!g.fg && !g.bg && !g.bold && !g.dim && !g.italic && !g.underline) {
+        frag.appendChild(document.createTextNode(g.text));
+        return;
+      }
+      var sp = document.createElement("span");
+      if (g.fg) sp.style.color = g.fg;
+      if (g.bg) sp.style.backgroundColor = g.bg;
+      if (g.bold) sp.style.fontWeight = "700";
+      if (g.dim) sp.style.opacity = "0.6";
+      if (g.italic) sp.style.fontStyle = "italic";
+      if (g.underline) sp.style.textDecoration = "underline";
+      sp.textContent = g.text;
+      frag.appendChild(sp);
+    });
+    return frag;
+  }
+  // Terminal view (default on): a tmux reply is drawn as the raw pane in a
+  // monospace <pre>, like the real terminal. Off = the old prose-only bubble.
+  var TERM_LINES = 100;
+  var termView = true;
+  try { termView = localStorage.getItem("tb_term_view") !== "0"; } catch (e) {}
+  function termPre(ansi) {
+    var pre = document.createElement("pre");
+    pre.className = "term";
+    // Drop leading blank rows (an idle pane is mostly empty at the top).
+    pre.appendChild(ansiToFragment(String(ansi).replace(/^(?:[ \t]*(?:\x1b\[[0-9;]*m)*[ \t]*\n)+/, "")));
+    return pre;
+  }
+  // Fill a transcript bubble from its history entry (tag + body).
+  function fillMsgBody(d, entry) {
+    d.textContent = "";
     if (entry.tag) {
       var s = document.createElement("span");
       s.className = "tag";
       s.textContent = entry.tag;
       d.appendChild(s);
     }
-    d.appendChild(document.createTextNode(entry.text));
+    var term = !!(termView && entry.ansi);
+    d.classList.toggle("term", term);
+    if (term) d.appendChild(termPre(entry.ansi));
+    else d.appendChild(document.createTextNode(entry.text));
+  }
+  function renderMsg(entry) {
+    var d = document.createElement("div");
+    d.className = "msg " + entry.role;
+    fillMsgBody(d, entry);
     d._hist = entry;
     var t = $("transcript");
     t.appendChild(d);
@@ -547,33 +694,34 @@
     stopPaneWatch();
     paneWatch = { name: name, last: "", same: 0, el: null, ticks: 0 };
     paneWatch.el = addMsg("assistant", "Waiting for a reply from " + name + "…", "← " + name, "tmux:" + name);
-    function paint(shown) {
+    function paint(shown, ansi) {
       var lines = String(shown || "").split("\n");
       if (lines.length > 24) shown = lines.slice(-24).join("\n");
+      function stamp(h) {
+        h.text = shown;
+        if (ansi) h.ansi = ansi; else delete h.ansi;
+      }
       if (!paneWatch.el || !paneWatch.el.parentNode) {
         // Target switched away (element gone) or never shown: update the
         // history entry in place rather than adding a second bubble.
-        if (paneWatch.el && paneWatch.el._hist) { paneWatch.el._hist.text = shown; saveHistory(); return; }
+        if (paneWatch.el && paneWatch.el._hist) { stamp(paneWatch.el._hist); saveHistory(); return; }
         paneWatch.el = addMsg("assistant", shown, "← " + name, "tmux:" + name);
+        if (paneWatch.el && paneWatch.el._hist && ansi) { stamp(paneWatch.el._hist); fillMsgBody(paneWatch.el, paneWatch.el._hist); saveHistory(); }
         return;
       }
-      var d = paneWatch.el, tagEl = d.querySelector(".tag");
-      if (d._hist) { d._hist.text = shown; saveHistory(); }
-      d.textContent = "";
-      if (!tagEl) {
-        tagEl = document.createElement("span");
-        tagEl.className = "tag";
-      }
-      tagEl.textContent = "← " + name;
-      d.appendChild(tagEl);
-      d.appendChild(document.createTextNode(shown));
+      var d = paneWatch.el;
+      var h = d._hist || { role: "assistant", tag: "", text: "" };
+      h.tag = "← " + name;
+      stamp(h);
+      if (d._hist) saveHistory();
+      fillMsgBody(d, h);
       $("transcript").scrollTop = $("transcript").scrollHeight;
     }
     function finish(data) {
       var curated = ((data && data.curated) || "").trim();
       var pane = (data && data.text) || "";
       var shown = curated || paneReplyText(pane) || pane;
-      if (shown) paint(shown);
+      if (shown) paint(shown, data && data.ansi);
       setStatus(shown ? ("Reply from " + name + ".") : ("Sent to " + name + "."));
       if (soundOn) {
         var clip = curated ? clipCurated(curated) : speakableClip(pane);
@@ -585,6 +733,7 @@
       if (!paneWatch || paneWatch.name !== name) return;
       paneWatch.ticks++;
       var q = "/api/tmux/capture?name=" + encodeURIComponent(name) + "&lines=40";
+      if (termView) q += "&term_lines=" + TERM_LINES;   // older bridges ignore it
       if (sent) q += "&after=" + encodeURIComponent(sent);
       api(q)
         .then(function (r) { return r.json(); })
@@ -598,7 +747,7 @@
           if (shown && key !== paneWatch.last) {
             paneWatch.last = key;
             paneWatch.same = 0;
-            paint(shown);
+            paint(shown, data.ansi);
             setStatus("← " + name + " still writing…");
           } else {
             paneWatch.same++;
@@ -1113,14 +1262,24 @@
     b.title = text;
     b.setAttribute("aria-label", text);
   }
+  function paintTermToggle() {
+    var b = $("termToggle");
+    if (!b) return;
+    var isShell = typeof target === "object" && target && target.kind === "tmux";
+    b.style.display = isShell ? "" : "none";
+    b.textContent = termView ? "▤ Terminal" : "¶ Text";
+    b.className = termView ? "chip on" : "chip";
+    b.setAttribute("aria-pressed", termView ? "true" : "false");
+  }
   function applyTalkVisibility() {
     var show = showTalkUi();
     if ($("talkBtn")) $("talkBtn").style.display = show ? "" : "none";
     if ($("modeChip")) $("modeChip").style.display = show ? "" : "none";
+    paintTermToggle();
     var ctx = $("barContext");
     if (ctx) {
       var any = false;
-      ["speakerToggle", "analyzeBtn"].forEach(function (id) {
+      ["speakerToggle", "analyzeBtn", "termToggle"].forEach(function (id) {
         var el = $(id);
         if (el && el.style.display !== "none") any = true;
       });
@@ -2257,6 +2416,15 @@
   });
 
   if ($("targetBtn")) $("targetBtn").onclick = openTargetSheet;
+  if ($("termToggle")) $("termToggle").onclick = function () {
+    termView = !termView;
+    try { localStorage.setItem("tb_term_view", termView ? "1" : "0"); } catch (e) {}
+    paintTalkForTarget();
+    renderTranscript();
+    setStatus(termView
+      ? "Terminal view: shell replies show the screen as the terminal does."
+      : "Text view: shell replies show the reply text only.");
+  };
 
   function barTypeSend() {
     sendTyped();
