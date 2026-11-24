@@ -329,7 +329,7 @@
     // has no such handler and appends a new card for every update, so a long
     // reading arrives as the same passage repeated ten times over. The phone
     // keeps serving the cached page until this number changes.
-    return "https://" + tailscaleHostname() + ":8443/?v=25";
+    return "https://" + tailscaleHostname() + ":8443/?v=26";
   }
   function isSiteListen(url) {
     var s = String(url || "");
@@ -374,6 +374,13 @@
     if (!d) return;
     if (d.type === "maat-listen" && d.session) {
       listenStem = String(d.session).replace(/[^A-Za-z0-9._-]/g, "");
+      return;
+    }
+    if (d.type === "maat-recording") {
+      // Only the Listen frame may claim a recording is live.
+      var lf = $("view-sermon");
+      if (!lf || ev.source !== lf.contentWindow) return;
+      listenRecordingAt = d.on === true ? Date.now() : 0;
       return;
     }
     if (d.type === "maat-auth-please") pushAuthToFrames();
@@ -421,7 +428,7 @@
       id: "sermon",
       label: "Listen",
       icon: "🌐",
-      url: "./live-translator.html?v=26",
+      url: "./live-translator.html?v=27",
       kind: "iframe",
       hint: "Listen to a service, a meeting, a podcast or an appointment: transcription, translation when the profile calls for it, and analysis (sermon, meeting, or podcast fact/science/legal). Pick a profile inside. On iPad prefer the tailnet page if WebSocket fails."
     },
@@ -790,8 +797,20 @@
     return String(cur).indexOf(m[1]) >= 0;
   }
 
+  // Listen sends a heartbeat every 5s while recording. No heartbeat for 15s
+  // means the frame died or reloaded, so stop guarding.
+  var listenRecordingAt = 0;
+  function listenIsRecording() {
+    return listenRecordingAt > 0 && Date.now() - listenRecordingAt < 15000;
+  }
+
   function show(id) {
     if (!MODE_IDS[id]) id = "converse";
+    // A stray touch on the thumb bar must not walk away from a live recording.
+    if (active === "sermon" && id !== "sermon" && listenIsRecording() &&
+        !window.confirm("Listen is recording. Leave it?")) {
+      return;
+    }
     active = id;
     modes.forEach(function (a) {
       var v = $("view-" + a.id), t = $("tab-" + a.id);
